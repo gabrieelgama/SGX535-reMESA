@@ -139,7 +139,3 @@ It is not affiliated with or endorsed by Imagination Technologies, Intel, Texas 
 Third-party source code is not automatically part of this repository and remains subject to its respective licenses.
 
 The purpose of this project is hardware preservation, documentation, interoperability, and open-source driver research.
-
----
-
-**Poulsbo survived. Now we document it.**
