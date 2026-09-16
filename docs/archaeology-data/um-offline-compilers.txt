@@ -1,0 +1,13 @@
+commit 5830fc09a5f37ca89b718d7c60a838e0267a6371
+Author:     Anand Balagopalakrishnan <anandb@ti.com>
+AuthorDate: Fri May 18 17:14:23 2018 +0530
+Commit:     Anand Balagopalakrishnan <anandb@ti.com>
+CommitDate: Fri May 18 17:14:23 2018 +0530
+
+    host: publish GLSL offline compilers for SGX
+    
+    Signed-off-by: Anand Balagopalakrishnan <anandb@ti.com>
+
+:000000 100644 0000000000000000000000000000000000000000 633a67303b906a4dab58b806c7bcf5b386cbfa8a A	glsl_compiler/jacinto6evm/glslcompiler_SGX544_116.exe
+:000000 100644 0000000000000000000000000000000000000000 dcee37ec40c3f9763671aa77f04045f94201a583 A	glsl_compiler/ti335x/glslcompiler_SGX530_120.exe
+:000000 100644 0000000000000000000000000000000000000000 dcee37ec40c3f9763671aa77f04045f94201a583 A	glsl_compiler/ti437x/glslcompiler_SGX530_120.exe

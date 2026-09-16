@@ -1,0 +1,237 @@
+SGX535-GFX: evidências estáticas, 2026-09-16 UTC
+Linhas Markdown referem-se aos arquivos locais; símbolos usam valor ELF, não file offset.
+
+$ git -C references/linux rev-parse HEAD
+9b87fdc9af2fbfcdb5c24a64139685ef80f6573f
+
+[exit=0]
+
+$ git -C references/linux status --short
+
+[exit=0]
+
+$ git -C references/linux rev-parse --is-shallow-repository
+true
+
+[exit=0]
+
+$ git -C references/omap5-sgx-ddk-linux rev-parse HEAD
+430673f78b79eccdf308a6bbfb524209b485d2cc
+
+[exit=0]
+
+$ git -C references/omap5-sgx-ddk-linux status --short
+
+[exit=0]
+
+$ git -C references/omap5-sgx-ddk-linux rev-parse --is-shallow-repository
+false
+
+[exit=0]
+
+$ git -C references/omap5-sgx-ddk-um-linux rev-parse HEAD
+b6801bf89e00d69893c2957455bbeb3195c0ed52
+
+[exit=0]
+
+$ git -C references/omap5-sgx-ddk-um-linux status --short
+
+[exit=0]
+
+$ git -C references/omap5-sgx-ddk-um-linux rev-parse --is-shallow-repository
+false
+
+[exit=0]
+
+$ git -C references/omap5-sgx-ddk-linux ls-files *535* *usse* *useasm* *pds* *ukernel* *firmware* *hwdefs*
+eurasia_km/services4/include/sgx_ukernel_status_codes.h
+eurasia_km/services4/srvkm/hwdefs/ocpdefs.h
+eurasia_km/services4/srvkm/hwdefs/sgx530defs.h
+eurasia_km/services4/srvkm/hwdefs/sgx540defs.h
+eurasia_km/services4/srvkm/hwdefs/sgx544defs.h
+eurasia_km/services4/srvkm/hwdefs/sgxdefs.h
+eurasia_km/services4/srvkm/hwdefs/sgxerrata.h
+eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h
+eurasia_km/services4/srvkm/hwdefs/sgxmmu.h
+eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h
+
+[exit=0]
+
+$ git -C references/omap5-sgx-ddk-um-linux ls-files
+Makefile
+OMAP5-Linux-Graphics-DDK-UM-Manifest.doc
+README
+targetfs/bin/pvrsrvinit
+targetfs/include/EGL/egl.h
+targetfs/include/EGL/eglext.h
+targetfs/include/EGL/eglplatform.h
+targetfs/include/GLES/gl.h
+targetfs/include/GLES/glext.h
+targetfs/include/GLES/glplatform.h
+targetfs/include/GLES2/gl2.h
+targetfs/include/GLES2/gl2ext.h
+targetfs/include/GLES2/gl2platform.h
+targetfs/include/KHR/khrplatform.h
+targetfs/lib/gbm/gbm_pvr.so
+targetfs/lib/gbm/gbm_pvr.so.1.9.6.0
+targetfs/lib/libEGL.so
+targetfs/lib/libEGL.so.1
+targetfs/lib/libEGL.so.1.9.6.0
+targetfs/lib/libGLESv1_CM.so
+targetfs/lib/libGLESv1_CM.so.1
+targetfs/lib/libGLESv1_CM.so.1.9.6.0
+targetfs/lib/libGLESv2.so
+targetfs/lib/libGLESv2.so.1.9.6.0
+targetfs/lib/libGLESv2.so.2
+targetfs/lib/libIMGegl.so
+targetfs/lib/libIMGegl.so.1.9.6.0
+targetfs/lib/libPVRScopeServices.so
+targetfs/lib/libPVRScopeServices.so.1.9.6.0
+targetfs/lib/libglslcompiler.so
+targetfs/lib/libglslcompiler.so.1.9.6.0
+targetfs/lib/libpvr2d.so
+targetfs/lib/libpvr2d.so.1.9.6.0
+targetfs/lib/libpvr_wlegl.so
+targetfs/lib/libpvr_wlegl.so.1.9.6.0
+targetfs/lib/libpvrws_KMS.so
+targetfs/lib/libpvrws_KMS.so.1.9.6.0
+targetfs/lib/libpvrws_WAYLAND.so
+targetfs/lib/libpvrws_WAYLAND.so.1.9.6.0
+targetfs/lib/libsrv_init.so
+targetfs/lib/libsrv_init.so.1.9.6.0
+targetfs/lib/libsrv_um.so
+targetfs/lib/libsrv_um.so.1.9.6.0
+targetfs/lib/libusc.so
+targetfs/lib/libusc.so.1.9.6.0
+targetfs/lib/pkgconfig/egl.pc
+targetfs/lib/pkgconfig/glesv1_cm.pc
+targetfs/lib/pkgconfig/glesv2.pc
+targetfs/lib/pkgconfig/wayland-egl.pc
+targetfs/share/sgx-lib/glsltest1_fragshaderA.txt
+targetfs/share/sgx-lib/glsltest1_fragshaderB.txt
+targetfs/share/sgx-lib/glsltest1_vertshader.txt
+
+[exit=0]
+
+$ rg -n SGX535|sgx535 references/omap5-sgx-ddk-linux/eurasia_km/
+references/omap5-sgx-ddk-linux/eurasia_km/include4/sgxapi_km.h:272:	IMG_UINT32			ui32CoreIdSW;	/*!< software core version (ID), e.g. SGX535, SGX540 */
+references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h:63:#if defined(SGX535)
+references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h:64:	#define SGX_CORE_FRIENDLY_NAME							"SGX535"
+references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxerrata.h:134:#if (defined(SGX535) || defined(SGX535_V1_1)) && !defined(SGX_CORE_DEFINED)
+references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxerrata.h:135:	/* define the _current_ SGX535 RTL head revision */
+references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxerrata.h:153:		#error "sgxerrata.h: SGX535 Core Revision unspecified"
+references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxdefs.h:54:#if defined(SGX535)
+references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxdefs.h:55:#include "sgx535defs.h"
+references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxdefs.h:57:#if defined(SGX535_V1_1)
+references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxdefs.h:58:#include "sgx535defs.h"
+
+[exit=0]
+
+$ rg -n dma_fence|drm_sched|request_firmware|PSB_CR_EVENT_KICK|PSB_CR_USE_CODE_BASE|PSB_SGX_2D_SLAVE_PORT references/linux/drivers/gpu/drm/gma500/
+references/linux/drivers/gpu/drm/gma500/psb_drv.h:61:#define PSB_SGX_2D_SLAVE_PORT	 0x4000
+references/linux/drivers/gpu/drm/gma500/psb_reg.h:89:#define PSB_CR_USE_CODE_BASE0		0x0A0C
+references/linux/drivers/gpu/drm/gma500/psb_reg.h:90:#define PSB_CR_USE_CODE_BASE1		0x0A10
+references/linux/drivers/gpu/drm/gma500/psb_reg.h:91:#define PSB_CR_USE_CODE_BASE2		0x0A14
+references/linux/drivers/gpu/drm/gma500/psb_reg.h:92:#define PSB_CR_USE_CODE_BASE3		0x0A18
+references/linux/drivers/gpu/drm/gma500/psb_reg.h:93:#define PSB_CR_USE_CODE_BASE4		0x0A1C
+references/linux/drivers/gpu/drm/gma500/psb_reg.h:94:#define PSB_CR_USE_CODE_BASE5		0x0A20
+references/linux/drivers/gpu/drm/gma500/psb_reg.h:95:#define PSB_CR_USE_CODE_BASE6		0x0A24
+references/linux/drivers/gpu/drm/gma500/psb_reg.h:96:#define PSB_CR_USE_CODE_BASE7		0x0A28
+references/linux/drivers/gpu/drm/gma500/psb_reg.h:97:#define PSB_CR_USE_CODE_BASE8		0x0A2C
+references/linux/drivers/gpu/drm/gma500/psb_reg.h:98:#define PSB_CR_USE_CODE_BASE9		0x0A30
+references/linux/drivers/gpu/drm/gma500/psb_reg.h:99:#define PSB_CR_USE_CODE_BASE10		0x0A34
+references/linux/drivers/gpu/drm/gma500/psb_reg.h:100:#define PSB_CR_USE_CODE_BASE11		0x0A38
+references/linux/drivers/gpu/drm/gma500/psb_reg.h:101:#define PSB_CR_USE_CODE_BASE12		0x0A3C
+references/linux/drivers/gpu/drm/gma500/psb_reg.h:102:#define PSB_CR_USE_CODE_BASE13		0x0A40
+references/linux/drivers/gpu/drm/gma500/psb_reg.h:103:#define PSB_CR_USE_CODE_BASE14		0x0A44
+references/linux/drivers/gpu/drm/gma500/psb_reg.h:104:#define PSB_CR_USE_CODE_BASE15		0x0A48
+references/linux/drivers/gpu/drm/gma500/psb_reg.h:105:#define PSB_CR_USE_CODE_BASE(_i)	(0x0A0C + ((_i) << 2))
+references/linux/drivers/gpu/drm/gma500/psb_reg.h:120:#define PSB_CR_EVENT_KICKER		0x0AC4
+references/linux/drivers/gpu/drm/gma500/psb_reg.h:123:#define PSB_CR_EVENT_KICK		0x0AC8
+
+[exit=0]
+
+SHA256 688080b12e09dd37444a0964a93ae700d2589f691a60314dbebe0832a8f7c62f  references/omap5-sgx-ddk-um-linux/targetfs/bin/pvrsrvinit
+
+$ file references/omap5-sgx-ddk-um-linux/targetfs/bin/pvrsrvinit
+references/omap5-sgx-ddk-um-linux/targetfs/bin/pvrsrvinit: ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-armhf.so.3, for GNU/Linux 2.6.31, BuildID[sha1]=eea8c2266cdd164d430c1032b01c15a4f1a73d27, with debug_info, not stripped
+
+[exit=0]
+
+SHA256 a1a3572ee4ae6104505808d171d6b4cd023309959588f890b2192aea44fafdda  references/omap5-sgx-ddk-um-linux/targetfs/lib/libsrv_init.so.1.9.6.0
+
+$ file references/omap5-sgx-ddk-um-linux/targetfs/lib/libsrv_init.so.1.9.6.0
+references/omap5-sgx-ddk-um-linux/targetfs/lib/libsrv_init.so.1.9.6.0: ELF 32-bit LSB shared object, ARM, EABI5 version 1 (SYSV), dynamically linked, BuildID[sha1]=d1fc5f066d98e9ea1d2a424059ee7b59aa0639a9, with debug_info, not stripped
+
+[exit=0]
+
+SHA256 1046a7529f7ab98b72ad654c3165d107df08276abc51f06e731a490bc5950db8  references/omap5-sgx-ddk-um-linux/targetfs/lib/libusc.so.1.9.6.0
+
+$ file references/omap5-sgx-ddk-um-linux/targetfs/lib/libusc.so.1.9.6.0
+references/omap5-sgx-ddk-um-linux/targetfs/lib/libusc.so.1.9.6.0: ELF 32-bit LSB shared object, ARM, EABI5 version 1 (SYSV), dynamically linked, BuildID[sha1]=aaa110d020d789d3a87649ef74e3ae67928860ba, with debug_info, not stripped
+
+[exit=0]
+
+SHA256 60ea6021ce08a1dcf1c436e26a138a8976e0bd4d5bde0b2b3016150c62299589  references/omap5-sgx-ddk-um-linux/OMAP5-Linux-Graphics-DDK-UM-Manifest.doc
+
+$ file references/omap5-sgx-ddk-um-linux/OMAP5-Linux-Graphics-DDK-UM-Manifest.doc
+references/omap5-sgx-ddk-um-linux/OMAP5-Linux-Graphics-DDK-UM-Manifest.doc: Composite Document File V2 Document, Little Endian, Os: Windows, Version 6.1, Code page: 1252, Title: ASP Software Manifest, Subject: Software Manifest, Author: Texas Instruments, Incorporated, Keywords: Manifest Open Source License, Comments: This document lists the licensing for a specific software release., Template: Normal.dotm, Last Saved By: Balagopalakrishnan, Anand, Revision Number: 10, Name of Creating Application: Microsoft Office Word, Total Editing Time: 10:00, Create Time/Date: Sat Jun 29 09:13:00 2013, Last Saved Time/Date: Thu Nov  7 07:40:00 2013, Number of Pages: 5, Number of Words: 1109, Number of Characters: 6325, Security: 0
+
+[exit=0]
+
+$ readelf -Ws references/omap5-sgx-ddk-um-linux/targetfs/lib/libsrv_init.so.1.9.6.0 [filtro de nomes, sem bytes de programa]
+
+     6: 00000000     0 FUNC    GLOBAL DEFAULT  UND SGXDevInitPart2
+    28: 00000000     0 FUNC    GLOBAL DEFAULT  UND SGXGetInfoForSrvInit
+    62: 00000000     0 FILE    LOCAL  DEFAULT  ABS sgxinit.c
+    67: 000009eb    46 FUNC    LOCAL  DEFAULT   11 SGXInitGetAppHint
+    68: 00000a19    76 FUNC    LOCAL  DEFAULT   11 AllocateuKernelBuffer
+    71: 00000a65    76 FUNC    LOCAL  DEFAULT   11 NonEDMProtectedAllocateuKernelBuffer
+    87: 00001eb8 60208 OBJECT  LOCAL  DEFAULT   13 pbuKernelProgram
+    88: 000109e8 11552 OBJECT  LOCAL  DEFAULT   13 pbSlaveuKernelProgram
+    89: 00013708    68 OBJECT  LOCAL  DEFAULT   13 g_pui32PDSSLAVE_UKERNEL_EVENTS
+    90: 00013750    24 OBJECT  LOCAL  DEFAULT   13 g_pui32PDSUKERNEL_INIT_PRIM1
+    91: 00013768    56 OBJECT  LOCAL  DEFAULT   13 g_pui32PDSUKERNEL_INIT_SEC
+    92: 000137a0    24 OBJECT  LOCAL  DEFAULT   13 g_pui32PDSUKERNEL_INIT_PRIM2
+    93: 000137b8   252 OBJECT  LOCAL  DEFAULT   13 g_pui32PDSUKERNEL_EVENTS
+    94: 000138b8   120 OBJECT  LOCAL  DEFAULT   13 g_pui32PDSUKERNEL_LB
+    97: 0001c458   240 OBJECT  LOCAL  DEFAULT   20 aui32ClipperBugPDSProgram
+   114: 00000b15  4680 FUNC    LOCAL  DEFAULT   11 SGXInit
+   130: 00000000     0 FUNC    GLOBAL DEFAULT  UND SGXDevInitPart2
+   152: 00000000     0 FUNC    GLOBAL DEFAULT  UND SGXGetInfoForSrvInit
+
+$ strings -t x references/omap5-sgx-ddk-um-linux/OMAP5-Linux-Graphics-DDK-UM-Manifest.doc [trecho targetfs/licença; offsets de arquivo em hexadecimal; extração parcial]
+
+    f1d targetfs
+    f2a TI TSPA
+    f32 Binary
+    f3d Location
+    f4e Obtained from1
+    f65 Licenses
+    f70 TI TSPA License
+    f84  * TECHNOLOGY AND SOFTWARE PUBLICLY AVAILABLE
+    fb2  * SOFTWARE LICENSE FOR OMAP(TM) USER SPACE GRAPHICS DRIVER BINARY 
+    ffa  * Copyright (c) 2013, Texas Instruments Incorporated.
+   1031  * Portions (c), Imagination Technologies Limited.
+   1068  * All rights reserved.
+   1084  * Redistribution:  
+   109d  * Redistribution and use in binary form, without modification, are
+   10e1  * permitted provided that the following conditions are met:
+   1122  * * Redistributions must preserve existing copyright notices and reproduce
+   116e  *   this license (including the above copyright notice and the disclaimer
+   11b9  *   below) in the documentation and/or other materials provided with the
+   1203  *   distribution.
+   121a  * * Neither the name of Texas Instruments Incorporated nor the names of its
+   1267  *   suppliers may be used to endorse or promote products derived from this 
+   12b4  *   software without specific prior written permission.
+   12f1  * * No reverse engineering, decompilation, or disassembly of this software
+   133d  *   is permitted.
+   1354  * Limited patent license:
+   1373  * Texas Instruments Incorporated (TI) grants a world-wide, royalty-free, 
+   13be  * non-exclusive license under patents it now or hereafter owns or controls 
+   140b  * to make, have made, use, import, offer to sell and sell ("Utilize") this
+   1457  * software in its current form, but solely to the extent that any such 
+   14a0  * patent is necessary to  Utilize the software alone.  The patent license 
+   14ec  * shall not apply to any combinations which include this software. No 
+   1534  * hardware per se is licensed hereunder.
+   1562  * DISCLAIMER:

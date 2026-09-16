@@ -1,0 +1,12 @@
+7c89d3433bd96d8b2755ca172e99198fa4b69c05 2016-02-11T14:02:23+05:30 2023-03-22T16:21:10-05:00 IMG DDK 1.14 ED3699939
+
+A	services4/srvkm/hwdefs/sgx535defs.h
+cb46ba4d0c900f89f7ec0284f9803d476bfa98de 2016-02-11T14:02:23+05:30 2016-02-11T14:08:05+05:30 IMG DDK 1.14 ED3699939
+
+A	eurasia_km/services4/srvkm/hwdefs/sgx535defs.h
+a24ae6b2573b7eb1dc94473aa9953b964079b5c6 2015-07-13T10:21:20+05:30 2015-07-13T10:21:20+05:30 km: move source to eurasia_km folder
+
+R100	services4/srvkm/hwdefs/sgx535defs.h	eurasia_km/services4/srvkm/hwdefs/sgx535defs.h
+322bcda5f3076037e2e20ef9209f4f4d575a7d5f 2015-05-28T19:19:02+05:30 2015-05-28T19:19:02+05:30 DDK 1.13 - experimental
+
+A	services4/srvkm/hwdefs/sgx535defs.h

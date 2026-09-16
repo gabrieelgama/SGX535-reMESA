@@ -1,0 +1,53 @@
+from pathlib import Path
+import subprocess,json,re,hashlib,time
+root=Path('/home/gama/sgx535-gfx'); out=root/'docs/archaeology-data';out.mkdir(exist_ok=True)
+terms=['sgx535defs.h','SGX535','SUPPORT_SGX535','SGX_CORE_REV','SGX_FEATURE_','SGX_BIF','USSE','EURASIA','Poulsbo','PSB','GMA500']
+pattern=re.compile('|'.join(re.escape(t) for t in terms),re.I)
+def git(repo,*args):return subprocess.check_output(['git','--no-optional-locks','-C',str(repo),*args])
+summary={}
+for name in ['omap5-sgx-ddk-linux','omap5-sgx-ddk-um-linux','linux']:
+ repo=root/'references'/name; print('START',name,flush=True)
+ before=git(repo,'status','--porcelain').decode()
+ refs=git(repo,'for-each-ref','--format=%(refname)\t%(objectname)\t%(*objectname)').decode()
+ (out/(name+'-refs.tsv')).write_text(refs)
+ objects=git(repo,'cat-file','--batch-all-objects','--batch-check=%(objectname) %(objecttype) %(objectsize)').decode().splitlines()
+ commits=[x.split()[0] for x in objects if x.split()[1]=='commit']
+ reachable=set(git(repo,'rev-list','--all').decode().splitlines())
+ contexts={}; names=[]; commitmeta=[]; filename_hits=[]
+ for c in commits:
+  meta=git(repo,'show','-s','--format=%H%x09%P%x09%aI%x09%cI%x09%s',c).decode().strip();commitmeta.append(meta)
+  tree=git(repo,'ls-tree','-r','-z',c)
+  for ent in tree.split(b'\0'):
+   if not ent:continue
+   props,path=ent.split(b'\t',1);mode,typ,oid=props.decode().split();path=path.decode(errors='replace')
+   if typ!='blob':continue
+   contexts.setdefault(oid,[]).append((c,path))
+   if pattern.search(path): filename_hits.append((c,oid,path))
+ (out/(name+'-commits.tsv')).write_text('\n'.join(commitmeta)+'\n')
+ (out/(name+'-filename-hits.tsv')).write_text('commit\tblob\tpath\n'+'\n'.join('\t'.join(x) for x in filename_hits)+'\n')
+ print(name,'commits',len(commits),'blobs',len(contexts),flush=True)
+ proc=subprocess.Popen(['git','-C',str(repo),'cat-file','--batch'],stdin=subprocess.PIPE,stdout=subprocess.PIPE)
+ count={t:0 for t in terms}; matched=set(); binary=0; linesout=out/(name+'-matches.tsv')
+ with linesout.open('w') as f:
+  f.write('blob\tline\tterms\ttext\n')
+  for ix,oid in enumerate(contexts):
+   proc.stdin.write((oid+'\n').encode());proc.stdin.flush()
+   hdr=proc.stdout.readline().split();size=int(hdr[2]);data=proc.stdout.read(size);proc.stdout.read(1)
+   if b'\0' in data:binary+=1;continue
+   for n,line in enumerate(data.decode(errors='replace').splitlines(),1):
+    hits=[t for t in terms if t.lower() in line.lower()]
+    if hits:
+     matched.add(oid)
+     for t in hits:count[t]+=1
+     f.write(f'{oid}\t{n}\t{",".join(hits)}\t{line.replace(chr(9)," ")}\n')
+   if ix and ix%20000==0:print(name,'scanned',ix,flush=True)
+ proc.stdin.close();proc.wait()
+ with (out/(name+'-contexts.tsv')).open('w') as f:
+  f.write('blob\tcommit\tpath\n')
+  for oid in sorted(matched):
+   for c,path in contexts[oid]:f.write(f'{oid}\t{c}\t{path}\n')
+ after=git(repo,'status','--porcelain').decode()
+ assert before==after==''
+ summary[name]={'head':git(repo,'rev-parse','HEAD').decode().strip(),'shallow':git(repo,'rev-parse','--is-shallow-repository').decode().strip(),'refs':len(refs.splitlines()),'available_commits':len(commits),'reachable_commits':len(reachable),'other_commits':sorted(set(commits)-reachable),'unique_blobs':len(contexts),'binary_blobs_skipped':binary,'matched_blobs':len(matched),'counts_unique_blob_lines':count,'sgx535defs_paths':[x for x in filename_hits if 'sgx535defs.h' in x[2].lower()],'before_after_status':'clean'}
+ (out/'summary.json').write_text(json.dumps(summary,indent=2)+'\n')
+ print('DONE',name,flush=True)

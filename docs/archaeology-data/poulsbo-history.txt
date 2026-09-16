@@ -1,0 +1,16 @@
+636e957a340ebba5c10fb8a5c5b3f30b85078c66 2019-02-28T18:49:39+05:30 2023-03-22T16:21:12-05:00 km: remove DDK 1.14 specific files
+
+D	eurasiacon/build/linux2/pc_i686_poulsbo_d0_linux/Makefile
+D	services4/system/poulsbo/sysconfig.c
+7c89d3433bd96d8b2755ca172e99198fa4b69c05 2016-02-11T14:02:23+05:30 2023-03-22T16:21:10-05:00 IMG DDK 1.14 ED3699939
+
+A	eurasiacon/build/linux2/pc_i686_poulsbo_d0_linux/Makefile
+A	services4/system/poulsbo/sysconfig.c
+3b6ca1d1f47a951c1f93ba5f9b693b25474d0798 2019-02-28T18:49:39+05:30 2019-02-28T18:49:39+05:30 km: remove DDK 1.14 specific files
+
+D	eurasia_km/eurasiacon/build/linux2/pc_i686_poulsbo_d0_linux/Makefile
+D	eurasia_km/services4/system/poulsbo/sysconfig.c
+cb46ba4d0c900f89f7ec0284f9803d476bfa98de 2016-02-11T14:02:23+05:30 2016-02-11T14:08:05+05:30 IMG DDK 1.14 ED3699939
+
+A	eurasia_km/eurasiacon/build/linux2/pc_i686_poulsbo_d0_linux/Makefile
+A	eurasia_km/services4/system/poulsbo/sysconfig.c

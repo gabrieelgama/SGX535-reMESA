@@ -1,0 +1,54 @@
+refs/heads/master	b6801bf89e00d69893c2957455bbeb3195c0ed52	
+refs/remotes/origin/1.17.4948957-next	742cf38aba13e1ba1a910cf1f036a1a212c263b6	
+refs/remotes/origin/1.17.4948957/mesa/glibc-2.35	84a396a4fb379f10931421e489ac8a199d6a9f2c	
+refs/remotes/origin/HEAD	b6801bf89e00d69893c2957455bbeb3195c0ed52	
+refs/remotes/origin/bugfix/x0038811/banma_sgxrecovery	24e093985c79cf9a60dca35a2690979459bce1e6	
+refs/remotes/origin/bugfix/x0038811/naviapp_sgxrecovery	b6801bf89e00d69893c2957455bbeb3195c0ed52	
+refs/remotes/origin/bugfix/x0038811/sgxrecovery_banma	24e093985c79cf9a60dca35a2690979459bce1e6	
+refs/remotes/origin/dev/thud/1.17.4948957-egl-experimental	0f76ac03750a4f6c09290abf6b9fced696ca192d	
+refs/remotes/origin/dev/thud/1.17.4948957-mesa-experimental	fe17e957b76e37deb7af1f8fe50c46096877d1cd	
+refs/remotes/origin/dev/thud/1.17.4948957/egl-experimental	87d7e5c1e4db1bab048939c9719059d549c1e8dd	
+refs/remotes/origin/dra7/k3.14	da68cf8afa248ca7601bab6b5f71f25d8c354df5	
+refs/remotes/origin/dra7/k3.14_desaysv	128975b4fe7a907827ec3d528563616b024d1b16	
+refs/remotes/origin/ed/ep21	20a3e8f4244cac277fbecda3a98c231e2104b88d	
+refs/remotes/origin/ed/ip31	5c54e382b226e37a8a0d2292f7234485d325ddae	
+refs/remotes/origin/feature/x0038811/vdrm_support_ddk1.17	27dd28616a44757742ae9c090b17a62235a7e805	
+refs/remotes/origin/feature/x0038811/wlegl-yuv-fullrange_4.4k	e814037b7f38061e31a30eb49a631893580ec6c2	
+refs/remotes/origin/feature/x0038811/wlegl-yuv-fullrange_4.4k_vision_sdk	bce94b557ffddd3984f8347ec41c5bfe464dff9e	
+refs/remotes/origin/hotfix/x0038811/banma_gl_red_ext_hw_support-to	93cc3bcfda94a44d58820142fa15117417d22935	
+refs/remotes/origin/infoadas/1.14.3699939/k4.4	a5152f0b90bf3916eb1f478ac9fefe7d7ebe8bd9	
+refs/remotes/origin/infoadas/1.14.3699939/next	a5152f0b90bf3916eb1f478ac9fefe7d7ebe8bd9	
+refs/remotes/origin/infoadas/1.9/k3.14	da68cf8afa248ca7601bab6b5f71f25d8c354df5	
+refs/remotes/origin/infoadas/1.9/next	da68cf8afa248ca7601bab6b5f71f25d8c354df5	
+refs/remotes/origin/master	b6801bf89e00d69893c2957455bbeb3195c0ed52	
+refs/remotes/origin/release/ti-img-sgx/thud/1.17.494857_vision_sdk	2a2e5bb090ced870d73ed4edbc54793e952cc6d8	
+refs/remotes/origin/release/ti-img-sgx/thud/1.17.4948957_test	2a2e5bb090ced870d73ed4edbc54793e952cc6d8	
+refs/remotes/origin/release/ti-img-sgx/thud/2019.04+	81c999050252604aecdc31608cebcf095b77ccfe	
+refs/remotes/origin/ti-img-sgx/1.14.3699939	bbbd5cbb55e4c54d3b02456ae553bea86fd61506	
+refs/remotes/origin/ti-img-sgx/1.14.3699939_k4.4	7ea8b3795fca0a820b7045d4f274fd81ac558473	
+refs/remotes/origin/ti-img-sgx/1.14.3699939_k4.4_vision_sdk	b86e15a4f2087e2114adc8a812fbc505031e634c	
+refs/remotes/origin/ti-img-sgx/dunfell/1.17.4948957	742cf38aba13e1ba1a910cf1f036a1a212c263b6	
+refs/remotes/origin/ti-img-sgx/experimental	0afd9f72d0999cf8922d0f5d1a89ed000565c6e6	
+refs/remotes/origin/ti-img-sgx/kirkstone-mesa/1.17.4948957	bbae7217051341f515515ec190e165119102f45a	
+refs/remotes/origin/ti-img-sgx/kirkstone-ws/1.17.4948957	76251c0a88c172eb69a84324f033e4035b8a7a4e	
+refs/remotes/origin/ti-img-sgx/kirkstone/1.17.4948957	905809029b877fea42e91b9738825a6294ff1775	
+refs/remotes/origin/ti-img-sgx/morty/1.14.3699939	bbbd5cbb55e4c54d3b02456ae553bea86fd61506	
+refs/remotes/origin/ti-img-sgx/next	5c6fd9643cb2148c5799407ce620eaf6f2e0164d	
+refs/remotes/origin/ti-img-sgx/rocko/1.14.3699939	bc62c9d0c590dfbc801bf6b10176c3a8b6a39d98	
+refs/remotes/origin/ti-img-sgx/rocko/1.17.4948957	271497b0f4747152bfa4775821e2ef33b4a894aa	
+refs/remotes/origin/ti-img-sgx/thud/1.17.494857	b3a012f672ea7b4c3e0338ceb676ce1550ff0f8b	
+refs/remotes/origin/ti-img-sgx/thud/1.17.4948957	2a2e5bb090ced870d73ed4edbc54793e952cc6d8	
+refs/remotes/origin/ti-img-sgx/zeus/1.17.4948957	551665bf9c321bc3e7721416e6ebbc9f65c18155	
+refs/tags/glsdk_6.04.00.02	994922a5655c63b05343a9238cb30e6ef61744be	
+refs/tags/glsdk_6.10.00.01	994922a5655c63b05343a9238cb30e6ef61744be	
+refs/tags/glsdk_6.10.00.02	0af11b676900de5a3e5550728fe18acd88c29848	
+refs/tags/glsdk_7.00.00.04	7ec11f7df182433c47344be70baeeff12a9029a9	53be02a24a30a4c74eb48f2c84fda789bd95ab33
+refs/tags/glsdk_7.01.00.03	b6e57ccf36fc8c36d988246bc7510f0dec42d991	
+refs/tags/glsdk_7.02.00.02	d63cd6469fff610317a8e1c986f227bb3e7922f6	
+refs/tags/glsdk_7.03.00.03	b6801bf89e00d69893c2957455bbeb3195c0ed52	
+refs/tags/glsdk_7.04.00.03	fd0d65856bd4a6558ad96f2d8cf50f446ddc3ee3	5603bbaba7b8a88173f3652c8e949c0458601e6b
+refs/tags/imgddk_ti_1.9.0.11	225230e5dae17836a8acf6f6e9fb6e8200af4dea	
+refs/tags/imgddk_ti_1.9.0.12	76d3ff69e5171626da462de4c5d0f310136ed89f	d06e1c100f175c10147816e884319430872df24b
+refs/tags/imgddk_ti_1.9.11	225230e5dae17836a8acf6f6e9fb6e8200af4dea	
+refs/tags/psdkla-03.01.00.03	751b5c8b8963cd4708778865d5d7f27acc6fe23c	f65d06843ef21964e266a7618c1529840653d563
+refs/tags/ti_imgddk_1.9.1.0	994922a5655c63b05343a9238cb30e6ef61744be	

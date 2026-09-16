@@ -1,0 +1,22 @@
+{
+  "links_checked": 466,
+  "source_snapshots": 22,
+  "questions": 20,
+  "repositories": {
+    "omap5-sgx-ddk-linux": {
+      "HEAD_unchanged": true,
+      "refs_unchanged": true,
+      "worktree_clean": true
+    },
+    "omap5-sgx-ddk-um-linux": {
+      "HEAD_unchanged": true,
+      "refs_unchanged": true,
+      "worktree_clean": true
+    },
+    "linux": {
+      "HEAD_unchanged": true,
+      "refs_unchanged": true,
+      "worktree_clean": true
+    }
+  }
+}
