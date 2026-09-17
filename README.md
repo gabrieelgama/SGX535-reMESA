@@ -141,4 +141,4 @@ Third-party source code is not automatically part of this repository and remains
 The purpose of this project is hardware preservation, documentation, interoperability, and open-source driver research.
 
 # Of course...
-Entirely made using PRoot-distro!
+Entirely made using PRoot-distro using anland (yes, really bro)
