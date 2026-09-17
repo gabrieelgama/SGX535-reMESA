@@ -1,0 +1,715 @@
+[
+  {
+    "id": "H535",
+    "repo": "omap5-sgx-ddk-linux",
+    "commit": "322bcda5f3076037e2e20ef9209f4f4d575a7d5f",
+    "path": "services4/srvkm/hwdefs/sgx535defs.h",
+    "blob": "8039da4a73ef9ee3e929edb64244d2891bc9239e",
+    "sha256": "cb2a3e9119d65b421a16744137b1114b0ebd6982cb27549b4fce1d8405bd41c3",
+    "lines": 739,
+    "snapshot": "../archaeology-data/H535.txt",
+    "confidence": "CONFIRMED"
+  },
+  {
+    "id": "PBUILD",
+    "repo": "omap5-sgx-ddk-linux",
+    "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+    "path": "eurasia_km/eurasiacon/build/linux2/pc_i686_poulsbo_d0_linux/Makefile",
+    "blob": "86c0adfe78965f7d304e912f90a302dcfd4f119c",
+    "sha256": "cc9814e9e9cb575ad28223ebc5239f3799d7a92460d2eac4e2e36a88fc08a7a8",
+    "lines": 86,
+    "snapshot": "../archaeology-data/PBUILD.txt",
+    "confidence": "CONFIRMED"
+  },
+  {
+    "id": "PSYS",
+    "repo": "omap5-sgx-ddk-linux",
+    "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+    "path": "eurasia_km/services4/system/poulsbo/sysconfig.h",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "sha256": "2fbf534d641f3c512cf7a93284cb5a75e7f26250f02b13e1767965d444920340",
+    "lines": 141,
+    "snapshot": "../archaeology-data/PSYS.txt",
+    "confidence": "CONFIRMED"
+  },
+  {
+    "id": "PSYSC",
+    "repo": "omap5-sgx-ddk-linux",
+    "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+    "path": "eurasia_km/services4/system/poulsbo/sysconfig.c",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "sha256": "725faa537e192c1e680a7646a9dcb7588691b8b5fe3796668b8e810ba071d5e1",
+    "lines": 2005,
+    "snapshot": "../archaeology-data/PSYSC.txt",
+    "confidence": "CONFIRMED"
+  },
+  {
+    "id": "PINFO",
+    "repo": "omap5-sgx-ddk-linux",
+    "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+    "path": "eurasia_km/services4/system/poulsbo/sysinfo.h",
+    "blob": "a5539cc7554fb34b283cc27a940096b54eb4ab82",
+    "sha256": "8826a5839d48bd203ce264e9cca3726069392fc1950e79c6334211d95f0c880a",
+    "lines": 53,
+    "snapshot": "../archaeology-data/PINFO.txt",
+    "confidence": "CONFIRMED"
+  },
+  {
+    "id": "FEATURE",
+    "repo": "omap5-sgx-ddk-linux",
+    "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+    "path": "eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h",
+    "blob": "de07cc890c0194d9bc02997176d6eb1eda048811",
+    "sha256": "0f3e2d7170c81a882b371023159b5a6112232431c43c2113b031b4bf7b9ba7e4",
+    "lines": 290,
+    "snapshot": "../archaeology-data/FEATURE.txt",
+    "confidence": "CONFIRMED"
+  },
+  {
+    "id": "ERRATA",
+    "repo": "omap5-sgx-ddk-linux",
+    "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+    "path": "eurasia_km/services4/srvkm/hwdefs/sgxerrata.h",
+    "blob": "e423d4fbaa566fe710c7b44e8cc25efe4a847a8c",
+    "sha256": "b6b7a7e53708f9b9516d3b53a317c27bea9aa9b2302c853b1d1d944ac3554e4d",
+    "lines": 484,
+    "snapshot": "../archaeology-data/ERRATA.txt",
+    "confidence": "CONFIRMED"
+  },
+  {
+    "id": "MMU",
+    "repo": "omap5-sgx-ddk-linux",
+    "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+    "path": "eurasia_km/services4/srvkm/hwdefs/sgxmmu.h",
+    "blob": "a6a907aecb69fecb2c8ba01fb213736943fa3588",
+    "sha256": "5a2e8509359631907ac8a4917d50c299d687bb7b7235f8c50c29f131b88b8940",
+    "lines": 99,
+    "snapshot": "../archaeology-data/MMU.txt",
+    "confidence": "CONFIRMED"
+  },
+  {
+    "id": "RESET",
+    "repo": "omap5-sgx-ddk-linux",
+    "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+    "path": "eurasia_km/services4/srvkm/devices/sgx/sgxreset.c",
+    "blob": "ecf0e6207ca8b104b648fc80924daaf7e184ae48",
+    "sha256": "9eef409b4acfd96e096ce0cf372bdbeb0ba57fd2b8842e64853f9e18c71460d3",
+    "lines": 824,
+    "snapshot": "../archaeology-data/RESET.txt",
+    "confidence": "CONFIRMED"
+  },
+  {
+    "id": "VER14",
+    "repo": "omap5-sgx-ddk-linux",
+    "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+    "path": "eurasia_km/include4/pvrversion.h",
+    "blob": "4fb45c1f330a33dca1be6b7b8785d6025864469d",
+    "sha256": "5730251c117e8f22b7b0cc50a6884fb07c5ea42219cf4e629358f3efbfd58141",
+    "lines": 68,
+    "snapshot": "../archaeology-data/VER14.txt",
+    "confidence": "CONFIRMED"
+  },
+  {
+    "id": "LREG",
+    "repo": "linux",
+    "commit": "9b87fdc9af2fbfcdb5c24a64139685ef80f6573f",
+    "path": "drivers/gpu/drm/gma500/psb_reg.h",
+    "blob": "2a229a0ef36c0d76d9eea29ad75107b5784f4a08",
+    "sha256": "124e8e80602a25d0bbe7a1019e95f6d780abcad5798b7d11f26496b7f3ead3d3",
+    "lines": 556,
+    "snapshot": "../archaeology-data/LREG.txt",
+    "confidence": "CONFIRMED"
+  },
+  {
+    "id": "LDRVH",
+    "repo": "linux",
+    "commit": "9b87fdc9af2fbfcdb5c24a64139685ef80f6573f",
+    "path": "drivers/gpu/drm/gma500/psb_drv.h",
+    "blob": "db197b865b90a020ac0975c4cc6a5bd00627a29a",
+    "sha256": "17b81c7c8e33c9c2f278d926864589fcdf8f70bffa55a13b37c4d4bd5f4ce3b2",
+    "lines": 728,
+    "snapshot": "../archaeology-data/LDRVH.txt",
+    "confidence": "CONFIRMED"
+  },
+  {
+    "id": "LDRVC",
+    "repo": "linux",
+    "commit": "9b87fdc9af2fbfcdb5c24a64139685ef80f6573f",
+    "path": "drivers/gpu/drm/gma500/psb_drv.c",
+    "blob": "d17cb5b4a4bf2d80e8fa0e83dd09cabff5b20fe1",
+    "sha256": "3a470f23080e5aed93cc3882b5258de284143403b7b80d82eb7863bef75165d5",
+    "lines": 547,
+    "snapshot": "../archaeology-data/LDRVC.txt",
+    "confidence": "CONFIRMED"
+  },
+  {
+    "id": "LMMU",
+    "repo": "linux",
+    "commit": "9b87fdc9af2fbfcdb5c24a64139685ef80f6573f",
+    "path": "drivers/gpu/drm/gma500/mmu.c",
+    "blob": "4fbc22a59ac7a9e76a373b65cd7fcf97aa1605ba",
+    "sha256": "7212b3cdc7a92887c6c65f7b424b9b83feb87618737a22760976e962f3c27751",
+    "lines": 734,
+    "snapshot": "../archaeology-data/LMMU.txt",
+    "confidence": "CONFIRMED"
+  },
+  {
+    "id": "LIRQ",
+    "repo": "linux",
+    "commit": "9b87fdc9af2fbfcdb5c24a64139685ef80f6573f",
+    "path": "drivers/gpu/drm/gma500/psb_irq.c",
+    "blob": "c224c7ff353ce35ba36b3c2b0a4cff4bff478578",
+    "sha256": "8daf6b0f887ea1c376efd117df202f3c9107ffcbabe358af5698f3da8c9b999f",
+    "lines": 494,
+    "snapshot": "../archaeology-data/LIRQ.txt",
+    "confidence": "CONFIRMED"
+  },
+  {
+    "id": "DRMS",
+    "repo": "omap5-sgx-ddk-linux",
+    "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+    "path": "eurasia_km/services4/include/env/linux/pvr_drm_shared.h",
+    "lines": 76,
+    "snapshot": "DRMS.txt",
+    "sha256": "2e43dddbdcb621231b1c49eb4e9942e3daa9b6830c9db6302200cbbc24bfca25"
+  },
+  {
+    "id": "DRMC",
+    "repo": "omap5-sgx-ddk-linux",
+    "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+    "path": "eurasia_km/services4/srvkm/env/linux/pvr_drm.c",
+    "lines": 791,
+    "snapshot": "DRMC.txt",
+    "sha256": "315909a93c4a6e54c06d7bd9dbc7a5d2f875e7d9018ec889f6a258c5431d27b4"
+  },
+  {
+    "id": "BRIDGE",
+    "repo": "omap5-sgx-ddk-linux",
+    "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+    "path": "eurasia_km/services4/include/pvr_bridge.h",
+    "lines": 1905,
+    "snapshot": "BRIDGE.txt",
+    "sha256": "c48cf6e4c5000ccf4edaf530c83905db10881cf288281045fa1efde209d2d902"
+  },
+  {
+    "id": "SBRIDGE",
+    "repo": "omap5-sgx-ddk-linux",
+    "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+    "path": "eurasia_km/services4/include/sgx_bridge.h",
+    "lines": 609,
+    "snapshot": "SBRIDGE.txt",
+    "sha256": "33448ba5d1c3d833e29198fadd4b7b0c1d181dcefdee1201d1da27c7a00b7612"
+  },
+  {
+    "id": "DCS",
+    "repo": "omap5-sgx-ddk-linux",
+    "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+    "path": "eurasia_km/services4/3rdparty/dc_poulsbo/3rdparty_dc_drm_shared.h",
+    "lines": 75,
+    "snapshot": "DCS.txt",
+    "sha256": "36a23b6bed784c74576a3822303b16aee85d2480453f525fd79bb1f1de3b7a0d"
+  },
+  {
+    "id": "DCL",
+    "repo": "omap5-sgx-ddk-linux",
+    "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+    "path": "eurasia_km/services4/3rdparty/dc_poulsbo/poulsbo_linux.c",
+    "lines": 2344,
+    "snapshot": "DCL.txt",
+    "sha256": "b1cfb521e90d6b541f003b3a23eb1c6c497f65c6097430c005fbb543fd2e6ad1"
+  },
+  {
+    "id": "DCR",
+    "repo": "omap5-sgx-ddk-linux",
+    "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+    "path": "eurasia_km/services4/3rdparty/dc_poulsbo/poulsbo_regs.h",
+    "lines": 1137,
+    "snapshot": "DCR.txt",
+    "sha256": "f4f0f3315895274ba853a3ba7231465bb4f298ebc5973d6222e1c84dd1fcc612"
+  },
+  {
+    "id": "INIT",
+    "repo": "omap5-sgx-ddk-linux",
+    "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+    "path": "eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+    "lines": 3634,
+    "snapshot": "INIT.txt",
+    "sha256": "da5facd0ac7db01c20dab240d1fe07515da42580c86f6afb5821ef04afb3e2a5"
+  },
+  {
+    "id": "MKIF",
+    "repo": "omap5-sgx-ddk-linux",
+    "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+    "path": "eurasia_km/services4/include/sgx_mkif_km.h",
+    "lines": 475,
+    "snapshot": "MKIF.txt",
+    "sha256": "181d7f21bf0ec78022b43b988c9ea49714d4843b79d3d3ed6a944344807ed5db"
+  },
+  {
+    "id": "INFO",
+    "repo": "omap5-sgx-ddk-linux",
+    "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+    "path": "eurasia_km/services4/include/sgxinfo.h",
+    "lines": 355,
+    "snapshot": "INFO.txt",
+    "sha256": "b16e76e79dc24b3e3356815514103cd8c2d305e5bfcd74abd6192d637e0f468f"
+  },
+  {
+    "id": "UTIL",
+    "repo": "omap5-sgx-ddk-linux",
+    "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+    "path": "eurasia_km/services4/srvkm/devices/sgx/sgxutils.c",
+    "lines": 1937,
+    "snapshot": "UTIL.txt",
+    "sha256": "95a3afa3bce7d85cc2bb832fc2baf25b67af6fff04eb473c286f07c0f96ba1ff"
+  },
+  {
+    "id": "SYSUTIL",
+    "repo": "omap5-sgx-ddk-linux",
+    "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+    "path": "eurasia_km/services4/system/poulsbo/sysutils.c",
+    "lines": 104,
+    "snapshot": "SYSUTIL.txt",
+    "sha256": "e3d49837aa8682cb99876dcef5ccd44ba1b59736b36e0a73bbce6f58c1ec1b26"
+  },
+  {
+    "id": "GTT",
+    "repo": "linux",
+    "commit": "9b87fdc9af2fbfcdb5c24a64139685ef80f6573f",
+    "path": "drivers/gpu/drm/gma500/gtt.c",
+    "lines": 312,
+    "snapshot": "GTT.txt",
+    "sha256": "6ee3c406c02f9d34328f566743899272e596d37924edad1da7e204fe225a8166"
+  },
+  {
+    "id": "GEM",
+    "repo": "linux",
+    "commit": "9b87fdc9af2fbfcdb5c24a64139685ef80f6573f",
+    "path": "drivers/gpu/drm/gma500/gem.c",
+    "lines": 432,
+    "snapshot": "GEM.txt",
+    "sha256": "84e4b67b55f696d81a9eb08d8320715d8945008df789245c13ced993f8edd94e"
+  },
+  {
+    "id": "POWER",
+    "repo": "linux",
+    "commit": "9b87fdc9af2fbfcdb5c24a64139685ef80f6573f",
+    "path": "drivers/gpu/drm/gma500/power.c",
+    "lines": 232,
+    "snapshot": "POWER.txt",
+    "sha256": "ed871429e827f8098f387effa3a772aa80aa64206b89fb8e5a6cd7c7cfa262fe"
+  },
+  {
+    "id": "DEVICE",
+    "repo": "linux",
+    "commit": "9b87fdc9af2fbfcdb5c24a64139685ef80f6573f",
+    "path": "drivers/gpu/drm/gma500/psb_device.c",
+    "lines": 293,
+    "snapshot": "DEVICE.txt",
+    "sha256": "e744a0902d458748c1570ee7d048151030f173f215ab0df5053353ad38978ca2"
+  },
+  {
+    "id": "PSB_README_drm",
+    "repo": "https://github.com/gregkh/psb-kmp",
+    "commit": "98b5307e5158a9ac401b29128ddd1184ae06b4d7",
+    "path": "README.drm",
+    "lines": 25,
+    "snapshot": "PSB_README_drm.txt",
+    "sha256": "666c5228eea8392ac9a6cfb1a285d7d3a7b94e45f706ec81bddb9ff59e57a27e",
+    "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/README.drm"
+  },
+  {
+    "id": "PSB_psb_drm_h",
+    "repo": "https://github.com/gregkh/psb-kmp",
+    "commit": "98b5307e5158a9ac401b29128ddd1184ae06b4d7",
+    "path": "psb_drm.h",
+    "lines": 395,
+    "snapshot": "PSB_psb_drm_h.txt",
+    "sha256": "85f30c2f01eb29884778de7959f4f122353f0cbb4ed5cec00db9fb862707dc21",
+    "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/psb_drm.h"
+  },
+  {
+    "id": "PSB_psb_drv_c",
+    "repo": "https://github.com/gregkh/psb-kmp",
+    "commit": "98b5307e5158a9ac401b29128ddd1184ae06b4d7",
+    "path": "psb_drv.c",
+    "lines": 1030,
+    "snapshot": "PSB_psb_drv_c.txt",
+    "sha256": "8aae96d114be1349e22f156a4f00f2bf6335f0c08be19d3d6e72382e1f9801fe",
+    "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/psb_drv.c"
+  },
+  {
+    "id": "PSB_psb_drv_h",
+    "repo": "https://github.com/gregkh/psb-kmp",
+    "commit": "98b5307e5158a9ac401b29128ddd1184ae06b4d7",
+    "path": "psb_drv.h",
+    "lines": 819,
+    "snapshot": "PSB_psb_drv_h.txt",
+    "sha256": "08740e64688d04efc6a6b6c61fa1a3c7ef62af4bfb9823576ded590b5867ec62",
+    "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/psb_drv.h"
+  },
+  {
+    "id": "PSB_psb_fence_c",
+    "repo": "https://github.com/gregkh/psb-kmp",
+    "commit": "98b5307e5158a9ac401b29128ddd1184ae06b4d7",
+    "path": "psb_fence.c",
+    "lines": 285,
+    "snapshot": "PSB_psb_fence_c.txt",
+    "sha256": "edb8303c144d50e32e746ad7540fb5e81fd9b4969741d487a4ff7c7d78792a3f",
+    "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/psb_fence.c"
+  },
+  {
+    "id": "PSB_psb_irq_c",
+    "repo": "https://github.com/gregkh/psb-kmp",
+    "commit": "98b5307e5158a9ac401b29128ddd1184ae06b4d7",
+    "path": "psb_irq.c",
+    "lines": 435,
+    "snapshot": "PSB_psb_irq_c.txt",
+    "sha256": "1240c2ff093450fa578e6759ecedaf71f20df9f9a0897285be2db893cf19f1b3",
+    "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/psb_irq.c"
+  },
+  {
+    "id": "PSB_psb_mmu_c",
+    "repo": "https://github.com/gregkh/psb-kmp",
+    "commit": "98b5307e5158a9ac401b29128ddd1184ae06b4d7",
+    "path": "psb_mmu.c",
+    "lines": 1034,
+    "snapshot": "PSB_psb_mmu_c.txt",
+    "sha256": "401954c022c8c7a76e6b30ae86b141e8a673f0b8587b7786f8c09bf7e4d05f5b",
+    "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/psb_mmu.c"
+  },
+  {
+    "id": "PSB_psb_reg_h",
+    "repo": "https://github.com/gregkh/psb-kmp",
+    "commit": "98b5307e5158a9ac401b29128ddd1184ae06b4d7",
+    "path": "psb_reg.h",
+    "lines": 562,
+    "snapshot": "PSB_psb_reg_h.txt",
+    "sha256": "512563057c48f651176928ccd33666a8a1145f19eb28c60296382776be1c4344",
+    "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/psb_reg.h"
+  },
+  {
+    "id": "PSB_psb_reset_c",
+    "repo": "https://github.com/gregkh/psb-kmp",
+    "commit": "98b5307e5158a9ac401b29128ddd1184ae06b4d7",
+    "path": "psb_reset.c",
+    "lines": 374,
+    "snapshot": "PSB_psb_reset_c.txt",
+    "sha256": "fb66f4de7259d56c26b0b295ea53f434e6c061d43a71c37c6ac38a2c098f367f",
+    "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/psb_reset.c"
+  },
+  {
+    "id": "PSB_psb_scene_c",
+    "repo": "https://github.com/gregkh/psb-kmp",
+    "commit": "98b5307e5158a9ac401b29128ddd1184ae06b4d7",
+    "path": "psb_scene.c",
+    "lines": 531,
+    "snapshot": "PSB_psb_scene_c.txt",
+    "sha256": "07309f6a189eb0ede64aaa98e7fbd858f44314256e2262226f48ba33d9b7528e",
+    "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/psb_scene.c"
+  },
+  {
+    "id": "PSB_psb_xhw_c",
+    "repo": "https://github.com/gregkh/psb-kmp",
+    "commit": "98b5307e5158a9ac401b29128ddd1184ae06b4d7",
+    "path": "psb_xhw.c",
+    "lines": 629,
+    "snapshot": "PSB_psb_xhw_c.txt",
+    "sha256": "73783fad6b072b655d50386621d09d7fe6f4cdd896cb991ed0258a2494330fc1",
+    "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/psb_xhw.c"
+  },
+  {
+    "id": "EMGD_License_txt",
+    "repo": "https://github.com/EMGD-Community/intel-binaries-linux",
+    "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+    "path": "License.txt",
+    "lines": 42,
+    "snapshot": "EMGD_License_txt.txt",
+    "sha256": "e007ff8e2a484b18d7e4bd9770596023baf0394c47faffaa4fbff09590e7f5d1",
+    "url": "https://raw.githubusercontent.com/EMGD-Community/intel-binaries-linux/e6884ec2eaaf1afe88d5ff9dd44d70403525be5b/License.txt"
+  },
+  {
+    "id": "EMGD_README_md",
+    "repo": "https://github.com/EMGD-Community/intel-binaries-linux",
+    "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+    "path": "README.md",
+    "lines": 439,
+    "snapshot": "EMGD_README_md.txt",
+    "sha256": "c299641217fcc6095d0cf86c96e03aaf372ce6bed5c836e47c6a118f1eccb589",
+    "url": "https://raw.githubusercontent.com/EMGD-Community/intel-binaries-linux/e6884ec2eaaf1afe88d5ff9dd44d70403525be5b/README.md"
+  },
+  {
+    "id": "EMGD_drm_include_emgd_drm_h",
+    "repo": "https://github.com/EMGD-Community/intel-binaries-linux",
+    "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+    "path": "drm/include/emgd_drm.h",
+    "lines": 938,
+    "snapshot": "EMGD_drm_include_emgd_drm_h.txt",
+    "sha256": "8291ea2191be5fc0691b07967b4bf3620c78bb5d577b06d75520c7e528d5a726",
+    "url": "https://raw.githubusercontent.com/EMGD-Community/intel-binaries-linux/e6884ec2eaaf1afe88d5ff9dd44d70403525be5b/drm/include/emgd_drm.h"
+  },
+  {
+    "id": "EMGD_drm_pvr_include4_pvrversion_h",
+    "repo": "https://github.com/EMGD-Community/intel-binaries-linux",
+    "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+    "path": "drm/pvr/include4/pvrversion.h",
+    "lines": 56,
+    "snapshot": "EMGD_drm_pvr_include4_pvrversion_h.txt",
+    "sha256": "9158cbfed5032132ef1b547257ab25d214122d8648936614f28c6031bedcfc12",
+    "url": "https://raw.githubusercontent.com/EMGD-Community/intel-binaries-linux/e6884ec2eaaf1afe88d5ff9dd44d70403525be5b/drm/pvr/include4/pvrversion.h"
+  },
+  {
+    "id": "EMGD_drm_pvr_services4_srvkm_hwdefs_sgx535defs_h",
+    "repo": "https://github.com/EMGD-Community/intel-binaries-linux",
+    "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+    "path": "drm/pvr/services4/srvkm/hwdefs/sgx535defs.h",
+    "lines": 633,
+    "snapshot": "EMGD_drm_pvr_services4_srvkm_hwdefs_sgx535defs_h.txt",
+    "sha256": "634fbb74645d373e0c60ad5e01194fa96e91bb6b26d60dbc35a71a2eda49d12c",
+    "url": "https://raw.githubusercontent.com/EMGD-Community/intel-binaries-linux/e6884ec2eaaf1afe88d5ff9dd44d70403525be5b/drm/pvr/services4/srvkm/hwdefs/sgx535defs.h"
+  },
+  {
+    "id": "EMGD_drm_pvr_services4_system_common_sysconfig_c",
+    "repo": "https://github.com/EMGD-Community/intel-binaries-linux",
+    "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+    "path": "drm/pvr/services4/system/common/sysconfig.c",
+    "lines": 1367,
+    "snapshot": "EMGD_drm_pvr_services4_system_common_sysconfig_c.txt",
+    "sha256": "4ad525c14516d749a5e16c4fa32b008c1e057a627a02fc0019e1d6ec8ad14abd",
+    "url": "https://raw.githubusercontent.com/EMGD-Community/intel-binaries-linux/e6884ec2eaaf1afe88d5ff9dd44d70403525be5b/drm/pvr/services4/system/common/sysconfig.c"
+  },
+  {
+    "id": "EMGD_drm_pvr_services4_system_common_sysutils_c",
+    "repo": "https://github.com/EMGD-Community/intel-binaries-linux",
+    "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+    "path": "drm/pvr/services4/system/common/sysutils.c",
+    "lines": 26,
+    "snapshot": "EMGD_drm_pvr_services4_system_common_sysutils_c.txt",
+    "sha256": "e0c2d5c3a98c0af5d2dde3846c24ca47b7ca7bd290cd0d2ec94dae77b0e24468",
+    "url": "https://raw.githubusercontent.com/EMGD-Community/intel-binaries-linux/e6884ec2eaaf1afe88d5ff9dd44d70403525be5b/drm/pvr/services4/system/common/sysutils.c"
+  },
+  {
+    "id": "EMGD_drm_pvr_services4_system_include_sys_pvr_drm_shared_h",
+    "repo": "https://github.com/EMGD-Community/intel-binaries-linux",
+    "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+    "path": "drm/pvr/services4/system/include/sys_pvr_drm_shared.h",
+    "lines": 34,
+    "snapshot": "EMGD_drm_pvr_services4_system_include_sys_pvr_drm_shared_h.txt",
+    "sha256": "5444be8b446141c713201809a0b20ce9b5bc4049133b82c0e29a88499efb556d",
+    "url": "https://raw.githubusercontent.com/EMGD-Community/intel-binaries-linux/e6884ec2eaaf1afe88d5ff9dd44d70403525be5b/drm/pvr/services4/system/include/sys_pvr_drm_shared.h"
+  },
+  {
+    "id": "EMGD_drm_pvr_services4_system_include_sysconfig_h",
+    "repo": "https://github.com/EMGD-Community/intel-binaries-linux",
+    "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+    "path": "drm/pvr/services4/system/include/sysconfig.h",
+    "lines": 326,
+    "snapshot": "EMGD_drm_pvr_services4_system_include_sysconfig_h.txt",
+    "sha256": "a746e2593309805fb463cd22170a1839f32350d311b81c592f52cc49b9cd6c88",
+    "url": "https://raw.githubusercontent.com/EMGD-Community/intel-binaries-linux/e6884ec2eaaf1afe88d5ff9dd44d70403525be5b/drm/pvr/services4/system/include/sysconfig.h"
+  },
+  {
+    "id": "EMGD_drm_pvr_services4_system_plb_sysconfig_c",
+    "repo": "https://github.com/EMGD-Community/intel-binaries-linux",
+    "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+    "path": "drm/pvr/services4/system/plb/sysconfig.c",
+    "lines": 48,
+    "snapshot": "EMGD_drm_pvr_services4_system_plb_sysconfig_c.txt",
+    "sha256": "fdc9bed037553914136a37b6c5577ed5b56196527119efdc69ee3c6af310510b",
+    "url": "https://raw.githubusercontent.com/EMGD-Community/intel-binaries-linux/e6884ec2eaaf1afe88d5ff9dd44d70403525be5b/drm/pvr/services4/system/plb/sysconfig.c"
+  },
+  {
+    "id": "EMGD_drm_pvr_services4_system_tnc_sysconfig_c",
+    "repo": "https://github.com/EMGD-Community/intel-binaries-linux",
+    "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+    "path": "drm/pvr/services4/system/tnc/sysconfig.c",
+    "lines": 48,
+    "snapshot": "EMGD_drm_pvr_services4_system_tnc_sysconfig_c.txt",
+    "sha256": "9c641af1f4f2f8e4602021b40103c5a30529d99ac77e7c6593c28b1da68af003",
+    "url": "https://raw.githubusercontent.com/EMGD-Community/intel-binaries-linux/e6884ec2eaaf1afe88d5ff9dd44d70403525be5b/drm/pvr/services4/system/tnc/sysconfig.c"
+  },
+  {
+    "id": "EMGD_readme_txt",
+    "repo": "https://github.com/EMGD-Community/intel-binaries-linux",
+    "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+    "path": "readme.txt",
+    "lines": 559,
+    "snapshot": "EMGD_readme_txt.txt",
+    "sha256": "b8c4728e7cfc0098d8e27cee2ddec51387bb9f1d716b1f37a078aad02dca3886",
+    "url": "https://raw.githubusercontent.com/EMGD-Community/intel-binaries-linux/e6884ec2eaaf1afe88d5ff9dd44d70403525be5b/readme.txt"
+  },
+  {
+    "id": "PSB_psb_sgx_c",
+    "repo": "https://github.com/gregkh/psb-kmp",
+    "commit": "98b5307e5158a9ac401b29128ddd1184ae06b4d7",
+    "path": "psb_sgx.c",
+    "lines": 1454,
+    "snapshot": "PSB_psb_sgx_c.txt",
+    "sha256": "f17805b4a8959c064e222255baa5c885366c1970630b655dea04047daec79d02",
+    "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/psb_sgx.c"
+  },
+  {
+    "id": "PSB_psb_schedule_c",
+    "repo": "https://github.com/gregkh/psb-kmp",
+    "commit": "98b5307e5158a9ac401b29128ddd1184ae06b4d7",
+    "path": "psb_schedule.c",
+    "lines": 1465,
+    "snapshot": "PSB_psb_schedule_c.txt",
+    "sha256": "1a139a24cfbd6593e7a6c71315bd63d5ea649fda712555dc34ae30650f24eeca",
+    "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/psb_schedule.c"
+  },
+  {
+    "id": "PSB_psb_setup_c",
+    "repo": "https://github.com/gregkh/psb-kmp",
+    "commit": "98b5307e5158a9ac401b29128ddd1184ae06b4d7",
+    "path": "psb_setup.c",
+    "lines": 17,
+    "snapshot": "PSB_psb_setup_c.txt",
+    "sha256": "2e47db2e3a21958ec4bdf068dd88f9ea80c3470f508f8d31fe1a9de766f2142a",
+    "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/psb_setup.c"
+  },
+  {
+    "id": "PSB_psb_buffer_c",
+    "repo": "https://github.com/gregkh/psb-kmp",
+    "commit": "98b5307e5158a9ac401b29128ddd1184ae06b4d7",
+    "path": "psb_buffer.c",
+    "lines": 425,
+    "snapshot": "PSB_psb_buffer_c.txt",
+    "sha256": "f2e6833fc82de488c6c41e99a5da2c5b00ec0fea36b9defeb4057e70f464c147",
+    "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/psb_buffer.c"
+  },
+  {
+    "id": "EMGD_drm_emgd_core_init_plb_init_plb_c",
+    "repo": "https://github.com/EMGD-Community/intel-binaries-linux",
+    "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+    "path": "drm/emgd/core/init/plb/init_plb.c",
+    "lines": 458,
+    "snapshot": "EMGD_drm_emgd_core_init_plb_init_plb_c.txt",
+    "sha256": "e7b5148b41f26caae601e2ef2ec08d6e9b43a9a18ef50b4caecb53425bec9aa5",
+    "url": "https://raw.githubusercontent.com/EMGD-Community/intel-binaries-linux/e6884ec2eaaf1afe88d5ff9dd44d70403525be5b/drm/emgd/core/init/plb/init_plb.c"
+  },
+  {
+    "id": "EMGD_drm_emgd_state_power_plb_pwr_plb_c",
+    "repo": "https://github.com/EMGD-Community/intel-binaries-linux",
+    "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+    "path": "drm/emgd/state/power/plb/pwr_plb.c",
+    "lines": 123,
+    "snapshot": "EMGD_drm_emgd_state_power_plb_pwr_plb_c.txt",
+    "sha256": "81bb7c947cc06b3ceae033eed4ceeea0dc27ef0fec53392fb73669345f71cfc5",
+    "url": "https://raw.githubusercontent.com/EMGD-Community/intel-binaries-linux/e6884ec2eaaf1afe88d5ff9dd44d70403525be5b/drm/emgd/state/power/plb/pwr_plb.c"
+  },
+  {
+    "id": "EMGD_drm_emgd_include_plb_sgx_h",
+    "repo": "https://github.com/EMGD-Community/intel-binaries-linux",
+    "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+    "path": "drm/emgd/include/plb/sgx.h",
+    "lines": 217,
+    "snapshot": "EMGD_drm_emgd_include_plb_sgx_h.txt",
+    "sha256": "de8196c8c4da6a749656c544826b157b27e24717ffa815125ab64cbb5bbf291c",
+    "url": "https://raw.githubusercontent.com/EMGD-Community/intel-binaries-linux/e6884ec2eaaf1afe88d5ff9dd44d70403525be5b/drm/emgd/include/plb/sgx.h"
+  },
+  {
+    "id": "EMGD_drm_pvr_services4_system_plb_sysplb_h",
+    "repo": "https://github.com/EMGD-Community/intel-binaries-linux",
+    "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+    "path": "drm/pvr/services4/system/plb/sysplb.h",
+    "lines": 33,
+    "snapshot": "EMGD_drm_pvr_services4_system_plb_sysplb_h.txt",
+    "sha256": "f8ba56898922cde19a657e6d5fbcfda48b366d535fba61d5143f8abacbc1da9c",
+    "url": "https://raw.githubusercontent.com/EMGD-Community/intel-binaries-linux/e6884ec2eaaf1afe88d5ff9dd44d70403525be5b/drm/pvr/services4/system/plb/sysplb.h"
+  },
+  {
+    "id": "EMGD_drm_pvr_services4_system_common_sysconfig_c",
+    "repo": "https://github.com/EMGD-Community/intel-binaries-linux",
+    "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+    "path": "drm/pvr/services4/system/common/sysconfig.c",
+    "lines": 1367,
+    "snapshot": "EMGD_drm_pvr_services4_system_common_sysconfig_c.txt",
+    "sha256": "4ad525c14516d749a5e16c4fa32b008c1e057a627a02fc0019e1d6ec8ad14abd",
+    "url": "https://raw.githubusercontent.com/EMGD-Community/intel-binaries-linux/e6884ec2eaaf1afe88d5ff9dd44d70403525be5b/drm/pvr/services4/system/common/sysconfig.c"
+  },
+  {
+    "id": "EMGD_drm_pvr_services4_system_include_sysconfig_h",
+    "repo": "https://github.com/EMGD-Community/intel-binaries-linux",
+    "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+    "path": "drm/pvr/services4/system/include/sysconfig.h",
+    "lines": 326,
+    "snapshot": "EMGD_drm_pvr_services4_system_include_sysconfig_h.txt",
+    "sha256": "a746e2593309805fb463cd22170a1839f32350d311b81c592f52cc49b9cd6c88",
+    "url": "https://raw.githubusercontent.com/EMGD-Community/intel-binaries-linux/e6884ec2eaaf1afe88d5ff9dd44d70403525be5b/drm/pvr/services4/system/include/sysconfig.h"
+  },
+  {
+    "id": "EMGD_drm_pvr_services4_include_env_linux_pvr_drm_shared_h",
+    "repo": "https://github.com/EMGD-Community/intel-binaries-linux",
+    "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+    "path": "drm/pvr/services4/include/env/linux/pvr_drm_shared.h",
+    "lines": 78,
+    "snapshot": "EMGD_drm_pvr_services4_include_env_linux_pvr_drm_shared_h.txt",
+    "sha256": "7bd1b1f19ed6d72ea09f7908b1fac999e83554ab79a37396cddb33b4f39b66c9",
+    "url": "https://raw.githubusercontent.com/EMGD-Community/intel-binaries-linux/e6884ec2eaaf1afe88d5ff9dd44d70403525be5b/drm/pvr/services4/include/env/linux/pvr_drm_shared.h"
+  },
+  {
+    "id": "EMGD_drm_pvr_services4_srvkm_hwdefs_sgxmmu_h",
+    "repo": "https://github.com/EMGD-Community/intel-binaries-linux",
+    "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+    "path": "drm/pvr/services4/srvkm/hwdefs/sgxmmu.h",
+    "lines": 105,
+    "snapshot": "EMGD_drm_pvr_services4_srvkm_hwdefs_sgxmmu_h.txt",
+    "sha256": "3211b42afb84a307fc62226838e4c3e7ef0bd9d61ba10e7bf770b1604792da61",
+    "url": "https://raw.githubusercontent.com/EMGD-Community/intel-binaries-linux/e6884ec2eaaf1afe88d5ff9dd44d70403525be5b/drm/pvr/services4/srvkm/hwdefs/sgxmmu.h"
+  },
+  {
+    "id": "EMGD_drm_include_emgd_shared_h",
+    "repo": "https://github.com/EMGD-Community/intel-binaries-linux",
+    "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+    "path": "drm/include/emgd_shared.h",
+    "lines": 98,
+    "snapshot": "EMGD_drm_include_emgd_shared_h.txt",
+    "sha256": "8a18f45c4b499556ec5a28b1e3061a8177fc8ad7f22825145075a862ffb095fc"
+  },
+  {
+    "id": "EMGD_drm_pvr_services4_srvkm_devices_sgx_sgxreset_c",
+    "repo": "https://github.com/EMGD-Community/intel-binaries-linux",
+    "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+    "path": "drm/pvr/services4/srvkm/devices/sgx/sgxreset.c",
+    "lines": 556,
+    "snapshot": "EMGD_drm_pvr_services4_srvkm_devices_sgx_sgxreset_c.txt",
+    "sha256": "f4cc92f191c0124ea35c44e05a7b0a64eba299d3391c07cca9b5cc9986fa2ff7"
+  },
+  {
+    "id": "EMGD_drm_pvr_services4_srvkm_hwdefs_sgxfeaturedefs_h",
+    "repo": "https://github.com/EMGD-Community/intel-binaries-linux",
+    "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+    "path": "drm/pvr/services4/srvkm/hwdefs/sgxfeaturedefs.h",
+    "lines": 180,
+    "snapshot": "EMGD_drm_pvr_services4_srvkm_hwdefs_sgxfeaturedefs_h.txt",
+    "sha256": "4274aa574c87f99b996fc0d526557d588029031e4d1eb7af20f137d0a7701a8e"
+  },
+  {
+    "id": "EMGD_drm_pvr_services4_srvkm_devices_sgx_mmu_c",
+    "repo": "https://github.com/EMGD-Community/intel-binaries-linux",
+    "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+    "path": "drm/pvr/services4/srvkm/devices/sgx/mmu.c",
+    "lines": 3199,
+    "snapshot": "EMGD_drm_pvr_services4_srvkm_devices_sgx_mmu_c.txt",
+    "sha256": "f97597fec1af125a65ac7d0f4584f36558f3d93135d0571e74086b8f2586242d"
+  },
+  {
+    "id": "CLOCK",
+    "repo": "linux",
+    "commit": "9b87fdc9af2fbfcdb5c24a64139685ef80f6573f",
+    "path": "drivers/gpu/drm/gma500/gma_device.c",
+    "lines": 51,
+    "snapshot": "CLOCK.txt",
+    "sha256": "d970a14700c7c5ccddd2d87b3f5c4787da1bb164b1853252b61ba297a60939c8"
+  },
+  {
+    "id": "OMAP",
+    "repo": "omap5-sgx-ddk-linux",
+    "commit": "430673f78b79eccdf308a6bbfb524209b485d2cc",
+    "path": "eurasia_km/services4/system/omap4/sysutils_linux.c",
+    "lines": 880,
+    "snapshot": "OMAP.txt",
+    "sha256": "0c6eb598c060774c6846aca7b8f50c462ea929c067d7dec65211599624a1240b"
+  }
+]

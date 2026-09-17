@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-17",
+  "scope": "Phase 3 documents + updated unknowns; earlier reports keep phase-2 validation",
+  "source_snapshots": 72,
+  "evidence_rows": 123,
+  "claims": 60,
+  "links_checked": 146,
+  "errors": [],
+  "repositories": {
+    "omap5-sgx-ddk-linux": {
+      "HEAD_unchanged": true,
+      "worktree_clean": true,
+      "refs_unchanged": true
+    },
+    "omap5-sgx-ddk-um-linux": {
+      "HEAD_unchanged": true,
+      "worktree_clean": true,
+      "refs_unchanged": true
+    },
+    "linux": {
+      "HEAD_unchanged": true,
+      "worktree_clean": true,
+      "refs_unchanged": true
+    }
+  }
+}

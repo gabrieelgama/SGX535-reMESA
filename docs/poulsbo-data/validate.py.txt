@@ -1,0 +1,51 @@
+from pathlib import Path
+import json,csv,re,hashlib,subprocess
+p=Path('/home/gama/sgx535-gfx');d=p/'docs'; sd=d/'poulsbo-data';ss=json.loads((sd/'sources.json').read_text()); sources={(s['repo'],s['commit'],s['path']):s for s in ss};errors=[];links=0
+for s in ss:
+ data=(sd/s['snapshot']).read_bytes()
+ if hashlib.sha256(data).hexdigest()!=s['sha256']:errors.append(('hash',s['id']))
+ if not s['repo'].startswith('http'):
+  original=subprocess.check_output(['git','-C',str(p/'references'/s['repo']),'show',s['commit']+':'+s['path']])
+  if original!=data:errors.append(('snapshot',s['id']))
+rows=list(csv.DictReader((d/'evidence-matrix.csv').open()));ids=set()
+for r in rows:
+ ids.add(r['notes'].split(';')[0])
+ if r['commit'].startswith('N/A'):continue
+ s=sources[(r['source_repository'],r['commit'],r['file'])];n=len((sd/s['snapshot']).read_bytes().splitlines())
+ a,b=map(int,r['lines'].split('-'))
+ if not 1<=a<=b<=n:errors.append(('range',r['notes'],n))
+files=list(d.glob('poulsbo-*.md'))+[d/'unknowns.md']
+# poulsbo-evidence is archived phase 2, separate sources/validation.
+files=[f for f in files if f.name!='poulsbo-evidence.md']
+for f in files:
+ t=f.read_text()
+ for id in re.findall(r'P3-\d{3}',t):
+  if id not in ids:errors.append(('unknown-id',f.name,id))
+ for link in re.findall(r'\]\(([^)]+)\)',t):
+  if '://' in link:continue
+  links+=1
+  if not (f.parent/link.split('#')[0]).exists():errors.append(('link',f.name,link))
+ for line in t.splitlines():
+  if line.startswith('**CONFIRMED') or ('| CONFIRMED |' in line):
+   if not re.search(r'P3-\d{3}',line):errors.append(('unindexed-claim',f.name,line))
+repos={}
+for repo,head in [('omap5-sgx-ddk-linux','430673f78b79eccdf308a6bbfb524209b485d2cc'),('omap5-sgx-ddk-um-linux','b6801bf89e00d69893c2957455bbeb3195c0ed52'),('linux','9b87fdc9af2fbfcdb5c24a64139685ef80f6573f')]:
+ base=['git','-C',str(p/'references'/repo)]
+ h=subprocess.check_output(base+['rev-parse','HEAD'],text=True).strip();st=subprocess.check_output(base+['status','--porcelain'],text=True)
+ refs=subprocess.check_output(base+['for-each-ref','--format=%(refname)\t%(objectname)\t%(*objectname)'],text=True)
+ old=(d/'archaeology-data'/f'{repo}-refs.tsv').read_text()
+ repos[repo]=dict(HEAD_unchanged=h==head,worktree_clean=not st,refs_unchanged=refs==old)
+ if not all(repos[repo].values()):errors.append(('repository',repo,repos[repo]))
+result=dict(date='2026-09-17',scope='Phase 3 documents + updated unknowns; earlier reports keep phase-2 validation',source_snapshots=len(ss),evidence_rows=len(rows),claims=len(ids),links_checked=links,errors=errors,repositories=repos)
+(sd/'validation.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))
+# Add exact commit/path context to extended historical matches from phase-2 inventory.
+matches=json.loads((sd/'extended-history-matches.json').read_text()); wanted={x['blob'] for x in matches}; context={}
+for repo in ['omap5-sgx-ddk-linux','omap5-sgx-ddk-um-linux']:
+ with (d/'archaeology-data'/f'{repo}-contexts.tsv').open() as f:
+  for row in csv.DictReader(f,delimiter='\t'):
+   if row['blob'] in wanted:context.setdefault((repo,row['blob']),set()).add((row['commit'],row['path']))
+with (sd/'extended-history-contexts.tsv').open('w') as f:
+ f.write('repository\tblob\tcommit\tfile\n')
+ for (repo,blob),cs in sorted(context.items()):
+  for c,path in sorted(cs):f.write(f'{repo}\t{blob}\t{c}\t{path}\n')
+print('Extended matched blobs without context:',sorted(wanted-{b for _,b in context}))

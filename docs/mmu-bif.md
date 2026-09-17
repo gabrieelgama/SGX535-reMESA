@@ -35,7 +35,7 @@ As fórmulas não coincidem:
 
 [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c:121-135](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c#L121); [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c:183-203](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c#L183); [references/linux/drivers/gpu/drm/gma500/mmu.c:123-135](../references/linux/drivers/gpu/drm/gma500/mmu.c#L123).
 
-No Linux, `BASE1=0x0c38`, de modo que contexto 1 escreve em **0x0c3c**; esta conta é **INFERRED diretamente da expressão**, e não correção sugerida. [references/linux/drivers/gpu/drm/gma500/psb_reg.h:126](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L126). **UNKNOWN:** diferença de convenção, definição histórica ou defeito; não escolher a fórmula TI por semelhança. Falta o header SGX535 para uma comparação completa.
+No Linux, `BASE1=0x0c38`, de modo que contexto 1 escreve em **0x0c3c**; esta conta é **INFERRED diretamente da expressão**, e não correção sugerida. [references/linux/drivers/gpu/drm/gma500/psb_reg.h:126](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L126). **UNKNOWN:** diferença de convenção, definição histórica ou defeito; não escolher a fórmula TI por semelhança. A Fase 2 recuperou o header SGX535 e a Fase 3 confirmou que a divergência permanece; consulte `poulsbo-vs-ti.md` e `phase4-audit.md`.
 
 ## Endereços e mapeamento
 

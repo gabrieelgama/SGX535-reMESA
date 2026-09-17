@@ -8,7 +8,7 @@
 
 Offsets abaixo são relativos à janela SGX. Em Poulsbo o driver mapeia **recurso PCI 0 + 0x40000**, extensão `0x8000`, selecionada por `psb_chip_ops`. Não são endereços físicos absolutos. [references/linux/drivers/gpu/drm/gma500/psb_drv.h:41-53](../references/linux/drivers/gpu/drm/gma500/psb_drv.h#L41); [references/linux/drivers/gpu/drm/gma500/psb_device.c:272](../references/linux/drivers/gpu/drm/gma500/psb_device.c#L272); [references/linux/drivers/gpu/drm/gma500/psb_drv.c:261-264](../references/linux/drivers/gpu/drm/gma500/psb_drv.c#L261).
 
-**UNKNOWN:** mapa SGX535 completo no TI, pois falta `sgx535defs.h`, embora seja incluído pelo dispatcher. Não substituímos por valores SGX530/540/544. [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxdefs.h:54-58](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxdefs.h#L54); [inventário](evidence.txt).
+**CONFIRMED:** o checkout master TI não contém `sgx535defs.h`; a Fase 2 o recuperou em commits históricos e a Fase 3 comparou o artefato com Poulsbo/EMGD. Isso não transforma os headers em prova de read-safety. Consulte [arquivos recuperados](sgx535-missing-files.md), [comparação Poulsbo](poulsbo-evidence.md) e [auditoria de leituras](safe-register-reads.md). Não substituímos campos ausentes por SGX530/540/544.
 
 | offset | name | bits | function | source | confidence |
 | --- | --- | --- | --- | --- | --- |
@@ -61,6 +61,6 @@ Os defines de pacotes 2D a partir de [references/linux/drivers/gpu/drm/gma500/ps
 ## UNKNOWN / pontos de revisão
 
 - RO/RW, clear-on-read, W1C formal, reset values e reservas não são inferidos só dos nomes.
-- CORE_ID/REVISION são candidatos para futura identificação, não uma whitelist de acesso aprovada nesta etapa.
+- CORE_ID/REVISION eram candidatos de pesquisa. A Fase 4 os classifica `UNKNOWN` para leitura real: há uso histórico, mas não contrato de efeitos colaterais/power/locking. Eles não integram uma whitelist aprovada.
 - A indexação de BASE1 diverge entre Linux e TI; detalhes em [mmu-bif.md](mmu-bif.md).
 - O reset básico usa os bits acima, mas firmware boot e recovery exigem estado adicional: [references/linux/drivers/gpu/drm/gma500/psb_drv.c:103-125](../references/linux/drivers/gpu/drm/gma500/psb_drv.c#L103) versus [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c:467-665](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c#L467).

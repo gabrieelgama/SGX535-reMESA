@@ -1,0 +1,1088 @@
+[
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "d942b06673658f61d0d8010323e56ee9561e33e0",
+    "line": 50,
+    "text": "DISPLAY_CONTROLLER := dc_poulsbo"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "d942b06673658f61d0d8010323e56ee9561e33e0",
+    "line": 51,
+    "text": "DISPLAY_CONTROLLER_DIR := dc_poulsbo"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "86c0adfe78965f7d304e912f90a302dcfd4f119c",
+    "line": 2,
+    "text": "#@Title         Root makefile for embedded Poulsbo."
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "86c0adfe78965f7d304e912f90a302dcfd4f119c",
+    "line": 44,
+    "text": "PVR_SYSTEM := poulsbo"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "86c0adfe78965f7d304e912f90a302dcfd4f119c",
+    "line": 52,
+    "text": "DISPLAY_CONTROLLER := dc_poulsbo"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "dfac6ad4fc8ec40e5f6e539b1a4d8ce5a2fd9df4",
+    "line": 2,
+    "text": "@Title          Poulsbo Linux display driver shared DRM structures"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "dfac6ad4fc8ec40e5f6e539b1a4d8ce5a2fd9df4",
+    "line": 4,
+    "text": "@Description    Poulsbo Linux display driver DRM structures shared between"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "6343d2fd5cf03d15ca407eebf1d3dcb148135bae",
+    "line": 66,
+    "text": " -I$(TOP)/services4/3rdparty/dc_poulsbo"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "6343d2fd5cf03d15ca407eebf1d3dcb148135bae",
+    "line": 68,
+    "text": "dc_poulsbo-y += \\"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "6343d2fd5cf03d15ca407eebf1d3dcb148135bae",
+    "line": 69,
+    "text": "\tservices4/3rdparty/dc_poulsbo/poulsbo_displayclass.o \\"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "6343d2fd5cf03d15ca407eebf1d3dcb148135bae",
+    "line": 70,
+    "text": "\tservices4/3rdparty/dc_poulsbo/poulsbo_linux.o \\"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "6343d2fd5cf03d15ca407eebf1d3dcb148135bae",
+    "line": 71,
+    "text": "\tservices4/3rdparty/dc_poulsbo/poulsbo_linux_sdvo.o \\"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "6343d2fd5cf03d15ca407eebf1d3dcb148135bae",
+    "line": 72,
+    "text": "\tservices4/3rdparty/dc_poulsbo/poulsbo_linux_lvds.o \\"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "6343d2fd5cf03d15ca407eebf1d3dcb148135bae",
+    "line": 73,
+    "text": "\tservices4/3rdparty/dc_poulsbo/poulsbo_linux_crt.o"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "fc6e4fb8e7e940efbc86b65b719f8d5b985d8bce",
+    "line": 41,
+    "text": "modules := dc_poulsbo"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "fc6e4fb8e7e940efbc86b65b719f8d5b985d8bce",
+    "line": 43,
+    "text": "dc_poulsbo_type := kernel_module"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "fc6e4fb8e7e940efbc86b65b719f8d5b985d8bce",
+    "line": 44,
+    "text": "dc_poulsbo_target := dc_poulsbo.ko"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "fc6e4fb8e7e940efbc86b65b719f8d5b985d8bce",
+    "line": 45,
+    "text": "dc_poulsbo_makefile := $(THIS_DIR)/Kbuild.mk"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5622dbc17a8aab7efa35a707fbef1514e07094dc",
+    "line": 2,
+    "text": "@Title          Poulsbo Display kernel driver structures and prototypes"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5622dbc17a8aab7efa35a707fbef1514e07094dc",
+    "line": 4,
+    "text": "@Description    Poulsbo Display kernel driver structures and prototypes"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5622dbc17a8aab7efa35a707fbef1514e07094dc",
+    "line": 42,
+    "text": "#if !defined(__DC_POULSBO_H__)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5622dbc17a8aab7efa35a707fbef1514e07094dc",
+    "line": 43,
+    "text": "#define __DC_POULSBO_H__"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5622dbc17a8aab7efa35a707fbef1514e07094dc",
+    "line": 48,
+    "text": "#include \"poulsbo_regs.h\""
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5622dbc17a8aab7efa35a707fbef1514e07094dc",
+    "line": 65,
+    "text": "#define DISPLAY_CONTROLLER dc_poulsbo"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5622dbc17a8aab7efa35a707fbef1514e07094dc",
+    "line": 70,
+    "text": "#define DISPLAY_DEVICE_NAME \"DC_POULSBO\""
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5622dbc17a8aab7efa35a707fbef1514e07094dc",
+    "line": 258,
+    "text": "\tPSB_POULSBO\t= 1,"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5622dbc17a8aab7efa35a707fbef1514e07094dc",
+    "line": 642,
+    "text": " * Poulsbo PLL ranges"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5622dbc17a8aab7efa35a707fbef1514e07094dc",
+    "line": 646,
+    "text": "\t.eDevice\t\t= PSB_POULSBO,"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5622dbc17a8aab7efa35a707fbef1514e07094dc",
+    "line": 671,
+    "text": "\t.eDevice\t\t= PSB_POULSBO,"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5622dbc17a8aab7efa35a707fbef1514e07094dc",
+    "line": 719,
+    "text": "#if defined(POULSBO_DEVICE_ISR)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5622dbc17a8aab7efa35a707fbef1514e07094dc",
+    "line": 723,
+    "text": "#endif /* #if defined(POULSBO_DEVICE_ISR) */"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5622dbc17a8aab7efa35a707fbef1514e07094dc",
+    "line": 786,
+    "text": "#endif /* #if !defined(__DC_POULSBO_H__) */"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5622dbc17a8aab7efa35a707fbef1514e07094dc",
+    "line": 789,
+    "text": " End of file (dc_poulsbo.h)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "e377bf97539f35949285fd63218fcacb1e6f6680",
+    "line": 2,
+    "text": "@Title          Poulsbo driver display functions"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "e377bf97539f35949285fd63218fcacb1e6f6680",
+    "line": 69,
+    "text": "#include \"dc_poulsbo.h\""
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "e377bf97539f35949285fd63218fcacb1e6f6680",
+    "line": 86,
+    "text": "\t{0x8108, PSB_POULSBO},"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "e377bf97539f35949285fd63218fcacb1e6f6680",
+    "line": 502,
+    "text": "\t/* This Poulsbo driver only supports a single swapchain */"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "e377bf97539f35949285fd63218fcacb1e6f6680",
+    "line": 832,
+    "text": "#if defined(POULSBO_DEVICE_ISR)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "e377bf97539f35949285fd63218fcacb1e6f6680",
+    "line": 1026,
+    "text": "#if !defined(POULSBO_DEVICE_POWER)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "e377bf97539f35949285fd63218fcacb1e6f6680",
+    "line": 1070,
+    "text": "#endif /* #if !defined(POULSBO_DEVICE_POWER) */"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "e377bf97539f35949285fd63218fcacb1e6f6680",
+    "line": 1487,
+    "text": "\t\t\t\t\t\tcase PSB_POULSBO:"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "e377bf97539f35949285fd63218fcacb1e6f6680",
+    "line": 1505,
+    "text": "\t\t\t\t\t\tcase PSB_POULSBO:"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "e377bf97539f35949285fd63218fcacb1e6f6680",
+    "line": 1546,
+    "text": "/* The common Poulsbo driver initialisation function. Here we do the following:"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "e377bf97539f35949285fd63218fcacb1e6f6680",
+    "line": 1690,
+    "text": "#if defined(POULSBO_DEVICE_ISR)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "e377bf97539f35949285fd63218fcacb1e6f6680",
+    "line": 1707,
+    "text": "#endif /* defined(POULSBO_DEVICE_ISR) */"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "e377bf97539f35949285fd63218fcacb1e6f6680",
+    "line": 1710,
+    "text": "#if defined(POULSBO_DEVICE_POWER)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "e377bf97539f35949285fd63218fcacb1e6f6680",
+    "line": 1726,
+    "text": "#endif /* defined(POULSBO_DEVICE_POWER) */"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "e377bf97539f35949285fd63218fcacb1e6f6680",
+    "line": 1732,
+    "text": "#if defined(POULSBO_DEVICE_ISR)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "e377bf97539f35949285fd63218fcacb1e6f6680",
+    "line": 1767,
+    "text": "#if !defined(POULSBO_DEVICE_POWER)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "e377bf97539f35949285fd63218fcacb1e6f6680",
+    "line": 1777,
+    "text": "#endif /* defined(POULSBO_DEVICE_POWER) */"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "e377bf97539f35949285fd63218fcacb1e6f6680",
+    "line": 1780,
+    "text": "#if defined(POULSBO_DEVICE_ISR)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "e377bf97539f35949285fd63218fcacb1e6f6680",
+    "line": 1827,
+    "text": " End of file (poulsbo_displayclass.c)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "99f7a91f5ab37785248c64ef7787f9f1d0e908dd",
+    "line": 2,
+    "text": "@Title          Poulsbo linux-specific functions"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "99f7a91f5ab37785248c64ef7787f9f1d0e908dd",
+    "line": 71,
+    "text": "#include \"poulsbo_linux.h\""
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "99f7a91f5ab37785248c64ef7787f9f1d0e908dd",
+    "line": 1369,
+    "text": "\t\t\tcase PSB_POULSBO:"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "99f7a91f5ab37785248c64ef7787f9f1d0e908dd",
+    "line": 1431,
+    "text": "\t\t\tcase PSB_POULSBO:"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "99f7a91f5ab37785248c64ef7787f9f1d0e908dd",
+    "line": 2343,
+    "text": " End of file (poulsbo_linux.c)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "b59dfe221e1424712ef96085c366b4b57e4b66b7",
+    "line": 2,
+    "text": "@Title          Poulsbo Linux Display driver interface."
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "b59dfe221e1424712ef96085c366b4b57e4b66b7",
+    "line": 4,
+    "text": "@Description    Poulsbo Linux Display kernel driver structures and prototypes."
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "b59dfe221e1424712ef96085c366b4b57e4b66b7",
+    "line": 43,
+    "text": "#if !defined(__POULSBO_LINUX_H__)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "b59dfe221e1424712ef96085c366b4b57e4b66b7",
+    "line": 44,
+    "text": "#define __POULSBO_LINUX_H__"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "b59dfe221e1424712ef96085c366b4b57e4b66b7",
+    "line": 46,
+    "text": "#include \"dc_poulsbo.h\""
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "b59dfe221e1424712ef96085c366b4b57e4b66b7",
+    "line": 193,
+    "text": "#endif /* !defined(__POULSBO_LINUX_H__) */"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "b59dfe221e1424712ef96085c366b4b57e4b66b7",
+    "line": 196,
+    "text": " End of file (poulsbo_linux.h)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "1cd50e49d696aaaa0e674e9f5a8508047f1cc8da",
+    "line": 2,
+    "text": "@Title          Poulsbo linux-specific CRT functions."
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "1cd50e49d696aaaa0e674e9f5a8508047f1cc8da",
+    "line": 42,
+    "text": "#include \"poulsbo_linux.h\""
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "1cd50e49d696aaaa0e674e9f5a8508047f1cc8da",
+    "line": 243,
+    "text": "\t\tcase PSB_POULSBO:"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "1cd50e49d696aaaa0e674e9f5a8508047f1cc8da",
+    "line": 519,
+    "text": "\t\tcase PSB_POULSBO:"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "1cd50e49d696aaaa0e674e9f5a8508047f1cc8da",
+    "line": 559,
+    "text": "\t\tcase PSB_POULSBO:"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "1cd50e49d696aaaa0e674e9f5a8508047f1cc8da",
+    "line": 702,
+    "text": " End of file (poulsbo_linux_crt.c)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "95208f527ec7fa0779dca9c4fb42b436df389539",
+    "line": 2,
+    "text": "@Title          Poulsbo linux-specific LVDS functions."
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "95208f527ec7fa0779dca9c4fb42b436df389539",
+    "line": 42,
+    "text": "#include \"poulsbo_linux.h\""
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "95208f527ec7fa0779dca9c4fb42b436df389539",
+    "line": 78,
+    "text": "\t\tcase PSB_POULSBO:"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "95208f527ec7fa0779dca9c4fb42b436df389539",
+    "line": 350,
+    "text": " End of file (poulsbo_linux_lvds.c)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "e7b03017eb8d044f39f2e9db915340df66207f9f",
+    "line": 2,
+    "text": "@Title          Poulsbo linux-specific SDVO functions."
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "e7b03017eb8d044f39f2e9db915340df66207f9f",
+    "line": 42,
+    "text": "#include \"poulsbo_linux.h\""
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "e7b03017eb8d044f39f2e9db915340df66207f9f",
+    "line": 395,
+    "text": "\t\tcase PSB_POULSBO:"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "e7b03017eb8d044f39f2e9db915340df66207f9f",
+    "line": 728,
+    "text": "\t\tcase PSB_POULSBO:"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "e7b03017eb8d044f39f2e9db915340df66207f9f",
+    "line": 1010,
+    "text": " End of file (poulsbo_linux_sdvo.c)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a1c269eabd6b164eb8f42a8639fbc1b8c1a90ab",
+    "line": 2,
+    "text": "@Title          Poulsbo Display kernel driver register macros"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a1c269eabd6b164eb8f42a8639fbc1b8c1a90ab",
+    "line": 4,
+    "text": "@Description    Poulsbo Display kernel driver register macros"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a1c269eabd6b164eb8f42a8639fbc1b8c1a90ab",
+    "line": 43,
+    "text": "#if !defined(__POULSBO_REGS_H__)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a1c269eabd6b164eb8f42a8639fbc1b8c1a90ab",
+    "line": 44,
+    "text": "#define __POULSBO_REGS_H__"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a1c269eabd6b164eb8f42a8639fbc1b8c1a90ab",
+    "line": 103,
+    "text": " * (unlike Poulsbo where we can access them directly). We therefore program "
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a1c269eabd6b164eb8f42a8639fbc1b8c1a90ab",
+    "line": 1133,
+    "text": "#endif /* #if !defined(__POULSBO_REGS_H__) */"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a1c269eabd6b164eb8f42a8639fbc1b8c1a90ab",
+    "line": 1136,
+    "text": " End of file (poulsbo_regs.h)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "45dc4d6516546a5d270631303b6e3b000703d53a",
+    "line": 98,
+    "text": " * Uninitialise the PCI Poulsbo device when it is no loger required"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 67,
+    "text": "#include \"psb_powermgmt.h\""
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 68,
+    "text": "#include \"sys_pvr_drm_export.h\""
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 121,
+    "text": "IMG_CPU_VIRTADDR gsPoulsboRegsCPUVaddr;"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 122,
+    "text": "IMG_CPU_PHYADDR  gsPoulsboRegsCPUPaddr;"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 123,
+    "text": "IMG_CPU_VIRTADDR gsPoulsboDisplayRegsCPUVaddr;"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 145,
+    "text": "#define\tPOULSBO_ADDR_RANGE_INDEX\t(MMADR_INDEX - 4)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 146,
+    "text": "#define\tPOULSBO_HP_ADDR_RANGE_INDEX\t(GMADR_INDEX - 4)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 155,
+    "text": " Initialise the PCI Poulsbo device for subsequent use."
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 165,
+    "text": "\tIMG_UINT32 ui32MaxOffset = POULSBO_MAX_OFFSET;"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 168,
+    "text": "\tif (!IS_POULSBO(psSysSpecData->psDRMDev))"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 191,
+    "text": "\tPVR_TRACE((\"PCI memory region: %x to %x\", OSPCIAddrRangeStart(psSysSpecData->hSGXPCI, POULSBO_ADDR_RANGE_INDEX), OSPCIAddrRangeEnd(psSysSpecData->hSGXPCI, POULSBO_ADDR_RANGE_INDEX)));"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 192,
+    "text": "\tPVR_TRACE((\"Host Port region: %x to %x\", OSPCIAddrRangeStart(psSysSpecData->hSGXPCI, POULSBO_HP_ADDR_RANGE_INDEX), OSPCIAddrRangeEnd(psSysSpecData->hSGXPCI, POULSBO_HP_ADDR_RANGE_INDEX)));"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 195,
+    "text": "\tif (OSPCIAddrRangeLen(psSysSpecData->hSGXPCI, POULSBO_ADDR_RANGE_INDEX) < ui32MaxOffset)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 203,
+    "text": "\tif (OSPCIRequestAddrRange(psSysSpecData->hSGXPCI, POULSBO_ADDR_RANGE_INDEX) != PVRSRV_OK)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 212,
+    "text": "\tif (OSPCIRequestAddrRange(psSysSpecData->hSGXPCI, POULSBO_HP_ADDR_RANGE_INDEX) != PVRSRV_OK)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 230,
+    "text": " Uninitialise the PCI Poulsbo device when it is no loger required"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 243,
+    "text": "\t\tOSPCIReleaseAddrRange(psSysSpecData->hSGXPCI, POULSBO_ADDR_RANGE_INDEX);"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 248,
+    "text": "\t\tOSPCIReleaseAddrRange(psSysSpecData->hSGXPCI, POULSBO_HP_ADDR_RANGE_INDEX);"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 348,
+    "text": "\tui32BaseAddr = OSPCIAddrRangeStart(psSysSpecData->hSGXPCI, POULSBO_ADDR_RANGE_INDEX);"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 349,
+    "text": "\tui32HostPortAddr = OSPCIAddrRangeStart(psSysSpecData->hSGXPCI, POULSBO_HP_ADDR_RANGE_INDEX);"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 444,
+    "text": "\t/* initialise Poulsbo register base */"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 446,
+    "text": "\t\tIMG_SYS_PHYADDR sPoulsboRegsCpuPBase;"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 448,
+    "text": "\t\tsPoulsboRegsCpuPBase.uiAddr = ui32BaseAddr + POULSBO_REGS_OFFSET;"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 449,
+    "text": "\t\tgsPoulsboRegsCPUVaddr = OSMapPhysToLin(SysSysPAddrToCpuPAddr(sPoulsboRegsCpuPBase),"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 450,
+    "text": "\t\t\t\t\t\t\t\t\t\t\t\t POULSBO_REG_SIZE,"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 454,
+    "text": "\t\tgsPoulsboRegsCPUPaddr = SysSysPAddrToCpuPAddr(sPoulsboRegsCpuPBase);"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 455,
+    "text": "\t\tsPoulsboRegsCpuPBase.uiAddr = ui32BaseAddr + POULSBO_DISPLAY_REGS_OFFSET;"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 456,
+    "text": "\t\tgsPoulsboDisplayRegsCPUVaddr = OSMapPhysToLin(gsPoulsboRegsCPUPaddr,"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 457,
+    "text": "\t\t\t\t\t\t\t\t\t\t\t\t POULSBO_DISPLAY_REG_SIZE,"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 959,
+    "text": "\tui32Mask = POULSBO_THALIA_MASK | POULSBO_MSVDX_MASK;"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 961,
+    "text": "\tui32Mask = POULSBO_THALIA_MASK;"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 965,
+    "text": "\tui32RegData = OSReadHWReg(gsPoulsboRegsCPUVaddr, POULSBO_INTERRUPT_IDENTITY_REG);"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 966,
+    "text": "\tOSWriteHWReg(gsPoulsboRegsCPUVaddr, POULSBO_INTERRUPT_IDENTITY_REG, ui32RegData | ui32Mask);"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 969,
+    "text": "\tui32RegData = OSReadHWReg(gsPoulsboRegsCPUVaddr, POULSBO_INTERRUPT_MASK_REG);"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 970,
+    "text": "\tOSWriteHWReg(gsPoulsboRegsCPUVaddr, POULSBO_INTERRUPT_MASK_REG, ui32RegData & (~ui32Mask));"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 973,
+    "text": "\tui32RegData = OSReadHWReg(gsPoulsboRegsCPUVaddr, POULSBO_INTERRUPT_ENABLE_REG);"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 974,
+    "text": "\tOSWriteHWReg(gsPoulsboRegsCPUVaddr, POULSBO_INTERRUPT_ENABLE_REG, ui32RegData | ui32Mask);"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 990,
+    "text": "\tui32Mask = POULSBO_THALIA_MASK | POULSBO_MSVDX_MASK;"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 992,
+    "text": "\tui32Mask = POULSBO_THALIA_MASK;"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 996,
+    "text": "\tui32RegData = OSReadHWReg(gsPoulsboRegsCPUVaddr, POULSBO_INTERRUPT_ENABLE_REG);"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 997,
+    "text": "\tOSWriteHWReg(gsPoulsboRegsCPUVaddr, POULSBO_INTERRUPT_ENABLE_REG, ui32RegData & (~ui32Mask));"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 1000,
+    "text": "\tui32RegData = OSReadHWReg(gsPoulsboRegsCPUVaddr, POULSBO_INTERRUPT_MASK_REG);"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 1001,
+    "text": "\tOSWriteHWReg(gsPoulsboRegsCPUVaddr, POULSBO_INTERRUPT_MASK_REG, ui32RegData | ui32Mask);"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 1166,
+    "text": "\t/* Deinitialise Poulsbo register base */"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 1167,
+    "text": "\tOSUnMapPhysToLin(gsPoulsboRegsCPUVaddr,"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 1168,
+    "text": "\t\t\t\t\t\t\t\t\t\t\t POULSBO_REG_SIZE,"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 1172,
+    "text": "\tOSUnMapPhysToLin(gsPoulsboDisplayRegsCPUVaddr,"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 1173,
+    "text": "\t\t\t\t\t\t\t\t\t\t\t POULSBO_DISPLAY_REG_SIZE,"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 1207,
+    "text": "\tui32Data = OSReadHWReg(gsPoulsboRegsCPUVaddr, POULSBO_INTERRUPT_IDENTITY_REG);"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 1209,
+    "text": "\tif (ui32Data & POULSBO_THALIA_MASK)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 1214,
+    "text": "\tif (ui32Data & POULSBO_MSVDX_MASK)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 1220,
+    "text": "\tui32DIMMask = OSReadHWReg(gsPoulsboRegsCPUVaddr, POULSBO_INTERRUPT_ENABLE_REG);"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 1221,
+    "text": "\tui32DIMMask &= ~(POULSBO_THALIA_MASK | POULSBO_MSVDX_MASK);"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 1255,
+    "text": "\tui32Data = OSReadHWReg(gsPoulsboRegsCPUVaddr, POULSBO_INTERRUPT_IDENTITY_REG);"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 1258,
+    "text": "\t\t(ui32Data & POULSBO_THALIA_MASK))"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 1260,
+    "text": "\t\tui32Mask |= POULSBO_THALIA_MASK;"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 1264,
+    "text": "\t\t(ui32Data & POULSBO_MSVDX_MASK))"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 1266,
+    "text": "\t\tui32Mask |= POULSBO_MSVDX_MASK;"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 1270,
+    "text": "\t\t(ui32Data & POULSBO_VSYNC_PIPEA_VBLANK_MASK))"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 1272,
+    "text": "\t  ui32Mask |= POULSBO_VSYNC_PIPEA_VBLANK_MASK;"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 1277,
+    "text": "\t\tOSWriteHWReg(gsPoulsboRegsCPUVaddr, POULSBO_INTERRUPT_IDENTITY_REG, ui32Mask);"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 1706,
+    "text": "\t/* Unmap Poulsbo register base */"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 1707,
+    "text": "\tOSUnMapPhysToLin(gsPoulsboRegsCPUVaddr,"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 1708,
+    "text": "\t\t\t\tPOULSBO_REG_SIZE,"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 1712,
+    "text": "\t/* Unmap Poulsbo display registers */"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 1713,
+    "text": "\tOSUnMapPhysToLin(gsPoulsboDisplayRegsCPUVaddr,"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "9c252ce8ae5d5a2de681294ad8bfd338cea95469",
+    "line": 1714,
+    "text": "\t\t\t\tPOULSBO_DISPLAY_REG_SIZE,"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "line": 46,
+    "text": "#define VS_PRODUCT_NAME\t\"SGX Poulsbo\""
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "line": 51,
+    "text": "#define POULSBO_REGS_OFFSET\t0x00000"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "line": 52,
+    "text": "#define POULSBO_REG_SIZE\t0x2100\t/* will cover Interrupt registers */"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "line": 59,
+    "text": "#define\tPOULSBO_MAX_OFFSET\t(MSVDX_REGS_OFFSET + MSVDX_REG_SIZE)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "line": 61,
+    "text": "#define\tPOULSBO_MAX_OFFSET\t(SGX_REGS_OFFSET + SGX_REG_SIZE)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "line": 64,
+    "text": "/* Poulsbo SGX PCI Ids */"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "line": 81,
+    "text": "/* Poulsbo Interrupt register defines */"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "line": 83,
+    "text": "#define POULSBO_INTERRUPT_ENABLE_REG\t\t0x20A0"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "line": 84,
+    "text": "#define POULSBO_INTERRUPT_IDENTITY_REG\t\t0x20A4"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "line": 85,
+    "text": "#define POULSBO_INTERRUPT_MASK_REG\t\t\t0x20A8"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "line": 86,
+    "text": "#define POULSBO_INTERRUPT_STATUS_REG\t\t0x20AC"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "line": 88,
+    "text": "#define POULSBO_DISP_MASK\t\t\t\t\t(1UL<<17)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "line": 89,
+    "text": "#define POULSBO_THALIA_MASK\t\t\t\t\t(1UL<<18)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "line": 90,
+    "text": "#define POULSBO_MSVDX_MASK\t\t\t\t\t(1UL<<19)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "line": 91,
+    "text": "#define POULSBO_VSYNC_PIPEA_VBLANK_MASK\t\t(1UL<<7)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "line": 92,
+    "text": "#define POULSBO_VSYNC_PIPEA_EVENT_MASK\t\t(1UL<<6)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "line": 93,
+    "text": "#define POULSBO_VSYNC_PIPEB_VBLANK_MASK\t\t(1UL<<5)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "line": 94,
+    "text": "#define POULSBO_VSYNC_PIPEB_EVENT_MASK\t\t(1UL<<4)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "line": 96,
+    "text": "#define POULSBO_DISPLAY_REGS_OFFSET\t\t\t0x70000"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "line": 97,
+    "text": "#define POULSBO_DISPLAY_REG_SIZE\t\t\t0x2000\t\t/* will cover sync registers */"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "line": 99,
+    "text": "#define POULSBO_DISPLAY_A_CONFIG\t\t\t0x00008UL"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "line": 100,
+    "text": "#define POULSBO_DISPLAY_A_STATUS_SELECT\t\t0x00024UL"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "line": 101,
+    "text": "#define POULSBO_DISPLAY_B_CONFIG\t\t\t0x01008UL"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "line": 102,
+    "text": "#define POULSBO_DISPLAY_B_STATUS_SELECT\t\t0x01024UL"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "line": 104,
+    "text": "#define POULSBO_DISPLAY_PIPE_ENABLE\t\t\t(1UL<<31)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "line": 105,
+    "text": "#define POULSBO_DISPLAY_VSYNC_STS_EN\t\t(1UL<<25)"
+  },
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "blob": "5a47b6bad85388eac97da74ba8ca3cf3b19471b0",
+    "line": 106,
+    "text": "#define POULSBO_DISPLAY_VSYNC_STS\t\t\t(1UL<<9)"
+  }
+]
