@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🔬 SGX535-reMESA
+# SGX535-reMESA Project
 
 ### Reconstructing the PowerVR SGX535, one surviving piece of evidence at a time.
 
