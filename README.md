@@ -1,144 +1,273 @@
-# SGX535-reMESA
+<div align="center">
 
-Reverse-engineering and documentation project for the **PowerVR SGX535**, with an initial focus on the **Intel Poulsbo / GMA 500** implementation.
+# 🔬 SGX535-reMESA
 
-The long-term goal is to investigate whether the surviving public information about the SGX535 can be reconstructed into enough technical documentation to eventually enable a modern open-source Linux 3D driver, potentially through Mesa.
+### Reconstructing the PowerVR SGX535, one surviving piece of evidence at a time.
 
-> We don't have the SGX535 programming manual.
+**Reverse engineering · Hardware preservation · Linux · Mesa**
+
+![Status](https://img.shields.io/badge/status-research%20%2F%20bring--up-orange)
+![GPU](https://img.shields.io/badge/GPU-PowerVR%20SGX535-blue)
+![Platform](https://img.shields.io/badge/platform-Intel%20Poulsbo-lightgrey)
+![Linux](https://img.shields.io/badge/Linux-gma500-yellow)
+![Mesa](https://img.shields.io/badge/Mesa-long--term%20goal-purple)
+
+> **We don't have the SGX535 programming manual.**
 >
-> So we're reconstructing one.
+> **So we're reconstructing one.**
 
-## Why?
+</div>
 
-Intel Poulsbo systems, including Atom Z5xx devices, contain a PowerVR SGX535 GPU.
+---
 
-Linux still supports the display side of Poulsbo through the `gma500` DRM/KMS driver, but there is no modern open-source 3D driver for the SGX535.
+## 🎯 What is SGX535-reMESA?
 
-The hardware is old, but many of these machines still work.
+**SGX535-reMESA** is a reverse-engineering, documentation and
+hardware-preservation project for the **PowerVR SGX535**, initially
+focused on the **Intel Poulsbo / GMA 500** implementation.
 
-Their GPU should not have to remain a black box forever.
+The long-term objective is slightly ridiculous:
 
-## What we found
+### 🐧 PowerVR SGX535 + Mesa
 
-An archaeological analysis of historical public SGX DDK sources and the Linux `gma500` driver uncovered significantly more SGX535/Poulsbo information than initially expected.
+The original programming documentation required to implement a modern
+open-source driver is not publicly available in sufficient detail.
 
-Among the findings:
+So this project attempts to reconstruct that knowledge from surviving
+public source code, historical drivers, documentation and carefully
+controlled observations of real hardware.
 
-- historical `sgx535defs.h`
-- an explicit `pc_i686_poulsbo_do_linux` DDK target
-- configuration for **SGX535 revision 121**
-- historical `services4/system/poulsbo` integration
-- SGX535 register definitions
-- MMU/BIF information
-- USE/USSE and PDS-related definitions
-- host ↔ SGX communication structures
-- historical command submission infrastructure
-- correlations between the historical SGX DDK and the modern Linux `gma500` driver
+---
 
-The initial archaeology examined hundreds of commits across historical kernel-mode and user-mode SGX repositories.
+## 💡 Why?
 
-Some Poulsbo-specific components were present historically and later removed from newer source trees.
+Intel Poulsbo systems — including Atom Z5xx machines — contain a
+**PowerVR SGX535** GPU.
 
-## Language notice
+Linux still supports their display hardware through the `gma500`
+DRM/KMS driver.
 
-The initial archaeology and technical documentation were written and generated in
-Brazilian Portuguese (pt-BR).
+What it does **not** have is a modern open-source SGX535 3D driver.
 
-An English version is planned. Source code identifiers, register names,
-paths, addresses and evidence references are preserved in their original form.
+> The machines still exist.  
+> The GPUs still exist.  
+> **The knowledge required to use them should not disappear.**
 
-Contributions improving or translating the documentation are welcome.
+---
 
-## Documentation
+## 🏺 Digital archaeology
 
-The reconstructed documentation lives in [`docs/`](docs/).
+Historical investigation has recovered substantially more information
+than initially expected.
 
-Important starting points:
+| Area | Status |
+|---|:---:|
+| SGX535 register definitions | ✅ |
+| Poulsbo DDK target | ✅ |
+| SGX535 rev121 historical target | ✅ |
+| MMU / BIF | ✅ Partial |
+| Power / reset | 🟡 Research |
+| Interrupts | 🟡 Research |
+| USE / USSE | 🟡 Partial |
+| PDS | 🟡 Partial |
+| Command submission | 🟡 Partial |
+| Shader ISA | ❓ |
+| Microkernel | ❓ |
+| Safe active hardware bring-up | 🔒 Blocked |
+| First triangle | ⏳ |
+| Mesa driver | 🌌 Long-term |
 
-- [`architecture.md`](docs/architecture.md) — reconstructed SGX architecture
-- [`registers.md`](docs/registers.md) — known register information
-- [`mmu-bif.md`](docs/mmu-bif.md) — MMU/BIF investigation
-- [`command-submission.md`](docs/command-submission.md) — command submission
-- [`usse.md`](docs/usse.md) — USE/USSE/PDS findings
-- [`firmware.md`](docs/firmware.md) — firmware/microkernel investigation
-- [`gma500-current-state.md`](docs/gma500-current-state.md) — what modern Linux already implements
-- [`poulsbo-evidence.md`](docs/poulsbo-evidence.md) — direct historical Poulsbo evidence
-- [`sgx535-missing-files.md`](docs/sgx535-missing-files.md) — recovered/missing historical components
-- [`unknowns.md`](docs/unknowns.md) — things we still do not know
+Historical evidence includes:
 
-## Evidence policy
+- 📜 `sgx535defs.h`
+- 🖥️ `pc_i686_poulsbo_d0_linux`
+- 🧩 `services4/system/poulsbo`
+- 🧠 SGX535 register definitions
+- 🗺️ MMU/BIF information
+- ⚙️ USE/USSE and PDS definitions
+- 📬 host ↔ SGX communication structures
+- 🚚 historical command-submission infrastructure
+- 🐧 correlations with Linux `gma500`
 
-Reverse engineering old hardware makes it very easy to turn assumptions into fake documentation.
+---
 
-For that reason, findings are classified as:
+## 🔎 Evidence policy
 
-**CONFIRMED** — directly supported by available source code or documentation.
+> **Evidence beats assumptions.**
 
-**INFERRED** — strongly suggested by available evidence, but not directly documented.
+Undocumented hardware makes it extremely easy to turn a plausible
+guess into fake documentation.
 
-**UNKNOWN** — insufficient evidence. No value or behavior should be invented.
+Every important finding is therefore classified as:
 
-Where possible, technical claims include their exact source, revision, file and line range.
+| | Classification | Meaning |
+|---|---|---|
+| 🟢 | **CONFIRMED** | Directly supported by traceable evidence |
+| 🟡 | **INFERRED** | Strongly suggested, but not directly established |
+| ⚫ | **UNKNOWN** | Insufficient evidence — nothing is invented |
 
-## Current status
+Where possible, claims reference the exact **repository, commit, file,
+line range, document revision or hardware observation**.
 
-This is **not yet a functional Mesa driver**.
+### `UNKNOWN` is a valid result.
 
-The current phase is focused on reconstructing enough reliable information about the SGX535 and its Poulsbo integration to determine what would be required for safe hardware bring-up.
+Conflicting historical implementations remain documented as conflicts
+until evidence explains them.
 
-Major remaining questions include:
+---
 
-- SGX535 USE/USSE instruction encoding
-- PDS execution details
-- microkernel implementation
-- command stream formats
-- shader compilation
-- texture/sampler descriptors
-- synchronization and cache behavior
-- PBE/output pipeline details
-- differences between SGX535 integrations and later SGX cores
+## 🚦 Current status
 
-A particularly important target is locating additional legally/publicly available material corresponding to the historical **SGX535 rev121 Poulsbo DDK**.
+**Research / early bring-up**
 
-## Target hardware
+> ⚠️ **SGX535-reMESA is not yet a functional Mesa driver.**
 
-Initial target:
+```text
+Source archaeology         ████████████████████  ✓
+Poulsbo reconstruction     ████████████████████  ✓
+Passive hardware probe     ████████████████████  ✓
+Safe MMIO validation       ░░░░░░░░░░░░░░░░░░░░
+Active SGX bring-up        ░░░░░░░░░░░░░░░░░░░░
+Command submission         ░░░░░░░░░░░░░░░░░░░░
+First triangle             ░░░░░░░░░░░░░░░░░░░░
+Mesa                       ░░░░░░░░░░░░░░░░░░░░
+````
 
-- Intel Poulsbo / US15W
-- Intel GMA 500
-- PowerVR SGX535
-- SGX535 rev121 where applicable
+A real Poulsbo machine has reached the passive hardware-inventory
+stage. (Dell Inspiron 1210)
 
-A future implementation must not assume that SGX implementations used by TI/OMAP are identical to Intel Poulsbo.
+**No undocumented MMIO write is considered acceptable simply because
+an address looks plausible.**
 
-## Long-term roadmap
+---
 
-1. Recover and catalog public historical SGX535 material.
-2. Reconstruct a source-backed SGX535 technical reference.
-3. Understand the Poulsbo-specific integration.
-4. Determine the minimum safe kernel/userspace interface required for 3D.
-5. Perform minimal hardware bring-up experiments.
-6. Execute the first known userspace workload.
-7. Render the first triangle.
-8. Investigate Mesa integration.
+## 🖥️ Initial target
 
-No hardware programming should be based on undocumented guesses.
+|    | Component        | Target             |
+| -- | ---------------- | ------------------ |
+| 🧩 | Platform         | Intel Poulsbo      |
+| 💾 | Chipset          | Intel US15W family |
+| 🎮 | Graphics         | Intel GMA 500      |
+| 🔷 | GPU              | PowerVR SGX535     |
+| ⚙️ | CPU family       | Intel Atom Z5xx    |
+| 🐧 | Operating system | Linux              |
 
-## Why "reMESA"?
+> **Important:** historical DDK evidence identifies a Poulsbo target
+> configured for **SGX535 rev121**. This does not by itself prove that
+> every physical Poulsbo SGX535 contains that revision.
 
-Because after years of the SGX535 being effectively unusable for modern open-source Linux 3D acceleration, the ridiculous long-term objective is simple:
+---
 
-**SGX535 + Mesa.**
+## 📚 Documentation
 
-## Disclaimer
+The reconstructed technical reference lives in [`docs/`](docs/).
 
-This is an independent preservation and reverse-engineering research project.
+| Document                                                     | Subject                     |
+| ------------------------------------------------------------ | --------------------------- |
+| 🧠 [`architecture.md`](docs/architecture.md)                 | SGX architecture            |
+| 🗃️ [`registers.md`](docs/registers.md)                      | Register map                |
+| 🗺️ [`mmu-bif.md`](docs/mmu-bif.md)                          | MMU / BIF                   |
+| 🚚 [`command-submission.md`](docs/command-submission.md)     | Command submission          |
+| ⚙️ [`usse.md`](docs/usse.md)                                 | USE / USSE / PDS            |
+| 🤖 [`firmware.md`](docs/firmware.md)                         | Firmware / microkernel      |
+| 🐧 [`gma500-current-state.md`](docs/gma500-current-state.md) | Modern Linux                |
+| 🏺 [`poulsbo-evidence.md`](docs/poulsbo-evidence.md)         | Historical Poulsbo evidence |
+| 🧩 [`sgx535-missing-files.md`](docs/sgx535-missing-files.md) | Missing components          |
+| ❓ [`unknowns.md`](docs/unknowns.md)                          | Open questions              |
 
-It is not affiliated with or endorsed by Imagination Technologies, Intel, Texas Instruments, Mesa, or the Linux kernel project.
+---
 
-Third-party source code is not automatically part of this repository and remains subject to its respective licenses.
+## 🗺️ Roadmap
 
-The purpose of this project is hardware preservation, documentation, interoperability, and open-source driver research.
+* [x] 🏺 Recover historical SGX535 material
+* [x] 🔍 Identify the historical Poulsbo SGX target
+* [x] 🧠 Reconstruct major register/MMU/BIF information
+* [x] 🧩 Reconstruct Poulsbo-specific integration
+* [x] 📚 Build a traceable evidence model
+* [x] 🖥️ Begin passive validation on real hardware
+* [ ] 🔓 Establish the first demonstrably safe SGX register read
+* [ ] 🔬 Identify the physical SGX revision
+* [ ] ⚡ Controlled SGX bring-up
+* [ ] 🚚 Command submission
+* [ ] 🧪 First userspace GPU workload
+* [ ] 🔺 **First triangle**
+* [ ] 🐧 Minimal Mesa/Gallium driver
+* [ ] 🎮 Expand OpenGL support
 
-# Of course...
-Entirely made using PRoot-distro with anland-termux (wayland compositor for Android) (yes, really, bro)
+---
+
+## 🌎 Language
+
+Most early archaeology and technical documentation is currently written
+in **Brazilian Portuguese (pt-BR)**.
+
+🇧🇷 **Português:** current primary documentation
+🇬🇧 **English:** planned / contributions welcome
+
+Technical identifiers remain unchanged.
+
+---
+
+## 🧬 Why `reMESA`?
+
+After years without modern open-source Linux 3D acceleration, the
+ridiculous long-term objective is:
+
+<div align="center">
+
+### SGX535
+
+### ↓
+
+### Mesa
+
+### ↓
+
+### 🔺
+
+**Yes. The triangle.**
+
+</div>
+
+---
+
+## 🤝 Contributing
+
+Historical documentation is extremely valuable.
+
+Contributions involving SGX535, Poulsbo, PSB, EMGD, PowerVR Services,
+Mesa/Gallium, ISA research, provenance checking and documentation
+translation are welcome.
+
+**Please distinguish evidence from inference.**
+
+---
+
+## ⚖️ Disclaimer
+
+This is an independent preservation and reverse-engineering research
+project.
+
+It is not affiliated with or endorsed by Imagination Technologies,
+Intel, Texas Instruments, Mesa, or the Linux kernel project.
+
+Third-party source code remains subject to its respective licenses.
+
+---
+
+<details>
+<summary><b>📱 Wait... where is this being developed?</b></summary>
+
+<br>
+
+Entirely from a **Samsung Galaxy Tab S7** running an ARM64 Linux
+userspace through **PRoot**, using **Anland/Wayland** on Android.
+
+Yes.
+
+The development machine trying to resurrect a 2008 PowerVR GPU
+is an Android tablet.
+
+**bro.**
+
+</details>
