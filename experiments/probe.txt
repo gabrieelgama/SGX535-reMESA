@@ -1,0 +1,57 @@
+OK
+gama@gama:~/SGX535-reMESA/tools/sgx535-probe
+$ python3 /home/gama/SGX535-reMESA/tools/sgx535-probe/sgx535_probe.py
+SGX535-GFX passive probe
+
+PCI:
+address: 0000:00:02.0
+vendor: 0x8086
+device: 0x8108
+revision: 0x06
+subsystem: 0x1028:0x02b1
+class: 0x030000
+IRQ: 16
+resources:
+BAR0: 0x00000000d8100000-0x00000000d817ffff size=524288 flags=0x0000000000040200
+BAR1: 0x0000000000001800-0x0000000000001807 size=8 flags=0x0000000000040101
+BAR2: 0x00000000d0000000-0x00000000d7ffffff size=134217728 flags=0x0000000000040200
+BAR3: 0x00000000d8380000-0x00000000d839ffff size=131072 flags=0x0000000000040200
+BAR4: 0x0000000000000000-0x0000000000000000 size=0 flags=0x0000000000000000
+BAR5: 0x0000000000000000-0x0000000000000000 size=0 flags=0x0000000000000000
+non-BAR PCI resource: 0x00000000000c0000-0x00000000000dffff size=131072 flags=0x0000000000000212
+non-BAR PCI resource: 0x0000000000000000-0x0000000000000000 size=0 flags=0x0000000000000000
+non-BAR PCI resource: 0x0000000000000000-0x0000000000000000 size=0 flags=0x0000000000000000
+non-BAR PCI resource: 0x0000000000000000-0x0000000000000000 size=0 flags=0x0000000000000000
+non-BAR PCI resource: 0x0000000000000000-0x0000000000000000 size=0 flags=0x0000000000000000
+non-BAR PCI resource: 0x0000000000000000-0x0000000000000000 size=0 flags=0x0000000000000000
+non-BAR PCI resource: 0x0000000000000000-0x0000000000000000 size=0 flags=0x0000000000000000
+
+Platform:
+detected: Intel Poulsbo PCI function
+PCI identity confidence: CONFIRMED
+SGX535 identity: INFERRED
+
+Kernel:
+release: 5.10.240-antix.1-486-smp
+architecture: i686
+system: Dell Inc. Inspiron 1210
+board: Dell Inc. 0X605H
+BIOS: Dell Inc. A02
+driver: gma500
+DRM nodes: card0 (226:0)
+
+Memory:
+GTT: not exposed by selected passive interface
+stolen memory: not exposed by selected passive interface
+
+Power:
+PCI power state: unavailable
+runtime status: active
+interpretation: PCI runtime status does not prove SGX clocks are enabled
+
+Safety:
+MMIO reads/writes: disabled
+command submission: disabled
+firmware loading: disabled
+state modified by probe: NO
+caveat: a bound kernel driver may already have changed hardware state
