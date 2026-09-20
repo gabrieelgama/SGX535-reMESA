@@ -13,7 +13,7 @@ firmware or workload was executed. IDs P3/P4 refer to
 | U05 | Which lock serializes generic SGX reading? | IRQ/MMU/GTT locks exist; no global SGX lock | Concurrent MMIO |
 | U06 | How to avoid race condition with IRQ and KMS? | IRQ aggregates display/SGX and uses `irqmask_lock` (P4-010) | status/IRQ reads |
 | U07 | Why is the aperture `0x8000` on Linux and `0x4000` on DDK? | both confirmed, unknown review/configuration | MMIO range |
-| U08 | Which directory-list formula applies to each context? | Linux/PSB and TI/EMGD diverge (P3-026/P3-061) | MMU/contextos |
+| U08 | Which directory-list formula applies to each context? | Linux/PSB and TI/EMGD diverge (P3-026/P3-061) | MMU/contexts |
 | U09 | Why do init/remove mix `gatt_start` and `mmu_gatt_start`? | internal divergence confirmed | MMU/memory |
 | U10 | Complete sequence of clock/power/reset by review? | gma500 has incomplete PM; historical OSPM missing | reset/init |
 | U11 | Which errata/BRNs are valid in real silicon? | builds rev121/126 do not measure the board | reset/BIF/workload |
@@ -25,7 +25,7 @@ firmware or workload was executed. IDs P3/P4 refer to
 | U17 | Exact PDS program and bootstrap protocol? | bases/kick do not define program | PDS/firmware |
 | U18 | ABI CCB, sync, relocations and full cache? | partial and distinct historical interfaces | submission |
 | U19 | ISA/encoder USSE and PDS SGX535 with origin? | absent; SGX540/544 does not replace | own execution |
-| U20 | Streams TA/3D, DPM, tiling, formatos/PBE and modern isolation? | insufficient in current sources | workload/render/Mesa |
+| U20 | Streams TA/3D, DPM, tiling, formats/PBE and modern isolation? | insufficient in current sources | workload/render/Mesa |
 
 ## Immediate blockers of the first MMIO
 
@@ -36,20 +36,17 @@ documentation that links the PCI/SGX review to aperture and the BRNs.
 
 ## Changes since Phase 3
 
-- The ownership of the gma500 is now located; this shows that module
-Separated is not safe, but it does not provide a universal lock.
-- `CORE_ID`/`CORE_REVISION` deixaram de ser “candidato condicionado” e ficam
+- gma500 ownership is now identified; this shows that a separate module is unsafe, but it does not provide a universal lock.
+- `CORE_ID`/`CORE_REVISION` are no longer a “conditional candidate” and remain
 formally **UNKNOWN** for read-safety.
 - Test Vector Zero was implemented and does not depend on MMIO.
-- GTT and stolen are not triggered when the selected passive interface does not
-exposes.
-- Firmware/ISA continue to be posterior blockers, not from passive inventory.
+- GTT and stolen-memory values are left unavailable when the selected passive interface does not expose them.
+- Firmware/ISA continue to be later blockers, not from passive inventory.
 
 ## External artifact of greatest value
 
-The most valuable item for the **next immediate blocker** is a manual of
-registers + power/reset/errata authenticated for **SGX535 integrated into
-Poulsbo**, vinculando PCI revision/SGX core revision, aperture, comportamento de
-reading of `CORE_ID`/`CORE_REVISION`, clocks and ownership requirements. For the
-bootstrap posterior, o pacote UM/microkernel/initializer correspondente ao
+The most valuable item for the **next immediate blocker** is a register, power, reset, and errata manual authenticated for **SGX535 integrated into
+Poulsbo**, linking PCI revision to SGX core revision, aperture, and
+`CORE_ID`/`CORE_REVISION` read behavior, clocks, and ownership requirements. For the
+later bootstrap, the matching UM/microkernel/initializer package for the
 DDK Poulsbo 1.14 continues to be the highest value artifact.

@@ -24,7 +24,7 @@ Table sources: [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs
 
 **CONFIRMED:** the DDK SGX535 declares 16 directory lists; `SGX_BIF_DIR_LIST_INDEX_EDM` selects the last one, therefore index 15 in this configuration. The reset associates EDM and 2D to the kernel context; under BRN23410, it also associates TA. [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h:67-69](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h#L67); [references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h:357-361](../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h#L357); [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c:164-203](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c#L164).
 
-**CONFIRMED:** Linux uses context 0 for standard PD and 1 for `pf_pd`; PDs allocated with `trap_pagefaults=1` use zero invalidateid entries. [references/linux/drivers/gpu/drm/gma500/psb_drv.c:340-359](../references/linux/drivers/gpu/drm/gma500/psb_drv.c#L340); [references/linux/drivers/gpu/drm/gma500/mmu.c:160-210](../references/linux/drivers/gpu/drm/gma500/mmu.c#L160).
+**CONFIRMED:** Linux uses context 0 for standard PD and 1 for `pf_pd`; PDs allocated with `trap_pagefaults=1` use zero invalidation entries. [references/linux/drivers/gpu/drm/gma500/psb_drv.c:340-359](../references/linux/drivers/gpu/drm/gma500/psb_drv.c#L340); [references/linux/drivers/gpu/drm/gma500/mmu.c:160-210](../references/linux/drivers/gpu/drm/gma500/mmu.c#L160).
 
 The formulas do not match:
 
@@ -49,17 +49,17 @@ The DDK separates heaps of data, 3D parameters, TA, sync, PDS code/data, kernel 
 
 ## Invalidation and synchronization
 
-**CONFIRMED:** the TI MMU accumulates invalidateidation flags PD/PT in `ui32CacheControl`; the scheduler transfers them to the command and clears the accumulator. The flags are requested from the microkernel, not MMIO offsets. [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/mmu.c:591-643](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/mmu.c#L591); [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c:454-466](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c#L454); [references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h:367-370](../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h#L367).
+**CONFIRMED:** the TI MMU accumulates PD/PT invalidation flags in `ui32CacheControl`; the scheduler transfers them to the command and clears the accumulator. The flags are requested from the microkernel, not MMIO offsets. [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/mmu.c:591-643](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/mmu.c#L591); [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c:454-466](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c#L454); [references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h:367-370](../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h#L367).
 
-**CONFIRMED:** Linux invalidateidates by `BIF_CTRL`, alternating INVALDC or FLUSH and performing a barrier and return read. It has CPU path `clflush`; this does not prove coherence of all shader data and caches. [references/linux/drivers/gpu/drm/gma500/mmu.c:54-120](../references/linux/drivers/gpu/drm/gma500/mmu.c#L54).
+**CONFIRMED:** Linux invalidates through `BIF_CTRL`, alternating INVALDC or FLUSH and performing a barrier and return read. It has CPU path `clflush`; this does not prove coherence of all shader data and caches. [references/linux/drivers/gpu/drm/gma500/mmu.c:54-120](../references/linux/drivers/gpu/drm/gma500/mmu.c#L54).
 
-## Faults e recovery
+## Faults and recovery
 
 **CONFIRMED:** the Linux handler reads the BIF status and fault address, distinguishes page fault/protection, and prints the requestor. Then it clears the events. There is no demand paging or job replay there. [references/linux/drivers/gpu/drm/gma500/psb_irq.c:151-196](../references/linux/drivers/gpu/drm/gma500/psb_irq.c#L151). The insertion of PTE in IRQ is only TODO in [references/linux/drivers/gpu/drm/gma500/mmu.c:35-42](../references/linux/drivers/gpu/drm/gma500/mmu.c#L35).
 
 **CONFIRMED:** the non-MP TI reset drains requests through PD/PT/temporary page and repeats until there is no fault. The comment about 2 GiB relative address and bus-master MSB is in this specific context; **UNKNOWN** describes Poulsbo, so it should not become a PTE rule. [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c:544-618](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c#L544).
 
-**UNKNOWN:** end-to-end ordering, invalidateidation security with active engines, isolation between contexts, EDM protect policy and real DMA limits on the target. Resolve before allowing SGX to touch new memory.
+**UNKNOWN:** end-to-end ordering, invalidation safety with active engines, isolation between contexts, EDM protect policy and real DMA limits on the target. Resolve before allowing SGX to touch new memory.
 
 ## Mapping layers in the DDK IT
 

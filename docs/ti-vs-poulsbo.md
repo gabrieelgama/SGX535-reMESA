@@ -12,7 +12,7 @@ The comparison is between **SGX535 branch in shared code**, **actual TI OMAP4/5 
 | IRQ | CONFIRMED: SW_EVENT and EDM contract in common KM [A4] | CONFIRMED: IRQ of platform device [B2] | CONFIRMED: Shared PCI IRQ and VDC routing [C4] |
 | Power | CONFIRMED: POWER protocol with microkernel [A5] | CONFIRMED: runtime PM, clocks/DVFS conditionals [B4] | CONFIRMED: PCI/display PM; empty Poulsbo callbacks [C5] |
 | Reset | CONFIRMED: non-MP branch with BIF drain and BRNs [A6] | UNKNOWN: this branch validated in SGX535 OMAP | CONFIRMED: simple reset `psb_spank`; equivalence to boot 3D UNKNOWN [C6] |
-| Firmware | CONFIRMED: host interface, scripts/handlers provided [A7] | CONFIRMED: an OMAP binary; program identified by symbols [B5] | UNKNOWN: programa/script compatible with Poulsbo |
+| Firmware | CONFIRMED: host interface, scripts/handlers provided [A7] | CONFIRMED: an OMAP binary; program identified by symbols [B5] | UNKNOWN: compatible program/script with Poulsbo |
 | Display | UNKNOWN: SGX contract does not specify display outputs | CONFIRMED: package announces DRM/KMS and Wayland [B5] | CONFIRMED: init LVDS and SDVO [C7] |
 
 Exact sources:

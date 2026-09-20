@@ -24,8 +24,8 @@ Phase 3 — static analysis, 2026-09-17. `CONFIRMED` means the source declares/i
 | Physical / bus CPU | Real BARs and PFNs; numerical identity only in the conversions of the mentioned DDK | P3-006/025 |
 | GATT offset | allocation of objects relative to the GATT resource | P3-020/022 |
 | GTT table physical | PGETBL_CTL, not GATT base | P3-020 |
-| SGX device VA | gatt_start+offset no caminho GEM atual | P3-022 |
-| mmu_gatt_start | constante 0xe0000000 usada no planejamento interno | P3-020/024 |
+| SGX device VA | gatt_start+offset in the current GEM path | P3-022 |
+| mmu_gatt_start | constant 0xe0000000 used in internal layout | P3-020/024 |
 | PDS / 3D request base | values written by Linux, not RAM reserved proven at these addresses | P3-024 |
 | Host-port VA DDK | 0xd0000000, not universal CPU address | P3-008 |
 

@@ -10,7 +10,7 @@ The scripts are lists of WRITE_HW_REG, READ_HW_REG, and HALT operations, with ad
 
 The initialization runs script part 1 before the reset and part 2 after, zeros `ui32InitStatus`, performs a kick and waits for the INIT_COMPLETE bit with timeout. [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c:478-647](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c#L478). The bit is `1<<0`. [references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h:289](../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h#L289). Therefore, having `sgxreset.c` does not equate to having a complete boot sequence.
 
-The DDK checks build options between cliente/KM, microkernel version/build, core revision, and structure sizes. There are explicit exceptions and the HEAD revision case. Do not declare UM binaries as compatible just because everyone uses the “1.9” label. [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c:2489-2649](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c#L2489).
+The DDK checks build options between client/KM, microkernel version/build, core revision, and structure sizes. There are explicit exceptions and the HEAD revision case. Do not declare UM binaries as compatible just because everyone uses the “1.9” label. [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c:2489-2649](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c#L2489).
 
 ## UM Artifacts observed, without execution
 

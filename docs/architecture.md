@@ -10,7 +10,7 @@ Static investigation on 2026-09-16. No new driver, MMIO access, module loading, 
 - **INFERRED**: conclusion derived from cited evidence, with explicit premises.
 - **UNKNOWN**: information not established by these sources. The absence of code here does not prove the absence of hardware capability.
 
-The requested sources, `ti-sgx-km` and `ti-sgx-um`, `ti-sgx-km` and `ti-sgx-um` are present with the names `omap5-sgx-ddk-linux` and `omap5-sgx-ddk-um-linux`. They were not renamed. Commits and evidence inventory are in [evidence.txt](evidence.txt). The three trees were unmodified at the beginning of the analysis.
+The requested `ti-sgx-km` and `ti-sgx-um` sources are present with the names `omap5-sgx-ddk-linux` and `omap5-sgx-ddk-um-linux`. They were not renamed. Commits and evidence inventory are in [evidence.txt](evidence.txt). The three trees were unmodified at the beginning of the analysis.
 
 | Tree | Examined commit |
 | --- | --- |
@@ -26,20 +26,20 @@ The requested sources, `ti-sgx-km` and `ti-sgx-um`, `ti-sgx-km` and `ti-sgx-um` 
 
 **CONFIRMED:** Linux associates Poulsbo/GMA500 with SGX535 and Intel PCI IDs `8086:8108`/`8086:8109`; its own ioctl interface is empty and the registered features are MODESET and GEM. [references/linux/drivers/gpu/drm/gma500/psb_drv.c:43-59](../references/linux/drivers/gpu/drm/gma500/psb_drv.c#L43); [references/linux/drivers/gpu/drm/gma500/psb_drv.c:91-95](../references/linux/drivers/gpu/drm/gma500/psb_drv.c#L91); [references/linux/drivers/gpu/drm/gma500/psb_drv.c:505-510](../references/linux/drivers/gpu/drm/gma500/psb_drv.c#L505).
 
-## Map with borders of evidence
+## Evidence-bounded architecture map
 
 ```mermaid
 flowchart TD
     UM[Historical TI UM: binary libraries and initializer]
-    BR[Bridge Services KM: handles e kick]
+    BR[Services KM bridge: handles and kick]
     TA[Client CCB: shared TA portion and synchronization]
-    KC[Kernel CCB: comando, handler USE, cache control]
+    KC[Kernel CCB: command, USE handler, cache control]
     MK[Microkernel: visible contract, source implementation missing]
     USE[USE / PDS: code and events]
     ENG[TA / DPM / ISP / TSP / PBE / 2D]
     BIF[BIF / MMU: directories and tables]
     MEM[System memory]
-    PSB[Linux Poulsbo: PCI, basic reset, MMU e IRQ]
+    PSB[Linux Poulsbo: PCI, basic reset, MMU, and IRQ]
     GTT[GTT / GEM / KMS / display]
     UM --> BR
     BR --> TA
@@ -73,12 +73,12 @@ This result contains documentation, numbers, and references, without copied impl
 
 The UM manifesto identifies `targetfs` as binary under TI TSPA and imposes restrictions on modification and reverse engineering. The partial textual extraction and its location are in [evidence record](evidence.txt); it does not replace a full review of the original document. No binary payload was extracted for implementation, decompiled, disassembled, or executed. The observation of ELF symbols was limited to artifact inventory. Do not apply the KM license to the UM.
 
-## Leitura do conjunto
+## Documentation map
 
-- [Registradores](registers.md): Linux offsets and interpretation limits.
+- [Registers](registers.md): Linux offsets and interpretation limits.
 - [MMU/BIF](mmu-bif.md): translation, caches, and divergences.
 - [Command submission](command-submission.md): CCB, sync, and IRQ.
 - [USSE](usse.md) and [firmware](firmware.md): known contract and absent parties.
 - [TI versus Poulsbo](ti-vs-poulsbo.md): classes A/B/C.
-- [Estado do gma500](gma500-current-state.md): capacidades e lacunas.
+- [Current gma500 state](gma500-current-state.md): capabilities and gaps.
 - [20 unknowns and minimum experiment](unknowns.md): blockages and next steps.

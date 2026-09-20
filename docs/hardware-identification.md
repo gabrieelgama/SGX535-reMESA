@@ -1,6 +1,6 @@
 # Passive hardware identification
 
-## Identidade aceita
+## Accepted identity
 
 The probe accepts only these pairs:
 
@@ -9,83 +9,46 @@ The probe accepts only these pairs:
 | `0x8086` | `0x8108` | Poulsbo, SGX535 according to the Linux table | CONFIRMED `P4-001` |
 | `0x8086` | `0x8109` | Poulsbo, SGX535 according to the Linux table | CONFIRMED `P4-001` |
 
-The source table also declares GMA 500/Atom Z5xx. It does not map revision or
-subsystem ID for US15W, US15WP, US15WPT or specific SGX stepping. This
-subclassification is **UNKNOWN**. Revision and subsystem are recorded, never
-used to promote it.
+The source table also names GMA 500 and Atom Z5xx. It does not map PCI revision or subsystem IDs to US15W, US15WP, US15WPT, or an SGX stepping. That finer classification remains **UNKNOWN**. The probe records revision and subsystem values but never uses them to strengthen the identification.
 
-## Chosen passive surfaces
+## Passive interfaces
 
-**CONFIRMED — P4-002:** the Linux PCI documentation marks `vendor`, `device`,
-`revision`, `subsystem_vendor`, `subsystem_device`, `class`, `irq` e `resource`
-as read-only ASCII attributes. `resource` contains start/end/flags, from the
-quais o tamanho pode ser calculado inclusivamente
-(`Documentation/PCI/sysfs-pci.rst:7-75`; `drivers/pci/pci-sysfs.c:40-76,163-195`).
+**CONFIRMED — P4-002:** Linux PCI documentation defines `vendor`, `device`, `revision`, `subsystem_vendor`, `subsystem_device`, `class`, `irq`, and `resource` as read-only ASCII attributes. `resource` supplies start, end, and flags; the inclusive range yields the size (`Documentation/PCI/sysfs-pci.rst:7-75`; `drivers/pci/pci-sysfs.c:40-76,163-195`).
 
-They are collected:
+The probe collects:
 
-- BDF, vendor/device, revision, subsystem, class e IRQ;
-- entries from the text file `resource`, including indexes 0–5 as BARs;
-- alvo do symlink `driver`;
-- we `cardN`, `renderDN` or `controlDN` in `/sys/class/drm` whose symlink
-`device` resolves to the same PCI function;
-- kernel release/version via procfs and architecture via `uname(2)`;
-- public DMI fields of system/placa/BIOS in `/sys/class/dmi/id`, when
-available; serial, UUID, and asset tags are not collected;
-- `power_state`, `power/runtime_status` and time counters, when present.
+- BDF, vendor/device, revision, subsystem, class, and IRQ;
+- entries 0–5 from the text `resource` file, reported as BARs;
+- the target of the `driver` symlink;
+- `cardN`, `renderDN`, or `controlDN` entries whose `/sys/class/drm` `device` symlink resolves to the same PCI function;
+- kernel release and version from procfs, plus architecture from `uname(2)`;
+- public system, board, and BIOS fields from `/sys/class/dmi/id`, when available; serial numbers, UUIDs, and asset tags are excluded;
+- `power_state`, `power/runtime_status`, and runtime counters, when present.
 
-**CONFIRMED — P4-019:** Linux exports vendor/nome/system version and board and
-vendor/version/BIOS date with `0444` mode; serial and UUID use `0400` mode
-(`drivers/firmware/dmi-id.c:22-62,188-224`). The probe selects only the fields
-audiences without unique identifiers.
+**CONFIRMED — P4-019:** Linux exports the selected DMI vendor/name/version and board and BIOS fields with mode `0444`; serial and UUID fields use mode `0400` (`drivers/firmware/dmi-id.c:22-62,188-224`). The probe includes only public fields without unique identifiers.
 
-**CONFIRMED — P4-003:** `config`, `enable` and `resourceN` do not belong to the array:
-`config` is a binary configuration space RW, `enable` is RW and `resourceN` may
-be the device programming mmap. The ROM usually requires write to be
-habilitada (`sysfs-pci.rst:36-87`).
+**CONFIRMED — P4-003:** `config`, `enable`, and `resourceN` are outside this set. `config` is binary PCI configuration space with write support, `enable` is read/write, and `resourceN` may map device registers. PCI ROM access normally requires a write to enable it (`sysfs-pci.rst:36-87`).
 
-**CONFIRMED — P4-004:** `runtime_status` pode retornar `active`, `suspended`,
-`suspending`, `resuming`, `error` or `unsupported`; their implementation only
-formats the state maintained by the core PM. The probe neither reads nor writes
-`power/control`, whose write to `on` can wake the device
-(`sysfs-devices-power:35-52,264-306`; `drivers/base/power/sysfs.c:123-179`).
+**CONFIRMED — P4-004:** `runtime_status` can report `active`, `suspended`, `suspending`, `resuming`, `error`, or `unsupported`. It only formats PM-core state. The probe neither reads nor writes `power/control`; writing `on` there can wake a device (`sysfs-devices-power:35-52,264-306`; `drivers/base/power/sysfs.c:123-179`).
 
-**CONFIRMED — P4-022:** o atributo PCI read-only `power_state` formata
-`pci_dev.current_state` (`drivers/pci/pci-sysfs.c:154-161`). It also does not describe
-os clocks internos da SGX.
+**CONFIRMED — P4-022:** the read-only PCI `power_state` attribute formats `pci_dev.current_state` (`drivers/pci/pci-sysfs.c:154-161`). It does not describe SGX internal clocks.
 
 ## DRM and memory
 
-**CONFIRMED — P4-005:** o gma500 atual anuncia `DRIVER_MODESET | DRIVER_GEM`,
-has its own empty ioctl table and does not announce `DRIVER_RENDER`
-(`psb_drv.c:91-95,493-518`). The DRM core creates a render node only with
-`DRIVER_RENDER` (`drm_drv.c:771-785`). Thus, `cardN` is expected; absence of
-`renderDN` is not a probe failure.
+**CONFIRMED — P4-005:** this gma500 driver advertises `DRIVER_MODESET | DRIVER_GEM`, has an empty private ioctl table, and does not advertise `DRIVER_RENDER` (`psb_drv.c:91-95,493-518`). DRM creates a render node only for `DRIVER_RENDER` (`drm_drv.c:771-785`). A `cardN` node is expected; absence of `renderDN` is not a probe failure.
 
-The PCI file `resource` exposes resources, but not the derived values
-`gtt_phys_start`, `mmu_gatt_start`, `gatt_start` ou o tamanho stolen calculado
-by the driver. The gma500 internally derives GTT/GATT and reads BSM to calculate
-stolen (`gtt.c:185-253`; `gem.c:331-361`, CONFIRMED `P4-011`). No attribute
-Stable gma500 for these derivatives was located; the probe prints
-“not exposed by selected passive interface”. This absence of interface is a
-inventory result, not a statement that another kernel will never expose it.
+The PCI `resource` file exposes resource ranges, but not the derived `gtt_phys_start`, `mmu_gatt_start`, `gatt_start`, or stolen-memory size. gma500 derives GTT/GATT internally and reads BSM to calculate stolen memory (`gtt.c:185-253`; `gem.c:331-361`, CONFIRMED `P4-011`). No stable gma500 attribute for those derived values was found, so the probe reports "not exposed by selected passive interface." This describes the selected interface, not every possible kernel.
 
-No specific gma500 debugfs file was found in the directory of
-current driver. The probe does not use the generic DRM debugfs: it does not add a
-field required for the Zero Test Vector, is not a stable ABI and would expand the
-observation surface with no demonstrated benefit.
+No gma500-specific debugfs file was found in the current driver directory. The probe does not use generic DRM debugfs because it adds nothing required by Test Vector Zero, is not a stable ABI, and would expand the observation surface.
 
-## Closed failure
+## Fail-closed behavior
 
-- no exact target: exit `2`;
-- BDF requested with a different ID: exit `2` before SGX completion;
-- multiple targets: exit `2` until explicit selection;
-- mandatory attribute unreadable/malformed: exit `2`;
-- no attempt to 'guess' by PCI class, name, or CPU.
+- No exact target: exit `2`.
+- Requested BDF has another ID: exit `2` before SGX-specific reporting.
+- Multiple targets: exit `2` until one is selected explicitly.
+- Mandatory attribute is unreadable or malformed: exit `2`.
+- Never guess from PCI class, a display name, or CPU model.
 
-## Limit of the expression “passive”
+## Meaning of "passive"
 
-**CONFIRMED — P4-006:** `drm_dev_register()` occurs after the entire sequence
-of `psb_driver_load`; therefore observing a `cardN` gma500 also implies that the
-driver has already had the opportunity to modify hardware (`psb_drv.c:450-479`). The
-report guarantees only `state_modified_by_probe: false`.
+**CONFIRMED — P4-006:** `drm_dev_register()` runs after the complete `psb_driver_load` sequence. Seeing a gma500 `cardN` therefore means the driver has already had an opportunity to modify hardware (`psb_drv.c:450-479`). The report guarantees only `state_modified_by_probe: false`.

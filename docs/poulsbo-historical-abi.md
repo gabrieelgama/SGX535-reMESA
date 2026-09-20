@@ -4,21 +4,21 @@ Phase 3 — static analysis, 2026-09-17. `CONFIRMED` means the source declares/i
 
 **CONFIRMED [P3-040]** — The historic PSB header declares package 5.0.0.0045 and commands CMDBUF=0, XHW_INIT=1, XHW=2, SCENE_UNREF=3, KMS_OFF=4, KMS_ON=5, HW_INFO=6. The dispatch authenticates CMDBUF and restricts XHW to root. Sources: [PSB_psb_drm_h:32-40](poulsbo-data/PSB_psb_drm_h.txt); [PSB_psb_drm_h:338-361](poulsbo-data/PSB_psb_drm_h.txt); [PSB_psb_drv_c:86-111](poulsbo-data/PSB_psb_drv_c.txt).
 
-**CONFIRMED [P3-041]** — drm_psb_cmdbuf_arg carries lists of buffers/cliprects, scene/fence, handles/offsets/tamanhos TA, OOM, command and relocations, engine and feedback. drm_psb_reloc contains operation, destination, mask, shift and parameters. Defines memory types MMU/PDS/APER/RASTGEOM, engines and fences TA/raster/scene. Sources: [PSB_psb_drm_h:47-54](poulsbo-data/PSB_psb_drm_h.txt); [PSB_psb_drm_h:120-184](poulsbo-data/PSB_psb_drm_h.txt); [PSB_psb_drm_h:206-263](poulsbo-data/PSB_psb_drm_h.txt).
+**CONFIRMED [P3-041]** — drm_psb_cmdbuf_arg carries lists of buffers/cliprects, scene/fence, TA handles/offsets/sizes, OOM, command and relocations, engine and feedback. drm_psb_reloc contains operation, destination, mask, shift and parameters. Defines memory types MMU/PDS/APER/RASTGEOM, engines and fences TA/raster/scene. Sources: [PSB_psb_drm_h:47-54](poulsbo-data/PSB_psb_drm_h.txt); [PSB_psb_drm_h:120-184](poulsbo-data/PSB_psb_drm_h.txt); [PSB_psb_drm_h:206-263](poulsbo-data/PSB_psb_drm_h.txt).
 
 **CONFIRMED [P3-042]** — XHW_INIT receives a buffer handle; the kernel performs lookup/map and calls it a communication buffer with the X server. There are operations fire raster, bind scene, TA memory, reset DPM, OOM, terminate, vistest, resume, and lockup; the ioctl waits for work and uses the shared buffer. Sources: [PSB_psb_drm_h:265-361](poulsbo-data/PSB_psb_drm_h.txt); [PSB_psb_xhw_c:415-475](poulsbo-data/PSB_psb_xhw_c.txt); [PSB_psb_xhw_c:543-629](poulsbo-data/PSB_psb_xhw_c.txt).
 
-**CONFIRMED [P3-043]** — psb_sgx.c validates the list of buffer objects and applies relocations, checking indices of origem/destino and specific operations PDS/USE. This documents the submission path, not a security audit of the ABI. Sources: [PSB_psb_sgx_c:410-464](poulsbo-data/PSB_psb_sgx_c.txt); [PSB_psb_sgx_c:631-779](poulsbo-data/PSB_psb_sgx_c.txt).
+**CONFIRMED [P3-043]** — psb_sgx.c validates the list of buffer objects and applies relocations, checking indices of source/destination and specific operations PDS/USE. This documents the submission path, not a security audit of the ABI. Sources: [PSB_psb_sgx_c:410-464](poulsbo-data/PSB_psb_sgx_c.txt); [PSB_psb_sgx_c:631-779](poulsbo-data/PSB_psb_sgx_c.txt).
 
 **CONFIRMED [P3-044]** — The historical PSB has a watchdog for lockup and reset workqueue; it queries the XHW channel and requests a DPM reset after MMU reconfiguration. Sources: [PSB_psb_reset_c:145-177](poulsbo-data/PSB_psb_reset_c.txt); [PSB_psb_reset_c:231-279](poulsbo-data/PSB_psb_reset_c.txt).
 
 **CONFIRMED [P3-045]** — DDK 1.14 defines DRM commands Services/display/buffer-class/is-master/unpriv/debug as 0..5 in native mode; DRM_EXT uses DRM_PVR_RESERVED1..6. There are no universal numeric values for the external mode in this header. Sources: [DRMS:43-70](poulsbo-data/DRMS.txt); [DRMC:462-475](poulsbo-data/DRMC.txt).
 
-**CONFIRMED [P3-046]** — PVRSRV_BRIDGE_PACKAGE carries BridgeID, size, ponteiros/tamanhos for input/output, and hKernelServices. ALLOCDEVICEMEM uses device/heap handles, attributes, size, alignment, and chunk information; it is not a modern GEM handle. Sources: [BRIDGE:312-322](poulsbo-data/BRIDGE.txt); [BRIDGE:482-497](poulsbo-data/BRIDGE.txt).
+**CONFIRMED [P3-046]** — PVRSRV_BRIDGE_PACKAGE carries BridgeID, size, pointers/sizes for input/output, and hKernelServices. ALLOCDEVICEMEM uses device/heap handles, attributes, size, alignment, and chunk information; it is not a modern GEM handle. Sources: [BRIDGE:312-322](poulsbo-data/BRIDGE.txt); [BRIDGE:482-497](poulsbo-data/BRIDGE.txt).
 
 **CONFIRMED [P3-047]** — sgx_bridge.h defines DOKICK at SGX_CMD_BASE+3; TRANSFER +13; INFO_FOR_SRVINIT +15; DEVINITPART2 +16; context registers render +20, 2D +24, transfer +26; SUBMIT2D +23 and PROCESS_QUEUES +28, with build conditionals. Sources: [SBRIDGE:63-114](poulsbo-data/SBRIDGE.txt); [SBRIDGE:233-273](poulsbo-data/SBRIDGE.txt); [SBRIDGE:315-351](poulsbo-data/SBRIDGE.txt).
 
-**CONFIRMED [P3-048]** — SGX_BRIDGE_INIT_INFO receives handles CCB/controle/event-kicker/host-control/TA3D, handler addresses, scripts, build options, struct sizes, data from clock/cache, and additional handles. SGX_CCB_KICK aggregates command, handle/offset CCB, and synchronization objects TA/3D. Sources: [INFO:83-153](poulsbo-data/INFO.txt); [INFO:181-251](poulsbo-data/INFO.txt).
+**CONFIRMED [P3-048]** — SGX_BRIDGE_INIT_INFO receives handles CCB/control/event-kicker/host-control/TA3D, handler addresses, scripts, build options, struct sizes, data from clock/cache, and additional handles. SGX_CCB_KICK aggregates command, handle/offset CCB, and synchronization objects TA/3D. Sources: [INFO:83-153](poulsbo-data/INFO.txt); [INFO:181-251](poulsbo-data/INFO.txt).
 
 **CONFIRMED [P3-049]** — SGXMKIF_COMMAND contains service address USE, cache control, and six data words; the kernel CCB contains 256 commands and read/write control offset. The producer checks space and advances the write offset modulo 256. Sources: [MKIF:70-96](poulsbo-data/MKIF.txt); [UTIL:236-254](poulsbo-data/UTIL.txt); [UTIL:552-558](poulsbo-data/UTIL.txt).
 
@@ -62,7 +62,7 @@ Decisions below are the material separation policy of this project, based on not
 
 | Class | Use in this phase | Policy for future implementation |
 |---|---|---|
-| Code with origem/commit/aviso preserved | software behavior documentation | review individual license before copying |
+| Code with source/commit/notice preserved | software behavior documentation | review individual license before copying |
 | dual IT MIT/GPLv2, permissive headers IMG/Intel identified | technical candidates, no port at this stage | potentially reusable by the permissive option, preserving warnings and checking origin |
 | Linux GPL-only and PSB GPL | evidence and comparison | do not copy implementation to permissive Mesa; maintain documentary separation |
 | EMGD with provenance only from mirror | evidence of the mirror's content | authenticity/license of the exact version still needs confirmation |

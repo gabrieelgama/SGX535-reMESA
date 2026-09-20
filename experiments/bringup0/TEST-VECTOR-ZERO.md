@@ -1,27 +1,27 @@
 # TEST VECTOR ZERO
 
-## Objetivo formal
+## Formal objective
 
 Collect a reproducible photograph of identity and binding using only
 passive Linux interfaces. This is not a functional test of SGX.
 
 ## Pre-conditions
 
-- kernel em estado normal e sysfs/procfs montados;
+- kernel in its normal state with sysfs and procfs mounted;
 - exact copy of the probe of the recorded review;
 - user without privileges whenever permissions allow;
 - no other diagnostic command that opens BAR/DRM mixed with the capture.
 
 ## Allowed operations, in order
 
-1. enumerar `/sys/bus/pci/devices`;
+1. enumerate `/sys/bus/pci/devices`;
 2. read `vendor`/`device` and select only `8086:8108` or `8086:8109`;
 3. read revision, subsystem, class, IRQ and the text file `resource`;
-4. resolver o symlink `driver`;
+4. resolve the `driver` symlink;
 5. correlate nodes in `/sys/class/drm` through the symlink `device`;
-6. ler runtime status/contadores se presentes;
+6. read runtime status and counters when present;
 7. read kernel version, get architecture with `uname` and public DMI fields
-from system/placa/BIOS, without serial or UUID;
+from system/board/BIOS, without serial or UUID;
 8. declare GTT/stolen unavailable when not exposed;
 9. produce human or JSON report and exit.
 
@@ -35,7 +35,7 @@ python3 tools/sgx535-probe/sgx535_probe.py --json >sgx535-probe.json
 
 Do not open PCI `config`, `resourceN`, ROM, `/dev/mem`, DRM node or debugfs. Do not
 write sysfs. Do not reset, initialize, change clocks/PM/MMU, load firmware,
-enviar CCB/`EVENT_KICK`, nem executar PDS/USSE/shader.
+submit a CCB or `EVENT_KICK`, or execute PDS, USSE, or shaders.
 
 ## Output and criteria
 
@@ -43,7 +43,7 @@ Success requires exact ID, all mandatory fields readable, valid report
 and exit `0`. Unknown ID, absence, ambiguity, or parsing error returns
 exit `2`; no alternative attempt is made.
 
-Estado final esperado:
+Expected final state:
 
 ```text
 hardware state modified by probe: NO
@@ -53,7 +53,7 @@ command submission: NO
 firmware loading: NO
 ```
 
-O primeiro campo tem escopo deliberado. Se `gma500` estiver associado, o driver
+The first field is deliberately narrow. If `gma500` is bound, the driver
 has already performed active initialization before publishing the DRM node (P4-006). Therefore
 the vector does not certify 'hardware untouched since boot'.
 

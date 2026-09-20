@@ -13,8 +13,8 @@ Phase 3 — static analysis, 2026-09-17. `CONFIRMED` means the source declares/i
 | Base | Intervalo/tamanho used | Paper | Evidence |
 |---|---|---|---|
 | BAR0 | offset 0, size Linux 0x80000 | wide VDC mapping, overlaps the SGX window | P3-006/007 |
-| BAR0 | offset 0, tamanho DDK 0x2100 | registros Intel, incluindo IRQ | P3-009 |
-| BAR0 | 0x40000–0x47fff Linux; 0x40000–0x43fff DDK | acesso SGX | P3-007 |
+| BAR0 | offset 0, DDK size 0x2100 | Intel registers, incluindo IRQ | P3-009 |
+| BAR0 | 0x40000–0x47fff Linux; 0x40000–0x43fff DDK | SGX access | P3-007 |
 | BAR0 | offset 0x50000 | MSVDX, bloco distinto | P3-009 |
 | BAR0 | offset 0x70000, tamanho 0x2000 DDK | display | P3-009 |
 | BAR2 | base/tamanho PCI, host-port DDK 128 MiB | GATT / GMADR | P3-006/008 |
@@ -34,8 +34,8 @@ The offsets below are relative to the SGX base, never directly relative to BAR0.
 | 0x0000 | CLKGATECTL | 2D[1:0], ISP[5:4], TSP[9:8], TA[13:12], DPM[17:16], USE[21:20], auto[24] | clock gating fields | [H535:45-61](archaeology-data/H535.txt), P3-010 | CONFIRMED |
 | 0x0010 / 0x0014 | CORE_ID / CORE_REVISION | ID[31:16], config[15:0]; designer/major/minor/maintenance in bytes | declared identification | [H535:89-104](archaeology-data/H535.txt), P3-011 | CONFIRMED |
 | 0x0018 / 0x001c | DESIGNER_REV_FIELD1/2 | 32 bits | integrator revision fields | [H535:105-112](archaeology-data/H535.txt), P3-012 | CONFIRMED |
-| 0x0080 | SOFT_RESET | BIF0, 2D1, DPM2, TA3, USE4, ISP5, TSP6 | reset dos blocos | [H535:113-128](archaeology-data/H535.txt), P3-013 | CONFIRMED |
-| 0x0110 / 0x0114 / 0x0118 | EVENT_HOST_ENABLE2 / CLEAR2 / STATUS2 | BIF_REQUESTER_FAULT bit4 | segundo banco de eventos | [H535:129-182](archaeology-data/H535.txt), P3-014 | CONFIRMED |
+| 0x0080 | SOFT_RESET | BIF0, 2D1, DPM2, TA3, USE4, ISP5, TSP6 | block reset | [H535:113-128](archaeology-data/H535.txt), P3-013 | CONFIRMED |
+| 0x0110 / 0x0114 / 0x0118 | EVENT_HOST_ENABLE2 / CLEAR2 / STATUS2 | BIF_REQUESTER_FAULT bit4 | second event bank | [H535:129-182](archaeology-data/H535.txt), P3-014 | CONFIRMED |
 | 0x012c / 0x0130 / 0x0134 | EVENT_STATUS / HOST_ENABLE / HOST_CLEAR | masks per event; consult source | first event bank | [H535:183-374](archaeology-data/H535.txt), P3-015 | CONFIRMED |
 | 0x0ab8 / 0x0ac4 / 0x0ac8 | PDS_EXEC_BASE / EVENT_KICKER / EVENT_KICK | base fff00000; address fffffff0; NOW bit0 | bootstrap/notification in DDK | [H535:375-386](archaeology-data/H535.txt), P3-016 | CONFIRMED |
 | 0x0c00 / 0x0c04 / 0x0c08 | BIF_CTRL / INT_STAT / FAULT | pause1, flush2, invalidate3, clear4; fault-address fffff000 | BIF control and fault | [H535:417-458](archaeology-data/H535.txt), P3-017 | CONFIRMED |

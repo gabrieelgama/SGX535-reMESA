@@ -8,11 +8,10 @@ Phase 3 — static analysis, 2026-09-17. `CONFIRMED` means the source declares/i
 
 **CONFIRMED [P3-032]** — In DDK 1.14, SGX_ISRHandler recognizes SW_EVENT; the MISR can call recovery. The DRM_EXT integration exports SYSPVRServiceSGXInterrupt, calls the device ISR, and schedules MISR when handled. Sources: [INIT:1945-2008](poulsbo-data/INIT.txt); [INIT:2097-2125](poulsbo-data/INIT.txt); [PSYSC:1982-2005](poulsbo-data/../archaeology-data/PSYSC.txt).
 
-## Cadeia de responsabilidades
+## Responsibility chain
 
 **INFERRED, from P3-030–032:** requestor SGX → SGX event state → THALIA Intel aggregation → PCI IRQ → ISR/MISR. The vblank interrupt belongs to the display chain; it does not prove CCB progress or USE execution.
 
 **UNKNOWN:** required order of ack/mask under persistent fault in the real review; if a read has side effects on all power states; guarantee that HOST_CLEAR removes the cause of the BIF fault; safe recovery sequence with a job in flight. The current handler prints and acknowledges the event; it does not by itself provide isolation and recovery of 3D jobs.
 
 Do not enable SW_EVENT or induce a page fault just to test an interrupt. For a future phase, start with logs already produced by the device's proprietary driver. Any active IRQ test requires exclusive ownership and a restoration plan for the mask shared with the display.
-

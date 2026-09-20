@@ -16,19 +16,19 @@ Convention: **CONFIRMED** confirms the content/history of the sources, not hardw
 | `omap5-sgx-ddk-um-linux` | 153 / 153 | 54 | false | 2021 / 1802 |
 | `linux` | 1 / 1 | 3 | true | 95387 / 5 |
 
-**CONFIRMED:** there were no additional unreachable commits in the enumerated local repository. Linux has only one commit: your shallow file interrupts the history; there is no local base to conclude when something entered or left gma500. “Not shallow” in both IT repositories does not guarantee coverage of remote branches never cloned, private releases, or history prior to imported root commits. Sources: [summary.json](archaeology-data/summary.json), `*-refs.tsv` and `*-commits.tsv` files in this evidence directory; for Git inventories, lines of code are **N/A**.
+**CONFIRMED:** there were no additional unreachable commits in the enumerated local repository. Linux has only one commit: the shallow checkout stops the history; there is no local base to conclude when something entered or left gma500. “Not shallow” in both TI repositories does not guarantee coverage of remote branches never cloned, private releases, or history prior to imported root commits. Sources: [summary.json](archaeology-data/summary.json), `*-refs.tsv` and `*-commits.tsv` files in this evidence directory; for Git inventories, lines of code are **N/A**.
 
 The content scope is the entire `/home/gama/sgx535-gfx` project, particularly the three reference repositories. The historical search includes all paths of all available commit trees, not just `hwdefs` or `gma500`. Phase 1 documents do not count as independent evidence. An auxiliary search by names in the home found Mesa and Minecraft files with no demonstrated relation; their content and the history of unrelated projects are not part of this result.
 
-No fetch, checkout, switch, reset, rebase, ref changes, compilation, binary loading, or hardware access was performed. No external source was consulted. HEADs and clean states were checked antes/depois. Git queries and generated artifacts were limited to reading references and writing in `docs/`.
+No fetch, checkout, switch, reset, rebase, ref changes, compilation, binary loading, or hardware access was performed. No external source was consulted. HEADs and clean states were checked before and after the search. Git queries and generated artifacts were limited to reading references and writing in `docs/`.
 
 ## Reproducible Method
 
 1. List refs and all local objects with `git cat-file --batch-all-objects --batch-check`; select commits and compare with `git rev-list --all`.
 2. Enumerate each tree with `git ls-tree -r -z COMMIT`, including directory renames; relate commit, path, and blob.
-3. Read each unique blob once with `git cat-file --batch`; search for the eleven patterns without distinguishing uppercase/lowercase. Files with NUL were classified as binary and not submitted to text interpretation. This prevents claiming that a closed blob was examined as source.
+3. Read each unique blob once with `git cat-file --batch`; search for the eleven patterns case-insensitively. Files with NUL were classified as binary and not submitted to text interpretation. This prevents claiming that a closed blob was examined as source.
 4. Save lines found in `*-matches.tsv` and all historical associations in `*-contexts.tsv`. The join by the blob column retrieves **all commits/arquivos** of each occurrence. Also save matches in paths and commit messages.
-5. Complement literal search with semantic inspection of the build: `SGXCORE := 535` and `SUPPORT_SGX$(SGXCORE)` are examples that an exclusive search for SGX535 would miss.
+5. Complement literal search with semantic inspection of the build: `SGXCORE := 535` and `SUPPORT_SGX$(SGXCORE)` are examples that a search limited for SGX535 would miss.
 6. Confirm file history by `git log --all --full-history --name-status` and boundary snapshots; record hashes and compare offsets numerically.
 
 The [scan method](archaeology-data/scan-method.py.txt) was preserved as documentary text. It does not execute build scripts or binaries from the references. [Source and hash registry](archaeology-data/source-registry.json).
@@ -60,8 +60,8 @@ Counts of **lines per single blob**, not number of commits, word occurrences, or
 | Discovery | Commit/ref | File and lines | Confidence |
 | --- | --- | --- | --- |
 | Initial import 1.9 already references 535, but tree does not contain header | KM `1450ae2166ad952ef30197e79518b51577a629e6`; ancestor of master | `services4/srvkm/hwdefs/sgxdefs.h`:54–58; tree in boundary-trees | CONFIRMED |
-| Primeiro ingresso encontrado de H535, DDK 1.13 experimental | KM `322bcda5f3076037e2e20ef9209f4f4d575a7d5f`; ancestral de origin/dra7/experimental | [H535:1–43](archaeology-data/H535.txt#L1); [VER13:51–60](archaeology-data/VER13.txt#L51) | CONFIRMED |
-| Renaming with identical content for eurasia_km | KM `a24ae6b2573b7eb1dc94473aa9953b964079b5c6`; origin/dra7/experimental | H535, R100 paths; lines 1–739 preserved | CONFIRMED |
+| First H535 appearance found, experimental DDK 1.13 | KM `322bcda5f3076037e2e20ef9209f4f4d575a7d5f`; ancestor of `origin/dra7/experimental` | [H535:1–43](archaeology-data/H535.txt#L1); [VER13:51–60](archaeology-data/VER13.txt#L51) | CONFIRMED |
+| Renaming with identical content for eurasia_km | KM `a24ae6b2573b7eb1dc94473aa9953b964079b5c6`; `origin/dra7/experimental` | H535, R100 paths; lines 1–739 preserved | CONFIRMED |
 | Import 1.14 includes header and Poulsbo platform | KM `cb46ba4d0c900f89f7ec0284f9803d476bfa98de`; origin/img-sgx | [PBUILD:42–52](archaeology-data/PBUILD.txt#L42); [PSYS:46–111](archaeology-data/PSYS.txt#L46) | CONFIRMED |
 | Another lineage reapplies import 1.14 without eurasia_km prefix | KM `7c89d3433bd96d8b2755ca172e99198fa4b69c05`; ancestor of origin/1.17.4948957/mesa/k6.1 | `services4/srvkm/hwdefs/sgx535defs.h`:1–739, same blob | CONFIRMED |
 | Removal of the target and Poulsbo integration, not of H535 | KM `3b6ca1d1f47a951c1f93ba5f9b693b25474d0798` and replay `636e957a340ebba5c10fb8a5c5b3f30b85078c66` | PBUILD and PSYSC, entire file removed; H535 remains | CONFIRMED |

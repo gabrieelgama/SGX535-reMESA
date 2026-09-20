@@ -28,7 +28,7 @@ The tag `TI_LINUX_OMAP_SGX_DDK_1.9_2253347` points to `6668f4ea0bbf7e3df7f72dc22
 
 The other root, `348ea7e08d8b6e7f46f73065ad3ba75614edc12c`, has an author dated 2013 but a committer from 2023 and a README that declares 1.17. **CONFIRMED:** metadata in [commits UM](archaeology-data/omap5-sgx-ddk-um-linux-commits.tsv) and [UMROOT:33–36](archaeology-data/UMROOT.txt#L33). Therefore, sorting only by author date would produce a misleading chronology. “Root” here is the root of the available graph, not the birth of the DDK.
 
-Refs UM name series 1.14.3699939 and 1.17.4948957; the searchable source content does not provide SGX535/Poulsbo. There are 1802 blobs classified as binaries, whose content was not used to infer support 535. The offline compilers SGX530/544 added in 2018 show distribution of these artifacts, not compiler source nor SGX535 support. [Refs UM](archaeology-data/omap5-sgx-ddk-um-linux-refs.tsv); [import inventory](archaeology-data/um-offline-compilers.txt), binary files: lines N/A, confidence CONFIRMED on names and hashes.
+Refs UM name series 1.14.3699939 and 1.17.4948957; the searchable source content contains no SGX535/Poulsbo source. There are 1802 blobs classified as binaries, whose content was not used to infer SGX535 support. The offline compilers SGX530/544 added in 2018 show distribution of these artifacts, not compiler source nor SGX535 support. [Refs UM](archaeology-data/omap5-sgx-ddk-um-linux-refs.tsv); [import inventory](archaeology-data/um-offline-compilers.txt), binary files: lines N/A, confidence CONFIRMED for names and hashes.
 
 ## Compatibility Completion Limit
 

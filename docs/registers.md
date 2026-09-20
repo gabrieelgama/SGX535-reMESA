@@ -27,7 +27,7 @@ The offsets below are relative to the SGX window. In Poulsbo, the driver maps **
 | `0x0ab8` | `PSB_CR_PDS_EXEC_BASE` | ADDR_SHIFT=20; ALIGNSHIFT=20 | Base PDS; init Linux writes 0x20000000 | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:116-118](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L116) | CONFIRMED on Linux; explicit UNKNOWN fields |
 | `0x0ac4` | `PSB_CR_EVENT_KICKER` | ADDRESS_SHIFT=4 | Kicker address according to macro; full format UNKNOWN | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:120-121](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L120) | CONFIRMED on Linux; explicit UNKNOWN fields |
 | `0x0ac8` | `PSB_CR_EVENT_KICK` | 0 NOW | Kick defined; no emission in inspected gma500 | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:123-124](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L123) | CONFIRMED on Linux; explicit UNKNOWN fields |
-| `0x0c00` | `PSB_CR_BIF_CTRL` | 4 CLEAR_FAULT; 3 INVALDC; 2 FLUSH | BIF Control; invalidateidation and clear fault used | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:128-131](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L128) | CONFIRMED on Linux; UNKNOWN fields explicit |
+| `0x0c00` | `PSB_CR_BIF_CTRL` | 4 CLEAR_FAULT; 3 INVALDC; 2 FLUSH | BIF Control; invalidation and fault clearing used | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:128-131](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L128) | CONFIRMED on Linux; UNKNOWN fields explicit |
 | `0x0c04` | `PSB_CR_BIF_INT_STAT` | 14 PF_N_RW; 13:0 fault; requestors below | Fault classification read by the IRQ | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:133-147](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L133) | CONFIRMED on Linux; explicit UNKNOWN fields |
 | `0x0c08` | `PSB_CR_BIF_FAULT` | UNKNOWN as bitfield; read as address | Address that failed according to the handler, not requestor flags | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:135-147](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L135) | CONFIRMED on Linux; explicit UNKNOWN fields |
 | `0x0c38` | `PSB_CR_BIF_DIR_LIST_BASE1` | UNKNOWN | Define offset; Linux context 1 writes 0x0c3c | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:126-126](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L126) | CONFIRMED on Linux; explicit UNKNOWN fields |
@@ -38,7 +38,7 @@ The offsets below are relative to the SGX window. In Poulsbo, the driver maps **
 | `0x0e04` | `PSB_CR_2D_BLIT_STATUS` | 24 BUSY; 23:0 COMPLETE | Status 2D read on IRQ | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:160-163](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L160) | CONFIRMED on Linux; explicit UNKNOWN fields |
 | `0x0e18` | `PSB_CR_2D_SOCIF` | 7:0 FREESPACE; EMPTY=0x80 | Space/empty settings; no reconstructed submission | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:155-158](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L155) | CONFIRMED on Linux; explicit UNKNOWN fields |
 
-## Eventos e faults
+## Events and faults
 
 **CONFIRMED:** main event mask: bit 31 MASTER_INTERRUPT; 28 TA_DPM_FAULT; 27 TWOD_COMPLETE; 25 DPM_OUT_OF_MEMORY_ZLS; 24 DPM_TA_MEM_FREE; 18 PIXELBE_END_RENDER; 14 SW_EVENT; 13 TA_FINISHED; 12 TA_TERMINATE; 3 DPM_REACHED_MEM_THRESH; 2 DPM_OUT_OF_MEMORY_GBL; 1 DPM_OUT_OF_MEMORY_MT; 0 DPM_3D_MEM_FREE. [references/linux/drivers/gpu/drm/gma500/psb_reg.h:72-84](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L72).
 
@@ -61,6 +61,6 @@ The 2D package defines from [references/linux/drivers/gpu/drm/gma500/psb_reg.h:1
 ## UNKNOWN / review points
 
 - RO/RW, clear-on-read, W1C formal, reset values and reservations are not inferred just from the names.
-- CORE_ID/REVISION were research candidates. Phase 4 classifies `UNKNOWN` for actual reading: there is historical use, but no contract of colaterais/power/locking effects. They are not part of an approved whitelist.
+- CORE_ID/REVISION were research candidates. Phase 4 classifies `UNKNOWN` for actual reading: there is historical use, but no contract for read side effects, power, or locking. They are not part of an approved whitelist.
 - The indexing of BASE1 differs between Linux and IT; details in [mmu-bif.md](mmu-bif.md).
 - The basic reset uses the bits above, but boot and recovery firmware require additional state: [references/linux/drivers/gpu/drm/gma500/psb_drv.c:103-125](../references/linux/drivers/gpu/drm/gma500/psb_drv.c#L103) versus [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c:467-665](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c#L467).

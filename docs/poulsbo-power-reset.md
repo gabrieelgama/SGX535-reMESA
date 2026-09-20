@@ -14,7 +14,7 @@ Phase 3 — static analysis, 2026-09-17. `CONFIRMED` means the source declares/i
 
 **CONFIRMED [P3-038]** — In the EMGD mirror, pwr_set_plb does not program D0–D3 transitions, while pwr_init_plb writes CLKGATECTL=0x1111111 and the register at +8 with zero. The SysDevicePre/PostPowerState hooks of common/sysconfig.c only log messages. Sources: [EMGD_drm_emgd_state_power_plb_pwr_plb_c:83-123](poulsbo-data/EMGD_drm_emgd_state_power_plb_pwr_plb_c.txt); [EMGD_drm_pvr_services4_system_common_sysconfig_c:1332-1365](poulsbo-data/EMGD_drm_pvr_services4_system_common_sysconfig_c.txt).
 
-## O que falta reconstruir
+## What remains to reconstruct
 
 **UNKNOWN:** complete sequence of clock/rail/reset from each energy state, hardware behind the OSPM APIs, ready bits and their timeouts, reset reach over display/memory, and errata of the installed stepping. The stubs do not demonstrate that power gating is unnecessary; they may depend on another componente/firmware from the platform.
 
@@ -23,4 +23,3 @@ Phase 3 — static analysis, 2026-09-17. `CONFIRMED` means the source declares/i
 The DDK reset is part of an initialization with scripts and microkernel state (P3-051). Copying it in isolation does not provide a bring-up procedure. Loop drainage must have limited output and diagnostics in a future project, but this phase does not change the code nor propose new values.
 
 For initial recovery, plan a controlled reboot and the possibility of a power cycle, without relying on a soft reset to recover the display. Recoverability through reboot still needs to be demonstrated on the target platform. Do not perform suspend/resume or gating tests before this preparation.
-

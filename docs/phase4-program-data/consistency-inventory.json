@@ -1,575 +1,1291 @@
 [
   {
     "file": "docs/architecture.md",
-    "lines": 84,
-    "gate_or_safety_lines": []
+    "lines": 85,
+    "gate_or_safety_lines": [
+      {
+        "line": 11,
+        "text": "- **UNKNOWN**: information not established by these sources. The absence of code here does not prove the absence of hardware capability."
+      },
+      {
+        "line": 68,
+        "text": "**CONFIRMED:** recovery triggers restart with hardware recovery; the non-MP reset branch uses a temporary PD and handles pending faults before restoring BIF context. This is more than simply toggling SOFT_RESET. [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c:1582-1645](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c#L1582); [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c:544-655](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c#L544). **UNKNOWN:** which of these operations are necessary and correct for each Poulsbo stepping."
+      },
+      {
+        "line": 84,
+        "text": "- [20 unknowns and minimum experiment](unknowns.md): blockages and next steps."
+      }
+    ]
   },
   {
     "file": "docs/bringup-read-errata.md",
-    "lines": 42,
+    "lines": 7,
     "gate_or_safety_lines": [
       {
-        "line": 36,
-        "text": "**UNKNOWN:** cobertura completa de BRNs para PCI06, estados em que uma"
+        "line": 7,
+        "text": "PCI revision `0x06` does not select SGX errata. No BRN currently closes a Gate B requirement."
       }
     ]
   },
   {
     "file": "docs/command-submission.md",
-    "lines": 51,
-    "gate_or_safety_lines": []
+    "lines": 52,
+    "gate_or_safety_lines": [
+      {
+        "line": 27,
+        "text": "**UNKNOWN:** full meaning of the six words, VDM/TA/ISP stream formats, render target states, tile parameters, and program that consumes the CCB. There is no basis for sending an invented “NOP” command or assuming that six zeros are harmless."
+      },
+      {
+        "line": 33,
+        "text": "**INFERRED:** advanced read offset means consumption of the CCB kernel input, not completion of rendering; the existence of complete counters and separate TA/3D status is the evidence. [references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h:92-96](../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h#L92); [references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h:169-199](../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h#L169). Wraparound, coherence, and translation to modern fences remain **UNKNOWN**."
+      },
+      {
+        "line": 43,
+        "text": "**UNKNOWN:** integration of SW_EVENT/EDM with the Poulsbo IRQ, recovery limited by timeout, safe discard of jobs and BO lifetime after reset. Existing handlers do not provide this contract. See [current Linux state](gma500-current-state.md)."
+      },
+      {
+        "line": 51,
+        "text": "**CONFIRMED:** under `SUPPORT_HW_RECOVERY`, `SGXOSTimer` monitors EDM activity through registers indicated in `psDevInfo`, also compares the number of resets, and accumulates three samples without change before deciding on lockup. There are exceptions for OpenCL delay and conditional workarounds; the path stops counting when the device is without power. Upon detecting lockup, it increments `ui32HostDetectedLockups` and calls recovery. It is not a universal three-millisecond timeout, nor proof of progress for each job. [services4/srvkm/devices/sgx/sgxinit.c:1662–1799](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c#L1662). **UNKNOWN:** EDM offsets and the appropriate period for Poulsbo stepping; TI integration does not validate them for Intel."
+      }
+    ]
   },
   {
     "file": "docs/core-identification-audit.md",
-    "lines": 93,
-    "gate_or_safety_lines": []
+    "lines": 9,
+    "gate_or_safety_lines": [
+      {
+        "line": 5,
+        "text": "For both candidates, read-only semantics, absence of read side effects, valid power and clock state, reset requirements, revision coverage, locking, suspend/resume interaction, failure behavior, and recovery remain **UNKNOWN**. A `readl()` call or debug dump is evidence that software performed a read; it is not proof that the read is safe."
+      },
+      {
+        "line": 9,
+        "text": "Conclusion: neither candidate is a SAFE-CANDIDATE and neither is authorized for Test Vector One."
+      }
+    ]
   },
   {
     "file": "docs/ddk-version-map.md",
     "lines": 37,
-    "gate_or_safety_lines": []
+    "gate_or_safety_lines": [
+      {
+        "line": 3,
+        "text": "Convention: **CONFIRMED** confirms the content/history of the sources, not hardware operation; **INFERRED** identifies a deduction; **UNKNOWN** is what has not yet been established. Source identifiers like H535 and PBUILD resolve to repository, full commit, file, and hash in [source catalog](source-archaeology.md#source-catalog). Document snapshots preserve the original lines and license notices; they are not implementation files."
+      },
+      {
+        "line": 9,
+        "text": "| 1.9, numeric branch 19, build 2253347 | `1450ae2166ad952ef30197e79518b51577a629e6` | [VER19:55–65](archaeology-data/VER19.txt#L55) | dispatcher/feature/errata 535 exist; header missing in this tree; no Poulsbo target found in this import | CONFIRMED about content; functional build 535 UNKNOWN |"
+      },
+      {
+        "line": 10,
+        "text": "| 1.13 build 3444720, experimental | `322bcda5f3076037e2e20ef9209f4f4d575a7d5f` | [VER13:51–60](archaeology-data/VER13.txt#L51) | first local entry found of header 535; does not contain target pc_i686_poulsbo_d0_linux | CONFIRMED about content; functional integration UNKNOWN |"
+      },
+      {
+        "line": 12,
+        "text": "| 1.17 build 4948957, SGX_DDK_Linux_XOrg variant | `b630d462f5fbb86e5f98965ba1af35da1207822f` | [VER17:51–60](archaeology-data/VER17.txt#L51) | this commit still has target and inherited wrappers; removed in the cleanup child | CONFIRMED history; support validated in 1.17 UNKNOWN |"
+      },
+      {
+        "line": 13,
+        "text": "| 1.17 build 4948957, SGX_DDK variant | `01a9d880722e93d8f8321e4f9be64dfae19e85a3` | `eurasia_km/include4/pvrversion.h`:51–57, blob `86a733d2fc714eedd0dcea03d50dfce1947ab62e` | product identification differences do not prove core change | CONFIRMED on version; compatibility UNKNOWN |"
+      },
+      {
+        "line": 37,
+        "text": "No DDK was built or executed. Kernel compatibility, userspace, firmware, build options, and structures remain **UNKNOWN** until the corresponding set is obtained and analyzed. No feature of SGX540/544 was assigned to 535."
+      }
+    ]
   },
   {
     "file": "docs/firmware.md",
-    "lines": 42,
-    "gate_or_safety_lines": []
+    "lines": 43,
+    "gate_or_safety_lines": [
+      {
+        "line": 30,
+        "text": "ELF values are not file offsets or ready-to-use GPU addresses. **INFERRED:** the library loads content from embedded microkernel/PDS programs; **UNKNOWN:** SGX535 compatibility, format, relocation, and exact initialization code. The KM's OMAP5430 target selects SGX544, reinforcing that these objects should not be treated as Poulsbo firmware. [references/omap5-sgx-ddk-linux/eurasia_km/eurasiacon/build/linux2/omap5430_linux/Makefile:112-113](../references/omap5-sgx-ddk-linux/eurasia_km/eurasiacon/build/linux2/omap5430_linux/Makefile#L112)."
+      },
+      {
+        "line": 36,
+        "text": "**CONFIRMED:** the non-MP branch also forces the recovery path on the first startup (`bHardwareRecovery |= bFirstTime`). [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c:499-503](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c#L499). **UNKNOWN:** whether this should be preserved for Poulsbo and what previous state the platform firmware leaves."
+      },
+      {
+        "line": 42,
+        "text": "**UNKNOWN:** availability of SGX535 microkernel with compatible source/license, possibility of a new minimal microkernel and mandatory task set. A simple writing of EVENT_KICK without valid program and memory is not a safe experiment. Next sources: legitimately published UM init, sources of microkernel/PDS, and specification corresponding to the identified revision, with provenance audit before use."
+      }
+    ]
   },
   {
     "file": "docs/gma500-current-state.md",
-    "lines": 48,
-    "gate_or_safety_lines": []
+    "lines": 49,
+    "gate_or_safety_lines": [
+      {
+        "line": 36,
+        "text": "**CONFIRMED:** the reset called in init does not contain the microkernel handshake, the CCB processing, or the DDK TI job recovery. Compare [references/linux/drivers/gpu/drm/gma500/psb_drv.c:103-163](../references/linux/drivers/gpu/drm/gma500/psb_drv.c#L103) with [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c:467-665](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c#L467) and [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c:544-655](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c#L544). **UNKNOWN:** how much of the state required by 3D is already left by platform firmware."
+      },
+      {
+        "line": 48,
+        "text": "Comparison sources: [references/linux/drivers/gpu/drm/gma500/psb_drv.c:91-95](../references/linux/drivers/gpu/drm/gma500/psb_drv.c#L91); [references/linux/drivers/gpu/drm/gma500/psb_drv.c:505-510](../references/linux/drivers/gpu/drm/gma500/psb_drv.c#L505); [references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h:70-201](../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h#L70); [references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgxinfo.h:85-114](../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgxinfo.h#L85); [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c:2612-2629](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c#L2612). The need for each exact component may change if a new design dispenses with parts of the historical protocol; the possibility of this alternative is **UNKNOWN**."
+      }
+    ]
   },
   {
     "file": "docs/hardware-identification.md",
-    "lines": 126,
+    "lines": 54,
     "gate_or_safety_lines": [
       {
-        "line": 6,
-        "text": "execução. SGX core revision é UNKNOWN; a aprovação do probe para8108/8109"
-      },
-      {
-        "line": 7,
-        "text": "não é whitelist de MMIO. O [gate formal](phase4-5-formal-gate.md) mantém B"
-      },
-      {
-        "line": 29,
-        "text": "**PCI revision 0x06 não é SGX core revision.** Esta continua **UNKNOWN**."
-      },
-      {
-        "line": 34,
-        "text": "tabela Intel de stepping e mantém gate B BLOCKED. A associação documental"
+        "line": 12,
+        "text": "The source table also names GMA 500 and Atom Z5xx. It does not map PCI revision or subsystem IDs to US15W, US15WP, US15WPT, or an SGX stepping. That finer classification remains **UNKNOWN**. The probe records revision and subsystem values but never uses them to strengthen the identification."
       }
     ]
   },
   {
     "file": "docs/hardware-ownership.md",
-    "lines": 145,
+    "lines": 36,
     "gate_or_safety_lines": [
       {
-        "line": 127,
-        "text": "   de read-safety e uma whitelist por revisão."
+        "line": 27,
+        "text": "3. Per-register power requirements remain **UNKNOWN**. `gma_power_begin()` documents display-island handling, not a contract for every SGX clock."
+      },
+      {
+        "line": 28,
+        "text": "4. PCI identity and kernel-exported state can be observed without interfering with KMS. SGX MMIO observation remains **UNKNOWN/BLOCKED**."
+      },
+      {
+        "line": 29,
+        "text": "5. A separate module is **NO-GO**. It would lack `drm_psb_private`, the driver's locks, PM reference, IRQ relationship, and mapping lifetime."
+      },
+      {
+        "line": 30,
+        "text": "6. If a limited read is ever approved, placing it within gma500 is **INFERRED** to be safer because ownership and PM are already there. Read safety and a revision-specific whitelist would still have to be proven."
       }
     ]
   },
   {
     "file": "docs/kernel-5.10.240-antix-audit.md",
-    "lines": 58,
-    "gate_or_safety_lines": [
-      {
-        "line": 54,
-        "text": "clocks/reset ou falha do hardware. Gate B continua BLOCKED."
-      }
-    ]
+    "lines": 7,
+    "gate_or_safety_lines": []
   },
   {
     "file": "docs/lost-documentation-index.md",
-    "lines": 65,
+    "lines": 13,
     "gate_or_safety_lines": [
       {
-        "line": 61,
-        "text": "com revisão e errata aplicáveis ao D2:F0 8086:8108 PCI06. Precisamos verificar"
+        "line": 7,
+        "text": "| IMG SGX535/Series5 TRM | IMG forum references state that TRMs are restricted to licensees | not obtained; read semantics and hardware contract remain UNKNOWN |"
+      },
+      {
+        "line": 8,
+        "text": "| Intel SCH External Design Specification | document **364236**, cited by EMGD and Intel support material | endpoint retrieval was unavailable; revision and content UNKNOWN |"
       }
     ]
   },
   {
     "file": "docs/mmu-bif.md",
-    "lines": 70,
-    "gate_or_safety_lines": []
+    "lines": 71,
+    "gate_or_safety_lines": [
+      {
+        "line": 16,
+        "text": "| cache | bit 3, CACHECONSISTENT | bit 3, CPU cache coherent comment | CONFIRMED as definition; unknown full coherence |"
+      },
+      {
+        "line": 19,
+        "text": "Table sources: [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxmmu.h:66-93](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxmmu.h#L66); [references/linux/drivers/gpu/drm/gma500/psb_drv.h:81-84](../references/linux/drivers/gpu/drm/gma500/psb_drv.h#L81). The TI header also lists PDE sizes from 16 KiB to 4 MiB; **UNKNOWN** if they are usable in SGX535/Poulsbo. The presence of these defines in a common file does not prove core support."
+      },
+      {
+        "line": 38,
+        "text": "In Linux, `BASE1=0x0c38`, so that context 1 writes in **0x0c3c**; this account is **INFERRED directly from the expression**, and not a suggested correction. [references/linux/drivers/gpu/drm/gma500/psb_reg.h:126](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L126). **UNKNOWN:** convention difference, historical definition, or defect; do not choose the TI formula based on similarity. Phase 2 retrieved the SGX535 header and Phase 3 confirmed that the divergence remains; see `poulsbo-vs-ti.md` and `phase4-audit.md`."
+      },
+      {
+        "line": 60,
+        "text": "**CONFIRMED:** the non-MP TI reset drains requests through PD/PT/temporary page and repeats until there is no fault. The comment about 2 GiB relative address and bus-master MSB is in this specific context; **UNKNOWN** describes Poulsbo, so it should not become a PTE rule. [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c:544-618](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c#L544)."
+      },
+      {
+        "line": 62,
+        "text": "**UNKNOWN:** end-to-end ordering, invalidation safety with active engines, isolation between contexts, EDM protect policy and real DMA limits on the target. Resolve before allowing SGX to touch new memory."
+      },
+      {
+        "line": 70,
+        "text": "**CONFIRMED, OMAP integration:** `create_gem_wrapper`, in branch `SUPPORT_DRI_DRM_EXTERNAL`, converts LinuxMemArea into pages or physical region, translates flags cached/WC/uncached into `OMAP_BO_*` flags, and calls `omap_gem_new_ext`. It is a concrete dependency for TI integration within Linux environment code, not only in `services4/system/omap5`. [services4/srvkm/env/linux/mmap.c:372–482](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/env/linux/mmap.c#L372). **UNKNOWN:** equivalent policy to share rendering BOs with Poulsbo scanout. Do not port this wrapper to Intel just for using GEM."
+      }
+    ]
   },
   {
     "file": "docs/pci-revision-audit.md",
-    "lines": 29,
+    "lines": 7,
     "gate_or_safety_lines": [
       {
-        "line": 12,
-        "text": "| gma5005.10.240, P41-011/P42-011 | defines SGX; nenhum getter localizado no diretório | não existe correlação PCI06→SGX nesses caminhos |"
+        "line": 1,
+        "text": "# PCI revision `0x06` — audit"
       },
       {
-        "line": 21,
-        "text": "| PCI06 → stepping gráfico/SCH D1 | UNKNOWN |"
+        "line": 3,
+        "text": "The real TVZ measured PCI revision `0x06` for graphics function `8086:8108` at `0000:00:02.0` (P41-002). This is a PCI revision ID, not an SGX core revision."
       },
       {
-        "line": 22,
-        "text": "| PCI06 → SGX535 rev116 | UNKNOWN |"
+        "line": 5,
+        "text": "A separate SCH table associates RID `06h` with D1 on LPC `D31:F0`; that evidence does not transfer to graphics function `D2:F0`. EMGD and gma500 read PCI revision fields, but neither source maps `0x06` to an SGX revision, BRN set, or graphics stepping."
       },
       {
-        "line": 23,
-        "text": "| PCI06 → SGX535 rev121/126/outra | UNKNOWN |"
-      },
-      {
-        "line": 24,
-        "text": "| PCI06 → BRNs aplicáveis | UNKNOWN |"
-      },
-      {
-        "line": 25,
-        "text": "| PCI06 → aperture ou power/reset específico | UNKNOWN |"
+        "line": 7,
+        "text": "Conclusion: PCI revision `0x06` was not correlated to D1, rev116, rev121, or any other SGX core revision."
       }
     ]
   },
   {
     "file": "docs/phase4-1-reassessment.md",
-    "lines": 147,
+    "lines": 9,
     "gate_or_safety_lines": [
       {
         "line": 3,
-        "text": "2026-09-19. **Gate B: BLOCKED. Nenhum SAFE-CANDIDATE aprovado.**"
+        "text": "2026-09-19. **Gate B: BLOCKED. No SAFE-CANDIDATE approved.** I incorporated the real TVZ report for the Dell Inspiron 1210 without performing another hardware operation."
       },
       {
-        "line": 70,
-        "text": "Nenhuma fonte examinada fornece `PCI 06 → SGX rev116/rev121/...`."
+        "line": 5,
+        "text": "The report confirms BDF `0000:00:02.0`, vendor/device `8086:8108`, PCI revision `0x06`, subsystem `1028:02b1`, class `030000`, IRQ 16, and the four measured BARs. It also reports kernel `5.10.240-antix.1-486-smp`, i686, driver `gma500`, DRM `card0`, and runtime status `active`."
       },
       {
-        "line": 112,
-        "text": "## Sete condições do gate B"
-      },
-      {
-        "line": 127,
-        "text": "TEST VECTOR ONE aprovado. A whitelist executável permanece **vazia**."
+        "line": 7,
+        "text": "The report performed no MMIO reads or writes, reset, firmware load, MMU initialization, command submission, or power/clock manipulation. PCI revision `0x06` is not an SGX core revision. The physical SGX revision remains UNKNOWN. `runtime_status=active` does not prove SGX clocks are enabled."
       }
     ]
   },
   {
     "file": "docs/phase4-3-blocker-closure.md",
-    "lines": 156,
+    "lines": 22,
     "gate_or_safety_lines": [
       {
-        "line": 4,
-        "text": "CORE_ID e CORE_REVISION continuam fora da whitelist. Esta fase foi concluída"
+        "line": 3,
+        "text": "2026-09-19. Ten initial blockers remained open; none was closed. `CORE_ID` and `CORE_REVISION` stayed outside the whitelist. No hardware operation was performed."
       },
       {
-        "line": 79,
-        "text": "são plausíveis para PCI06. A lista é universo documental, não lista física"
+        "line": 11,
+        "text": "| 4. Read-only | UNKNOWN | no applicable SGX535/Poulsbo register attribute |"
       },
       {
-        "line": 80,
-        "text": "certificada. Não há garantia universal, nem vínculo PCI06↔graphics stepping"
+        "line": 12,
+        "text": "| 5. No read side effects | UNKNOWN | no positive side-effect-free contract |"
+      },
+      {
+        "line": 13,
+        "text": "| 6. Power | UNKNOWN | runtime PM state does not prove SGX power |"
+      },
+      {
+        "line": 14,
+        "text": "| 7. Clocks | UNKNOWN | register-interface clock requirements are undocumented |"
+      },
+      {
+        "line": 15,
+        "text": "| 8. Reset | UNKNOWN | reset-state requirement for the IDs is undocumented |"
+      },
+      {
+        "line": 16,
+        "text": "| 9. Revision coverage | UNKNOWN | physical SGX revision is unknown |"
+      },
+      {
+        "line": 17,
+        "text": "| 12. Locking | UNKNOWN | no complete protocol for a new read while gma500 owns the mapping |"
+      },
+      {
+        "line": 18,
+        "text": "| 13. Suspend/resume | UNKNOWN | no serialized observation protocol |"
+      },
+      {
+        "line": 19,
+        "text": "| 14. Failure behavior | UNKNOWN | CPU MMIO read failure behavior is undocumented |"
+      },
+      {
+        "line": 20,
+        "text": "| 15. Recovery | UNKNOWN | no validated recovery for a failed CPU MMIO read |"
       }
     ]
   },
   {
     "file": "docs/phase4-4-adversarial-audit.md",
-    "lines": 132,
+    "lines": 9,
     "gate_or_safety_lines": [
       {
-        "line": 115,
-        "text": "|PCI06→D1→SGX| cadeia não demonstrada; tabela LPC não aplicada à função gráfica |"
+        "line": 5,
+        "text": "All documentary PASS claims survived only within their stated scope: software identity, offsets, access width, gma500 ownership, and mapping lifetime. None became evidence of physical read safety. No `UNKNOWN` became `PASS`, no blocker closed, and no candidate entered the whitelist."
+      },
+      {
+        "line": 9,
+        "text": "The safe-register table was corrected where write-side effects had previously been treated as proof that reads were unsafe. Those read semantics are now `UNKNOWN`; the documented write effects remain unchanged. The rev116/rev121 difference is documented as proposal-versus-build configuration, not as conflicting physical measurements."
       }
     ]
   },
   {
     "file": "docs/phase4-5-formal-gate.md",
-    "lines": 88,
+    "lines": 23,
     "gate_or_safety_lines": [
       {
+        "line": 10,
+        "text": "| 4. Read-only semantics | UNKNOWN | UNKNOWN | no explicit contract |"
+      },
+      {
+        "line": 11,
+        "text": "| 5. No read side effects | UNKNOWN | UNKNOWN | no explicit contract |"
+      },
+      {
+        "line": 12,
+        "text": "| 6. Power state | UNKNOWN | UNKNOWN | `active`/D0 is insufficient |"
+      },
+      {
+        "line": 13,
+        "text": "| 7. Clock state | UNKNOWN | UNKNOWN | SGX register clock not established |"
+      },
+      {
+        "line": 14,
+        "text": "| 8. Reset state | UNKNOWN | UNKNOWN | applicable sequence absent |"
+      },
+      {
+        "line": 15,
+        "text": "| 9. Revision coverage | UNKNOWN | UNKNOWN | physical SGX revision unknown |"
+      },
+      {
+        "line": 18,
+        "text": "| 12. Locking/races | UNKNOWN | UNKNOWN | no complete read protocol |"
+      },
+      {
+        "line": 19,
+        "text": "| 13. Suspend/resume | UNKNOWN | UNKNOWN | no serialized observation protocol |"
+      },
+      {
+        "line": 20,
+        "text": "| 14. Failure behavior | UNKNOWN | UNKNOWN | CPU MMIO failure behavior absent |"
+      },
+      {
+        "line": 21,
+        "text": "| 15. Recovery | UNKNOWN | UNKNOWN | no validated recovery path |"
+      },
+      {
         "line": 23,
-        "text": "|9 applicable revisions|UNKNOWN|UNKNOWN|falta conjunto físico plausível e garantia por revisão/BRN, ou identificação independente; PCI06 não resolve; P42-005/006/019 |"
-      },
-      {
-        "line": 73,
-        "text": "SAFE-CANDIDATE(r) = todos os requisitos1..15 de r iguais a PASS."
-      },
-      {
-        "line": 74,
-        "text": "Se existir UNKNOWN, CONFLICTING ou FAIL, r não entra na whitelist."
-      },
-      {
-        "line": 76,
-        "text": "- CORE_ID: **SAFE-CANDIDATE NO** — cincoPASS, dezUNKNOWN."
-      },
-      {
-        "line": 77,
-        "text": "- CORE_REVISION: **SAFE-CANDIDATE NO** — cincoPASS, dezUNKNOWN."
-      },
-      {
-        "line": 78,
-        "text": "- WHITELIST: **[]**."
-      },
-      {
-        "line": 79,
-        "text": "- GateB: **BLOCKED**."
+        "text": "`CORE_ID`: **SAFE-CANDIDATE NO**. `CORE_REVISION`: **SAFE-CANDIDATE NO**. Whitelist: `[]`. Gate B: **BLOCKED**. The exact evidence identifiers and source locations remain in [evidence-matrix.csv](evidence-matrix.csv)."
       }
     ]
   },
   {
     "file": "docs/phase4-6-skipped.md",
-    "lines": 26,
+    "lines": 7,
     "gate_or_safety_lines": [
       {
         "line": 5,
-        "text": "**Reason:** GateB = BLOCKED; nenhum registrador é SAFE-CANDIDATE;"
-      },
-      {
-        "line": 6,
-        "text": "whitelist = []. A condição para produzir design deTV1 não foi satisfeita."
-      },
-      {
-        "line": 15,
-        "text": "|9 revisões| cobertura física/errata aplicável a8086:8108 PCI06 |"
+        "text": "Gate B remains `BLOCKED`; neither register is a `SAFE-CANDIDATE`; the whitelist is empty. The condition for producing a Test Vector One design was not met."
       }
     ]
   },
   {
     "file": "docs/phase4-7-final-pre-bringup-audit.md",
-    "lines": 143,
+    "lines": 29,
     "gate_or_safety_lines": [
       {
         "line": 3,
-        "text": "2026-09-19. **Gate B BLOCKED; whitelist vazia; nenhum SAFE-CANDIDATE.**"
+        "text": "2026-09-19. **Gate B BLOCKED; whitelist empty; no SAFE-CANDIDATE.** This audit closes the documentary Phase 4.3–4.7 program. It does not start Phase 5."
       },
       {
-        "line": 31,
-        "text": "|C1| onze registros em safe-register-reads tinham UNSAFE justificado por efeito de write | semântica de leitura → UNKNOWN; efeitos de escrita continuam documentados; nenhum SAFE-CANDIDATE ou gate promovido |"
+        "line": 5,
+        "text": "I checked terminology, cross-document consistency, safety invariants, evidence links, hashes, and the distinction between PCI revision, SCH stepping, graphics stepping, SGX core revision, build target, and errata selector. I also checked BARs, SGX-relative offsets, CPU mappings, GTT/GATT, SGX device virtual addresses, and MMU addresses as separate domains."
       },
       {
-        "line": 33,
-        "text": "|C3| revision-investigation chamava116/proposta versus121/build de CONFLICTING sem qualificar o objeto | preservada divergência de rótulos; vínculo ao silício UNKNOWN; não duas medições físicas contraditórias |"
+        "line": 7,
+        "text": "The remaining UNKNOWNs were preserved. No document authorizes `resourceN` mmap, `/dev/mem`, a second PCI owner, arbitrary MMIO, clock or reset writes, BIF/MMU initialization, firmware, CCB, `EVENT_KICK`, PDS, USSE, workload, or rendering before the relevant gate."
       },
       {
-        "line": 36,
-        "text": "|C6| bringup0 dizia que harness MMIO ficava como design, permitindo confusão com TV1 aprovado | apenas requisitos gerais condicionais;4.6 SKIPPED; aceitaçãoPCI do probe não é whitelistMMIO |"
+        "line": 12,
+        "text": "| B Controlled MMIO Read | BLOCKED |"
       },
       {
-        "line": 46,
-        "text": "Nenhum documento consultado aprova atualmente GateB=GO. Propostas antigas"
+        "line": 13,
+        "text": "| C Reset | BLOCKED |"
       },
       {
-        "line": 55,
-        "text": "|PCI revision / SCH stepping / graphics stepping / SGX core revision| PCI06 do D2:F0 é relato P41-002; tabela LPC P41-020 não se transfere; SGX físico UNKNOWN |"
+        "line": 14,
+        "text": "| D Power/Clock Manipulation | NO-GO |"
       },
       {
-        "line": 106,
-        "text": "|B Controlled MMIO Read|BLOCKED|requisitos4–9,12–15 para cada ID; whitelist vazia |"
+        "line": 15,
+        "text": "| E BIF Observation | BLOCKED |"
       },
       {
-        "line": 129,
-        "text": "Ambos os candidatos: SAFE-CANDIDATE NO. Whitelist[]. B BLOCKED."
+        "line": 16,
+        "text": "| F MMU Init | BLOCKED |"
+      },
+      {
+        "line": 17,
+        "text": "| G Address Space | BLOCKED |"
+      },
+      {
+        "line": 18,
+        "text": "| H Firmware | NO-GO |"
+      },
+      {
+        "line": 19,
+        "text": "| I CCB | BLOCKED |"
+      },
+      {
+        "line": 20,
+        "text": "| J EVENT_KICK | NO-GO |"
+      },
+      {
+        "line": 21,
+        "text": "| K PDS | NO-GO |"
+      },
+      {
+        "line": 22,
+        "text": "| L USSE | NO-GO |"
+      },
+      {
+        "line": 23,
+        "text": "| M Workload | BLOCKED |"
+      },
+      {
+        "line": 24,
+        "text": "| N Rendering | BLOCKED |"
+      },
+      {
+        "line": 25,
+        "text": "| O Mesa | BLOCKED |"
       }
     ]
   },
   {
     "file": "docs/phase4-audit.md",
-    "lines": 158,
+    "lines": 92,
     "gate_or_safety_lines": [
       {
-        "line": 15,
-        "text": "[matriz de15 requisitos](test-vector-one-gate.md): zero SAFE-CANDIDATE."
+        "line": 16,
+        "text": "| lowered to UNKNOWN | 0 |"
       },
       {
-        "line": 35,
-        "text": "- SGX core revision e segurança das leituras continuam **UNKNOWN**."
+        "line": 23,
+        "text": "1. `CORE_ID`/`CORE_REVISION` remain historically observed offsets and reads; read safety is **UNKNOWN**."
       },
       {
-        "line": 46,
-        "text": "Nenhum gate foi promovido. Nenhum MMIO ou código de driver foi implementado."
+        "line": 53,
+        "text": "explains the difference remains **UNKNOWN** (`P3-003`, `P3-005`)."
+      },
+      {
+        "line": 90,
+        "text": "identify the PCI function and the binding without touching BAR or opening DRM. **UNKNOWN:**"
       }
     ]
   },
   {
     "file": "docs/phase4-go-no-go.md",
-    "lines": 61,
+    "lines": 30,
     "gate_or_safety_lines": [
       {
-        "line": 5,
-        "text": "Gate B **BLOCKED**, whitelist **[]**, nenhum SAFE-CANDIDATE. O"
+        "line": 1,
+        "text": "# GO / NO-GO / BLOCKED Matrix of Phase 4"
+      },
+      {
+        "line": 9,
+        "text": "| B. Controlled MMIO reads | BLOCKED | missing read-side-effects contract, power/clock per register, stepping and locking; required source: datasheet/register reference SGX535 Poulsbo + errata/power sequence Intel/IMG |"
+      },
+      {
+        "line": 10,
+        "text": "| C. Controlled SGX reset | BLOCKED | official sequence missing due to review, pre/post state, impact on display/IRQ/MMU and recovery; required source: init/reset authenticated SGX535 Poulsbo script or Intel/IMG documentation |"
+      },
+      {
+        "line": 11,
+        "text": "| D. Clock/power manipulation | NO-GO | current gma500 has declared broken PM runtime, empty Poulsbo callbacks, and shared PCI/display function; no external manipulation is acceptable |"
+      },
+      {
+        "line": 12,
+        "text": "| E. BIF observation | BLOCKED | divergence of layout/contexts and semantics of status/fault; source required: SGX535 Poulsbo BIF register reference + revision errata |"
+      },
+      {
+        "line": 13,
+        "text": "| F. MMU initialization | BLOCKED | formula of contexts and addresses GATT/MMU diverges; official format/flush/fault semantics and limits are missing; source needed: complete Poulsbo DDK and BIF/MMU documentation from the review |"
+      },
+      {
+        "line": 14,
+        "text": "| G. SGX address-space creation | BLOCKED | depends on F and the GTT/stolen model confirmed in hardware; lacks modern memory ABI and cache/coherence rules |"
+      },
+      {
+        "line": 15,
+        "text": "| H. Firmware/microkernel loading | NO-GO | firmware verified, license, hash, target revision, and bootstrap protocol are missing |"
+      },
+      {
+        "line": 16,
+        "text": "| I. CCB allocation | BLOCKED | CCB format, memory/coherence, producer/consumer and compatible firmware are not established for target Poulsbo |"
       },
       {
         "line": 17,
-        "text": "documentais e dez UNKNOWN por candidato, zero SAFE-CANDIDATE."
+        "text": "| J. EVENT_KICK | NO-GO | is a submission action; address/event/firmware and recovery are not verified |"
       },
       {
-        "line": 59,
-        "text": "[phase4-1-reassessment.md](phase4-1-reassessment.md). A whitelist continua"
+        "line": 18,
+        "text": "| K. PDS execution | NO-GO | binary, ISA, bases, stepping, and nonexistent sandbox |"
       },
       {
-        "line": 61,
-        "text": "CORE_ID/CORE_REVISION permanecem UNKNOWN."
+        "line": 19,
+        "text": "| L. USSE execution | NO-GO | ISA/encoding and SGX535 limits were not rebuilt with compatible source |"
+      },
+      {
+        "line": 20,
+        "text": "| M. First GPU workload | BLOCKED | depends on B–L and on hang mechanism detection/recovery; required source: complete and reproducible Poulsbo SGX535 stack |"
+      },
+      {
+        "line": 21,
+        "text": "| N. First rendering workload | BLOCKED | depends on M, command-stream and render-target formats and validation; required source: documentation/compiler/userspace driver with proper provenance |"
+      },
+      {
+        "line": 22,
+        "text": "| O. Mesa integration | BLOCKED | modern architecture can only be defined after memory, submission, sync, firmware, and minimum workload are confirmed |"
+      },
+      {
+        "line": 26,
+        "text": "Only A is `GO`. D, H, J, K, and L are `NO-GO` with the current evidence. The"
+      },
+      {
+        "line": 27,
+        "text": "the other items are `BLOCKED`, never promoted due to similarity with SGX540/544,"
+      }
+    ]
+  },
+  {
+    "file": "docs/phase5-baseline.md",
+    "lines": 79,
+    "gate_or_safety_lines": [
+      {
+        "line": 16,
+        "text": "- [Phase 4 GO/NO-GO matrix](phase4-go-no-go.md)"
+      },
+      {
+        "line": 21,
+        "text": "| Gate B — controlled MMIO read | `BLOCKED` |"
+      },
+      {
+        "line": 22,
+        "text": "| `CORE_ID` | not a `SAFE-CANDIDATE` |"
+      },
+      {
+        "line": 23,
+        "text": "| `CORE_REVISION` | not a `SAFE-CANDIDATE` |"
+      },
+      {
+        "line": 24,
+        "text": "| whitelist | `[]` |"
+      },
+      {
+        "line": 37,
+        "text": "| 4. Read-only semantics | `UNKNOWN` | SGX535/Poulsbo register access attribute or equivalent primary contract |"
+      },
+      {
+        "line": 38,
+        "text": "| 5. No read side effects | `UNKNOWN` | explicit side-effect-free read semantics covering the applicable core/revision |"
+      },
+      {
+        "line": 39,
+        "text": "| 6. Valid power state | `UNKNOWN` | minimum SGX/register-interface power state and a reliable way to establish it |"
+      },
+      {
+        "line": 40,
+        "text": "| 7. Valid clock state | `UNKNOWN` | required clock domains and a reliable way to establish them without unsafe writes |"
+      },
+      {
+        "line": 41,
+        "text": "| 8. Reset-state requirement | `UNKNOWN` | documented accessibility while reset is asserted/deasserted and any ordering requirement |"
+      },
+      {
+        "line": 42,
+        "text": "| 9. Revision coverage | `UNKNOWN` | physical SGX revision or a contract valid across every plausible Poulsbo SGX535 revision |"
+      },
+      {
+        "line": 43,
+        "text": "| 12. Locking and races | `UNKNOWN` | a gma500-owned execution point and exclusion protocol covering IRQ, KMS, PM, MMU, and removal |"
+      },
+      {
+        "line": 44,
+        "text": "| 13. Suspend/resume interaction | `UNKNOWN` | serialization that prevents a read from racing D-state and mapping-lifetime transitions |"
+      },
+      {
+        "line": 45,
+        "text": "| 14. Failure behavior | `UNKNOWN` | documented CPU/MMIO behavior for an unavailable, gated, reset, or faulted SGX block |"
+      },
+      {
+        "line": 46,
+        "text": "| 15. Recovery | `UNKNOWN` | demonstrated recovery for the documented failure modes; reboot alone is not a read-transaction contract |"
+      },
+      {
+        "line": 48,
+        "text": "Phase 5 adds errata as a separate safety field. PCI revision `0x06` does not select an SGX revision or BRN set."
+      },
+      {
+        "line": 52,
+        "text": "- Measured graphics PCI revision: `0x06` for `8086:8108` at `0000:00:02.0`."
+      },
+      {
+        "line": 53,
+        "text": "- Intel platform/SCH stepping: `UNKNOWN` for the graphics function."
+      },
+      {
+        "line": 54,
+        "text": "- Physical SGX core revision: `UNKNOWN`."
+      },
+      {
+        "line": 57,
+        "text": "- Applicable SGX BRNs: `UNKNOWN`."
       }
     ]
   },
   {
     "file": "docs/poulsbo-architecture.md",
     "lines": 53,
-    "gate_or_safety_lines": []
+    "gate_or_safety_lines": [
+      {
+        "line": 3,
+        "text": "Phase 3 — static analysis, 2026-09-17. `CONFIRMED` means the source declares/implements; `INFERRED` is interpretation; `UNKNOWN` is gap. P3 IDs refer to [matrix](evidence-matrix.csv), with repository, commit, file, and lines. The snapshots preserve the original numbering; see [provenance](poulsbo-data/sources.json). No procedure below was executed on the GPU."
+      },
+      {
+        "line": 49,
+        "text": "**UNKNOWN:** exact correspondence between 8108/8109, US15W/US15WP/US15WPT, physical stepping and SGX121/126 revisions. The d0 suffix in the build name does not resolve this correspondence."
+      }
+    ]
   },
   {
     "file": "docs/poulsbo-bringup-requirements.md",
-    "lines": 53,
+    "lines": 40,
     "gate_or_safety_lines": [
       {
-        "line": 5,
-        "text": "O [gate formal4.5](phase4-5-formal-gate.md) mantém B BLOCKED e whitelist"
+        "line": 3,
+        "text": "Phase 3 — static analysis, 2026-09-17. `CONFIRMED` means the source declares/implements; `INFERRED` is interpretation; `UNKNOWN` is gap. P3 IDs refer to [matrix](evidence-matrix.csv), with repository, commit, file, and lines. The snapshots preserve the original numbering; see [provenance](poulsbo-data/sources.json). No procedure below was executed on the GPU."
       },
       {
-        "line": 7,
-        "text": "histórica; o inventário real foi incorporado na4.1, com SGX revision UNKNOWN."
+        "line": 19,
+        "text": "B1 corresponds to U01; B2 to U03/U04; B3 to U02/U16; B4 to U03/U05; B5 to U06/U09; B6 to U07/U08/U20; B7 to U10–U14; B8 to U15/U16. See [20 unknowns](unknowns.md). The P3-026 divergence blocks writing new contexts, not collecting an existing log. Do not require a full ISA to read an ID, nor declare a safe reset just because it exists in gma500."
       },
       {
-        "line": 31,
-        "text": "não os15 requisitos do gate B. Ver [20 incógnitas](unknowns.md) e o gate"
-      },
-      {
-        "line": 39,
-        "text": "**Etapa seguinte continua BLOCKED:** `CORE_ID` e `CORE_REVISION` têm offsets e uso histórico confirmados, mas a Fase 4 não encontrou contrato de read-side-effects, power/clock ou locking suficiente. Eles não formam uma whitelist aprovada. Se essas lacunas forem fechadas, a instrumentação deverá viver no gma500 e usar uma operação compilada e específica; nunca acesso genérico a MMIO."
+        "line": 25,
+        "text": "**Next step remains BLOCKED:** `CORE_ID` and `CORE_REVISION` have confirmed offsets and historical usage, but Phase 4 did not find a read-side-effects contract, power/clock, or sufficient locking. They do not form an approved whitelist. If these gaps are closed, the instrumentation should live in gma500 and use a compiled, specific operation; never generic access to MMIO."
       }
     ]
   },
   {
     "file": "docs/poulsbo-evidence.md",
-    "lines": 57,
-    "gate_or_safety_lines": []
+    "lines": 59,
+    "gate_or_safety_lines": [
+      {
+        "line": 3,
+        "text": "Convention: **CONFIRMED** confirms the content/history of the sources, not hardware operation; **INFERRED** identifies a deduction; **UNKNOWN** is what has not yet been established. Source identifiers like H535 and PBUILD resolve to repository, full commit, file, and hash in [source catalog](source-archaeology.md#source-catalog). Document snapshots preserve the original lines and license notices; they are not implementation files."
+      },
+      {
+        "line": 11,
+        "text": "| Core/build review | Poulsbo D0 → 535/121, [PBUILD:44–50](archaeology-data/PBUILD.txt#L44) | SGX535 comment and IDs 8108/8109, [LDRVC:43–59](archaeology-data/LDRVC.txt#L43) | CONFIRMED; identity of each stepping UNKNOWN |"
+      },
+      {
+        "line": 12,
+        "text": "| MMIO SGX | offset 0x40000, size 0x4000, [PSYS:51–55](archaeology-data/PSYS.txt#L51) | offset 0x40000, size 0x8000, [LDRVH:41–53](archaeology-data/LDRVH.txt#L41) | CONFIRMED: same relative base, different extensions; reason UNKNOWN |"
+      },
+      {
+        "line": 15,
+        "text": "| Host port | feature enabled, size 0x8000000, base VA 0xd0000000, [PSYS:48–49](archaeology-data/PSYS.txt#L48), [PSYS:108–112](archaeology-data/PSYS.txt#L108) | does not match slave port 2D 0x4000, [LDRVH:61](archaeology-data/LDRVH.txt#L61) | CONFIRMED as distinct declarations; need in the new design UNKNOWN |"
+      },
+      {
+        "line": 16,
+        "text": "| Nominal clock | constant 200000000, [PINFO:46–49](archaeology-data/PINFO.txt#L46) | does not show measurement of the target GPU | CONFIRMED as DDK parameter, real frequency UNKNOWN |"
+      },
+      {
+        "line": 18,
+        "text": "| Power | external DRM branch uses ospm_* for display/graphics islands, [PSYSC:1916–1979](archaeology-data/PSYSC.txt#L1916) | it is not the same ABI as the current phase 1 callbacks | CONFIRMED as a historical dependency, portability UNKNOWN |"
+      },
+      {
+        "line": 28,
+        "text": "The automatic spreadsheet marks the 16 individual names as UNKNOWN due to the absence of a corresponding literal define; this is not a contradiction with the verified formula. [Full line comparison](archaeology-data/register-offset-comparison.tsv)."
+      },
+      {
+        "line": 43,
+        "text": "**INFERRED:** the divergence does not come from different BASE1 offsets between these sources; it comes from the indexing formula/convention. **UNKNOWN:** intention of context 1, driver convention, historical bug, or silicon effect. Without the prior history of the local Linux and an explanation of the contract, there is no basis to fix the code."
+      },
+      {
+        "line": 45,
+        "text": "The header still confirms BANK0/BANK1 with fields EDM 3:0, TA 7:4, HOST 11:8, 3D 15:12, and 2D 19:16; the SGX535 branch declares 16 dirlists and one PT cache entry per line. [H535:603–626](archaeology-data/H535.txt#L603); [FEATURE:76–88](archaeology-data/FEATURE.txt#L76). The effective security/isolation policy remains **UNKNOWN**."
+      },
+      {
+        "line": 51,
+        "text": "**CONFIRMED:** the SGX535 header and Linux agree on the basic bits PDE/PTE: valid=1, WO=2, RO=4, and cache=8 in the common MMU contract. [MMU:48–93](archaeology-data/MMU.txt#L48); [LDRVH:75–84](archaeology-data/LDRVH.txt#L75). **UNKNOWN:** full coherence and EDM permissions in each integration; using the common header with the 535 selection does not equate to testing."
+      },
+      {
+        "line": 57,
+        "text": "This specification derives from the local anchors [PBUILD:44–52](archaeology-data/PBUILD.txt#L44) and [VER14:51–60](archaeology-data/VER14.txt#L51); the public existence of such a package is **UNKNOWN**. It is a priority because the header and KM integration have already been found, while boot and execution still depend on the missing side. If only one file can be obtained, prioritize the **`sgxinit.c` user-mode of this same release/target**, along with its includes and build identification; do not confuse it with the `sgxinit.c` kernel already present. This choice is an investigation recommendation (**INFERRED**), not a claim about where the artifact is available."
+      }
+    ]
   },
   {
     "file": "docs/poulsbo-historical-abi.md",
-    "lines": 75,
-    "gate_or_safety_lines": []
+    "lines": 77,
+    "gate_or_safety_lines": [
+      {
+        "line": 3,
+        "text": "Phase 3 — static analysis, 2026-09-17. `CONFIRMED` means the source declares/implements; `INFERRED` is interpretation; `UNKNOWN` is gap. P3 IDs refer to [matrix](evidence-matrix.csv), with repository, commit, file, and lines. The snapshots preserve the original numbering; see [provenance](poulsbo-data/sources.json). No procedure below was executed on the GPU."
+      },
+      {
+        "line": 45,
+        "text": "**UNKNOWN:** complete snapshot of the PSB XHW userspace side; options generated from the installed build; exact layouts of firmware objects; content/license/revision of Poulsbo microkernels; filled scripts and full UM/KM handshake. The XHW channel should not be called firmware: it is kernel/X server communication, according to P3-042. The presence of MSVDX video firmware in other packages would not identify SGX firmware."
+      }
+    ]
   },
   {
     "file": "docs/poulsbo-interrupts.md",
-    "lines": 18,
-    "gate_or_safety_lines": []
+    "lines": 19,
+    "gate_or_safety_lines": [
+      {
+        "line": 3,
+        "text": "Phase 3 — static analysis, 2026-09-17. `CONFIRMED` means the source declares/implements; `INFERRED` is interpretation; `UNKNOWN` is gap. P3 IDs refer to [matrix](evidence-matrix.csv), with repository, commit, file, and lines. The snapshots preserve the original numbering; see [provenance](poulsbo-data/sources.json). No procedure below was executed on the GPU."
+      },
+      {
+        "line": 15,
+        "text": "**UNKNOWN:** required order of ack/mask under persistent fault in the real review; if a read has side effects on all power states; guarantee that HOST_CLEAR removes the cause of the BIF fault; safe recovery sequence with a job in flight. The current handler prints and acknowledges the event; it does not by itself provide isolation and recovery of 3D jobs."
+      }
+    ]
   },
   {
     "file": "docs/poulsbo-memory-map.md",
-    "lines": 51,
-    "gate_or_safety_lines": []
+    "lines": 52,
+    "gate_or_safety_lines": [
+      {
+        "line": 3,
+        "text": "Phase 3 — static analysis, 2026-09-17. `CONFIRMED` means the source declares/implements; `INFERRED` is interpretation; `UNKNOWN` is gap. P3 IDs refer to [matrix](evidence-matrix.csv), with repository, commit, file, and lines. The snapshots preserve the original numbering; see [provenance](poulsbo-data/sources.json). No procedure below was executed on the GPU."
+      },
+      {
+        "line": 32,
+        "text": "**INFERRED:** the software maintains parallel page mappings; there is no basis to assert SGX BIF → GTT → RAM cascading translation. **UNKNOWN:** coherence of all requestors, need to maintain cache at each transition, bus mastering behavior on the actual board, and domain equivalence under another platform configuration."
+      },
+      {
+        "line": 40,
+        "text": "| Different SGX Revision | TI build points to 121; no physical identification or explanatory erratum | UNKNOWN |"
+      },
+      {
+        "line": 41,
+        "text": "| SoC Integration | both historical and current PSB have a distinct DDK formula | UNKNOWN: correlation is not explanation |"
+      },
+      {
+        "line": 44,
+        "text": "| Build configuration | SGX_FEATURE_MULTIPLE_MEM_CONTEXTS stores DDK loop | UNKNOWN: missing connection between enumeration and Linux selection |"
+      },
+      {
+        "line": 45,
+        "text": "| Software convention / legacy defect | formula already exists in the old PSB | UNKNOWN: no comment of intention/erratum found |"
+      },
+      {
+        "line": 46,
+        "text": "| Specific behavior Poulsbo | missing manual or legitimately obtained trace, with known review | UNKNOWN |"
+      }
+    ]
   },
   {
     "file": "docs/poulsbo-mmio.md",
-    "lines": 48,
-    "gate_or_safety_lines": []
+    "lines": 49,
+    "gate_or_safety_lines": [
+      {
+        "line": 3,
+        "text": "Phase 3 — static analysis, 2026-09-17. `CONFIRMED` means the source declares/implements; `INFERRED` is interpretation; `UNKNOWN` is gap. P3 IDs refer to [matrix](evidence-matrix.csv), with repository, commit, file, and lines. The snapshots preserve the original numbering; see [provenance](poulsbo-data/sources.json). No procedure below was executed on the GPU."
+      },
+      {
+        "line": 23,
+        "text": "**UNKNOWN:** physical size of the SGX aperture, effects of reads outside the documented subset, power requirements for each access. Do not indiscriminately dump BAR0."
+      },
+      {
+        "line": 46,
+        "text": "**UNKNOWN:** version differences in headers are not automatically errata. The SGX535 header from the EMGD mirror also names PDS 0x0abc and MNE_CR_CTRL 0x0d00 / invalidate 0x0d20 (P3-061); do not add these offsets to the allowlist of an experiment just because they exist there. [Numeric comparison](poulsbo-data/header-comparison.json) separates missing macros from divergent values. Do not reproduce the constants as a programming sequence."
+      }
+    ]
   },
   {
     "file": "docs/poulsbo-power-reset.md",
-    "lines": 26,
-    "gate_or_safety_lines": []
+    "lines": 27,
+    "gate_or_safety_lines": [
+      {
+        "line": 3,
+        "text": "Phase 3 — static analysis, 2026-09-17. `CONFIRMED` means the source declares/implements; `INFERRED` is interpretation; `UNKNOWN` is gap. P3 IDs refer to [matrix](evidence-matrix.csv), with repository, commit, file, and lines. The snapshots preserve the original numbering; see [provenance](poulsbo-data/sources.json). No procedure below was executed on the GPU."
+      },
+      {
+        "line": 19,
+        "text": "**UNKNOWN:** complete sequence of clock/rail/reset from each energy state, hardware behind the OSPM APIs, ready bits and their timeouts, reset reach over display/memory, and errata of the installed stepping. The stubs do not demonstrate that power gating is unnecessary; they may depend on another componente/firmware from the platform."
+      }
+    ]
   },
   {
     "file": "docs/poulsbo-vs-ti.md",
     "lines": 38,
-    "gate_or_safety_lines": []
+    "gate_or_safety_lines": [
+      {
+        "line": 3,
+        "text": "Phase 3 — static analysis, 2026-09-17. `CONFIRMED` means the source declares/implements; `INFERRED` is interpretation; `UNKNOWN` is gap. P3 IDs refer to [matrix](evidence-matrix.csv), with repository, commit, file, and lines. The snapshots preserve the original numbering; see [provenance](poulsbo-data/sources.json). No procedure below was executed on the GPU."
+      },
+      {
+        "line": 18,
+        "text": "| Directory list index formula | UNKNOWN | P3-026; divergence preserved, not corrected by assumption |"
+      },
+      {
+        "line": 19,
+        "text": "| CCB/bridge IT Services vs EMGD | SIMILAR | PVR families, different P3-045–054 versions; Binary ABI UNKNOWN |"
+      },
+      {
+        "line": 24,
+        "text": "| Effective core clock and power islands | UNKNOWN | P3-033/035/036; nominal value is not a measurement |"
+      },
+      {
+        "line": 25,
+        "text": "| Reset and errata applicable to the board | UNKNOWN | P3-034/037; depends on actual revision |"
+      },
+      {
+        "line": 26,
+        "text": "| Cache, barriers, and DMA | SIMILAR in purpose, compatibility UNKNOWN | P3-022/023/050; x86 and ARM not interchangeable |"
+      },
+      {
+        "line": 27,
+        "text": "| Firmware/USSE/PDS payload | UNKNOWN | P3-048/051; no corresponding UM source verified |"
+      },
+      {
+        "line": 29,
+        "text": "| SGX540/544 compared to SGX535 | UNKNOWN outside specific evidence | do not use OMAP branch as a substitute for header535 |"
+      },
+      {
+        "line": 33,
+        "text": "The static comparison [header-comparison.json](poulsbo-data/header-comparison.json) covers numeric scalar macros, normalizing suffixes U/UL; it excludes function macros, conditionals, and expressions. It found 597 identical common values, 20 macros only in the TI header, and 6 only in EMGD. The exclusives include triggers of banco2/FLUSH_COMPLETE in TI and PDS/MNE in EMGD (P3-061 and full sources in the catalog). **UNKNOWN:** whether the difference is due to header generation, partial exposure, revision, or integration; the absence of a macro does not prove the absence of hardware. The equality of the 597 values also does not prove the completeness of the headers."
+      }
+    ]
   },
   {
     "file": "docs/power-state-safety.md",
-    "lines": 121,
+    "lines": 29,
     "gate_or_safety_lines": [
       {
-        "line": 68,
-        "text": "semântica e falha de leitura no gateB BLOCKED."
+        "line": 13,
+        "text": "| When is SGX powered? | **UNKNOWN** at the internal block/clock level |"
+      },
+      {
+        "line": 14,
+        "text": "| When is it power-gated? | **UNKNOWN** |"
+      },
+      {
+        "line": 15,
+        "text": "| Who controls it? | PCI function/PM: gma500 and PM core; complete SGX gating: **UNKNOWN** |"
+      },
+      {
+        "line": 16,
+        "text": "| Which registers need clocks? | Only observed 2D clock-gate behavior is known; the complete set is **UNKNOWN** |"
+      },
+      {
+        "line": 17,
+        "text": "| Are reads valid while powered off? | **UNKNOWN**; no applicable source supplies this contract |"
+      },
+      {
+        "line": 20,
+        "text": "| What state is preserved? | Display state is saved and restored; SGX/BIF/USSE/PDS state is **UNKNOWN** |"
+      },
+      {
+        "line": 21,
+        "text": "| What is lost on reset? | Reset touches BIF/DPM/TA/USE/ISP/TSP/2D; complete consequences are **UNKNOWN** |"
+      },
+      {
+        "line": 23,
+        "text": "`power/runtime_status=active` is **CONFIRMED** only as PM-core state. Whether it means \"SGX ready for MMIO\" remains **UNKNOWN**. A PCI state does not establish SGX clock state."
       }
     ]
   },
   {
     "file": "docs/recovery-plan.md",
-    "lines": 97,
+    "lines": 60,
     "gate_or_safety_lines": [
       {
-        "line": 5,
-        "text": "**GateB BLOCKED; recuperação de CPU MMIO read UNKNOWN.** Os procedimentos"
+        "line": 30,
+        "text": "**CONFIRMED — P4-017:** with `CONFIG_MAGIC_SYSRQ`, `/proc/sys/kernel/sysrq` controls the enabled keyboard operations. SysRq can dump tasks (`t`), blocked tasks (`w`), and locks (`d`); sync (`s`); remount read-only (`u`); and reboot immediately (`b`). `b` does not sync or unmount filesystems (`Documentation/admin-guide/sysrq.rst:9-46,93-165`)."
+      },
+      {
+        "line": 49,
+        "text": "No SGX watchdog or recovery mechanism was found in the current gma500 inventory. This does not prove that the platform lacks a watchdog; its state is **UNKNOWN**. `psb_spank()` touches BIF, DPM, TA, USE, ISP, TSP, and 2D (`psb_drv.c:97-125`), so it is not an approved recovery operation. An SGX reset cannot be assumed to recover the display, kernel, or machine."
       }
     ]
   },
   {
     "file": "docs/registers.md",
-    "lines": 66,
+    "lines": 67,
     "gate_or_safety_lines": [
       {
+        "line": 15,
+        "text": "| `0x0000` | `PSB_CR_CLKGATECTL` | 24 auto/manual; USE 21:20; DPM 17:16; TA 13:12; TSP 9:8; ISP 5:4; 2D 1:0 | Clock fields; codes 0 enabled, 1 disabled, 2 auto | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:13-29](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L13) | CONFIRMED on Linux; explicit UNKNOWN fields |"
+      },
+      {
+        "line": 16,
+        "text": "| `0x0010` | `PSB_CR_CORE_ID` | 31:16 ID; 15:0 config | Declared identification; expected value SGX535 UNKNOWN | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:31-35](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L31) | CONFIRMED on Linux; explicit UNKNOWN fields |"
+      },
+      {
         "line": 17,
-        "text": "| `0x0014` | `PSB_CR_CORE_REVISION` | 31:24 designer; 23:16 major; 15:8 minor; 7:0 maintenance | Campos de revisão; relação com revisão DDK UNKNOWN | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:37-45](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L37) | CONFIRMED no Linux; campos UNKNOWN explícitos |"
+        "text": "| `0x0014` | `PSB_CR_CORE_REVISION` | 31:24 designer; 23:16 major; 15:8 minor; 7:0 maintenance | Revision fields; relation to DDK review UNKNOWN | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:37-45](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L37) | CONFIRMED on Linux; explicit UNKNOWN fields |"
+      },
+      {
+        "line": 18,
+        "text": "| `0x0018 / 0x001c` | `PSB_CR_DESIGNER_REV_FIELD1 / FIELD2` | UNKNOWN | Names and offsets; no decoding | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:47-58](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L47) | CONFIRMED on Linux; explicit UNKNOWN fields |"
+      },
+      {
+        "line": 19,
+        "text": "| `0x0080` | `PSB_CR_SOFT_RESET` | 6 TSP; 5 ISP; 4 USE; 3 TA; 2 DPM; 1 2D; 0 BIF | Block reset; used in psb_spank | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:49-56](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L49) | CONFIRMED on Linux; explicit UNKNOWN fields |"
+      },
+      {
+        "line": 20,
+        "text": "| `0x0110` | `PSB_CR_EVENT_HOST_ENABLE2` | 4 BIF_REQUESTER_FAULT | Enabling group 2; writing observed in the postinstall | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:60-65](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L60) | CONFIRMED on Linux; explicit UNKNOWN fields |"
+      },
+      {
+        "line": 21,
+        "text": "| `0x0114` | `PSB_CR_EVENT_HOST_CLEAR2` | 4 BIF_REQUESTER_FAULT | Acknowledge group 2 no handler | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:64-65](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L64) | CONFIRMED on Linux; explicit UNKNOWN fields |"
+      },
+      {
+        "line": 22,
+        "text": "| `0x0118` | `PSB_CR_EVENT_STATUS2` | 4 BIF_REQUESTER_FAULT | Group 2 status read by the handler | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:62-65](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L62) | CONFIRMED on Linux; explicit UNKNOWN fields |"
+      },
+      {
+        "line": 23,
+        "text": "| `0x012c` | `PSB_CR_EVENT_STATUS` | see events below | Main group status | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:67-84](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L67) | CONFIRMED on Linux; explicit UNKNOWN fields |"
+      },
+      {
+        "line": 24,
+        "text": "| `0x0130` | `PSB_CR_EVENT_HOST_ENABLE` | see events below | Enable; Linux enables 2D_COMPLETE | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:69-84](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L69) | CONFIRMED on Linux; explicit UNKNOWN fields |"
+      },
+      {
+        "line": 25,
+        "text": "| `0x0134` | `PSB_CR_EVENT_HOST_CLEAR` | see events below | Acknowledge written by the handler | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:71-84](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L71) | CONFIRMED on Linux; explicit UNKNOWN fields |"
+      },
+      {
+        "line": 26,
+        "text": "| `0x0a0c + 4*i; i=0..15` | `PSB_CR_USE_CODE_BASE(i)` | 26:25 DM; 24:0 base; alignshift=7 | Bases USE: vertex/pixel/EDM; uncertain address comment | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:87-114](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L87) | CONFIRMED on Linux; explicit UNKNOWN fields |"
+      },
+      {
+        "line": 27,
+        "text": "| `0x0ab8` | `PSB_CR_PDS_EXEC_BASE` | ADDR_SHIFT=20; ALIGNSHIFT=20 | Base PDS; init Linux writes 0x20000000 | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:116-118](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L116) | CONFIRMED on Linux; explicit UNKNOWN fields |"
+      },
+      {
+        "line": 28,
+        "text": "| `0x0ac4` | `PSB_CR_EVENT_KICKER` | ADDRESS_SHIFT=4 | Kicker address according to macro; full format UNKNOWN | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:120-121](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L120) | CONFIRMED on Linux; explicit UNKNOWN fields |"
+      },
+      {
+        "line": 29,
+        "text": "| `0x0ac8` | `PSB_CR_EVENT_KICK` | 0 NOW | Kick defined; no emission in inspected gma500 | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:123-124](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L123) | CONFIRMED on Linux; explicit UNKNOWN fields |"
+      },
+      {
+        "line": 30,
+        "text": "| `0x0c00` | `PSB_CR_BIF_CTRL` | 4 CLEAR_FAULT; 3 INVALDC; 2 FLUSH | BIF Control; invalidation and fault clearing used | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:128-131](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L128) | CONFIRMED on Linux; UNKNOWN fields explicit |"
+      },
+      {
+        "line": 31,
+        "text": "| `0x0c04` | `PSB_CR_BIF_INT_STAT` | 14 PF_N_RW; 13:0 fault; requestors below | Fault classification read by the IRQ | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:133-147](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L133) | CONFIRMED on Linux; explicit UNKNOWN fields |"
+      },
+      {
+        "line": 32,
+        "text": "| `0x0c08` | `PSB_CR_BIF_FAULT` | UNKNOWN as bitfield; read as address | Address that failed according to the handler, not requestor flags | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:135-147](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L135) | CONFIRMED on Linux; explicit UNKNOWN fields |"
+      },
+      {
+        "line": 33,
+        "text": "| `0x0c38` | `PSB_CR_BIF_DIR_LIST_BASE1` | UNKNOWN | Define offset; Linux context 1 writes 0x0c3c | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:126-126](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L126) | CONFIRMED on Linux; explicit UNKNOWN fields |"
+      },
+      {
+        "line": 34,
+        "text": "| `0x0c78 / 0x0c7c` | `PSB_CR_BIF_BANK0 / BANK1` | UNKNOWN | Banks; init Linux writes zero | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:149-150](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L149) | CONFIRMED on Linux; explicit UNKNOWN fields |"
+      },
+      {
+        "line": 35,
+        "text": "| `0x0c84` | `PSB_CR_BIF_DIR_LIST_BASE0` | Linux writes PFN PD << PAGE_SHIFT | Context directory 0 | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:151-151](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L151) | CONFIRMED in Linux; explicit UNKNOWN fields |"
+      },
+      {
+        "line": 36,
+        "text": "| `0x0c88` | `PSB_CR_BIF_TWOD_REQ_BASE` | UNKNOWN as mask | Base requestor 2D; Linux writes gatt_start | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:152-152](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L152) | CONFIRMED on Linux; explicit UNKNOWN fields |"
+      },
+      {
+        "line": 37,
+        "text": "| `0x0cac` | `PSB_CR_BIF_3D_REQ_BASE` | UNKNOWN as mask | Base requestor 3D; Linux writes 0x30000000 | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:153-153](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L153) | CONFIRMED on Linux; explicit UNKNOWN fields |"
+      },
+      {
+        "line": 38,
+        "text": "| `0x0e04` | `PSB_CR_2D_BLIT_STATUS` | 24 BUSY; 23:0 COMPLETE | Status 2D read on IRQ | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:160-163](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L160) | CONFIRMED on Linux; explicit UNKNOWN fields |"
+      },
+      {
+        "line": 39,
+        "text": "| `0x0e18` | `PSB_CR_2D_SOCIF` | 7:0 FREESPACE; EMPTY=0x80 | Space/empty settings; no reconstructed submission | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:155-158](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L155) | CONFIRMED on Linux; explicit UNKNOWN fields |"
+      },
+      {
+        "line": 61,
+        "text": "## UNKNOWN / review points"
       },
       {
         "line": 64,
-        "text": "- CORE_ID/REVISION eram candidatos de pesquisa. A Fase 4 os classifica `UNKNOWN` para leitura real: há uso histórico, mas não contrato de efeitos colaterais/power/locking. Eles não integram uma whitelist aprovada."
+        "text": "- CORE_ID/REVISION were research candidates. Phase 4 classifies `UNKNOWN` for actual reading: there is historical use, but no contract for read side effects, power, or locking. They are not part of an approved whitelist."
       }
     ]
   },
   {
     "file": "docs/safe-register-reads.md",
-    "lines": 93,
+    "lines": 42,
     "gate_or_safety_lines": [
       {
+        "line": 5,
+        "text": "`SAFE-CANDIDATE` requires, at the same time: offset Poulsbo/SGX535 confirmed,"
+      },
+      {
         "line": 8,
-        "text": "SAFE-CANDIDATE. Não confundir classificação física com proibição operacional."
+        "text": "to all requirements. The table is not an executable whitelist."
+      },
+      {
+        "line": 12,
+        "text": "| `0x0010` | `CORE_ID` | identification/configuration | Poulsbo | Linux `psb_reg.h:31-35`; historical PSB `PSB_psb_drv_c.txt:325-339`; DDK `INIT.txt:1320-1352` | historically read | contract missing | SGX powered; how to prove UNKNOWN | gma500 SGX mapping | offset CONFIRMED; safety UNKNOWN | UNKNOWN |"
+      },
+      {
+        "line": 13,
+        "text": "| `0x0014` | `CORE_REVISION` | designer/major/minor/maintenance | Poulsbo | same artifacts; EMGD `sysconfig.c:547-575`; DDK `INIT.txt:1320-1352` | historically read | missing contract | SGX powered; how to prove UNKNOWN | gma500 SGX mapping | offset CONFIRMED; safety UNKNOWN | UNKNOWN |"
+      },
+      {
+        "line": 14,
+        "text": "| `0x0018` | `DESIGNER_REV_FIELD1` | designer review | Poulsbo | Linux `psb_reg.h:47` | not located | UNKNOWN | UNKNOWN | gma500 | offset CONFIRMED | UNKNOWN |"
+      },
+      {
+        "line": 15,
+        "text": "| `0x001c` | `DESIGNER_REV_FIELD2` | designer review | Poulsbo | Linux `psb_reg.h:58` | not located | UNKNOWN | UNKNOWN | gma500 | offset CONFIRMED | UNKNOWN |"
+      },
+      {
+        "line": 16,
+        "text": "| `0x0080` | `SOFT_RESET` | controls SGX resets | Poulsbo | Linux `psb_reg.h:49-56`; `psb_drv.c:103-124` | read used as posted read | write changes multiple blocks | UNKNOWN | gma500 init | action CONFIRMED | UNKNOWN |"
+      },
+      {
+        "line": 17,
+        "text": "| `0x0110` | `EVENT_HOST_ENABLE2` | SGX2 IRQ mask | Poulsbo | Linux `psb_reg.h:60-65`; `psb_irq.c:250-305` | readback post-write | run with IRQ/mask | SGX IRQ active | `irqmask_lock` | use CONFIRMED | UNKNOWN |"
       },
       {
         "line": 18,
-        "text": "Ver [fechamento4.3](phase4-3-blocker-closure.md). Whitelist vazia."
+        "text": "| `0x0114` | `EVENT_HOST_CLEAR2` | acknowledge IRQ SGX2 | Poulsbo | Linux `psb_reg.h:64-65`; `psb_irq.c:192-195` | only post-write readback observed | write-to-clear; read effect UNKNOWN | SGX IRQ active | IRQ handler | use CONFIRMED | UNKNOWN |"
+      },
+      {
+        "line": 19,
+        "text": "| `0x0118` | `EVENT_STATUS2` | status IRQ SGX2 | Poulsbo | Linux `psb_reg.h:62`; `psb_irq.c:198-239` | read in handler | concurrency/latch UNKNOWN | SGX IRQ active | `irqmask_lock` | use CONFIRMED | UNKNOWN |"
+      },
+      {
+        "line": 20,
+        "text": "| `0x012c` | `EVENT_STATUS` | status IRQ SGX | Poulsbo | Linux `psb_reg.h:67`; `psb_irq.c:198-239` | read in handler | concurrency/latch UNKNOWN | SGX IRQ active | `irqmask_lock` | use CONFIRMED | UNKNOWN |"
+      },
+      {
+        "line": 21,
+        "text": "| `0x0130` | `EVENT_HOST_ENABLE` | SGX IRQ mask | Poulsbo | Linux `psb_reg.h:69`; `psb_irq.c:250-305` | readback post-write | concurrency with IRQ | SGX IRQ active | `irqmask_lock` | use CONFIRMED | UNKNOWN |"
+      },
+      {
+        "line": 22,
+        "text": "| `0x0134` | `EVENT_HOST_CLEAR` | acknowledge SGX IRQ | Poulsbo | Linux `psb_reg.h:71-84`; `psb_irq.c:192-195` | undocumented read | write-to-clear | SGX IRQ active | IRQ handler | use CONFIRMED | UNKNOWN |"
       },
       {
         "line": 23,
-        "text": "Os dois IDs permanecem UNKNOWN para read-safety, sem SAFE-CANDIDATE."
+        "text": "| `0x0ab8` | `PDS_EXEC_BASE` | PDS base | Poulsbo | Linux `psb_reg.h:116-118`; `psb_drv.c:361` | not located | execution/address control | UNKNOWN | gma500 init | offset/use CONFIRMED | UNKNOWN |"
       },
       {
-        "line": 49,
-        "text": "Fase 4.1: **zero SAFE-CANDIDATE; gate B BLOCKED**. Os offsets dos dois"
+        "line": 24,
+        "text": "| `0x0ac4` | `EVENT_KICKER` | kick address | Poulsbo | Linux `psb_reg.h:120-121` | not located | associated with submission | UNKNOWN | historical ABI | offset CONFIRMED | UNKNOWN |"
       },
       {
-        "line": 54,
-        "text": "mantém a whitelist vazia. Nenhuma linha desta tabela autoriza MMIO."
+        "line": 25,
+        "text": "| `0x0ac8` | `EVENT_KICK` | triggers event | Poulsbo | Linux `psb_reg.h:123-124` | not located | write starts action | UNKNOWN | firmware/command path | offset CONFIRMED | UNKNOWN |"
       },
       {
-        "line": 58,
-        "text": "`SAFE-CANDIDATE` requer, ao mesmo tempo: offset Poulsbo/SGX535 confirmado,"
+        "line": 26,
+        "text": "| `0x0c00` | `BIF_CTRL` | fault clear/cache/TLB controls | Poulsbo | Linux `psb_reg.h:128-130`; `mmu.c:69-120` | RMW/readback used | flush/invalidate/clear fault on write; read side UNKNOWN | UNKNOWN | `mmu->sem` | use CONFIRMED | UNKNOWN |"
       },
       {
-        "line": 61,
-        "text": "a todos os requisitos. A tabela não é uma whitelist executável."
+        "line": 27,
+        "text": "| `0x0c38` | `BIF_DIR_LIST_BASE1` | MMU base/context | Poulsbo | Linux `psb_reg.h:126`; `mmu.c:123-135` | not located individually | write changes address space | UNKNOWN | `mmu->sem` | offset CONFIRMED | UNKNOWN |"
       },
       {
-        "line": 66,
-        "text": "| `0x0014` | `CORE_REVISION` | designer/major/minor/maintenance | Poulsbo | mesmos artefatos; EMGD `sysconfig.c:547-575`; DDK `INIT.txt:1320-1352` | lido historicamente | contrato ausente | SGX powered; como provar UNKNOWN | gma500 SGX mapping | offset CONFIRMED; safety UNKNOWN | UNKNOWN |"
+        "line": 28,
+        "text": "| `0x0c04` | `BIF_INT_STAT` | fault type/requester | Poulsbo historical/Linux | Linux `psb_reg.h:133-147`; `psb_irq.c:159-188` | read in fault IRQ | clear/latch UNKNOWN | SGX IRQ active | IRQ handler | use CONFIRMED | UNKNOWN |"
       },
       {
-        "line": 93,
-        "text": "isso não há `SAFE-CANDIDATE`."
+        "line": 29,
+        "text": "| `0x0c08` | `BIF_FAULT` | failure address | Poulsbo historical/Linux | Linux `psb_reg.h:135-147`; `psb_irq.c:159-188`; DDK `INIT.txt:1353-1364` | read on fault/debug | clear/latch UNKNOWN | SGX powered UNKNOWN | IRQ/debug owner | use CONFIRMED | UNKNOWN |"
+      },
+      {
+        "line": 30,
+        "text": "| `0x0000` | `CLKGATECTL` | clock gate | Poulsbo | Linux `psb_reg.h:13-29`; `psb_device.c:85-94` | RMW/readback | a write changes gating; read effect UNKNOWN | it is the clock control itself | gma500 PM | use CONFIRMED | UNKNOWN |"
+      },
+      {
+        "line": 31,
+        "text": "| `0x0e04` | `2D_BLIT_STATUS` | status 2D | Poulsbo | Linux `psb_reg.h:160-163`; `psb_irq.c:156-158` | read on 2D completion | clear/latch UNKNOWN | clock 2D | IRQ handler | use CONFIRMED | UNKNOWN |"
+      },
+      {
+        "line": 35,
+        "text": "documentary. **UNKNOWN:** if they are safe for the first real access. Repetition"
+      },
+      {
+        "line": 40,
+        "text": "there is no `SAFE-CANDIDATE`."
       }
     ]
   },
   {
     "file": "docs/sgx535-missing-files.md",
-    "lines": 59,
-    "gate_or_safety_lines": []
-  },
-  {
-    "file": "docs/sgx535-revision-investigation.md",
-    "lines": 26,
+    "lines": 61,
     "gate_or_safety_lines": [
       {
         "line": 3,
-        "text": "**SGX core revision da máquina = UNKNOWN.** Nenhum valor SGX foi medido."
+        "text": "Convention: **CONFIRMED** confirms the content/history of the sources, not hardware operation; **INFERRED** identifies a deduction; **UNKNOWN** is what has not yet been established. Source identifiers like H535 and PBUILD resolve to repository, full commit, file, and hash in [source catalog](source-archaeology.md#source-catalog). Document snapshots preserve the original lines and license notices; they are not implementation files."
       },
       {
-        "line": 26,
-        "text": "Não há elo explícito com PCI06, board0X605H ou subsystem1028:02b1."
+        "line": 13,
+        "text": "| Can it be identified by hash or file list? | Yes: Git tree, single blob, SHA-256 and size | source-registry.json, H535; CONFIRMED. Corresponding external manifest UNKNOWN |"
+      },
+      {
+        "line": 41,
+        "text": "**UNKNOWN:** whether the removal meant discontinuation of validated support, cleaning up unused code, or another decision. The title “remove DDK 1.14 specific files” does not document the actual state of the hardware or the product."
+      },
+      {
+        "line": 47,
+        "text": "**UNKNOWN:** complete datasheet, reserved fields, all effects of read/write, all silicon revisions, and validation in Poulsbo. Having this file does not authorize an arbitrary register dump. The set of header statements is not a complete specification of the USSE ISA or the rendering streams."
+      },
+      {
+        "line": 55,
+        "text": "| UM Poulsbo compatible initializer and filled scripts | Not found as source | global searches and target [PBUILD:62–66](archaeology-data/PBUILD.txt#L62); UNKNOWN regarding external availability |"
+      },
+      {
+        "line": 56,
+        "text": "| Microkernel source and PDS SGX535 programs | Not located | global inventory; UNKNOWN regarding implementation and external license |"
+      },
+      {
+        "line": 57,
+        "text": "| ISA/assembler/compiler USSE SGX535 | Not found as source | global search; found UM compilers are binaries named 530/544, not 535; CONFIRMED about the names, compatibility UNKNOWN |"
+      }
+    ]
+  },
+  {
+    "file": "docs/sgx535-revision-investigation.md",
+    "lines": 10,
+    "gate_or_safety_lines": [
+      {
+        "line": 3,
+        "text": "**Physical SGX core revision: UNKNOWN.** No SGX revision was measured on the Dell."
       }
     ]
   },
   {
     "file": "docs/source-archaeology.md",
-    "lines": 100,
-    "gate_or_safety_lines": []
+    "lines": 102,
+    "gate_or_safety_lines": [
+      {
+        "line": 9,
+        "text": "Convention: **CONFIRMED** confirms the content/history of the sources, not hardware operation; **INFERRED** identifies a deduction; **UNKNOWN** is what has not yet been established. Source identifiers like H535 and PBUILD resolve to repository, full commit, file, and hash in [source catalog](source-archaeology.md#source-catalog). Document snapshots preserve the original lines and license notices; they are not implementation files."
+      },
+      {
+        "line": 56,
+        "text": "**CONFIRMED:** the textual references to the exact name of the header are included in variants of `sgxdefs.h`; no textual manifest list adding a file hash was found. Git, however, provides hash and unambiguous association to trees. [DEFS:57–61](archaeology-data/DEFS.txt#L57); [matches KM](archaeology-data/omap5-sgx-ddk-linux-matches.tsv); [contexts KM](archaeology-data/omap5-sgx-ddk-linux-contexts.tsv). The UM binary manifests were not fully converted; a negative result regarding their content remains **UNKNOWN**."
+      }
+    ]
   },
   {
     "file": "docs/test-vector-one-gate.md",
-    "lines": 42,
+    "lines": 7,
     "gate_or_safety_lines": [
       {
         "line": 3,
-        "text": "**Gate B = BLOCKED. CORE_ID = NOT SAFE-CANDIDATE."
+        "text": "**Gate B = BLOCKED. `CORE_ID` = NOT SAFE-CANDIDATE. `CORE_REVISION` = NOT SAFE-CANDIDATE. Whitelist = `[]`.**"
       },
       {
-        "line": 4,
-        "text": "CORE_REVISION = NOT SAFE-CANDIDATE. WHITELIST = [].**"
-      },
-      {
-        "line": 9,
-        "text": "foi medida. PCI06 não equivale a D1/rev116/rev121."
-      },
-      {
-        "line": 21,
-        "text": "|9 applicable revisions|UNKNOWN|UNKNOWN|falta conjunto físico plausível e garantia por revisão/BRN, ou identificação independente; PCI06 não resolve; P42-005/006/019 |"
-      },
-      {
-        "line": 42,
-        "text": "PDS, USSE, workloads ou Mesa. Não criar TV1 enquanto a whitelist estiver vazia."
+        "line": 5,
+        "text": "The formal decision is in [phase4-5-formal-gate.md](phase4-5-formal-gate.md), after the adversarial review in [phase4-4-adversarial-audit.md](phase4-4-adversarial-audit.md). Documentary PASS for identity, offset, width, ownership, and mapping lifetime does not establish physical read safety. PCI revision `0x06` is not D1, rev116, or rev121 by inference."
       }
     ]
   },
   {
     "file": "docs/ti-vs-poulsbo.md",
-    "lines": 37,
-    "gate_or_safety_lines": []
+    "lines": 38,
+    "gate_or_safety_lines": [
+      {
+        "line": 9,
+        "text": "| Core | CONFIRMED: branch 535, two USE pipes, 16 dirlists [A1] | CONFIRMED: builds 540/544 [B1] | CONFIRMED: Linux associates PCI 8108/8109 with 535 [C1]; concrete review UNKNOWN |"
+      },
+      {
+        "line": 10,
+        "text": "| Registers | UNKNOWN: header 535 missing [A2] | CONFIRMED: platform wrappers [B2] | CONFIRMED: SGX window in PCI feature [C2] |"
+      },
+      {
+        "line": 14,
+        "text": "| Reset | CONFIRMED: non-MP branch with BIF drain and BRNs [A6] | UNKNOWN: this branch validated in SGX535 OMAP | CONFIRMED: simple reset `psb_spank`; equivalence to boot 3D UNKNOWN [C6] |"
+      },
+      {
+        "line": 15,
+        "text": "| Firmware | CONFIRMED: host interface, scripts/handlers provided [A7] | CONFIRMED: an OMAP binary; program identified by symbols [B5] | UNKNOWN: compatible program/script with Poulsbo |"
+      },
+      {
+        "line": 16,
+        "text": "| Display | UNKNOWN: SGX contract does not specify display outputs | CONFIRMED: package announces DRM/KMS and Wayland [B5] | CONFIRMED: init LVDS and SDVO [C7] |"
+      },
+      {
+        "line": 35,
+        "text": "**CONFIRMED:** BRNs of the SGX535 branch: revision 121 active 22934/23944/23410; 126 active 22934; HEAD=0 does not apply BRNs in this block. 23944 affects fault handling before BIF reset; 23410 forces valid TA context. [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxerrata.h:134-159](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxerrata.h#L134); [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c:173-176](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c#L173); [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c:471-495](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c#L471). **UNKNOWN:** mapping of the Intel stepping for this revision selection."
+      }
+    ]
   },
   {
     "file": "docs/unknowns.md",
-    "lines": 96,
+    "lines": 54,
     "gate_or_safety_lines": [
       {
+        "line": 1,
+        "text": "# 20 priority unknowns — Phase 4 assessment"
+      },
+      {
+        "line": 7,
+        "text": "| # | Unknown | Current evidence / exact lack | Blocks |"
+      },
+      {
         "line": 15,
-        "text": "U01 permanece parcialmente resolvida somente pelo TVZ: PCI06 não identifica"
+        "text": "| U07 | Why is the aperture `0x8000` on Linux and `0x4000` on DDK? | both confirmed, unknown review/configuration | MMIO range |"
+      },
+      {
+        "line": 22,
+        "text": "| U14 | Is there a platform watchdog and trusted SGX recovery? | no gma500 mechanism located; platform state unknown | active operations |"
       },
       {
         "line": 41,
-        "text": "| U01 | Qual é PCI revision/subsystem/SCH stepping/SGX revision da máquina real? | **PARCIALMENTE RESOLVIDA**: PCI `8086:8108`, revision **PCI** `06`, subsystem `1028:02b1`, BDF/IRQ/BARs conhecidos pelo relato P41-001–008. SCH stepping e SGX core revision **UNKNOWN**. Tabela RID06/D1 é LPC D31:F0, não prova direta para o RID gráfico D2:F0 (P41-017/020). | revisão aplicável ao MMIO e posteriores |"
+        "text": "formally **UNKNOWN** for read-safety."
       },
       {
-        "line": 42,
-        "text": "| U02 | `CORE_ID`/`CORE_REVISION` são seguros para leitura no stepping real? | **UNKNOWN, sem mudança**: IDs passivos não fornecem contrato de read-side-effect; offsets de código P41-011 e uso histórico P4-014 permanecem evidência de software | primeiro MMIO |"
-      },
-      {
-        "line": 51,
-        "text": "| U11 | Quais errata/BRNs valem no silício real? | **UNKNOWN**: PCI06 não seleciona BRNs SGX. Builds rev121/126 e string de build P41-016 não medem a placa; update SCH não substitui errata SGX | reset/BIF/workload |"
-      },
-      {
-        "line": 69,
-        "text": "bloqueador que era na Fase 4. Ver os sete critérios de gate B na"
+        "line": 49,
+        "text": "Poulsbo**, linking PCI revision to SGX core revision, aperture, and"
       }
     ]
   },
   {
     "file": "docs/usse.md",
     "lines": 27,
-    "gate_or_safety_lines": []
-  },
-  {
-    "file": "experiments/bringup0/PASSIVE-KERNEL-VERIFICATION.md",
-    "lines": 72,
     "gate_or_safety_lines": [
       {
-        "line": 46,
-        "text": "SysRq, tracing ou outros controles. O plano tem whitelist de **informação"
-      },
-      {
-        "line": 71,
-        "text": "esta coleta. GateB não é desbloqueado por correspondência de kernel."
+        "line": 19,
+        "text": "## UNKNOWN"
       }
     ]
   },
   {
+    "file": "experiments/bringup0/PASSIVE-KERNEL-VERIFICATION.md",
+    "lines": 14,
+    "gate_or_safety_lines": []
+  },
+  {
     "file": "experiments/bringup0/README.md",
-    "lines": 49,
+    "lines": 7,
     "gate_or_safety_lines": [
       {
-        "line": 8,
-        "text": "mantém B BLOCKED e a whitelist de MMIO vazia. Não existe TEST VECTOR ONE"
+        "line": 5,
+        "text": "A future active harness remains conditional on the formal gates. It must be owned by gma500, use a fixed whitelist, reject unknown PCI identity, log every operation, and fail closed. It must not expose arbitrary MMIO, create a second PCI owner, load firmware, submit commands, or execute PDS/USSE."
       },
       {
-        "line": 20,
-        "text": "| B. debug instrumentation do driver | mesma ownership, mas requer interface fixa e revisão cuidadosa | aceitável somente com whitelist compilada |"
-      },
-      {
-        "line": 38,
-        "text": "Como nenhuma leitura é SAFE-CANDIDATE no"
+        "line": 7,
+        "text": "Phase 4.6 skipped Test Vector One because Gate B is BLOCKED and the whitelist is empty."
       }
     ]
   },
   {
     "file": "experiments/bringup0/TEST-VECTOR-ZERO.md",
-    "lines": 78,
+    "lines": 66,
     "gate_or_safety_lines": [
       {
-        "line": 12,
-        "text": "O resultado resolve o inventário informado, mas mantém gate B BLOCKED."
+        "line": 43,
+        "text": "and exit `0`. Unknown ID, absence, ambiguity, or parsing error returns"
       }
     ]
+  },
+  {
+    "file": "tools/sgx535-probe/README.md",
+    "lines": 41,
+    "gate_or_safety_lines": []
   }
 ]

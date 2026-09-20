@@ -27,14 +27,14 @@ The direct comparison found **26 numeric offsets with matching names**, with no 
 
 The automatic spreadsheet marks the 16 individual names as UNKNOWN due to the absence of a corresponding literal define; this is not a contradiction with the verified formula. [Full line comparison](archaeology-data/register-offset-comparison.tsv).
 
-| Group | Offsets/valores compared | Sources | Confidence |
+| Group | Compared offsets/values | Sources | Confidence |
 | --- | --- | --- | --- |
 | Clock/identification/reset | 0000, 0010, 0014, 0018, 001c, 0080; reset bits 0–6 | [LREG:13–56](archaeology-data/LREG.txt#L13); [H535:45–128](archaeology-data/H535.txt#L45) | CONFIRMED as defined |
 | Events | 0110, 0114, 0118, 012c, 0130, 0134; fault BIF bit4; SW_EVENT bit14 | [LREG:60–84](archaeology-data/LREG.txt#L60); [H535:129–374](archaeology-data/H535.txt#L129) | CONFIRMED as defined |
-| Kick/PDS | 0ab8, 0ac4, 0ac8; NOW bit0 | [LREG:116–124](archaeology-data/LREG.txt#L116); [H535:375–386](archaeology-data/H535.txt#L375) | CONFIRMED how you define |
-| BIF | 0c00, 0c04, 0c08; FLUSH bit2, INVALDC bit3, CLEAR_FAULT bit4 | [LREG:128–147](archaeology-data/LREG.txt#L128); [H535:417–458](archaeology-data/H535.txt#L417) | CONFIRMED how you define |
-| Banks/directories/bases | 0c38, 0c78, 0c7c, 0c84, 0c88, 0cac | [LREG:126–153](archaeology-data/LREG.txt#L126); [H535:539–682](archaeology-data/H535.txt#L539) | CONFIRMED as you define |
-| 2D | status 0e04: busy bit24, complete 23:0; SOCIF 0e18: freespace 7:0 | [LREG:155–163](archaeology-data/LREG.txt#L155); [H535:693–720](archaeology-data/H535.txt#L693) | CONFIRMED as you define |
+| Kick/PDS | 0ab8, 0ac4, 0ac8; NOW bit0 | [LREG:116–124](archaeology-data/LREG.txt#L116); [H535:375–386](archaeology-data/H535.txt#L375) | CONFIRMED for the definition |
+| BIF | 0c00, 0c04, 0c08; FLUSH bit2, INVALDC bit3, CLEAR_FAULT bit4 | [LREG:128–147](archaeology-data/LREG.txt#L128); [H535:417–458](archaeology-data/H535.txt#L417) | CONFIRMED for the definition |
+| Banks/directories/bases | 0c38, 0c78, 0c7c, 0c84, 0c88, 0cac | [LREG:126–153](archaeology-data/LREG.txt#L126); [H535:539–682](archaeology-data/H535.txt#L539) | CONFIRMED for the definition |
+| 2D | status 0e04: busy bit24, complete 23:0; SOCIF 0e18: freespace 7:0 | [LREG:155–163](archaeology-data/LREG.txt#L155); [H535:693–720](archaeology-data/H535.txt#L693) | CONFIRMED for the definition |
 
 ## BIF: now more precise doubt
 
@@ -54,4 +54,4 @@ The header still confirms BANK0/BANK1 with fields EDM 3:0, TA 7:4, HOST 11:8, 3D
 
 The most valuable artifact now is **a user-mode source package and microkernel of the IMG SGX DDK 1.14 build 3699939, specifically configured for `pc_i686_poulsbo_d0_linux`, SGX535 rev121, with verifiable license and provenance**. It should contain the SGX initializer that populates scripts/handlers, sources or reproducible build of the microkernel/PDS programs, and complete headers for the ABI corresponding to the KM.
 
-This specification derives from the local anchors [PBUILD:44–52](archaeology-data/PBUILD.txt#L44) and [VER14:51–60](archaeology-data/VER14.txt#L51); the public existence of such a package is **UNKNOWN**. It is a priority because the header and KM integration have already been found, while boot and execution still depend on the missing side. If only one file can be obtained, prioritize the **`sgxinit.c` user-mode of this same entrega/alvo**, along with its includes and build identification; do not confuse it with the `sgxinit.c` kernel already present. This choice is an investigation recommendation (**INFERRED**), not a claim about where the artifact is available.
+This specification derives from the local anchors [PBUILD:44–52](archaeology-data/PBUILD.txt#L44) and [VER14:51–60](archaeology-data/VER14.txt#L51); the public existence of such a package is **UNKNOWN**. It is a priority because the header and KM integration have already been found, while boot and execution still depend on the missing side. If only one file can be obtained, prioritize the **`sgxinit.c` user-mode of this same release/target**, along with its includes and build identification; do not confuse it with the `sgxinit.c` kernel already present. This choice is an investigation recommendation (**INFERRED**), not a claim about where the artifact is available.

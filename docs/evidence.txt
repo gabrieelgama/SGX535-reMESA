@@ -1,5 +1,5 @@
-SGX535-GFX: evidências estáticas, 2026-09-16 UTC
-Linhas Markdown referem-se aos arquivos locais; símbolos usam valor ELF, não file offset.
+SGX535-GFX: static evidence, 2026-09-16 UTC
+Markdown line references point to local files; symbols use ELF values, not file offsets.
 
 $ git -C references/linux rev-parse HEAD
 9b87fdc9af2fbfcdb5c24a64139685ef80f6573f
@@ -179,7 +179,7 @@ references/omap5-sgx-ddk-um-linux/OMAP5-Linux-Graphics-DDK-UM-Manifest.doc: Comp
 
 [exit=0]
 
-$ readelf -Ws references/omap5-sgx-ddk-um-linux/targetfs/lib/libsrv_init.so.1.9.6.0 [filtro de nomes, sem bytes de programa]
+$ readelf -Ws references/omap5-sgx-ddk-um-linux/targetfs/lib/libsrv_init.so.1.9.6.0 [name filter; no program bytes]
 
      6: 00000000     0 FUNC    GLOBAL DEFAULT  UND SGXDevInitPart2
     28: 00000000     0 FUNC    GLOBAL DEFAULT  UND SGXGetInfoForSrvInit
@@ -200,7 +200,7 @@ $ readelf -Ws references/omap5-sgx-ddk-um-linux/targetfs/lib/libsrv_init.so.1.9.
    130: 00000000     0 FUNC    GLOBAL DEFAULT  UND SGXDevInitPart2
    152: 00000000     0 FUNC    GLOBAL DEFAULT  UND SGXGetInfoForSrvInit
 
-$ strings -t x references/omap5-sgx-ddk-um-linux/OMAP5-Linux-Graphics-DDK-UM-Manifest.doc [trecho targetfs/licença; offsets de arquivo em hexadecimal; extração parcial]
+$ strings -t x references/omap5-sgx-ddk-um-linux/OMAP5-Linux-Graphics-DDK-UM-Manifest.doc [targetfs/license excerpt; hexadecimal file offsets; partial extraction]
 
     f1d targetfs
     f2a TI TSPA
