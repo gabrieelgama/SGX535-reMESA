@@ -37,9 +37,6 @@ So this project attempts to reconstruct that knowledge from surviving
 public source code, historical drivers, documentation and carefully
 controlled observations of real hardware.
 
-### ⚠️ important observation
-We currently use AI to assist with some research and documentation creation, but all facts are human-checked.
-
 ---
 
 ## 💡 Why?
@@ -255,6 +252,10 @@ It is not affiliated with or endorsed by Imagination Technologies,
 Intel, Texas Instruments, Mesa, or the Linux kernel project.
 
 Third-party source code remains subject to its respective licenses.
+
+## ⚠️ important observation
+We currently use AI to assist with some research and documentation creation, but all facts are human-checked.
+
 
 ---
 
