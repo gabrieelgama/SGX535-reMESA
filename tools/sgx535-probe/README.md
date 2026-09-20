@@ -38,4 +38,4 @@ python3 -m unittest -v test_probe.py
 ```
 
 The probe is original project code under the MIT license. No historical DDK or
-EMGD implementation was copied into it.
+EMGD implementation was copied into it..
