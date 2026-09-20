@@ -201,8 +201,8 @@ The reconstructed technical reference lives in [`docs/`](docs/).
 Most early archaeology and technical documentation is currently written
 in **Brazilian Portuguese (pt-BR)**.
 
-🇧🇷 **Português:** current primary documentation
-🇬🇧 **English:** planned / contributions welcome
+🇧🇷 **Português:** legacy
+🇬🇧 **English:** current primary documentation
 
 Technical identifiers remain unchanged.
 
