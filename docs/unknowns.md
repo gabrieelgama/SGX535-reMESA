@@ -1,12 +1,11 @@
-# 20 priority unknowns — Phase 4 assessment
+# 20 priority unknowns — Phase 5 assessment
 
-Phase 4 — static audit, 2026-09-17. No MMIO, PCI config, reset,
-firmware or workload was executed. IDs P3/P4 refer to
+Updated 2026-09-20 after Test Vector Zero, the Phase 4.7 audit, and Phase 5 public-document research. No MMIO, PCI config write, reset, firmware, or workload was executed. IDs P3/P4/P5 refer to the
 [matrix](evidence-matrix.csv).
 
 | # | Unknown | Current evidence / exact lack | Blocks |
 |---|---|---|---|
-| U01 | What is revision/subsystem/stepping of the actual machine? | Target IDs confirmed; there is no Inspiron report yet | MMIO and later |
+| U01 | What are the target identity and physical revisions? | TVZ-001 records PCI revision `0x06` and subsystem `1028:02b1`; graphics/SCH stepping and physical SGX core revision remain UNKNOWN | MMIO and later |
 | U02 | `CORE_ID`/`CORE_REVISION` are safe to read in real stepping? | confirmed historical use, read-side-effect contract absent | first MMIO |
 | U03 | Which PM state guarantees valid SGX clocks? | runtime PM PCI does not equal internal clock (P4-004/P4-012) | any MMIO |
 | U04 | Which registers are readable when SGX is gated/off? | no applicable source defines this | any MMIO |
@@ -27,12 +26,9 @@ firmware or workload was executed. IDs P3/P4 refer to
 | U19 | ISA/encoder USSE and PDS SGX535 with origin? | absent; SGX540/544 does not replace | own execution |
 | U20 | Streams TA/3D, DPM, tiling, formats/PBE and modern isolation? | insufficient in current sources | workload/render/Mesa |
 
-## Immediate blockers of the first MMIO
+## Immediate blockers of the first MMIO read
 
-The five largest are U01, U02, U03/U04, U05/U06, and U07/U11. In terms of
-artifacts: passive measurement of the board; register reference/errata SGX535 Poulsbo;
-power/clock authenticated sequence; full host code with locking/OSPM; and
-documentation that links the PCI/SGX review to aperture and the BRNs.
+The target's passive PCI identity is recorded, but its physical SGX revision is not. The immediate blockers are U02, U03/U04, U05/U06, and the revision/errata part of U11. They require an applicable SGX535/Poulsbo register contract, power/clock/reset requirements, a gma500-owned exclusion protocol, documented MMIO failure behavior, and recovery evidence.
 
 ## Changes since Phase 3
 
@@ -43,10 +39,12 @@ formally **UNKNOWN** for read-safety.
 - GTT and stolen-memory values are left unavailable when the selected passive interface does not expose them.
 - Firmware/ISA continue to be later blockers, not from passive inventory.
 
+## Phase 5 evidence-acquisition result
+
+- Intel document `364236` is **CONFIRMED** to be titled *Intel System Controller HUB External Design Specification* (P5-001). A 2021 Intel support response placed access behind a privileged Resource and Documentation Center account (P5-002); anonymous retrieval now ends at a public 404 page (P5-005).
+- Public IMG material shows detailed SGX535 documentation being discussed through private developer support, but does not supply or authenticate a register-access contract (P5-003).
+- No recovered public source establishes read-only or side-effect-free semantics, the required power/clock/reset state, a graphics PCI `0x06` to SGX revision mapping, applicable BRNs, CPU read failure behavior, or a complete recovery contract. Failure to find a warning is not evidence of safety.
+
 ## External artifact of greatest value
 
-The most valuable item for the **next immediate blocker** is a register, power, reset, and errata manual authenticated for **SGX535 integrated into
-Poulsbo**, linking PCI revision to SGX core revision, aperture, and
-`CORE_ID`/`CORE_REVISION` read behavior, clocks, and ownership requirements. For the
-later bootstrap, the matching UM/microkernel/initializer package for the
-DDK Poulsbo 1.14 continues to be the highest value artifact.
+The most valuable item for the immediate blocker is an authorized register, power, reset, and errata manual for **SGX535 integrated into Poulsbo**. It must define `CORE_ID`/`CORE_REVISION` access attributes and side effects, the required power/clock/reset state, failure behavior, and revision coverage. For later bootstrap work, the matching UM/microkernel/initializer package for the Poulsbo DDK 1.14 remains the highest-value artifact.
