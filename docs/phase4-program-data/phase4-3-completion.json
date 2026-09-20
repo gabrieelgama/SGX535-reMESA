@@ -1,0 +1,73 @@
+{
+  "phase": "4.3",
+  "completed_utc": "2026-09-19T22:35:37.321794+00:00",
+  "blockers_initial": 10,
+  "blockers_closed": 0,
+  "blockers_remaining": 10,
+  "unknown_to_pass": 0,
+  "gate_b": "BLOCKED",
+  "whitelist": [],
+  "artifacts": [
+    {
+      "file": "docs/lost-documentation-index.md",
+      "sha256": "6832ff391dff8fa11da29a28824b02c0edf10e9d0f1bf3e3f654ae4583d1ff3a"
+    },
+    {
+      "file": "docs/phase4-3-blocker-closure.md",
+      "sha256": "d67a2ec9b7eb08c5cf5990f5168b745c7d8fcf54d9f46e436b44063a7eb9024c"
+    },
+    {
+      "file": "experiments/bringup0/PASSIVE-KERNEL-VERIFICATION.md",
+      "sha256": "831b546c5248066d4090e0ab44bae0f758315015ea12585404c31a30a9292a16"
+    },
+    {
+      "file": "docs/core-identification-audit.md",
+      "sha256": "972a792f678aa0a11894cc6c19061d2a4e8178cc59f67ba4140561fe15a0ddfb"
+    },
+    {
+      "file": "docs/safe-register-reads.md",
+      "sha256": "0fe1c0cf8b2641834dcca681ef1e2b294f4704e0fdc6156e786288ddbe62da84"
+    },
+    {
+      "file": "docs/power-state-safety.md",
+      "sha256": "78afe747a7697cc9be7a0239b29ade24a4c31984086d20d11c0cd85d54d9e588"
+    },
+    {
+      "file": "docs/hardware-ownership.md",
+      "sha256": "08df8e60a88d21f883b3db12970047e06cb9cbc44d48c37f058d8e5544fa2166"
+    },
+    {
+      "file": "docs/bringup-read-errata.md",
+      "sha256": "f51461cc0fa19e379bd4b833e9d6e2aae4bbdfa64b0d30da63e8f9effc7749fe"
+    },
+    {
+      "file": "docs/test-vector-one-gate.md",
+      "sha256": "b40c301e5b9de0692e52934ea91e62b0a6e332d428e14cd313b685d835c0c49a"
+    },
+    {
+      "file": "docs/unknowns.md",
+      "sha256": "e1e26b7d287c4e95f54e1c8939945b11bde73b225c5e33899b8875e6560ee1cd"
+    },
+    {
+      "file": "docs/evidence-matrix.csv",
+      "sha256": "103a962402565e1ca8080bdfb8e9c3e66291a9a6e10eb5dd8dd9c75b46be2e4a"
+    }
+  ],
+  "reference_baseline": [
+    {
+      "repository": "references/linux",
+      "commit": "9b87fdc9af2fbfcdb5c24a64139685ef80f6573f",
+      "status": ""
+    },
+    {
+      "repository": "references/omap5-sgx-ddk-linux",
+      "commit": "430673f78b79eccdf308a6bbfb524209b485d2cc",
+      "status": ""
+    },
+    {
+      "repository": "references/omap5-sgx-ddk-um-linux",
+      "commit": "b6801bf89e00d69893c2957455bbeb3195c0ed52",
+      "status": ""
+    }
+  ]
+}

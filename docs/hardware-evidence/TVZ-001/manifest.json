@@ -1,0 +1,14 @@
+{
+  "evidence_id": "TVZ-001",
+  "received": "2026-09-19",
+  "source": "user message: FASE 4.1 — INCORPORAR O PRIMEIRO TEST VECTOR ZERO REAL",
+  "artifact": "operator-report.txt",
+  "artifact_kind": "verbatim excerpts of operator report; NOT original probe stdout",
+  "sha256": "3aceb9ed6daa68afa49ceaa5e8afc0b8a2c32b18f787fd007a71991b2954386b",
+  "bytes": 733,
+  "measurement_date": null,
+  "probe_hash": null,
+  "numeric_exit_code": null,
+  "original_stdout_supplied": false,
+  "independently_reproduced": false
+}

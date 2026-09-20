@@ -1,0 +1,118 @@
+{
+  "phase": "4.5",
+  "requirements": [
+    {
+      "id": 1,
+      "requirement": "identity",
+      "CORE_ID": "PASS",
+      "CORE_REVISION": "PASS"
+    },
+    {
+      "id": 2,
+      "requirement": "offset",
+      "CORE_ID": "PASS",
+      "CORE_REVISION": "PASS"
+    },
+    {
+      "id": 3,
+      "requirement": "width",
+      "CORE_ID": "PASS",
+      "CORE_REVISION": "PASS"
+    },
+    {
+      "id": 4,
+      "requirement": "read-only",
+      "CORE_ID": "UNKNOWN",
+      "CORE_REVISION": "UNKNOWN"
+    },
+    {
+      "id": 5,
+      "requirement": "side-effects",
+      "CORE_ID": "UNKNOWN",
+      "CORE_REVISION": "UNKNOWN"
+    },
+    {
+      "id": 6,
+      "requirement": "power",
+      "CORE_ID": "UNKNOWN",
+      "CORE_REVISION": "UNKNOWN"
+    },
+    {
+      "id": 7,
+      "requirement": "clock",
+      "CORE_ID": "UNKNOWN",
+      "CORE_REVISION": "UNKNOWN"
+    },
+    {
+      "id": 8,
+      "requirement": "reset",
+      "CORE_ID": "UNKNOWN",
+      "CORE_REVISION": "UNKNOWN"
+    },
+    {
+      "id": 9,
+      "requirement": "revision-coverage",
+      "CORE_ID": "UNKNOWN",
+      "CORE_REVISION": "UNKNOWN"
+    },
+    {
+      "id": 10,
+      "requirement": "ownership",
+      "CORE_ID": "PASS",
+      "CORE_REVISION": "PASS"
+    },
+    {
+      "id": 11,
+      "requirement": "mapping-lifetime",
+      "CORE_ID": "PASS",
+      "CORE_REVISION": "PASS"
+    },
+    {
+      "id": 12,
+      "requirement": "locking",
+      "CORE_ID": "UNKNOWN",
+      "CORE_REVISION": "UNKNOWN"
+    },
+    {
+      "id": 13,
+      "requirement": "suspend-resume",
+      "CORE_ID": "UNKNOWN",
+      "CORE_REVISION": "UNKNOWN"
+    },
+    {
+      "id": 14,
+      "requirement": "failure",
+      "CORE_ID": "UNKNOWN",
+      "CORE_REVISION": "UNKNOWN"
+    },
+    {
+      "id": 15,
+      "requirement": "recovery",
+      "CORE_ID": "UNKNOWN",
+      "CORE_REVISION": "UNKNOWN"
+    }
+  ],
+  "CORE_ID_SAFE_CANDIDATE": false,
+  "CORE_REVISION_SAFE_CANDIDATE": false,
+  "whitelist": [],
+  "gate_b": "BLOCKED",
+  "all_gates": {
+    "A": "GO",
+    "B": "BLOCKED",
+    "C": "BLOCKED",
+    "D": "NO-GO",
+    "E": "BLOCKED",
+    "F": "BLOCKED",
+    "G": "BLOCKED",
+    "H": "NO-GO",
+    "I": "BLOCKED",
+    "J": "NO-GO",
+    "K": "NO-GO",
+    "L": "NO-GO",
+    "M": "BLOCKED",
+    "N": "BLOCKED",
+    "O": "BLOCKED"
+  },
+  "active_hardware_operations": false,
+  "tv1_executed": false
+}

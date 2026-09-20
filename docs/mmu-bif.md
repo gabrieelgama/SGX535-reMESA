@@ -1,70 +1,70 @@
 # MMU e BIF
 
-> Atualização da fase 2: o histórico local contém `sgx535defs.h` e uma integração Poulsbo explícita no DDK 1.14. As referências à ausência abaixo descrevem o checkout master da fase 1. Consulte [arqueologia](source-archaeology.md), [arquivos recuperados](sgx535-missing-files.md) e [comparação Poulsbo](poulsbo-evidence.md) para o estado ampliado.
+> Phase 2 update: local history contains `sgx535defs.h` and an explicit Poulsbo integration in DDK 1.14. The absence references below describe the Phase 1 master checkout. See [archaeology](source-archaeology.md), [recovered files](sgx535-missing-files.md), and [Poulsbo comparison](poulsbo-evidence.md) for the expanded state.
 
-## CONFIRMED — formato descrito pelas fontes
+## CONFIRMED — format described by sources
 
-O DDK define páginas de 4 KiB (`PAGE_SHIFT=12`), índices PD/PT de 10 bits, máscaras `0xffc00000` e `0x003ff000`. O ramo sem `SGX_FEATURE_36BIT_MMU` usa endereço PDE/PTE `0xfffff000` sem deslocamento adicional. A seleção SGX535 declara VA de 32 bits e não habilita essa feature de 36 bits. Não confundir largura virtual com capacidade física de toda integração. [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxmmu.h:48-93](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxmmu.h#L48); [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h:63-73](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h#L63).
+The DDK defines 4 KiB pages (`PAGE_SHIFT=12`), 10-bit indices PD/PT, masks `0xffc00000` and `0x003ff000`. The branch without `SGX_FEATURE_36BIT_MMU` uses address PDE/PTE `0xfffff000` with no additional offset. The SGX535 selection declares a 32-bit VA and does not enable this 36-bit feature. Do not confuse virtual width with the physical capacity of the entire integration. [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxmmu.h:48-93](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxmmu.h#L48); [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h:63-73](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h#L63).
 
-O Linux usa índice PD `va >> 22` e índice PT `(va >> 12) & 0x3ff`; compõe PTE com PFN deslocado e flags. [references/linux/drivers/gpu/drm/gma500/mmu.c:44-52](../references/linux/drivers/gpu/drm/gma500/mmu.c#L44); [references/linux/drivers/gpu/drm/gma500/mmu.c:146-158](../references/linux/drivers/gpu/drm/gma500/mmu.c#L146); [references/linux/drivers/gpu/drm/gma500/psb_drv.h:75-84](../references/linux/drivers/gpu/drm/gma500/psb_drv.h#L75).
+Linux uses PD index `va >> 22` and PT index `(va >> 12) & 0x3ff`; composes PTE with shifted PFN and flags. [references/linux/drivers/gpu/drm/gma500/mmu.c:44-52](../references/linux/drivers/gpu/drm/gma500/mmu.c#L44); [references/linux/drivers/gpu/drm/gma500/mmu.c:146-158](../references/linux/drivers/gpu/drm/gma500/mmu.c#L146); [references/linux/drivers/gpu/drm/gma500/psb_drv.h:75-84](../references/linux/drivers/gpu/drm/gma500/psb_drv.h#L75).
 
-| Campo | DDK | Linux Poulsbo | Confiança |
+| Field | DDK | Linux Poulsbo | Confidence |
 | --- | --- | --- | --- |
-| valid | bit 0 | bit 0 | CONFIRMED nas duas fontes |
-| write-only | bit 1 | bit 1 | CONFIRMED nas duas fontes |
-| read-only | bit 2 | bit 2 | CONFIRMED nas duas fontes |
-| cache | bit 3, CACHECONSISTENT | bit 3, comentário CPU cache coherent | CONFIRMED como definição; coerência completa UNKNOWN |
-| EDM protect | bit 4 | sem equivalente nesses defines | CONFIRMED apenas no header genérico TI |
+| valid | bit 0 | bit 0 | CONFIRMED in both sources |
+| write-only | bit 1 | bit 1 | CONFIRMED in both sources |
+| read-only | bit 2 | bit 2 | CONFIRMED in both sources |
+| cache | bit 3, CACHECONSISTENT | bit 3, CPU cache coherent comment | CONFIRMED as definition; unknown full coherence |
+| EDM protect | bit 4 | no equivalent in these defines | CONFIRMED only in the generic TI header |
 
-Fontes da tabela: [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxmmu.h:66-93](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxmmu.h#L66); [references/linux/drivers/gpu/drm/gma500/psb_drv.h:81-84](../references/linux/drivers/gpu/drm/gma500/psb_drv.h#L81). O header TI também enumera tamanhos PDE de 16 KiB a 4 MiB; **UNKNOWN** se são utilizáveis no SGX535/Poulsbo. A presença desses defines em arquivo comum não prova suporte do core.
+Table sources: [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxmmu.h:66-93](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxmmu.h#L66); [references/linux/drivers/gpu/drm/gma500/psb_drv.h:81-84](../references/linux/drivers/gpu/drm/gma500/psb_drv.h#L81). The TI header also lists PDE sizes from 16 KiB to 4 MiB; **UNKNOWN** if they are usable in SGX535/Poulsbo. The presence of these defines in a common file does not prove core support.
 
-**INFERRED:** com o formato de 4 KiB, 1024 PDEs × 1024 PTEs × 4096 bytes cobrem 4 GiB de VA, com cada PT cobrindo 4 MiB. É aritmética sobre os campos acima, não quantidade de RAM.
+**INFERRED:** with the 4 KiB format, 1024 PDEs × 1024 PTEs × 4096 bytes cover 4 GiB of VA, with each PT covering 4 MiB. It is arithmetic over the fields above, not the amount of RAM.
 
-## Contextos e divergência importante
+## Contexts and important divergence
 
-**CONFIRMED:** o DDK SGX535 declara 16 directory lists; `SGX_BIF_DIR_LIST_INDEX_EDM` seleciona a última, portanto índice 15 nessa configuração. O reset associa EDM e 2D ao contexto kernel; sob BRN23410, associa TA também. [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h:67-69](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h#L67); [references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h:357-361](../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h#L357); [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c:164-203](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c#L164).
+**CONFIRMED:** the DDK SGX535 declares 16 directory lists; `SGX_BIF_DIR_LIST_INDEX_EDM` selects the last one, therefore index 15 in this configuration. The reset associates EDM and 2D to the kernel context; under BRN23410, it also associates TA. [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h:67-69](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h#L67); [references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h:357-361](../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h#L357); [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c:164-203](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c#L164).
 
-**CONFIRMED:** Linux usa contexto 0 para PD padrão e 1 para `pf_pd`; os PDs alocados com `trap_pagefaults=1` usam entradas inválidas zero. [references/linux/drivers/gpu/drm/gma500/psb_drv.c:340-359](../references/linux/drivers/gpu/drm/gma500/psb_drv.c#L340); [references/linux/drivers/gpu/drm/gma500/mmu.c:160-210](../references/linux/drivers/gpu/drm/gma500/mmu.c#L160).
+**CONFIRMED:** Linux uses context 0 for standard PD and 1 for `pf_pd`; PDs allocated with `trap_pagefaults=1` use zero invalidateid entries. [references/linux/drivers/gpu/drm/gma500/psb_drv.c:340-359](../references/linux/drivers/gpu/drm/gma500/psb_drv.c#L340); [references/linux/drivers/gpu/drm/gma500/mmu.c:160-210](../references/linux/drivers/gpu/drm/gma500/mmu.c#L160).
 
-As fórmulas não coincidem:
+The formulas do not match:
 
-| Fonte | Seleção de registrador |
+| Source | Register selection |
 | --- | --- |
-| TI | base0 para 0; base1 + `4*(índice-1)` para os demais |
-| Linux | base0 para 0; base1 + `4*hw_context` para os demais |
+| TI | base0 for 0; base1 + `4*(index-1)` for the others |
+| Linux | base0 for 0; base1 + `4*hw_context` for the others |
 
 [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c:121-135](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c#L121); [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c:183-203](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c#L183); [references/linux/drivers/gpu/drm/gma500/mmu.c:123-135](../references/linux/drivers/gpu/drm/gma500/mmu.c#L123).
 
-No Linux, `BASE1=0x0c38`, de modo que contexto 1 escreve em **0x0c3c**; esta conta é **INFERRED diretamente da expressão**, e não correção sugerida. [references/linux/drivers/gpu/drm/gma500/psb_reg.h:126](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L126). **UNKNOWN:** diferença de convenção, definição histórica ou defeito; não escolher a fórmula TI por semelhança. A Fase 2 recuperou o header SGX535 e a Fase 3 confirmou que a divergência permanece; consulte `poulsbo-vs-ti.md` e `phase4-audit.md`.
+In Linux, `BASE1=0x0c38`, so that context 1 writes in **0x0c3c**; this account is **INFERRED directly from the expression**, and not a suggested correction. [references/linux/drivers/gpu/drm/gma500/psb_reg.h:126](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L126). **UNKNOWN:** convention difference, historical definition, or defect; do not choose the TI formula based on similarity. Phase 2 retrieved the SGX535 header and Phase 3 confirmed that the divergence remains; see `poulsbo-vs-ti.md` and `phase4-audit.md`.
 
-## Endereços e mapeamento
+## Addresses and mapping
 
-**CONFIRMED:** o Linux mantém GTT e MMU SGX separadas. Pin de GEM obtém páginas, marca WC, insere na GTT e no PD SGX em `gatt_start + offset`. Unpin remove de ambas e restaura WB. O armazenamento GEM é limitado a páginas DMA32. [references/linux/drivers/gpu/drm/gma500/gem.c:29-107](../references/linux/drivers/gpu/drm/gma500/gem.c#L29); [references/linux/drivers/gpu/drm/gma500/gem.c:175-178](../references/linux/drivers/gpu/drm/gma500/gem.c#L175).
+**CONFIRMED:** Linux keeps GTT and SGX MMU separate. GEM pin gets pages, marks WC, inserts into GTT and SGX PD in `gatt_start + offset`. Unpin removes from both and restores WB. GEM storage is limited to DMA32 pages. [references/linux/drivers/gpu/drm/gma500/gem.c:29-107](../references/linux/drivers/gpu/drm/gma500/gem.c#L29); [references/linux/drivers/gpu/drm/gma500/gem.c:175-178](../references/linux/drivers/gpu/drm/gma500/gem.c#L175).
 
-**CONFIRMED:** a inicialização insere stolen memory no PD padrão, escreve `PDS_EXEC_BASE=0x20000000` e `BIF_3D_REQ_BASE=0x30000000`. `gtt.c` mantém ainda `mmu_gatt_start=0xe0000000`, separado de `gatt_start` obtido do recurso PCI. Não usar esses nomes como sinônimos. [references/linux/drivers/gpu/drm/gma500/psb_drv.c:352-362](../references/linux/drivers/gpu/drm/gma500/psb_drv.c#L352); [references/linux/drivers/gpu/drm/gma500/gtt.c:185-250](../references/linux/drivers/gpu/drm/gma500/gtt.c#L185).
+**CONFIRMED:** the initialization inserts stolen memory into the standard PD, writes `PDS_EXEC_BASE=0x20000000` and `BIF_3D_REQ_BASE=0x30000000`. `gtt.c` still holds `mmu_gatt_start=0xe0000000`, separate from `gatt_start` obtained from the PCI resource. Do not use these names as synonyms. [references/linux/drivers/gpu/drm/gma500/psb_drv.c:352-362](../references/linux/drivers/gpu/drm/gma500/psb_drv.c#L352); [references/linux/drivers/gpu/drm/gma500/gtt.c:185-250](../references/linux/drivers/gpu/drm/gma500/gtt.c#L185).
 
-**CONFIRMED:** a integração OMAP5 implementa conversões CPU físico ↔ sistema ↔ dispositivo como identidade, explicitando a suposição UMA. Isso não estabelece uma regra universal para SGX. [references/omap5-sgx-ddk-linux/eurasia_km/services4/system/omap5/sysconfig.c:827-935](../references/omap5-sgx-ddk-linux/eurasia_km/services4/system/omap5/sysconfig.c#L827).
+**CONFIRMED:** the OMAP5 integration implements CPU ↔ system ↔ device conversions as identity, making the UMA assumption explicit. This does not establish a universal rule for SGX. [references/omap5-sgx-ddk-linux/eurasia_km/services4/system/omap5/sysconfig.c:827-935](../references/omap5-sgx-ddk-linux/eurasia_km/services4/system/omap5/sysconfig.c#L827).
 
-O DDK separa heaps de dados, parâmetros 3D, TA, sync, código/dados PDS, código/dados kernel e shaders. No ramo de 32 bits sem BRN31620, exemplos são sync `0xef000000`, kernel code `0xf2000000`, kernel data `0xf4000000 + offset`, pixel shader `0xf9000000`, vertex shader `0xfe000000`. **CONFIRMED como política do DDK**, não endereços físicos fixos do hardware. [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxconfig.h:67-68](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxconfig.h#L67); [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxconfig.h:195-248](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxconfig.h#L195).
+The DDK separates heaps of data, 3D parameters, TA, sync, PDS code/data, kernel code/data, and shaders. In the 32-bit branch without BRN31620, examples are sync `0xef000000`, kernel code `0xf2000000`, kernel data `0xf4000000 + offset`, pixel shader `0xf9000000`, vertex shader `0xfe000000`. **CONFIRMED as DDK policy**, not fixed hardware physical addresses. [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxconfig.h:67-68](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxconfig.h#L67); [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxconfig.h:195-248](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxconfig.h#L195).
 
-## Invalidação e sincronização
+## Invalidation and synchronization
 
-**CONFIRMED:** o MMU TI acumula flags de invalidação PD/PT em `ui32CacheControl`; o scheduler as transfere ao comando e limpa o acumulador. As flags são pedidos ao microkernel, não offsets MMIO. [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/mmu.c:591-643](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/mmu.c#L591); [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c:454-466](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c#L454); [references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h:367-370](../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h#L367).
+**CONFIRMED:** the TI MMU accumulates invalidateidation flags PD/PT in `ui32CacheControl`; the scheduler transfers them to the command and clears the accumulator. The flags are requested from the microkernel, not MMIO offsets. [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/mmu.c:591-643](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/mmu.c#L591); [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c:454-466](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c#L454); [references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h:367-370](../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h#L367).
 
-**CONFIRMED:** Linux invalida por `BIF_CTRL`, alternando INVALDC ou FLUSH e fazendo barreira e leitura de retorno. Possui caminho CPU `clflush`; isso não prova coerência de todos os dados e caches de shader. [references/linux/drivers/gpu/drm/gma500/mmu.c:54-120](../references/linux/drivers/gpu/drm/gma500/mmu.c#L54).
+**CONFIRMED:** Linux invalidateidates by `BIF_CTRL`, alternating INVALDC or FLUSH and performing a barrier and return read. It has CPU path `clflush`; this does not prove coherence of all shader data and caches. [references/linux/drivers/gpu/drm/gma500/mmu.c:54-120](../references/linux/drivers/gpu/drm/gma500/mmu.c#L54).
 
 ## Faults e recovery
 
-**CONFIRMED:** o handler Linux lê status BIF e endereço de fault, distingue page fault/proteção e imprime o requestor. Depois limpa os eventos. Não há ali paginação sob demanda ou replay de job. [references/linux/drivers/gpu/drm/gma500/psb_irq.c:151-196](../references/linux/drivers/gpu/drm/gma500/psb_irq.c#L151). A inserção de PTE em IRQ é apenas TODO em [references/linux/drivers/gpu/drm/gma500/mmu.c:35-42](../references/linux/drivers/gpu/drm/gma500/mmu.c#L35).
+**CONFIRMED:** the Linux handler reads the BIF status and fault address, distinguishes page fault/protection, and prints the requestor. Then it clears the events. There is no demand paging or job replay there. [references/linux/drivers/gpu/drm/gma500/psb_irq.c:151-196](../references/linux/drivers/gpu/drm/gma500/psb_irq.c#L151). The insertion of PTE in IRQ is only TODO in [references/linux/drivers/gpu/drm/gma500/mmu.c:35-42](../references/linux/drivers/gpu/drm/gma500/mmu.c#L35).
 
-**CONFIRMED:** o reset TI não-MP drena requests através de PD/PT/página temporários e repete até não haver fault. O comentário sobre endereço relativo de 2 GiB e bus-master MSB está nesse contexto específico; **UNKNOWN** se descreve Poulsbo, logo não deve virar regra de PTE. [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c:544-618](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c#L544).
+**CONFIRMED:** the non-MP TI reset drains requests through PD/PT/temporary page and repeats until there is no fault. The comment about 2 GiB relative address and bus-master MSB is in this specific context; **UNKNOWN** describes Poulsbo, so it should not become a PTE rule. [references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c:544-618](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c#L544).
 
-**UNKNOWN:** ordenação end-to-end, segurança de invalidação com engines ativas, isolamento entre contextos, política de EDM protect e limites DMA reais no alvo. Resolver antes de permitir ao SGX tocar memória nova.
+**UNKNOWN:** end-to-end ordering, invalidateidation security with active engines, isolation between contexts, EDM protect policy and real DMA limits on the target. Resolve before allowing SGX to touch new memory.
 
-## Camadas de mapeamento no DDK TI
+## Mapping layers in the DDK IT
 
-**CONFIRMED:** o buffer manager reserva VA do dispositivo via `pfnMMUAlloc` e escolhe funções de mapeamento conforme origem da memória. No ramo contíguo passa endereço físico convertido e VA de destino para `pfnMMUMapPages`; há ramos separados sparse/shadow. Isso distingue alocação de VA GPU do mapeamento CPU. [services4/srvkm/common/buffer_manager.c:2294–2380](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/common/buffer_manager.c#L2294).
+**CONFIRMED:** the buffer manager reserves device VA via `pfnMMUAlloc` and chooses mapping functions according to the memory source. In the contiguous branch, it passes the converted physical address and destination VA to `pfnMMUMapPages`; there are separate branches sparse/shadow. This distinguishes GPU VA allocation from CPU mapping. [services4/srvkm/common/buffer_manager.c:2294–2380](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/common/buffer_manager.c#L2294).
 
-**CONFIRMED:** `OSMapPhysToLin` exige `PVRSRV_HAP_KERNEL_ONLY` e usa wrappers de ioremap/LinuxMemArea para produzir VA CPU. Não é a função que cria a tradução BIF. [services4/srvkm/env/linux/osfunc.c:1647–1687](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/env/linux/osfunc.c#L1647).
+**CONFIRMED:** `OSMapPhysToLin` requires `PVRSRV_HAP_KERNEL_ONLY` and uses ioremap/LinuxMemArea wrappers to produce VA CPU. It is not the function that creates the BIF translation. [services4/srvkm/env/linux/osfunc.c:1647–1687](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/env/linux/osfunc.c#L1647).
 
-**CONFIRMED, integração OMAP:** `create_gem_wrapper`, no ramo `SUPPORT_DRI_DRM_EXTERNAL`, converte LinuxMemArea em páginas ou região física, traduz flags cached/WC/uncached em flags `OMAP_BO_*` e chama `omap_gem_new_ext`. É dependência concreta da integração TI dentro do código de ambiente Linux, não somente em `services4/system/omap5`. [services4/srvkm/env/linux/mmap.c:372–482](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/env/linux/mmap.c#L372). **UNKNOWN:** política equivalente para compartilhar BOs de renderização com scanout Poulsbo. Não portar esse wrapper para Intel só por utilizar GEM.
+**CONFIRMED, OMAP integration:** `create_gem_wrapper`, in branch `SUPPORT_DRI_DRM_EXTERNAL`, converts LinuxMemArea into pages or physical region, translates flags cached/WC/uncached into `OMAP_BO_*` flags, and calls `omap_gem_new_ext`. It is a concrete dependency for TI integration within Linux environment code, not only in `services4/system/omap5`. [services4/srvkm/env/linux/mmap.c:372–482](../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/env/linux/mmap.c#L372). **UNKNOWN:** equivalent policy to share rendering BOs with Poulsbo scanout. Do not port this wrapper to Intel just for using GEM.

@@ -1,0 +1,24 @@
+[
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "commits": 330,
+    "unique_occurrences_by_path_line_text": 765,
+    "raw_occurrences": 74271,
+    "pattern": "CORE_ID|CORE_REVISION",
+    "paths": [
+      "*.c",
+      "*.h"
+    ]
+  },
+  {
+    "repository": "omap5-sgx-ddk-um-linux",
+    "commits": 153,
+    "unique_occurrences_by_path_line_text": 0,
+    "raw_occurrences": 0,
+    "pattern": "CORE_ID|CORE_REVISION",
+    "paths": [
+      "*.c",
+      "*.h"
+    ]
+  }
+]

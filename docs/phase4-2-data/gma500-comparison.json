@@ -1,0 +1,428 @@
+[
+  {
+    "file": "drivers/gpu/drm/gma500/Kconfig",
+    "upstream_git_blob": "0e23c93a1094cdc9e7ec0664edd8d87b040a4221",
+    "antix_git_blob": "0e23c93a1094cdc9e7ec0664edd8d87b040a4221",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/Makefile",
+    "upstream_git_blob": "c8f2c89be99db49e45b574250fa37873e8783a7d",
+    "antix_git_blob": "c8f2c89be99db49e45b574250fa37873e8783a7d",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/accel_2d.c",
+    "upstream_git_blob": "adc0507545bf7e3596c8519125c3b7be6798e058",
+    "antix_git_blob": "adc0507545bf7e3596c8519125c3b7be6798e058",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/backlight.c",
+    "upstream_git_blob": "35600d070cb53e36a96e7ac21a12de3fa6310b11",
+    "antix_git_blob": "35600d070cb53e36a96e7ac21a12de3fa6310b11",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/blitter.c",
+    "upstream_git_blob": "cb2504a4a15f9e3519c9c2ac45764559518b3344",
+    "antix_git_blob": "cb2504a4a15f9e3519c9c2ac45764559518b3344",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/blitter.h",
+    "upstream_git_blob": "8d67dabd9ba3728c6c0102d8aed476fa8896246d",
+    "antix_git_blob": "8d67dabd9ba3728c6c0102d8aed476fa8896246d",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/cdv_device.c",
+    "upstream_git_blob": "4d216a0205f26a0eeedba4c961298496bef1ff05",
+    "antix_git_blob": "4d216a0205f26a0eeedba4c961298496bef1ff05",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/cdv_device.h",
+    "upstream_git_blob": "37e4bdc84c03f0071180c31419e42dead0c060cd",
+    "antix_git_blob": "37e4bdc84c03f0071180c31419e42dead0c060cd",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/cdv_intel_crt.c",
+    "upstream_git_blob": "88535f5aacc5d39aa0bc484a5cad41c5ae325701",
+    "antix_git_blob": "88535f5aacc5d39aa0bc484a5cad41c5ae325701",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/cdv_intel_display.c",
+    "upstream_git_blob": "686385a66167ba49ff55028c97883dcb72faee61",
+    "antix_git_blob": "686385a66167ba49ff55028c97883dcb72faee61",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/cdv_intel_dp.c",
+    "upstream_git_blob": "deb4fd13591d2414be672536e7aebcac50d7ceba",
+    "antix_git_blob": "deb4fd13591d2414be672536e7aebcac50d7ceba",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/cdv_intel_hdmi.c",
+    "upstream_git_blob": "0d12c6ffbc4078796a9e1fcc56e3a583dba54786",
+    "antix_git_blob": "0d12c6ffbc4078796a9e1fcc56e3a583dba54786",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/cdv_intel_lvds.c",
+    "upstream_git_blob": "b13c34fa29eda51639218906268f21e72b86af5b",
+    "antix_git_blob": "b13c34fa29eda51639218906268f21e72b86af5b",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/framebuffer.c",
+    "upstream_git_blob": "6ef4ea07d1bb857b022c5bd1d91249165564ea3b",
+    "antix_git_blob": "6ef4ea07d1bb857b022c5bd1d91249165564ea3b",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/framebuffer.h",
+    "upstream_git_blob": "2fbba4b48841667de719eee83b20001b479870b1",
+    "antix_git_blob": "2fbba4b48841667de719eee83b20001b479870b1",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/gem.c",
+    "upstream_git_blob": "f9c4b1d76f566050bccb44dc6bcf80865dc7d1fd",
+    "antix_git_blob": "f9c4b1d76f566050bccb44dc6bcf80865dc7d1fd",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/gem.h",
+    "upstream_git_blob": "4a74dc623b6bb9b67f69120e76120d39f89477e3",
+    "antix_git_blob": "4a74dc623b6bb9b67f69120e76120d39f89477e3",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/gma_device.c",
+    "upstream_git_blob": "869f303925667e51cecc8302af6626976982bbd7",
+    "antix_git_blob": "869f303925667e51cecc8302af6626976982bbd7",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/gma_device.h",
+    "upstream_git_blob": "a8cf31d4b81444426f438e71f89f29ba38b126e7",
+    "antix_git_blob": "a8cf31d4b81444426f438e71f89f29ba38b126e7",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/gma_display.c",
+    "upstream_git_blob": "70148ae16f146a75c6f5a0df206c508cab46aab5",
+    "antix_git_blob": "70148ae16f146a75c6f5a0df206c508cab46aab5",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/gma_display.h",
+    "upstream_git_blob": "7bd6c1ee8b21a948d45229a5facbc093ff0ceffa",
+    "antix_git_blob": "7bd6c1ee8b21a948d45229a5facbc093ff0ceffa",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/gtt.c",
+    "upstream_git_blob": "9278bcfad1bf4423cc44de353e60d0c7981256a1",
+    "antix_git_blob": "9278bcfad1bf4423cc44de353e60d0c7981256a1",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/gtt.h",
+    "upstream_git_blob": "3cf190295ad3e7bfe78767991997b1c28ecff38c",
+    "antix_git_blob": "3cf190295ad3e7bfe78767991997b1c28ecff38c",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/intel_bios.c",
+    "upstream_git_blob": "8ad6337eeba3a400f2c72428eb9b8e7cf78b3d54",
+    "antix_git_blob": "8ad6337eeba3a400f2c72428eb9b8e7cf78b3d54",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/intel_bios.h",
+    "upstream_git_blob": "0e6facf21e332ccf199364d10f86939418106ada",
+    "antix_git_blob": "0e6facf21e332ccf199364d10f86939418106ada",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/intel_gmbus.c",
+    "upstream_git_blob": "a083fbfe35b8ad373bfa688bc72b2953b1293624",
+    "antix_git_blob": "a083fbfe35b8ad373bfa688bc72b2953b1293624",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/intel_i2c.c",
+    "upstream_git_blob": "de8810188190ba03210a18156bed8e9f48ef1d8c",
+    "antix_git_blob": "de8810188190ba03210a18156bed8e9f48ef1d8c",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/mdfld_device.c",
+    "upstream_git_blob": "be9cf6b1e3b39ede4bced4f638caf51ffa2a32e9",
+    "antix_git_blob": "be9cf6b1e3b39ede4bced4f638caf51ffa2a32e9",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/mdfld_dsi_dpi.c",
+    "upstream_git_blob": "ae1223f631a7f8af9e4957430917d8cd076cd811",
+    "antix_git_blob": "ae1223f631a7f8af9e4957430917d8cd076cd811",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/mdfld_dsi_dpi.h",
+    "upstream_git_blob": "2b40663e16964dba0a038e3a55493bc137034616",
+    "antix_git_blob": "2b40663e16964dba0a038e3a55493bc137034616",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/mdfld_dsi_output.c",
+    "upstream_git_blob": "4aab76613bd9e7977a52eb2c38afbb7fd8f002bd",
+    "antix_git_blob": "4aab76613bd9e7977a52eb2c38afbb7fd8f002bd",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/mdfld_dsi_output.h",
+    "upstream_git_blob": "5c0db3c2903ff8762cff3b35c8607b05597aa7d8",
+    "antix_git_blob": "5c0db3c2903ff8762cff3b35c8607b05597aa7d8",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/mdfld_dsi_pkg_sender.c",
+    "upstream_git_blob": "6e0de83e9f7d247162d1e7e9b0e11c2abc4d7ff8",
+    "antix_git_blob": "6e0de83e9f7d247162d1e7e9b0e11c2abc4d7ff8",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/mdfld_dsi_pkg_sender.h",
+    "upstream_git_blob": "0478a21c15d52d1d0eae8604183c2bfd39b7323e",
+    "antix_git_blob": "0478a21c15d52d1d0eae8604183c2bfd39b7323e",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/mdfld_intel_display.c",
+    "upstream_git_blob": "aae2d358364cc522546e170641b175fe89318f72",
+    "antix_git_blob": "aae2d358364cc522546e170641b175fe89318f72",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/mdfld_output.c",
+    "upstream_git_blob": "c95966bb0c96e9859fc0204f8875e71faa29c228",
+    "antix_git_blob": "c95966bb0c96e9859fc0204f8875e71faa29c228",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/mdfld_output.h",
+    "upstream_git_blob": "37a516cc56beac1aaaf9b9b0ce4e05018663c0c9",
+    "antix_git_blob": "37a516cc56beac1aaaf9b9b0ce4e05018663c0c9",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/mdfld_tmd_vid.c",
+    "upstream_git_blob": "25e897b98f8621587b3d482aac668e490047ace4",
+    "antix_git_blob": "25e897b98f8621587b3d482aac668e490047ace4",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/mdfld_tpo_vid.c",
+    "upstream_git_blob": "11845978fb0a68efa7679332aa7f534b5e5f845a",
+    "antix_git_blob": "11845978fb0a68efa7679332aa7f534b5e5f845a",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/mid_bios.c",
+    "upstream_git_blob": "b76b86278e0e392ffb225585b65d182211b8db9e",
+    "antix_git_blob": "b76b86278e0e392ffb225585b65d182211b8db9e",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/mid_bios.h",
+    "upstream_git_blob": "8707f7c893a734aa0068e35bec9e90b11eebbf62",
+    "antix_git_blob": "8707f7c893a734aa0068e35bec9e90b11eebbf62",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/mmu.c",
+    "upstream_git_blob": "505044c9a6732483411d4d03a8afe9fab7cb7db4",
+    "antix_git_blob": "505044c9a6732483411d4d03a8afe9fab7cb7db4",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/mmu.h",
+    "upstream_git_blob": "d4b5720ef08e7f9d21fdac589d2e348311c1df4e",
+    "antix_git_blob": "d4b5720ef08e7f9d21fdac589d2e348311c1df4e",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/oaktrail.h",
+    "upstream_git_blob": "8d20fa2ee2863f8753126289715d23e731a9bf96",
+    "antix_git_blob": "8d20fa2ee2863f8753126289715d23e731a9bf96",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/oaktrail_crtc.c",
+    "upstream_git_blob": "900e5499249d5b852103e3e148761301d2649a7b",
+    "antix_git_blob": "900e5499249d5b852103e3e148761301d2649a7b",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/oaktrail_device.c",
+    "upstream_git_blob": "ade7e2416a6626005749b38d129d95876c25a5cf",
+    "antix_git_blob": "ade7e2416a6626005749b38d129d95876c25a5cf",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/oaktrail_hdmi.c",
+    "upstream_git_blob": "a097a59a9eaec1929487f7661f7d4843b2f06d21",
+    "antix_git_blob": "a097a59a9eaec1929487f7661f7d4843b2f06d21",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/oaktrail_hdmi_i2c.c",
+    "upstream_git_blob": "fc9a34ed58bd136f298a1cffb23ec2f88b8f2d70",
+    "antix_git_blob": "fc9a34ed58bd136f298a1cffb23ec2f88b8f2d70",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/oaktrail_lvds.c",
+    "upstream_git_blob": "30b949d6856c0f698d6ef3ee494d5ceb54778e58",
+    "antix_git_blob": "30b949d6856c0f698d6ef3ee494d5ceb54778e58",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/oaktrail_lvds_i2c.c",
+    "upstream_git_blob": "baaf8212e01d1ead4cb9c437ce2a87a54a9ce034",
+    "antix_git_blob": "baaf8212e01d1ead4cb9c437ce2a87a54a9ce034",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/opregion.c",
+    "upstream_git_blob": "eab6d889bde980e816da94eda27110fbae6e7da8",
+    "antix_git_blob": "eab6d889bde980e816da94eda27110fbae6e7da8",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/opregion.h",
+    "upstream_git_blob": "4a90f8b0e16cb122ac0ebd62c6b8ddfcd9df9783",
+    "antix_git_blob": "4a90f8b0e16cb122ac0ebd62c6b8ddfcd9df9783",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/power.c",
+    "upstream_git_blob": "bea8578846d1577feba1d812773d7f8548d8306e",
+    "antix_git_blob": "bea8578846d1577feba1d812773d7f8548d8306e",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/power.h",
+    "upstream_git_blob": "0c89c4d6ec2042da2b87534539d1d6b3773ac917",
+    "antix_git_blob": "0c89c4d6ec2042da2b87534539d1d6b3773ac917",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/psb_device.c",
+    "upstream_git_blob": "ece994c4c21ac0c4b1b7813143910981bcdb6c1c",
+    "antix_git_blob": "ece994c4c21ac0c4b1b7813143910981bcdb6c1c",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/psb_device.h",
+    "upstream_git_blob": "3f11179562c92b5174de4446aedb1f66cf16b256",
+    "antix_git_blob": "3f11179562c92b5174de4446aedb1f66cf16b256",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/psb_drv.c",
+    "upstream_git_blob": "074f403d7ca0756c0c84a97c2bad184a7d1b3af3",
+    "antix_git_blob": "074f403d7ca0756c0c84a97c2bad184a7d1b3af3",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/psb_drv.h",
+    "upstream_git_blob": "9569263413164f861724bc378eb6b728a294baec",
+    "antix_git_blob": "9569263413164f861724bc378eb6b728a294baec",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/psb_intel_display.c",
+    "upstream_git_blob": "bd3df5adb96f20b1d01fae257a45627285eb8a86",
+    "antix_git_blob": "bd3df5adb96f20b1d01fae257a45627285eb8a86",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/psb_intel_drv.h",
+    "upstream_git_blob": "5340225d6997b9d0cf3a359075b869f2a76c5b57",
+    "antix_git_blob": "5340225d6997b9d0cf3a359075b869f2a76c5b57",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/psb_intel_lvds.c",
+    "upstream_git_blob": "889964efe62d52a2b03511393f20ad88532bf24c",
+    "antix_git_blob": "889964efe62d52a2b03511393f20ad88532bf24c",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/psb_intel_modes.c",
+    "upstream_git_blob": "88653a40aeb5cdfe208772d6eb710a79009b735f",
+    "antix_git_blob": "88653a40aeb5cdfe208772d6eb710a79009b735f",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/psb_intel_reg.h",
+    "upstream_git_blob": "835cc924c45ad20dcc97a0754448cbed94880e00",
+    "antix_git_blob": "835cc924c45ad20dcc97a0754448cbed94880e00",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/psb_intel_sdvo.c",
+    "upstream_git_blob": "907f966d6f221a7923ae6702f6f2769e61a66bb2",
+    "antix_git_blob": "907f966d6f221a7923ae6702f6f2769e61a66bb2",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/psb_intel_sdvo_regs.h",
+    "upstream_git_blob": "600e79744d68cdaaa2e90e2c8fc6dbd6cdebf2b3",
+    "antix_git_blob": "600e79744d68cdaaa2e90e2c8fc6dbd6cdebf2b3",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/psb_irq.c",
+    "upstream_git_blob": "361e3a0c5ab6b56b5405566d39fcefa338b3c8f0",
+    "antix_git_blob": "361e3a0c5ab6b56b5405566d39fcefa338b3c8f0",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/psb_irq.h",
+    "upstream_git_blob": "4f73998848d15c135ef655414e510f091a003726",
+    "antix_git_blob": "4f73998848d15c135ef655414e510f091a003726",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/psb_lid.c",
+    "upstream_git_blob": "97b0c52bfd8a84e2f9a6ed6f7e7a9317f989c838",
+    "antix_git_blob": "97b0c52bfd8a84e2f9a6ed6f7e7a9317f989c838",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/psb_reg.h",
+    "upstream_git_blob": "fb22bac5bb748763684e8d1bebd5427c82c2cd5c",
+    "antix_git_blob": "fb22bac5bb748763684e8d1bebd5427c82c2cd5c",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/tc35876x-dsi-lvds.c",
+    "upstream_git_blob": "e5bdd99ad453f4611e98411f03e9f226499044d8",
+    "antix_git_blob": "e5bdd99ad453f4611e98411f03e9f226499044d8",
+    "classification": "IDENTICAL"
+  },
+  {
+    "file": "drivers/gpu/drm/gma500/tc35876x-dsi-lvds.h",
+    "upstream_git_blob": "b14b7f9e7d1e0892813e559d8a3b428ebd942abc",
+    "antix_git_blob": "b14b7f9e7d1e0892813e559d8a3b428ebd942abc",
+    "classification": "IDENTICAL"
+  }
+]

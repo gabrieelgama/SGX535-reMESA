@@ -1,0 +1,21 @@
+{
+  "phase": "4.4",
+  "completed_utc": "2026-09-19T22:39:04.714283+00:00",
+  "previous_phase_seal_sha256": "99bd8d620180061c4c5b371bab2ee032e03b4c163b7f21a44a3fb929f1393522",
+  "pass_requirements_attacked": 5,
+  "pass_cells_attacked": 10,
+  "pass_cells_survived": 10,
+  "pass_cells_downgraded": 0,
+  "new_pass_cells": 0,
+  "blockers_closed_after_redteam": 0,
+  "artifacts": [
+    {
+      "file": "docs/phase4-4-adversarial-audit.md",
+      "sha256": "1a4b58c96e2a4ed5ccdeafab11ad2da16e067f05c0b6d90f2401019e34bf2602"
+    },
+    {
+      "file": "docs/phase4-program-data/phase4-4-source-recheck.json",
+      "sha256": "12b9175d689bf47649227b7194a01b47af95b23aa9b9c8959b94f5cd2a674693"
+    }
+  ]
+}

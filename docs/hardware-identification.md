@@ -1,91 +1,91 @@
-# Identificação passiva do hardware
+# Passive hardware identification
 
 ## Identidade aceita
 
-O probe aceita somente estes pares:
+The probe accepts only these pairs:
 
-| vendor | device | classificação | evidência |
+| vendor | device | classification | evidence |
 |---|---|---|---|
-| `0x8086` | `0x8108` | Poulsbo, SGX535 segundo a tabela do Linux | CONFIRMED `P4-001` |
-| `0x8086` | `0x8109` | Poulsbo, SGX535 segundo a tabela do Linux | CONFIRMED `P4-001` |
+| `0x8086` | `0x8108` | Poulsbo, SGX535 according to the Linux table | CONFIRMED `P4-001` |
+| `0x8086` | `0x8109` | Poulsbo, SGX535 according to the Linux table | CONFIRMED `P4-001` |
 
-A tabela fonte declara também GMA 500/Atom Z5xx. Ela não mapeia revision ou
-subsystem ID para US15W, US15WP, US15WPT ou stepping SGX específico. Essa
-subclassificação é **UNKNOWN**. Revision e subsystem são registrados, jamais
-usados para promovê-la.
+The source table also declares GMA 500/Atom Z5xx. It does not map revision or
+subsystem ID for US15W, US15WP, US15WPT or specific SGX stepping. This
+subclassification is **UNKNOWN**. Revision and subsystem are recorded, never
+used to promote it.
 
-## Superfícies passivas escolhidas
+## Chosen passive surfaces
 
-**CONFIRMED — P4-002:** a documentação PCI do Linux marca `vendor`, `device`,
+**CONFIRMED — P4-002:** the Linux PCI documentation marks `vendor`, `device`,
 `revision`, `subsystem_vendor`, `subsystem_device`, `class`, `irq` e `resource`
-como atributos ASCII read-only. `resource` contém start/end/flags, a partir dos
+as read-only ASCII attributes. `resource` contains start/end/flags, from the
 quais o tamanho pode ser calculado inclusivamente
 (`Documentation/PCI/sysfs-pci.rst:7-75`; `drivers/pci/pci-sysfs.c:40-76,163-195`).
 
-São coletados:
+They are collected:
 
 - BDF, vendor/device, revision, subsystem, class e IRQ;
-- entradas do arquivo textual `resource`, incluindo os índices 0–5 como BARs;
+- entries from the text file `resource`, including indexes 0–5 as BARs;
 - alvo do symlink `driver`;
-- nós `cardN`, `renderDN` ou `controlDN` em `/sys/class/drm` cujo symlink
-  `device` resolve para a mesma função PCI;
-- release/versão do kernel por procfs e arquitetura por `uname(2)`;
-- campos DMI públicos de sistema/placa/BIOS em `/sys/class/dmi/id`, quando
-  disponíveis; serial, UUID e asset tags não são coletados;
-- `power_state`, `power/runtime_status` e contadores de tempo, quando presentes.
+- we `cardN`, `renderDN` or `controlDN` in `/sys/class/drm` whose symlink
+`device` resolves to the same PCI function;
+- kernel release/version via procfs and architecture via `uname(2)`;
+- public DMI fields of system/placa/BIOS in `/sys/class/dmi/id`, when
+available; serial, UUID, and asset tags are not collected;
+- `power_state`, `power/runtime_status` and time counters, when present.
 
-**CONFIRMED — P4-019:** o Linux exporta vendor/nome/versão de sistema e placa e
-vendor/versão/data do BIOS com modo `0444`; serial e UUID usam modo `0400`
-(`drivers/firmware/dmi-id.c:22-62,188-224`). O probe seleciona apenas os campos
-públicos sem identificadores únicos.
+**CONFIRMED — P4-019:** Linux exports vendor/nome/system version and board and
+vendor/version/BIOS date with `0444` mode; serial and UUID use `0400` mode
+(`drivers/firmware/dmi-id.c:22-62,188-224`). The probe selects only the fields
+audiences without unique identifiers.
 
-**CONFIRMED — P4-003:** `config`, `enable` e `resourceN` não pertencem ao vetor:
-`config` é espaço de configuração binário RW, `enable` é RW e `resourceN` pode
-ser mmap de programação do dispositivo. A ROM normalmente exige write para ser
+**CONFIRMED — P4-003:** `config`, `enable` and `resourceN` do not belong to the array:
+`config` is a binary configuration space RW, `enable` is RW and `resourceN` may
+be the device programming mmap. The ROM usually requires write to be
 habilitada (`sysfs-pci.rst:36-87`).
 
 **CONFIRMED — P4-004:** `runtime_status` pode retornar `active`, `suspended`,
-`suspending`, `resuming`, `error` ou `unsupported`; sua implementação apenas
-formata o estado mantido pelo PM core. O probe não lê nem escreve
-`power/control`, cujo write para `on` pode acordar o dispositivo
+`suspending`, `resuming`, `error` or `unsupported`; their implementation only
+formats the state maintained by the core PM. The probe neither reads nor writes
+`power/control`, whose write to `on` can wake the device
 (`sysfs-devices-power:35-52,264-306`; `drivers/base/power/sysfs.c:123-179`).
 
 **CONFIRMED — P4-022:** o atributo PCI read-only `power_state` formata
-`pci_dev.current_state` (`drivers/pci/pci-sysfs.c:154-161`). Também não descreve
+`pci_dev.current_state` (`drivers/pci/pci-sysfs.c:154-161`). It also does not describe
 os clocks internos da SGX.
 
-## DRM e memória
+## DRM and memory
 
 **CONFIRMED — P4-005:** o gma500 atual anuncia `DRIVER_MODESET | DRIVER_GEM`,
-possui tabela própria de ioctls vazia e não anuncia `DRIVER_RENDER`
-(`psb_drv.c:91-95,493-518`). O DRM core cria render node apenas com
-`DRIVER_RENDER` (`drm_drv.c:771-785`). Assim, `cardN` é esperado; ausência de
-`renderDN` não é falha do probe.
+has its own empty ioctl table and does not announce `DRIVER_RENDER`
+(`psb_drv.c:91-95,493-518`). The DRM core creates a render node only with
+`DRIVER_RENDER` (`drm_drv.c:771-785`). Thus, `cardN` is expected; absence of
+`renderDN` is not a probe failure.
 
-O arquivo PCI `resource` expõe recursos, mas não os valores derivados
+The PCI file `resource` exposes resources, but not the derived values
 `gtt_phys_start`, `mmu_gatt_start`, `gatt_start` ou o tamanho stolen calculado
-pelo driver. O gma500 deriva GTT/GATT internamente e lê BSM para calcular
-stolen (`gtt.c:185-253`; `gem.c:331-361`, CONFIRMED `P4-011`). Nenhum atributo
-gma500 estável para esses derivados foi localizado; o probe imprime
-“not exposed by selected passive interface”. Essa ausência de interface é um
-resultado do inventário, não uma afirmação de que outro kernel nunca a exponha.
+by the driver. The gma500 internally derives GTT/GATT and reads BSM to calculate
+stolen (`gtt.c:185-253`; `gem.c:331-361`, CONFIRMED `P4-011`). No attribute
+Stable gma500 for these derivatives was located; the probe prints
+“not exposed by selected passive interface”. This absence of interface is a
+inventory result, not a statement that another kernel will never expose it.
 
-Nenhum arquivo debugfs específico do gma500 foi localizado no diretório do
-driver atual. O probe não usa o debugfs genérico do DRM: ele não acrescenta um
-campo necessário ao Test Vector Zero, não é uma ABI estável e ampliaria a
-superfície de observação sem benefício demonstrado.
+No specific gma500 debugfs file was found in the directory of
+current driver. The probe does not use the generic DRM debugfs: it does not add a
+field required for the Zero Test Vector, is not a stable ABI and would expand the
+observation surface with no demonstrated benefit.
 
-## Falha fechada
+## Closed failure
 
-- nenhum alvo exato: exit `2`;
-- BDF solicitado com ID diferente: exit `2` antes de conclusão SGX;
-- múltiplos alvos: exit `2` até seleção explícita;
-- atributo obrigatório ilegível/malformado: exit `2`;
-- nenhuma tentativa de “adivinhar” por classe PCI, nome ou CPU.
+- no exact target: exit `2`;
+- BDF requested with a different ID: exit `2` before SGX completion;
+- multiple targets: exit `2` until explicit selection;
+- mandatory attribute unreadable/malformed: exit `2`;
+- no attempt to 'guess' by PCI class, name, or CPU.
 
-## Limite da expressão “passivo”
+## Limit of the expression “passive”
 
-**CONFIRMED — P4-006:** o `drm_dev_register()` ocorre depois de toda a sequência
-de `psb_driver_load`; portanto observar um `cardN` gma500 também implica que o
-driver já teve oportunidade de modificar hardware (`psb_drv.c:450-479`). O
-relatório garante somente `state_modified_by_probe: false`.
+**CONFIRMED — P4-006:** `drm_dev_register()` occurs after the entire sequence
+of `psb_driver_load`; therefore observing a `cardN` gma500 also implies that the
+driver has already had the opportunity to modify hardware (`psb_drv.c:450-479`). The
+report guarantees only `state_modified_by_probe: false`.

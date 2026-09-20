@@ -2,46 +2,46 @@
 
 ## Objetivo formal
 
-Coletar uma fotografia reproduzível de identidade e binding usando somente
-interfaces passivas do Linux. Não é um teste funcional da SGX.
+Collect a reproducible photograph of identity and binding using only
+passive Linux interfaces. This is not a functional test of SGX.
 
-## Pré-condições
+## Pre-conditions
 
 - kernel em estado normal e sysfs/procfs montados;
-- cópia exata do probe da revisão registrada;
-- usuário sem privilégios sempre que as permissões permitirem;
-- nenhum outro comando de diagnóstico que abra BAR/DRM misturado à captura.
+- exact copy of the probe of the recorded review;
+- user without privileges whenever permissions allow;
+- no other diagnostic command that opens BAR/DRM mixed with the capture.
 
-## Operações permitidas, em ordem
+## Allowed operations, in order
 
 1. enumerar `/sys/bus/pci/devices`;
-2. ler `vendor`/`device` e selecionar somente `8086:8108` ou `8086:8109`;
-3. ler revision, subsystem, class, IRQ e o arquivo textual `resource`;
+2. read `vendor`/`device` and select only `8086:8108` or `8086:8109`;
+3. read revision, subsystem, class, IRQ and the text file `resource`;
 4. resolver o symlink `driver`;
-5. correlacionar nós em `/sys/class/drm` pelo symlink `device`;
+5. correlate nodes in `/sys/class/drm` through the symlink `device`;
 6. ler runtime status/contadores se presentes;
-7. ler versão do kernel, obter arquitetura com `uname` e campos DMI públicos
-   de sistema/placa/BIOS, sem serial ou UUID;
-8. declarar GTT/stolen indisponíveis quando não expostos;
-9. produzir relatório humano ou JSON e sair.
+7. read kernel version, get architecture with `uname` and public DMI fields
+from system/placa/BIOS, without serial or UUID;
+8. declare GTT/stolen unavailable when not exposed;
+9. produce human or JSON report and exit.
 
-Execução futura:
+Future execution:
 
 ```sh
 python3 tools/sgx535-probe/sgx535_probe.py --json >sgx535-probe.json
 ```
 
-## Operações proibidas
+## Prohibited operations
 
-Não abrir PCI `config`, `resourceN`, ROM, `/dev/mem`, DRM node ou debugfs. Não
-escrever sysfs. Não resetar, inicializar, mudar clocks/PM/MMU, carregar firmware,
+Do not open PCI `config`, `resourceN`, ROM, `/dev/mem`, DRM node or debugfs. Do not
+write sysfs. Do not reset, initialize, change clocks/PM/MMU, load firmware,
 enviar CCB/`EVENT_KICK`, nem executar PDS/USSE/shader.
 
-## Saída e critérios
+## Output and criteria
 
-Sucesso exige ID exato, todos os campos obrigatórios legíveis, relatório válido
-e exit `0`. ID desconhecido, ausência, ambiguidade ou erro de parsing retorna
-exit `2`; nenhuma tentativa alternativa é feita.
+Success requires exact ID, all mandatory fields readable, valid report
+and exit `0`. Unknown ID, absence, ambiguity, or parsing error returns
+exit `2`; no alternative attempt is made.
 
 Estado final esperado:
 
@@ -54,12 +54,12 @@ firmware loading: NO
 ```
 
 O primeiro campo tem escopo deliberado. Se `gma500` estiver associado, o driver
-já executou inicialização ativa antes de publicar o DRM node (P4-006). Portanto
-o vetor não certifica “hardware intocado desde boot”.
+has already performed active initialization before publishing the DRM node (P4-006). Therefore
+the vector does not certify 'hardware untouched since boot'.
 
-## Resultado de design da Fase 4
+## Phase 4 Design Result
 
-**GO para execução futura.** Os testes funcionais usaram sysfs/procfs
-sintéticos. Uma invocação de sanity no ambiente de desenvolvimento falhou
-fechada, por permissão, antes de enumerar qualquer função PCI. Nenhum resultado
-de Inspiron/Poulsbo é alegado e nenhum atributo de dispositivo foi lido.
+**GO for future execution.** The functional tests used sysfs/procfs
+synthetics. An invocation of sanity in the development environment failed
+closed, by permission, before listing any PCI function. No results
+of Inspiron/Poulsbo is alleged and no device attribute was read.

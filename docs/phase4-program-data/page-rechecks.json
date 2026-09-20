@@ -1,0 +1,85 @@
+[
+  {
+    "document": "319537-002US",
+    "pdf_page": 106,
+    "terms": [
+      "9.4.5",
+      "RID"
+    ],
+    "located": true
+  },
+  {
+    "document": "319537-002US",
+    "pdf_page": 107,
+    "terms": [
+      "9.4.8",
+      "9.4.9"
+    ],
+    "located": true
+  },
+  {
+    "document": "319537-002US",
+    "pdf_page": 108,
+    "terms": [
+      "9.4.10",
+      "9.4.11"
+    ],
+    "located": true
+  },
+  {
+    "document": "319537-002US",
+    "pdf_page": 111,
+    "terms": [
+      "9.4.19",
+      "MSAC"
+    ],
+    "located": true
+  },
+  {
+    "document": "319537-002US",
+    "pdf_page": 115,
+    "terms": [
+      "9.4.31",
+      "D3"
+    ],
+    "located": true
+  },
+  {
+    "document": "319537-002US",
+    "pdf_page": 117,
+    "terms": [
+      "9.4.34",
+      "31:2",
+      "3:2"
+    ],
+    "located": true
+  },
+  {
+    "document": "319537-002US",
+    "pdf_page": 227,
+    "terms": [
+      "13.1.3.3",
+      "master abort"
+    ],
+    "located": true
+  },
+  {
+    "document": "EMGD update",
+    "pdf_page": 6,
+    "terms": [
+      "364236",
+      "442090"
+    ],
+    "located": true,
+    "temporary_source_only": true
+  },
+  {
+    "document": "EMGD guide",
+    "pdf_page": 1,
+    "terms": [
+      "User Guide"
+    ],
+    "located": true,
+    "temporary_source_only": true
+  }
+]

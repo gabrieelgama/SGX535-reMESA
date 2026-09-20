@@ -1,0 +1,40 @@
+[
+  {
+    "id": "emgd-update",
+    "url": "https://www.intel.la/content/dam/www/public/us/en/documents/specification-updates/emgd-v1-14-winxp-spec-update.pdf",
+    "archived_in_repository": false,
+    "final_url": "https://www.intel.la/content/dam/www/public/us/en/documents/specification-updates/emgd-v1-14-winxp-spec-update.pdf",
+    "http_status": 200,
+    "bytes": 566108,
+    "response_sha256": "bd83dabaf1e4e4f7fe69884fd399d4050be1bac74d2259fac663d2d07217d326",
+    "content_type": "application/pdf",
+    "temporary_copy": "/tmp/sgx535-phase43-emgd-update.pdf"
+  },
+  {
+    "id": "emgd-guide",
+    "url": "https://docs.yoctoproject.org/pipermail/yocto/attachments/20121004/69e1e025/attachment.pdf",
+    "archived_in_repository": false,
+    "final_url": "https://docs.yoctoproject.org/pipermail/yocto/attachments/20121004/69e1e025/attachment.pdf",
+    "http_status": 200,
+    "bytes": 6164015,
+    "response_sha256": "4ec3725cb0d71d34bdfe88043ebf0361675e3fc3b35a7245031293f80c27bd03",
+    "content_type": "application/pdf",
+    "temporary_copy": "/tmp/sgx535-phase43-emgd-guide.pdf"
+  },
+  {
+    "id": "eds364236",
+    "url": "https://cdrdv2.intel.com/v1/dl/getContent/364236",
+    "archived_in_repository": false,
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "id": "wayback",
+    "url": "https://web.archive.org/cdx/search/cdx?url=www.imgtec.com/powervr/insider/powervr-login.asp*&output=json&filter=statuscode:200&collapse=digest&filter=urlkey:.*PowerVRSeries5SGXArchitectureGuideforDevelopers.*",
+    "archived_in_repository": false,
+    "final_url": "https://web.archive.org/cdx/search/cdx?url=www.imgtec.com/powervr/insider/powervr-login.asp*&output=json&filter=statuscode:200&collapse=digest&filter=urlkey:.*PowerVRSeries5SGXArchitectureGuideforDevelopers.*",
+    "http_status": 200,
+    "bytes": 3,
+    "response_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "content_type": "application/json"
+  }
+]

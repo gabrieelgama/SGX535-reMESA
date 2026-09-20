@@ -1,38 +1,38 @@
-# Poulsbo versus integração TI
+# Poulsbo versus IT integration
 
-Fase 3 — análise estática, 2026-09-17. `CONFIRMED` significa o que a fonte declara/implementa; `INFERRED` é interpretação; `UNKNOWN` é lacuna. IDs P3 remetem à [matriz](evidence-matrix.csv), com repositório, commit, arquivo e linhas. Os snapshots preservam a numeração original; ver [proveniência](poulsbo-data/sources.json). Nenhum procedimento abaixo foi executado na GPU.
+Phase 3 — static analysis, 2026-09-17. `CONFIRMED` means the source declares/implements; `INFERRED` is interpretation; `UNKNOWN` is gap. P3 IDs refer to [matrix](evidence-matrix.csv), with repository, commit, file, and lines. The snapshots preserve the original numbering; see [provenance](poulsbo-data/sources.json). No procedure below was executed on the GPU.
 
-**CONFIRMED [P3-059]** — O caminho OMAP4 disponível usa pm_runtime_get_sync/put_sync e aquisição de clocks como gpu_fck/sgx_clk_mux_ck; é código de integração TI, não implementação de clock Poulsbo. Fontes: [OMAP:238-252](poulsbo-data/OMAP.txt); [OMAP:288-300](poulsbo-data/OMAP.txt); [OMAP:639-674](poulsbo-data/OMAP.txt).
+**CONFIRMED [P3-059]** — The available OMAP4 path uses pm_runtime_get_sync/put_sync and clock acquisition as gpu_fck/sgx_clk_mux_ck; it is TI integration code, not Poulsbo clock implementation. Sources: [OMAP:238-252](poulsbo-data/OMAP.txt); [OMAP:288-300](poulsbo-data/OMAP.txt); [OMAP:639-674](poulsbo-data/OMAP.txt).
 
-## Comparação por elemento
+## Comparison by element
 
-`IDENTICAL / COMPATIBLE` só é usado abaixo para igualdade explícita do subconjunto numérico ou estrutural indicado, nunca para hardware completo. `SIMILAR` descreve relação de software sem assegurar intercâmbio. As classificações são **INFERRED** das evidências nomeadas.
+`IDENTICAL / COMPATIBLE` is only used below for explicit equality of the indicated numerical or structural subset, never for complete hardware. `SIMILAR` describes a software relationship without ensuring interchange. The classifications are **INFERRED** from the named evidence.
 
-| Elemento | Classificação | Evidência e limite |
+| Element | Classification | Evidence and limit |
 |---|---|---|
-| BASE0/1/2 SGX535 TI vs header SGX535 EMGD | IDENTICAL / COMPATIBLE (valores apenas) | P3-018/062: c84/c38/c3c; não inclui protocolo |
-| BANK0/1 layout SGX535 | IDENTICAL / COMPATIBLE (subconjunto numérico) | H535599–626 e EMGD466–541, P3-019/062 |
-| VA32 / 16 dirlists declarados SGX535 | IDENTICAL / COMPATIBLE (configuração declarada) | P3-003/062 |
-| Aperture base DDK Poulsbo vs Linux | IDENTICAL / COMPATIBLE (offset apenas) | P3-007: 0x40000; tamanhos diferem |
-| PTE valid/WO/RO/cache e página4K | SIMILAR | P3-023; EDM-protect extra e uso de flags a esclarecer |
-| Fórmula de índice directory list | UNKNOWN | P3-026; divergência preservada, não corrigida por suposição |
-| CCB/bridge Services TI vs EMGD | SIMILAR | famílias PVR, versões distintas P3-045–054; ABI binária UNKNOWN |
-| PSB XHW vs Services | POULSBO-SPECIFIC (interface PSB examinada) | P3-040–051; não são mesmo protocolo |
+| BASE0/1/2 SGX535 TI vs header SGX535 EMGD | IDENTICAL / COMPATIBLE (values only) | P3-018/062: c84/c38/c3c; does not include protocol |
+| BANK0/1 SGX535 layout | IDENTICAL / COMPATIBLE (numeric subset) | H535599–626 and EMGD466–541, P3-019/062 |
+| VA32 / 16 declared dirlists SGX535 | IDENTICAL / COMPATIBLE (declared configuration) | P3-003/062 |
+| DDK Poulsbo Aperture base vs Linux | IDENTICAL / COMPATIBLE (offset only) | P3-007: 0x40000; sizes differ |
+| PTE valid/WO/RO/cache and page4K | SIMILAR | P3-023; EDM-protect extra and use of flags to clarify |
+| Directory list index formula | UNKNOWN | P3-026; divergence preserved, not corrected by assumption |
+| CCB/bridge IT Services vs EMGD | SIMILAR | PVR families, different P3-045–054 versions; Binary ABI UNKNOWN |
+| PSB XHW vs Services | POULSBO-SPECIFIC (PSB interface examined) | P3-040–051; they are not actually protocol |
 | PCI BARs, GTT/BSM/stolen, IRQ THALIA | POULSBO-SPECIFIC | P3-006/020/021/030 |
-| OSPM display/graphics em DRM_EXT | POULSBO-SPECIFIC (código da integração examinada) | P3-036; implementação da API ausente |
-| OMAP platform clocks/runtime PM | TI-SPECIFIC | P3-059; não prova como SGX535 opera em qualquer OMAP |
-| Core clock efetivo e power islands | UNKNOWN | P3-033/035/036; valor nominal não é medição |
-| Reset e errata aplicáveis à placa | UNKNOWN | P3-034/037; depende de revisão real |
-| Cache, barreiras e DMA | SIMILAR no objetivo, compatibilidade UNKNOWN | P3-022/023/050; x86 e ARM não intercambiáveis |
-| Firmware/USSE/PDS payload | UNKNOWN | P3-048/051; sem fonte UM correspondente verificada |
-| Display LVDS/SDVO e ABI de cursor | POULSBO-SPECIFIC | P3-005/052; não pertence à ISA SGX |
-| SGX540/544 comparados a SGX535 | UNKNOWN fora das evidências específicas | não usar ramo OMAP como substituto do header535 |
+| OSPM display/graphics in DRM_EXT | POULSBO-SPECIFIC (examined integration code) | P3-036; API implementation missing |
+| OMAP platform clocks/runtime PM | TI-SPECIFIC | P3-059; does not prove how SGX535 operates on any OMAP |
+| Effective core clock and power islands | UNKNOWN | P3-033/035/036; nominal value is not a measurement |
+| Reset and errata applicable to the board | UNKNOWN | P3-034/037; depends on actual revision |
+| Cache, barriers, and DMA | SIMILAR in purpose, compatibility UNKNOWN | P3-022/023/050; x86 and ARM not interchangeable |
+| Firmware/USSE/PDS payload | UNKNOWN | P3-048/051; no corresponding UM source verified |
+| Display LVDS/SDVO and cursor ABI | POULSBO-SPECIFIC | P3-005/052; does not belong to ISA SGX |
+| SGX540/544 compared to SGX535 | UNKNOWN outside specific evidence | do not use OMAP branch as a substitute for header535 |
 
-## Discrepâncias adicionais de headers
+## Additional header discrepancies
 
-A comparação estática [header-comparison.json](poulsbo-data/header-comparison.json) cobre macros escalares numéricas, normalizando sufixos U/UL; exclui macros-função, condicionais e expressões. Ela encontrou 597 valores comuns iguais, 20 macros apenas no header TI e 6 apenas no EMGD. As exclusivas incluem triggers do banco2/FLUSH_COMPLETE no TI e PDS/MNE no EMGD (P3-061 e fontes completas no catálogo). **UNKNOWN:** se a diferença é geração do header, exposição parcial, revisão ou integração; ausência de macro não prova ausência de hardware. A igualdade de 597 valores também não comprova a completude dos headers.
+The static comparison [header-comparison.json](poulsbo-data/header-comparison.json) covers numeric scalar macros, normalizing suffixes U/UL; it excludes function macros, conditionals, and expressions. It found 597 identical common values, 20 macros only in the TI header, and 6 only in EMGD. The exclusives include triggers of banco2/FLUSH_COMPLETE in TI and PDS/MNE in EMGD (P3-061 and full sources in the catalog). **UNKNOWN:** whether the difference is due to header generation, partial exposure, revision, or integration; the absence of a macro does not prove the absence of hardware. The equality of the 597 values also does not prove the completeness of the headers.
 
-Não há evidência nesta comparação para tratar o clock/reset OMAP como Poulsbo, nem para considerar todos os US15W/WP/WPT idênticos.
+There is no evidence in this comparison to treat clock/reset OMAP as Poulsbo, nor to consider all US15W/WP/WPT identical.
 
 
-**CONFIRMED [P3-063]** — Comparação de macros escalares numéricas: 597 valores comuns iguais, 20 macros só no header TI e 6 só no header EMGD; macros-função/expressões não entram no cálculo. Fontes: [H535:1-739](poulsbo-data/../archaeology-data/H535.txt); [EMGD_drm_pvr_services4_srvkm_hwdefs_sgx535defs_h:1-633](poulsbo-data/EMGD_drm_pvr_services4_srvkm_hwdefs_sgx535defs_h.txt).
+**CONFIRMED [P3-063]** — Comparison of numeric scalar macros: 597 common equal values, 20 macros only in the TI header and 6 only in the EMGD header; function macros/expressions are not included in the calculation. Sources: [H535:1-739](poulsbo-data/../archaeology-data/H535.txt); [EMGD_drm_pvr_services4_srvkm_hwdefs_sgx535defs_h:1-633](poulsbo-data/EMGD_drm_pvr_services4_srvkm_hwdefs_sgx535defs_h.txt).

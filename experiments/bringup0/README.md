@@ -1,37 +1,7 @@
-# bringup0 — desenho do primeiro harness
+# bringup0 — passive harness design
 
-O único experimento executável aprovado é o **Test Vector Zero**, implementado
-em `../../tools/sgx535-probe/`. Ele lê atributos textuais fixos de sysfs/procfs
-e `uname(2)`. Não existe componente kernel nesta fase.
+The first bring-up experiment is a read-only inventory through normal Linux interfaces. Test Vector Zero established the target identity without MMIO; its provenance is recorded in `docs/hardware-evidence/TVZ-001/`.
 
-## Comparação das arquiteturas futuras
+A future active harness remains conditional on the formal gates. It must be owned by gma500, use a fixed whitelist, reject unknown PCI identity, log every operation, and fail closed. It must not expose arbitrary MMIO, create a second PCI owner, load firmware, submit commands, or execute PDS/USSE.
 
-| opção | ownership/locking/PM | decisão |
-|---|---|---|
-| A. instrumentação temporária no gma500 | acesso ao `drm_psb_private`, locks, IRQ e PM | preferida se MMIO for desbloqueado |
-| B. debug instrumentation do driver | mesma ownership, mas requer interface fixa e revisão cuidadosa | aceitável somente com whitelist compilada |
-| C. módulo separado | concorreria com PCI driver, mappings, IRQ e PM existentes | NO-GO |
-| D. userspace por interface limitada | pode ser auditável, mas exige novo ABI e mediação do driver | não necessário para primeiro read; BLOCKED |
-
-A preferência por A/B é **INFERRED** do ownership confirmado; não é autorização
-para ler MMIO.
-
-## Invariantes do harness futuro
-
-- validar `8086:8108` ou `8086:8109` e revisão suportada;
-- tabela compilada de operações com nome e offset, sem parâmetro de offset;
-- registrar PCI identity, power precondition, lock, valor e resultado;
-- recusar revisão, power state ou owner desconhecido;
-- nenhum write, firmware, command submission, `EVENT_KICK`, PDS ou USSE;
-- cleanup/lifetime dentro do gma500;
-- nenhuma interface `read_mmio(offset)`/`write_mmio(offset,value)`.
-
-Como nenhuma leitura tem `SAFE-CANDIDATE` em
-`docs/safe-register-reads.md`, o harness MMIO fica somente como design.
-
-## Proveniência
-
-O probe é código original da Fase 4, licenciado sob MIT em
-`tools/sgx535-probe/LICENSE`. Ele usa somente a biblioteca padrão Python e não
-contém código copiado do DDK, PSB ou EMGD.
-
+Phase 4.6 skipped Test Vector One because Gate B is BLOCKED and the whitelist is empty.

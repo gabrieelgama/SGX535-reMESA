@@ -1,51 +1,51 @@
-# Segurança de power state
+# Power state safety
 
-## O que o código atual realmente garante
+## What the current code really guarantees
 
-**CONFIRMED — P4-012:** `gma_power_init()` declara runtime PM “broken”, toma
-uma referência incondicional com `pm_runtime_get()` e só a devolve no uninit
-(`power.c:46-87`). Para Poulsbo, `psb_power_up()` e `psb_power_down()` retornam
-zero sem sequência adicional (`psb_device.c:186-194`).
+**CONFIRMED — P4-012:** `gma_power_init()` declares runtime PM “broken”, takes
+an unconditional reference with `pm_runtime_get()` and only returns it on uninit
+(`power.c:46-87`). For Poulsbo, `psb_power_up()` and `psb_power_down()` return
+zero without additional sequence (`psb_device.c:186-194`).
 
-**CONFIRMED — P4-013:** o suspend de sistema desinstala IRQ, salva display,
-desabilita a função PCI e seleciona D3hot. O resume volta a D0, restaura estado
+**CONFIRMED — P4-013:** o suspend de system desinstala IRQ, salva display,
+disable the PCI function and select D3hot. The resume returns to D0, restores state
 PCI/BSM/VBT, reabilita GTT/GEM/display e reinstala IRQ
-(`power.c:95-203`). Estados SGX 3D preservados não são documentados.
+(`power.c:95-203`). Preserved SGX 3D states are not documented.
 
 **CONFIRMED — P4-016:** no bind Poulsbo, `psb_init_pm()` faz read-modify-write
-de `PSB_CR_CLKGATECTL` para a porção 2D e posta a escrita com uma leitura
-(`psb_device.c:85-94`). Isso prova comportamento do driver, não que qualquer
-outra leitura SGX seja válida.
+from `PSB_CR_CLKGATECTL` to the 2D portion and placed the writing with a reading
+(`psb_device.c:85-94`). This proves the driver's behavior, not that any
+another SGX reading is valid.
 
 ## Respostas
 
 | pergunta | resposta |
 |---|---|
-| quando SGX está ligada? | **UNKNOWN** no nível de clocks/blocos internos |
-| quando está power-gated? | **UNKNOWN** |
-| quem controla? | função PCI/PM: gma500 + PM core; gate SGX completo: **UNKNOWN** |
-| quais registradores dependem de clocks? | somente comportamento de 2D clock gate aparece; conjunto completo **UNKNOWN** |
-| leitura é válida desligada? | **UNKNOWN**; nenhuma fonte auditada fornece esse contrato |
-| o que pode acordar? | `gma_power_begin(force_on=true)` chama `pm_runtime_resume_and_get()`; o probe não o chama (P4-021) |
-| o que pode desligar? | suspend PCI chama disable + D3hot; o probe não o chama |
-| estado preservado? | display é salvo/restaurado; estado SGX/BIF/USSE/PDS **UNKNOWN** |
-| estado perdido em reset? | reset toca BIF/DPM/TA/USE/ISP/TSP/2D; consequências completas **UNKNOWN** |
+| When is SGX enabled? | **UNKNOWN** at the clocks/blocos internal level |
+| when is it power-gated? | **UNKNOWN** |
+| who controls? | function PCI/PM: gma500 + PM core; full SGX gate: **UNKNOWN** |
+| which registers depend on clocks? | only 2D clock gate behavior appears; complete set **UNKNOWN** |
+| is reading valid when turned off? | **UNKNOWN**; no audited source provides this contract |
+| what can wake up? | `gma_power_begin(force_on=true)` calls `pm_runtime_resume_and_get()`; the probe does not call it (P4-021) |
+| what can turn off? | suspend PCI calls disable + D3hot; the probe does not call it |
+| preserved state? | display is salvo/restaurado; state SGX/BIF/USSE/PDS **UNKNOWN** |
+| lost state in reset? | reset touches BIF/DPM/TA/USE/ISP/TSP/2D; full consequences **UNKNOWN** |
 
-`power/runtime_status=active` é **CONFIRMED** como estado do runtime-PM core,
-mas sua equivalência a “SGX pronta para MMIO” é **UNKNOWN**. Não se infere clock
+`power/runtime_status=active` is **CONFIRMED** as the state of the runtime-PM core,
+but its equivalence to 'SGX ready for MMIO' is **UNKNOWN**. Clock is not inferred
 de um status PCI.
 
-## READ não implica SAFE
+## READ does not imply SAFE
 
-**CONFIRMED — P4-020:** o DDK histórico diz que o dump de registradores **não
-deve** ser feito quando a SGX não está powered (`INIT.txt:1320-1334`). Isso
-refuta qualquer premissa de que leitura seja segura com power off. O trecho não
-define como provar o estado powered, quais clocks bastam ou quais registradores
-têm efeitos colaterais. Nenhuma leitura MMIO é aprovada nesta fase.
+**CONFIRMED — P4-020:** the historical DDK says that the register dump **does not
+must** be done when the SGX is not powered (`INIT.txt:1320-1334`). This
+refutes any premise that reading is safe with the power off. The passage does not
+defines how to prove the powered state, which clocks are enough, or which registers
+They have side effects. No MMIO reading is approved at this stage.
 
-## Operações do probe
+## Probe operations
 
-Ler os atributos textuais escolhidos não chama `gma_power_begin()` e a função
-`runtime_status_show()` apenas consulta o estado do PM core (CONFIRMED
-`P4-004`). O probe não abre DRM. Portanto ele não contém um caminho intencional
-de wake; não se promete ausência de efeitos por agentes externos concorrentes.
+Reading the chosen textual attributes does not call `gma_power_begin()` and the function
+`runtime_status_show()` only checks the state of the PM core (CONFIRMED
+`P4-004`). The probe does not open DRM. Therefore, it does not contain an intentional path
+of wake; absence of effects from competing external agents is not promised.

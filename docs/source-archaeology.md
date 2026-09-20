@@ -1,43 +1,43 @@
-# Arqueologia de fontes — fase 2
+# Source Archaeology — Phase 2
 
-## Resultado
+## Result
 
-**CONFIRMED:** `sgx535defs.h` existe no Git local TI KM: blob **`8039da4a73ef9ee3e929edb64244d2891bc9239e`**, 38.928 bytes, 739 linhas, encontrado em **255 dos 330 commits** disponíveis. O arquivo se identifica como SGX535 e declara licença dual MIT/GPLv2. [H535:1–43](archaeology-data/H535.txt#L1). A ausência documentada na fase 1 é verdadeira para o `master` examinado, não para o repositório inteiro.
+**CONFIRMED:** `sgx535defs.h` exists in the local Git TI KM: blob **`8039da4a73ef9ee3e929edb64244d2891bc9239e`**, 38,928 bytes, 739 lines, found in **255 of the 330 available commits**. The file identifies itself as SGX535 and declares a dual license MIT/GPLv2. [H535:1–43](archaeology-data/H535.txt#L1). The documented absence in phase 1 is true for the `master` examined, not for the entire repository.
 
-**CONFIRMED:** existe também um alvo Poulsbo D0 com `SGXCORE := 535`, `SGX_CORE_REV := 121`, `PVR_SYSTEM := poulsbo` e `dc_poulsbo`. [PBUILD:42–52](archaeology-data/PBUILD.txt#L42). Isso permite estudar uma integração Intel explícita sem transportar a integração OMAP.
+**CONFIRMED:** there is also a Poulsbo D0 target with `SGXCORE := 535`, `SGX_CORE_REV := 121`, `PVR_SYSTEM := poulsbo` and `dc_poulsbo`. [PBUILD:42–52](archaeology-data/PBUILD.txt#L42). This allows studying an explicit Intel integration without carrying the OMAP integration.
 
-Convenção: **CONFIRMED** confirma conteúdo/histórico das fontes, não funcionamento no hardware; **INFERRED** identifica uma dedução; **UNKNOWN** é o que ainda não foi estabelecido. Identificadores de fonte como H535 e PBUILD resolvem para repositório, commit completo, arquivo e hash no [catálogo de fontes](source-archaeology.md#catálogo-de-fontes). Os snapshots documentais preservam as linhas originais e os avisos de licença; não são arquivos de implementação.
+Convention: **CONFIRMED** confirms the content/history of the sources, not hardware operation; **INFERRED** identifies a deduction; **UNKNOWN** is what has not yet been established. Source identifiers like H535 and PBUILD resolve to repository, full commit, file, and hash in [source catalog](source-archaeology.md#source-catalog). Document snapshots preserve the original lines and license notices; they are not implementation files.
 
-## Universo examinado e limitações
+## Examined universe and limitations
 
-| Repositório | Commits físicos disponíveis / alcançáveis por refs | Refs locais, remotas e tags | Raso | Blobs únicos / binários omitidos da busca textual |
+| Repository | Physical commits available / reachable by refs | Local, remote refs and tags | Shallow | Unique blobs / binaries omitted from textual search |
 | --- | --- | --- | --- | --- |
 | `omap5-sgx-ddk-linux` | 330 / 330 | 35 | false | 1082 / 0 |
 | `omap5-sgx-ddk-um-linux` | 153 / 153 | 54 | false | 2021 / 1802 |
 | `linux` | 1 / 1 | 3 | true | 95387 / 5 |
 
-**CONFIRMED:** não havia commits adicionais não alcançáveis no banco local enumerado. Linux possui somente um commit: seu arquivo shallow interrompe a história; não há base local para concluir quando algo entrou ou saiu do gma500. “Não raso” nos dois repositórios TI não garante cobertura de branches remotas nunca clonadas, publicações privadas ou história anterior aos commits-raiz importados. Fontes: [summary.json](archaeology-data/summary.json), arquivos `*-refs.tsv` e `*-commits.tsv` neste diretório de evidências; para inventários Git, linhas de código são **N/A**.
+**CONFIRMED:** there were no additional unreachable commits in the enumerated local repository. Linux has only one commit: your shallow file interrupts the history; there is no local base to conclude when something entered or left gma500. “Not shallow” in both IT repositories does not guarantee coverage of remote branches never cloned, private releases, or history prior to imported root commits. Sources: [summary.json](archaeology-data/summary.json), `*-refs.tsv` and `*-commits.tsv` files in this evidence directory; for Git inventories, lines of code are **N/A**.
 
-O escopo de conteúdo é todo o projeto `/home/gama/sgx535-gfx`, particularmente os três repositórios de referência. A busca histórica inclui todos os caminhos de todas as árvores de commits disponíveis, não apenas `hwdefs` ou `gma500`. Documentos da fase 1 não contam como evidência independente. Uma busca auxiliar por nomes no home encontrou arquivos Mesa e Minecraft sem relação demonstrada; seu conteúdo e a história de projetos alheios não fazem parte deste resultado.
+The content scope is the entire `/home/gama/sgx535-gfx` project, particularly the three reference repositories. The historical search includes all paths of all available commit trees, not just `hwdefs` or `gma500`. Phase 1 documents do not count as independent evidence. An auxiliary search by names in the home found Mesa and Minecraft files with no demonstrated relation; their content and the history of unrelated projects are not part of this result.
 
-Nenhum fetch, checkout, switch, reset, rebase, alteração de refs, compilação, carregamento de binário ou acesso a hardware foi feito. Não foi consultada fonte externa. HEADs e estados limpos foram conferidos antes/depois. As consultas Git e os artefatos gerados ficaram restritos à leitura das referências e escrita em `docs/`.
+No fetch, checkout, switch, reset, rebase, ref changes, compilation, binary loading, or hardware access was performed. No external source was consulted. HEADs and clean states were checked antes/depois. Git queries and generated artifacts were limited to reading references and writing in `docs/`.
 
-## Método reproduzível
+## Reproducible Method
 
-1. Enumerar refs e todos os objetos locais com `git cat-file --batch-all-objects --batch-check`; selecionar commits e comparar com `git rev-list --all`.
-2. Enumerar cada árvore com `git ls-tree -r -z COMMIT`, incluindo renomes de diretório; relacionar commit, caminho e blob.
-3. Ler cada blob único uma vez com `git cat-file --batch`; buscar os onze padrões sem distinguir maiúsculas/minúsculas. Arquivos com NUL foram classificados como binários e não submetidos à interpretação textual. Isso evita alegar que um blob fechado foi examinado como fonte.
-4. Guardar linhas encontradas em `*-matches.tsv` e todas as associações históricas em `*-contexts.tsv`. O join pela coluna blob recupera **todos os commits/arquivos** de cada ocorrência. Guardar também matches em caminhos e mensagens de commits.
-5. Complementar busca literal com inspeção semântica do build: `SGXCORE := 535` e `SUPPORT_SGX$(SGXCORE)` são exemplos que uma busca exclusiva por SGX535 perderia.
-6. Confirmar história de arquivos por `git log --all --full-history --name-status` e snapshots de fronteira; registrar hashes e comparar offsets numericamente.
+1. List refs and all local objects with `git cat-file --batch-all-objects --batch-check`; select commits and compare with `git rev-list --all`.
+2. Enumerate each tree with `git ls-tree -r -z COMMIT`, including directory renames; relate commit, path, and blob.
+3. Read each unique blob once with `git cat-file --batch`; search for the eleven patterns without distinguishing uppercase/lowercase. Files with NUL were classified as binary and not submitted to text interpretation. This prevents claiming that a closed blob was examined as source.
+4. Save lines found in `*-matches.tsv` and all historical associations in `*-contexts.tsv`. The join by the blob column retrieves **all commits/arquivos** of each occurrence. Also save matches in paths and commit messages.
+5. Complement literal search with semantic inspection of the build: `SGXCORE := 535` and `SUPPORT_SGX$(SGXCORE)` are examples that an exclusive search for SGX535 would miss.
+6. Confirm file history by `git log --all --full-history --name-status` and boundary snapshots; record hashes and compare offsets numerically.
 
-O [método da varredura](archaeology-data/scan-method.py.txt) foi preservado como texto documental. Não executa scripts de build nem binários das referências. [Registro de fontes e hashes](archaeology-data/source-registry.json).
+The [scan method](archaeology-data/scan-method.py.txt) was preserved as documentary text. It does not execute build scripts or binaries from the references. [Source and hash registry](archaeology-data/source-registry.json).
 
-## Resultado por padrão
+## Default Result
 
-Contagens de **linhas por blob único**, não quantidade de commits, ocorrências de palavra ou afirmações sobre hardware. Sobreposições são possíveis; a busca por substring é deliberadamente ampla. Em Linux, USSE/PSB podem ocorrer em palavras ou subsistemas alheios à GPU.
+Counts of **lines per single blob**, not number of commits, word occurrences, or statements about hardware. Overlaps are possible; substring search is deliberately broad. On Linux, USSE/PSB may occur in words or subsystems unrelated to the GPU.
 
-| Padrão | TI KM | TI UM texto | Linux texto |
+| Standard | IT KM | IT A text | Linux text |
 | --- | --- | --- | --- |
 | `sgx535defs.h` | 4 | 0 | 0 |
 | `SGX535` | 35 | 0 | 3 |
@@ -51,28 +51,28 @@ Contagens de **linhas por blob único**, não quantidade de commits, ocorrência
 | `PSB` | 6568 | 0 | 4233 |
 | `GMA500` | 4 | 0 | 28 |
 
-**CONFIRMED:** o zero literal para `SUPPORT_SGX535` não é ausência da opção: o build emite `SUPPORT_SGX$(SGXCORE)`, e o alvo Poulsbo fixa 535. A expansão resultante é **INFERRED estaticamente**, sem executar Make. [CORE:488–494](archaeology-data/CORE.txt#L488); [PBUILD:47–50](archaeology-data/PBUILD.txt#L47).
+**CONFIRMED:** the literal zero for `SUPPORT_SGX535` is not the absence of the option: the build emits `SUPPORT_SGX$(SGXCORE)`, and the Poulsbo target fixes 535. The resulting expansion is **INFERRED statically**, without running Make. [CORE:488–494](archaeology-data/CORE.txt#L488); [PBUILD:47–50](archaeology-data/PBUILD.txt#L47).
 
-**CONFIRMED:** as referências textuais ao nome exato do header são includes em variantes de `sgxdefs.h`; não foi encontrada uma lista de manifesto textual que acrescente um hash do arquivo. O Git, entretanto, dá hash e associação inequívoca a árvores. [DEFS:57–61](archaeology-data/DEFS.txt#L57); [matches KM](archaeology-data/omap5-sgx-ddk-linux-matches.tsv); [contexts KM](archaeology-data/omap5-sgx-ddk-linux-contexts.tsv). Os manifestos binários UM não foram convertidos integralmente; um resultado negativo sobre seu conteúdo permanece **UNKNOWN**.
+**CONFIRMED:** the textual references to the exact name of the header are included in variants of `sgxdefs.h`; no textual manifest list adding a file hash was found. Git, however, provides hash and unambiguous association to trees. [DEFS:57–61](archaeology-data/DEFS.txt#L57); [matches KM](archaeology-data/omap5-sgx-ddk-linux-matches.tsv); [contexts KM](archaeology-data/omap5-sgx-ddk-linux-contexts.tsv). The UM binary manifests were not fully converted; a negative result regarding their content remains **UNKNOWN**.
 
-## Descobertas históricas principais
+## Main historical discoveries
 
-| Descoberta | Commit/ref | Arquivo e linhas | Confidence |
+| Discovery | Commit/ref | File and lines | Confidence |
 | --- | --- | --- | --- |
-| Importação inicial 1.9 já referencia 535, mas árvore não contém header | KM `1450ae2166ad952ef30197e79518b51577a629e6`; ancestral de master | `services4/srvkm/hwdefs/sgxdefs.h`:54–58; árvore em boundary-trees | CONFIRMED |
+| Initial import 1.9 already references 535, but tree does not contain header | KM `1450ae2166ad952ef30197e79518b51577a629e6`; ancestor of master | `services4/srvkm/hwdefs/sgxdefs.h`:54–58; tree in boundary-trees | CONFIRMED |
 | Primeiro ingresso encontrado de H535, DDK 1.13 experimental | KM `322bcda5f3076037e2e20ef9209f4f4d575a7d5f`; ancestral de origin/dra7/experimental | [H535:1–43](archaeology-data/H535.txt#L1); [VER13:51–60](archaeology-data/VER13.txt#L51) | CONFIRMED |
-| Renomeação com conteúdo igual para eurasia_km | KM `a24ae6b2573b7eb1dc94473aa9953b964079b5c6`; origin/dra7/experimental | paths de H535, R100; linhas 1–739 preservadas | CONFIRMED |
-| Importação 1.14 inclui header e plataforma Poulsbo | KM `cb46ba4d0c900f89f7ec0284f9803d476bfa98de`; origin/img-sgx | [PBUILD:42–52](archaeology-data/PBUILD.txt#L42); [PSYS:46–111](archaeology-data/PSYS.txt#L46) | CONFIRMED |
-| Outra linhagem reaplica importação 1.14 sem prefixo eurasia_km | KM `7c89d3433bd96d8b2755ca172e99198fa4b69c05`; ancestral de origin/1.17.4948957/mesa/k6.1 | `services4/srvkm/hwdefs/sgx535defs.h`:1–739, mesmo blob | CONFIRMED |
-| Remoção do alvo e da integração Poulsbo, não de H535 | KM `3b6ca1d1f47a951c1f93ba5f9b693b25474d0798` e replay `636e957a340ebba5c10fb8a5c5b3f30b85078c66` | PBUILD e PSYSC, arquivo inteiro removido; H535 permanece | CONFIRMED |
+| Renaming with identical content for eurasia_km | KM `a24ae6b2573b7eb1dc94473aa9953b964079b5c6`; origin/dra7/experimental | H535, R100 paths; lines 1–739 preserved | CONFIRMED |
+| Import 1.14 includes header and Poulsbo platform | KM `cb46ba4d0c900f89f7ec0284f9803d476bfa98de`; origin/img-sgx | [PBUILD:42–52](archaeology-data/PBUILD.txt#L42); [PSYS:46–111](archaeology-data/PSYS.txt#L46) | CONFIRMED |
+| Another lineage reapplies import 1.14 without eurasia_km prefix | KM `7c89d3433bd96d8b2755ca172e99198fa4b69c05`; ancestor of origin/1.17.4948957/mesa/k6.1 | `services4/srvkm/hwdefs/sgx535defs.h`:1–739, same blob | CONFIRMED |
+| Removal of the target and Poulsbo integration, not of H535 | KM `3b6ca1d1f47a951c1f93ba5f9b693b25474d0798` and replay `636e957a340ebba5c10fb8a5c5b3f30b85078c66` | PBUILD and PSYSC, entire file removed; H535 remains | CONFIRMED |
 
-Fontes das operações de árvore (linhas de código N/A): [header-history.txt](archaeology-data/header-history.txt), [poulsbo-history.txt](archaeology-data/poulsbo-history.txt), [boundary-trees.txt](archaeology-data/boundary-trees.txt). Datas de autor e committer foram preservadas: uma data de autor antiga em commit reaplicado não prova que aquela árvore foi publicada naquele ano.
+Sources of tree operations (lines of code N/A): [header-history.txt](archaeology-data/header-history.txt), [poulsbo-history.txt](archaeology-data/poulsbo-history.txt), [boundary-trees.txt](archaeology-data/boundary-trees.txt). Author and committer dates were preserved: an old author date in a reapplied commit does not prove that that tree was published in that year.
 
-## Catálogo de fontes
+## Source Catalog
 
-Cada ID abaixo é uma citação completa recuperável com `git -C references/REPO show COMMIT:ARQUIVO`. As referências `ID:linha` nos documentos usam **linhas originais do blob**, também preservadas no snapshot `.txt`. Confidence dos registros: **CONFIRMED** para identidade e conteúdo; inferências são marcadas no texto consumidor.
+Each ID below is a complete citation retrievable with `git -C references/REPO show COMMIT:FILE`. The `ID:line` references in the documents use **original lines from the blob**, also preserved in the snapshot `.txt`. Confidence of the records: **CONFIRMED** for identity and content; inferences are marked in the consuming text.
 
-| ID | Repositório | Commit | Arquivo original | Blob / snapshot |
+| ID | Repository | Commit | Original file | Blob / snapshot |
 | --- | --- | --- | --- | --- |
 | H535 | `omap5-sgx-ddk-linux` | `322bcda5f3076037e2e20ef9209f4f4d575a7d5f` | `services4/srvkm/hwdefs/sgx535defs.h` | `8039da4a73ef9ee3e929edb64244d2891bc9239e` / [H535.txt](archaeology-data/H535.txt) |
 | PBUILD | `omap5-sgx-ddk-linux` | `cb46ba4d0c900f89f7ec0284f9803d476bfa98de` | `eurasia_km/eurasiacon/build/linux2/pc_i686_poulsbo_d0_linux/Makefile` | `86c0adfe78965f7d304e912f90a302dcfd4f119c` / [PBUILD.txt](archaeology-data/PBUILD.txt) |
@@ -97,4 +97,4 @@ Cada ID abaixo é uma citação completa recuperável com `git -C references/REP
 | UM19 | `omap5-sgx-ddk-um-linux` | `225230e5dae17836a8acf6f6e9fb6e8200af4dea` | `README` | `5284065ebe40bbbfb044e720d325ed7b72390032` / [UM19.txt](archaeology-data/UM19.txt) |
 | UMROOT | `omap5-sgx-ddk-um-linux` | `348ea7e08d8b6e7f46f73065ad3ba75614edc12c` | `README` | `9e40cefcb46480543c2413014a4407196c2c9539` / [UMROOT.txt](archaeology-data/UMROOT.txt) |
 
-Snapshots são cópias documentais com avisos originais, não código novo de driver. Licenças não se propagam automaticamente do KM ao UM ou do header a outros arquivos. Binários UM permanecem fora desses snapshots. A análise registra proveniência, sem declarar permissão geral de reutilização.
+Snapshots are documentary copies with original notices, not new driver code. Licenses do not automatically propagate from the KM to the UM or from the header to other files. UM binaries remain outside these snapshots. The analysis records provenance, without declaring general permission for reuse.

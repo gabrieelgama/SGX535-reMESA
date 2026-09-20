@@ -1,0 +1,766 @@
+repository,representative_commit,file,line,text,commit_occurrences
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/include4/servicesext.h,91,"	PVRSRV_ERROR_CORE_REVISION_MISMATCH,",166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/include/pvrsrv_errors.h,105,"		case PVRSRV_ERROR_CORE_REVISION_MISMATCH:		return ""PVRSRV_ERROR_CORE_REVISION_MISMATCH"";",166
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/include/sgx_ukernel_status_codes.h,540,#define MKTC_CPRI_ABORT_CORE_IDX				0xAD001245,67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/include/sgx_ukernel_status_codes.h,541,MKTC_ST(MKTC_CPRI_ABORT_CORE_IDX),67
+omap5-sgx-ddk-linux,a24ae6b2573b7eb1dc94473aa9953b964079b5c6,eurasia_km/services4/include/sgx_ukernel_status_codes.h,556,#define MKTC_CPRI_ABORT_CORE_IDX				0xAD001245,1
+omap5-sgx-ddk-linux,a24ae6b2573b7eb1dc94473aa9953b964079b5c6,eurasia_km/services4/include/sgx_ukernel_status_codes.h,557,MKTC_ST(MKTC_CPRI_ABORT_CORE_IDX),1
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/include/sgx_ukernel_status_codes.h,558,#define MKTC_CPRI_ABORT_CORE_IDX				0xAD001245,98
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/include/sgx_ukernel_status_codes.h,559,MKTC_ST(MKTC_CPRI_ABORT_CORE_IDX),98
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/devices/sgx/sgxconfig.h,251,	#define SGX_CORE_IDENTIFIED,67
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/devices/sgx/sgxconfig.h,325,	#define SGX_CORE_IDENTIFIED,99
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/devices/sgx/sgxconfig.h,349,	#define SGX_CORE_IDENTIFIED,67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/devices/sgx/sgxconfig.h,353,#if !defined(SGX_CORE_IDENTIFIED),67
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/devices/sgx/sgxconfig.h,419,	#define SGX_CORE_IDENTIFIED,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/devices/sgx/sgxconfig.h,423,#if !defined(SGX_CORE_IDENTIFIED),99
+omap5-sgx-ddk-linux,872aa64b227cadbc97755a4192919dd5ca637971,eurasia_km/services4/srvkm/devices/sgx/sgxinit.c,1283,"		SGXDumpDebugReg(psDevInfo, 0, ""EUR_CR_CORE_ID:          "", EUR_CR_CORE_ID);",21
+omap5-sgx-ddk-linux,872aa64b227cadbc97755a4192919dd5ca637971,eurasia_km/services4/srvkm/devices/sgx/sgxinit.c,1284,"		SGXDumpDebugReg(psDevInfo, 0, ""EUR_CR_CORE_REVISION:    "", EUR_CR_CORE_REVISION);",21
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/devices/sgx/sgxinit.c,1288,"		SGXDumpDebugReg(psDevInfo, 0, ""EUR_CR_CORE_ID:          "", EUR_CR_CORE_ID);",46
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/devices/sgx/sgxinit.c,1289,"		SGXDumpDebugReg(psDevInfo, 0, ""EUR_CR_CORE_REVISION:    "", EUR_CR_CORE_REVISION);",46
+omap5-sgx-ddk-linux,82baf103b171ce138bef79c4194497a108e22df8,eurasia_km/services4/srvkm/devices/sgx/sgxinit.c,1350,"		SGXDumpDebugReg(psDevInfo, 0, ""EUR_CR_CORE_ID:          "", EUR_CR_CORE_ID);",9
+omap5-sgx-ddk-linux,82baf103b171ce138bef79c4194497a108e22df8,eurasia_km/services4/srvkm/devices/sgx/sgxinit.c,1351,"		SGXDumpDebugReg(psDevInfo, 0, ""EUR_CR_CORE_REVISION:    "", EUR_CR_CORE_REVISION);",9
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/devices/sgx/sgxinit.c,1353,"		SGXDumpDebugReg(psDevInfo, 0, ""EUR_CR_CORE_ID:          "", EUR_CR_CORE_ID);",90
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/devices/sgx/sgxinit.c,1354,"		SGXDumpDebugReg(psDevInfo, 0, ""EUR_CR_CORE_REVISION:    "", EUR_CR_CORE_REVISION);",90
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx520defs.h,83,/* Register EUR_CR_CORE_ID */,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx520defs.h,84,#define EUR_CR_CORE_ID                      0x0010,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx520defs.h,85,#define EUR_CR_CORE_ID_CONFIG_MASK          0x0000FFFFU,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx520defs.h,86,#define EUR_CR_CORE_ID_CONFIG_SHIFT         0,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx520defs.h,87,#define EUR_CR_CORE_ID_ID_MASK              0xFFFF0000U,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx520defs.h,88,#define EUR_CR_CORE_ID_ID_SHIFT             16,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx520defs.h,89,/* Register EUR_CR_CORE_REVISION */,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx520defs.h,90,#define EUR_CR_CORE_REVISION                0x0014,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx520defs.h,91,#define EUR_CR_CORE_REVISION_MAINTENANCE_MASK 0x000000FFU,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx520defs.h,92,#define EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT 0,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx520defs.h,93,#define EUR_CR_CORE_REVISION_MINOR_MASK     0x0000FF00U,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx520defs.h,94,#define EUR_CR_CORE_REVISION_MINOR_SHIFT    8,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx520defs.h,95,#define EUR_CR_CORE_REVISION_MAJOR_MASK     0x00FF0000U,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx520defs.h,96,#define EUR_CR_CORE_REVISION_MAJOR_SHIFT    16,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx520defs.h,97,#define EUR_CR_CORE_REVISION_DESIGNER_MASK  0xFF000000U,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx520defs.h,98,#define EUR_CR_CORE_REVISION_DESIGNER_SHIFT 24,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx530defs.h,100,#define EUR_CR_CORE_REVISION_MINOR_SHIFT    8,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx530defs.h,101,#define EUR_CR_CORE_REVISION_MAJOR_MASK     0x00FF0000U,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx530defs.h,102,#define EUR_CR_CORE_REVISION_MAJOR_SHIFT    16,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx530defs.h,103,#define EUR_CR_CORE_REVISION_DESIGNER_MASK  0xFF000000U,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx530defs.h,104,#define EUR_CR_CORE_REVISION_DESIGNER_SHIFT 24,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx530defs.h,89,/* Register EUR_CR_CORE_ID */,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx530defs.h,90,#define EUR_CR_CORE_ID                      0x0010,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx530defs.h,91,#define EUR_CR_CORE_ID_CONFIG_MASK          0x0000FFFFU,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx530defs.h,92,#define EUR_CR_CORE_ID_CONFIG_SHIFT         0,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx530defs.h,93,#define EUR_CR_CORE_ID_ID_MASK              0xFFFF0000U,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx530defs.h,94,#define EUR_CR_CORE_ID_ID_SHIFT             16,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx530defs.h,95,/* Register EUR_CR_CORE_REVISION */,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx530defs.h,96,#define EUR_CR_CORE_REVISION                0x0014,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx530defs.h,97,#define EUR_CR_CORE_REVISION_MAINTENANCE_MASK 0x000000FFU,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx530defs.h,98,#define EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT 0,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx530defs.h,99,#define EUR_CR_CORE_REVISION_MINOR_MASK     0x0000FF00U,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx531defs.h,161,/* Register EUR_CR_CORE_ID */,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx531defs.h,162,#define EUR_CR_CORE_ID                      0x0020,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx531defs.h,163,#define EUR_CR_CORE_ID_CONFIG_MASK          0x0000FFFFU,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx531defs.h,164,#define EUR_CR_CORE_ID_CONFIG_SHIFT         0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx531defs.h,165,#define EUR_CR_CORE_ID_ID_MASK              0xFFFF0000U,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx531defs.h,166,#define EUR_CR_CORE_ID_ID_SHIFT             16,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx531defs.h,167,/* Register EUR_CR_CORE_REVISION */,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx531defs.h,168,#define EUR_CR_CORE_REVISION                0x0024,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx531defs.h,169,#define EUR_CR_CORE_REVISION_MAINTENANCE_MASK 0x000000FFU,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx531defs.h,170,#define EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT 0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx531defs.h,171,#define EUR_CR_CORE_REVISION_MINOR_MASK     0x0000FF00U,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx531defs.h,172,#define EUR_CR_CORE_REVISION_MINOR_SHIFT    8,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx531defs.h,173,#define EUR_CR_CORE_REVISION_MAJOR_MASK     0x00FF0000U,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx531defs.h,174,#define EUR_CR_CORE_REVISION_MAJOR_SHIFT    16,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx531defs.h,175,#define EUR_CR_CORE_REVISION_DESIGNER_MASK  0xFF000000U,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx531defs.h,176,#define EUR_CR_CORE_REVISION_DESIGNER_SHIFT 24,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx535defs.h,100,#define EUR_CR_CORE_REVISION_MINOR_SHIFT    8,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx535defs.h,101,#define EUR_CR_CORE_REVISION_MAJOR_MASK     0x00FF0000U,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx535defs.h,102,#define EUR_CR_CORE_REVISION_MAJOR_SHIFT    16,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx535defs.h,103,#define EUR_CR_CORE_REVISION_DESIGNER_MASK  0xFF000000U,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx535defs.h,104,#define EUR_CR_CORE_REVISION_DESIGNER_SHIFT 24,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx535defs.h,89,/* Register EUR_CR_CORE_ID */,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx535defs.h,90,#define EUR_CR_CORE_ID                      0x0010,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx535defs.h,91,#define EUR_CR_CORE_ID_CONFIG_MASK          0x0000FFFFU,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx535defs.h,92,#define EUR_CR_CORE_ID_CONFIG_SHIFT         0,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx535defs.h,93,#define EUR_CR_CORE_ID_ID_MASK              0xFFFF0000U,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx535defs.h,94,#define EUR_CR_CORE_ID_ID_SHIFT             16,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx535defs.h,95,/* Register EUR_CR_CORE_REVISION */,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx535defs.h,96,#define EUR_CR_CORE_REVISION                0x0014,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx535defs.h,97,#define EUR_CR_CORE_REVISION_MAINTENANCE_MASK 0x000000FFU,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx535defs.h,98,#define EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT 0,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx535defs.h,99,#define EUR_CR_CORE_REVISION_MINOR_MASK     0x0000FF00U,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx540defs.h,165,/* Register EUR_CR_CORE_ID */,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx540defs.h,166,#define EUR_CR_CORE_ID                      0x0020,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx540defs.h,167,#define EUR_CR_CORE_ID_CONFIG_MASK          0x0000FFFFU,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx540defs.h,168,#define EUR_CR_CORE_ID_CONFIG_SHIFT         0,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx540defs.h,169,#define EUR_CR_CORE_ID_ID_MASK              0xFFFF0000U,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx540defs.h,170,#define EUR_CR_CORE_ID_ID_SHIFT             16,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx540defs.h,171,/* Register EUR_CR_CORE_REVISION */,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx540defs.h,172,#define EUR_CR_CORE_REVISION                0x0024,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx540defs.h,173,#define EUR_CR_CORE_REVISION_MAINTENANCE_MASK 0x000000FFU,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx540defs.h,174,#define EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT 0,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx540defs.h,175,#define EUR_CR_CORE_REVISION_MINOR_MASK     0x0000FF00U,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx540defs.h,176,#define EUR_CR_CORE_REVISION_MINOR_SHIFT    8,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx540defs.h,177,#define EUR_CR_CORE_REVISION_MAJOR_MASK     0x00FF0000U,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx540defs.h,178,#define EUR_CR_CORE_REVISION_MAJOR_SHIFT    16,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx540defs.h,179,#define EUR_CR_CORE_REVISION_DESIGNER_MASK  0xFF000000U,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx540defs.h,180,#define EUR_CR_CORE_REVISION_DESIGNER_SHIFT 24,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,235,/* Register EUR_CR_CORE_ID */,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,236,#define EUR_CR_CORE_ID                      0x0020,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,237,#define EUR_CR_CORE_ID_CONFIG_MULTI_MASK    0x00000001U,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,238,#define EUR_CR_CORE_ID_CONFIG_MULTI_SHIFT   0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,239,#define EUR_CR_CORE_ID_CONFIG_MULTI_SIGNED  0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,240,#define EUR_CR_CORE_ID_CONFIG_BASE_MASK     0x00000002U,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,241,#define EUR_CR_CORE_ID_CONFIG_BASE_SHIFT    1,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,242,#define EUR_CR_CORE_ID_CONFIG_BASE_SIGNED   0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,243,#define EUR_CR_CORE_ID_CONFIG_MASK          0x000000FCU,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,244,#define EUR_CR_CORE_ID_CONFIG_SHIFT         2,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,245,#define EUR_CR_CORE_ID_CONFIG_SIGNED        0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,246,#define EUR_CR_CORE_ID_CONFIG_CORES_MASK    0x00000F00U,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,247,#define EUR_CR_CORE_ID_CONFIG_CORES_SHIFT   8,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,248,#define EUR_CR_CORE_ID_CONFIG_CORES_SIGNED  0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,249,#define EUR_CR_CORE_ID_CONFIG_SLC_MASK      0x0000F000U,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,250,#define EUR_CR_CORE_ID_CONFIG_SLC_SHIFT     12,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,251,#define EUR_CR_CORE_ID_CONFIG_SLC_SIGNED    0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,252,#define EUR_CR_CORE_ID_ID_MASK              0xFFFF0000U,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,253,#define EUR_CR_CORE_ID_ID_SHIFT             16,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,254,#define EUR_CR_CORE_ID_ID_SIGNED            0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,255,/* Register EUR_CR_CORE_REVISION */,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,256,#define EUR_CR_CORE_REVISION                0x0024,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,257,#define EUR_CR_CORE_REVISION_MAINTENANCE_MASK 0x000000FFU,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,258,#define EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT 0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,259,#define EUR_CR_CORE_REVISION_MAINTENANCE_SIGNED 0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,260,#define EUR_CR_CORE_REVISION_MINOR_MASK     0x0000FF00U,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,261,#define EUR_CR_CORE_REVISION_MINOR_SHIFT    8,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,262,#define EUR_CR_CORE_REVISION_MINOR_SIGNED   0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,263,#define EUR_CR_CORE_REVISION_MAJOR_MASK     0x00FF0000U,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,264,#define EUR_CR_CORE_REVISION_MAJOR_SHIFT    16,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,265,#define EUR_CR_CORE_REVISION_MAJOR_SIGNED   0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,266,#define EUR_CR_CORE_REVISION_DESIGNER_MASK  0xFF000000U,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,267,#define EUR_CR_CORE_REVISION_DESIGNER_SHIFT 24,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543_v1.164defs.h,268,#define EUR_CR_CORE_REVISION_DESIGNER_SIGNED 0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,235,/* Register EUR_CR_CORE_ID */,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,236,#define EUR_CR_CORE_ID                      0x0020,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,237,#define EUR_CR_CORE_ID_CONFIG_MULTI_MASK    0x00000001U,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,238,#define EUR_CR_CORE_ID_CONFIG_MULTI_SHIFT   0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,239,#define EUR_CR_CORE_ID_CONFIG_MULTI_SIGNED  0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,240,#define EUR_CR_CORE_ID_CONFIG_BASE_MASK     0x00000002U,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,241,#define EUR_CR_CORE_ID_CONFIG_BASE_SHIFT    1,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,242,#define EUR_CR_CORE_ID_CONFIG_BASE_SIGNED   0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,243,#define EUR_CR_CORE_ID_CONFIG_MASK          0x000000FCU,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,244,#define EUR_CR_CORE_ID_CONFIG_SHIFT         2,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,245,#define EUR_CR_CORE_ID_CONFIG_SIGNED        0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,246,#define EUR_CR_CORE_ID_CONFIG_CORES_MASK    0x00000F00U,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,247,#define EUR_CR_CORE_ID_CONFIG_CORES_SHIFT   8,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,248,#define EUR_CR_CORE_ID_CONFIG_CORES_SIGNED  0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,249,#define EUR_CR_CORE_ID_CONFIG_SLC_MASK      0x0000F000U,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,250,#define EUR_CR_CORE_ID_CONFIG_SLC_SHIFT     12,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,251,#define EUR_CR_CORE_ID_CONFIG_SLC_SIGNED    0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,252,#define EUR_CR_CORE_ID_ID_MASK              0xFFFF0000U,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,253,#define EUR_CR_CORE_ID_ID_SHIFT             16,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,254,#define EUR_CR_CORE_ID_ID_SIGNED            0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,255,/* Register EUR_CR_CORE_REVISION */,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,256,#define EUR_CR_CORE_REVISION                0x0024,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,257,#define EUR_CR_CORE_REVISION_MAINTENANCE_MASK 0x000000FFU,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,258,#define EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT 0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,259,#define EUR_CR_CORE_REVISION_MAINTENANCE_SIGNED 0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,260,#define EUR_CR_CORE_REVISION_MINOR_MASK     0x0000FF00U,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,261,#define EUR_CR_CORE_REVISION_MINOR_SHIFT    8,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,262,#define EUR_CR_CORE_REVISION_MINOR_SIGNED   0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,263,#define EUR_CR_CORE_REVISION_MAJOR_MASK     0x00FF0000U,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,264,#define EUR_CR_CORE_REVISION_MAJOR_SHIFT    16,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,265,#define EUR_CR_CORE_REVISION_MAJOR_SIGNED   0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,266,#define EUR_CR_CORE_REVISION_DESIGNER_MASK  0xFF000000U,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,267,#define EUR_CR_CORE_REVISION_DESIGNER_SHIFT 24,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx543defs.h,268,#define EUR_CR_CORE_REVISION_DESIGNER_SIGNED 0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,235,/* Register EUR_CR_CORE_ID */,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,236,#define EUR_CR_CORE_ID                      0x0020,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,237,#define EUR_CR_CORE_ID_CONFIG_MULTI_MASK    0x00000001U,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,238,#define EUR_CR_CORE_ID_CONFIG_MULTI_SHIFT   0,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,239,#define EUR_CR_CORE_ID_CONFIG_MULTI_SIGNED  0,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,240,#define EUR_CR_CORE_ID_CONFIG_BASE_MASK     0x00000002U,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,241,#define EUR_CR_CORE_ID_CONFIG_BASE_SHIFT    1,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,242,#define EUR_CR_CORE_ID_CONFIG_BASE_SIGNED   0,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,243,#define EUR_CR_CORE_ID_CONFIG_MASK          0x000000FCU,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,244,#define EUR_CR_CORE_ID_CONFIG_SHIFT         2,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,245,#define EUR_CR_CORE_ID_CONFIG_SIGNED        0,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,246,#define EUR_CR_CORE_ID_CONFIG_CORES_MASK    0x00000F00U,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,247,#define EUR_CR_CORE_ID_CONFIG_CORES_SHIFT   8,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,248,#define EUR_CR_CORE_ID_CONFIG_CORES_SIGNED  0,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,249,#define EUR_CR_CORE_ID_CONFIG_SLC_MASK      0x0000F000U,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,250,#define EUR_CR_CORE_ID_CONFIG_SLC_SHIFT     12,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,251,#define EUR_CR_CORE_ID_CONFIG_SLC_SIGNED    0,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,252,#define EUR_CR_CORE_ID_ID_MASK              0xFFFF0000U,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,253,#define EUR_CR_CORE_ID_ID_SHIFT             16,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,254,#define EUR_CR_CORE_ID_ID_SIGNED            0,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,255,/* Register EUR_CR_CORE_REVISION */,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,256,#define EUR_CR_CORE_REVISION                0x0024,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,257,#define EUR_CR_CORE_REVISION_MAINTENANCE_MASK 0x000000FFU,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,258,#define EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT 0,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,259,#define EUR_CR_CORE_REVISION_MAINTENANCE_SIGNED 0,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,260,#define EUR_CR_CORE_REVISION_MINOR_MASK     0x0000FF00U,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,261,#define EUR_CR_CORE_REVISION_MINOR_SHIFT    8,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,262,#define EUR_CR_CORE_REVISION_MINOR_SIGNED   0,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,263,#define EUR_CR_CORE_REVISION_MAJOR_MASK     0x00FF0000U,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,264,#define EUR_CR_CORE_REVISION_MAJOR_SHIFT    16,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,265,#define EUR_CR_CORE_REVISION_MAJOR_SIGNED   0,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,266,#define EUR_CR_CORE_REVISION_DESIGNER_MASK  0xFF000000U,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,267,#define EUR_CR_CORE_REVISION_DESIGNER_SHIFT 24,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx544defs.h,268,#define EUR_CR_CORE_REVISION_DESIGNER_SIGNED 0,166
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx545defs.h,200,/* Register EUR_CR_CORE_ID */,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx545defs.h,201,#define EUR_CR_CORE_ID                      0x001C,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx545defs.h,202,#define EUR_CR_CORE_ID_CONFIG_MASK          0x0000FFFFU,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx545defs.h,203,#define EUR_CR_CORE_ID_CONFIG_SHIFT         0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx545defs.h,204,#define EUR_CR_CORE_ID_CONFIG_SIGNED        0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx545defs.h,205,#define EUR_CR_CORE_ID_ID_MASK              0xFFFF0000U,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx545defs.h,206,#define EUR_CR_CORE_ID_ID_SHIFT             16,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx545defs.h,207,#define EUR_CR_CORE_ID_ID_SIGNED            0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx545defs.h,208,/* Register EUR_CR_CORE_REVISION */,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx545defs.h,209,#define EUR_CR_CORE_REVISION                0x0020,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx545defs.h,210,#define EUR_CR_CORE_REVISION_MAINTENANCE_MASK 0x000000FFU,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx545defs.h,211,#define EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT 0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx545defs.h,212,#define EUR_CR_CORE_REVISION_MAINTENANCE_SIGNED 0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx545defs.h,213,#define EUR_CR_CORE_REVISION_MINOR_MASK     0x0000FF00U,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx545defs.h,214,#define EUR_CR_CORE_REVISION_MINOR_SHIFT    8,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx545defs.h,215,#define EUR_CR_CORE_REVISION_MINOR_SIGNED   0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx545defs.h,216,#define EUR_CR_CORE_REVISION_MAJOR_MASK     0x00FF0000U,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx545defs.h,217,#define EUR_CR_CORE_REVISION_MAJOR_SHIFT    16,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx545defs.h,218,#define EUR_CR_CORE_REVISION_MAJOR_SIGNED   0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx545defs.h,219,#define EUR_CR_CORE_REVISION_DESIGNER_MASK  0xFF000000U,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx545defs.h,220,#define EUR_CR_CORE_REVISION_DESIGNER_SHIFT 24,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgx545defs.h,221,#define EUR_CR_CORE_REVISION_DESIGNER_SIGNED 0,75
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h,100,	#define SGX_CORE_ID										SGX_CORE_ID_543,98
+omap5-sgx-ddk-linux,a24ae6b2573b7eb1dc94473aa9953b964079b5c6,eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h,101,	#define SGX_CORE_ID										SGX_CORE_ID_543,1
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h,109,	#define SGX_CORE_ID										SGX_CORE_ID_544,67
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h,127,	#define SGX_CORE_ID										SGX_CORE_ID_544,98
+omap5-sgx-ddk-linux,a24ae6b2573b7eb1dc94473aa9953b964079b5c6,eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h,128,	#define SGX_CORE_ID										SGX_CORE_ID_544,1
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h,136,	#define SGX_CORE_ID										SGX_CORE_ID_545,67
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h,156,	#define SGX_CORE_ID										SGX_CORE_ID_545,98
+omap5-sgx-ddk-linux,a24ae6b2573b7eb1dc94473aa9953b964079b5c6,eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h,157,	#define SGX_CORE_ID										SGX_CORE_ID_545,1
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h,166,	#define SGX_CORE_ID										SGX_CORE_ID_554,67
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h,184,	#define SGX_CORE_ID										SGX_CORE_ID_554,98
+omap5-sgx-ddk-linux,a24ae6b2573b7eb1dc94473aa9953b964079b5c6,eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h,185,	#define SGX_CORE_ID										SGX_CORE_ID_554,1
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h,43,	#define SGX_CORE_ID										SGX_CORE_ID_520,166
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h,50,	#define SGX_CORE_ID										SGX_CORE_ID_530,67
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h,51,	#define SGX_CORE_ID										SGX_CORE_ID_5300,99
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h,57,	#define SGX_CORE_ID										SGX_CORE_ID_531,67
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h,61,	#define SGX_CORE_ID										SGX_CORE_ID_530,98
+omap5-sgx-ddk-linux,a24ae6b2573b7eb1dc94473aa9953b964079b5c6,eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h,62,	#define SGX_CORE_ID										SGX_CORE_ID_530,1
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h,65,	#define SGX_CORE_ID										SGX_CORE_ID_535,67
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h,69,	#define SGX_CORE_ID										SGX_CORE_ID_531,98
+omap5-sgx-ddk-linux,a24ae6b2573b7eb1dc94473aa9953b964079b5c6,eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h,70,	#define SGX_CORE_ID										SGX_CORE_ID_531,1
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h,77,	#define SGX_CORE_ID										SGX_CORE_ID_540,67
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h,78,	#define SGX_CORE_ID										SGX_CORE_ID_535,98
+omap5-sgx-ddk-linux,a24ae6b2573b7eb1dc94473aa9953b964079b5c6,eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h,79,	#define SGX_CORE_ID										SGX_CORE_ID_535,1
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h,85,	#define SGX_CORE_ID										SGX_CORE_ID_543,67
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h,91,	#define SGX_CORE_ID										SGX_CORE_ID_540,98
+omap5-sgx-ddk-linux,a24ae6b2573b7eb1dc94473aa9953b964079b5c6,eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h,92,	#define SGX_CORE_ID										SGX_CORE_ID_540,1
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,303,/* Register EUR_CR_MASTER_CORE_ID */,67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,304,#define EUR_CR_MASTER_CORE_ID               0x4010,67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,305,#define EUR_CR_MASTER_CORE_ID_CONFIG_MULTI_MASK 0x00000001U,67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,306,#define EUR_CR_MASTER_CORE_ID_CONFIG_MULTI_SHIFT 0,67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,307,#define EUR_CR_MASTER_CORE_ID_CONFIG_MULTI_SIGNED 0,67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,308,#define EUR_CR_MASTER_CORE_ID_CONFIG_BASE_MASK 0x00000002U,67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,309,#define EUR_CR_MASTER_CORE_ID_CONFIG_BASE_SHIFT 1,67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,310,#define EUR_CR_MASTER_CORE_ID_CONFIG_BASE_SIGNED 0,67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,311,#define EUR_CR_MASTER_CORE_ID_CONFIG_MASK   0x000000FCU,67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,312,#define EUR_CR_MASTER_CORE_ID_CONFIG_SHIFT  2,67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,313,#define EUR_CR_MASTER_CORE_ID_CONFIG_SIGNED 0,67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,314,#define EUR_CR_MASTER_CORE_ID_CONFIG_CORES_MASK 0x00000F00U,67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,315,#define EUR_CR_MASTER_CORE_ID_CONFIG_CORES_SHIFT 8,67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,316,#define EUR_CR_MASTER_CORE_ID_CONFIG_CORES_SIGNED 0,67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,317,#define EUR_CR_MASTER_CORE_ID_CONFIG_SLC_MASK 0x0000F000U,67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,318,#define EUR_CR_MASTER_CORE_ID_CONFIG_SLC_SHIFT 12,67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,319,#define EUR_CR_MASTER_CORE_ID_CONFIG_SLC_SIGNED 0,67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,320,#define EUR_CR_MASTER_CORE_ID_ID_MASK       0xFFFF0000U,67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,321,#define EUR_CR_MASTER_CORE_ID_ID_SHIFT      16,67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,322,#define EUR_CR_MASTER_CORE_ID_ID_SIGNED     0,67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,323,/* Register EUR_CR_MASTER_CORE_REVISION */,67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,324,#define EUR_CR_MASTER_CORE_REVISION         0x4014,67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,325,#define EUR_CR_MASTER_CORE_REVISION_MAINTENANCE_MASK 0x000000FFU,67
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,325,/* Register EUR_CR_MASTER_CORE_ID */,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,326,#define EUR_CR_MASTER_CORE_ID               0x4010,99
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,326,#define EUR_CR_MASTER_CORE_REVISION_MAINTENANCE_SHIFT 0,67
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,327,#define EUR_CR_MASTER_CORE_ID_CONFIG_MULTI_MASK 0x00000001U,99
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,327,#define EUR_CR_MASTER_CORE_REVISION_MAINTENANCE_SIGNED 0,67
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,328,#define EUR_CR_MASTER_CORE_ID_CONFIG_MULTI_SHIFT 0,99
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,328,#define EUR_CR_MASTER_CORE_REVISION_MINOR_MASK 0x0000FF00U,67
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,329,#define EUR_CR_MASTER_CORE_ID_CONFIG_MULTI_SIGNED 0,99
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,329,#define EUR_CR_MASTER_CORE_REVISION_MINOR_SHIFT 8,67
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,330,#define EUR_CR_MASTER_CORE_ID_CONFIG_BASE_MASK 0x00000002U,99
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,330,#define EUR_CR_MASTER_CORE_REVISION_MINOR_SIGNED 0,67
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,331,#define EUR_CR_MASTER_CORE_ID_CONFIG_BASE_SHIFT 1,99
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,331,#define EUR_CR_MASTER_CORE_REVISION_MAJOR_MASK 0x00FF0000U,67
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,332,#define EUR_CR_MASTER_CORE_ID_CONFIG_BASE_SIGNED 0,99
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,332,#define EUR_CR_MASTER_CORE_REVISION_MAJOR_SHIFT 16,67
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,333,#define EUR_CR_MASTER_CORE_ID_CONFIG_MASK   0x000000FCU,99
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,333,#define EUR_CR_MASTER_CORE_REVISION_MAJOR_SIGNED 0,67
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,334,#define EUR_CR_MASTER_CORE_ID_CONFIG_SHIFT  2,99
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,334,#define EUR_CR_MASTER_CORE_REVISION_DESIGNER_MASK 0xFF000000U,67
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,335,#define EUR_CR_MASTER_CORE_ID_CONFIG_SIGNED 0,99
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,335,#define EUR_CR_MASTER_CORE_REVISION_DESIGNER_SHIFT 24,67
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,336,#define EUR_CR_MASTER_CORE_ID_CONFIG_CORES_MASK 0x00000F00U,99
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,336,#define EUR_CR_MASTER_CORE_REVISION_DESIGNER_SIGNED 0,67
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,337,#define EUR_CR_MASTER_CORE_ID_CONFIG_CORES_SHIFT 8,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,338,#define EUR_CR_MASTER_CORE_ID_CONFIG_CORES_SIGNED 0,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,339,#define EUR_CR_MASTER_CORE_ID_CONFIG_SLC_MASK 0x0000F000U,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,340,#define EUR_CR_MASTER_CORE_ID_CONFIG_SLC_SHIFT 12,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,341,#define EUR_CR_MASTER_CORE_ID_CONFIG_SLC_SIGNED 0,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,342,#define EUR_CR_MASTER_CORE_ID_ID_MASK       0xFFFF0000U,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,343,#define EUR_CR_MASTER_CORE_ID_ID_SHIFT      16,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,344,#define EUR_CR_MASTER_CORE_ID_ID_SIGNED     0,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,345,/* Register EUR_CR_MASTER_CORE_REVISION */,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,346,#define EUR_CR_MASTER_CORE_REVISION         0x4014,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,347,#define EUR_CR_MASTER_CORE_REVISION_MAINTENANCE_MASK 0x000000FFU,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,348,#define EUR_CR_MASTER_CORE_REVISION_MAINTENANCE_SHIFT 0,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,349,#define EUR_CR_MASTER_CORE_REVISION_MAINTENANCE_SIGNED 0,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,350,#define EUR_CR_MASTER_CORE_REVISION_MINOR_MASK 0x0000FF00U,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,351,#define EUR_CR_MASTER_CORE_REVISION_MINOR_SHIFT 8,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,352,#define EUR_CR_MASTER_CORE_REVISION_MINOR_SIGNED 0,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,353,#define EUR_CR_MASTER_CORE_REVISION_MAJOR_MASK 0x00FF0000U,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,354,#define EUR_CR_MASTER_CORE_REVISION_MAJOR_SHIFT 16,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,355,#define EUR_CR_MASTER_CORE_REVISION_MAJOR_SIGNED 0,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,356,#define EUR_CR_MASTER_CORE_REVISION_DESIGNER_MASK 0xFF000000U,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,357,#define EUR_CR_MASTER_CORE_REVISION_DESIGNER_SHIFT 24,99
+omap5-sgx-ddk-linux,bfd9edef3f976906fb7fececbfa29d16801154f5,eurasia_km/services4/srvkm/hwdefs/sgxmpdefs.h,358,#define EUR_CR_MASTER_CORE_REVISION_DESIGNER_SIGNED 0,99
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/system/omap4/sysconfig.c,293,								  EUR_CR_CORE_REVISION);,67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/system/omap4/sysconfig.c,302,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MAJOR_MASK),67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/system/omap4/sysconfig.c,303,"							>> EUR_CR_CORE_REVISION_MAJOR_SHIFT),",67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/system/omap4/sysconfig.c,304,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MINOR_MASK),67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/system/omap4/sysconfig.c,305,"							>> EUR_CR_CORE_REVISION_MINOR_SHIFT),",67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/system/omap4/sysconfig.c,306,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MAINTENANCE_MASK),67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/system/omap4/sysconfig.c,307,							>> EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT),67
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/system/omap5/sysconfig.c,299,								  EUR_CR_CORE_REVISION);,51
+omap5-sgx-ddk-linux,c53a5dfb9f4d5612c372ec8e252cb13a731c9c10,eurasia_km/services4/system/omap5/sysconfig.c,308,								  EUR_CR_CORE_REVISION);,2
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/system/omap5/sysconfig.c,310,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MAJOR_MASK),51
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/system/omap5/sysconfig.c,311,"							>> EUR_CR_CORE_REVISION_MAJOR_SHIFT),",51
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/system/omap5/sysconfig.c,312,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MINOR_MASK),51
+omap5-sgx-ddk-linux,67f4662155fe704ee2aa71e246738ca22517294e,eurasia_km/services4/system/omap5/sysconfig.c,313,								  EUR_CR_CORE_REVISION);,4
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/system/omap5/sysconfig.c,313,"							>> EUR_CR_CORE_REVISION_MINOR_SHIFT),",51
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/system/omap5/sysconfig.c,314,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MAINTENANCE_MASK),51
+omap5-sgx-ddk-linux,0912e7542f34413b9a52119b22e807532221d461,eurasia_km/services4/system/omap5/sysconfig.c,315,								  EUR_CR_CORE_REVISION);,10
+omap5-sgx-ddk-linux,877a45ba3797fecdadcae35cc09103e9bec72b0e,eurasia_km/services4/system/omap5/sysconfig.c,315,							>> EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT),51
+omap5-sgx-ddk-linux,c53a5dfb9f4d5612c372ec8e252cb13a731c9c10,eurasia_km/services4/system/omap5/sysconfig.c,319,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MAJOR_MASK),2
+omap5-sgx-ddk-linux,c53a5dfb9f4d5612c372ec8e252cb13a731c9c10,eurasia_km/services4/system/omap5/sysconfig.c,320,"							>> EUR_CR_CORE_REVISION_MAJOR_SHIFT),",2
+omap5-sgx-ddk-linux,c53a5dfb9f4d5612c372ec8e252cb13a731c9c10,eurasia_km/services4/system/omap5/sysconfig.c,321,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MINOR_MASK),2
+omap5-sgx-ddk-linux,c53a5dfb9f4d5612c372ec8e252cb13a731c9c10,eurasia_km/services4/system/omap5/sysconfig.c,322,"							>> EUR_CR_CORE_REVISION_MINOR_SHIFT),",2
+omap5-sgx-ddk-linux,c53a5dfb9f4d5612c372ec8e252cb13a731c9c10,eurasia_km/services4/system/omap5/sysconfig.c,323,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MAINTENANCE_MASK),2
+omap5-sgx-ddk-linux,c53a5dfb9f4d5612c372ec8e252cb13a731c9c10,eurasia_km/services4/system/omap5/sysconfig.c,324,							>> EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT),2
+omap5-sgx-ddk-linux,67f4662155fe704ee2aa71e246738ca22517294e,eurasia_km/services4/system/omap5/sysconfig.c,324,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MAJOR_MASK),4
+omap5-sgx-ddk-linux,67f4662155fe704ee2aa71e246738ca22517294e,eurasia_km/services4/system/omap5/sysconfig.c,325,"							>> EUR_CR_CORE_REVISION_MAJOR_SHIFT),",4
+omap5-sgx-ddk-linux,0912e7542f34413b9a52119b22e807532221d461,eurasia_km/services4/system/omap5/sysconfig.c,326,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MAJOR_MASK),10
+omap5-sgx-ddk-linux,67f4662155fe704ee2aa71e246738ca22517294e,eurasia_km/services4/system/omap5/sysconfig.c,326,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MINOR_MASK),4
+omap5-sgx-ddk-linux,0912e7542f34413b9a52119b22e807532221d461,eurasia_km/services4/system/omap5/sysconfig.c,327,"							>> EUR_CR_CORE_REVISION_MAJOR_SHIFT),",10
+omap5-sgx-ddk-linux,67f4662155fe704ee2aa71e246738ca22517294e,eurasia_km/services4/system/omap5/sysconfig.c,327,"							>> EUR_CR_CORE_REVISION_MINOR_SHIFT),",4
+omap5-sgx-ddk-linux,67f4662155fe704ee2aa71e246738ca22517294e,eurasia_km/services4/system/omap5/sysconfig.c,328,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MAINTENANCE_MASK),4
+omap5-sgx-ddk-linux,0912e7542f34413b9a52119b22e807532221d461,eurasia_km/services4/system/omap5/sysconfig.c,328,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MINOR_MASK),10
+omap5-sgx-ddk-linux,67f4662155fe704ee2aa71e246738ca22517294e,eurasia_km/services4/system/omap5/sysconfig.c,329,							>> EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT),4
+omap5-sgx-ddk-linux,0912e7542f34413b9a52119b22e807532221d461,eurasia_km/services4/system/omap5/sysconfig.c,329,"							>> EUR_CR_CORE_REVISION_MINOR_SHIFT),",10
+omap5-sgx-ddk-linux,0912e7542f34413b9a52119b22e807532221d461,eurasia_km/services4/system/omap5/sysconfig.c,330,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MAINTENANCE_MASK),10
+omap5-sgx-ddk-linux,0912e7542f34413b9a52119b22e807532221d461,eurasia_km/services4/system/omap5/sysconfig.c,331,							>> EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT),10
+omap5-sgx-ddk-linux,c85f932329f8f9e0ca8aba23556663983671b4c1,eurasia_km/services4/system/sgx_jz4780/sysconfig.c,250,								  EUR_CR_CORE_REVISION);,67
+omap5-sgx-ddk-linux,c85f932329f8f9e0ca8aba23556663983671b4c1,eurasia_km/services4/system/sgx_jz4780/sysconfig.c,259,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MAJOR_MASK),67
+omap5-sgx-ddk-linux,c85f932329f8f9e0ca8aba23556663983671b4c1,eurasia_km/services4/system/sgx_jz4780/sysconfig.c,260,"							>> EUR_CR_CORE_REVISION_MAJOR_SHIFT),",67
+omap5-sgx-ddk-linux,c85f932329f8f9e0ca8aba23556663983671b4c1,eurasia_km/services4/system/sgx_jz4780/sysconfig.c,261,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MINOR_MASK),67
+omap5-sgx-ddk-linux,c85f932329f8f9e0ca8aba23556663983671b4c1,eurasia_km/services4/system/sgx_jz4780/sysconfig.c,262,"							>> EUR_CR_CORE_REVISION_MINOR_SHIFT),",67
+omap5-sgx-ddk-linux,c85f932329f8f9e0ca8aba23556663983671b4c1,eurasia_km/services4/system/sgx_jz4780/sysconfig.c,263,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MAINTENANCE_MASK),67
+omap5-sgx-ddk-linux,c85f932329f8f9e0ca8aba23556663983671b4c1,eurasia_km/services4/system/sgx_jz4780/sysconfig.c,264,							>> EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT),67
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,100,/* Register TCF_CR_TCF_CORE_ID_REG */,53
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,101,#define TCF_CR_TCF_CORE_ID_REG										(TCF_CR_CLOCK_CONTROL_OFFSET + 0x0020UL),53
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,102,#define TCF_CR_TCF_CORE_ID_REG_DEFAULT								(0x00000000UL),53
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,104,#define TCF_CR_TCF_CORE_ID_REG_TCF_CORE_ID_REG_CORE_ID_MASK			(0xFFFF0000UL),53
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,105,#define TCF_CR_TCF_CORE_ID_REG_TCF_CORE_ID_REG_CORE_ID_SHIFT		(16),53
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,107,#define TCF_CR_TCF_CORE_ID_REG_TCF_CORE_ID_REG_CORE_CFG_MASK		(0x0000FFFFUL),53
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,108,#define TCF_CR_TCF_CORE_ID_REG_TCF_CORE_ID_REG_CORE_CFG_SHIFT		(0),53
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,1614,/* Register TCF_CR_PVR_TCF_RGBPDP_CORE_ID */,53
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,1615,#define TCF_CR_PVR_TCF_RGBPDP_CORE_ID								(TCF_CR_PDP_OFFSET + 0x0078UL),53
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,1616,#define TCF_CR_PVR_TCF_RGBPDP_CORE_ID_DEFAULT						(0x07010009UL),53
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,1618,#define TCF_CR_PVR_TCF_RGBPDP_CORE_ID_GROUP_ID_MASK					(0xFF000000UL),53
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,1619,#define TCF_CR_PVR_TCF_RGBPDP_CORE_ID_GROUP_ID_SHIFT				(24),53
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,1621,#define TCF_CR_PVR_TCF_RGBPDP_CORE_ID_CORE_ID_MASK					(0x00FF0000UL),53
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,1622,#define TCF_CR_PVR_TCF_RGBPDP_CORE_ID_CORE_ID_SHIFT					(16),53
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,1624,#define TCF_CR_PVR_TCF_RGBPDP_CORE_ID_CONFIG_ID_MASK				(0x0000FFFFUL),53
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,1625,#define TCF_CR_PVR_TCF_RGBPDP_CORE_ID_CONFIG_ID_SHIFT				(0),53
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,64,#define TCF_CR_FPGA_ID_REG_FPGA_ID_REG_CORE_ID_MASK					(0xFFFF0000UL),53
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,65,#define TCF_CR_FPGA_ID_REG_FPGA_ID_REG_CORE_ID_SHIFT				(16),53
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sgx_pc_i686_tc3/sysutils.c,209,                                      EUR_CR_CORE_REVISION);,53
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sgx_pc_i686_tc3/sysutils.c,225,                           (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MAJOR_MASK),53
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sgx_pc_i686_tc3/sysutils.c,226,"                            >> EUR_CR_CORE_REVISION_MAJOR_SHIFT),",53
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sgx_pc_i686_tc3/sysutils.c,227,                           (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MINOR_MASK),53
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sgx_pc_i686_tc3/sysutils.c,228,"                            >> EUR_CR_CORE_REVISION_MINOR_SHIFT),",53
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sgx_pc_i686_tc3/sysutils.c,230,                           (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MAINTENANCE_MASK),53
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sgx_pc_i686_tc3/sysutils.c,231,"                            >> EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT),",53
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sunxi/sysconfig.c,234,	//							  EUR_CR_CORE_REVISION);,54
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sunxi/sysconfig.c,244,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MAJOR_MASK),54
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sunxi/sysconfig.c,245,"							>> EUR_CR_CORE_REVISION_MAJOR_SHIFT),",54
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sunxi/sysconfig.c,246,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MINOR_MASK),54
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sunxi/sysconfig.c,247,"							>> EUR_CR_CORE_REVISION_MINOR_SHIFT),",54
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sunxi/sysconfig.c,248,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MAINTENANCE_MASK),54
+omap5-sgx-ddk-linux,76da7d73976f0a5dc04fdc84a3af899d6c2b1fe2,eurasia_km/services4/system/sunxi/sysconfig.c,249,							>> EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT),54
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,include4/servicesext.h,91,"	PVRSRV_ERROR_CORE_REVISION_MISMATCH,",162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/include/pvrsrv_errors.h,105,"		case PVRSRV_ERROR_CORE_REVISION_MISMATCH:		return ""PVRSRV_ERROR_CORE_REVISION_MISMATCH"";",162
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/include/sgx_ukernel_status_codes.h,540,#define MKTC_CPRI_ABORT_CORE_IDX				0xAD001245,6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/include/sgx_ukernel_status_codes.h,541,MKTC_ST(MKTC_CPRI_ABORT_CORE_IDX),6
+omap5-sgx-ddk-linux,322bcda5f3076037e2e20ef9209f4f4d575a7d5f,services4/include/sgx_ukernel_status_codes.h,556,#define MKTC_CPRI_ABORT_CORE_IDX				0xAD001245,1
+omap5-sgx-ddk-linux,322bcda5f3076037e2e20ef9209f4f4d575a7d5f,services4/include/sgx_ukernel_status_codes.h,557,MKTC_ST(MKTC_CPRI_ABORT_CORE_IDX),1
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/include/sgx_ukernel_status_codes.h,558,#define MKTC_CPRI_ABORT_CORE_IDX				0xAD001245,155
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/include/sgx_ukernel_status_codes.h,559,MKTC_ST(MKTC_CPRI_ABORT_CORE_IDX),155
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/devices/sgx/sgxconfig.h,251,	#define SGX_CORE_IDENTIFIED,6
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/devices/sgx/sgxconfig.h,325,	#define SGX_CORE_IDENTIFIED,156
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/devices/sgx/sgxconfig.h,349,	#define SGX_CORE_IDENTIFIED,6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/devices/sgx/sgxconfig.h,353,#if !defined(SGX_CORE_IDENTIFIED),6
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/devices/sgx/sgxconfig.h,419,	#define SGX_CORE_IDENTIFIED,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/devices/sgx/sgxconfig.h,423,#if !defined(SGX_CORE_IDENTIFIED),156
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/devices/sgx/sgxinit.c,1283,"		SGXDumpDebugReg(psDevInfo, 0, ""EUR_CR_CORE_ID:          "", EUR_CR_CORE_ID);",6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/devices/sgx/sgxinit.c,1284,"		SGXDumpDebugReg(psDevInfo, 0, ""EUR_CR_CORE_REVISION:    "", EUR_CR_CORE_REVISION);",6
+omap5-sgx-ddk-linux,ad511f2798f45eab3c44826fdd860811cce4b1f6,services4/srvkm/devices/sgx/sgxinit.c,1350,"		SGXDumpDebugReg(psDevInfo, 0, ""EUR_CR_CORE_ID:          "", EUR_CR_CORE_ID);",9
+omap5-sgx-ddk-linux,ad511f2798f45eab3c44826fdd860811cce4b1f6,services4/srvkm/devices/sgx/sgxinit.c,1351,"		SGXDumpDebugReg(psDevInfo, 0, ""EUR_CR_CORE_REVISION:    "", EUR_CR_CORE_REVISION);",9
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/devices/sgx/sgxinit.c,1353,"		SGXDumpDebugReg(psDevInfo, 0, ""EUR_CR_CORE_ID:          "", EUR_CR_CORE_ID);",147
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/devices/sgx/sgxinit.c,1354,"		SGXDumpDebugReg(psDevInfo, 0, ""EUR_CR_CORE_REVISION:    "", EUR_CR_CORE_REVISION);",147
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx520defs.h,83,/* Register EUR_CR_CORE_ID */,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx520defs.h,84,#define EUR_CR_CORE_ID                      0x0010,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx520defs.h,85,#define EUR_CR_CORE_ID_CONFIG_MASK          0x0000FFFFU,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx520defs.h,86,#define EUR_CR_CORE_ID_CONFIG_SHIFT         0,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx520defs.h,87,#define EUR_CR_CORE_ID_ID_MASK              0xFFFF0000U,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx520defs.h,88,#define EUR_CR_CORE_ID_ID_SHIFT             16,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx520defs.h,89,/* Register EUR_CR_CORE_REVISION */,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx520defs.h,90,#define EUR_CR_CORE_REVISION                0x0014,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx520defs.h,91,#define EUR_CR_CORE_REVISION_MAINTENANCE_MASK 0x000000FFU,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx520defs.h,92,#define EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT 0,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx520defs.h,93,#define EUR_CR_CORE_REVISION_MINOR_MASK     0x0000FF00U,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx520defs.h,94,#define EUR_CR_CORE_REVISION_MINOR_SHIFT    8,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx520defs.h,95,#define EUR_CR_CORE_REVISION_MAJOR_MASK     0x00FF0000U,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx520defs.h,96,#define EUR_CR_CORE_REVISION_MAJOR_SHIFT    16,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx520defs.h,97,#define EUR_CR_CORE_REVISION_DESIGNER_MASK  0xFF000000U,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx520defs.h,98,#define EUR_CR_CORE_REVISION_DESIGNER_SHIFT 24,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx530defs.h,100,#define EUR_CR_CORE_REVISION_MINOR_SHIFT    8,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx530defs.h,101,#define EUR_CR_CORE_REVISION_MAJOR_MASK     0x00FF0000U,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx530defs.h,102,#define EUR_CR_CORE_REVISION_MAJOR_SHIFT    16,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx530defs.h,103,#define EUR_CR_CORE_REVISION_DESIGNER_MASK  0xFF000000U,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx530defs.h,104,#define EUR_CR_CORE_REVISION_DESIGNER_SHIFT 24,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx530defs.h,89,/* Register EUR_CR_CORE_ID */,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx530defs.h,90,#define EUR_CR_CORE_ID                      0x0010,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx530defs.h,91,#define EUR_CR_CORE_ID_CONFIG_MASK          0x0000FFFFU,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx530defs.h,92,#define EUR_CR_CORE_ID_CONFIG_SHIFT         0,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx530defs.h,93,#define EUR_CR_CORE_ID_ID_MASK              0xFFFF0000U,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx530defs.h,94,#define EUR_CR_CORE_ID_ID_SHIFT             16,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx530defs.h,95,/* Register EUR_CR_CORE_REVISION */,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx530defs.h,96,#define EUR_CR_CORE_REVISION                0x0014,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx530defs.h,97,#define EUR_CR_CORE_REVISION_MAINTENANCE_MASK 0x000000FFU,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx530defs.h,98,#define EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT 0,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx530defs.h,99,#define EUR_CR_CORE_REVISION_MINOR_MASK     0x0000FF00U,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx531defs.h,161,/* Register EUR_CR_CORE_ID */,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx531defs.h,162,#define EUR_CR_CORE_ID                      0x0020,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx531defs.h,163,#define EUR_CR_CORE_ID_CONFIG_MASK          0x0000FFFFU,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx531defs.h,164,#define EUR_CR_CORE_ID_CONFIG_SHIFT         0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx531defs.h,165,#define EUR_CR_CORE_ID_ID_MASK              0xFFFF0000U,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx531defs.h,166,#define EUR_CR_CORE_ID_ID_SHIFT             16,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx531defs.h,167,/* Register EUR_CR_CORE_REVISION */,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx531defs.h,168,#define EUR_CR_CORE_REVISION                0x0024,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx531defs.h,169,#define EUR_CR_CORE_REVISION_MAINTENANCE_MASK 0x000000FFU,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx531defs.h,170,#define EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT 0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx531defs.h,171,#define EUR_CR_CORE_REVISION_MINOR_MASK     0x0000FF00U,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx531defs.h,172,#define EUR_CR_CORE_REVISION_MINOR_SHIFT    8,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx531defs.h,173,#define EUR_CR_CORE_REVISION_MAJOR_MASK     0x00FF0000U,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx531defs.h,174,#define EUR_CR_CORE_REVISION_MAJOR_SHIFT    16,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx531defs.h,175,#define EUR_CR_CORE_REVISION_DESIGNER_MASK  0xFF000000U,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx531defs.h,176,#define EUR_CR_CORE_REVISION_DESIGNER_SHIFT 24,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx535defs.h,100,#define EUR_CR_CORE_REVISION_MINOR_SHIFT    8,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx535defs.h,101,#define EUR_CR_CORE_REVISION_MAJOR_MASK     0x00FF0000U,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx535defs.h,102,#define EUR_CR_CORE_REVISION_MAJOR_SHIFT    16,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx535defs.h,103,#define EUR_CR_CORE_REVISION_DESIGNER_MASK  0xFF000000U,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx535defs.h,104,#define EUR_CR_CORE_REVISION_DESIGNER_SHIFT 24,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx535defs.h,89,/* Register EUR_CR_CORE_ID */,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx535defs.h,90,#define EUR_CR_CORE_ID                      0x0010,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx535defs.h,91,#define EUR_CR_CORE_ID_CONFIG_MASK          0x0000FFFFU,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx535defs.h,92,#define EUR_CR_CORE_ID_CONFIG_SHIFT         0,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx535defs.h,93,#define EUR_CR_CORE_ID_ID_MASK              0xFFFF0000U,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx535defs.h,94,#define EUR_CR_CORE_ID_ID_SHIFT             16,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx535defs.h,95,/* Register EUR_CR_CORE_REVISION */,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx535defs.h,96,#define EUR_CR_CORE_REVISION                0x0014,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx535defs.h,97,#define EUR_CR_CORE_REVISION_MAINTENANCE_MASK 0x000000FFU,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx535defs.h,98,#define EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT 0,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx535defs.h,99,#define EUR_CR_CORE_REVISION_MINOR_MASK     0x0000FF00U,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx540defs.h,165,/* Register EUR_CR_CORE_ID */,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx540defs.h,166,#define EUR_CR_CORE_ID                      0x0020,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx540defs.h,167,#define EUR_CR_CORE_ID_CONFIG_MASK          0x0000FFFFU,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx540defs.h,168,#define EUR_CR_CORE_ID_CONFIG_SHIFT         0,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx540defs.h,169,#define EUR_CR_CORE_ID_ID_MASK              0xFFFF0000U,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx540defs.h,170,#define EUR_CR_CORE_ID_ID_SHIFT             16,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx540defs.h,171,/* Register EUR_CR_CORE_REVISION */,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx540defs.h,172,#define EUR_CR_CORE_REVISION                0x0024,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx540defs.h,173,#define EUR_CR_CORE_REVISION_MAINTENANCE_MASK 0x000000FFU,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx540defs.h,174,#define EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT 0,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx540defs.h,175,#define EUR_CR_CORE_REVISION_MINOR_MASK     0x0000FF00U,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx540defs.h,176,#define EUR_CR_CORE_REVISION_MINOR_SHIFT    8,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx540defs.h,177,#define EUR_CR_CORE_REVISION_MAJOR_MASK     0x00FF0000U,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx540defs.h,178,#define EUR_CR_CORE_REVISION_MAJOR_SHIFT    16,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx540defs.h,179,#define EUR_CR_CORE_REVISION_DESIGNER_MASK  0xFF000000U,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx540defs.h,180,#define EUR_CR_CORE_REVISION_DESIGNER_SHIFT 24,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,235,/* Register EUR_CR_CORE_ID */,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,236,#define EUR_CR_CORE_ID                      0x0020,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,237,#define EUR_CR_CORE_ID_CONFIG_MULTI_MASK    0x00000001U,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,238,#define EUR_CR_CORE_ID_CONFIG_MULTI_SHIFT   0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,239,#define EUR_CR_CORE_ID_CONFIG_MULTI_SIGNED  0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,240,#define EUR_CR_CORE_ID_CONFIG_BASE_MASK     0x00000002U,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,241,#define EUR_CR_CORE_ID_CONFIG_BASE_SHIFT    1,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,242,#define EUR_CR_CORE_ID_CONFIG_BASE_SIGNED   0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,243,#define EUR_CR_CORE_ID_CONFIG_MASK          0x000000FCU,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,244,#define EUR_CR_CORE_ID_CONFIG_SHIFT         2,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,245,#define EUR_CR_CORE_ID_CONFIG_SIGNED        0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,246,#define EUR_CR_CORE_ID_CONFIG_CORES_MASK    0x00000F00U,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,247,#define EUR_CR_CORE_ID_CONFIG_CORES_SHIFT   8,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,248,#define EUR_CR_CORE_ID_CONFIG_CORES_SIGNED  0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,249,#define EUR_CR_CORE_ID_CONFIG_SLC_MASK      0x0000F000U,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,250,#define EUR_CR_CORE_ID_CONFIG_SLC_SHIFT     12,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,251,#define EUR_CR_CORE_ID_CONFIG_SLC_SIGNED    0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,252,#define EUR_CR_CORE_ID_ID_MASK              0xFFFF0000U,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,253,#define EUR_CR_CORE_ID_ID_SHIFT             16,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,254,#define EUR_CR_CORE_ID_ID_SIGNED            0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,255,/* Register EUR_CR_CORE_REVISION */,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,256,#define EUR_CR_CORE_REVISION                0x0024,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,257,#define EUR_CR_CORE_REVISION_MAINTENANCE_MASK 0x000000FFU,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,258,#define EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT 0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,259,#define EUR_CR_CORE_REVISION_MAINTENANCE_SIGNED 0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,260,#define EUR_CR_CORE_REVISION_MINOR_MASK     0x0000FF00U,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,261,#define EUR_CR_CORE_REVISION_MINOR_SHIFT    8,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,262,#define EUR_CR_CORE_REVISION_MINOR_SIGNED   0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,263,#define EUR_CR_CORE_REVISION_MAJOR_MASK     0x00FF0000U,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,264,#define EUR_CR_CORE_REVISION_MAJOR_SHIFT    16,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,265,#define EUR_CR_CORE_REVISION_MAJOR_SIGNED   0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,266,#define EUR_CR_CORE_REVISION_DESIGNER_MASK  0xFF000000U,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,267,#define EUR_CR_CORE_REVISION_DESIGNER_SHIFT 24,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543_v1.164defs.h,268,#define EUR_CR_CORE_REVISION_DESIGNER_SIGNED 0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,235,/* Register EUR_CR_CORE_ID */,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,236,#define EUR_CR_CORE_ID                      0x0020,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,237,#define EUR_CR_CORE_ID_CONFIG_MULTI_MASK    0x00000001U,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,238,#define EUR_CR_CORE_ID_CONFIG_MULTI_SHIFT   0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,239,#define EUR_CR_CORE_ID_CONFIG_MULTI_SIGNED  0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,240,#define EUR_CR_CORE_ID_CONFIG_BASE_MASK     0x00000002U,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,241,#define EUR_CR_CORE_ID_CONFIG_BASE_SHIFT    1,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,242,#define EUR_CR_CORE_ID_CONFIG_BASE_SIGNED   0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,243,#define EUR_CR_CORE_ID_CONFIG_MASK          0x000000FCU,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,244,#define EUR_CR_CORE_ID_CONFIG_SHIFT         2,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,245,#define EUR_CR_CORE_ID_CONFIG_SIGNED        0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,246,#define EUR_CR_CORE_ID_CONFIG_CORES_MASK    0x00000F00U,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,247,#define EUR_CR_CORE_ID_CONFIG_CORES_SHIFT   8,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,248,#define EUR_CR_CORE_ID_CONFIG_CORES_SIGNED  0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,249,#define EUR_CR_CORE_ID_CONFIG_SLC_MASK      0x0000F000U,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,250,#define EUR_CR_CORE_ID_CONFIG_SLC_SHIFT     12,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,251,#define EUR_CR_CORE_ID_CONFIG_SLC_SIGNED    0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,252,#define EUR_CR_CORE_ID_ID_MASK              0xFFFF0000U,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,253,#define EUR_CR_CORE_ID_ID_SHIFT             16,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,254,#define EUR_CR_CORE_ID_ID_SIGNED            0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,255,/* Register EUR_CR_CORE_REVISION */,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,256,#define EUR_CR_CORE_REVISION                0x0024,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,257,#define EUR_CR_CORE_REVISION_MAINTENANCE_MASK 0x000000FFU,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,258,#define EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT 0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,259,#define EUR_CR_CORE_REVISION_MAINTENANCE_SIGNED 0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,260,#define EUR_CR_CORE_REVISION_MINOR_MASK     0x0000FF00U,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,261,#define EUR_CR_CORE_REVISION_MINOR_SHIFT    8,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,262,#define EUR_CR_CORE_REVISION_MINOR_SIGNED   0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,263,#define EUR_CR_CORE_REVISION_MAJOR_MASK     0x00FF0000U,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,264,#define EUR_CR_CORE_REVISION_MAJOR_SHIFT    16,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,265,#define EUR_CR_CORE_REVISION_MAJOR_SIGNED   0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,266,#define EUR_CR_CORE_REVISION_DESIGNER_MASK  0xFF000000U,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,267,#define EUR_CR_CORE_REVISION_DESIGNER_SHIFT 24,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx543defs.h,268,#define EUR_CR_CORE_REVISION_DESIGNER_SIGNED 0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,235,/* Register EUR_CR_CORE_ID */,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,236,#define EUR_CR_CORE_ID                      0x0020,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,237,#define EUR_CR_CORE_ID_CONFIG_MULTI_MASK    0x00000001U,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,238,#define EUR_CR_CORE_ID_CONFIG_MULTI_SHIFT   0,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,239,#define EUR_CR_CORE_ID_CONFIG_MULTI_SIGNED  0,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,240,#define EUR_CR_CORE_ID_CONFIG_BASE_MASK     0x00000002U,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,241,#define EUR_CR_CORE_ID_CONFIG_BASE_SHIFT    1,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,242,#define EUR_CR_CORE_ID_CONFIG_BASE_SIGNED   0,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,243,#define EUR_CR_CORE_ID_CONFIG_MASK          0x000000FCU,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,244,#define EUR_CR_CORE_ID_CONFIG_SHIFT         2,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,245,#define EUR_CR_CORE_ID_CONFIG_SIGNED        0,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,246,#define EUR_CR_CORE_ID_CONFIG_CORES_MASK    0x00000F00U,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,247,#define EUR_CR_CORE_ID_CONFIG_CORES_SHIFT   8,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,248,#define EUR_CR_CORE_ID_CONFIG_CORES_SIGNED  0,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,249,#define EUR_CR_CORE_ID_CONFIG_SLC_MASK      0x0000F000U,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,250,#define EUR_CR_CORE_ID_CONFIG_SLC_SHIFT     12,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,251,#define EUR_CR_CORE_ID_CONFIG_SLC_SIGNED    0,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,252,#define EUR_CR_CORE_ID_ID_MASK              0xFFFF0000U,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,253,#define EUR_CR_CORE_ID_ID_SHIFT             16,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,254,#define EUR_CR_CORE_ID_ID_SIGNED            0,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,255,/* Register EUR_CR_CORE_REVISION */,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,256,#define EUR_CR_CORE_REVISION                0x0024,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,257,#define EUR_CR_CORE_REVISION_MAINTENANCE_MASK 0x000000FFU,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,258,#define EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT 0,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,259,#define EUR_CR_CORE_REVISION_MAINTENANCE_SIGNED 0,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,260,#define EUR_CR_CORE_REVISION_MINOR_MASK     0x0000FF00U,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,261,#define EUR_CR_CORE_REVISION_MINOR_SHIFT    8,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,262,#define EUR_CR_CORE_REVISION_MINOR_SIGNED   0,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,263,#define EUR_CR_CORE_REVISION_MAJOR_MASK     0x00FF0000U,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,264,#define EUR_CR_CORE_REVISION_MAJOR_SHIFT    16,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,265,#define EUR_CR_CORE_REVISION_MAJOR_SIGNED   0,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,266,#define EUR_CR_CORE_REVISION_DESIGNER_MASK  0xFF000000U,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,267,#define EUR_CR_CORE_REVISION_DESIGNER_SHIFT 24,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx544defs.h,268,#define EUR_CR_CORE_REVISION_DESIGNER_SIGNED 0,162
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx545defs.h,200,/* Register EUR_CR_CORE_ID */,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx545defs.h,201,#define EUR_CR_CORE_ID                      0x001C,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx545defs.h,202,#define EUR_CR_CORE_ID_CONFIG_MASK          0x0000FFFFU,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx545defs.h,203,#define EUR_CR_CORE_ID_CONFIG_SHIFT         0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx545defs.h,204,#define EUR_CR_CORE_ID_CONFIG_SIGNED        0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx545defs.h,205,#define EUR_CR_CORE_ID_ID_MASK              0xFFFF0000U,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx545defs.h,206,#define EUR_CR_CORE_ID_ID_SHIFT             16,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx545defs.h,207,#define EUR_CR_CORE_ID_ID_SIGNED            0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx545defs.h,208,/* Register EUR_CR_CORE_REVISION */,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx545defs.h,209,#define EUR_CR_CORE_REVISION                0x0020,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx545defs.h,210,#define EUR_CR_CORE_REVISION_MAINTENANCE_MASK 0x000000FFU,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx545defs.h,211,#define EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT 0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx545defs.h,212,#define EUR_CR_CORE_REVISION_MAINTENANCE_SIGNED 0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx545defs.h,213,#define EUR_CR_CORE_REVISION_MINOR_MASK     0x0000FF00U,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx545defs.h,214,#define EUR_CR_CORE_REVISION_MINOR_SHIFT    8,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx545defs.h,215,#define EUR_CR_CORE_REVISION_MINOR_SIGNED   0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx545defs.h,216,#define EUR_CR_CORE_REVISION_MAJOR_MASK     0x00FF0000U,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx545defs.h,217,#define EUR_CR_CORE_REVISION_MAJOR_SHIFT    16,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx545defs.h,218,#define EUR_CR_CORE_REVISION_MAJOR_SIGNED   0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx545defs.h,219,#define EUR_CR_CORE_REVISION_DESIGNER_MASK  0xFF000000U,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx545defs.h,220,#define EUR_CR_CORE_REVISION_DESIGNER_SHIFT 24,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgx545defs.h,221,#define EUR_CR_CORE_REVISION_DESIGNER_SIGNED 0,132
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxfeaturedefs.h,100,	#define SGX_CORE_ID										SGX_CORE_ID_543,155
+omap5-sgx-ddk-linux,322bcda5f3076037e2e20ef9209f4f4d575a7d5f,services4/srvkm/hwdefs/sgxfeaturedefs.h,101,	#define SGX_CORE_ID										SGX_CORE_ID_543,1
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxfeaturedefs.h,109,	#define SGX_CORE_ID										SGX_CORE_ID_544,6
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxfeaturedefs.h,127,	#define SGX_CORE_ID										SGX_CORE_ID_544,155
+omap5-sgx-ddk-linux,322bcda5f3076037e2e20ef9209f4f4d575a7d5f,services4/srvkm/hwdefs/sgxfeaturedefs.h,128,	#define SGX_CORE_ID										SGX_CORE_ID_544,1
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxfeaturedefs.h,136,	#define SGX_CORE_ID										SGX_CORE_ID_545,6
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxfeaturedefs.h,156,	#define SGX_CORE_ID										SGX_CORE_ID_545,155
+omap5-sgx-ddk-linux,322bcda5f3076037e2e20ef9209f4f4d575a7d5f,services4/srvkm/hwdefs/sgxfeaturedefs.h,157,	#define SGX_CORE_ID										SGX_CORE_ID_545,1
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxfeaturedefs.h,166,	#define SGX_CORE_ID										SGX_CORE_ID_554,6
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxfeaturedefs.h,184,	#define SGX_CORE_ID										SGX_CORE_ID_554,155
+omap5-sgx-ddk-linux,322bcda5f3076037e2e20ef9209f4f4d575a7d5f,services4/srvkm/hwdefs/sgxfeaturedefs.h,185,	#define SGX_CORE_ID										SGX_CORE_ID_554,1
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxfeaturedefs.h,43,	#define SGX_CORE_ID										SGX_CORE_ID_520,162
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxfeaturedefs.h,50,	#define SGX_CORE_ID										SGX_CORE_ID_530,6
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxfeaturedefs.h,51,	#define SGX_CORE_ID										SGX_CORE_ID_5300,156
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxfeaturedefs.h,57,	#define SGX_CORE_ID										SGX_CORE_ID_531,6
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxfeaturedefs.h,61,	#define SGX_CORE_ID										SGX_CORE_ID_530,155
+omap5-sgx-ddk-linux,322bcda5f3076037e2e20ef9209f4f4d575a7d5f,services4/srvkm/hwdefs/sgxfeaturedefs.h,62,	#define SGX_CORE_ID										SGX_CORE_ID_530,1
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxfeaturedefs.h,65,	#define SGX_CORE_ID										SGX_CORE_ID_535,6
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxfeaturedefs.h,69,	#define SGX_CORE_ID										SGX_CORE_ID_531,155
+omap5-sgx-ddk-linux,322bcda5f3076037e2e20ef9209f4f4d575a7d5f,services4/srvkm/hwdefs/sgxfeaturedefs.h,70,	#define SGX_CORE_ID										SGX_CORE_ID_531,1
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxfeaturedefs.h,77,	#define SGX_CORE_ID										SGX_CORE_ID_540,6
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxfeaturedefs.h,78,	#define SGX_CORE_ID										SGX_CORE_ID_535,155
+omap5-sgx-ddk-linux,322bcda5f3076037e2e20ef9209f4f4d575a7d5f,services4/srvkm/hwdefs/sgxfeaturedefs.h,79,	#define SGX_CORE_ID										SGX_CORE_ID_535,1
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxfeaturedefs.h,85,	#define SGX_CORE_ID										SGX_CORE_ID_543,6
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxfeaturedefs.h,91,	#define SGX_CORE_ID										SGX_CORE_ID_540,155
+omap5-sgx-ddk-linux,322bcda5f3076037e2e20ef9209f4f4d575a7d5f,services4/srvkm/hwdefs/sgxfeaturedefs.h,92,	#define SGX_CORE_ID										SGX_CORE_ID_540,1
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,303,/* Register EUR_CR_MASTER_CORE_ID */,6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,304,#define EUR_CR_MASTER_CORE_ID               0x4010,6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,305,#define EUR_CR_MASTER_CORE_ID_CONFIG_MULTI_MASK 0x00000001U,6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,306,#define EUR_CR_MASTER_CORE_ID_CONFIG_MULTI_SHIFT 0,6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,307,#define EUR_CR_MASTER_CORE_ID_CONFIG_MULTI_SIGNED 0,6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,308,#define EUR_CR_MASTER_CORE_ID_CONFIG_BASE_MASK 0x00000002U,6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,309,#define EUR_CR_MASTER_CORE_ID_CONFIG_BASE_SHIFT 1,6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,310,#define EUR_CR_MASTER_CORE_ID_CONFIG_BASE_SIGNED 0,6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,311,#define EUR_CR_MASTER_CORE_ID_CONFIG_MASK   0x000000FCU,6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,312,#define EUR_CR_MASTER_CORE_ID_CONFIG_SHIFT  2,6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,313,#define EUR_CR_MASTER_CORE_ID_CONFIG_SIGNED 0,6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,314,#define EUR_CR_MASTER_CORE_ID_CONFIG_CORES_MASK 0x00000F00U,6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,315,#define EUR_CR_MASTER_CORE_ID_CONFIG_CORES_SHIFT 8,6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,316,#define EUR_CR_MASTER_CORE_ID_CONFIG_CORES_SIGNED 0,6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,317,#define EUR_CR_MASTER_CORE_ID_CONFIG_SLC_MASK 0x0000F000U,6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,318,#define EUR_CR_MASTER_CORE_ID_CONFIG_SLC_SHIFT 12,6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,319,#define EUR_CR_MASTER_CORE_ID_CONFIG_SLC_SIGNED 0,6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,320,#define EUR_CR_MASTER_CORE_ID_ID_MASK       0xFFFF0000U,6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,321,#define EUR_CR_MASTER_CORE_ID_ID_SHIFT      16,6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,322,#define EUR_CR_MASTER_CORE_ID_ID_SIGNED     0,6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,323,/* Register EUR_CR_MASTER_CORE_REVISION */,6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,324,#define EUR_CR_MASTER_CORE_REVISION         0x4014,6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,325,#define EUR_CR_MASTER_CORE_REVISION_MAINTENANCE_MASK 0x000000FFU,6
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,325,/* Register EUR_CR_MASTER_CORE_ID */,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,326,#define EUR_CR_MASTER_CORE_ID               0x4010,156
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,326,#define EUR_CR_MASTER_CORE_REVISION_MAINTENANCE_SHIFT 0,6
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,327,#define EUR_CR_MASTER_CORE_ID_CONFIG_MULTI_MASK 0x00000001U,156
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,327,#define EUR_CR_MASTER_CORE_REVISION_MAINTENANCE_SIGNED 0,6
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,328,#define EUR_CR_MASTER_CORE_ID_CONFIG_MULTI_SHIFT 0,156
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,328,#define EUR_CR_MASTER_CORE_REVISION_MINOR_MASK 0x0000FF00U,6
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,329,#define EUR_CR_MASTER_CORE_ID_CONFIG_MULTI_SIGNED 0,156
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,329,#define EUR_CR_MASTER_CORE_REVISION_MINOR_SHIFT 8,6
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,330,#define EUR_CR_MASTER_CORE_ID_CONFIG_BASE_MASK 0x00000002U,156
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,330,#define EUR_CR_MASTER_CORE_REVISION_MINOR_SIGNED 0,6
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,331,#define EUR_CR_MASTER_CORE_ID_CONFIG_BASE_SHIFT 1,156
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,331,#define EUR_CR_MASTER_CORE_REVISION_MAJOR_MASK 0x00FF0000U,6
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,332,#define EUR_CR_MASTER_CORE_ID_CONFIG_BASE_SIGNED 0,156
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,332,#define EUR_CR_MASTER_CORE_REVISION_MAJOR_SHIFT 16,6
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,333,#define EUR_CR_MASTER_CORE_ID_CONFIG_MASK   0x000000FCU,156
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,333,#define EUR_CR_MASTER_CORE_REVISION_MAJOR_SIGNED 0,6
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,334,#define EUR_CR_MASTER_CORE_ID_CONFIG_SHIFT  2,156
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,334,#define EUR_CR_MASTER_CORE_REVISION_DESIGNER_MASK 0xFF000000U,6
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,335,#define EUR_CR_MASTER_CORE_ID_CONFIG_SIGNED 0,156
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,335,#define EUR_CR_MASTER_CORE_REVISION_DESIGNER_SHIFT 24,6
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,336,#define EUR_CR_MASTER_CORE_ID_CONFIG_CORES_MASK 0x00000F00U,156
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/srvkm/hwdefs/sgxmpdefs.h,336,#define EUR_CR_MASTER_CORE_REVISION_DESIGNER_SIGNED 0,6
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,337,#define EUR_CR_MASTER_CORE_ID_CONFIG_CORES_SHIFT 8,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,338,#define EUR_CR_MASTER_CORE_ID_CONFIG_CORES_SIGNED 0,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,339,#define EUR_CR_MASTER_CORE_ID_CONFIG_SLC_MASK 0x0000F000U,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,340,#define EUR_CR_MASTER_CORE_ID_CONFIG_SLC_SHIFT 12,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,341,#define EUR_CR_MASTER_CORE_ID_CONFIG_SLC_SIGNED 0,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,342,#define EUR_CR_MASTER_CORE_ID_ID_MASK       0xFFFF0000U,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,343,#define EUR_CR_MASTER_CORE_ID_ID_SHIFT      16,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,344,#define EUR_CR_MASTER_CORE_ID_ID_SIGNED     0,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,345,/* Register EUR_CR_MASTER_CORE_REVISION */,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,346,#define EUR_CR_MASTER_CORE_REVISION         0x4014,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,347,#define EUR_CR_MASTER_CORE_REVISION_MAINTENANCE_MASK 0x000000FFU,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,348,#define EUR_CR_MASTER_CORE_REVISION_MAINTENANCE_SHIFT 0,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,349,#define EUR_CR_MASTER_CORE_REVISION_MAINTENANCE_SIGNED 0,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,350,#define EUR_CR_MASTER_CORE_REVISION_MINOR_MASK 0x0000FF00U,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,351,#define EUR_CR_MASTER_CORE_REVISION_MINOR_SHIFT 8,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,352,#define EUR_CR_MASTER_CORE_REVISION_MINOR_SIGNED 0,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,353,#define EUR_CR_MASTER_CORE_REVISION_MAJOR_MASK 0x00FF0000U,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,354,#define EUR_CR_MASTER_CORE_REVISION_MAJOR_SHIFT 16,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,355,#define EUR_CR_MASTER_CORE_REVISION_MAJOR_SIGNED 0,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,356,#define EUR_CR_MASTER_CORE_REVISION_DESIGNER_MASK 0xFF000000U,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,357,#define EUR_CR_MASTER_CORE_REVISION_DESIGNER_SHIFT 24,156
+omap5-sgx-ddk-linux,9ae0fa4998b1c624408945e062bf8fb0ea7efb9d,services4/srvkm/hwdefs/sgxmpdefs.h,358,#define EUR_CR_MASTER_CORE_REVISION_DESIGNER_SIGNED 0,156
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/system/omap4/sysconfig.c,293,								  EUR_CR_CORE_REVISION);,6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/system/omap4/sysconfig.c,302,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MAJOR_MASK),6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/system/omap4/sysconfig.c,303,"							>> EUR_CR_CORE_REVISION_MAJOR_SHIFT),",6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/system/omap4/sysconfig.c,304,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MINOR_MASK),6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/system/omap4/sysconfig.c,305,"							>> EUR_CR_CORE_REVISION_MINOR_SHIFT),",6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/system/omap4/sysconfig.c,306,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MAINTENANCE_MASK),6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/system/omap4/sysconfig.c,307,							>> EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT),6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/system/omap5/sysconfig.c,313,								  EUR_CR_CORE_REVISION);,6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/system/omap5/sysconfig.c,324,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MAJOR_MASK),6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/system/omap5/sysconfig.c,325,"							>> EUR_CR_CORE_REVISION_MAJOR_SHIFT),",6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/system/omap5/sysconfig.c,326,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MINOR_MASK),6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/system/omap5/sysconfig.c,327,"							>> EUR_CR_CORE_REVISION_MINOR_SHIFT),",6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/system/omap5/sysconfig.c,328,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MAINTENANCE_MASK),6
+omap5-sgx-ddk-linux,86a4ffae3458c51f0a58e44b17b7a4fd92d2b8c6,services4/system/omap5/sysconfig.c,329,							>> EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT),6
+omap5-sgx-ddk-linux,7e567553fb64cb22f08a059554d75c81ce2a3007,services4/system/sgx_jz4780/sysconfig.c,250,								  EUR_CR_CORE_REVISION);,63
+omap5-sgx-ddk-linux,7e567553fb64cb22f08a059554d75c81ce2a3007,services4/system/sgx_jz4780/sysconfig.c,259,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MAJOR_MASK),63
+omap5-sgx-ddk-linux,7e567553fb64cb22f08a059554d75c81ce2a3007,services4/system/sgx_jz4780/sysconfig.c,260,"							>> EUR_CR_CORE_REVISION_MAJOR_SHIFT),",63
+omap5-sgx-ddk-linux,7e567553fb64cb22f08a059554d75c81ce2a3007,services4/system/sgx_jz4780/sysconfig.c,261,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MINOR_MASK),63
+omap5-sgx-ddk-linux,7e567553fb64cb22f08a059554d75c81ce2a3007,services4/system/sgx_jz4780/sysconfig.c,262,"							>> EUR_CR_CORE_REVISION_MINOR_SHIFT),",63
+omap5-sgx-ddk-linux,7e567553fb64cb22f08a059554d75c81ce2a3007,services4/system/sgx_jz4780/sysconfig.c,263,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MAINTENANCE_MASK),63
+omap5-sgx-ddk-linux,7e567553fb64cb22f08a059554d75c81ce2a3007,services4/system/sgx_jz4780/sysconfig.c,264,							>> EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT),63
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,100,/* Register TCF_CR_TCF_CORE_ID_REG */,49
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,101,#define TCF_CR_TCF_CORE_ID_REG										(TCF_CR_CLOCK_CONTROL_OFFSET + 0x0020UL),49
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,102,#define TCF_CR_TCF_CORE_ID_REG_DEFAULT								(0x00000000UL),49
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,104,#define TCF_CR_TCF_CORE_ID_REG_TCF_CORE_ID_REG_CORE_ID_MASK			(0xFFFF0000UL),49
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,105,#define TCF_CR_TCF_CORE_ID_REG_TCF_CORE_ID_REG_CORE_ID_SHIFT		(16),49
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,107,#define TCF_CR_TCF_CORE_ID_REG_TCF_CORE_ID_REG_CORE_CFG_MASK		(0x0000FFFFUL),49
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,108,#define TCF_CR_TCF_CORE_ID_REG_TCF_CORE_ID_REG_CORE_CFG_SHIFT		(0),49
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,1614,/* Register TCF_CR_PVR_TCF_RGBPDP_CORE_ID */,49
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,1615,#define TCF_CR_PVR_TCF_RGBPDP_CORE_ID								(TCF_CR_PDP_OFFSET + 0x0078UL),49
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,1616,#define TCF_CR_PVR_TCF_RGBPDP_CORE_ID_DEFAULT						(0x07010009UL),49
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,1618,#define TCF_CR_PVR_TCF_RGBPDP_CORE_ID_GROUP_ID_MASK					(0xFF000000UL),49
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,1619,#define TCF_CR_PVR_TCF_RGBPDP_CORE_ID_GROUP_ID_SHIFT				(24),49
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,1621,#define TCF_CR_PVR_TCF_RGBPDP_CORE_ID_CORE_ID_MASK					(0x00FF0000UL),49
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,1622,#define TCF_CR_PVR_TCF_RGBPDP_CORE_ID_CORE_ID_SHIFT					(16),49
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,1624,#define TCF_CR_PVR_TCF_RGBPDP_CORE_ID_CONFIG_ID_MASK				(0x0000FFFFUL),49
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,1625,#define TCF_CR_PVR_TCF_RGBPDP_CORE_ID_CONFIG_ID_SHIFT				(0),49
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,64,#define TCF_CR_FPGA_ID_REG_FPGA_ID_REG_CORE_ID_MASK					(0xFFFF0000UL),49
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sgx_pc_i686_tc3/apollo_tcfdefs.h,65,#define TCF_CR_FPGA_ID_REG_FPGA_ID_REG_CORE_ID_SHIFT				(16),49
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sgx_pc_i686_tc3/sysutils.c,209,                                      EUR_CR_CORE_REVISION);,49
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sgx_pc_i686_tc3/sysutils.c,225,                           (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MAJOR_MASK),49
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sgx_pc_i686_tc3/sysutils.c,226,"                            >> EUR_CR_CORE_REVISION_MAJOR_SHIFT),",49
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sgx_pc_i686_tc3/sysutils.c,227,                           (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MINOR_MASK),49
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sgx_pc_i686_tc3/sysutils.c,228,"                            >> EUR_CR_CORE_REVISION_MINOR_SHIFT),",49
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sgx_pc_i686_tc3/sysutils.c,230,                           (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MAINTENANCE_MASK),49
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sgx_pc_i686_tc3/sysutils.c,231,"                            >> EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT),",49
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sunxi/sysconfig.c,234,	//							  EUR_CR_CORE_REVISION);,50
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sunxi/sysconfig.c,244,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MAJOR_MASK),50
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sunxi/sysconfig.c,245,"							>> EUR_CR_CORE_REVISION_MAJOR_SHIFT),",50
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sunxi/sysconfig.c,246,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MINOR_MASK),50
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sunxi/sysconfig.c,247,"							>> EUR_CR_CORE_REVISION_MINOR_SHIFT),",50
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sunxi/sysconfig.c,248,						  (IMG_UINT)((ui32SGXRevision & EUR_CR_CORE_REVISION_MAINTENANCE_MASK),50
+omap5-sgx-ddk-linux,cff8103dca22c75fdb612fd431056ea0f4d4ff65,services4/system/sunxi/sysconfig.c,249,							>> EUR_CR_CORE_REVISION_MAINTENANCE_SHIFT),50

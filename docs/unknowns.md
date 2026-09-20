@@ -1,55 +1,55 @@
-# 20 incógnitas prioritárias — avaliação da Fase 4
+# 20 priority unknowns — Phase 4 assessment
 
-Fase 4 — auditoria estática, 2026-09-17. Nenhum MMIO, PCI config, reset,
-firmware ou workload foi executado. IDs P3/P4 remetem à
-[matriz](evidence-matrix.csv).
+Phase 4 — static audit, 2026-09-17. No MMIO, PCI config, reset,
+firmware or workload was executed. IDs P3/P4 refer to
+[matrix](evidence-matrix.csv).
 
-| # | Incógnita | Evidência atual / falta exata | Bloqueia |
+| # | Unknown | Current evidence / exact lack | Blocks |
 |---|---|---|---|
-| U01 | Qual é revision/subsystem/stepping da máquina real? | IDs alvo confirmados; ainda não há relatório do Inspiron | MMIO e posteriores |
-| U02 | `CORE_ID`/`CORE_REVISION` são seguros para leitura no stepping real? | uso histórico confirmado, contrato de read-side-effect ausente | primeiro MMIO |
-| U03 | Qual estado PM garante clocks SGX válidos? | runtime PM PCI não equivale a clock interno (P4-004/P4-012) | qualquer MMIO |
-| U04 | Quais registradores são legíveis quando SGX está gated/off? | nenhuma fonte aplicável define isso | qualquer MMIO |
-| U05 | Qual lock serializa leitura SGX genérica? | locks de IRQ/MMU/GTT existem; lock SGX global não | MMIO concorrente |
-| U06 | Como evitar corrida com IRQ e KMS? | IRQ agrega display/SGX e usa `irqmask_lock` (P4-010) | status/IRQ reads |
-| U07 | Por que a aperture é `0x8000` no Linux e `0x4000` no DDK? | ambas confirmadas, revisão/configuração desconhecida | range MMIO |
-| U08 | Qual fórmula de directory-list vale para cada contexto? | Linux/PSB e TI/EMGD divergem (P3-026/P3-061) | MMU/contextos |
-| U09 | Por que init/remove misturam `gatt_start` e `mmu_gatt_start`? | divergência interna confirmada | MMU/memória |
-| U10 | Sequência completa de clock/power/reset por revisão? | gma500 tem PM incompleto; OSPM histórica ausente | reset/init |
-| U11 | Quais errata/BRNs valem no silício real? | builds rev121/126 não medem a placa | reset/BIF/workload |
-| U12 | Relação física e coerência entre GTT, GATT, stolen e BIF? | mecanismos parciais confirmados, contrato fim a fim ausente | address space |
-| U13 | Semântica de fault/status: latch, clear, ordering e ack? | handler mostra prática, não contrato | observação BIF/IRQ |
-| U14 | Há watchdog de plataforma e recovery SGX confiável? | nenhum mecanismo gma500 localizado; estado da plataforma desconhecido | operações ativas |
-| U15 | Scripts init/deinit completos do DDK Poulsbo? | kernel consome interfaces; payload/UM correspondente ausente | bootstrap |
-| U16 | Firmware/microkernel SGX535 verificável e licenciável? | payload compatível não disponível | firmware/CCB |
-| U17 | Programa PDS e protocolo de bootstrap exatos? | bases/kick não definem programa | PDS/firmware |
-| U18 | ABI CCB, sync, relocations e cache completa? | interfaces históricas parciais e distintas | submission |
-| U19 | ISA/encoder USSE e PDS SGX535 com proveniência? | ausente; SGX540/544 não substitui | execução própria |
-| U20 | Streams TA/3D, DPM, tiling, formatos/PBE e isolamento moderno? | insuficientes nas fontes atuais | workload/render/Mesa |
+| U01 | What is revision/subsystem/stepping of the actual machine? | Target IDs confirmed; there is no Inspiron report yet | MMIO and later |
+| U02 | `CORE_ID`/`CORE_REVISION` are safe to read in real stepping? | confirmed historical use, read-side-effect contract absent | first MMIO |
+| U03 | Which PM state guarantees valid SGX clocks? | runtime PM PCI does not equal internal clock (P4-004/P4-012) | any MMIO |
+| U04 | Which registers are readable when SGX is gated/off? | no applicable source defines this | any MMIO |
+| U05 | Which lock serializes generic SGX reading? | IRQ/MMU/GTT locks exist; no global SGX lock | Concurrent MMIO |
+| U06 | How to avoid race condition with IRQ and KMS? | IRQ aggregates display/SGX and uses `irqmask_lock` (P4-010) | status/IRQ reads |
+| U07 | Why is the aperture `0x8000` on Linux and `0x4000` on DDK? | both confirmed, unknown review/configuration | MMIO range |
+| U08 | Which directory-list formula applies to each context? | Linux/PSB and TI/EMGD diverge (P3-026/P3-061) | MMU/contextos |
+| U09 | Why do init/remove mix `gatt_start` and `mmu_gatt_start`? | internal divergence confirmed | MMU/memory |
+| U10 | Complete sequence of clock/power/reset by review? | gma500 has incomplete PM; historical OSPM missing | reset/init |
+| U11 | Which errata/BRNs are valid in real silicon? | builds rev121/126 do not measure the board | reset/BIF/workload |
+| U12 | Physical relationship and coherence between GTT, GATT, stolen and BIF? | partially confirmed mechanisms, end-to-end contract absent | address space |
+| U13 | Semantics of fault/status: latch, clear, ordering, and ack? | handler shows practice, not contract | observation BIF/IRQ |
+| U14 | Is there a platform watchdog and trusted SGX recovery? | no gma500 mechanism located; platform state unknown | active operations |
+| U15 | Complete init/deinit Scripts from DDK Poulsbo? | kernel consumes interfaces; corresponding payload/UM missing | bootstrap |
+| U16 | Firmware/microkernel SGX535 verifiable and licensable? | compatible payload not available | firmware/CCB |
+| U17 | Exact PDS program and bootstrap protocol? | bases/kick do not define program | PDS/firmware |
+| U18 | ABI CCB, sync, relocations and full cache? | partial and distinct historical interfaces | submission |
+| U19 | ISA/encoder USSE and PDS SGX535 with origin? | absent; SGX540/544 does not replace | own execution |
+| U20 | Streams TA/3D, DPM, tiling, formatos/PBE and modern isolation? | insufficient in current sources | workload/render/Mesa |
 
-## Bloqueadores imediatos do primeiro MMIO
+## Immediate blockers of the first MMIO
 
-Os cinco maiores são U01, U02, U03/U04, U05/U06 e U07/U11. Em termos de
-artefatos: medição passiva da placa; register reference/errata SGX535 Poulsbo;
-power/clock sequence autenticada; código host completo com locking/OSPM; e
-documentação que ligue a revisão PCI/SGX à aperture e aos BRNs.
+The five largest are U01, U02, U03/U04, U05/U06, and U07/U11. In terms of
+artifacts: passive measurement of the board; register reference/errata SGX535 Poulsbo;
+power/clock authenticated sequence; full host code with locking/OSPM; and
+documentation that links the PCI/SGX review to aperture and the BRNs.
 
-## Mudanças desde a Fase 3
+## Changes since Phase 3
 
-- O ownership do gma500 está agora localizado; isso demonstra que módulo
-  separado não é seguro, mas não fornece lock universal.
+- The ownership of the gma500 is now located; this shows that module
+Separated is not safe, but it does not provide a universal lock.
 - `CORE_ID`/`CORE_REVISION` deixaram de ser “candidato condicionado” e ficam
-  formalmente **UNKNOWN** para read-safety.
-- Test Vector Zero foi implementado e não depende de MMIO.
-- GTT e stolen não são inventados quando a interface passiva selecionada não os
-  expõe.
-- Firmware/ISA continuam bloqueadores posteriores, não do inventário passivo.
+formally **UNKNOWN** for read-safety.
+- Test Vector Zero was implemented and does not depend on MMIO.
+- GTT and stolen are not triggered when the selected passive interface does not
+exposes.
+- Firmware/ISA continue to be posterior blockers, not from passive inventory.
 
-## Artefato externo de maior valor
+## External artifact of greatest value
 
-O item mais valioso para o **próximo bloqueador imediato** é um manual de
-registradores + power/reset/errata autenticado para **SGX535 integrado ao
+The most valuable item for the **next immediate blocker** is a manual of
+registers + power/reset/errata authenticated for **SGX535 integrated into
 Poulsbo**, vinculando PCI revision/SGX core revision, aperture, comportamento de
-leitura de `CORE_ID`/`CORE_REVISION`, clocks e requisitos de ownership. Para o
-bootstrap posterior, o pacote UM/microkernel/inicializador correspondente ao
-DDK Poulsbo 1.14 continua sendo o artefato de maior valor.
+reading of `CORE_ID`/`CORE_REVISION`, clocks and ownership requirements. For the
+bootstrap posterior, o pacote UM/microkernel/initializer correspondente ao
+DDK Poulsbo 1.14 continues to be the highest value artifact.

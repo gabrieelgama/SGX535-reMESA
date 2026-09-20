@@ -1,0 +1,31 @@
+{
+  "phase": "4.5",
+  "completed_utc": "2026-09-19T22:41:42.904267+00:00",
+  "previous_phase_seal_sha256": "bbd13b0759b5ad0285892b5ed46ec630e46dea55fdd29cc6873486efa54aac17",
+  "artifacts": [
+    {
+      "file": "docs/phase4-5-formal-gate.md",
+      "sha256": "aa561518a6e73f52abaa525e793508a2404007218f65dc64a3921a8dca8ead04"
+    },
+    {
+      "file": "docs/test-vector-one-gate.md",
+      "sha256": "6dd082e3afe93b6967adb1c259f15a46b4b1eafe0468229841595778cc144770"
+    },
+    {
+      "file": "docs/phase4-go-no-go.md",
+      "sha256": "4995345988e95e17815f8b19234963f9ad1262d0811a735d6bdf72226e802101"
+    },
+    {
+      "file": "docs/unknowns.md",
+      "sha256": "bb16127335feb21452ad2f90404a25afdb530fa738f4d4e1249ba00fdedee8dd"
+    },
+    {
+      "file": "docs/evidence-matrix.csv",
+      "sha256": "4cdbae688d155fd899b7cac815ebbe34cf079b2db0fa3d052853fef5776aa39b"
+    },
+    {
+      "file": "docs/phase4-program-data/formal-gate.json",
+      "sha256": "a45ff3b5ff996a663c92be61fd35f03c2dbd9a214e995b740ae156e983c5e77c"
+    }
+  ]
+}

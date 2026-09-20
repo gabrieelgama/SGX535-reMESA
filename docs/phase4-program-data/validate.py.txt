@@ -1,0 +1,139 @@
+"""Validate project files only. No hardware interfaces, driver calls or network."""
+from pathlib import Path
+from collections import Counter
+import csv, hashlib, json, re, subprocess, sys
+from urllib.parse import unquote
+
+ROOT = Path(__file__).resolve().parents[2]
+errors, limitations = [], []
+counts = Counter()
+def check(ok, message):
+    if not ok:
+        errors.append(message)
+def sha(p):
+    return hashlib.sha256(p.read_bytes()).hexdigest()
+def git(repo, *args):
+    return subprocess.check_output(["git", "--no-optional-locks", *args], cwd=repo, stderr=subprocess.PIPE)
+# JSON and CSV syntax, including evidence matrix field count.
+for p in sorted((ROOT / "docs").rglob("*.json")):
+    try:
+        json.loads(p.read_text()); counts["json_files"] += 1
+    except Exception as e:
+        errors.append(str(p.relative_to(ROOT)) + ": " + str(e))
+for p in sorted((ROOT / "docs").rglob("*.csv")):
+    try:
+        with p.open(newline="") as f:
+            rows = list(csv.reader(f, strict=True))
+        check(bool(rows) and len({len(r) for r in rows}) == 1, "CSV width: " + str(p))
+        counts["csv_files"] += 1
+    except Exception as e:
+        errors.append(str(p) + ": " + str(e))
+matrix = list(csv.DictReader((ROOT/"docs/evidence-matrix.csv").open(newline="")))
+counts["evidence_rows"] = len(matrix)
+check(set(matrix[0]) == set("component claim platform source_repository commit file lines confidence notes".split()), "matrix schema")
+# All project-authored Markdown files, excluding source snapshots' own README.
+md = sorted((ROOT/"docs").glob("*.md")) + sorted((ROOT/"experiments").rglob("*.md")) + sorted((ROOT/"tools").rglob("*.md"))
+for p in md:
+    text = p.read_text()
+    for target in re.findall(r"\]\(([^)]+)\)", text):
+        target = target.strip("<>")
+        if re.match(r"^[a-zA-Z]+:", target) or target.startswith("#"):
+            continue
+        file, _, frag = unquote(target).partition("#")
+        q = (p.parent / file).resolve()
+        check(q.exists(), "internal link: " + str(p.relative_to(ROOT)) + " -> " + target)
+        counts["internal_links"] += 1
+        if q.is_file() and re.fullmatch(r"L\d+", frag):
+            check(int(frag[1:]) <= len(q.read_bytes().splitlines()), "line link: " + target)
+            counts["line_links"] += 1
+# Original snapshot manifests: verify hash and local Git origin when available.
+registry = {}
+for f in ["docs/archaeology-data/source-registry.json", "docs/poulsbo-data/sources.json"]:
+    manifest = ROOT/f
+    for r in json.loads(manifest.read_text()):
+        p = (manifest.parent/r["snapshot"]).resolve()
+        check(sha(p) == r["sha256"], "snapshot hash: "+str(p))
+        counts["snapshot_hash_checks"] += 1
+        registry[(r["repo"],r["commit"],r["path"])] = p
+        repo=ROOT/"references"/r["repo"]
+        if repo.is_dir():
+            try: check(git(repo,"show",r["commit"]+":"+r["path"])==p.read_bytes(), "Git snapshot bytes: "+str(p))
+            except subprocess.CalledProcessError: errors.append("Git source missing: "+r["path"])
+for f in ["docs/phase4-1-data/download-manifest.json","docs/phase4-2-data/manifest.json"]:
+    m=ROOT/f
+    for r in json.loads(m.read_text())["artifacts"]:
+        if "sha256" not in r: continue
+        p=m.parent/r["file"]
+        check(p.is_file() and sha(p)==r["sha256"],"archive hash: "+str(p))
+        counts["archive_hash_checks"]+=1
+m=ROOT/"docs/hardware-evidence/TVZ-001/manifest.json"; o=json.loads(m.read_text())
+check(sha(m.parent/o["artifact"])==o["sha256"],"TVZ changed")
+# Recompute all published gma500 blobs and five byte-for-byte PM comparisons.
+for r in json.loads((ROOT/"docs/phase4-2-data/gma500-comparison.json").read_text()):
+    b=(ROOT/"docs/phase4-2-data/antix-source"/r["file"]).read_bytes()
+    blob=hashlib.sha1(b"blob "+str(len(b)).encode()+b"\0"+b).hexdigest()
+    check(blob==r["upstream_git_blob"]==r["antix_git_blob"],"gma500 blob: "+r["file"]);counts["gma500_blobs"]+=1
+for r in json.loads((ROOT/"docs/phase4-2-data/pm-comparison.json").read_text()):
+    a=ROOT/"docs/phase4-2-data/antix-source"/r["file"]; b=ROOT/"docs/phase4-2-data/upstream-source"/r["file"]
+    check(a.read_bytes()==b.read_bytes() and sha(a)==r["upstream_sha256"],"PM bytes: "+r["file"]); counts["pm_files"]+=1
+# Source resolution and range validation of the whole evidence matrix.
+source_cache={}
+remote=[]
+for idx,r in enumerate(matrix,2):
+    key=(r["source_repository"],r["commit"],r["file"])
+    if key not in source_cache:
+        repo=ROOT/"references"/r["source_repository"]
+        data=None
+        if repo.is_dir() and re.fullmatch(r"[0-9a-f]{40}",r["commit"]):
+            try: data=git(repo,"show",r["commit"]+":"+r["file"])
+            except subprocess.CalledProcessError: errors.append("matrix Git missing row "+str(idx))
+        elif key in registry: data=registry[key].read_bytes()
+        elif "antixlinux.com" in r["source_repository"] and (ROOT/"docs/phase4-2-data/antix-source"/r["file"]).is_file():
+            data=(ROOT/"docs/phase4-2-data/antix-source"/r["file"]).read_bytes()
+        elif r["source_repository"]=="https://github.com/gregkh/linux":
+            p=ROOT/"docs/phase4-1-data"/("linux-5.10.240-"+Path(r["file"]).name+".txt")
+            if p.is_file(): data=p.read_bytes()
+        elif (ROOT/r["file"]).is_file() and not r["file"].endswith(".pdf"): data=(ROOT/r["file"]).read_bytes()
+        elif r["source_repository"]=="https://github.com/gregkh/psb-kmp" and r["file"]=="psb_msvdx.c": data=(ROOT/"docs/phase4-2-data/PSB_psb_msvdx.c.txt").read_bytes()
+        elif "EMGD-Community" in r["source_repository"]:
+            names={"drm/pvr/services4/srvkm/env/linux/osfunc.c":"EMGD_osfunc.c.txt","drm/pvr/services4/srvkm/hwdefs/sgxerrata.h":"EMGD_sgxerrata.h.txt"}
+            if r["file"] in names:data=(ROOT/"docs/phase4-2-data"/names[r["file"]]).read_bytes()
+        source_cache[key]=data
+    data=source_cache[key]
+    if data is None:
+        remote.append({"row":idx,"file":r["file"],"lines":r["lines"],"notes":r["notes"]})
+        continue
+    if re.fullmatch(r"\d+(?:-\d+)?(?:;\d+(?:-\d+)?)*",r["lines"]):
+        for span in r["lines"].split(";"):
+            bounds=list(map(int,span.split("-")))
+            check(min(bounds)>=1 and max(bounds)<=len(data.splitlines()),"matrix line range row "+str(idx)+": "+r["file"])
+        counts["matrix_rows_line_checked"]+=1
+    else:
+        limitations.append("Non-numeric locator manually audited: row "+str(idx)+" "+r["lines"])
+# Formal gate arithmetic; whitelist must be empty, no equivalent code.
+g=json.loads((ROOT/"docs/phase4-program-data/formal-gate.json").read_text())
+for candidate in ["CORE_ID","CORE_REVISION"]:
+    c=Counter(x[candidate]for x in g["requirements"])
+    check(c=={"PASS":5,"UNKNOWN":10},candidate+" formal cells")
+    check(not g[candidate+"_SAFE_CANDIDATE"],candidate+" invalid approval")
+check(g["whitelist"]==[] and g["gate_b"]=="BLOCKED","formal decision")
+check(not (ROOT/"experiments/bringup1/TEST-VECTOR-ONE.md").exists(),"unexpected TV1")
+check(git(ROOT,"diff","HEAD","--","tools")==b"","tools implementation changed")
+for p in (ROOT/"experiments").rglob("*"):
+    check(p.is_dir() or p.suffix==".md","experiment executable: "+str(p))
+check(git(ROOT,"diff","--check")==b"","git diff --check")
+# Preserve reference checkout identities and cleanliness.
+references=[]
+baseline=json.loads((ROOT/"docs/phase4-program-data/phase4-3-completion.json").read_text())["reference_baseline"]
+for r in baseline:
+    repo=ROOT/r["repository"]
+    now=git(repo,"rev-parse","HEAD").decode().strip(); status=git(repo,"status","--porcelain").decode()
+    check(now==r["commit"] and status==r["status"]=="","reference modified: "+r["repository"])
+    references.append({"repository":r["repository"],"commit":now,"status":status})
+# External locators require manual page/post verification, not fake line checks.
+limitations.append("External PDF/page/post locators and non-archived metadata are separately reviewed; URL availability is not authenticity.")
+limitations.append("Historical completion hashes are point-in-time checkpoints; mutable documents changed intentionally in later phases.")
+report={"scope":"offline files/software only; not hardware validation","counts":dict(counts),"errors":errors,"external_or_unresolved_rows":remote,"limitations":limitations,"references":references,"tv1_present":False,"gate_b":g["gate_b"]}
+out=ROOT/"docs/phase4-program-data/final-validation.json";out.write_text(json.dumps(report,indent=2,ensure_ascii=False)+"\n")
+print(json.dumps({"counts":dict(counts),"errors":errors,"external_or_unresolved_rows":len(remote),"reference_clean":all(x["status"]=="" for x in references)},indent=2,ensure_ascii=False))
+sys.exit(bool(errors))

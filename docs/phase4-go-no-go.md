@@ -1,29 +1,29 @@
-# Matriz GO / NO-GO / BLOCKED da Fase 4
+# GO / NO-GO / BLOCKED Matrix of Phase 4
 
-Os estados valem para as fontes e o harness atuais. `GO` não autoriza uma etapa
-posterior implícita.
+The states apply to the current sources and harness. `GO` does not authorize a step
+implicit posterior.
 
-| item | estado | fundamento; falta exata para desbloquear |
+| item | state | basis; exact requirement to unlock |
 |---|---|---|
-| A. Passive hardware probe | GO | IDs exatos e atributos textuais RO documentados; implementação não abre dispositivo nem BAR |
-| B. Controlled MMIO reads | BLOCKED | falta contrato de read-side-effects, power/clock por registrador, stepping e locking; fonte necessária: datasheet/register reference SGX535 Poulsbo + errata/power sequence Intel/IMG |
-| C. Controlled SGX reset | BLOCKED | falta sequência oficial por revisão, estado pré/pós, impacto no display/IRQ/MMU e recuperação; fonte necessária: init/reset script SGX535 Poulsbo autenticado ou documentação Intel/IMG |
-| D. Clock/power manipulation | NO-GO | gma500 atual tem runtime PM declarado quebrado, callbacks Poulsbo vazios e função PCI/display compartilhada; nenhuma manipulação externa é aceitável |
-| E. BIF observation | BLOCKED | divergência de layout/contextos e semântica de status/fault; fonte necessária: SGX535 Poulsbo BIF register reference + errata de revisão |
-| F. MMU initialization | BLOCKED | fórmula de contextos e endereços GATT/MMU diverge; falta formato/flush/fault oficial e limites; fonte necessária: DDK Poulsbo completo e documentação BIF/MMU da revisão |
-| G. SGX address-space creation | BLOCKED | depende de F e do modelo GTT/stolen confirmado em hardware; falta ABI de memória moderna e regras de cache/coerência |
-| H. Firmware/microkernel loading | NO-GO | firmware verificado, licença, hash, revisão alvo e protocolo de bootstrap estão ausentes |
-| I. CCB allocation | BLOCKED | formato de CCB, memória/coerência, produtor/consumidor e firmware compatível não estão estabelecidos para Poulsbo alvo |
-| J. EVENT_KICK | NO-GO | é ação de submissão; endereço/evento/firmware e recuperação não estão verificados |
-| K. PDS execution | NO-GO | binário, ISA, bases, stepping e sandbox inexistentes |
-| L. USSE execution | NO-GO | ISA/encoding e limites SGX535 não foram reconstruídos com fonte compatível |
-| M. First GPU workload | BLOCKED | depende de B–L e de mecanismo de hang detection/recovery; fonte necessária: stack Poulsbo SGX535 completo e reproduzível |
-| N. First rendering workload | BLOCKED | depende de M, formatos de command stream/render target e validação; fonte necessária: documentação/compilador/driver userspace com proveniência adequada |
-| O. Mesa integration | BLOCKED | arquitetura moderna só pode ser definida após memória, submission, sync, firmware e workload mínimos confirmados |
+| A. Passive hardware probe | GO | Exact IDs and documented RO textual attributes; implementation does not open device or BAR |
+| B. Controlled MMIO reads | BLOCKED | missing read-side-effects contract, power/clock per register, stepping and locking; required source: datasheet/register reference SGX535 Poulsbo + errata/power sequence Intel/IMG |
+| C. Controlled SGX reset | BLOCKED | official sequence missing due to review, pre/post state, impact on display/IRQ/MMU and recovery; required source: init/reset authenticated SGX535 Poulsbo script or Intel/IMG documentation |
+| D. Clock/power manipulation | NO-GO | current gma500 has declared broken PM runtime, empty Poulsbo callbacks, and shared PCI/display function; no external manipulation is acceptable |
+| E. BIF observation | BLOCKED | divergence of layout/contextos and semantics of status/fault; source required: SGX535 Poulsbo BIF register reference + revision errata |
+| F. MMU initialization | BLOCKED | formula of contexts and addresses GATT/MMU diverges; official formato/flush/fault and limits are missing; source needed: complete Poulsbo DDK and BIF/MMU documentation from the review |
+| G. SGX address-space creation | BLOCKED | depends on F and the GTT/stolen model confirmed in hardware; lacks modern memory ABI and cache/coherence rules |
+| H. Firmware/microkernel loading | NO-GO | firmware verified, license, hash, target revision, and bootstrap protocol are missing |
+| I. CCB allocation | BLOCKED | CCB format, memory/coherence, produtor/consumidor and compatible firmware are not established for target Poulsbo |
+| J. EVENT_KICK | NO-GO | is a submission action; address/evento/firmware and recovery are not verified |
+| K. PDS execution | NO-GO | binary, ISA, bases, stepping, and nonexistent sandbox |
+| L. USSE execution | NO-GO | ISA/encoding and SGX535 limits were not rebuilt with compatible source |
+| M. First GPU workload | BLOCKED | depends on B–L and on hang mechanism detection/recovery; required source: complete and reproducible Poulsbo SGX535 stack |
+| N. First rendering workload | BLOCKED | depends on M, command formats stream/render target and validation; required source: documentation/compilador/driver userspace with proper provenance |
+| O. Mesa integration | BLOCKED | modern architecture can only be defined after memory, submission, sync, firmware, and minimum workload are confirmed |
 
-## Decisão
+## Decision
 
-Somente A está `GO`. D, H, J, K e L são `NO-GO` com as evidências atuais. Os
-demais itens estão `BLOCKED`, nunca promovidos por semelhança com SGX540/544,
+Only A is `GO`. D, H, J, K, and L are `NO-GO` with the current evidence. The
+the other items are `BLOCKED`, never promoted due to similarity with SGX540/544,
 OMAP ou EMGD.
 

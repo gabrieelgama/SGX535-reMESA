@@ -1,0 +1,16 @@
+f585cd4968756b4c4128fca903c2132e03f3c2da 2023-10-11 omap_linux: Makefile: remove the legacy makefile
+77e4ee2ec1b9374a702206d27321aefb7d65e29e 2023-10-11 ti*_linux: Makefile: break the omap makefile up
+c357ea03f32dbf65fb0f07355032a554dd883407 2023-10-02 omap_linux: Makefile: indentation helps
+8715797c1b2975a5b34ff6c94f6493c90b113e14 2023-09-28 km: Rename jacinto6evm and omap5uevm products to ti572x
+1c3ea3c608177eaace5e5ad93a09ac8d7abb5563 2023-03-22 km: Add Android available hardware definitions
+8782701c7b07de94f74f0fe573d6d11a5d5b5159 2023-03-22 km: Drop unused platform definitions for jz4780
+fff11fff5da2d89195053586e3ead105f3923ec5 2023-03-22 build: Move target selection to top and use elseif logic
+636e957a340ebba5c10fb8a5c5b3f30b85078c66 2023-03-22 km: remove DDK 1.14 specific files
+7c89d3433bd96d8b2755ca172e99198fa4b69c05 2023-03-22 IMG DDK 1.14 ED3699939
+d654d4cd09ecb72847b61d2b58b6b0ca7ecf2283 2020-06-08 km: Add Android available hardware definitions
+2e83a1d081c566be42883b178c39a007c2fc47e1 2020-02-06 km: Drop unused platform definitions for jz4780
+14f7ec76136d68b398d783589b6ef8c7d5d04080 2020-02-06 build: Move target selection to top and use elseif logic
+3b6ca1d1f47a951c1f93ba5f9b693b25474d0798 2019-02-28 km: remove DDK 1.14 specific files
+cb46ba4d0c900f89f7ec0284f9803d476bfa98de 2016-02-11 IMG DDK 1.14 ED3699939
+322bcda5f3076037e2e20ef9209f4f4d575a7d5f 2015-05-28 DDK 1.13 - experimental
+1450ae2166ad952ef30197e79518b51577a629e6 2013-06-27 DDK 1.9 kernel module

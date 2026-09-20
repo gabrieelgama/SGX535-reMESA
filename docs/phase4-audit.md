@@ -1,113 +1,102 @@
-# Auditoria adversarial da Fase 4
+# Phase 4 adversarial audit
 
-## Escopo e método
+## Scope and method
 
-A auditoria releu todos os documentos em `docs/`, as 123 linhas da matriz de
-evidências da Fase 3 e as fontes originais correspondentes. A unidade contada
-como uma afirmação auditada é um identificador `P3-*` único, não cada linha da
-matriz: uma afirmação pode ter várias fontes. Foram auditadas **60 afirmações
-CONFIRMED** (`P3-001` a `P3-064`, com quatro números não usados). Cada uma foi
-verificada contra repositório, commit, arquivo, linhas e plataforma.
+The audit reread all the documents in `docs/`, the 123 lines of the Phase 3 evidence matrix and the corresponding original sources. The counted unit is a unique audited statement identified by `P3-*`, not each line of the matrix: a statement can have multiple sources. 60 `CONFIRMED` statements were audited (`P3-001` to `P3-064`, with four unused numbers). Each one was
+verified against repository, commit, file, lines, and platform.
 
-O resultado não transforma uso histórico em contrato de hardware. Código que
-lê um registrador comprova que aquela versão do driver efetuava a leitura; não
-comprova ausência de efeitos colaterais, pré-condição de clock ou segurança em
-outra revisão.
+The result does not turn historical use into a hardware contract. Code that reads a register proves that the driver performed that read. It does not prove the absence of side effects, clock prerequisites, or safety in another revision.
 
-## Resultado quantitativo
+## Quantitative result
 
-| item | quantidade |
+| item | count |
 |---|---:|
-| afirmações CONFIRMED auditadas | 60 |
-| rebaixadas para INFERRED | 0 |
-| rebaixadas para UNKNOWN | 0 |
-| divergências/contradições abertas com impacto no bring-up | 5 |
+| CONFIRMED audited statements | 60 |
+| lowered to INFERRED | 0 |
+| lowered to UNKNOWN | 0 |
+| open disagreements/contradictions with impact on bring-up | 5 |
 
-O total zero de rebaixamentos significa que os enunciados `P3-*`, já limitados
-à plataforma e à fonte, continuam sustentados. Três conclusões operacionais
-foram **estreitadas**, sem mudar a confiança da evidência subjacente:
+The zero downgrade count means that the statements `P3-*`, already limited
+to the platform and the source, remain supported. Three operational conclusions
+were **narrowed**, without changing the confidence in the underlying evidence:
 
-1. `CORE_ID`/`CORE_REVISION` continuam offsets confirmados e leituras
-   historicamente observadas, mas sua segurança de leitura é **UNKNOWN**.
-2. `power/runtime_status=active` descreve o estado runtime-PM do dispositivo
-   PCI, não prova que clocks internos da SGX estejam habilitados.
-3. “hardware state modified: NO” no Test Vector Zero descreve somente as ações
-   do probe. O bind anterior do `gma500` modifica SGX, GTT, MMU e IRQ.
+1. `CORE_ID`/`CORE_REVISION` remain historically observed offsets and reads; read safety is **UNKNOWN**.
+2. `power/runtime_status=active` describes the PCI device runtime-PM state; it does not prove that SGX internal clocks are enabled.
+3. “hardware state modified: NO” in Test Vector Zero describes only the actions
+   of the probe. The earlier `gma500` bind may modify SGX, GTT, MMU, and IRQ.
 
-Documentação anterior também foi corrigida onde ainda dizia, no tempo presente,
-que `sgx535defs.h` faltava: `registers.md` e `mmu-bif.md` agora distinguem o
-checkout master sem o arquivo dos commits históricos que o contêm.
+Previous documentation was also corrected where it still said, in the present tense,
+that `sgx535defs.h` was missing: `registers.md` and `mmu-bif.md` now distinguish the master checkout without the file from the historical commits that contain it.
 
 ## Claims downgraded during Phase 4
 
-Nenhuma afirmação `P3-*` foi rebaixada. As três restrições operacionais acima
-corrigem interpretações possíveis, não os fatos source-scoped auditados.
+No statement `P3-*` was downgraded. The three operational constraints above correct possible interpretations, not the source-scoped audited facts.
 
-## Evidências novas decisivas
+## New decisive evidence
 
 - **CONFIRMED — P4-001:** o Linux atual associa exatamente `8086:8108` e
-  `8086:8109` a Poulsbo/SGX535 e `psb_chip_ops`; não se usa o nome de `lspci`
-  como prova (`linux`, commit `9b87fdc...`, `psb_drv.c:43-59`).
-- **CONFIRMED — P4-006/P4-007:** durante o bind, antes de registrar o DRM, o
+`8086:8109` to Poulsbo/SGX535 and `psb_chip_ops`; the name of `lspci` is not used
+as proof (`linux`, commit `9b87fdc...`, `psb_drv.c:43-59`).
+- **CONFIRMED — P4-006/P4-007:** during the bind, before registering the DRM, the
   `gma500` mapeia VDC/SGX, inicializa PM, GTT, GEM e MMU, reseta blocos SGX,
   programa contextos/BIF/PDS e instala IRQ (`psb_drv.c:250-385,450-479`).
 - **CONFIRMED — P4-012:** o driver chama `pm_runtime_get()`
-  incondicionalmente porque seu runtime PM é declarado quebrado; os callbacks
-  Poulsbo `power_up`/`power_down` são stubs (`power.c:46-70`;
+unconditionally because your PM runtime is declared broken; the callbacks
+Poulsbo `power_up`/`power_down` are stubs (`power.c:46-70`;
   `psb_device.c:186-194`).
-- **CONFIRMED — P4-014:** PSB histórico lê `CORE_ID` e `CORE_REVISION`, mas não
-  documenta semântica elétrica, clock ou efeito colateral
+- **CONFIRMED — P4-014:** Historical PSB reads `CORE_ID` and `CORE_REVISION`, but does not
+electrical semantic documentation, clock or side effect
   (`PSB_psb_drv_c.txt:325-340`).
 
-## Cinco divergências preservadas
+## Five preserved divergences
 
-1. **Apertura SGX:** Linux atual mapeia `0x8000`; DDK Poulsbo histórico declara
-   `0x4000`. A origem é explícita em ambos, mas a revisão/configuração que
-   explica a diferença permanece **UNKNOWN** (`P3-003`, `P3-005`).
-2. **Contextos BIF:** Linux/PSB usam a expressão baseada em `BASE1 + context*4`;
-   TI SGX535/EMGD usam arranjo distinto. Não há base para escolher uma fórmula
-   genérica (`P3-026`, `P3-061`).
-3. **Endereço GATT/MMU:** o Linux insere stolen em `gatt_start`, calcula espaço
-   a partir de `mmu_gatt_start`, e no unload remove a sequência a partir de
-   `mmu_gatt_start`. O comentário `mmu_gatt ??` confirma incerteza no próprio
-   código (`psb_drv.c:134-160,189-193,352-359`).
-4. **Power ownership:** o gma500 atual mantém uma referência runtime-PM e tem
-   callbacks Poulsbo vazios, enquanto o DDK Poulsbo histórico chama uma camada
-   OSPM externa cuja implementação não está no artefato. Não há sequência
+1. **SGX Opening:** Current Linux maps `0x8000`; Historical Poulsbo DDK declares
+`0x4000`. The origin is explicit in both, but the review/configuration that
+explains the difference remains **UNKNOWN** (`P3-003`, `P3-005`).
+2. **BIF Contexts:** Linux/PSB use the expression based on `BASE1 + context*4`;
+TI SGX535/EMGD use a different arrangement. There is no basis for choosing a formula
+generic (`P3-026`, `P3-061`).
+3. **Address GATT/MMU:** Linux inserts stolen into `gatt_start`, calculates space
+starting from `mmu_gatt_start`, and in the unload remove the sequence starting from
+`mmu_gatt_start`. The comment `mmu_gatt ??` confirms uncertainty in itself
+code (`psb_drv.c:134-160,189-193,352-359`).
+4. **Power ownership:** the current gma500 maintains a runtime-PM reference and has
+empty Poulsbo callbacks, while the historic Poulsbo DDK calls a layer
+External OSPM whose implementation is not in the artifact. There is no sequence
    completa e reconciliada de power/clock da SGX (`P3-017`, `P3-045`).
-5. **Cobertura dos headers SGX535:** os headers TI histórico e EMGD têm 597
-   valores escalares comuns iguais, mas conjuntos exclusivos diferentes. Isso
-   comprova parentesco dos artefatos, não equivalência da integração nem
-   segurança dos registradores (`P3-063`).
+5. **Coverage of SGX535 headers:** the historical TI and EMGD headers have 597
+common equal scalar values, but different exclusive sets. This
+proves kinship of the artifacts, not equivalence of integration nor
+security of the registers (`P3-063`).
 
-## Extrapolações recusadas
+## Extrapolations refused
 
-- SGX540/544 não preenche campos SGX535 ausentes.
-- OMAP/TI só descreve a integração TI.
-- EMGD permanece artefato histórico de espelho comunitário.
-- ABI PSB histórica não é proposta de ABI moderna.
-- O display KMS do gma500 não prova aceleração 3D.
-- Nomes de registrador e `#define` não provam read-safety.
+- SGX540/544 does not fill in missing SGX535 fields.
+- OMAP/TI only describes the IT integration.
+- EMGD remains a historical artifact of a community mirror.
+- Historical PSB ABI is not a proposal for a modern ABI.
+- The gma500 KMS display does not prove 3D acceleration.
+- Registrar names and `#define` do not prove read-safety.
 
-## Proveniência e licenças
+## Provenance and licenses
 
-| material | owner/origem | licença/proveniência | uso permitido nesta fase |
+| material | owner/origem | license/provenance | permitted use at this stage |
 |---|---|---|---|
-| Linux/gma500 e documentação kernel | Linux contributors; commit `9b87fdc...` | SPDX por arquivo, predominantemente GPL-2.0 | evidência primária; código só conforme licença |
-| TI KM/UM e DDK Poulsbo histórico | TI/IMG e respectivos autores; commits fixados na matriz | licenças por arquivo/árvore; não presumir uniformidade | documentação/evidência; reuso depende de auditoria do arquivo |
-| PSB KMP histórico | snapshot público `gregkh/psb-kmp` commit `98b5307...` | código histórico GPL conforme cabeçalhos/árvore | evidência e possível referência GPL; não copiar para Mesa permissivo sem análise |
-| EMGD mirror | Intel-origin material em espelho comunitário `e6884ec...` | licença do pacote e proveniência incompleta para autenticação | estudo histórico somente; não copiar para implementação nova |
-| binários EMGD | espelho comunitário | binários históricos, termos do pacote | catalogar/hashes; nunca código reutilizável |
-| `sgx535-probe` | código original SGX535-GFX, Fase 4 | MIT, arquivo `tools/sgx535-probe/LICENSE` | reutilizável sob MIT |
+| Linux/gma500 and kernel documentation | Linux contributors; commit `9b87fdc...` | SPDX per file, predominantly GPL-2.0 | primary evidence; code only according to license |
+| TI KM/UM and historical Poulsbo DDK | TI/IMG and respective authors; commits fixed in the main branch | licenses by file/tree; do not assume uniformity | documentation/evidence; reuse depends on file audit |
+| PSB KMP history | public snapshot `gregkh/psb-kmp` commit `98b5307...` | historical code GPL according to headers/tree | evidence and possible GPL reference; do not copy to permissive Desk without analysis |
+| EMGD mirror | Intel-origin material in community mirror `e6884ec...` | package license and provenance incomplete for authentication | historical study only; do not copy for new implementation |
+| EMGD binaries | community mirror | historical binaries, package terms | catalogar/hashes; never reusable code |
+| `sgx535-probe` | original code SGX535-GFX, Phase 4 | MIT, file `tools/sgx535-probe/LICENSE` | reusable under MIT |
 
-Nenhum trecho histórico foi copiado no probe. Constantes PCI usadas como fatos
-de identificação vêm da tabela Linux e são registradas na matriz.
+No historical excerpt was copied in the probe. PCI constants used as facts
+Identification come from the Linux table and are recorded in the matrix.
 
-## Conclusão da auditoria
+## Audit Conclusion
 
-**CONFIRMED (P4-001–P4-006):** um inventário passivo por sysfs/procfs pode
-identificar a função PCI e o binding sem tocar em BAR ou abrir DRM. **UNKNOWN:**
-não há, nas fontes
-auditadas, um registrador SGX535/Poulsbo com contrato simultaneamente explícito
-de leitura sem efeito colateral, power/clock válido, stepping coberto e regra de
-locking. Portanto a auditoria aprova o Test Vector Zero e bloqueia MMIO.
+**CONFIRMED (P4-001–P4-006):** a passive inventory by sysfs/procfs can
+identify the PCI function and the binding without touching BAR or opening DRM. **UNKNOWN:**
+there is none, in the sources
+audited, a SGX535/Poulsbo registrar with a simultaneously explicit contract
+side-effect-free reading, power/clock valid, covered stepping and rule of
+locking. Therefore, the audit approves the Test Vector Zero and locks MMIO.

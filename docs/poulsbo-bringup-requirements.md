@@ -1,39 +1,39 @@
-# Requisitos para primeiro bring-up controlado
+# Requirements for first controlled bring-up
 
-Fase 3 — análise estática, 2026-09-17. `CONFIRMED` significa o que a fonte declara/implementa; `INFERRED` é interpretação; `UNKNOWN` é lacuna. IDs P3 remetem à [matriz](evidence-matrix.csv), com repositório, commit, arquivo e linhas. Os snapshots preservam a numeração original; ver [proveniência](poulsbo-data/sources.json). Nenhum procedimento abaixo foi executado na GPU.
+Phase 3 — static analysis, 2026-09-17. `CONFIRMED` means the source declares/implements; `INFERRED` is interpretation; `UNKNOWN` is gap. P3 IDs refer to [matrix](evidence-matrix.csv), with repository, commit, file, and lines. The snapshots preserve the original numbering; see [provenance](poulsbo-data/sources.json). No procedure below was executed on the GPU.
 
-## Decisão
+## Decision
 
-**NÃO temos informação suficiente para autorizar nesta fase um bring-up ativo da SGX535, com tomada de ownership, reset, programação de MMU ou bootstrap.** Esta é uma avaliação **INFERRED** das lacunas abaixo, não uma alegação de inviabilidade do projeto.
+**We do NOT have enough information to authorize at this stage an active bring-up of the SGX535, with ownership takeover, reset, MMU programming, or bootstrap.** This is an **INFERRED** assessment of the gaps below, not a claim of project infeasibility.
 
-Temos material suficiente para especificar um inventário passivo e preparar um futuro teste limitado de identificação. Inventário não equivale a bring-up do núcleo; a falta de firmware não bloqueia inventário nem, por si só, uma leitura de ID. Os critérios devem ser proporcionais ao experimento.
+We have enough material to specify a passive inventory and prepare a future limited identification test. Inventory does not equate to a core bring-up; the lack of firmware does not block inventory nor, by itself, an ID read. The criteria must be proportional to the experiment.
 
-| Etapa futura | Bloqueadores exatos | O que os resolve |
+| Future step | Exact blockers | What solves them |
 |---|---|---|
-| Inventário sem acessos novos | placa/ambiente e logs ainda não fornecidos | registros já existentes de PCI, driver, kernel/BIOS, recursos exportados e boot |
-| Leitura nova de ID SGX | B1 revisão/plataforma alvo; B2 ownership e energia de acesso; B3 segurança das leituras e recuperação comprovada | identificar placa; definir cooperação com driver; fundamentar allowlist e preparar console/reboot |
-| Reset/MMU controlados | B1–B3 mais B4 sequência clock/reset/errata; B5 índice contextos; B6 memória/DMA/coerência e proteção display | fontes/trace aplicáveis à revisão e plano testável com limites |
-| Bootstrap microkernel | anteriores mais B7 scripts/PDS/payload/ABI e licença; B8 timeouts/ack/fault/recovery | pacote correspondente verificável e protocolo completo de inicialização/parada |
-| Renderização | anteriores mais streams/ISA/layouts/estado/sync/isolamento | nova fase de engenharia, fora do escopo |
+| Inventory without new accesses | placa/ambiente and logs not yet provided | already existing records of PCI, driver, kernel/BIOS, exported resources, and boot |
+| New SGX ID reading | B1 review/target platform; B2 ownership and access power; B3 reading security and proven recovery | identify board; define cooperation with driver; base allowlist and prepare console/reboot |
+| Reset/MMU controlled | B1–B3 plus B4 sequence clock/reset/errata; B5 context index; B6 memory/DMA/coherence and display protection | applicable sources/trace to review and testable plan with limits |
+| Bootstrap microkernel | previous ones plus B7 scripts/PDS/payload/ABI and license; B8 timeouts/ack/fault/recovery | corresponding verifiable package and complete startup/shutdown protocol |
+| Rendering | previous ones more streams/ISA/layouts/estado/sync/isolamento | new engineering phase, out of scope |
 
-B1 corresponde a U01; B2 a U03/U04; B3 a U02/U16; B4 a U03/U05; B5 a U06/U09; B6 a U07/U08/U20; B7 a U10–U14; B8 a U15/U16. Ver [20 incógnitas](unknowns.md). A divergência P3-026 bloqueia escrever contextos novos, não coletar um log existente. Não exigir ISA completa para ler um ID, nem declarar reset seguro apenas porque existe em gma500.
+B1 corresponds to U01; B2 to U03/U04; B3 to U02/U16; B4 to U03/U05; B5 to U06/U09; B6 to U07/U08/U20; B7 to U10–U14; B8 to U15/U16. See [20 unknowns](unknowns.md). The P3-026 divergence blocks writing new contexts, not collecting an existing log. Do not require a full ISA to read an ID, nor declare a safe reset just because it exists in gma500.
 
 ## Menor experimento proposto — atualizado pela Fase 4
 
-**Etapa zero, passiva:** agora está implementada em `tools/sgx535-probe` como Test Vector Zero. Ela recolhe PCI IDs/revision/subsystem, recursos textuais publicados pelo kernel, IRQ, driver, DRM node, kernel, arquitetura e runtime status sem abrir BAR, PCI config ou DRM. A garantia “não modifica estado” limita-se ao probe: o `gma500` já inicializa ativamente hardware durante bind.
+**Step zero, passive:** it is now implemented in `tools/sgx535-probe` as Test Vector Zero. It collects PCI IDs/revision/subsystem, text resources published by the kernel, IRQ, driver, DRM node, kernel, architecture, and runtime status without opening BAR, PCI config, or DRM. The guarantee of 'does not modify state' is limited to the probe: `gma500` already actively initializes hardware during bind.
 
-**Etapa seguinte continua BLOCKED:** `CORE_ID` e `CORE_REVISION` têm offsets e uso histórico confirmados, mas a Fase 4 não encontrou contrato de read-side-effects, power/clock ou locking suficiente. Eles não formam uma whitelist aprovada. Se essas lacunas forem fechadas, a instrumentação deverá viver no gma500 e usar uma operação compilada e específica; nunca acesso genérico a MMIO.
+**Next step remains BLOCKED:** `CORE_ID` and `CORE_REVISION` have confirmed offsets and historical usage, but Phase 4 did not find a read-side-effects contract, power/clock, or sufficient locking. They do not form an approved whitelist. If these gaps are closed, the instrumentation should live in gma500 and use a compiled, specific operation; never generic access to MMIO.
 
-O registro deve conter ID PCI/stepping, BAR base/len, offset exato, valor bruto, interpretação separada, estado de energia conhecido, timestamps e erro/timeout. Nenhum scan de offsets, escrita de reset, teste de fault, CCB, firmware, PDS ou stream3D. Não inserir retries ilimitados. Após coleta, o recurso temporário deve ser removível; em falha, parar a sequência e recuperar pelo mecanismo previamente preparado. Reboot é plano de recuperação, não garantia já demonstrada.
+The record must contain ID PCI/stepping, BAR base/len, exact offset, raw value, separate interpretation, known power state, timestamps, and erro/timeout. No offset scans, reset writing, fault testing, CCB, firmware, PDS, or stream3D. Do not insert unlimited retries. After collection, the temporary resource must be removable; in case of failure, stop the sequence and recover using the previously prepared mechanism. Reboot is a recovery plan, not a demonstrated guarantee.
 
-Essa etapa MMIO **não está aprovada tecnicamente como pronta**. Nenhum patch ou sequência MMIO foi escrito.
+This MMIO stage **is not technically approved as ready**. No MMIO patch or sequence has been written.
 
-## Próximas fontes e artefato de maior valor
+## Upcoming sources and highest-value artifact
 
-1. **Pacote fonte legítimo UM + microkernel/PDS + inicializador correspondente a `pc_i686_poulsbo_d0_linux`, SGX535 rev121, IMG DDK1.14 build3699939**, com licença explícita, opções geradas, scripts preenchidos, hashes e cabeçalhos ABI. É o artefato externo de maior valor para fechar o bootstrap que o KM local só consome. Não foi demonstrado que esse pacote esteja publicamente disponível.
-2. Implementações exatas de `psb_powermgmt.h` / `sys_pvr_drm_export.h` usadas pelo ramo DRM_EXT desse DDK, com versão do driver host; não basta um header homônimo de outra família.
-3. Userspace/Xorg que atende XHW do PSB5.0.0.0045, especialmente handlers scene-bind/fire, TA-memory, OOM e reset DPM. Serve para reconstruir fronteiras históricas; não é ABI a adotar.
-4. Manual/errata Intel SCH da revisão alvo que descreva requisitos de acesso, clock/power/reset/IRQ e a relação com BIF; feature matrix EMGD não substitui esse manual.
-5. No espelho EMGD fixado: build/config gerado, bridge dispatch, common/sysconfig.c, plb init/power e sgxreset.c; correlacionar versão interna PVR1.5.15.3226 com um pacote Intel autenticável. Nenhum binário deve ser tratado como firmware compatível apenas pelo nome.
+1. **Legitimate source package UM + microkernel/PDS + corresponding initializer for `pc_i686_poulsbo_d0_linux`, SGX535 rev121, IMG DDK1.14 build3699939**, with explicit license, generated options, filled scripts, hashes, and ABI headers. It is the highest-value external artifact to complete the bootstrap that the local KM only consumes. It has not been demonstrated that this package is publicly available.
+2. Exact implementations of `psb_powermgmt.h` / `sys_pvr_drm_export.h` used by the DRM_EXT branch of this DDK, with the host driver version; a homonymous header from another family is not enough.
+3. Userspace/Xorg that serves XHW from PSB5.0.0.0045, especially handlers scene-bind/fire, TA-memory, OOM, and DPM reset. It serves to reconstruct historical boundaries; it is not an ABI to adopt.
+4. Manual/errata Intel SCH of the target revision that describes access requirements, clock/power/reset/IRQ and the relationship with BIF; EMGD feature matrix does not replace this manual.
+5. In the fixed EMGD mirror: build/config generated, bridge dispatch, common/sysconfig.c, plb init/power and sgxreset.c; correlate internal version PVR1.5.15.3226 with an authenticable Intel package. No binary should be treated as firmware compatible just by name.
 
-Não é necessário resolver streams3D/texturas para preparar inventário. Já para executar qualquer payload, origem, licença, revisão, layout e mecanismo de parada precisam ser verificados previamente.
+It is not necessary to resolve streams3D/texturas to prepare inventory. However, to execute any payload, source, license, revision, layout, and stop mechanism need to be checked beforehand.

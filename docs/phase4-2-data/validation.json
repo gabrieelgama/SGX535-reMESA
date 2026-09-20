@@ -1,0 +1,26 @@
+{
+  "phase": "4.2",
+  "date": "2026-09-19",
+  "source_claims": 22,
+  "new_source_rows": 110,
+  "source_range_checks": 110,
+  "artifact_hashes_verified": 108,
+  "gma500_files_identical": 71,
+  "additional_PM_PCI_files_identical": 5,
+  "local_links_checked": 20,
+  "criteria_per_register": 15,
+  "PASS_per_register": 5,
+  "UNKNOWN_per_register": 10,
+  "SAFE_CANDIDATE_count": 0,
+  "gate_B": "BLOCKED",
+  "reference_worktrees_clean": {
+    "linux": "9b87fdc9af2fbfcdb5c24a64139685ef80f6573f",
+    "omap5-sgx-ddk-linux": "430673f78b79eccdf308a6bbfb524209b485d2cc",
+    "omap5-sgx-ddk-um-linux": "b6801bf89e00d69893c2957455bbeb3195c0ed52"
+  },
+  "probe_executed": false,
+  "MMIO_executed": false,
+  "TV1_implemented": false,
+  "hardware_correspondence": "installed binary/config UNVERIFIED",
+  "git_diff_check": "PASS"
+}

@@ -1,0 +1,28 @@
+{
+  "phase": "4.1",
+  "date": "2026-09-19",
+  "new_claims": 23,
+  "new_matrix_source_rows": 28,
+  "numeric_source_ranges_checked": 20,
+  "download_hashes_checked": 11,
+  "operator_report_hash_verified": true,
+  "bar_sizes_checked": 4,
+  "local_document_links_checked": 22,
+  "phase41_claim_ids_resolve": true,
+  "git_diff_check": "PASS",
+  "historical_snapshots_verified_against_git": [
+    "PSYS.txt",
+    "PSYSC.txt"
+  ],
+  "reference_worktrees_status": "all three CLEAN in preceding read-only check",
+  "probe_executed": false,
+  "MMIO_executed": false,
+  "driver_or_probe_code_changed": false,
+  "gate_B": "BLOCKED",
+  "approved_SAFE_CANDIDATE_count": 0,
+  "limitations": [
+    "Operator transcript, not original stdout/JSON",
+    "antiX source/config/patch equivalence UNKNOWN",
+    "Intel spec-update and 003US datasheet consulted externally without local PDF hashes"
+  ]
+}

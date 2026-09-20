@@ -1,0 +1,87 @@
+{
+  "retrieved": "2026-09-19",
+  "linux_commit": "d5eca7ebcf6f64c4aebf9684c365c130a3a069b3",
+  "artifacts": [
+    {
+      "file": "intel-sch-319537-002us.pdf",
+      "error": "The read operation timed out",
+      "url": "https://www.versalogic.com/wp-content/themes/vsl-new/assets/resources/support/ocelot/Intel_SCH_Specification_Mar_2009.pdf"
+    },
+    {
+      "file": "intel-sch-319538-005us.pdf",
+      "error": "HTTP Error 403: Forbidden",
+      "url": "https://device.report/m/321d6aa00a32c7bdf071ecf4f273fa82ae8151a7cef96cb73164bea8f3f04dcf.pdf"
+    },
+    {
+      "file": "linux-5.10.240-psb_drv.c.txt",
+      "url": "https://raw.githubusercontent.com/gregkh/linux/d5eca7ebcf6f64c4aebf9684c365c130a3a069b3/drivers/gpu/drm/gma500/psb_drv.c",
+      "sha256": "db2699f9301563dfe7cd8c87e7087d00a1c7af432a41161a6e2ec21b07d3d576",
+      "bytes": 15472
+    },
+    {
+      "file": "linux-5.10.240-psb_drv.h.txt",
+      "url": "https://raw.githubusercontent.com/gregkh/linux/d5eca7ebcf6f64c4aebf9684c365c130a3a069b3/drivers/gpu/drm/gma500/psb_drv.h",
+      "sha256": "6dce38176eccc8d7037783ec6c41d101c3c614068a3b7b11f40b06e1d1ca6261",
+      "bytes": 24752
+    },
+    {
+      "file": "linux-5.10.240-psb_device.c.txt",
+      "url": "https://raw.githubusercontent.com/gregkh/linux/d5eca7ebcf6f64c4aebf9684c365c130a3a069b3/drivers/gpu/drm/gma500/psb_device.c",
+      "sha256": "c02f8c825350ed89675d7618e158d503fbb92169a7f2f8aba4255b353de9a493",
+      "bytes": 8871
+    },
+    {
+      "file": "linux-5.10.240-power.c.txt",
+      "url": "https://raw.githubusercontent.com/gregkh/linux/d5eca7ebcf6f64c4aebf9684c365c130a3a069b3/drivers/gpu/drm/gma500/power.c",
+      "sha256": "94f01101e484ef73f111278a225c74c8528f99a5ffee79b97f368ee5e5de6a9d",
+      "bytes": 9065
+    },
+    {
+      "file": "linux-5.10.240-psb_irq.c.txt",
+      "url": "https://raw.githubusercontent.com/gregkh/linux/d5eca7ebcf6f64c4aebf9684c365c130a3a069b3/drivers/gpu/drm/gma500/psb_irq.c",
+      "sha256": "9dfbb8dca48e68a1f9eef266e85c4b55807e2689d598d5f24995f9aa9938bd97",
+      "bytes": 17520
+    },
+    {
+      "file": "linux-5.10.240-psb_reg.h.txt",
+      "url": "https://raw.githubusercontent.com/gregkh/linux/d5eca7ebcf6f64c4aebf9684c365c130a3a069b3/drivers/gpu/drm/gma500/psb_reg.h",
+      "sha256": "a340d4fb7bb9df2403eb196639d930b8c56463ddc7a3754d152e6ed7ab1daef7",
+      "bytes": 18355
+    },
+    {
+      "file": "linux-5.10.240-gtt.c.txt",
+      "url": "https://raw.githubusercontent.com/gregkh/linux/d5eca7ebcf6f64c4aebf9684c365c130a3a069b3/drivers/gpu/drm/gma500/gtt.c",
+      "sha256": "388c5b251cfa17545031c1841a4ef6afcf1bc7385a424e34221948959e15818d",
+      "bytes": 15301
+    },
+    {
+      "file": "linux-5.10.240-mmu.c.txt",
+      "url": "https://raw.githubusercontent.com/gregkh/linux/d5eca7ebcf6f64c4aebf9684c365c130a3a069b3/drivers/gpu/drm/gma500/mmu.c",
+      "sha256": "d9a7e839d24c3a6e5a6be77c8583a8073ea4e20fb64eb1fc0228048db4e8fd24",
+      "bytes": 18125
+    },
+    {
+      "file": "linux-5.10.240-Makefile.txt",
+      "url": "https://raw.githubusercontent.com/gregkh/linux/d5eca7ebcf6f64c4aebf9684c365c130a3a069b3/drivers/gpu/drm/gma500/Makefile",
+      "sha256": "0166a146c2b03ee7065384598e5ee55b870e7e37bfe4b03c75373469636aa6ad",
+      "bytes": 1113
+    },
+    {
+      "file": "intel-sch-octopart.pdf",
+      "sha256": "5d899e0af4b566e57ce1d297bef4089bf5ccfa1f5037ac5d11acb1a38077ca85",
+      "bytes": 2656735,
+      "version": "Intel 319537-002US, March 2009",
+      "url": "https://datasheet.octopart.com/AF82US15W-S-LGFQ-Intel-datasheet-8373029.pdf"
+    },
+    {
+      "file": "intel-sch-octopart.pdf.txt",
+      "sha256": "833f359226a42ecf59b8b2bfcd8068a1dbb16ceccb8665de86f5f3a84ad5fb68",
+      "bytes": 1464193,
+      "version": "Intel 319537-002US, March 2009",
+      "derived_from": "intel-sch-octopart.pdf",
+      "method": "pdftotext -layout"
+    }
+  ],
+  "linux_tag": "v5.10.240",
+  "linux_tag_object": "9c368b8de6957da9a49b72e3ca5aa6a5b9533645"
+}

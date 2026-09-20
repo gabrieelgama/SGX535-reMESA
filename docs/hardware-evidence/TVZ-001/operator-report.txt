@@ -1,0 +1,43 @@
+O Test Vector Zero foi executado com sucesso no hardware-alvo real.
+
+Hardware medido:
+
+Dell Inspiron 1210
+board: Dell 0X605H
+BIOS: A02
+
+PCI:
+address: 0000:00:02.0
+vendor: 0x8086
+device: 0x8108
+revision: 0x06
+subsystem: 0x1028:0x02b1
+class: 0x030000
+IRQ: 16
+
+BAR0: d8100000-d817ffff, 524288 bytes
+BAR1: 1800-1807, 8 bytes
+BAR2: d0000000-d7ffffff, 134217728 bytes
+BAR3: d8380000-d839ffff, 131072 bytes
+
+Kernel:
+5.10.240-antix.1-486-smp
+i686
+driver: gma500
+DRM: card0
+
+Power:
+runtime_status=active
+
+IMPORTANTE:
+revision=0x06 é PCI revision ID.
+NÃO interpretar como SGX535 core revision.
+
+O probe não realizou:
+- MMIO reads
+- MMIO writes
+- firmware loading
+- command submission
+- reset
+- MMU initialization
+- power/clock manipulation

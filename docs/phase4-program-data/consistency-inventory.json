@@ -1,0 +1,575 @@
+[
+  {
+    "file": "docs/architecture.md",
+    "lines": 84,
+    "gate_or_safety_lines": []
+  },
+  {
+    "file": "docs/bringup-read-errata.md",
+    "lines": 42,
+    "gate_or_safety_lines": [
+      {
+        "line": 36,
+        "text": "**UNKNOWN:** cobertura completa de BRNs para PCI06, estados em que uma"
+      }
+    ]
+  },
+  {
+    "file": "docs/command-submission.md",
+    "lines": 51,
+    "gate_or_safety_lines": []
+  },
+  {
+    "file": "docs/core-identification-audit.md",
+    "lines": 93,
+    "gate_or_safety_lines": []
+  },
+  {
+    "file": "docs/ddk-version-map.md",
+    "lines": 37,
+    "gate_or_safety_lines": []
+  },
+  {
+    "file": "docs/firmware.md",
+    "lines": 42,
+    "gate_or_safety_lines": []
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "lines": 48,
+    "gate_or_safety_lines": []
+  },
+  {
+    "file": "docs/hardware-identification.md",
+    "lines": 126,
+    "gate_or_safety_lines": [
+      {
+        "line": 6,
+        "text": "execução. SGX core revision é UNKNOWN; a aprovação do probe para8108/8109"
+      },
+      {
+        "line": 7,
+        "text": "não é whitelist de MMIO. O [gate formal](phase4-5-formal-gate.md) mantém B"
+      },
+      {
+        "line": 29,
+        "text": "**PCI revision 0x06 não é SGX core revision.** Esta continua **UNKNOWN**."
+      },
+      {
+        "line": 34,
+        "text": "tabela Intel de stepping e mantém gate B BLOCKED. A associação documental"
+      }
+    ]
+  },
+  {
+    "file": "docs/hardware-ownership.md",
+    "lines": 145,
+    "gate_or_safety_lines": [
+      {
+        "line": 127,
+        "text": "   de read-safety e uma whitelist por revisão."
+      }
+    ]
+  },
+  {
+    "file": "docs/kernel-5.10.240-antix-audit.md",
+    "lines": 58,
+    "gate_or_safety_lines": [
+      {
+        "line": 54,
+        "text": "clocks/reset ou falha do hardware. Gate B continua BLOCKED."
+      }
+    ]
+  },
+  {
+    "file": "docs/lost-documentation-index.md",
+    "lines": 65,
+    "gate_or_safety_lines": [
+      {
+        "line": 61,
+        "text": "com revisão e errata aplicáveis ao D2:F0 8086:8108 PCI06. Precisamos verificar"
+      }
+    ]
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "lines": 70,
+    "gate_or_safety_lines": []
+  },
+  {
+    "file": "docs/pci-revision-audit.md",
+    "lines": 29,
+    "gate_or_safety_lines": [
+      {
+        "line": 12,
+        "text": "| gma5005.10.240, P41-011/P42-011 | defines SGX; nenhum getter localizado no diretório | não existe correlação PCI06→SGX nesses caminhos |"
+      },
+      {
+        "line": 21,
+        "text": "| PCI06 → stepping gráfico/SCH D1 | UNKNOWN |"
+      },
+      {
+        "line": 22,
+        "text": "| PCI06 → SGX535 rev116 | UNKNOWN |"
+      },
+      {
+        "line": 23,
+        "text": "| PCI06 → SGX535 rev121/126/outra | UNKNOWN |"
+      },
+      {
+        "line": 24,
+        "text": "| PCI06 → BRNs aplicáveis | UNKNOWN |"
+      },
+      {
+        "line": 25,
+        "text": "| PCI06 → aperture ou power/reset específico | UNKNOWN |"
+      }
+    ]
+  },
+  {
+    "file": "docs/phase4-1-reassessment.md",
+    "lines": 147,
+    "gate_or_safety_lines": [
+      {
+        "line": 3,
+        "text": "2026-09-19. **Gate B: BLOCKED. Nenhum SAFE-CANDIDATE aprovado.**"
+      },
+      {
+        "line": 70,
+        "text": "Nenhuma fonte examinada fornece `PCI 06 → SGX rev116/rev121/...`."
+      },
+      {
+        "line": 112,
+        "text": "## Sete condições do gate B"
+      },
+      {
+        "line": 127,
+        "text": "TEST VECTOR ONE aprovado. A whitelist executável permanece **vazia**."
+      }
+    ]
+  },
+  {
+    "file": "docs/phase4-3-blocker-closure.md",
+    "lines": 156,
+    "gate_or_safety_lines": [
+      {
+        "line": 4,
+        "text": "CORE_ID e CORE_REVISION continuam fora da whitelist. Esta fase foi concluída"
+      },
+      {
+        "line": 79,
+        "text": "são plausíveis para PCI06. A lista é universo documental, não lista física"
+      },
+      {
+        "line": 80,
+        "text": "certificada. Não há garantia universal, nem vínculo PCI06↔graphics stepping"
+      }
+    ]
+  },
+  {
+    "file": "docs/phase4-4-adversarial-audit.md",
+    "lines": 132,
+    "gate_or_safety_lines": [
+      {
+        "line": 115,
+        "text": "|PCI06→D1→SGX| cadeia não demonstrada; tabela LPC não aplicada à função gráfica |"
+      }
+    ]
+  },
+  {
+    "file": "docs/phase4-5-formal-gate.md",
+    "lines": 88,
+    "gate_or_safety_lines": [
+      {
+        "line": 23,
+        "text": "|9 applicable revisions|UNKNOWN|UNKNOWN|falta conjunto físico plausível e garantia por revisão/BRN, ou identificação independente; PCI06 não resolve; P42-005/006/019 |"
+      },
+      {
+        "line": 73,
+        "text": "SAFE-CANDIDATE(r) = todos os requisitos1..15 de r iguais a PASS."
+      },
+      {
+        "line": 74,
+        "text": "Se existir UNKNOWN, CONFLICTING ou FAIL, r não entra na whitelist."
+      },
+      {
+        "line": 76,
+        "text": "- CORE_ID: **SAFE-CANDIDATE NO** — cincoPASS, dezUNKNOWN."
+      },
+      {
+        "line": 77,
+        "text": "- CORE_REVISION: **SAFE-CANDIDATE NO** — cincoPASS, dezUNKNOWN."
+      },
+      {
+        "line": 78,
+        "text": "- WHITELIST: **[]**."
+      },
+      {
+        "line": 79,
+        "text": "- GateB: **BLOCKED**."
+      }
+    ]
+  },
+  {
+    "file": "docs/phase4-6-skipped.md",
+    "lines": 26,
+    "gate_or_safety_lines": [
+      {
+        "line": 5,
+        "text": "**Reason:** GateB = BLOCKED; nenhum registrador é SAFE-CANDIDATE;"
+      },
+      {
+        "line": 6,
+        "text": "whitelist = []. A condição para produzir design deTV1 não foi satisfeita."
+      },
+      {
+        "line": 15,
+        "text": "|9 revisões| cobertura física/errata aplicável a8086:8108 PCI06 |"
+      }
+    ]
+  },
+  {
+    "file": "docs/phase4-7-final-pre-bringup-audit.md",
+    "lines": 143,
+    "gate_or_safety_lines": [
+      {
+        "line": 3,
+        "text": "2026-09-19. **Gate B BLOCKED; whitelist vazia; nenhum SAFE-CANDIDATE.**"
+      },
+      {
+        "line": 31,
+        "text": "|C1| onze registros em safe-register-reads tinham UNSAFE justificado por efeito de write | semântica de leitura → UNKNOWN; efeitos de escrita continuam documentados; nenhum SAFE-CANDIDATE ou gate promovido |"
+      },
+      {
+        "line": 33,
+        "text": "|C3| revision-investigation chamava116/proposta versus121/build de CONFLICTING sem qualificar o objeto | preservada divergência de rótulos; vínculo ao silício UNKNOWN; não duas medições físicas contraditórias |"
+      },
+      {
+        "line": 36,
+        "text": "|C6| bringup0 dizia que harness MMIO ficava como design, permitindo confusão com TV1 aprovado | apenas requisitos gerais condicionais;4.6 SKIPPED; aceitaçãoPCI do probe não é whitelistMMIO |"
+      },
+      {
+        "line": 46,
+        "text": "Nenhum documento consultado aprova atualmente GateB=GO. Propostas antigas"
+      },
+      {
+        "line": 55,
+        "text": "|PCI revision / SCH stepping / graphics stepping / SGX core revision| PCI06 do D2:F0 é relato P41-002; tabela LPC P41-020 não se transfere; SGX físico UNKNOWN |"
+      },
+      {
+        "line": 106,
+        "text": "|B Controlled MMIO Read|BLOCKED|requisitos4–9,12–15 para cada ID; whitelist vazia |"
+      },
+      {
+        "line": 129,
+        "text": "Ambos os candidatos: SAFE-CANDIDATE NO. Whitelist[]. B BLOCKED."
+      }
+    ]
+  },
+  {
+    "file": "docs/phase4-audit.md",
+    "lines": 158,
+    "gate_or_safety_lines": [
+      {
+        "line": 15,
+        "text": "[matriz de15 requisitos](test-vector-one-gate.md): zero SAFE-CANDIDATE."
+      },
+      {
+        "line": 35,
+        "text": "- SGX core revision e segurança das leituras continuam **UNKNOWN**."
+      },
+      {
+        "line": 46,
+        "text": "Nenhum gate foi promovido. Nenhum MMIO ou código de driver foi implementado."
+      }
+    ]
+  },
+  {
+    "file": "docs/phase4-go-no-go.md",
+    "lines": 61,
+    "gate_or_safety_lines": [
+      {
+        "line": 5,
+        "text": "Gate B **BLOCKED**, whitelist **[]**, nenhum SAFE-CANDIDATE. O"
+      },
+      {
+        "line": 17,
+        "text": "documentais e dez UNKNOWN por candidato, zero SAFE-CANDIDATE."
+      },
+      {
+        "line": 59,
+        "text": "[phase4-1-reassessment.md](phase4-1-reassessment.md). A whitelist continua"
+      },
+      {
+        "line": 61,
+        "text": "CORE_ID/CORE_REVISION permanecem UNKNOWN."
+      }
+    ]
+  },
+  {
+    "file": "docs/poulsbo-architecture.md",
+    "lines": 53,
+    "gate_or_safety_lines": []
+  },
+  {
+    "file": "docs/poulsbo-bringup-requirements.md",
+    "lines": 53,
+    "gate_or_safety_lines": [
+      {
+        "line": 5,
+        "text": "O [gate formal4.5](phase4-5-formal-gate.md) mantém B BLOCKED e whitelist"
+      },
+      {
+        "line": 7,
+        "text": "histórica; o inventário real foi incorporado na4.1, com SGX revision UNKNOWN."
+      },
+      {
+        "line": 31,
+        "text": "não os15 requisitos do gate B. Ver [20 incógnitas](unknowns.md) e o gate"
+      },
+      {
+        "line": 39,
+        "text": "**Etapa seguinte continua BLOCKED:** `CORE_ID` e `CORE_REVISION` têm offsets e uso histórico confirmados, mas a Fase 4 não encontrou contrato de read-side-effects, power/clock ou locking suficiente. Eles não formam uma whitelist aprovada. Se essas lacunas forem fechadas, a instrumentação deverá viver no gma500 e usar uma operação compilada e específica; nunca acesso genérico a MMIO."
+      }
+    ]
+  },
+  {
+    "file": "docs/poulsbo-evidence.md",
+    "lines": 57,
+    "gate_or_safety_lines": []
+  },
+  {
+    "file": "docs/poulsbo-historical-abi.md",
+    "lines": 75,
+    "gate_or_safety_lines": []
+  },
+  {
+    "file": "docs/poulsbo-interrupts.md",
+    "lines": 18,
+    "gate_or_safety_lines": []
+  },
+  {
+    "file": "docs/poulsbo-memory-map.md",
+    "lines": 51,
+    "gate_or_safety_lines": []
+  },
+  {
+    "file": "docs/poulsbo-mmio.md",
+    "lines": 48,
+    "gate_or_safety_lines": []
+  },
+  {
+    "file": "docs/poulsbo-power-reset.md",
+    "lines": 26,
+    "gate_or_safety_lines": []
+  },
+  {
+    "file": "docs/poulsbo-vs-ti.md",
+    "lines": 38,
+    "gate_or_safety_lines": []
+  },
+  {
+    "file": "docs/power-state-safety.md",
+    "lines": 121,
+    "gate_or_safety_lines": [
+      {
+        "line": 68,
+        "text": "semântica e falha de leitura no gateB BLOCKED."
+      }
+    ]
+  },
+  {
+    "file": "docs/recovery-plan.md",
+    "lines": 97,
+    "gate_or_safety_lines": [
+      {
+        "line": 5,
+        "text": "**GateB BLOCKED; recuperação de CPU MMIO read UNKNOWN.** Os procedimentos"
+      }
+    ]
+  },
+  {
+    "file": "docs/registers.md",
+    "lines": 66,
+    "gate_or_safety_lines": [
+      {
+        "line": 17,
+        "text": "| `0x0014` | `PSB_CR_CORE_REVISION` | 31:24 designer; 23:16 major; 15:8 minor; 7:0 maintenance | Campos de revisão; relação com revisão DDK UNKNOWN | [references/linux/drivers/gpu/drm/gma500/psb_reg.h:37-45](../references/linux/drivers/gpu/drm/gma500/psb_reg.h#L37) | CONFIRMED no Linux; campos UNKNOWN explícitos |"
+      },
+      {
+        "line": 64,
+        "text": "- CORE_ID/REVISION eram candidatos de pesquisa. A Fase 4 os classifica `UNKNOWN` para leitura real: há uso histórico, mas não contrato de efeitos colaterais/power/locking. Eles não integram uma whitelist aprovada."
+      }
+    ]
+  },
+  {
+    "file": "docs/safe-register-reads.md",
+    "lines": 93,
+    "gate_or_safety_lines": [
+      {
+        "line": 8,
+        "text": "SAFE-CANDIDATE. Não confundir classificação física com proibição operacional."
+      },
+      {
+        "line": 18,
+        "text": "Ver [fechamento4.3](phase4-3-blocker-closure.md). Whitelist vazia."
+      },
+      {
+        "line": 23,
+        "text": "Os dois IDs permanecem UNKNOWN para read-safety, sem SAFE-CANDIDATE."
+      },
+      {
+        "line": 49,
+        "text": "Fase 4.1: **zero SAFE-CANDIDATE; gate B BLOCKED**. Os offsets dos dois"
+      },
+      {
+        "line": 54,
+        "text": "mantém a whitelist vazia. Nenhuma linha desta tabela autoriza MMIO."
+      },
+      {
+        "line": 58,
+        "text": "`SAFE-CANDIDATE` requer, ao mesmo tempo: offset Poulsbo/SGX535 confirmado,"
+      },
+      {
+        "line": 61,
+        "text": "a todos os requisitos. A tabela não é uma whitelist executável."
+      },
+      {
+        "line": 66,
+        "text": "| `0x0014` | `CORE_REVISION` | designer/major/minor/maintenance | Poulsbo | mesmos artefatos; EMGD `sysconfig.c:547-575`; DDK `INIT.txt:1320-1352` | lido historicamente | contrato ausente | SGX powered; como provar UNKNOWN | gma500 SGX mapping | offset CONFIRMED; safety UNKNOWN | UNKNOWN |"
+      },
+      {
+        "line": 93,
+        "text": "isso não há `SAFE-CANDIDATE`."
+      }
+    ]
+  },
+  {
+    "file": "docs/sgx535-missing-files.md",
+    "lines": 59,
+    "gate_or_safety_lines": []
+  },
+  {
+    "file": "docs/sgx535-revision-investigation.md",
+    "lines": 26,
+    "gate_or_safety_lines": [
+      {
+        "line": 3,
+        "text": "**SGX core revision da máquina = UNKNOWN.** Nenhum valor SGX foi medido."
+      },
+      {
+        "line": 26,
+        "text": "Não há elo explícito com PCI06, board0X605H ou subsystem1028:02b1."
+      }
+    ]
+  },
+  {
+    "file": "docs/source-archaeology.md",
+    "lines": 100,
+    "gate_or_safety_lines": []
+  },
+  {
+    "file": "docs/test-vector-one-gate.md",
+    "lines": 42,
+    "gate_or_safety_lines": [
+      {
+        "line": 3,
+        "text": "**Gate B = BLOCKED. CORE_ID = NOT SAFE-CANDIDATE."
+      },
+      {
+        "line": 4,
+        "text": "CORE_REVISION = NOT SAFE-CANDIDATE. WHITELIST = [].**"
+      },
+      {
+        "line": 9,
+        "text": "foi medida. PCI06 não equivale a D1/rev116/rev121."
+      },
+      {
+        "line": 21,
+        "text": "|9 applicable revisions|UNKNOWN|UNKNOWN|falta conjunto físico plausível e garantia por revisão/BRN, ou identificação independente; PCI06 não resolve; P42-005/006/019 |"
+      },
+      {
+        "line": 42,
+        "text": "PDS, USSE, workloads ou Mesa. Não criar TV1 enquanto a whitelist estiver vazia."
+      }
+    ]
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "lines": 37,
+    "gate_or_safety_lines": []
+  },
+  {
+    "file": "docs/unknowns.md",
+    "lines": 96,
+    "gate_or_safety_lines": [
+      {
+        "line": 15,
+        "text": "U01 permanece parcialmente resolvida somente pelo TVZ: PCI06 não identifica"
+      },
+      {
+        "line": 41,
+        "text": "| U01 | Qual é PCI revision/subsystem/SCH stepping/SGX revision da máquina real? | **PARCIALMENTE RESOLVIDA**: PCI `8086:8108`, revision **PCI** `06`, subsystem `1028:02b1`, BDF/IRQ/BARs conhecidos pelo relato P41-001–008. SCH stepping e SGX core revision **UNKNOWN**. Tabela RID06/D1 é LPC D31:F0, não prova direta para o RID gráfico D2:F0 (P41-017/020). | revisão aplicável ao MMIO e posteriores |"
+      },
+      {
+        "line": 42,
+        "text": "| U02 | `CORE_ID`/`CORE_REVISION` são seguros para leitura no stepping real? | **UNKNOWN, sem mudança**: IDs passivos não fornecem contrato de read-side-effect; offsets de código P41-011 e uso histórico P4-014 permanecem evidência de software | primeiro MMIO |"
+      },
+      {
+        "line": 51,
+        "text": "| U11 | Quais errata/BRNs valem no silício real? | **UNKNOWN**: PCI06 não seleciona BRNs SGX. Builds rev121/126 e string de build P41-016 não medem a placa; update SCH não substitui errata SGX | reset/BIF/workload |"
+      },
+      {
+        "line": 69,
+        "text": "bloqueador que era na Fase 4. Ver os sete critérios de gate B na"
+      }
+    ]
+  },
+  {
+    "file": "docs/usse.md",
+    "lines": 27,
+    "gate_or_safety_lines": []
+  },
+  {
+    "file": "experiments/bringup0/PASSIVE-KERNEL-VERIFICATION.md",
+    "lines": 72,
+    "gate_or_safety_lines": [
+      {
+        "line": 46,
+        "text": "SysRq, tracing ou outros controles. O plano tem whitelist de **informação"
+      },
+      {
+        "line": 71,
+        "text": "esta coleta. GateB não é desbloqueado por correspondência de kernel."
+      }
+    ]
+  },
+  {
+    "file": "experiments/bringup0/README.md",
+    "lines": 49,
+    "gate_or_safety_lines": [
+      {
+        "line": 8,
+        "text": "mantém B BLOCKED e a whitelist de MMIO vazia. Não existe TEST VECTOR ONE"
+      },
+      {
+        "line": 20,
+        "text": "| B. debug instrumentation do driver | mesma ownership, mas requer interface fixa e revisão cuidadosa | aceitável somente com whitelist compilada |"
+      },
+      {
+        "line": 38,
+        "text": "Como nenhuma leitura é SAFE-CANDIDATE no"
+      }
+    ]
+  },
+  {
+    "file": "experiments/bringup0/TEST-VECTOR-ZERO.md",
+    "lines": 78,
+    "gate_or_safety_lines": [
+      {
+        "line": 12,
+        "text": "O resultado resolve o inventário informado, mas mantém gate B BLOCKED."
+      }
+    ]
+  }
+]

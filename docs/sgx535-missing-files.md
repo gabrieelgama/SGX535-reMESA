@@ -1,20 +1,20 @@
-# SGX535: arquivos recuperados e lacunas restantes
+# SGX535: retrieved files and remaining gaps
 
-Convenção: **CONFIRMED** confirma conteúdo/histórico das fontes, não funcionamento no hardware; **INFERRED** identifica uma dedução; **UNKNOWN** é o que ainda não foi estabelecido. Identificadores de fonte como H535 e PBUILD resolvem para repositório, commit completo, arquivo e hash no [catálogo de fontes](source-archaeology.md#catálogo-de-fontes). Os snapshots documentais preservam as linhas originais e os avisos de licença; não são arquivos de implementação.
+Convention: **CONFIRMED** confirms the content/history of the sources, not hardware operation; **INFERRED** identifies a deduction; **UNKNOWN** is what has not yet been established. Source identifiers like H535 and PBUILD resolve to repository, full commit, file, and hash in [source catalog](source-archaeology.md#source-catalog). Document snapshots preserve the original lines and license notices; they are not implementation files.
 
-## sgx535defs.h: resposta às cinco perguntas
+## sgx535defs.h: answer to the five questions
 
-| Pergunta | Resposta | Evidência / confidence |
+| Question | Answer | Evidence / confidence |
 | --- | --- | --- |
-| Existiu em commit? | Sim, em 255 commits disponíveis | H535, blob `8039da4a73ef9ee3e929edb64244d2891bc9239e`; [H535:1–43](archaeology-data/H535.txt#L1); CONFIRMED |
-| Foi removido? | Nenhuma remoção do header encontrada; não constava na importação 1.9/master | header-history e boundary-trees; operação Git, linhas N/A; CONFIRMED neste universo |
-| Está em branch/tag? | Presente no tip de 13 remote-tracking branches; ausente no tip de todas as 12 tags KM disponíveis | header-by-ref, linhas de inventário; CONFIRMED |
-| É referenciado por build? | Dispatcher inclui o header; alvo Poulsbo define core 535/rev121; build gera SGX535 e SUPPORT_SGX535 | [DEFS:57–61](archaeology-data/DEFS.txt#L57); [PBUILD:44–50](archaeology-data/PBUILD.txt#L44); [CORE:488–494](archaeology-data/CORE.txt#L488); CONFIRMED no código, expansão INFERRED |
-| Pode ser identificado por hash/lista? | Sim: árvore Git, blob único, SHA-256 e tamanho | source-registry.json, H535; CONFIRMED. Manifesto externo correspondente UNKNOWN |
+| Did it exist in commit? | Yes, in 255 available commits | H535, blob `8039da4a73ef9ee3e929edb64244d2891bc9239e`; [H535:1–43](archaeology-data/H535.txt#L1); CONFIRMED |
+| Was it removed? | No header removal found; it was not present in import 1.9/master | header-history and boundary-trees; Git operation, lines N/A; CONFIRMED in this universe |
+| Is it in branch/tag? | Present in the tip of 13 remote-tracking branches; absent in the tip of all 12 available KM tags | header-by-ref, inventory lines; CONFIRMED |
+| Is it referenced by build? | Dispatcher includes the header; Poulsbo target defines core 535/rev121; build generates SGX535 and SUPPORT_SGX535 | [DEFS:57–61](archaeology-data/DEFS.txt#L57); [PBUILD:44–50](archaeology-data/PBUILD.txt#L44); [CORE:488–494](archaeology-data/CORE.txt#L488); CONFIRMED in the code, expansion INFERRED |
+| Can it be identified by hash/lista? | Yes: Git tree, single blob, SHA-256 and size | source-registry.json, H535; CONFIRMED. Corresponding external manifesto UNKNOWN |
 
-Fontes de inventário: [por ref](archaeology-data/header-by-ref.tsv), [história](archaeology-data/header-history.txt), [summary](archaeology-data/summary.json). Nenhum hash foi inventado para uma versão ausente: este hash é do conteúdo realmente disponível.
+Inventory sources: [by ref](archaeology-data/header-by-ref.tsv), [history](archaeology-data/header-history.txt), [summary](archaeology-data/summary.json). No hash was invented for a missing version: this hash is of the actually available content.
 
-## Branches com o header no tip
+## Branches with the header in the tip
 
 | Ref local | Commit completo | Caminho |
 | --- | --- | --- |
@@ -32,28 +32,28 @@ Fontes de inventário: [por ref](archaeology-data/header-by-ref.tsv), [história
 | `refs/remotes/origin/ti-img-sgx/1.17.4948957/k5.4` | `bfe83bbabb3849c24b03d5172cf678e7c5915e04` | `eurasia_km/services4/srvkm/hwdefs/sgx535defs.h` |
 | `refs/remotes/origin/ti-img-sgx/1.17.4948957/k6.1` | `bfd9edef3f976906fb7fececbfa29d16801154f5` | `eurasia_km/services4/srvkm/hwdefs/sgx535defs.h` |
 
-Todas as linhas acima têm confidence **CONFIRMED** por `ls-tree`; linhas de código: H535:1–739. `origin/*` são refs já presentes no clone, não consulta ao servidor. Não há motivo para trocar de branch para ler o arquivo: `git show` resolve.
+All the lines above have confidence **CONFIRMED** by `ls-tree`; code lines: H535:1–739. `origin/*` are refs already present in the clone, not a server query. There is no reason to switch branches to read the file: `git show` solves it.
 
 ## O que foi removido de fato
 
-A série DDK 1.17 inicialmente ainda carregava arquivos Poulsbo herdados. O commit `3b6ca1d1f47a951c1f93ba5f9b693b25474d0798` removeu `eurasia_km/eurasiacon/build/linux2/pc_i686_poulsbo_d0_linux/Makefile` e a integração `eurasia_km/services4/system/poulsbo`; a linhagem sem prefixo contém a operação correspondente em `636e957a340ebba5c10fb8a5c5b3f30b85078c66`. **CONFIRMED:** os registros de remoção não se referem a `sgx535defs.h`, que continua nas árvores. [História de Poulsbo](archaeology-data/poulsbo-history.txt), [fronteiras](archaeology-data/boundary-trees.txt). Linhas removidas do Makefile: 1–86; de sysconfig.c: arquivo inteiro, consultável no pai.
+The DDK 1.17 series initially still loaded inherited Poulsbo files. The commit `3b6ca1d1f47a951c1f93ba5f9b693b25474d0798` removed `eurasia_km/eurasiacon/build/linux2/pc_i686_poulsbo_d0_linux/Makefile` and the integration `eurasia_km/services4/system/poulsbo`; the unprefixed lineage contains the corresponding operation in `636e957a340ebba5c10fb8a5c5b3f30b85078c66`. **CONFIRMED:** the removal records do not refer to `sgx535defs.h`, which remains in the trees. [Poulsbo history](archaeology-data/poulsbo-history.txt), [boundaries](archaeology-data/boundary-trees.txt). Lines removed from the Makefile: 1–86; from sysconfig.c: entire file, viewable in the parent.
 
-**UNKNOWN:** se a retirada significou descontinuação de suporte validado, limpeza de código não utilizado ou outra decisão. O título “remove DDK 1.14 specific files” não documenta o estado real do hardware ou do produto.
+**UNKNOWN:** whether the removal meant discontinuation of validated support, cleaning up unused code, or another decision. The title “remove DDK 1.14 specific files” does not document the actual state of the hardware or the product.
 
-## O que o header resolve e o que não resolve
+## What the header solves and what it does not solve
 
-**CONFIRMED:** adiciona definições específicas SGX535 para clock/status/override, eventos, timer, invalidação PDS, BIF, 16 directory lists, bancos e 2D. Por exemplo, lista 1 = `0x0c38`, lista 2 = `0x0c3c`; BANK0 e BANK1 possuem campos EDM/TA/HOST/3D/2D. [H535:45–88](archaeology-data/H535.txt#L45); [H535:375–458](archaeology-data/H535.txt#L375); [H535:539–638](archaeology-data/H535.txt#L539).
+**CONFIRMED:** adds specific SGX535 definitions for clock/status/override, events, timer, PDS invalidateidation, BIF, 16 directory lists, banks, and 2D. For example, list 1 = `0x0c38`, list 2 = `0x0c3c`; BANK0 and BANK1 have fields EDM/TA/HOST/3D/2D, [H535:45–88](archaeology-data/H535.txt#L45), [H535:375–458](archaeology-data/H535.txt#L375), [H535:539–638](archaeology-data/H535.txt#L539).
 
-**UNKNOWN:** datasheet completo, campos reservados, todos os efeitos de leitura/escrita, todas as revisões do silício e validação em Poulsbo. Ter esse arquivo não autoriza um dump arbitrário de registradores. O conjunto de declarações do header não é uma especificação completa da ISA USSE ou dos streams de renderização.
+**UNKNOWN:** complete datasheet, reserved fields, all effects of read/write, all silicon revisions, and validation in Poulsbo. Having this file does not authorize an arbitrary register dump. The set of header statements is not a complete specification of the USSE ISA or the rendering streams.
 
-| Artefato | Estado nesta fase | Fonte exata / confidence |
+| Artifact | State in this phase | Exact source / confidence |
 | --- | --- | --- |
 | Header SGX535 | Recuperado documentalmente do Git | [H535:1–739](archaeology-data/H535.txt#L1); CONFIRMED |
 | Build e wrappers Poulsbo | Localizados em DDK 1.14 | [PBUILD:42–86](archaeology-data/PBUILD.txt#L42); [PSYSC:145–217](archaeology-data/PSYSC.txt#L145); CONFIRMED |
-| Header de interface KM microkernel | Já existe; não é implementação do firmware | fase 1 `sgx_mkif_km.h`, [firmware.md](firmware.md); CONFIRMED para o contrato |
-| `psb_powermgmt.h` e `sys_pvr_drm_export.h` requeridos pelo ramo externo | Referenciados; não localizados como caminhos nos commits KM ou no snapshot Linux | [PSYSC:65–69](archaeology-data/PSYSC.txt#L65); logs de caminhos; CONFIRMED como dependência ausente neste conjunto |
-| Inicializador UM Poulsbo compatível e scripts preenchidos | Não localizado como fonte | buscas globais e alvo [PBUILD:62–66](archaeology-data/PBUILD.txt#L62); UNKNOWN quanto a disponibilidade externa |
-| Fonte do microkernel e programas PDS SGX535 | Não localizada | inventário global; UNKNOWN quanto a implementação e licença externa |
-| ISA/assembler/compiler USSE SGX535 | Não localizado como fonte | busca global; compiladores UM encontrados são binários nomeados 530/544, não 535; CONFIRMED sobre os nomes, compatibilidade UNKNOWN |
+| KM microkernel interface header | Already exists; not a firmware implementation | phase 1 `sgx_mkif_km.h`, [firmware.md](firmware.md); CONFIRMED for the contract |
+| `psb_powermgmt.h` and `sys_pvr_drm_export.h` required by the external branch | Referenced; not found as paths in KM commits or in the Linux snapshot | [PSYSC:65–69](archaeology-data/PSYSC.txt#L65); path logs; CONFIRMED as missing dependency in this set |
+| UM Poulsbo compatible initializer and filled scripts | Not found as source | global searches and target [PBUILD:62–66](archaeology-data/PBUILD.txt#L62); UNKNOWN regarding external availability |
+| Microkernel source and PDS SGX535 programs | Not located | global inventory; UNKNOWN regarding implementation and external license |
+| ISA/assembler/compiler USSE SGX535 | Not found as source | global search; found UM compilers are binaries named 530/544, not 535; CONFIRMED about the names, compatibility UNKNOWN |
 
-Não confundir nomes `sgx_ukernel_status_codes.h`, flags USSE e constantes EURASIA com a presença de fonte de firmware ou compilador. Os compiladores publicados no commit UM `5830fc09a5f37ca89b718d7c60a838e0267a6371` são `glslcompiler_SGX544_116.exe` e `glslcompiler_SGX530_120.exe`, conforme [registro Git com paths e hashes](archaeology-data/um-offline-compilers.txt); linhas de código N/A, confidence CONFIRMED para os artefatos. Não foram executados nem desassemblados.
+Do not confuse names `sgx_ukernel_status_codes.h`, flags USSE, and constants EURASIA with the presence of a firmware source or compiler. The compilers published in commit UM `5830fc09a5f37ca89b718d7c60a838e0267a6371` are `glslcompiler_SGX544_116.exe` and `glslcompiler_SGX530_120.exe`, according to [registro Git com paths e hashes](archaeology-data/um-offline-compilers.txt); lines of code N/A, confidence CONFIRMED for the artifacts. They have not been run or disassembled.

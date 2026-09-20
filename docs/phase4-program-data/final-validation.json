@@ -1,0 +1,47 @@
+{
+  "scope": "offline files/software only; not hardware validation",
+  "counts": {
+    "json_files": 32,
+    "csv_files": 3,
+    "evidence_rows": 154,
+    "internal_links": 555,
+    "line_links": 313,
+    "snapshot_hash_checks": 94,
+    "archive_hash_checks": 119,
+    "gma500_blobs": 71,
+    "pm_files": 5,
+    "matrix_rows_line_checked": 153
+  },
+  "errors": [],
+  "external_or_unresolved_rows": [
+    {
+      "row": 10,
+      "file": "https://www.intel.com/content/dam/www/public/us/en/documents/technology-briefs/emgd-v1-14-feature-matrix.pdf",
+      "lines": "page 1, introductory paragraph",
+      "notes": "P3-060; functionalities document, not a register manual; consulted 2026-09-17"
+    }
+  ],
+  "limitations": [
+    "External PDF/page/post locators and non-archived metadata are separately reviewed; URL availability is not authenticity.",
+    "Historical completion hashes are point-in-time checkpoints; mutable documents changed intentionally in later phases."
+  ],
+  "references": [
+    {
+      "repository": "references/linux",
+      "commit": "9b87fdc9af2fbfcdb5c24a64139685ef80f6573f",
+      "status": ""
+    },
+    {
+      "repository": "references/omap5-sgx-ddk-linux",
+      "commit": "430673f78b79eccdf308a6bbfb524209b485d2cc",
+      "status": ""
+    },
+    {
+      "repository": "references/omap5-sgx-ddk-um-linux",
+      "commit": "b6801bf89e00d69893c2957455bbeb3195c0ed52",
+      "status": ""
+    }
+  ],
+  "tv1_present": false,
+  "gate_b": "BLOCKED"
+}

@@ -1,75 +1,75 @@
-# Poulsbo: ABI histórico e proveniência
+# Poulsbo: Historical ABI and origin
 
-Fase 3 — análise estática, 2026-09-17. `CONFIRMED` significa o que a fonte declara/implementa; `INFERRED` é interpretação; `UNKNOWN` é lacuna. IDs P3 remetem à [matriz](evidence-matrix.csv), com repositório, commit, arquivo e linhas. Os snapshots preservam a numeração original; ver [proveniência](poulsbo-data/sources.json). Nenhum procedimento abaixo foi executado na GPU.
+Phase 3 — static analysis, 2026-09-17. `CONFIRMED` means the source declares/implements; `INFERRED` is interpretation; `UNKNOWN` is gap. P3 IDs refer to [matrix](evidence-matrix.csv), with repository, commit, file, and lines. The snapshots preserve the original numbering; see [provenance](poulsbo-data/sources.json). No procedure below was executed on the GPU.
 
-**CONFIRMED [P3-040]** — O header PSB histórico declara pacote 5.0.0.0045 e comandos CMDBUF=0, XHW_INIT=1, XHW=2, SCENE_UNREF=3, KMS_OFF=4, KMS_ON=5, HW_INFO=6. O dispatch autentica CMDBUF e restringe XHW a root. Fontes: [PSB_psb_drm_h:32-40](poulsbo-data/PSB_psb_drm_h.txt); [PSB_psb_drm_h:338-361](poulsbo-data/PSB_psb_drm_h.txt); [PSB_psb_drv_c:86-111](poulsbo-data/PSB_psb_drv_c.txt).
+**CONFIRMED [P3-040]** — The historic PSB header declares package 5.0.0.0045 and commands CMDBUF=0, XHW_INIT=1, XHW=2, SCENE_UNREF=3, KMS_OFF=4, KMS_ON=5, HW_INFO=6. The dispatch authenticates CMDBUF and restricts XHW to root. Sources: [PSB_psb_drm_h:32-40](poulsbo-data/PSB_psb_drm_h.txt); [PSB_psb_drm_h:338-361](poulsbo-data/PSB_psb_drm_h.txt); [PSB_psb_drv_c:86-111](poulsbo-data/PSB_psb_drv_c.txt).
 
-**CONFIRMED [P3-041]** — drm_psb_cmdbuf_arg transporta listas de buffers/cliprects, scene/fence, handles/offsets/tamanhos TA, OOM, comando e relocations, engine e feedback. drm_psb_reloc contém operação, destino, máscara, shift e parâmetros. Define tipos de memória MMU/PDS/APER/RASTGEOM, engines e fences TA/raster/scene. Fontes: [PSB_psb_drm_h:47-54](poulsbo-data/PSB_psb_drm_h.txt); [PSB_psb_drm_h:120-184](poulsbo-data/PSB_psb_drm_h.txt); [PSB_psb_drm_h:206-263](poulsbo-data/PSB_psb_drm_h.txt).
+**CONFIRMED [P3-041]** — drm_psb_cmdbuf_arg carries lists of buffers/cliprects, scene/fence, handles/offsets/tamanhos TA, OOM, command and relocations, engine and feedback. drm_psb_reloc contains operation, destination, mask, shift and parameters. Defines memory types MMU/PDS/APER/RASTGEOM, engines and fences TA/raster/scene. Sources: [PSB_psb_drm_h:47-54](poulsbo-data/PSB_psb_drm_h.txt); [PSB_psb_drm_h:120-184](poulsbo-data/PSB_psb_drm_h.txt); [PSB_psb_drm_h:206-263](poulsbo-data/PSB_psb_drm_h.txt).
 
-**CONFIRMED [P3-042]** — XHW_INIT recebe handle de buffer; o kernel faz lookup/map e o chama de buffer de comunicação com o X server. Há operações fire raster, bind scene, memória TA, reset DPM, OOM, terminate, vistest, resume e lockup; o ioctl espera trabalho e usa o buffer compartilhado. Fontes: [PSB_psb_drm_h:265-361](poulsbo-data/PSB_psb_drm_h.txt); [PSB_psb_xhw_c:415-475](poulsbo-data/PSB_psb_xhw_c.txt); [PSB_psb_xhw_c:543-629](poulsbo-data/PSB_psb_xhw_c.txt).
+**CONFIRMED [P3-042]** — XHW_INIT receives a buffer handle; the kernel performs lookup/map and calls it a communication buffer with the X server. There are operations fire raster, bind scene, TA memory, reset DPM, OOM, terminate, vistest, resume, and lockup; the ioctl waits for work and uses the shared buffer. Sources: [PSB_psb_drm_h:265-361](poulsbo-data/PSB_psb_drm_h.txt); [PSB_psb_xhw_c:415-475](poulsbo-data/PSB_psb_xhw_c.txt); [PSB_psb_xhw_c:543-629](poulsbo-data/PSB_psb_xhw_c.txt).
 
-**CONFIRMED [P3-043]** — psb_sgx.c valida a lista de buffer objects e aplica relocations, verificando índices de origem/destino e operações específicas PDS/USE. Isso documenta o caminho de submissão, não uma auditoria de segurança do ABI. Fontes: [PSB_psb_sgx_c:410-464](poulsbo-data/PSB_psb_sgx_c.txt); [PSB_psb_sgx_c:631-779](poulsbo-data/PSB_psb_sgx_c.txt).
+**CONFIRMED [P3-043]** — psb_sgx.c validates the list of buffer objects and applies relocations, checking indices of origem/destino and specific operations PDS/USE. This documents the submission path, not a security audit of the ABI. Sources: [PSB_psb_sgx_c:410-464](poulsbo-data/PSB_psb_sgx_c.txt); [PSB_psb_sgx_c:631-779](poulsbo-data/PSB_psb_sgx_c.txt).
 
-**CONFIRMED [P3-044]** — O PSB histórico tem watchdog para lockup e reset workqueue; consulta o canal XHW e solicita reset DPM após reconfiguração MMU. Fontes: [PSB_psb_reset_c:145-177](poulsbo-data/PSB_psb_reset_c.txt); [PSB_psb_reset_c:231-279](poulsbo-data/PSB_psb_reset_c.txt).
+**CONFIRMED [P3-044]** — The historical PSB has a watchdog for lockup and reset workqueue; it queries the XHW channel and requests a DPM reset after MMU reconfiguration. Sources: [PSB_psb_reset_c:145-177](poulsbo-data/PSB_psb_reset_c.txt); [PSB_psb_reset_c:231-279](poulsbo-data/PSB_psb_reset_c.txt).
 
-**CONFIRMED [P3-045]** — DDK 1.14 define comandos DRM Services/display/buffer-class/is-master/unpriv/debug como 0..5 no modo próprio; DRM_EXT usa DRM_PVR_RESERVED1..6. Não há valores numéricos universais para o modo externo nesse header. Fontes: [DRMS:43-70](poulsbo-data/DRMS.txt); [DRMC:462-475](poulsbo-data/DRMC.txt).
+**CONFIRMED [P3-045]** — DDK 1.14 defines DRM commands Services/display/buffer-class/is-master/unpriv/debug as 0..5 in native mode; DRM_EXT uses DRM_PVR_RESERVED1..6. There are no universal numeric values for the external mode in this header. Sources: [DRMS:43-70](poulsbo-data/DRMS.txt); [DRMC:462-475](poulsbo-data/DRMC.txt).
 
-**CONFIRMED [P3-046]** — PVRSRV_BRIDGE_PACKAGE transporta BridgeID, tamanho, ponteiros/tamanhos de entrada/saída e hKernelServices. ALLOCDEVICEMEM usa device/heap handles, atributos, tamanho, alinhamento e informação de chunks; não é um GEM handle moderno. Fontes: [BRIDGE:312-322](poulsbo-data/BRIDGE.txt); [BRIDGE:482-497](poulsbo-data/BRIDGE.txt).
+**CONFIRMED [P3-046]** — PVRSRV_BRIDGE_PACKAGE carries BridgeID, size, ponteiros/tamanhos for input/output, and hKernelServices. ALLOCDEVICEMEM uses device/heap handles, attributes, size, alignment, and chunk information; it is not a modern GEM handle. Sources: [BRIDGE:312-322](poulsbo-data/BRIDGE.txt); [BRIDGE:482-497](poulsbo-data/BRIDGE.txt).
 
-**CONFIRMED [P3-047]** — sgx_bridge.h define DOKICK em SGX_CMD_BASE+3; TRANSFER +13; INFO_FOR_SRVINIT +15; DEVINITPART2 +16; registros de contexto render +20, 2D +24, transfer +26; SUBMIT2D +23 e PROCESS_QUEUES +28, com condicionais de build. Fontes: [SBRIDGE:63-114](poulsbo-data/SBRIDGE.txt); [SBRIDGE:233-273](poulsbo-data/SBRIDGE.txt); [SBRIDGE:315-351](poulsbo-data/SBRIDGE.txt).
+**CONFIRMED [P3-047]** — sgx_bridge.h defines DOKICK at SGX_CMD_BASE+3; TRANSFER +13; INFO_FOR_SRVINIT +15; DEVINITPART2 +16; context registers render +20, 2D +24, transfer +26; SUBMIT2D +23 and PROCESS_QUEUES +28, with build conditionals. Sources: [SBRIDGE:63-114](poulsbo-data/SBRIDGE.txt); [SBRIDGE:233-273](poulsbo-data/SBRIDGE.txt); [SBRIDGE:315-351](poulsbo-data/SBRIDGE.txt).
 
-**CONFIRMED [P3-048]** — SGX_BRIDGE_INIT_INFO recebe handles CCB/controle/event-kicker/host-control/TA3D, endereços de handlers, scripts, build options, struct sizes, dados de clock/cache e handles adicionais. SGX_CCB_KICK agrega comando, handle/offset CCB e objetos de sincronização TA/3D. Fontes: [INFO:83-153](poulsbo-data/INFO.txt); [INFO:181-251](poulsbo-data/INFO.txt).
+**CONFIRMED [P3-048]** — SGX_BRIDGE_INIT_INFO receives handles CCB/controle/event-kicker/host-control/TA3D, handler addresses, scripts, build options, struct sizes, data from clock/cache, and additional handles. SGX_CCB_KICK aggregates command, handle/offset CCB, and synchronization objects TA/3D. Sources: [INFO:83-153](poulsbo-data/INFO.txt); [INFO:181-251](poulsbo-data/INFO.txt).
 
-**CONFIRMED [P3-049]** — SGXMKIF_COMMAND contém service address USE, cache control e seis palavras de dados; o kernel CCB contém 256 comandos e controle read/write offset. O produtor verifica espaço e avança write offset módulo 256. Fontes: [MKIF:70-96](poulsbo-data/MKIF.txt); [UTIL:236-254](poulsbo-data/UTIL.txt); [UTIL:552-558](poulsbo-data/UTIL.txt).
+**CONFIRMED [P3-049]** — SGXMKIF_COMMAND contains service address USE, cache control, and six data words; the kernel CCB contains 256 commands and read/write control offset. The producer checks space and advances the write offset modulo 256. Sources: [MKIF:70-96](poulsbo-data/MKIF.txt); [UTIL:236-254](poulsbo-data/UTIL.txt); [UTIL:552-558](poulsbo-data/UTIL.txt).
 
-**CONFIRMED [P3-050]** — Após publicar o comando, o caminho Services atualiza o event kicker, usa barreira de memória e escreve EVENT_KICK2 sob FIX_HW_BRN_26620 + SYSTEM_CACHE sem bypass, e EVENT_KICK no ramo alternativo. A definição SGX535 citada não habilita MULTI_EVENT_KICK. Fontes: [UTIL:603-633](poulsbo-data/UTIL.txt); [FEATURE:76-88](poulsbo-data/../archaeology-data/FEATURE.txt).
+**CONFIRMED [P3-050]** — After publishing the command, the Services path updates the event kicker, uses a memory barrier, and writes EVENT_KICK2 under FIX_HW_BRN_26620 + SYSTEM_CACHE without bypass, and EVENT_KICK in the alternative branch. The cited SGX535 definition does not enable MULTI_EVENT_KICK. Sources: [UTIL:603-633](poulsbo-data/UTIL.txt); [FEATURE:76-88](poulsbo-data/../archaeology-data/FEATURE.txt).
 
-**CONFIRMED [P3-051]** — SGXInitialise executa script parte1, reset, script parte2, kick e espera PVRSRV_USSE_EDM_INIT_COMPLETE em memória compartilhada; os scripts vêm de SGX_BRIDGE_INIT_INFO. Essa evidência não fornece o conteúdo do microkernel nem dos scripts preenchidos pelo UM. Fontes: [INIT:207-220](poulsbo-data/INIT.txt); [INIT:534-574](poulsbo-data/INIT.txt); [INIT:637-730](poulsbo-data/INIT.txt); [INFO:83-100](poulsbo-data/INFO.txt).
+**CONFIRMED [P3-051]** — SGXInitialise executes part1 script, reset, part2 script, kick, and waits for PVRSRV_USSE_EDM_INIT_COMPLETE in shared memory; the scripts come from SGX_BRIDGE_INIT_INFO. This evidence does not provide the content of the microkernel or the scripts filled by the UM. Sources: [INIT:207-220](poulsbo-data/INIT.txt); [INIT:534-574](poulsbo-data/INIT.txt); [INIT:637-730](poulsbo-data/INIT.txt); [INFO:83-100](poulsbo-data/INFO.txt).
 
-**CONFIRMED [P3-052]** — O display-class Poulsbo define ENTER_VT=1, LEAVE_VT=2 e CURSOR_LOAD=3, struct com cmd/dev-id e cursor de tamanho32/pointer64. Fontes: [DCS:46-68](poulsbo-data/DCS.txt).
+**CONFIRMED [P3-052]** — The Poulsbo display-class defines ENTER_VT=1, LEAVE_VT=2, and CURSOR_LOAD=3, struct with cmd/dev-id and cursor of tamanho32/pointer64. Sources: [DCS:46-68](poulsbo-data/DCS.txt).
 
-**CONFIRMED [P3-053]** — EMGD emgd_shared.h fixa PVR_RESERVED1..5 em 0x12..0x16 e RESERVED6 em 0x1e. emgd_drm.h define GMM_ALLOC_REGION=0x0e, ALLOC_SURFACE=0x0f, FREE=0x10, FLUSH_CACHE=0x11, DRIVER_PRE_INIT=0x23, START_PVRSRV=0x25 e PREINIT_MMU=0x39. Fontes: [EMGD_drm_include_emgd_shared_h:50-59](poulsbo-data/EMGD_drm_include_emgd_shared_h.txt); [EMGD_drm_include_emgd_drm_h:679-763](poulsbo-data/EMGD_drm_include_emgd_drm_h.txt).
+**CONFIRMED [P3-053]** — EMGD emgd_shared.h sets PVR_RESERVED1..5 in 0x12..0x16 and RESERVED6 in 0x1e. emgd_drm.h defines GMM_ALLOC_REGION=0x0e, ALLOC_SURFACE=0x0f, FREE=0x10, FLUSH_CACHE=0x11, DRIVER_PRE_INIT=0x23, START_PVRSRV=0x25, and PREINIT_MMU=0x39. Sources: [EMGD_drm_include_emgd_shared_h:50-59](poulsbo-data/EMGD_drm_include_emgd_shared_h.txt); [EMGD_drm_include_emgd_drm_h:679-763](poulsbo-data/EMGD_drm_include_emgd_drm_h.txt).
 
-**CONFIRMED [P3-054]** — emgd_drm_start_pvrsrv_t contém xserver e rtn, descrito como retorno de PVRSRVDrmLoad. O pvrversion.h do espelho declara 1.5.15.3226: não confundir essa versão interna do PVR com EMGD 1.14 ou DDK TI 1.14. Fontes: [EMGD_drm_include_emgd_drm_h:638-647](poulsbo-data/EMGD_drm_include_emgd_drm_h.txt); [EMGD_drm_pvr_include4_pvrversion_h:45-53](poulsbo-data/EMGD_drm_pvr_include4_pvrversion_h.txt).
+**CONFIRMED [P3-054]** — emgd_drm_start_pvrsrv_t contains xserver and rtn, described as the return of PVRSRVDrmLoad. The pvrversion.h of the mirror declares 1.5.15.3226: do not confuse this internal version of PVR with EMGD 1.14 or TI DDK 1.14. Sources: [EMGD_drm_include_emgd_drm_h:638-647](poulsbo-data/EMGD_drm_include_emgd_drm_h.txt); [EMGD_drm_pvr_include4_pvrversion_h:45-53](poulsbo-data/EMGD_drm_pvr_include4_pvrversion_h.txt).
 
-## Três interfaces, não um ABI único
+## Three interfaces, not a single ABI
 
-| Família | Entrada | Objetos/controle | Limite da reconstrução |
+| Family | Entry | Objetos/controle | Reconstruction limit |
 |---|---|---|---|
-| PSB 5.0.0.0045 | DRM CMDBUF / XHW | BOs, relocations, scenes, fences; dependência de X server | handlers privados userspace não reconstruídos |
-| DDK TI 1.14 alvo Poulsbo | bridge DRM Services | heaps, handles, contexts, syncs, scripts/CCB/host-control | integração DRM_EXT incompleta e UM ausente |
-| Espelho EMGD / PVR 1.5.15.3226 | IGD + slots PVR | display/GMM + Services/init | não demonstra ABI binário compatível com TI1.14 |
+| PSB 5.0.0.0045 | DRM CMDBUF / XHW | BOs, relocations, scenes, fences; dependency on X server | private userspace handlers not rebuilt |
+| DDK TI 1.14 target Poulsbo | bridge DRM Services | heaps, handles, contexts, syncs, scripts/CCB/host-control | incomplete DRM_EXT integration and missing UM |
+| Mirror EMGD / PVR 1.5.15.3226 | IGD + PVR slots | display/GMM + Services/init | does not show binary ABI compatible with TI1.14 |
 
-Os números acima são índices relativos conforme cada definição; um número de comando não é o ioctl Linux completo. Direção, tamanho, DRM_COMMAND_BASE, ponteiros nativos, IMG_HANDLE, IMG_SIZE_T e macros de build participam do ABI. Não inventar sizeof/packing, nem equivalência x86/ARM ou 32/64 bits.
+The numbers above are relative indices according to each definition; a command number is not the full Linux ioctl. Direction, size, DRM_COMMAND_BASE, native pointers, IMG_HANDLE, IMG_SIZE_T, and build macros are part of the ABI. Do not invent sizeof/packing, nor the equivalent x86/ARM or 32/64 bits.
 
-**UNKNOWN:** snapshot completo do lado userspace PSB XHW; opções geradas do build instalado; layouts exatos dos objetos de firmware; conteúdo/licença/revisão dos microkernels Poulsbo; scripts preenchidos e handshake integral UM/KM. O canal XHW não deve ser chamado de firmware: é comunicação kernel/X server, segundo P3-042. A presença de firmware de vídeo MSVDX em outros pacotes não identificaria firmware SGX.
+**UNKNOWN:** complete snapshot of the PSB XHW userspace side; options generated from the installed build; exact layouts of firmware objects; content/license/revision of Poulsbo microkernels; filled scripts and full UM/KM handshake. The XHW channel should not be called firmware: it is kernel/X server communication, according to P3-042. The presence of MSVDX video firmware in other packages would not identify SGX firmware.
 
-**INFERRED:** um driver moderno precisaria desenhar validação, lifetime, isolamento de VA, fences e recuperação próprios. Isso não é autorização para implementar ou reutilizar o ABI histórico nesta fase.
+**INFERRED:** a modern driver would need to design its own validation, lifetime, VA isolation, fences, and recovery. This is not authorization to implement or reuse the historical ABI at this stage.
 
-## Licença e proveniência
+## License and provenance
 
-Decisões abaixo são política de separação de material deste projeto, baseada nos avisos por arquivo. Não atribuir uma licença única ao diretório EMGD nem inferir direitos a partir de disponibilidade pública.
-
-
-**CONFIRMED [P3-055]** — sgx535defs.h preserva aviso dual MIT/GPLv2, com opção MIT e manutenção dos avisos. Fontes: [H535:1-40](poulsbo-data/../archaeology-data/H535.txt).
-
-**CONFIRMED [P3-056]** — gtt.c atual tem SPDX GPL-2.0-only; psb_drm.h histórico traz GPL versão2. Não transplantar código desses arquivos para uma futura implementação Mesa sob licença permissiva. Fontes: [GTT:1-8](poulsbo-data/GTT.txt); [PSB_psb_drm_h:1-21](poulsbo-data/PSB_psb_drm_h.txt).
-
-**CONFIRMED [P3-057]** — Os headers EMGD emgd_drm.h e SGX535 contêm avisos permissivos com exigência de preservação de copyright/licença. O License.txt também separa o kernel DRM e aponta GPLv2; tratar a combinação por arquivo e proveniência, sem licença global presumida. Fontes: [EMGD_drm_include_emgd_drm_h:1-30](poulsbo-data/EMGD_drm_include_emgd_drm_h.txt); [EMGD_drm_pvr_services4_srvkm_hwdefs_sgx535defs_h:1-21](poulsbo-data/EMGD_drm_pvr_services4_srvkm_hwdefs_sgx535defs_h.txt); [EMGD_License_txt:1-9](poulsbo-data/EMGD_License_txt.txt).
-
-**CONFIRMED [P3-058]** — A licença userspace no readme.txt EMGD permite binários sem modificação, restringe hardware e proíbe reverse engineering/decompilação/disassembly; License.txt também contém condições para redistribuição binária. Fontes: [EMGD_readme_txt:1-16](poulsbo-data/EMGD_readme_txt.txt); [EMGD_License_txt:32-42](poulsbo-data/EMGD_License_txt.txt).
+Decisions below are the material separation policy of this project, based on notices per file. Do not assign a single license to the EMGD directory or infer rights from public availability.
 
 
-| Classe | Uso nesta fase | Política para implementação futura |
+**CONFIRMED [P3-055]** — sgx535defs.h preserves dual warning MIT/GPLv2, with MIT option and maintenance of the warnings. Sources: [H535:1-40](poulsbo-data/../archaeology-data/H535.txt).
+
+**CONFIRMED [P3-056]** — gtt.c currently has SPDX GPL-2.0-only; psb_drm.h history carries GPL version 2. Do not transplant code from these files into a future Mesa implementation under a permissive license. Sources: [GTT:1-8](poulsbo-data/GTT.txt); [PSB_psb_drm_h:1-21](poulsbo-data/PSB_psb_drm_h.txt).
+
+**CONFIRMED [P3-057]** — The headers EMGD emgd_drm.h and SGX535 contain permissive notices with a requirement to preserve copyright/license. License.txt also separates the DRM kernel and points to GPLv2; handle the combination by file and origin, without assuming a global license. Sources: [EMGD_drm_include_emgd_drm_h:1-30](poulsbo-data/EMGD_drm_include_emgd_drm_h.txt); [EMGD_drm_pvr_services4_srvkm_hwdefs_sgx535defs_h:1-21](poulsbo-data/EMGD_drm_pvr_services4_srvkm_hwdefs_sgx535defs_h.txt); [EMGD_License_txt:1-9](poulsbo-data/EMGD_License_txt.txt).
+
+**CONFIRMED [P3-058]** — The userspace license in readme.txt EMGD allows unmodified binaries, restricts hardware, and prohibits reverse engineering/decompilation/disassembly; License.txt also contains conditions for binary redistribution. Sources: [EMGD_readme_txt:1-16](poulsbo-data/EMGD_readme_txt.txt); [EMGD_License_txt:32-42](poulsbo-data/EMGD_License_txt.txt).
+
+
+| Class | Use in this phase | Policy for future implementation |
 |---|---|---|
-| Código com origem/commit/aviso preservado | documentação de comportamento do software | revisar licença individual antes de copiar |
-| TI dual MIT/GPLv2, headers permissivos IMG/Intel identificados | candidatos técnicos, sem port nesta fase | potencialmente reutilizáveis pela opção permissiva, preservando avisos e verificando origem |
-| Linux GPL-only e PSB GPL | evidência e comparação | não copiar implementação para Mesa permissiva; manter separação documental |
-| EMGD com proveniência apenas de espelho | evidência do conteúdo do espelho | autenticidade/licença da versão exata ainda precisa confirmação |
-| UM TI e UM EMGD binários | inventário histórico, licença e metadados | não copiar payload, desassemblar, executar ou carregar nesta fase |
-| Documentos Intel | contexto e evidência do que declaram | não são licença de firmware nem descrição completa do núcleo |
+| Code with origem/commit/aviso preserved | software behavior documentation | review individual license before copying |
+| dual IT MIT/GPLv2, permissive headers IMG/Intel identified | technical candidates, no port at this stage | potentially reusable by the permissive option, preserving warnings and checking origin |
+| Linux GPL-only and PSB GPL | evidence and comparison | do not copy implementation to permissive Mesa; maintain documentary separation |
+| EMGD with provenance only from mirror | evidence of the mirror's content | authenticity/license of the exact version still needs confirmation |
+| ONE TI and ONE EMGD binaries | historical inventory, license, and metadata | do not copy payload, disassemble, execute, or load at this stage |
+| Intel Documents | context and evidence of what they state | are not firmware license nor full core description |
 
-Os `.txt` em poulsbo-data são snapshots de referência com avisos originais, não código novo de driver. As licenças deles não são substituídas pela licença da documentação. Não foram importados binários externos.
+The `.txt` in poulsbo-data are reference snapshots with original warnings, not new driver code. Their licenses are not replaced by the documentation license. No external binaries were imported.
 
 
-**CONFIRMED [P3-064]** — O README do espelho comunitário se apresenta como EMGD 1.18 e declara reunir binários, fontes e patches; não é uma release Intel autenticada pelo projeto. [EMGD README:1–7](poulsbo-data/EMGD_README_md.txt). Distinguir esse rótulo, o PVR interno 1.5.15.3226 (P3-054) e o documento oficial de funcionalidades EMGD1.14 (P3-060).
+**CONFIRMED [P3-064]** — The community mirror README presents itself as EMGD 1.18 and claims to gather binaries, sources, and patches; it is not an Intel release authenticated by the project. [EMGD README:1–7](poulsbo-data/EMGD_README_md.txt). Distinguish this label, the internal PVR 1.5.15.3226 (P3-054), and the official feature document EMGD1.14 (P3-060).

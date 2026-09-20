@@ -1,0 +1,76 @@
+[
+  {
+    "repository": "omap5-sgx-ddk-linux",
+    "commits": 330,
+    "scope": "reachable commits via git rev-list --all; filenames only; not a content safety proof",
+    "paths": [
+      {
+        "file": "INSTALL",
+        "representative_commit": "9ae0fa4998b1c624408945e062bf8fb0ea7efb9d"
+      },
+      {
+        "file": "README",
+        "representative_commit": "b7f92683af1d0f5032b5c18325ed7cb418de18ef"
+      },
+      {
+        "file": "README.md",
+        "representative_commit": "9ae0fa4998b1c624408945e062bf8fb0ea7efb9d"
+      },
+      {
+        "file": "eurasia_km/INSTALL",
+        "representative_commit": "bfd9edef3f976906fb7fececbfa29d16801154f5"
+      },
+      {
+        "file": "eurasia_km/README",
+        "representative_commit": "bfd9edef3f976906fb7fececbfa29d16801154f5"
+      },
+      {
+        "file": "eurasia_km/eurasiacon/build/linux2/omap_linux/install_km.sh.m4",
+        "representative_commit": "29115f91063c25292cf8f973622433f576d01164"
+      },
+      {
+        "file": "eurasia_km/eurasiacon/build/linux2/scripts/install.sh.m4",
+        "representative_commit": "29115f91063c25292cf8f973622433f576d01164"
+      },
+      {
+        "file": "eurasia_km/eurasiacon/build/linux2/scripts/install.sh.tpl",
+        "representative_commit": "bfd9edef3f976906fb7fececbfa29d16801154f5"
+      },
+      {
+        "file": "eurasiacon/build/linux2/omap_linux/install_km.sh.m4",
+        "representative_commit": "78db3c65b9dafb802be133c7b14f8ed432e1fb78"
+      },
+      {
+        "file": "eurasiacon/build/linux2/scripts/install.sh.m4",
+        "representative_commit": "78db3c65b9dafb802be133c7b14f8ed432e1fb78"
+      },
+      {
+        "file": "eurasiacon/build/linux2/scripts/install.sh.tpl",
+        "representative_commit": "9ae0fa4998b1c624408945e062bf8fb0ea7efb9d"
+      }
+    ]
+  },
+  {
+    "repository": "omap5-sgx-ddk-um-linux",
+    "commits": 153,
+    "scope": "reachable commits via git rev-list --all; filenames only; not a content safety proof",
+    "paths": [
+      {
+        "file": "OMAP5-Linux-Graphics-DDK-UM-Manifest.doc",
+        "representative_commit": "5c54e382b226e37a8a0d2292f7234485d325ddae"
+      },
+      {
+        "file": "README",
+        "representative_commit": "337832df9662f0842ce4704342c0e42acab22209"
+      },
+      {
+        "file": "README.md",
+        "representative_commit": "84a396a4fb379f10931421e489ac8a199d6a9f2c"
+      },
+      {
+        "file": "TI-Linux-Graphics-DDK-UM-Manifest.doc",
+        "representative_commit": "76251c0a88c172eb69a84324f033e4035b8a7a4e"
+      }
+    ]
+  }
+]
