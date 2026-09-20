@@ -37,6 +37,9 @@ So this project attempts to reconstruct that knowledge from surviving
 public source code, historical drivers, documentation and carefully
 controlled observations of real hardware.
 
+### ⚠️ important observation
+We currently use AI to assist with some research and documentation creation, but all facts are human-checked.
+
 ---
 
 ## 💡 Why?
