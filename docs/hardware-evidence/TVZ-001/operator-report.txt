@@ -1,4 +1,5 @@
 O Test Vector Zero foi executado com sucesso no hardware-alvo real.
+ATTENTION: PORTUGUESE DOCUMENT
 
 Hardware medido:
 
