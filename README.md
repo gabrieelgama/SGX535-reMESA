@@ -265,7 +265,7 @@ We currently use AI to assist with some research and documentation creation, but
 <br>
 
 Entirely from a **Samsung Galaxy Tab S7** running an ARM64 Linux
-userspace through **PRoot**, using **Anland/Wayland** on Android.
+userspace through **PRoot**, using **Anland-Termux/Wayland** on Android.
 
 Yes.
 
