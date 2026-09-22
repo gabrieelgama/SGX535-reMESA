@@ -196,18 +196,6 @@ The reconstructed technical reference lives in [`docs/`](docs/).
 
 ---
 
-## 🌎 Language
-
-Most early archaeology and technical documentation is currently written
-in **Brazilian Portuguese (pt-BR)**.
-
-🇧🇷 **Português:** legacy
-🇬🇧 **English:** current primary documentation
-
-Technical identifiers remain unchanged.
-
----
-
 ## 🧬 Why `reMESA`?
 
 After years without modern open-source Linux 3D acceleration, the
