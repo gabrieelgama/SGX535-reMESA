@@ -4,7 +4,7 @@
 
 ### Reconstructing the PowerVR SGX535, one surviving piece of evidence at a time.
 
-**Reverse engineering · Hardware preservation · Linux · Mesa**
+**Reverse engineering · Linux · Mesa**
 
 ![Status](https://img.shields.io/badge/status-research%20%2F%20bring--up-orange)
 ![GPU](https://img.shields.io/badge/GPU-PowerVR%20SGX535-blue)
