@@ -13,4 +13,8 @@ This register keeps the first-observation gaps explicit. Existing project unknow
 | U14 | What happens on failed access and how is it recovered? | UNKNOWN | diagnostics guidance only | no Poulsbo read-failure/recovery contract | Intel/IMG aperture and recovery documentation | 15–16 |
 | U21 | Is firmware/MMU/BIF initialization required before the IDs? | UNKNOWN | historical stacks initialize surrounding state | no architectural dependency statement | SGX535 register-access chapter | 06–08 |
 
+## Phase 6.1 adversarial update
+
+The source-family pass did not resolve any row. It added historical evidence that gma500 developers had an optional SGX-off diagnostic around `PSB_RSGX32` (P6-1-002), but that macro neither defines the relevant APM state nor avoids the read. It therefore reinforces U03/U04 without changing their classification. The full reproducible search record is [phase6-1-research-ledger.md](phase6-1-research-ledger.md).
+
 The single artifact with the broadest closure value is an authorized SGX535/Poulsbo register and errata reference that covers access attributes, side effects, power/clock/reset requirements, physical-revision applicability, unavailable-block behavior, and recovery.
