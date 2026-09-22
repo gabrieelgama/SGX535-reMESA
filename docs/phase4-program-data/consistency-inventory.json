@@ -216,7 +216,7 @@
       },
       {
         "line": 3,
-        "text": "The real TVZ measured PCI revision `0x06` for graphics function `8086:8108` at `0000:00:02.0` (P41-002). This is a PCI revision ID, not an SGX core revision."
+        "text": "The real TVZ measured PCI revision `0x06` for graphics function `8086:8108` at `0000:00:02.0` (TVZ-001). This is a PCI revision ID, not an SGX core revision."
       },
       {
         "line": 5,

@@ -55,3 +55,7 @@ formally **UNKNOWN** for read-safety.
 ## External artifact of greatest value
 
 The most valuable item for the immediate blocker is an authorized register, power, reset, and errata manual for **SGX535 integrated into Poulsbo**. It must define `CORE_ID`/`CORE_REVISION` access attributes and side effects, the required power/clock/reset state, failure behavior, and revision coverage. For later bootstrap work, the matching UM/microkernel/initializer package for the Poulsbo DDK 1.14 remains the highest-value artifact.
+
+## Phase 6.2 evidence routes
+
+Phase 6.2 does not resolve U01–U06 or U11. It records that an authorized Intel RDC/support request, an Imagination support inquiry, and carefully scoped public professional questions are legitimate evidence routes. Their availability does not establish that any recipient can provide the missing contract. Public-source archaeology has diminishing returns for the immediate hardware-safety properties; the status is `RE-PREPARE`, while Gate B remains `BLOCKED`. See [the Phase 6.2 exhaustion assessment](phase6-2-documentation-exhaustion.md) and [RE-GATE](phase6-2-re-gate.md).
