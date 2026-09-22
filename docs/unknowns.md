@@ -1,6 +1,6 @@
-# 20 priority unknowns — Phase 5 assessment
+# 20 priority unknowns — Phase 6 assessment
 
-Updated 2026-09-20 after Test Vector Zero, the Phase 4.7 audit, and Phase 5 public-document research. No MMIO, PCI config write, reset, firmware, or workload was executed. IDs P3/P4/P5 refer to the
+Updated 2026-09-22 after Test Vector Zero and the Phase 4–6 evidence audits. No MMIO, PCI configuration write, reset, firmware, or workload was executed. IDs P3/P4/P5/P6 refer to the
 [matrix](evidence-matrix.csv).
 
 | # | Unknown | Current evidence / exact lack | Blocks |
@@ -44,6 +44,13 @@ formally **UNKNOWN** for read-safety.
 - Intel document `364236` is **CONFIRMED** to be titled *Intel System Controller HUB External Design Specification* (P5-001). A 2021 Intel support response placed access behind a privileged Resource and Documentation Center account (P5-002); anonymous retrieval now ends at a public 404 page (P5-005).
 - Public IMG material shows detailed SGX535 documentation being discussed through private developer support, but does not supply or authenticate a register-access contract (P5-003).
 - No recovered public source establishes read-only or side-effect-free semantics, the required power/clock/reset state, a graphics PCI `0x06` to SGX revision mapping, applicable BRNs, CPU read failure behavior, or a complete recovery contract. Failure to find a warning is not evidence of safety.
+
+## Phase 6 access-contract result
+
+- `gma_get_core_freq()` is not a passive source of SGX clock evidence: it writes a root-bridge PCI configuration selector before reading its result (P6-001). In the target gma500 path, the resulting `core_freq` is consumed by backlight PWM setup (P6-002). It does not establish the SGX execution clock or register-interface accessibility.
+- The Poulsbo DDK and EMGD mirror carry 200 MHz SGX timing configuration values (P6-003). These are software configuration values, not measurements of the Dell hardware or proof of a clock-enable condition.
+- The DDK warning against an SGX dump while unpowered (P6-004) reinforces that an unchecked power state is not acceptable. It does not provide a safe state, a passive proof method, or a candidate-register exception.
+- The physical SGX revision, PCI-to-SGX revision mapping, applicable BRNs, read semantics, side effects, power, clock, reset, locking, PM exclusion, failure behavior, and recovery contract remain `UNKNOWN`. The detailed Phase 6 register is in [phase6-unknown-register.md](phase6-unknown-register.md).
 
 ## External artifact of greatest value
 

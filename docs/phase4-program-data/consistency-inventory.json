@@ -798,7 +798,7 @@
       },
       {
         "line": 19,
-        "text": "**UNKNOWN:** complete sequence of clock/rail/reset from each energy state, hardware behind the OSPM APIs, ready bits and their timeouts, reset reach over display/memory, and errata of the installed stepping. The stubs do not demonstrate that power gating is unnecessary; they may depend on another componente/firmware from the platform."
+        "text": "**UNKNOWN:** complete clock/rail/reset sequence from each power state, hardware behind the OSPM APIs, ready bits and their timeouts, reset reach over display/memory, and errata for the installed stepping. The stubs do not demonstrate that power gating is unnecessary; they may depend on another platform component or firmware."
       }
     ]
   },
