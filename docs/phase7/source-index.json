@@ -1,0 +1,677 @@
+{
+  "baseline": "67fe07b",
+  "sources": {
+    "target:psb_drv.c": {
+      "repository": "https://github.com/gregkh/linux",
+      "commit": "d5eca7ebcf6f64c4aebf9684c365c130a3a069b3",
+      "file": "drivers/gpu/drm/gma500/psb_drv.c",
+      "local_file": "docs/phase4-2-data/antix-source/drivers/gpu/drm/gma500/psb_drv.c",
+      "platform": "Poulsbo path in antiX 5.10.240 source",
+      "license": "Retained per-file Linux notice",
+      "provenance": "antiX 5.10.240-antix.1-486-smp-6; installed binary UNVERIFIED",
+      "sha256": "db2699f9301563dfe7cd8c87e7087d00a1c7af432a41161a6e2ec21b07d3d576",
+      "bytes": 15472,
+      "line_count": 549
+    },
+    "target:psb_drv.h": {
+      "repository": "https://github.com/gregkh/linux",
+      "commit": "d5eca7ebcf6f64c4aebf9684c365c130a3a069b3",
+      "file": "drivers/gpu/drm/gma500/psb_drv.h",
+      "local_file": "docs/phase4-2-data/antix-source/drivers/gpu/drm/gma500/psb_drv.h",
+      "platform": "Poulsbo path in antiX 5.10.240 source",
+      "license": "Retained per-file Linux notice",
+      "provenance": "antiX 5.10.240-antix.1-486-smp-6; installed binary UNVERIFIED",
+      "sha256": "6dce38176eccc8d7037783ec6c41d101c3c614068a3b7b11f40b06e1d1ca6261",
+      "bytes": 24752,
+      "line_count": 914
+    },
+    "target:psb_device.c": {
+      "repository": "https://github.com/gregkh/linux",
+      "commit": "d5eca7ebcf6f64c4aebf9684c365c130a3a069b3",
+      "file": "drivers/gpu/drm/gma500/psb_device.c",
+      "local_file": "docs/phase4-2-data/antix-source/drivers/gpu/drm/gma500/psb_device.c",
+      "platform": "Poulsbo path in antiX 5.10.240 source",
+      "license": "Retained per-file Linux notice",
+      "provenance": "antiX 5.10.240-antix.1-486-smp-6; installed binary UNVERIFIED",
+      "sha256": "c02f8c825350ed89675d7618e158d503fbb92169a7f2f8aba4255b353de9a493",
+      "bytes": 8871,
+      "line_count": 350
+    },
+    "target:power.c": {
+      "repository": "https://github.com/gregkh/linux",
+      "commit": "d5eca7ebcf6f64c4aebf9684c365c130a3a069b3",
+      "file": "drivers/gpu/drm/gma500/power.c",
+      "local_file": "docs/phase4-2-data/antix-source/drivers/gpu/drm/gma500/power.c",
+      "platform": "Poulsbo path in antiX 5.10.240 source",
+      "license": "Retained per-file Linux notice",
+      "provenance": "antiX 5.10.240-antix.1-486-smp-6; installed binary UNVERIFIED",
+      "sha256": "94f01101e484ef73f111278a225c74c8528f99a5ffee79b97f368ee5e5de6a9d",
+      "bytes": 9065,
+      "line_count": 332
+    },
+    "target:psb_irq.c": {
+      "repository": "https://github.com/gregkh/linux",
+      "commit": "d5eca7ebcf6f64c4aebf9684c365c130a3a069b3",
+      "file": "drivers/gpu/drm/gma500/psb_irq.c",
+      "local_file": "docs/phase4-2-data/antix-source/drivers/gpu/drm/gma500/psb_irq.c",
+      "platform": "Poulsbo path in antiX 5.10.240 source",
+      "license": "Retained per-file Linux notice",
+      "provenance": "antiX 5.10.240-antix.1-486-smp-6; installed binary UNVERIFIED",
+      "sha256": "9dfbb8dca48e68a1f9eef266e85c4b55807e2689d598d5f24995f9aa9938bd97",
+      "bytes": 17520,
+      "line_count": 676
+    },
+    "target:mmu.c": {
+      "repository": "https://github.com/gregkh/linux",
+      "commit": "d5eca7ebcf6f64c4aebf9684c365c130a3a069b3",
+      "file": "drivers/gpu/drm/gma500/mmu.c",
+      "local_file": "docs/phase4-2-data/antix-source/drivers/gpu/drm/gma500/mmu.c",
+      "platform": "Poulsbo path in antiX 5.10.240 source",
+      "license": "Retained per-file Linux notice",
+      "provenance": "antiX 5.10.240-antix.1-486-smp-6; installed binary UNVERIFIED",
+      "sha256": "d9a7e839d24c3a6e5a6be77c8583a8073ea4e20fb64eb1fc0228048db4e8fd24",
+      "bytes": 18125,
+      "line_count": 802
+    },
+    "target:accel_2d.c": {
+      "repository": "https://github.com/gregkh/linux",
+      "commit": "d5eca7ebcf6f64c4aebf9684c365c130a3a069b3",
+      "file": "drivers/gpu/drm/gma500/accel_2d.c",
+      "local_file": "docs/phase4-2-data/antix-source/drivers/gpu/drm/gma500/accel_2d.c",
+      "platform": "Poulsbo path in antiX 5.10.240 source",
+      "license": "Retained per-file Linux notice",
+      "provenance": "antiX 5.10.240-antix.1-486-smp-6; installed binary UNVERIFIED",
+      "sha256": "090002c14bf5e0f0777382f735807faa6dfa0dde98a1a57aff8f65aee20a2f1c",
+      "bytes": 9099,
+      "line_count": 352
+    },
+    "catalog:H535": {
+      "repository": "omap5-sgx-ddk-linux",
+      "commit": "322bcda5f3076037e2e20ef9209f4f4d575a7d5f",
+      "file": "services4/srvkm/hwdefs/sgx535defs.h",
+      "local_file": "docs/archaeology-data/H535.txt",
+      "platform": "Historical source; exact scope in claim",
+      "license": "Retained source notice; no code reuse",
+      "provenance": "docs/poulsbo-data/sources.json",
+      "catalog_sha256": "cb2a3e9119d65b421a16744137b1114b0ebd6982cb27549b4fce1d8405bd41c3",
+      "sha256": "cb2a3e9119d65b421a16744137b1114b0ebd6982cb27549b4fce1d8405bd41c3",
+      "bytes": 38928,
+      "line_count": 739,
+      "git_object_verified": true
+    },
+    "catalog:PSB_psb_drv_c": {
+      "repository": "https://github.com/gregkh/psb-kmp",
+      "commit": "98b5307e5158a9ac401b29128ddd1184ae06b4d7",
+      "file": "psb_drv.c",
+      "local_file": "docs/poulsbo-data/PSB_psb_drv_c.txt",
+      "platform": "Historical source; exact scope in claim",
+      "license": "Retained source notice; no code reuse",
+      "provenance": "docs/poulsbo-data/sources.json",
+      "catalog_sha256": "8aae96d114be1349e22f156a4f00f2bf6335f0c08be19d3d6e72382e1f9801fe",
+      "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/psb_drv.c",
+      "sha256": "8aae96d114be1349e22f156a4f00f2bf6335f0c08be19d3d6e72382e1f9801fe",
+      "bytes": 27799,
+      "line_count": 1030
+    },
+    "catalog:PBUILD": {
+      "repository": "omap5-sgx-ddk-linux",
+      "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+      "file": "eurasia_km/eurasiacon/build/linux2/pc_i686_poulsbo_d0_linux/Makefile",
+      "local_file": "docs/archaeology-data/PBUILD.txt",
+      "platform": "Historical source; exact scope in claim",
+      "license": "Retained source notice; no code reuse",
+      "provenance": "docs/poulsbo-data/sources.json",
+      "catalog_sha256": "cc9814e9e9cb575ad28223ebc5239f3799d7a92460d2eac4e2e36a88fc08a7a8",
+      "sha256": "cc9814e9e9cb575ad28223ebc5239f3799d7a92460d2eac4e2e36a88fc08a7a8",
+      "bytes": 3454,
+      "line_count": 86,
+      "git_object_verified": true
+    },
+    "catalog:ERRATA": {
+      "repository": "omap5-sgx-ddk-linux",
+      "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+      "file": "eurasia_km/services4/srvkm/hwdefs/sgxerrata.h",
+      "local_file": "docs/archaeology-data/ERRATA.txt",
+      "platform": "Historical source; exact scope in claim",
+      "license": "Retained source notice; no code reuse",
+      "provenance": "docs/poulsbo-data/sources.json",
+      "catalog_sha256": "b6b7a7e53708f9b9516d3b53a317c27bea9aa9b2302c853b1d1d944ac3554e4d",
+      "sha256": "b6b7a7e53708f9b9516d3b53a317c27bea9aa9b2302c853b1d1d944ac3554e4d",
+      "bytes": 17972,
+      "line_count": 484,
+      "git_object_verified": true
+    },
+    "external:errata": {
+      "repository": "https://github.com/EMGD-Community/intel-binaries-linux",
+      "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+      "file": "drm/pvr/services4/srvkm/hwdefs/sgxerrata.h",
+      "local_file": "docs/phase4-2-data/EMGD_sgxerrata.h.txt",
+      "platform": "SGX535 branch; EMGD community mirror",
+      "license": "Retained source notice",
+      "provenance": "docs/phase4-2-data/manifest.json; mirror not vendor authenticated",
+      "sha256": "d88b66f34fd17fcc3303f04e14996098623e4931b81f7ec5a0c16f87c4b1d3a7",
+      "bytes": 9262,
+      "line_count": 337
+    },
+    "catalog:RESET": {
+      "repository": "omap5-sgx-ddk-linux",
+      "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+      "file": "eurasia_km/services4/srvkm/devices/sgx/sgxreset.c",
+      "local_file": "docs/archaeology-data/RESET.txt",
+      "platform": "Historical source; exact scope in claim",
+      "license": "Retained source notice; no code reuse",
+      "provenance": "docs/poulsbo-data/sources.json",
+      "catalog_sha256": "9eef409b4acfd96e096ce0cf372bdbeb0ba57fd2b8842e64853f9e18c71460d3",
+      "sha256": "9eef409b4acfd96e096ce0cf372bdbeb0ba57fd2b8842e64853f9e18c71460d3",
+      "bytes": 28824,
+      "line_count": 824,
+      "git_object_verified": true
+    },
+    "catalog:FEATURE": {
+      "repository": "omap5-sgx-ddk-linux",
+      "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+      "file": "eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h",
+      "local_file": "docs/archaeology-data/FEATURE.txt",
+      "platform": "Historical source; exact scope in claim",
+      "license": "Retained source notice; no code reuse",
+      "provenance": "docs/poulsbo-data/sources.json",
+      "catalog_sha256": "0f3e2d7170c81a882b371023159b5a6112232431c43c2113b031b4bf7b9ba7e4",
+      "sha256": "0f3e2d7170c81a882b371023159b5a6112232431c43c2113b031b4bf7b9ba7e4",
+      "bytes": 11239,
+      "line_count": 290,
+      "git_object_verified": true
+    },
+    "catalog:PSYSC": {
+      "repository": "omap5-sgx-ddk-linux",
+      "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+      "file": "eurasia_km/services4/system/poulsbo/sysconfig.c",
+      "local_file": "docs/archaeology-data/PSYSC.txt",
+      "platform": "Historical source; exact scope in claim",
+      "license": "Retained source notice; no code reuse",
+      "provenance": "docs/poulsbo-data/sources.json",
+      "catalog_sha256": "725faa537e192c1e680a7646a9dcb7588691b8b5fe3796668b8e810ba071d5e1",
+      "sha256": "725faa537e192c1e680a7646a9dcb7588691b8b5fe3796668b8e810ba071d5e1",
+      "bytes": 59186,
+      "line_count": 2005,
+      "git_object_verified": true
+    },
+    "catalog:EMGD_drm_emgd_state_power_plb_pwr_plb_c": {
+      "repository": "https://github.com/EMGD-Community/intel-binaries-linux",
+      "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+      "file": "drm/emgd/state/power/plb/pwr_plb.c",
+      "local_file": "docs/poulsbo-data/EMGD_drm_emgd_state_power_plb_pwr_plb_c.txt",
+      "platform": "Historical source; exact scope in claim",
+      "license": "Retained source notice; no code reuse",
+      "provenance": "docs/poulsbo-data/sources.json",
+      "catalog_sha256": "81bb7c947cc06b3ceae033eed4ceeea0dc27ef0fec53392fb73669345f71cfc5",
+      "url": "https://raw.githubusercontent.com/EMGD-Community/intel-binaries-linux/e6884ec2eaaf1afe88d5ff9dd44d70403525be5b/drm/emgd/state/power/plb/pwr_plb.c",
+      "sha256": "81bb7c947cc06b3ceae033eed4ceeea0dc27ef0fec53392fb73669345f71cfc5",
+      "bytes": 3285,
+      "line_count": 123
+    },
+    "catalog:EMGD_drm_pvr_services4_srvkm_hwdefs_sgx535defs_h": {
+      "repository": "https://github.com/EMGD-Community/intel-binaries-linux",
+      "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+      "file": "drm/pvr/services4/srvkm/hwdefs/sgx535defs.h",
+      "local_file": "docs/poulsbo-data/EMGD_drm_pvr_services4_srvkm_hwdefs_sgx535defs_h.txt",
+      "platform": "Historical source; exact scope in claim",
+      "license": "Retained source notice; no code reuse",
+      "provenance": "docs/poulsbo-data/sources.json",
+      "catalog_sha256": "634fbb74645d373e0c60ad5e01194fa96e91bb6b26d60dbc35a71a2eda49d12c",
+      "url": "https://raw.githubusercontent.com/EMGD-Community/intel-binaries-linux/e6884ec2eaaf1afe88d5ff9dd44d70403525be5b/drm/pvr/services4/srvkm/hwdefs/sgx535defs.h",
+      "sha256": "634fbb74645d373e0c60ad5e01194fa96e91bb6b26d60dbc35a71a2eda49d12c",
+      "bytes": 34609,
+      "line_count": 633
+    },
+    "target:psb_reg.h": {
+      "repository": "https://github.com/gregkh/linux",
+      "commit": "d5eca7ebcf6f64c4aebf9684c365c130a3a069b3",
+      "file": "drivers/gpu/drm/gma500/psb_reg.h",
+      "local_file": "docs/phase4-2-data/antix-source/drivers/gpu/drm/gma500/psb_reg.h",
+      "platform": "Poulsbo path in antiX 5.10.240 source",
+      "license": "Retained per-file Linux notice",
+      "provenance": "antiX 5.10.240-antix.1-486-smp-6; installed binary UNVERIFIED",
+      "sha256": "a340d4fb7bb9df2403eb196639d930b8c56463ddc7a3754d152e6ed7ab1daef7",
+      "bytes": 18355,
+      "line_count": 570
+    },
+    "catalog:PSB_psb_mmu_c": {
+      "repository": "https://github.com/gregkh/psb-kmp",
+      "commit": "98b5307e5158a9ac401b29128ddd1184ae06b4d7",
+      "file": "psb_mmu.c",
+      "local_file": "docs/poulsbo-data/PSB_psb_mmu_c.txt",
+      "platform": "Historical source; exact scope in claim",
+      "license": "Retained source notice; no code reuse",
+      "provenance": "docs/poulsbo-data/sources.json",
+      "catalog_sha256": "401954c022c8c7a76e6b30ae86b141e8a673f0b8587b7786f8c09bf7e4d05f5b",
+      "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/psb_mmu.c",
+      "sha256": "401954c022c8c7a76e6b30ae86b141e8a673f0b8587b7786f8c09bf7e4d05f5b",
+      "bytes": 24172,
+      "line_count": 1034
+    },
+    "catalog:EMGD_drm_pvr_services4_srvkm_devices_sgx_sgxreset_c": {
+      "repository": "https://github.com/EMGD-Community/intel-binaries-linux",
+      "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+      "file": "drm/pvr/services4/srvkm/devices/sgx/sgxreset.c",
+      "local_file": "docs/poulsbo-data/EMGD_drm_pvr_services4_srvkm_devices_sgx_sgxreset_c.txt",
+      "platform": "Historical source; exact scope in claim",
+      "license": "Retained source notice; no code reuse",
+      "provenance": "docs/poulsbo-data/sources.json",
+      "catalog_sha256": "f4cc92f191c0124ea35c44e05a7b0a64eba299d3391c07cca9b5cc9986fa2ff7",
+      "sha256": "f4cc92f191c0124ea35c44e05a7b0a64eba299d3391c07cca9b5cc9986fa2ff7",
+      "bytes": 18051,
+      "line_count": 556
+    },
+    "target:gtt.c": {
+      "repository": "https://github.com/gregkh/linux",
+      "commit": "d5eca7ebcf6f64c4aebf9684c365c130a3a069b3",
+      "file": "drivers/gpu/drm/gma500/gtt.c",
+      "local_file": "docs/phase4-2-data/antix-source/drivers/gpu/drm/gma500/gtt.c",
+      "platform": "Poulsbo path in antiX 5.10.240 source",
+      "license": "Retained per-file Linux notice",
+      "provenance": "antiX 5.10.240-antix.1-486-smp-6; installed binary UNVERIFIED",
+      "sha256": "388c5b251cfa17545031c1841a4ef6afcf1bc7385a424e34221948959e15818d",
+      "bytes": 15301,
+      "line_count": 580
+    },
+    "catalog:INFO": {
+      "repository": "omap5-sgx-ddk-linux",
+      "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+      "file": "eurasia_km/services4/include/sgxinfo.h",
+      "local_file": "docs/poulsbo-data/INFO.txt",
+      "platform": "Historical source; exact scope in claim",
+      "license": "Retained source notice; no code reuse",
+      "provenance": "docs/poulsbo-data/sources.json",
+      "catalog_sha256": "b16e76e79dc24b3e3356815514103cd8c2d305e5bfcd74abd6192d637e0f468f",
+      "sha256": "b16e76e79dc24b3e3356815514103cd8c2d305e5bfcd74abd6192d637e0f468f",
+      "bytes": 10981,
+      "line_count": 355,
+      "git_object_verified": true
+    },
+    "catalog:SBRIDGE": {
+      "repository": "omap5-sgx-ddk-linux",
+      "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+      "file": "eurasia_km/services4/include/sgx_bridge.h",
+      "local_file": "docs/poulsbo-data/SBRIDGE.txt",
+      "platform": "Historical source; exact scope in claim",
+      "license": "Retained source notice; no code reuse",
+      "provenance": "docs/poulsbo-data/sources.json",
+      "catalog_sha256": "33448ba5d1c3d833e29198fadd4b7b0c1d181dcefdee1201d1da27c7a00b7612",
+      "sha256": "33448ba5d1c3d833e29198fadd4b7b0c1d181dcefdee1201d1da27c7a00b7612",
+      "bytes": 23167,
+      "line_count": 609,
+      "git_object_verified": true
+    },
+    "catalog:INIT": {
+      "repository": "omap5-sgx-ddk-linux",
+      "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+      "file": "eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+      "local_file": "docs/poulsbo-data/INIT.txt",
+      "platform": "Historical source; exact scope in claim",
+      "license": "Retained source notice; no code reuse",
+      "provenance": "docs/poulsbo-data/sources.json",
+      "catalog_sha256": "da5facd0ac7db01c20dab240d1fe07515da42580c86f6afb5821ef04afb3e2a5",
+      "sha256": "da5facd0ac7db01c20dab240d1fe07515da42580c86f6afb5821ef04afb3e2a5",
+      "bytes": 125780,
+      "line_count": 3634,
+      "git_object_verified": true
+    },
+    "git:bridge": {
+      "repository": "omap5-sgx-ddk-linux",
+      "commit": "cb46ba4d0c900f89f7ec0284f9803d476bfa98de",
+      "file": "eurasia_km/services4/srvkm/bridged/sgx/bridged_sgx_bridge.c",
+      "platform": "Common Services4 in Poulsbo-capable tree",
+      "license": "Retained source notice in Git object",
+      "provenance": "Existing reference repository Git object",
+      "sha256": "07dd4296bc64cbb39d374958ced63eca860aef589852d01222cb16993dedf494",
+      "bytes": 94111,
+      "line_count": 3121,
+      "git_object_verified": true
+    },
+    "um:lib": {
+      "repository": "omap5-sgx-ddk-um-linux",
+      "commit": "b6801bf89e00d69893c2957455bbeb3195c0ed52",
+      "file": "targetfs/lib/libsrv_init.so.1.9.6.0",
+      "local_file": "references/omap5-sgx-ddk-um-linux/targetfs/lib/libsrv_init.so.1.9.6.0",
+      "platform": "OTHER-SGX: OMAP5/DRA7xx",
+      "license": "TI/IMG package terms; metadata only",
+      "provenance": "Existing local reference checkout",
+      "sha256": "a1a3572ee4ae6104505808d171d6b4cd023309959588f890b2192aea44fafdda",
+      "bytes": 153162,
+      "git_object_verified": true
+    },
+    "um:readme": {
+      "repository": "omap5-sgx-ddk-um-linux",
+      "commit": "b6801bf89e00d69893c2957455bbeb3195c0ed52",
+      "file": "README",
+      "local_file": "references/omap5-sgx-ddk-um-linux/README",
+      "platform": "OTHER-SGX: OMAP5/DRA7xx",
+      "license": "TI/IMG package terms; metadata only",
+      "provenance": "Existing local reference checkout",
+      "sha256": "4c8aebfd572bb01f040f0ee1a9a63247f75c669136866aa1383b084df01a8135",
+      "bytes": 3940,
+      "line_count": 119,
+      "git_object_verified": true
+    },
+    "catalog:PSB_psb_xhw_c": {
+      "repository": "https://github.com/gregkh/psb-kmp",
+      "commit": "98b5307e5158a9ac401b29128ddd1184ae06b4d7",
+      "file": "psb_xhw.c",
+      "local_file": "docs/poulsbo-data/PSB_psb_xhw_c.txt",
+      "platform": "Historical source; exact scope in claim",
+      "license": "Retained source notice; no code reuse",
+      "provenance": "docs/poulsbo-data/sources.json",
+      "catalog_sha256": "73783fad6b072b655d50386621d09d7fe6f4cdd896cb991ed0258a2494330fc1",
+      "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/psb_xhw.c",
+      "sha256": "73783fad6b072b655d50386621d09d7fe6f4cdd896cb991ed0258a2494330fc1",
+      "bytes": 15635,
+      "line_count": 629
+    },
+    "catalog:EMGD_drm_include_emgd_drm_h": {
+      "repository": "https://github.com/EMGD-Community/intel-binaries-linux",
+      "commit": "e6884ec2eaaf1afe88d5ff9dd44d70403525be5b",
+      "file": "drm/include/emgd_drm.h",
+      "local_file": "docs/poulsbo-data/EMGD_drm_include_emgd_drm_h.txt",
+      "platform": "Historical source; exact scope in claim",
+      "license": "Retained source notice; no code reuse",
+      "provenance": "docs/poulsbo-data/sources.json",
+      "catalog_sha256": "8291ea2191be5fc0691b07967b4bf3620c78bb5d577b06d75520c7e528d5a726",
+      "url": "https://raw.githubusercontent.com/EMGD-Community/intel-binaries-linux/e6884ec2eaaf1afe88d5ff9dd44d70403525be5b/drm/include/emgd_drm.h",
+      "sha256": "8291ea2191be5fc0691b07967b4bf3620c78bb5d577b06d75520c7e528d5a726",
+      "bytes": 33937,
+      "line_count": 938
+    }
+  },
+  "claims": [
+    {
+      "evidence_id": "P7-001",
+      "component": "target-lifecycle",
+      "claim": "5.10.240 gma500 selects Poulsbo for 8086:8108/8109, maps BAR0 SGX before DRM registration, performs initialization, and unmaps it during unload.",
+      "source": "target:psb_drv.c",
+      "lines": "40-57;147-245;295-395;428-482",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-001",
+      "component": "target-lifecycle",
+      "claim": "The target source defines MMIO resource 0, SGX offset 0x40000 and size 0x8000, and includes ASLE/hotplug work in private state.",
+      "source": "target:psb_drv.h",
+      "lines": "51-64;246;554",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-001",
+      "component": "target-lifecycle",
+      "claim": "Poulsbo ops select PSB_SGX_OFFSET and platform callbacks.",
+      "source": "target:psb_device.c",
+      "lines": "319-348",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-002",
+      "component": "target-power",
+      "claim": "5.10.240 uses power_mutex for suspend/resume and power_ctrl_lock for display claims; D3hot/D0 and runtime callbacks do not establish SGX internal power.",
+      "source": "target:power.c",
+      "lines": "38-75;83-176;188-331",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-003",
+      "component": "target-irq",
+      "claim": "The target IRQ handler unlocks irqmask_lock before SGX reads; uninstall programs masks and is not itself IRQ deregistration or synchronization.",
+      "source": "target:psb_irq.c",
+      "lines": "198-249;252-407",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-004",
+      "component": "target-mmu",
+      "claim": "PD setup uses BASE1 plus context times four for nonzero contexts, while free uses BASE0 plus stored context times four; MMU flush and setup use driver sem.",
+      "source": "target:mmu.c",
+      "lines": "102-140;237-259",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-005",
+      "component": "target-2d",
+      "claim": "Target 2D code contains SGX reset, FIFO submission and synchronization paths under a separate lock_2d protocol.",
+      "source": "target:accel_2d.c",
+      "lines": "35-60;95-118;259-285;313-352",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-006",
+      "component": "target-diagnostic",
+      "claim": "The disabled TRAP_SGX_PM_FAULT branch still appears in 5.10.240; it tests APM port bits and warns before proceeding to the SGX read.",
+      "source": "target:psb_drv.h",
+      "lines": "893-907",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-007",
+      "component": "core-encoding",
+      "claim": "SGX535 header defines ID/configuration fields and designer/major/minor/maintenance revision fields at 0x0010 and 0x0014.",
+      "source": "catalog:H535",
+      "lines": "89-104",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-007",
+      "component": "historical-core-read",
+      "claim": "Historical PSB reads and decodes the two core identification registers.",
+      "source": "catalog:PSB_psb_drv_c",
+      "lines": "325-340",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-008",
+      "component": "revision-build",
+      "claim": "Poulsbo build defaults to SGXCORE 535 and SGX_CORE_REV 121 when SGXCORE is unset.",
+      "source": "catalog:PBUILD",
+      "lines": "44-50",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-008",
+      "component": "errata-selector",
+      "claim": "DDK SGX535 conditional definitions select BRNs for revisions 121/126 and a software HEAD branch.",
+      "source": "catalog:ERRATA",
+      "lines": "152-178",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-008",
+      "component": "errata-selector",
+      "claim": "EMGD SGX535 conditional definitions include 111/1111/112/113/121/126 with differing BRN sets.",
+      "source": "external:errata",
+      "lines": "140-200",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-009",
+      "component": "ddk-reset",
+      "claim": "DDK reset uses list-minus-one offsets, conditional EDM/TA contexts, clock waits, and BRN23944 BIF fault handling.",
+      "source": "catalog:RESET",
+      "lines": "121-138;164-201;225-260;471-500",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-010",
+      "component": "ddk-features",
+      "claim": "SGX535 branch defines 32-bit address space, 16 directory lists and autoclockgating; BRN22934 conditionally removes multi-event-kick support.",
+      "source": "catalog:FEATURE",
+      "lines": "76-88;233-236",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-011",
+      "component": "target-clock",
+      "claim": "Poulsbo target code modifies the 2D clock-gating field and has no-op power_up/power_down callbacks.",
+      "source": "target:psb_device.c",
+      "lines": "150-159;239-247",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-012",
+      "component": "ddk-platform-power",
+      "claim": "Poulsbo DDK separates non-DRM_EXT system PCI/interrupt/map handling from DRM_EXT graphics/display island reference calls.",
+      "source": "catalog:PSYSC",
+      "lines": "1763-1897;1916-1979",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-013",
+      "component": "emgd-platform-power",
+      "claim": "EMGD PLB power cases contain no transitions while initialization writes clock-gating controls.",
+      "source": "catalog:EMGD_drm_emgd_state_power_plb_pwr_plb_c",
+      "lines": "83-121",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-014",
+      "component": "sgx535-layout",
+      "claim": "Historical SGX535 header names directory BASE1/2/15/0, PDS execution base and BIF control/request base offsets.",
+      "source": "catalog:H535",
+      "lines": "375-378;417-446;539-696",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-014",
+      "component": "sgx535-layout",
+      "claim": "EMGD SGX535 definitions contain directory BASE1/2/15/0 and BIF_3D_REQ_BASE.",
+      "source": "catalog:EMGD_drm_pvr_services4_srvkm_hwdefs_sgx535defs_h",
+      "lines": "466-541;580-582",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-014",
+      "component": "target-layout",
+      "claim": "Target Linux defines PDS_EXEC_BASE and BIF directory and request-base offsets.",
+      "source": "target:psb_reg.h",
+      "lines": "116-154",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-015",
+      "component": "directory-divergence",
+      "claim": "Historical PSB uses the same context-setup and teardown expressions as the inspected 5.10.240 source.",
+      "source": "catalog:PSB_psb_mmu_c",
+      "lines": "187-200;295-310",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-015",
+      "component": "directory-divergence",
+      "claim": "EMGD list reset calculates BASE1 plus four times list-minus-one.",
+      "source": "catalog:EMGD_drm_pvr_services4_srvkm_devices_sgx_sgxreset_c",
+      "lines": "353-369",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-016",
+      "component": "address-spaces",
+      "claim": "Target GTT pin maps a page array into both GTT and SGX MMU; initialization derives distinct GTT/GATT/stolen fields.",
+      "source": "target:gtt.c",
+      "lines": "32-44;55-106;235-302;426-546",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-016",
+      "component": "address-spaces",
+      "claim": "Target MMU code indexes a two-level table and forms PTEs from PFNs and flags.",
+      "source": "target:mmu.c",
+      "lines": "41-49;151-177;696-755",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-016",
+      "component": "address-spaces",
+      "claim": "Target source defines PDE and PTE shifts as 22 and 12.",
+      "source": "target:psb_drv.h",
+      "lines": "85-90",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-017",
+      "component": "address-domain-divergence",
+      "claim": "Target load inserts stolen PFNs at gatt_start whereas unload removes them at mmu_gatt_start; load programs PDS and 3D request bases.",
+      "source": "target:psb_drv.c",
+      "lines": "163-178;330-342",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-018",
+      "component": "init-interface",
+      "claim": "Services init input carries memory handles, scripts, handler addresses, build sizes and clock fields.",
+      "source": "catalog:INFO",
+      "lines": "83-153",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-018",
+      "component": "init-interface",
+      "claim": "Services bridge declares query and init-part-2 structures.",
+      "source": "catalog:SBRIDGE",
+      "lines": "315-351",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-018",
+      "component": "init-sequence",
+      "claim": "Kernel copies init inputs, executes register scripts and historical clock/script/reset/startup/completion order.",
+      "source": "catalog:INIT",
+      "lines": "207-298;327-378;534-570;633-734",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-019",
+      "component": "init-wrapper",
+      "claim": "Init bridge requires the init process, looks up memory handles and invokes DevInitSGXPart2KM.",
+      "source": "git:bridge",
+      "lines": "980-1058;1614-1619",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-020",
+      "component": "compatibility",
+      "claim": "DDK compatibility checks consume initialized-microkernel data and include HW/SW revision exceptions and structure-size checks.",
+      "source": "catalog:INIT",
+      "lines": "2670-2860",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-021",
+      "component": "binary-metadata",
+      "claim": "Existing OMAP libsrv_init ARM ELF contains named microkernel and PDS objects; metadata does not identify Poulsbo-compatible payload.",
+      "source": "um:lib",
+      "lines": "ELF header and symbol table; symbols pbuKernelProgram pbSlaveuKernelProgram g_pui32PDSUKERNEL_INIT_PRIM1 g_pui32PDSUKERNEL_INIT_SEC g_pui32PDSUKERNEL_INIT_PRIM2 g_pui32PDSUKERNEL_EVENTS",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-021",
+      "component": "package-scope",
+      "claim": "TI UM README identifies targetfs as OMAP5/DRA7xx user-mode modules.",
+      "source": "um:readme",
+      "lines": "19-23;59",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-022",
+      "component": "historical-userspace",
+      "claim": "PSB XHW init maps the client-provided X-server communications buffer; this is not an SGX firmware identification.",
+      "source": "catalog:PSB_psb_xhw_c",
+      "lines": "416-470",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "evidence_id": "P7-022",
+      "component": "historical-userspace",
+      "claim": "EMGD Services-start structure documents X-server input and PVRSRVDrmLoad return value.",
+      "source": "catalog:EMGD_drm_include_emgd_drm_h",
+      "lines": "638-647",
+      "confidence": "CONFIRMED"
+    }
+  ],
+  "upstream_gma500_blob_matches": 71,
+  "installed_binary": "UNVERIFIED"
+}

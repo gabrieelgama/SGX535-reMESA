@@ -1,0 +1,19 @@
+elf_va,original_symbol,semantic_role,evidence_class,evidence
+0x00002690,XpsbInit,"X-server module init; DRM/BO version checks, pools, XHW init, request thread",CONFIRMED,ELF disassembly and Ghidra decomp
+0x00002f10,XpsbTakeDown,X-server module teardown; XHW init-index takedown and BO cleanup,CONFIRMED,ELF disassembly and Ghidra decomp
+0x000030f0,XpsbThread,waits on direct PSB index 2 and dispatches shared BO operations,CONFIRMED,ELF disassembly and Ghidra decomp
+0x00003820,Xpsb_sgx_initialize,stores to register-mapping-derived addresses,CONFIRMED,ELF disassembly and Ghidra decomp; safe hardware semantics UNKNOWN
+0x00004af0,Xpsb_set_vopt,reads relative offset 0x14 then selects option fields,CONFIRMED,ELF disassembly and Ghidra decomp; physical revision mapping UNKNOWN
+0x000051c0,Xpsb3DContextInit,allocates shader/geometry/render-register BOs,CONFIRMED,ELF disassembly and Ghidra decomp
+0x00009cd0,XpsbFlush2D,validates BO list and prepares 2D command/fence path,CONFIRMED,ELF disassembly and Ghidra decomp
+0x00009620,FUN_00019620,anonymous 0x90-byte index-0 submit path reached from XpsbFlush3DVideoBlit,CONFIRMED,Ghidra call at ELF 0x9a10 and drmCommandWrite call at 0x981b
+0x00009a10,XpsbFlush3DVideoBlit,calls anonymous submit function at ELF 0x9620,CONFIRMED,Ghidra decomp of ELF 0x9a10
+0x00009f70,XpsbFlush3D,validates BO list and submits index 0 0x90-byte request,CONFIRMED,ELF disassembly and Ghidra decomp; call site 0xa325
+0x0000c060,XpsbBatchPoolInit,creates and maps a BO-backed batch pool,CONFIRMED,ELF disassembly and Ghidra decomp
+0x0000c7f0,XpsbDRMPoolInit,initializes DRM BO pool wrapper,CONFIRMED,ELF disassembly and Ghidra decomp
+0x00002670,XpsbShaderCode,returns source base 0xd0e0 plus caller byte offset,CONFIRMED,Ghidra decomp and XREF at 0x267e
+0x00005ee0,psb3DPrepareComposite,builds BO-backed composite state; calls XpsbCompositeShader then Xpsb_emit_pixel_shader,CONFIRMED,Ghidra decomp; calls at 0x5ee0 body
+0x00005c40,psb3DCompositeFinish,unmaps composite BO and calls XpsbFlush3D,CONFIRMED,Ghidra decomp of ELF 0x5c40
+0x00006430,psb3DCompositeQuad,adds quad; conditionally finalizes and prepares composite state,CONFIRMED,Ghidra decomp of ELF 0x6430
+0x000082c0,Xpsb_emit_pixel_shader,BO-backed pixel-shader state and USE relocation emission,CONFIRMED,Ghidra decomp of ELF 0x82c0; calls Xpsb_emit_use_relocation
+0x0000a660,XpsbCompositeShader,selects 8 source bytes via 14-entry table and forms a 16-byte output record,CONFIRMED,Ghidra decomp and disassembly at ELF 0xa660-0xa7b2

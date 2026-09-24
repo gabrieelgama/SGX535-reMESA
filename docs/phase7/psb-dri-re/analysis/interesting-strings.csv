@@ -1,0 +1,427 @@
+elf_va,file_offset,ascii
+0x0000cd7c,0xcd7c,drmWaitVBlank
+0x0000cd98,0xcd98,drmGetVersion
+0x0000cda6,0xcda6,drmFreeVersion
+0x0000cdb5,0xcdb5,drmUnmap
+0x0000cdbe,0xcdbe,drmCloseOnce
+0x0000d0bc,0xd0bc,drmCommandWriteRead
+0x0000d0d0,0xd0d0,drmCommandWrite
+0x0000d16e,0xd16e,drmUnlock
+0x0000d178,0xd178,drmGetLock
+0x0000d265,0xd265,drmBOCreate
+0x0000d271,0xd271,drmBOMap
+0x0000d27a,0xd27a,drmBOUnreference
+0x0000d28b,0xd28b,drmBOUnmap
+0x0000d2ca,0xd2ca,drmBOSetStatus
+0x0000d2d9,0xd2d9,drmBOReference
+0x0000d2e8,0xd2e8,drmBOWaitIdle
+0x0000d302,0xd302,drmFenceWait
+0x0000d30f,0xd30f,drmFenceUnreference
+0x0000d323,0xd323,drmFenceSignaled
+0x0000e085,0xe085,_mesa_delete_ati_fragment_shader
+0x0000e198,0xe198,_mesa_free_shader
+0x0000e1aa,0xe1aa,_mesa_free_shader_program
+0x0000e1c4,0xe1c4,_mesa_free_shader_program_data
+0x0000e39c,0xe39c,_mesa_free_shader_state
+0x0000e47b,0xe47b,_mesa_new_ati_fragment_shader
+0x0000e672,0xe672,_mesa_init_shader_state
+0x00011ec5,0x11ec5,vbo_validate_shaders
+0x00012c3a,0x12c3a,_mesa_SetFragmentShaderConstantATI
+0x00012d22,0x12d22,_mesa_EndFragmentShaderATI
+0x00012d3d,0x12d3d,_mesa_BeginFragmentShaderATI
+0x00012d5a,0x12d5a,_mesa_BindFragmentShaderATI
+0x00012d76,0x12d76,_mesa_DeleteFragmentShaderATI
+0x00012d94,0x12d94,_mesa_GenFragmentShadersATI
+0x00013418,0x13418,_mesa_lookup_shader
+0x0001342c,0x1342c,_mesa_lookup_shader_program
+0x00013484,0x13484,_mesa_new_shader
+0x000134a4,0x134a4,_mesa_update_shader_textures_used
+0x000134c6,0x134c6,_mesa_reference_shader
+0x000134dd,0x134dd,_mesa_clear_shader_program_data
+0x00013515,0x13515,_mesa_reference_shader_program
+0x00013a8d,0x13a8d,_swrast_exec_fragment_shader
+0x00014ea9,0x14ea9,_mesa_AttachShader
+0x00014ed0,0x14ed0,_mesa_CreateShader
+0x00014ef7,0x14ef7,_mesa_DeleteShader
+0x00014f0a,0x14f0a,_mesa_DetachShader
+0x00014f1d,0x14f1d,_mesa_GetAttachedShaders
+0x00014f61,0x14f61,_mesa_GetShaderiv
+0x00014f73,0x14f73,_mesa_GetShaderInfoLog
+0x00014f9a,0x14f9a,_mesa_IsShader
+0x000150ae,0x150ae,_mesa_CreateShaderObjectARB
+0x000150ca,0x150ca,_mesa_ShaderSourceARB
+0x000150e0,0x150e0,_mesa_CompileShaderARB
+0x000153c6,0x153c6,_mesa_GetShaderSourceARB
+0x00255008,0x255008,Mesa DRI %s %s
+0x00255500,0x255500,%s DRI driver expected %s version %d-%d.%d.x but got version %d.%d.%d
+0x00255560,0x255560,%s DRI driver expected %s version %d.%d.x but got version %d.%d.%d
+0x002568af,0x2568af,"?%s: drmWaitVBlank returned %d, IRQs don't seem to be working correctly."
+0x00256954,0x256954,../common/vblank.c
+0x00256990,0x256990,DRI_GetDrawableInfo
+0x002569a4,0x2569a4,DRI_Damage
+0x002569af,0x2569af,DRI_SystemTime
+0x002569be,0x2569be,DRI_DRI2Loader
+0x002569e8,0x2569e8,DRI_ReadDrawable
+0x002569f9,0x2569f9,DRI_MediaStreamCounter
+0x00256a10,0x256a10,DRI_CopySubBuffer
+0x00256a22,0x256a22,DRI_SwapControl
+0x00256a32,0x256a32,DRI_Core
+0x00256a3b,0x256a3b,DRI_Legacy
+0x00256a46,0x256a46,DRI_DRI2
+0x00256a4f,0x256a4f,DRI_FrameTracking
+0x00256a6f,0x256a6f,>../common/xmlconfig.c
+0x00256aa0,0x256aa0,info->type != DRI_BOOL
+0x00256bd0,0x256bd0,cache->info[i].type == DRI_FLOAT
+0x00256bf4,0x256bf4,cache->info[i].type == DRI_INT || cache->info[i].type == DRI_ENUM
+0x00256c38,0x256c38,cache->info[i].type == DRI_BOOL
+0x00257c8f,0x257c8f,=../common/drirenderbuffer.c
+0x00257de7,0x257de7,psb_query.c
+0x00257e10,0x257e10,psb_query_get_result
+0x00257e25,0x257e25,psb_scene_result.c
+0x00257e62,0x257e62,psb_scene_result_value
+0x00257e79,0x257e79,psb_scene_result_ready
+0x00257e90,0x257e90,psb_ps_primary.c
+0x00257ecc,0x257ecc,psb_emit_ps_primary_compiled
+0x00257ee9,0x257ee9,psb_render.c
+0x00257f35,0x257f35,!psb->scene
+0x00257f58,0x257f58,vertex_size == psb_context( &pbr->intel->ctx )->current.vertex_size
+0x00258120,0x258120,psb_scene.c
+0x002581b1,0x2581b1,psb_scene_create
+0x002581cb,0x2581cb,Gpsb_scene_bufs.c
+0x002581e0,0x2581e0,!psb_context(&buf->intel->ctx)->scene
+0x00258206,0x258206,psb_scene_bufs_reset
+0x0025821b,0x25821b,psb_scene_draw.c
+0x0025827f,0x25827f,psb_scene_draw_elements
+0x00258297,0x258297,psb_scene_flush_prim
+0x002582ac,0x2582ac,psb_scene_heap.c
+0x002582ce,0x2582ce,psb_scene_new_heap
+0x002582e1,0x2582e1,psb_scene_state.c
+0x00258308,0x258308,psb_use.h
+0x00258374,0x258374,psb_upload_input_state_program
+0x002583aa,0x2583aa,psb_diff_mte_states
+0x002583be,0x2583be,psb_upload_state_program
+0x002583f7,0x2583f7,?psb_scene_terminate.c
+0x0025840e,0x25840e,psb_scene_preterminate
+0x00258425,0x258425,psb_scene_zclear.c
+0x0025846b,0x25846b,psb_scene_zclear
+0x0025847c,0x25847c,psb_state_clip.c
+0x002584ac,0x2584ac,psb_state_mteusse.c
+0x00258500,0x258500,psb_translate_isp_prim
+0x00258517,0x258517,psb_translate_depthfunc
+0x0025852f,0x25852f,psb_translate_stencil_func
+0x0025854a,0x25854a,psb_translate_stencil_op
+0x00258563,0x258563,psb_state_fragprog.c
+0x002585a0,0x2585a0,psb_state_texctrl.c
+0x002586c0,0x2586c0,psb_set_texctrl
+0x002586fb,0x2586fb,@psb_state_vertex.c
+0x0025870f,0x25870f,psb_fp
+0x00258716,0x258716,psb_calculate_vertex_format
+0x00258732,0x258732,psb_state_vertprog.c
+0x00258774,0x258774,psb_background_object.c
+0x002587c0,0x2587c0,psb_setup_render_background_object
+0x002587e3,0x2587e3,psb_use.c
+0x00258c7c,0x258c7c,psb_use_mesa.c
+0x00258e9d,0x258e9d,psb_use_mesa_fp.c
+0x0025900b,0x25900b,psb_use_mesa_vp.c
+0x002590e2,0x2590e2,psb_use_compiler.c
+0x002590f5,0x2590f5,PVRUniFlexCompileToHw failed
+0x00259218,0x259218,psb_translate_texform_uf
+0x002593e9,0x2593e9,psb_use_blend.c
+0x00259463,0x259463,GL_ARB_fragment_shader
+0x00259520,0x259520,psb_ioctl.c
+0x00259536,0x259536,RelocBuffer
+0x00259542,0x259542,SuperFence
+0x00259550,0x259550,buf->startReloc != ((void *)0)
+0x00259570,0x259570,buf->reloc_allocation - reloc > 0
+0x002595c9,0x2595c9,psbSetUSEOffsRelocation
+0x002595e1,0x2595e1,psbSetUSERegRelocation
+0x002595f8,0x2595f8,psbSetOffsetRelocation
+0x0025960f,0x25960f,psb_outbuf.c
+0x0025961c,0x25961c,outbuf->reserved == 0
+0x00259632,0x259632,outbuf->relocs_reserved == 0
+0x0025964f,0x25964f,outbuf->map == ((void *)0)
+0x0025966a,0x25966a,outbuf->ptr == ((void *)0)
+0x00259685,0x259685,align <= outbuf->alignment
+0x002596a0,0x2596a0,outbuf->allocation == 0
+0x002596b8,0x2596b8,outbuf->ptr
+0x002596c4,0x2596c4,outbuf->relocs_reserved >= max_relocs
+0x002596ec,0x2596ec,outbuf->reserved >= upper_bound
+0x0025970c,0x25970c,outbuf->bufaddr->size <= outbuf->allocation
+0x00259738,0x259738,cb->reloc_allocation - cb->curReloc >= 0
+0x00259764,0x259764,outbuf->driBO == bufaddr->driBO
+0x00259784,0x259784,outbuf->ptr - outbuf->map <= outbuf->size
+0x002597b0,0x2597b0,(((unsigned long)outbuf->map) & (align-1)) == 0
+0x002597e0,0x2597e0,outbuf->pool_bufsize >= minsize
+0x00259800,0x259800,start + upper_bound <= outbuf->size
+0x00259824,0x259824,psb_outbuf_release_reservation
+0x00259843,0x259843,psb_outbuf_set_reservation
+0x0025985e,0x25985e,psb_outbuf_release
+0x00259871,0x259871,psb_outbuf_dump
+0x00259881,0x259881,psb_outbuf_alloc_named
+0x00259898,0x259898,psb_outbuf_increase_allocation
+0x002598b7,0x2598b7,psb_outbuf_unmap
+0x002598c8,0x2598c8,psb_outbuf_reset
+0x002598d9,0x2598d9,psb_paramblock.c
+0x0025990e,0x25990e,psb_emit_vprects_paramblock
+0x0025992a,0x25992a,psb_cb_program.c
+0x00259995,0x259995,psb_ps_clear.c
+0x002599bd,0x2599bd,psb_emit_ps_clear
+0x002599cf,0x2599cf,psb_ps_copy.c
+0x002599dd,0x2599dd,psb_emit_ps_texreplace
+0x002599f4,0x2599f4,psb_ps_secondary.c
+0x00259a08,0x259a08,psb_emit_ps_secondary_compiled
+0x00259a46,0x259a46,psb_swapbuffers.c
+0x00259ac0,0x259ac0,intel->swap_fences[0] == ((void *)0)
+0x00259af5,0x259af5,psb_emit_cmd_buffer
+0x00259b09,0x259b09,psb_ta.c
+0x00259b18,0x259b18,(stateprog->pds.data_dwords * sizeof(int)) % (1<<4) == 0
+0x00259b84,0x259b84,"psb_validate_index_count(primitive_type, index_count)"
+0x00259bba,0x259bba,psb_ta_input_state
+0x00259bcd,0x259bcd,psb_ta_state
+0x00259bda,0x259bda,psb_ta_index_list
+0x00259bec,0x259bec,psb_validate_index_count
+0x00259c43,0x259c43,psb_tex_layout.c
+0x00259c6c,0x259c6c,Unexpected tex target in psb_miptree_layout()
+0x00259c9a,0x259c9a,psb_miptree_layout
+0x00259cad,0x259cad,psb_twiddling.c
+0x00259d48,0x259d48,psb_twiddle_texture
+0x00259dc0,0x259dc0,psb_vb.c
+0x00259ec7,0x259ec7,psb_vbm_release_vb
+0x00259eda,0x259eda,psb_vbm_alloc_vb
+0x00259eeb,0x259eeb,psb_vbm_increase_allocation
+0x00259f07,0x259f07,psb_vbm_unmap
+0x00259f15,0x259f15,psb_vbm_reset
+0x00259f23,0x259f23,psb_create_vb_manager
+0x00259f39,0x259f39,psb_vs.c
+0x00259f7e,0x259f7e,psb_batchpool.c
+0x00259fc5,0x259fc5,psb_drmpool.c
+0x00259ff8,0x259ff8,psb_bufmgr.c
+0x0025a125,0x25a125,driBOFenceUserList
+0x0025a138,0x25a138,driBOFence
+0x0025a218,0x25a218,driFenceSignaled
+0x0025a229,0x25a229,Reloced: 0x%08x
+0x0025a23d,0x25a23d,DRM buffer mask is 0x%016llx
+0x0025a278,0x25a278,Could not find drm buffer.
+0x0025a294,0x25a294,Num relocs: %d. Allowed %d.
+0x0025a2e8,0x25a2e8,Dri buffers: %d.
+0x0025a2fc,0x25a2fc,Could not map DRM offset to DRI offset.
+0x0025a374,0x25a374,Overlapping or duplicate dri buffers:
+0x0025a3d8,0x25a3d8,"Drm buffer %d, size %lu dump_size %lu"
+0x0025a400,0x25a400,Dri buffer count mismatch: actual: %d vs assumed %d.
+0x0025a438,0x25a438,Too many relocs to fit in buffer.
+0x0025a45c,0x25a45c,Could not allocate reloc space for write.
+0x0025a514,0x25a514,intel_blit.c
+0x0025a647,0x25a647,intel_buffer_objects.c
+0x0025a696,0x25a696,intel_buffers.c
+0x0025a704,0x25a704,intel_clears.c
+0x0025a72f,0x25a72f,intel_context.c
+0x0025a75d,0x25a75d,usse
+0x0025a82d,0x25a82d,Intel(R) GMA500
+0x0025a87d,0x25a87d,GL_ARB_shader_objects
+0x0025a992,0x25a992,GL_ARB_vertex_shader
+0x0025ab80,0x25ab80,Failed to initialize drm buffer pools - possibly out of graphics memory
+0x0025af23,0x25af23,glCreateShaderObjectARB
+0x0025b162,0x25b162,glCompileShader
+0x0025b172,0x25b172,glCompileShaderARB
+0x0025b265,0x25b265,glShaderSource
+0x0025b274,0x25b274,glShaderSourceARB
+0x0025b4c5,0x25b4c5,glGetShaderSource
+0x0025b4d7,0x25b4d7,glGetShaderSourceARB
+0x0025d958,0x25d958,glAttachShader
+0x0025d9a1,0x25d9a1,glGetShaderInfoLog
+0x0025da21,0x25da21,glIsShader
+0x0025da41,0x25da41,glGetAttachedShaders
+0x0025da59,0x25da59,glDeleteShader
+0x0025da6b,0x25da6b,glCreateShader
+0x0025da7e,0x25da7e,glDetachShader
+0x0025daa5,0x25daa5,glGetShaderiv
+0x0025db25,0x25db25,intel_fbo.c
+0x0025dbb9,0x25dbb9,intel_mipmap_tree.c
+0x0025dc97,0x25dc97,intel_regions.c
+0x0025dd4d,0x25dd4d,intel_screen.c
+0x0025dd90,0x25dd90,poulsbo
+0x0026034c,0x26034c,../../../../../src/mesa/drivers/dri/common/spantmp2.h
+0x002605d7,0x2605d7,intel_tex_image.c
+0x0026068c,0x26068c,intel_tex_validate.c
+0x00260730,0x260730,intel_frame_tracker.c
+0x0026078d,0x26078d,intel_lock.c
+0x002607b7,0x2607b7,intel_metaops.c
+0x00260979,0x260979,intel_swrast.c
+0x00260cc6,0x260cc6,main/context.c
+0x0026124c,0x26124c,main/convolve.c
+0x002666a1,0x2666a1,GL_ATTACHED_SHADERS
+0x00268897,0x268897,GL_FRAGMENT_SHADER
+0x002688aa,0x2688aa,GL_FRAGMENT_SHADER_ARB
+0x002688c1,0x2688c1,GL_FRAGMENT_SHADER_DERIVATIVE_HINT
+0x0026b3ce,0x26b3ce,GL_OBJECT_SHADER_SOURCE_LENGTH_ARB
+0x0026d285,0x26d285,GL_SHADER_OBJECT_ARB
+0x0026d29a,0x26d29a,GL_SHADER_SOURCE_LENGTH
+0x0026d2b2,0x26d2b2,GL_SHADER_TYPE
+0x0026f44d,0x26f44d,GL_VERTEX_SHADER
+0x0026f45e,0x26f45e,GL_VERTEX_SHADER_ARB
+0x00271060,0x271060,GL_ATI_fragment_shader
+0x00271316,0x271316,main/fbobject.c
+0x00271b97,0x271b97,main/feedback.c
+0x00271c33,0x271c33,Omain/ffvertex_prog.c
+0x00271ef1,0x271ef1,main/framebuffer.c
+0x0027203f,0x27203f,main/getstring.c
+0x0027208c,0x27208c,2.1 Mesa 7.4
+0x00272099,0x272099,2.0 Mesa 7.4
+0x002720a6,0x2720a6,1.5 Mesa 7.4
+0x002720b3,0x2720b3,1.4 Mesa 7.4
+0x002720c0,0x2720c0,1.3 Mesa 7.4
+0x002720cd,0x2720cd,1.2 Mesa 7.4
+0x002720ea,0x2720ea,main/hash.c
+0x00272892,0x272892,main/image.c
+0x00272ff0,0x272ff0,main/mipmap.c
+0x00273073,0x273073,_main/mm.c
+0x0027364c,0x27364c,main/queryobj.c
+0x002737e3,0x2737e3,main/renderbuffer.c
+0x0027435d,0x27435d,main/texcompress_fxt1.c
+0x00274440,0x274440,(knNmain/texenvprogram.c
+0x00274c82,0x274c82,main/teximage.c
+0x002756ab,0x2756ab,main/texobj.c
+0x00275aae,0x275aae,p>main/texstate.c
+0x00275f2c,0x275f2c,main/texstore.c
+0x0027673f,0x27673f,5vbo/vbo_exec_api.c
+0x00276974,0x276974,glDrawRangeElements(bad shader)
+0x00276994,0x276994,vbo/vbo_exec_array.c
+0x002769a9,0x2769a9,glDrawElements(bad shader)
+0x002769c4,0x2769c4,glDrawArrays(bad shader)
+0x002769ee,0x2769ee,vbo/vbo_exec_draw.c
+0x00276ae1,0x276ae1,vbo/vbo_save_api.c
+0x00276ec0,0x276ec0,vbo/vbo_save_draw.c
+0x00276f06,0x276f06,vbo/vbo_save_loopback.c
+0x00276f47,0x276f47,vf/vf.c
+0x00277110,0x277110,clip/clip_context.c
+0x0027720f,0x27720f,clip/clip_pipe.c
+0x00277285,0x277285,clip/clip_pipe_emit.c
+0x002772f7,0x2772f7,clip/clip_pipe_stipple.c
+0x00277393,0x277393,>clip/clip_pipe_clip.c
+0x002773d4,0x2773d4,tnl/t_draw.c
+0x00277476,0x277476,tnl/t_vb_render.c
+0x002775c0,0x2775c0,tnl/t_vertex.c
+0x002776a2,0x2776a2,tnl/t_vertex_sse.c
+0x0027774a,0x27774a,tnl/t_vertex_generic.c
+0x0027786d,0x27786d,shader/arbprogparse.c
+0x00277c78,0x277c78,Cannot use both a generic vertex attribute and a specific attribute of the same type
+0x00278954,0x278954,glSetFragmentShaderConstantATI(dst)
+0x00278978,0x278978,C/AFragmentOpATI(outsideShader)
+0x00278998,0x278998,glPassTexCoordATI(outsideShader)
+0x002789bc,0x2789bc,glEndFragmentShaderATI(outsideShader)
+0x002789e4,0x2789e4,glEndFragmentShaderATI(interpinfirstpass)
+0x00278a10,0x278a10,glEndFragmentShaderATI(noarithinst)
+0x00278a34,0x278a34,glBeginFragmentShaderATI(insideShader)
+0x00278a5c,0x278a5c,glBindFragmentShaderATI(insideShader)
+0x00278a84,0x278a84,glDeleteFragmentShaderATI(insideShader)
+0x00278aac,0x278aac,glGenFragmentShadersATI(range)
+0x00278acc,0x278acc,glGenFragmentShadersATI(insideShader)
+0x00278ba2,0x278ba2,glSampleMapATI(outsideShader)
+0x00278c78,0x278c78,glBindFragmentShaderATI
+0x0027962e,0x27962e,shader/nvvertparse.c
+0x00279a32,0x279a32,shader/program.c
+0x00279b74,0x279b74,ctx->ATIFragmentShader.Current
+0x00279c58,0x279c58,shader/prog_cache.c
+0x0027a37f,0x27a37f,shader/prog_execute.c
+0x0027a5f6,0x27a5f6, Bshader/prog_parameter.c
+0x0027a8b0,0x27a8b0,shader/prog_statevars.c
+0x0027aeaf,0x27aeaf,?shader/programopt.c
+0x0027b160,0x27b160,_mesa_update_shader_textures_used
+0x0027b182,0x27b182,_mesa_reference_shader
+0x0027b199,0x27b199,_mesa_new_shader
+0x0027b1ac,0x27b1ac,_mesa_reference_shader_program
+0x0027b1cc,0x27b1cc,_mesa_free_shader_program_data
+0x0027b3f6,0x27b3f6,glGetAttachedShaders
+0x0027b40b,0x27b40b,glGetShaderSource
+0x0027b41d,0x27b41d,glGetShaderInfoLog(shader)
+0x0027b4ad,0x27b4ad,glShaderSource
+0x0027b4f7,0x27b4f7,glGetShaderiv
+0x0027b505,0x27b505,glGetShaderiv(pname)
+0x0027b55c,0x27b55c,shader/shader_api.c
+0x0027b570,0x27b570,CreateShader(type)
+0x0027b599,0x27b599,glCompileShader
+0x0027b679,0x27b679,glDetachShader
+0x0027b688,0x27b688,glDetachProgram(shader)
+0x0027b6a0,0x27b6a0,glDeleteShader
+0x0027b6af,0x27b6af,glAttachShader
+0x0027b6f2,0x27b6f2,swrast/s_accum.c
+0x0027b8fa,0x27b8fa,swrast/s_depth.c
+0x0027bab7,0x27bab7,Eswrast/s_points.c
+0x0027c2ed,0x27c2ed,x86/rtasm/x86sse.c
+0x0027c8af,0x27c8af,compile_shader
+0x00293b35,0x293b35,shader/slang/slang_compile.c
+0x00293cf5,0x293cf5,shader_type
+0x00293d11,0x293d11,shader->Type == 0x8B30
+0x00293d28,0x293d28,shader->Program
+0x00293fa0,0x293fa0,unit->type == SLANG_UNIT_VERTEX_BUILTIN || unit->type == SLANG_UNIT_VERTEX_SHADER
+0x00295301,0x295301,.regbyte shader_type 0
+0x002983e5,0x2983e5," .if (shader_type == 2) ""attribute"" .emit TYPE_QUALIFIER_ATTRIBUTE .or"
+0x00299e83,0x299e83, .if (shader_type == 1) jump_statement_5;
+0x0029bd07,0x29bd07,?shader/slang/slang_compile_function.c
+0x0029bd54,0x29bd54,shader/slang/slang_compile_operation.c
+0x0029bdf9,0x29bdf9,shader/slang/slang_link.c
+0x0029bf54,0x29bf54,linking with uncompiled shader
+0x0029bf74,0x29bf74,unexpected shader target in slang_link()
+0x0029bfa0,0x29bfa0,gl_Position was not written by vertex shader
+0x0029bfd0,0x29bfd0,Fragment program using varying vars not written by vertex shader
+0x0029c18c,0x29c18c,shader/slang/slang_preprocess.c
+0x002a0337,0x2a0337,shader/slang/slang_simplify.c
+0x002a07bd,0x2a07bd,shader/slang/slang_typeinfo.c
+0x002a0a28,0x2a0a28,shader/slang/slang_vartable.c
+0x002a0c2a,0x2a0c2a,shader/slang/slang_utility.c
+0x002a0c5e,0x2a0c5e,main/api_arrayelt.c
+0x002a158a,0x2a158a,main/colortab.c
+0x002a1f77,0x2a1f77,glShaderSourceARB
+0x002a1f8c,0x2a1f8c,glShaderSourceARB(null string)
+0x002a2690,0x2a2690,vbo/vbo_rebase.c
+0x002a2710,0x2a2710,vbo/vbo_split.c
+0x002a276b,0x2a276b,vbo/vbo_split_copy.c
+0x002a27f1,0x2a27f1,vbo/vbo_split_inplace.c
+0x002a2baf,0x2a2baf,shader/nvfragparse.c
+0x002a2f3a,0x2a2f3a,shader/prog_uniform.c
+0x002a3b40,0x2a3b40,shader/slang/slang_codegen.c
+0x002a4d68,0x2a4d68,shader/slang/slang_emit.c
+0x002a56e6,0x2a56e6,shader/slang/slang_ir.c
+0x002a5c0a,0x2a5c0a,shader/slang/slang_label.c
+0x002a5d97,0x2a5d97,shader/prog_print.c
+0x002a5fd0,0x2a5fd0,# Vertex Program/Shader
+0x002a5ffe,0x2a5ffe,# Fragment Program/Shader
+0x002a68cd,0x2a68cd,shader/slang/slang_builtin.c
+0x002a713c,0x2a713c,usc/usc.c
+0x002a71bb,0x2a71bb,usc/bitops.h
+0x002a7a2a,0x2a7a2a,usc/finalise.c
+0x002a7d1c,0x2a7d1c,usc/pregalloc.c
+0x002a7f1f,0x2a7f1f,usc/iregalloc.c
+0x002a861c,0x2a861c,usc/indexreg.c
+0x002a8654,0x2a8654,psArg->uNumber <= (uRangeStart + EURASIA_USE_INDEX_MAXIMUM_OFFSET)
+0x002a8697,0x2a8697,usc/f16opt.c
+0x002a8838,0x2a8838,psNextInst->asArg[uCArg].uNumber == EURASIA_USE_SPECIAL_CONSTANT_ZERO
+0x002a8de0,0x2a8de0,usc/dce.c
+0x002a95eb,0x2a95eb,usc/dgraph.c
+0x002a985c,0x2a985c,usc/dualissue.c
+0x002a9fb0,0x2a9fb0,usc/efo.c
+0x002ab724,0x2ab724,usc/groupinst.c
+0x002abbf4,0x2abbf4,psState->psTargetFeatures->ui32Flags & SGX_FEATURE_FLAGS_EXTENDED_USE_ALU
+0x002abd8f,0x2abd8f,usc/hw.c
+0x002abe2c,0x2abe2c,Failed to alloc space for USSE code
+0x002abe50,0x2abe50,Failed to alloc space for SA-update USSE code
+0x002abeac,0x2abeac,Error generating subroutine USSE code
+0x002abed4,0x2abed4,Error generating main USSE code
+0x002abef4,0x2abef4,(IMG_UINT32)((puUSSEInst - psState->puInstructions) / 2) == psState->uMainProgInstCount
+0x002abfb0,0x2abfb0,Error generating SA-update USSE code
+0x002ac058,0x2ac058,usc/icvt_c10.c
+0x002ac460,0x2ac460,usc/icvt_core.c
+0x002ac890,0x2ac890,usc/icvt_f16.c
+0x002acad4,0x2acad4,usc/icvt_f32.c
+0x002acf6c,0x2acf6c,usc/intcvt.c
+0x002ad484,0x2ad484,usc/iselect.c
+0x002ad833,0x2ad833,usc/precovr.c
+0x002adac2,0x2adac2,usc/regalloc.c
+0x002ae1ae,0x2ae1ae,usc/regpack.c
+0x002ae270,0x2ae270,uConstIdx != EURASIA_USE_SPECIAL_CONSTANT_INT32ONE
+0x002ae2a4,0x2ae2a4,uConstIdx != EURASIA_USE_SPECIAL_CONSTANT_FLOAT16ONE
+0x002ae713,0x2ae713,usc/reorder.c
+0x002ae7af,0x2ae7af,usc/ssa.c
+0x002ae918,0x2ae918,usc/asm.c
+0x002b0193,0x2b0193,useasm/useasm.c
+0x002bf374,0x2be374,".errtext RESERVED_KEYWORD ""1040: use of reserved keyword as an identifier"""

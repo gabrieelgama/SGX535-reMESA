@@ -1,0 +1,273 @@
+{
+  "binary": "references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/dri/psb_dri.so",
+  "sha256": "74ca42991906741ee91be1bc088ae0b142fa71b6a85658c5dad0851ce50dd0d8",
+  "bytes": 2921100,
+  "elf": {
+    "class": "ELF32",
+    "endian": "little",
+    "machine": "Intel 80386",
+    "type": "DYN"
+  },
+  "program_headers": [
+    {
+      "type": 1,
+      "offset": 0,
+      "vaddr": 0,
+      "paddr": 0,
+      "filesz": 2823024,
+      "memsz": 2823024,
+      "flags": 5,
+      "align": 4096
+    },
+    {
+      "type": 1,
+      "offset": 2824964,
+      "vaddr": 2829060,
+      "paddr": 2829060,
+      "filesz": 94896,
+      "memsz": 142932,
+      "flags": 6,
+      "align": 4096
+    },
+    {
+      "type": 2,
+      "offset": 2855644,
+      "vaddr": 2859740,
+      "paddr": 2859740,
+      "filesz": 248,
+      "memsz": 248,
+      "flags": 6,
+      "align": 4
+    },
+    {
+      "type": 1685382480,
+      "offset": 2822944,
+      "vaddr": 2822944,
+      "paddr": 2822944,
+      "filesz": 20,
+      "memsz": 20,
+      "flags": 4,
+      "align": 4
+    },
+    {
+      "type": 1685382481,
+      "offset": 0,
+      "vaddr": 0,
+      "paddr": 0,
+      "filesz": 0,
+      "memsz": 0,
+      "flags": 6,
+      "align": 4
+    },
+    {
+      "type": 1685382482,
+      "offset": 2824964,
+      "vaddr": 2829060,
+      "paddr": 2829060,
+      "filesz": 34044,
+      "memsz": 34044,
+      "flags": 4,
+      "align": 1
+    }
+  ],
+  "sections": {
+    "": {
+      "type": 0,
+      "addr": 0,
+      "offset": 0,
+      "size": 0,
+      "entsize": 0
+    },
+    ".hash": {
+      "type": 5,
+      "addr": 244,
+      "offset": 244,
+      "size": 11096,
+      "entsize": 4
+    },
+    ".gnu.hash": {
+      "type": 1879048182,
+      "addr": 11340,
+      "offset": 11340,
+      "size": 12732,
+      "entsize": 4
+    },
+    ".dynsym": {
+      "type": 11,
+      "addr": 24072,
+      "offset": 24072,
+      "size": 27856,
+      "entsize": 16
+    },
+    ".dynstr": {
+      "type": 3,
+      "addr": 51928,
+      "offset": 51928,
+      "size": 36775,
+      "entsize": 0
+    },
+    ".gnu.version": {
+      "type": 1879048191,
+      "addr": 88704,
+      "offset": 88704,
+      "size": 3482,
+      "entsize": 2
+    },
+    ".gnu.version_r": {
+      "type": 1879048190,
+      "addr": 92188,
+      "offset": 92188,
+      "size": 224,
+      "entsize": 0
+    },
+    ".rel.dyn": {
+      "type": 9,
+      "addr": 92412,
+      "offset": 92412,
+      "size": 30616,
+      "entsize": 8
+    },
+    ".rel.plt": {
+      "type": 9,
+      "addr": 123028,
+      "offset": 123028,
+      "size": 784,
+      "entsize": 8
+    },
+    ".init": {
+      "type": 1,
+      "addr": 123812,
+      "offset": 123812,
+      "size": 48,
+      "entsize": 0
+    },
+    ".plt": {
+      "type": 1,
+      "addr": 123860,
+      "offset": 123860,
+      "size": 1584,
+      "entsize": 4
+    },
+    ".text": {
+      "type": 1,
+      "addr": 125472,
+      "offset": 125472,
+      "size": 2319800,
+      "entsize": 0
+    },
+    ".fini": {
+      "type": 1,
+      "addr": 2445272,
+      "offset": 2445272,
+      "size": 28,
+      "entsize": 0
+    },
+    ".rodata": {
+      "type": 1,
+      "addr": 2445312,
+      "offset": 2445312,
+      "size": 377632,
+      "entsize": 0
+    },
+    ".eh_frame_hdr": {
+      "type": 1,
+      "addr": 2822944,
+      "offset": 2822944,
+      "size": 20,
+      "entsize": 0
+    },
+    ".eh_frame": {
+      "type": 1,
+      "addr": 2822964,
+      "offset": 2822964,
+      "size": 60,
+      "entsize": 0
+    },
+    ".ctors": {
+      "type": 1,
+      "addr": 2829060,
+      "offset": 2824964,
+      "size": 8,
+      "entsize": 0
+    },
+    ".dtors": {
+      "type": 1,
+      "addr": 2829068,
+      "offset": 2824972,
+      "size": 8,
+      "entsize": 0
+    },
+    ".jcr": {
+      "type": 1,
+      "addr": 2829076,
+      "offset": 2824980,
+      "size": 4,
+      "entsize": 0
+    },
+    ".data.rel.ro": {
+      "type": 1,
+      "addr": 2829088,
+      "offset": 2824992,
+      "size": 30652,
+      "entsize": 0
+    },
+    ".dynamic": {
+      "type": 6,
+      "addr": 2859740,
+      "offset": 2855644,
+      "size": 248,
+      "entsize": 8
+    },
+    ".got": {
+      "type": 1,
+      "addr": 2859988,
+      "offset": 2855892,
+      "size": 3084,
+      "entsize": 4
+    },
+    ".got.plt": {
+      "type": 1,
+      "addr": 2863092,
+      "offset": 2858996,
+      "size": 404,
+      "entsize": 4
+    },
+    ".data": {
+      "type": 1,
+      "addr": 2863520,
+      "offset": 2859424,
+      "size": 60436,
+      "entsize": 0
+    },
+    ".bss": {
+      "type": 8,
+      "addr": 2923968,
+      "offset": 2919860,
+      "size": 48024,
+      "entsize": 0
+    },
+    ".shstrtab": {
+      "type": 3,
+      "addr": 0,
+      "offset": 2919860,
+      "size": 199,
+      "entsize": 0
+    }
+  },
+  "needed": [
+    "libm.so.6",
+    "libpthread.so.0",
+    "libexpat.so.1",
+    "libdl.so.2",
+    "libdrm.so.2",
+    "libc.so.6"
+  ],
+  "counts": {
+    "dynamic_symbols": 1741,
+    "imports": 104,
+    "exports": 1636,
+    "relocations": 3925,
+    "filtered_strings": 426
+  },
+  "address_convention": "ELF VA; observed GUI addresses use ELF VA + 0x10000; file offsets are separately recorded"
+}

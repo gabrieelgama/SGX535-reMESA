@@ -1,0 +1,43 @@
+graph,extension_name,descriptor_elf_va,descriptor_file_offset,abi_version,field_offset,field_role,callback_elf_va,ghidra_original_name,proposed_role,evidence_class,evidence
+exported_root,DRI_Core,0x002b9620,0x2b8620,1,0x00,name,,,,CONFIRMED,ELF pointer and Mesa 7.4.4 __DRIextensionRec name field
+exported_root,DRI_Core,0x002b9620,0x2b8620,1,0x04,version,,,,CONFIRMED,ELF value and Mesa 7.4.4 ABI version field
+exported_root,DRI_Core,0x002b9620,0x2b8620,1,0x08,createNewScreen,NULL,,,CONFIRMED,32-bit descriptor field at Mesa 7.4.4 ABI offset; function behavior not inferred
+exported_root,DRI_Core,0x002b9620,0x2b8620,1,0x0c,destroyScreen,0x00021f8d,FUN_00031f8d,DRI_Core.destroyScreen,CONFIRMED,32-bit descriptor field at Mesa 7.4.4 ABI offset; function behavior not inferred
+exported_root,DRI_Core,0x002b9620,0x2b8620,1,0x10,getExtensions,0x000213a0,FUN_000313a0,DRI_Core.getExtensions,CONFIRMED,32-bit descriptor field at Mesa 7.4.4 ABI offset; function behavior not inferred
+exported_root,DRI_Core,0x002b9620,0x2b8620,1,0x14,getConfigAttrib,0x0001ec1d,FUN_0002ec1d,DRI_Core.getConfigAttrib,CONFIRMED,32-bit descriptor field at Mesa 7.4.4 ABI offset; function behavior not inferred
+exported_root,DRI_Core,0x002b9620,0x2b8620,1,0x18,indexConfigAttrib,0x0001ec67,FUN_0002ec67,DRI_Core.indexConfigAttrib,CONFIRMED,32-bit descriptor field at Mesa 7.4.4 ABI offset; function behavior not inferred
+exported_root,DRI_Core,0x002b9620,0x2b8620,1,0x1c,createNewDrawable,NULL,,,CONFIRMED,32-bit descriptor field at Mesa 7.4.4 ABI offset; function behavior not inferred
+exported_root,DRI_Core,0x002b9620,0x2b8620,1,0x20,destroyDrawable,0x00021846,FUN_00031846,DRI_Core.destroyDrawable,CONFIRMED,32-bit descriptor field at Mesa 7.4.4 ABI offset; function behavior not inferred
+exported_root,DRI_Core,0x002b9620,0x2b8620,1,0x24,swapBuffers,0x00021790,FUN_00031790,DRI_Core.swapBuffers,CONFIRMED,32-bit descriptor field at Mesa 7.4.4 ABI offset; function behavior not inferred
+exported_root,DRI_Core,0x002b9620,0x2b8620,1,0x28,createNewContext,NULL,,,CONFIRMED,32-bit descriptor field at Mesa 7.4.4 ABI offset; function behavior not inferred
+exported_root,DRI_Core,0x002b9620,0x2b8620,1,0x2c,copyContext,0x00021396,FUN_00031396,DRI_Core.copyContext,CONFIRMED,32-bit descriptor field at Mesa 7.4.4 ABI offset; function behavior not inferred
+exported_root,DRI_Core,0x002b9620,0x2b8620,1,0x30,destroyContext,0x00021757,FUN_00031757,DRI_Core.destroyContext,CONFIRMED,32-bit descriptor field at Mesa 7.4.4 ABI offset; function behavior not inferred
+exported_root,DRI_Core,0x002b9620,0x2b8620,1,0x34,bindContext,0x000219fa,FUN_000319fa,DRI_Core.bindContext,CONFIRMED,32-bit descriptor field at Mesa 7.4.4 ABI offset; function behavior not inferred
+exported_root,DRI_Core,0x002b9620,0x2b8620,1,0x38,unbindContext,0x000211d1,FUN_000311d1,DRI_Core.unbindContext,CONFIRMED,32-bit descriptor field at Mesa 7.4.4 ABI offset; function behavior not inferred
+exported_root,DRI_Legacy,0x002b3280,0x2b2280,1,0x00,name,,,,CONFIRMED,ELF pointer and Mesa 7.4.4 __DRIextensionRec name field
+exported_root,DRI_Legacy,0x002b3280,0x2b2280,1,0x04,version,,,,CONFIRMED,ELF value and Mesa 7.4.4 ABI version field
+exported_root,DRI_Legacy,0x002b3280,0x2b2280,1,0x08,createNewScreen,0x00021e0e,FUN_00031e0e,DRI_Legacy.createNewScreen,CONFIRMED,32-bit descriptor field at Mesa 7.4.4 ABI offset; function behavior not inferred
+exported_root,DRI_Legacy,0x002b3280,0x2b2280,1,0x0c,createNewDrawable,0x000215e2,FUN_000315e2,DRI_Legacy.createNewDrawable,CONFIRMED,32-bit descriptor field at Mesa 7.4.4 ABI offset; function behavior not inferred
+exported_root,DRI_Legacy,0x002b3280,0x2b2280,1,0x10,createNewContext,0x000214e9,FUN_000314e9,DRI_Legacy.createNewContext,CONFIRMED,32-bit descriptor field at Mesa 7.4.4 ABI offset; function behavior not inferred
+exported_root,DRI_DRI2,0x002b3294,0x2b2294,1,0x00,name,,,,CONFIRMED,ELF pointer and Mesa 7.4.4 __DRIextensionRec name field
+exported_root,DRI_DRI2,0x002b3294,0x2b2294,1,0x04,version,,,,CONFIRMED,ELF value and Mesa 7.4.4 ABI version field
+exported_root,DRI_DRI2,0x002b3294,0x2b2294,1,0x08,createNewScreen,0x00021c89,FUN_00031c89,DRI_DRI2.createNewScreen,CONFIRMED,32-bit descriptor field at Mesa 7.4.4 ABI offset; function behavior not inferred
+exported_root,DRI_DRI2,0x002b3294,0x2b2294,1,0x0c,createNewDrawable,0x000216e6,FUN_000316e6,DRI_DRI2.createNewDrawable,CONFIRMED,32-bit descriptor field at Mesa 7.4.4 ABI offset; function behavior not inferred
+exported_root,DRI_DRI2,0x002b3294,0x2b2294,1,0x10,createNewContext,0x000215aa,FUN_000315aa,DRI_DRI2.createNewContext,CONFIRMED,32-bit descriptor field at Mesa 7.4.4 ABI offset; function behavior not inferred
+candidate_screen_list,DRI_ReadDrawable,0x002b324c,0x2b224c,1,0x00,name,,,,CONFIRMED,ELF pointer and Mesa 7.4.4 __DRIextensionRec name field
+candidate_screen_list,DRI_ReadDrawable,0x002b324c,0x2b224c,1,0x04,version,,,,CONFIRMED,ELF value and Mesa 7.4.4 ABI version field
+candidate_screen_list,DRI_CopySubBuffer,0x002b3264,0x2b2264,1,0x00,name,,,,CONFIRMED,ELF pointer and Mesa 7.4.4 __DRIextensionRec name field
+candidate_screen_list,DRI_CopySubBuffer,0x002b3264,0x2b2264,1,0x04,version,,,,CONFIRMED,ELF value and Mesa 7.4.4 ABI version field
+candidate_screen_list,DRI_CopySubBuffer,0x002b3264,0x2b2264,1,0x08,copySubBuffer,0x0002130f,FUN_0003130f,DRI_CopySubBuffer.copySubBuffer,CONFIRMED,32-bit descriptor field at Mesa 7.4.4 ABI offset; function behavior not inferred
+candidate_screen_list,DRI_SwapControl,0x002b3270,0x2b2270,1,0x00,name,,,,CONFIRMED,ELF pointer and Mesa 7.4.4 __DRIextensionRec name field
+candidate_screen_list,DRI_SwapControl,0x002b3270,0x2b2270,1,0x04,version,,,,CONFIRMED,ELF value and Mesa 7.4.4 ABI version field
+candidate_screen_list,DRI_SwapControl,0x002b3270,0x2b2270,1,0x08,setSwapInterval,0x0002137d,FUN_0003137d,DRI_SwapControl.setSwapInterval,CONFIRMED,32-bit descriptor field at Mesa 7.4.4 ABI offset; function behavior not inferred
+candidate_screen_list,DRI_SwapControl,0x002b3270,0x2b2270,1,0x0c,getSwapInterval,0x0002138b,FUN_0003138b,DRI_SwapControl.getSwapInterval,CONFIRMED,32-bit descriptor field at Mesa 7.4.4 ABI offset; function behavior not inferred
+candidate_screen_list,DRI_FrameTracking,0x002b32a8,0x2b22a8,1,0x00,name,,,,CONFIRMED,ELF pointer and Mesa 7.4.4 __DRIextensionRec name field
+candidate_screen_list,DRI_FrameTracking,0x002b32a8,0x2b22a8,1,0x04,version,,,,CONFIRMED,ELF value and Mesa 7.4.4 ABI version field
+candidate_screen_list,DRI_FrameTracking,0x002b32a8,0x2b22a8,1,0x08,frameTracking,0x000213ab,FUN_000313ab,DRI_FrameTracking.frameTracking,CONFIRMED,32-bit descriptor field at Mesa 7.4.4 ABI offset; function behavior not inferred
+candidate_screen_list,DRI_FrameTracking,0x002b32a8,0x2b22a8,1,0x0c,queryFrameTracking,0x00021456,FUN_00031456,DRI_FrameTracking.queryFrameTracking,CONFIRMED,32-bit descriptor field at Mesa 7.4.4 ABI offset; function behavior not inferred
+candidate_screen_list,DRI_MediaStreamCounter,0x002b3254,0x2b2254,1,0x00,name,,,,CONFIRMED,ELF pointer and Mesa 7.4.4 __DRIextensionRec name field
+candidate_screen_list,DRI_MediaStreamCounter,0x002b3254,0x2b2254,1,0x04,version,,,,CONFIRMED,ELF value and Mesa 7.4.4 ABI version field
+candidate_screen_list,DRI_MediaStreamCounter,0x002b3254,0x2b2254,1,0x08,waitForMSC,0x00021297,FUN_00031297,DRI_MediaStreamCounter.waitForMSC,CONFIRMED,32-bit descriptor field at Mesa 7.4.4 ABI offset; function behavior not inferred
+candidate_screen_list,DRI_MediaStreamCounter,0x002b3254,0x2b2254,1,0x0c,getDrawableMSC,0x00021278,FUN_00031278,DRI_MediaStreamCounter.getDrawableMSC,CONFIRMED,32-bit descriptor field at Mesa 7.4.4 ABI offset; function behavior not inferred

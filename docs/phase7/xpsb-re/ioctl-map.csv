@@ -1,0 +1,6 @@
+caller,callsite_elf_va,import,index,argument_bytes,candidate_historical_name,candidate_struct,evidence_class,evidence
+XpsbInit,0x00002cdc,drmCommandWrite,1,0x14,DRM_PSB_XHW_INIT,drm_psb_xhw_init_arg,CONFIRMED binary index/size; INFERRED header match,"Xpsb ELF call site; PSB_psb_drm_h.txt:265-272,338-345"
+XpsbTakeDown,0x00002ffa,drmCommandWrite,1,0x14,DRM_PSB_XHW_INIT takedown,drm_psb_xhw_init_arg,CONFIRMED binary index/size; INFERRED header match,Xpsb ELF call site; PSB_psb_xhw_c.txt:516-529
+XpsbThread,0x000031fe,drmCommandNone,2,0,DRM_PSB_XHW,none; shared BO is out-of-band,CONFIRMED binary index; INFERRED header match,Xpsb ELF call site; PSB_psb_xhw_c.txt:571-580
+"FUN_00019620 (ELF 0x9620), called by XpsbFlush3DVideoBlit",0x0000981b,drmCommandWrite,0,0x90,DRM_PSB_CMDBUF,drm_psb_cmdbuf_arg_t,CONFIRMED binary index/size; INFERRED header match,"Xpsb ELF call site; Ghidra XpsbFlush3DVideoBlit at 0x9a10; PSB_psb_drm_h.txt:221-263,338-345"
+XpsbFlush3D,0x0000a325,drmCommandWrite,0,0x90,DRM_PSB_CMDBUF,drm_psb_cmdbuf_arg_t,CONFIRMED binary index/size; INFERRED header match,Xpsb ELF call site; PSB_psb_sgx_c.txt:1237-1430

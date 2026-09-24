@@ -1,0 +1,106 @@
+format,offset,width_bits,value_or_rule,producer,consumer,derivation,semantic_limit,evidence,confidence
+chosen_vertex_input,0x0,32,0x41000000,research input;0x000d87bc;0x000d8a22,0x00040355 vertex descriptor,IEEE-754 float 8; position then color,Chosen post-viewport values; not observed execution,P7G-006,CONFIRMED
+chosen_vertex_input,0x4,32,0x41000000,research input;0x000d87bc;0x000d8a22,0x00040355 vertex descriptor,IEEE-754 float 8; position then color,Chosen post-viewport values; not observed execution,P7G-006,CONFIRMED
+chosen_vertex_input,0x8,32,0x3f000000,research input;0x000d87bc;0x000d8a22,0x00040355 vertex descriptor,IEEE-754 float 0.5; position then color,Chosen post-viewport values; not observed execution,P7G-006,CONFIRMED
+chosen_vertex_input,0xc,32,0x3f800000,research input;0x000d87bc;0x000d8a22,0x00040355 vertex descriptor,IEEE-754 float 1; position then color,Chosen post-viewport values; not observed execution,P7G-006,CONFIRMED
+chosen_vertex_input,0x10,32,0x3f800000,research input;0x000d87bc;0x000d8a22,0x00040355 vertex descriptor,IEEE-754 float 1; position then color,Chosen post-viewport values; not observed execution,P7G-006,CONFIRMED
+chosen_vertex_input,0x14,32,0x3f800000,research input;0x000d87bc;0x000d8a22,0x00040355 vertex descriptor,IEEE-754 float 1; position then color,Chosen post-viewport values; not observed execution,P7G-006,CONFIRMED
+chosen_vertex_input,0x18,32,0x3f800000,research input;0x000d87bc;0x000d8a22,0x00040355 vertex descriptor,IEEE-754 float 1; position then color,Chosen post-viewport values; not observed execution,P7G-006,CONFIRMED
+chosen_vertex_input,0x1c,32,0x3f800000,research input;0x000d87bc;0x000d8a22,0x00040355 vertex descriptor,IEEE-754 float 1; position then color,Chosen post-viewport values; not observed execution,P7G-006,CONFIRMED
+chosen_vertex_input,0x20,32,0x41c00000,research input;0x000d87bc;0x000d8a22,0x00040355 vertex descriptor,IEEE-754 float 24; position then color,Chosen post-viewport values; not observed execution,P7G-006,CONFIRMED
+chosen_vertex_input,0x24,32,0x41000000,research input;0x000d87bc;0x000d8a22,0x00040355 vertex descriptor,IEEE-754 float 8; position then color,Chosen post-viewport values; not observed execution,P7G-006,CONFIRMED
+chosen_vertex_input,0x28,32,0x3f000000,research input;0x000d87bc;0x000d8a22,0x00040355 vertex descriptor,IEEE-754 float 0.5; position then color,Chosen post-viewport values; not observed execution,P7G-006,CONFIRMED
+chosen_vertex_input,0x2c,32,0x3f800000,research input;0x000d87bc;0x000d8a22,0x00040355 vertex descriptor,IEEE-754 float 1; position then color,Chosen post-viewport values; not observed execution,P7G-006,CONFIRMED
+chosen_vertex_input,0x30,32,0x3f800000,research input;0x000d87bc;0x000d8a22,0x00040355 vertex descriptor,IEEE-754 float 1; position then color,Chosen post-viewport values; not observed execution,P7G-006,CONFIRMED
+chosen_vertex_input,0x34,32,0x3f800000,research input;0x000d87bc;0x000d8a22,0x00040355 vertex descriptor,IEEE-754 float 1; position then color,Chosen post-viewport values; not observed execution,P7G-006,CONFIRMED
+chosen_vertex_input,0x38,32,0x3f800000,research input;0x000d87bc;0x000d8a22,0x00040355 vertex descriptor,IEEE-754 float 1; position then color,Chosen post-viewport values; not observed execution,P7G-006,CONFIRMED
+chosen_vertex_input,0x3c,32,0x3f800000,research input;0x000d87bc;0x000d8a22,0x00040355 vertex descriptor,IEEE-754 float 1; position then color,Chosen post-viewport values; not observed execution,P7G-006,CONFIRMED
+chosen_vertex_input,0x40,32,0x41000000,research input;0x000d87bc;0x000d8a22,0x00040355 vertex descriptor,IEEE-754 float 8; position then color,Chosen post-viewport values; not observed execution,P7G-006,CONFIRMED
+chosen_vertex_input,0x44,32,0x41c00000,research input;0x000d87bc;0x000d8a22,0x00040355 vertex descriptor,IEEE-754 float 24; position then color,Chosen post-viewport values; not observed execution,P7G-006,CONFIRMED
+chosen_vertex_input,0x48,32,0x3f000000,research input;0x000d87bc;0x000d8a22,0x00040355 vertex descriptor,IEEE-754 float 0.5; position then color,Chosen post-viewport values; not observed execution,P7G-006,CONFIRMED
+chosen_vertex_input,0x4c,32,0x3f800000,research input;0x000d87bc;0x000d8a22,0x00040355 vertex descriptor,IEEE-754 float 1; position then color,Chosen post-viewport values; not observed execution,P7G-006,CONFIRMED
+chosen_vertex_input,0x50,32,0x3f800000,research input;0x000d87bc;0x000d8a22,0x00040355 vertex descriptor,IEEE-754 float 1; position then color,Chosen post-viewport values; not observed execution,P7G-006,CONFIRMED
+chosen_vertex_input,0x54,32,0x3f800000,research input;0x000d87bc;0x000d8a22,0x00040355 vertex descriptor,IEEE-754 float 1; position then color,Chosen post-viewport values; not observed execution,P7G-006,CONFIRMED
+chosen_vertex_input,0x58,32,0x3f800000,research input;0x000d87bc;0x000d8a22,0x00040355 vertex descriptor,IEEE-754 float 1; position then color,Chosen post-viewport values; not observed execution,P7G-006,CONFIRMED
+chosen_vertex_input,0x5c,32,0x3f800000,research input;0x000d87bc;0x000d8a22,0x00040355 vertex descriptor,IEEE-754 float 1; position then color,Chosen post-viewport values; not observed execution,P7G-006,CONFIRMED
+indices,0x0,16,base_vertex+0,0x00027e08,0x0003b890,base from vertex descriptor +0x0c,Fresh BO base zero is conditional,P7G-009,CONFIRMED
+indices,0x2,16,base_vertex+1,0x00027e08,0x0003b890,base from vertex descriptor +0x0c,Fresh BO base zero is conditional,P7G-009,CONFIRMED
+indices,0x4,16,base_vertex+2,0x00027e08,0x0003b890,base from vertex descriptor +0x0c,Fresh BO base zero is conditional,P7G-009,CONFIRMED
+vertex_USE,0x00,32,0xa0000000,0x00030e22,vertex PDS USE reference,zeroed slot and register/bank encoding,Producer bytes confirmed; complete instruction semantics UNKNOWN,P7G-007,CONFIRMED
+vertex_USE,0x04,32,0x28a17001,0x00030e22,vertex PDS USE reference,repeat=(8-1); byte5=0x70,Producer bytes confirmed; complete instruction semantics UNKNOWN,P7G-007,CONFIRMED
+vertex_USE,0x08,32,0xa0200000,0x00030a09,vertex PDS USE reference,"arguments (0,8,8,0,1,0,0,1)",Producer bytes confirmed; complete instruction semantics UNKNOWN,P7G-007,CONFIRMED
+vertex_USE,0x0c,32,0xfb275000,0x00030a09;0x00030fb7,vertex PDS USE reference,final-slot flag modifies byte6,Producer bytes confirmed; complete instruction semantics UNKNOWN,P7G-007,CONFIRMED
+vertex_PDS,0x00,32,vertex_BO_address+suboffset,0x00040355,TA program reference,offset relocation mask 0xffffffff,Literal instruction semantics not decoded; dynamic values candidate ABI,P7G-007;P7G-011,CONFIRMED
+vertex_PDS,0x04,32,0x80e00007,0x00040355,TA program reference,0x80000000 | ((8-1)<<21) | (8-1),Literal instruction semantics not decoded; dynamic values candidate ABI,P7G-007;P7G-011,CONFIRMED
+vertex_PDS,0x10,32,dynamic USE reference,0x00040355,TA program reference,three relocations from 0x0003a82c; background 0x00200000,Literal instruction semantics not decoded; dynamic values candidate ABI,P7G-007;P7G-011,CONFIRMED
+vertex_PDS,0x14,32,0,0x00040355,TA program reference,explicit store,Literal instruction semantics not decoded; dynamic values candidate ABI,P7G-007;P7G-011,CONFIRMED
+vertex_PDS,0x20,32,32,0x00040355,TA program reference,8 dwords * 4,Literal instruction semantics not decoded; dynamic values candidate ABI,P7G-007;P7G-011,CONFIRMED
+vertex_PDS,0x24,32,0,0x00040355,TA program reference,explicit store,Literal instruction semantics not decoded; dynamic values candidate ABI,P7G-007;P7G-011,CONFIRMED
+vertex_PDS,0x30,32,0x67800070,0x00040355,TA program reference,literal store,Literal instruction semantics not decoded; dynamic values candidate ABI,P7G-007;P7G-011,CONFIRMED
+vertex_PDS,0x34,32,0x2f030343,0x00040355,TA program reference,literal store,Literal instruction semantics not decoded; dynamic values candidate ABI,P7G-007;P7G-011,CONFIRMED
+vertex_PDS,0x38,32,0x030803e5,0x00040355,TA program reference,one-part literal store,Literal instruction semantics not decoded; dynamic values candidate ABI,P7G-007;P7G-011,CONFIRMED
+vertex_PDS,0x3c,32,0xaf000000,0x00040355,TA program reference,literal store,Literal instruction semantics not decoded; dynamic values candidate ABI,P7G-007;P7G-011,CONFIRMED
+vertex_PDS,0x08,32,UNKNOWN,not written by one-part 0x00040355,GPU consumption UNKNOWN,pool reservation does not zero,Not classified as reserved or necessarily consumed,P7G-007,UNKNOWN
+vertex_PDS,0x0c,32,UNKNOWN,not written by one-part 0x00040355,GPU consumption UNKNOWN,pool reservation does not zero,Not classified as reserved or necessarily consumed,P7G-007,UNKNOWN
+vertex_PDS,0x18,32,UNKNOWN,not written by one-part 0x00040355,GPU consumption UNKNOWN,pool reservation does not zero,Not classified as reserved or necessarily consumed,P7G-007,UNKNOWN
+vertex_PDS,0x1c,32,UNKNOWN,not written by one-part 0x00040355,GPU consumption UNKNOWN,pool reservation does not zero,Not classified as reserved or necessarily consumed,P7G-007,UNKNOWN
+vertex_PDS,0x28,32,UNKNOWN,not written by one-part 0x00040355,GPU consumption UNKNOWN,pool reservation does not zero,Not classified as reserved or necessarily consumed,P7G-007,UNKNOWN
+vertex_PDS,0x2c,32,UNKNOWN,not written by one-part 0x00040355,GPU consumption UNKNOWN,pool reservation does not zero,Not classified as reserved or necessarily consumed,P7G-007,UNKNOWN
+TA_index,0x00,32,0x81400003,0x0003b890,historical TA stream,primitive code 0; count 3,conditional on width8 and selected program descriptor,P7G-009,CONFIRMED
+TA_index,0x04,32,index_BO_address+suboffset+2*first,0x0003b890,historical TA stream,offset relocation,conditional on width8 and selected program descriptor,P7G-009,CONFIRMED
+TA_index,0x08,32,0,0x0003b890,historical TA stream,ordinary indexed caller,conditional on width8 and selected program descriptor,P7G-009,CONFIRMED
+TA_index,0x0c,32,((program_BO_address+offset)>>4)&0x0fffffff,0x0003b890,historical TA stream,relocation right shift4 mask0x0fffffff,conditional on width8 and selected program descriptor,P7G-009,CONFIRMED
+TA_index,0x10,32,0x04000203,0x0003b890,historical TA stream,((12*4+15)>>4)&0x3f | ((8+3)>>2)<<25 | ((8*4+15)&0x1ff0)<<4,conditional on width8 and selected program descriptor,P7G-009,CONFIRMED
+TA_termination,0x00,32,0xc0000000,0x0002a39a,TA stream,reserves8; commits start+4 via0x000384ab,second reserved dword not emitted,P7G-002,CONFIRMED
+TA_register_list,0x0,32,0x204,0x0002b258,candidate psb_reg_submit,literal register selector,Command data; no MMIO executed,P7G-002,CONFIRMED
+TA_register_list,0x4,32,0,0x0002b258,candidate psb_reg_submit,literal or relocation,0x38 committed bytes not 0x60 reservation,P7G-002,CONFIRMED
+TA_register_list,0x8,32,0x218,0x0002b258,candidate psb_reg_submit,literal register selector,Command data; no MMIO executed,P7G-002,CONFIRMED
+TA_register_list,0xc,32,0x400000,0x0002b258,candidate psb_reg_submit,literal or relocation,0x38 committed bytes not 0x60 reservation,P7G-002,CONFIRMED
+TA_register_list,0x10,32,0x23c,0x0002b258,candidate psb_reg_submit,literal register selector,Command data; no MMIO executed,P7G-002,CONFIRMED
+TA_register_list,0x14,32,0x82,0x0002b258,candidate psb_reg_submit,literal or relocation,0x38 committed bytes not 0x60 reservation,P7G-002,CONFIRMED
+TA_register_list,0x18,32,0x240,0x0002b258,candidate psb_reg_submit,literal register selector,Command data; no MMIO executed,P7G-002,CONFIRMED
+TA_register_list,0x1c,32,0x358637bd,0x0002b258,candidate psb_reg_submit,literal or relocation,0x38 committed bytes not 0x60 reservation,P7G-002,CONFIRMED
+TA_register_list,0x20,32,0x244,0x0002b258,candidate psb_reg_submit,literal register selector,Command data; no MMIO executed,P7G-002,CONFIRMED
+TA_register_list,0x24,32,0x358637bd,0x0002b258,candidate psb_reg_submit,literal or relocation,0x38 committed bytes not 0x60 reservation,P7G-002,CONFIRMED
+TA_register_list,0x28,32,0x250,0x0002b258,candidate psb_reg_submit,literal register selector,Command data; no MMIO executed,P7G-002,CONFIRMED
+TA_register_list,0x2c,32,0x88,0x0002b258,candidate psb_reg_submit,literal or relocation,0x38 committed bytes not 0x60 reservation,P7G-002,CONFIRMED
+TA_register_list,0x30,32,0x238,0x0002b258,candidate psb_reg_submit,literal register selector,Command data; no MMIO executed,P7G-002,CONFIRMED
+TA_register_list,0x34,32,relocated TA index-stream BO,0x0002b258,candidate psb_reg_submit,literal or relocation,0x38 committed bytes not 0x60 reservation,P7G-002,CONFIRMED
+fragment_result,0xa8,32,UNKNOWN for selected draw,0x0003503d;0x001fb7af,0x000370d8;scene state,main program pointer,Field location known; selected value still missing,P7G-008,UNKNOWN
+fragment_result,0xac,32,UNKNOWN for selected draw,0x0003503d;0x001fb7af,0x000370d8;scene state,main instruction count,Field location known; selected value still missing,P7G-008,UNKNOWN
+fragment_result,0xb4,32,UNKNOWN for selected draw,0x0003503d;0x001fb7af,0x000370d8;scene state,register/resource metadata,Field location known; selected value still missing,P7G-008,UNKNOWN
+fragment_result,0xb8,32,UNKNOWN for selected draw,0x0003503d;0x001fb7af,0x000370d8;scene state,compiled flags,Field location known; selected value still missing,P7G-008,UNKNOWN
+fragment_result,0x1c0,32,UNKNOWN for selected draw,0x0003503d;0x001fb7af,0x000370d8;scene state,secondary program pointer,Field location known; selected value still missing,P7G-008,UNKNOWN
+fragment_result,0x1c4,32,UNKNOWN for selected draw,0x0003503d;0x001fb7af,0x000370d8;scene state,secondary instruction count,Field location known; selected value still missing,P7G-008,UNKNOWN
+fragment_result,0x1c8,32,UNKNOWN for selected draw,0x0003503d;0x001fb7af,0x000370d8;scene state,secondary metadata,Field location known; selected value still missing,P7G-008,UNKNOWN
+fragment_result,0x1d4,32,UNKNOWN for selected draw,0x0003503d;0x001fb7af,0x000370d8;scene state,constant mapping count,Field location known; selected value still missing,P7G-008,UNKNOWN
+fragment_result,0x1d8,32,UNKNOWN for selected draw,0x0003503d;0x001fb7af,0x000370d8;scene state,link metadata,Field location known; selected value still missing,P7G-008,UNKNOWN
+Mesa_fragment_IR,0x00,32,0x2b,0x000aa97c;0x000a9ac8,0x0003503d;0x001c606c,no-texture primary-color move; destination color0 mask0xf,Only opcode field constrained here; complete record and compiled USSE words still open,P7G-014,CONFIRMED
+Mesa_fragment_IR,0x40,32,0x19,0x000aa97c;0x000a9ac8,0x0003503d;0x001c606c,END record,Only opcode field constrained here; complete record and compiled USSE words still open,P7G-014,CONFIRMED
+UniFlex_input_IR,0x00,32,0x48,0x00031381,0x0003503d;0x001c606c,numeric translation of Mesa0x2b,Only opcode field constrained here; complete record and compiled USSE words still open,P7G-014,CONFIRMED
+UniFlex_input_IR,0x84,32,0x35,0x00031381,0x0003503d;0x001c606c,numeric translation of Mesa0x19,Only opcode field constrained here; complete record and compiled USSE words still open,P7G-014,CONFIRMED
+UniFlex_fragment_input_MOV,0x00,32,0x48,ELF 0x00031381 opcode table,ELF 0x001c3ba5 parser,Mesa opcode 0x2b; operand table count 1,"CPU-side compiler input, not GPU instruction",P7H-001,CONFIRMED
+UniFlex_fragment_input_MOV,0x10,8,0x0f low byte,ELF 0x00033100,ELF 0x001c3ba5 parser,frozen output mask 0xf; destination descriptor begins at record +0x04,remaining bits initially zero; later compiler output unknown,P7H-001,CONFIRMED
+UniFlex_fragment_input_MOV,0x20,32,1,ELF 0x00033257,ELF 0x001c3ba5 parser,primary color PROGRAM_INPUT index 1 mapped to class 1 index 0 for no-texture key,CPU-side input register class; not final USSE allocation,P7H-001,CONFIRMED
+UniFlex_fragment_input_MOV,0x28,16,0x0688,ELF 0x000311b6,ELF 0x001c3ba5 parser,default XYZW swizzle 0x688 mapped componentwise,CPU-side input swizzle,P7H-001,CONFIRMED
+UniFlex_fragment_input_END,0x00,32,0x35,ELF 0x00031381,ELF 0x001c3ba5 parser,Mesa opcode 0x19 END case,final USSE termination encoding unknown,P7H-001,CONFIRMED
+UniFlex_fragment_input_MOV,0x08,32,6,ELF 0x00033100,ELF 0x001c3ba5 parser,PROGRAM_OUTPUT index 0 mapped to destination class 6 index 0,CPU-side input class; final USSE allocation unknown,P7H-001,CONFIRMED
+XHW_scene_info_cookie_32x32,0x00,32,0x00000000,Xpsb ELF 0x3a40,candidate psb_xhw.c:110; Xpsb ELF 0x4550,both +0x64 branches converge for 32x32,historical CPU calculation only; exact binary/kernel pairing INFERRED,P7H-008,CONFIRMED
+XHW_scene_info_cookie_32x32,0x04,32,0x00000010,Xpsb ELF 0x3a40,candidate psb_xhw.c:110; Xpsb ELF 0x4550,both +0x64 branches converge for 32x32,historical CPU calculation only; exact binary/kernel pairing INFERRED,P7H-008,CONFIRMED
+XHW_scene_info_cookie_32x32,0x08,32,0x01004004,Xpsb ELF 0x3a40,candidate psb_xhw.c:110; Xpsb ELF 0x4550,both +0x64 branches converge for 32x32,historical CPU calculation only; exact binary/kernel pairing INFERRED,P7H-008,CONFIRMED
+XHW_scene_info_cookie_32x32,0x0c,32,0x01004004,Xpsb ELF 0x3a40,candidate psb_xhw.c:110; Xpsb ELF 0x4550,both +0x64 branches converge for 32x32,historical CPU calculation only; exact binary/kernel pairing INFERRED,P7H-008,CONFIRMED
+XHW_scene_info_cookie_32x32,0x10,32,0x00000010,Xpsb ELF 0x3a40,candidate psb_xhw.c:110; Xpsb ELF 0x4550,both +0x64 branches converge for 32x32,historical CPU calculation only; exact binary/kernel pairing INFERRED,P7H-008,CONFIRMED
+XHW_scene_info_cookie_32x32,0x14,32,0x00001001,Xpsb ELF 0x3a40,candidate psb_xhw.c:110; Xpsb ELF 0x4550,both +0x64 branches converge for 32x32,historical CPU calculation only; exact binary/kernel pairing INFERRED,P7H-008,CONFIRMED
+XHW_scene_info_cookie_32x32,0x18,32,0x0001f01f,Xpsb ELF 0x3a40,candidate psb_xhw.c:110; Xpsb ELF 0x4550,both +0x64 branches converge for 32x32,historical CPU calculation only; exact binary/kernel pairing INFERRED,P7H-008,CONFIRMED
+XHW_scene_info_cookie_32x32,0x1c,32,0x00001000,Xpsb ELF 0x3a40,candidate psb_xhw.c:110; Xpsb ELF 0x4550,both +0x64 branches converge for 32x32,historical CPU calculation only; exact binary/kernel pairing INFERRED,P7H-008,CONFIRMED
+XHW_scene_info_cookie_32x32,0x20,32,0x00000000,Xpsb ELF 0x3a40,candidate psb_xhw.c:110; Xpsb ELF 0x4550,both +0x64 branches converge for 32x32,historical CPU calculation only; exact binary/kernel pairing INFERRED,P7H-008,CONFIRMED
+XHW_scene_info_cookie_32x32,0x24,32,0x00001300,Xpsb ELF 0x3a40,candidate psb_xhw.c:110; Xpsb ELF 0x4550,both +0x64 branches converge for 32x32,historical CPU calculation only; exact binary/kernel pairing INFERRED,P7H-008,CONFIRMED
+XHW_scene_info_cookie_32x32,0x28,32,0x00001350,Xpsb ELF 0x3a40,candidate psb_xhw.c:110; Xpsb ELF 0x4550,both +0x64 branches converge for 32x32,historical CPU calculation only; exact binary/kernel pairing INFERRED,P7H-008,CONFIRMED
+XHW_scene_info_cookie_32x32,0x2c,32,0x000013e0,Xpsb ELF 0x3a40,candidate psb_xhw.c:110; Xpsb ELF 0x4550,both +0x64 branches converge for 32x32,historical CPU calculation only; exact binary/kernel pairing INFERRED,P7H-008,CONFIRMED
+XHW_scene_info_cookie_32x32,0x30,32,0x00000000,Xpsb ELF 0x3a40,candidate psb_xhw.c:110; Xpsb ELF 0x4550,both +0x64 branches converge for 32x32,historical CPU calculation only; exact binary/kernel pairing INFERRED,P7H-008,CONFIRMED
+XHW_scene_info_cookie_32x32,0x34,32,0x00000000,Xpsb ELF 0x3a40,candidate psb_xhw.c:110; Xpsb ELF 0x4550,both +0x64 branches converge for 32x32,historical CPU calculation only; exact binary/kernel pairing INFERRED,P7H-008,CONFIRMED
+XHW_scene_info_cookie_32x32,0x38,32,0x00000000,Xpsb ELF 0x3a40,candidate psb_xhw.c:110; Xpsb ELF 0x4550,both +0x64 branches converge for 32x32,historical CPU calculation only; exact binary/kernel pairing INFERRED,P7H-008,CONFIRMED
+XHW_scene_info_cookie_32x32,0x3c,32,UNKNOWN (unwritten),Xpsb ELF 0x3a40,candidate psb_xhw.c:110; Xpsb ELF 0x4550,no store at word 15; initial normal bind/fire does not read it,later OOM branch reads it; exact paired initialization unknown,P7H-008;P7H-009,UNKNOWN
+XHW_scene_info_reply_32x32,0x58,32,0x00001420,Xpsb ELF 0x3a40,candidate psb_xhw.c:110-113,both +0x64 branches converge for 32x32,historical CPU calculation only; exact binary/kernel pairing INFERRED,P7H-008,CONFIRMED
+XHW_scene_info_reply_32x32,0x5c,32,0x00000000,Xpsb ELF 0x3a40,candidate psb_xhw.c:110-113,both +0x64 branches converge for 32x32,historical CPU calculation only; exact binary/kernel pairing INFERRED,P7H-008,CONFIRMED
+XHW_scene_info_reply_32x32,0x60,32,0x00000001,Xpsb ELF 0x3a40,candidate psb_xhw.c:110-113,both +0x64 branches converge for 32x32,historical CPU calculation only; exact binary/kernel pairing INFERRED,P7H-008,CONFIRMED

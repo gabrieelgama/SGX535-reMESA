@@ -1,0 +1,44 @@
+format,offset,width_bits,producer,consumer,observed_value_or_rule,source,confidence,limit
+TA_index_record,0x00,32,psb_dri:0x0003b890,historical TA stream,primitive_input|0x81400000|count,psb_dri:0x0003b890,CONFIRMED,hardware bit semantics UNKNOWN
+TA_index_record,0x04,32,psb_dri:0x00037854,candidate kernel relocation,relocation destination for index BO,psb_dri:0x0003b890;psb_drm.h:143-154,INFERRED,exact binary/kernel pairing UNKNOWN
+TA_index_record,0x08,32,psb_dri:0x0003b890,historical TA stream,caller argument,psb_dri:0x0003b890,CONFIRMED,hardware meaning UNKNOWN
+TA_index_record,0x0c,32,psb_dri:0x00037854,candidate kernel relocation,relocation destination for second BO,psb_dri:0x0003b890;psb_drm.h:143-154,INFERRED,exact binary/kernel pairing UNKNOWN
+TA_index_record,0x10,32,psb_dri:0x0003b890,historical TA stream,composite source-field expression,psb_dri:0x0003b890,CONFIRMED,individual bit meanings UNKNOWN
+scene_final_record,0x00,32,psb_dri:0x0002a39a,historical TA stream,0xc0000000,psb_dri:0x0002a39a,CONFIRMED,hardware packet semantics UNKNOWN
+scene_final_record,0x04,32,UNKNOWN,UNKNOWN,UNKNOWN,psb_dri:0x0002a39a,UNKNOWN,second word not established
+drm_psb_scene_candidate,0x00,32,candidate userspace,candidate kernel,handle_valid,psb_drm.h:206-212,CONFIRMED,source ABI only
+drm_psb_scene_candidate,0x04,32,candidate userspace,candidate kernel,handle,psb_drm.h:206-212,CONFIRMED,source ABI only
+drm_psb_scene_candidate,0x08,32,candidate userspace,candidate kernel,w,psb_drm.h:206-212,CONFIRMED,source ABI only
+drm_psb_scene_candidate,0x0c,32,candidate userspace,candidate kernel,h,psb_drm.h:206-212,CONFIRMED,source ABI only
+drm_psb_scene_candidate,0x10,32,candidate userspace,candidate kernel,num_buffers,psb_drm.h:206-212,CONFIRMED,source ABI only
+drm_psb_reloc_candidate,0x00,32,psb_dri:0x00037854,candidate kernel,reloc_op=0 in observed helper,psb_drm.h:143-154;psb_dri:0x00037854,INFERRED,source correlation not exact pairing
+drm_psb_reloc_candidate,0x04,32,psb_dri:0x00037854,candidate kernel,where=destination word offset,psb_drm.h:143-154;psb_dri:0x00037854,INFERRED,source correlation not exact pairing
+drm_psb_reloc_candidate,0x08,32,psb_dri:0x00037854,candidate kernel,buffer=validation-list index,psb_drm.h:143-154;psb_dri:0x00037854,INFERRED,source correlation not exact pairing
+drm_psb_reloc_candidate,0x0c,32,psb_dri:0x00037854,candidate kernel,mask,psb_drm.h:143-154;psb_dri:0x00037854,INFERRED,source correlation not exact pairing
+drm_psb_reloc_candidate,0x10,32,psb_dri:0x00037854,candidate kernel,shift composite,psb_drm.h:143-154;psb_dri:0x00037854,INFERRED,source correlation not exact pairing
+drm_psb_reloc_candidate,0x14,32,psb_dri:0x00037854,candidate kernel,pre_add,psb_drm.h:143-154;psb_dri:0x00037854,INFERRED,source correlation not exact pairing
+drm_psb_reloc_candidate,0x18,32,psb_dri:0x00037854,candidate kernel,background,psb_drm.h:143-154;psb_dri:0x00037854,INFERRED,source correlation not exact pairing
+drm_psb_reloc_candidate,0x1c,32,psb_dri:0x00037854,candidate kernel,dst_buffer=validation-list index,psb_drm.h:143-154;psb_dri:0x00037854,INFERRED,source correlation not exact pairing
+drm_psb_reloc_candidate,0x20,32,UNKNOWN,candidate kernel,arg0,psb_drm.h:143-154,CONFIRMED,source ABI only; binary producer UNKNOWN
+drm_psb_reloc_candidate,0x24,32,UNKNOWN,candidate kernel,arg1,psb_drm.h:143-154,CONFIRMED,source ABI only; binary producer UNKNOWN
+drm_psb_cmdbuf_candidate,0x00,64,psb_dri:0x00037b51,candidate kernel,buffer_list pointer,psb_drm.h:221-263;psb_sgx.c:1237-1430,INFERRED,exact linked ABI UNKNOWN
+drm_psb_cmdbuf_candidate,0x10,64,psb_dri:0x00037b51,candidate kernel,scene_arg pointer,psb_drm.h:221-263;psb_sgx.c:1237-1430,INFERRED,exact linked ABI UNKNOWN
+drm_psb_cmdbuf_candidate,0x18,64,psb_dri:0x00037b51,candidate kernel,fence_arg pointer,psb_drm.h:221-263;psb_sgx.c:1237-1430,INFERRED,exact linked ABI UNKNOWN
+drm_psb_cmdbuf_candidate,0x5c,32,psb_dri:0x00037b51,candidate kernel,engine=3 for selector 0,psb_drm.h:161-165;psb_dri:0x00037b51,INFERRED,selector write confirmed; header name source correlation
+USE_USSE_instructions,0x00-0x07,64,psb_dri:0x00030e22,historical vertex state output,00 00 00 a0 01 30 a1 28,psb_dri:0x00040355;0x00030e22;0x0002fabd,CONFIRMED,conditional four-dword-record bytes only; ISA meaning and target revision UNKNOWN
+USE_USSE_instructions,0x08-0x0f,64,psb_dri:0x00030a09;0x00030fb7,historical vertex state output,00 00 20 a0 00 50 27 fb,psb_dri:0x00040355;0x00030a09;0x00030fb7,CONFIRMED,conditional four-dword-record bytes only; ISA meaning and target revision UNKNOWN
+USC_USSE_program,UNKNOWN,UNKNOWN,psb_dri:0x001fb7af,SGX535_USSE,generated instructions counted,psb_dri:0x001fb7af,UNKNOWN,complete ISA and exact revision unavailable
+XHW_shared_request,UNKNOWN,UNKNOWN,Xpsb.so:0x00002690,candidate PSB XHW handler,shared BO plus request indices 1 and 2,Xpsb.so:0x00002690;psb_xhw.c,UNKNOWN,complete shared layout and pre-submit order unavailable
+bounded_vertex_output,0x00,32,psb_dri:0x00040355,candidate TA state,vertex BO relocation,psb_dri:0x00040355;0x000381a0,CONFIRMED,final GPU address UNKNOWN
+bounded_vertex_output,0x04,32,psb_dri:0x000381a0,candidate TA state,0x80600003 for four-dword-record one-part branch,psb_dri:0x000381a0;0x00040355,CONFIRMED,hardware meaning UNKNOWN
+bounded_vertex_output,0x08-0x0c,64,UNKNOWN,UNKNOWN,no store on selected branch,psb_dri:0x00040355,UNKNOWN,underlying BO bytes/consumption UNKNOWN
+bounded_vertex_output,0x10,32,psb_dri:0x0003a82c,candidate TA state,three relocation calls to USE BO,psb_dri:0x0003a82c;0x00040355,CONFIRMED,final value UNKNOWN
+bounded_vertex_output,0x14,32,psb_dri:0x00040355,candidate TA state,0,psb_dri:0x00040355,CONFIRMED,hardware meaning UNKNOWN
+bounded_vertex_output,0x18-0x1c,64,UNKNOWN,UNKNOWN,no store on selected branch,psb_dri:0x00040355,UNKNOWN,underlying BO bytes/consumption UNKNOWN
+bounded_vertex_output,0x20,32,psb_dri:0x00040355,candidate TA state,16 for four vertices,psb_dri:0x00040355,CONFIRMED,hardware meaning UNKNOWN
+bounded_vertex_output,0x24,32,psb_dri:0x00040355,candidate TA state,0,psb_dri:0x00040355,CONFIRMED,hardware meaning UNKNOWN
+bounded_vertex_output,0x28-0x2c,64,UNKNOWN,UNKNOWN,no store on selected branch,psb_dri:0x00040355,UNKNOWN,underlying BO bytes/consumption UNKNOWN
+bounded_vertex_output,0x30-0x3c,128,psb_dri:0x00040355,candidate TA state,0x67800070|0x2f030343|0x030803e5|0xaf000000,psb_dri:0x00040355,CONFIRMED,individual hardware fields UNKNOWN
+bounded_TA_index,0x00,32,psb_dri:0x0003b890,candidate TA state,0x81400006 for primitive input 0 count 6,psb_dri:0x00029fbd;0x0003b890,CONFIRMED,bit semantics UNKNOWN
+bounded_TA_index,0x08,32,psb_dri:0x0003b890,candidate TA state,0 first pass or 4 conditional second pass,psb_dri:0x00029fbd;0x0003b890,CONFIRMED,hardware meaning UNKNOWN
+bounded_TA_index,0x10,32,psb_dri:0x0003b890,candidate TA state,0x02000103 for selected four-dword-record path,psb_dri:0x00029fbd;0x00040355;0x0003b890,CONFIRMED,bit semantics UNKNOWN

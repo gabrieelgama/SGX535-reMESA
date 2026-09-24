@@ -1,0 +1,86 @@
+elf_va,file_offset,ascii
+0x000013b4,0x13b4,XpsbShaderCode
+0x000013cc,0x13cc,drmGetVersion
+0x000013da,0x13da,drmFreeVersion
+0x000013e9,0x13e9,drmBOVersion
+0x0000146e,0x146e,drmBOCreate
+0x0000147a,0x147a,drmBOMap
+0x00001483,0x1483,XpsbDRMPoolInit
+0x000014b4,0x14b4,drmBOUnmap
+0x000014bf,0x14bf,drmBOUnreference
+0x00001505,0x1505,Xpsb_set_vopt
+0x00001513,0x1513,Xpsb_sgx_initialize
+0x0000152e,0x152e,drmCommandWrite
+0x000015e9,0x15e9,drmCommandNone
+0x000015f8,0x15f8,Xpsb_sgx_check_lockup
+0x0000160e,0x160e,Xpsb_ta_mem_load
+0x0000161f,0x161f,Xpsb_sgx_uninit
+0x0000162f,0x162f,Xpsb_oom_abort
+0x0000163e,0x163e,Xpsb_ta_mem_info
+0x0000164f,0x164f,Xpsb_scene_switch_fire
+0x00001666,0x1666,Xpsb_scene_info
+0x00001676,0x1676,Xpsb_closed_kick_ta
+0x00001696,0x1696,Xpsb_closed_kick_render
+0x00001704,0x1704,Xpsb_ta_mem_save
+0x00001715,0x1715,Xpsb_er_kick_wait_clear
+0x0000172d,0x172d,Xpsb_poll_reg_for_value
+0x000017ad,0x17ad,XpsbSetOffsetDRMBORelocation
+0x0000183a,0x183a,XpsbSetOffsetRelocation
+0x000018a6,0x18a6,Xpsb_setup_blit_background_object
+0x000018ea,0x18ea,Xpsb_emit_pixel_event_program
+0x00001908,0x1908,Xpsb_emit_pixel_shader
+0x0000191f,0x191f,XpsbCompositeShader
+0x000019c3,0x19c3,Xpsb_pds_get_num_constants
+0x000019f7,0x19f7,Xpsb_emit_use_relocation
+0x00001a10,0x1a10,XpsbSetUSERegRelocation
+0x00001a28,0x1a28,XpsbSetUSEOffsRelocation
+0x00001a81,0x1a81,XpsbBOAddDRMListItem
+0x00001add,0x1add,XpsbGetdrmBOList
+0x00001aee,0x1aee,XpsbPutdrmBOList
+0x00001aff,0x1aff,XpsbBOFenceUserList
+0x00001b13,0x1b13,XpsbFenceUnReference
+0x00001b6c,0x1b6c,XpsbFenceType
+0x00001b7a,0x1b7a,XpsbFenceReference
+0x00001bf2,0x1bf2,drmFenceUnreference
+0x00001c0e,0x1c0e,XpsbBOFence
+0x00001c6c,0x1c6c,XpsbFenceSignaled
+0x00001c7e,0x1c7e,drmFenceSignaled
+0x00001c8f,0x1c8f,XpsbFenceFinish
+0x00001c9f,0x1c9f,drmFenceWait
+0x00001cd6,0x1cd6,drmBOReference
+0x00001ce5,0x1ce5,drmBOWaitIdle
+0x0000cdb8,0xcdb8,[Xpsb] Could not get the DRM version.
+0x0000ce5b,0xce5b,Please update either this Xpsb driver or your kernel DRM.
+0x0000cec4,0xcec4,[Xpsb] Could not get the DRM Buffer manager version: %s
+0x0000cf34,0xcf34,[Xpsb] Disable hog plug daemon in PSB driver.
+0x0000d000,0xd000,USSE static buffer
+0x0000d027,0xd027,Xpsb.c
+0x0000d045,0xd045,"%s, before drmBOUnreference"
+0x0000d064,0xd064,/proc/dri/sdvo/hotplug
+0x0000d2e0,0xd2e0,[Poulsbo HAL: %s] *ERROR* Incomplete or fresh context to rasterizer.
+0x0000d328,0xd328,[Poulsbo HAL: %s] *ERROR* Unknown PSB engine.
+0x0000d357,0xd357,Xpsb_scene_switch_fire
+0x0000d38c,0xd38c,[Poulsbo HAL: %s] *ERROR* SGX timeout. Trying to continue...
+0x0000d3cc,0xd3cc,[Poulsbo HAL: %s] *ERROR* SGX timeout during clear operation.
+0x0000d40b,0xd40b,Xpsb_er_kick_wait_clear
+0x0000d423,0xd423,Dynamic shaders
+0x0000d455,0xd455,Xpsb_blit.c
+0x0000d4bd,0xd4bd,psb_emit_cmd_buffer_2d
+0x0000d529,0xd529,Xpsb_ioctl.c
+0x0000d540,0xd540,RelocBuffer
+0x0000d57f,0xd57f,SuperFence
+0x0000d59c,0xd59c,buf->reloc_allocation - reloc > 0
+0x0000d5ec,0xd5ec,"Command submission ioctl failed: ""%s""."
+0x0000d641,0xd641,psbDRMCmdBuf
+0x0000d64e,0xd64e,XpsbSetUSEOffsRelocation
+0x0000d667,0xd667,XpsbSetUSERegRelocation
+0x0000d67f,0xd67f,XpsbSetOffsetDRMBORelocation
+0x0000d69c,0xd69c,XpsbSetOffsetRelocation
+0x0000d778,0xd778,Xpsb_bufmgr.c
+0x0000d8df,0xd8df,XpsbBOFenceUserList
+0x0000d8f3,0xd8f3,XpsbBOFence
+0x0000d8ff,0xd8ff,XpsbBOAddDRMListItem
+0x0000d9fa,0xd9fa,XpsbFenceSignaled
+0x0000da0c,0xda0c,XpsbFenceFinish
+0x0000dae4,0xdae4,Xpsb_batchpool.c
+0x0000db16,0xdb16,Xpsb_drmpool.c

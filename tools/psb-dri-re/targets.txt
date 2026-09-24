@@ -1,0 +1,260 @@
+# ELF VAs; disposable decompiler output in /tmp only.
+0x0004be92 screen init
+0x000477b3 driver SwapBuffers callback
+0x0003aa2a psb swap path
+0x000464e0 command submission upstream helper
+0x000374f5 direct scene-unref request
+0x00037b51 direct command-buffer request
+0x0004297b BO creation and map
+0x0004345a BO status
+0x000436cc BO creation
+0x0004383e BO map
+0x00044097 fence wait
+0x0003b430 TA validation
+0x0003b606 PDS state data
+0x0003b73b PDS state data
+0x000348a5 psb_use_compiler string xref
+0x00034ce4 psb_use_compiler string xref
+0x0003503d psb_use_compiler string xref
+0x001fb7af USSE generation errors
+0x0002fabd psb_use string xref
+0x00030466 psb_use string xref
+0x00027060 scene creation
+0x00040355 VS path
+0x0004252d VS path
+0x000381a0 PDS assembly or relocation helper
+0x00030ffd USE/USSE instruction-buffer allocation (P7F correction) helper
+0x00030fb7 vertex PDS finalization helper
+0x001c6b56 USC compiler entry called by psb_use_compiler
+0x00038762 command outbuf reservation
+0x00037854 command relocation emission
+0x000384ab command outbuf completion
+0x0001eef4 Poulsbo screen initialization helper
+0x0002673d render-path caller of scene submit
+0x0002a39a scene command submit path
+0x00029fbd scene setup with vertex PDS upload
+0x00027fa0 scene draw path
+0x0003b890 TA index-list builder
+0x0003b125 psb_emit_cmd_buffer path
+0x00046924 alternate swap-copy command path
+0x00026896 render-path caller of scene draw
+0x00026a0f indexed-primitive caller
+0x00026678 render callback-table initialization
+0x000371f0 render/context setup caller of callback-table initialization
+0x0002a2f6 caller of scene setup
+0x00051860 render-target state transition and indirect finalization
+0x00051a1f render-target transition caller
+0x00025451 render-target transition caller
+0x000473bd render-target transition caller
+0x000477b3 swap callback transition caller
+0x00047f51 render-target transition caller
+0x000483a3 render-target transition caller
+0x000483ef render-target transition caller
+0x00048e50 render-target transition caller
+0x0004926d render-target transition caller
+0x00049379 render-target transition caller
+0x0004f2d3 render-target transition caller
+0x000537eb render-target transition caller
+0x00053bd9 render-target transition caller
+0x00026dbd scene acquisition and state setup
+0x00026c9f callback-side state handling
+0x00026fdf render callback destruction
+0x000267e2 render callback state handling
+0x000483d4 DRI unbind callback and flush edge
+0x000493d1 candidate finish and sync edge
+0x000250f9 driver function table setup
+0x0004f3ef state validation call
+# Final bounded pre-implementation path: fixed scene primitive, PDS words, frontend dispatch.
+0x00029dd9 alternate caller of vertex program upload
+0x0003f94c fixed scene vertex BO construction
+0x00037409 fixed six-index BO construction
+0x00028fff scene state helper
+0x00029f38 scene state helper
+0x00030e22 PDS word emission helper
+0x00030a09 PDS data emission helper
+0x0002d124 clipping renderer selection
+# 0x000dea09 and 0x000dea86 are interior call sites, not function entries.
+0x000dd16d clipping renderer assignment
+0x00037534 submit cleanup helper
+0x00037b10 submit cleanup helper
+0x000276a5 scene DRM request helper
+0x0003b606 PDS input state emission
+0x0002fabd PDS eight-byte instruction reservation
+0x00030466 PDS helper used in bit emission
+0x000304d9 PDS helper used in bit emission
+0x0002f4e5 PDS helper used in bit emission
+0x00030549 PDS helper used in bit emission
+0x00030624 PDS helper used in bit emission
+0x00030cb1 PDS helper used in bit emission
+0x000287ff scene-state word builder
+0x00029251 scene draw setup
+0x00029385 scene state update
+0x0002a794 alternate fixed-scene caller
+0x0003a82c PDS/USE address relocation
+0x00027e08 ordinary indexed conversion
+0x00027eb2 special primitive conversion
+0x00048592 context creation and state-atom registration
+0x00052fcc clipping vertex-buffer dispatch caller
+0x000de260 clipping primitive-render construction
+0x0002b3d4 dirty-state atom list installation
+0x0002bae0 frozen-draw state atom 0
+0x0002b652 frozen-draw state atom 1
+0x0002b4e0 frozen-draw state atom 3
+0x0002ed5c frozen-draw state atom 4
+0x0002d2f9 frozen-draw state atom 5
+0x0002c852 frozen-draw state atom 6
+0x0002c610 frozen-draw state atom 7
+0x0002daad frozen-draw state atom 8
+0x0002d940 frozen-draw state atom 9
+0x0002bfdf frozen-draw state atom 10
+0x0002bc07 frozen-draw state atom 11
+0x0002be59 frozen-draw state atom 12
+0x0002d015 frozen-draw state atom 13
+0x0002cc10 frozen-draw state atom 14
+0x0002cca3 frozen-draw state atom 15
+0x0002d1a8 frozen-draw state atom 16
+0x0003f505 private vertex-output mode selection
+0x000253cd attach vertex-output state to scene
+0x0002f042 scene startup register emission
+0x0002f317 scene startup alternate register emission
+0x000392ab scene render-target output program
+0x00039c5c scene background program
+0x0002a57b scene initial registers
+0x00027f03 index record final count patch
+0x00033490 fragment compiler frontend
+0x000370d8 fragment link patch and program creation
+0x00025333 scene attach cached vertex state
+0x00039ac4 constant-color program alternative
+0x0003773b USE register relocation
+0x00037621 USE offset relocation
+0x00025801 cached scene vertex program selector
+0x00031381 Mesa fragment instruction to UniFlex conversion
+0x000310e0 UniFlex input linkage
+0x0002b258 scene preterminate program
+0x0002ab70 scene end pixel-state construction
+0x0002b140 conditional scene clear termination
+0x000e17f9 named TNL pipeline stage dispatcher
+0x000e196c named TNL pipeline installation
+0x000e1a49 named TNL indexed draw frontend
+0x000d1031 VBO array dispatch installation
+0x00048eb8 TNL pipeline context callback
+0x00048f05 VBO draw_prims context callback
+0x00052da0 hardware transform stage and software fallback
+0x001c606c USC input lowering and allocation pipeline
+0x000d12f5 VBO DrawElements installed callback
+0x0003f87a software vertex BO descriptor
+0x000d106d DrawRangeElements command to draw_prims
+0x000443d1 selected relocation BO list insertion
+0x00043d8c BO object defaults and placement inputs
+0x000442bd SuperFence construction
+0x00043a7c validation-list fence return lifetime
+0x00044107 fence unreference
+0x00045124 relocation buffer close
+0x0004418f validation buffer preparation
+0x00026b5c selected software vertex allocation
+0x000dcc4a clipping vertex-buffer draw entry
+0x00026aa1 primitive selector and dirty dispatch
+0x0003f610 bounded vertex allocation descriptor
+0x000d8529 vertex format table linkage
+
+0x000ab557 fixed function fragment program cache and construction
+
+0x001fa3ea USC final instruction emission dispatch
+
+0x000aa97c fixed function fragment no texture builder
+
+0x000aa197 fixed function source selection
+
+0x000a9824 fixed function output register
+
+0x000a9916 fixed function input registration
+
+0x000a9c0a fixed function arithmetic instruction emission
+
+0x002400eb USC lowered instruction encoder dispatch
+
+0x000a9ac8 Mesa instruction record emitter
+
+0x001d9790 USC compiler target feature selection
+
+0x001d9b23 USC compiler target errata selection
+
+0x000312a0 Mesa to UniFlex destination conversion
+
+0x0003130a Mesa to UniFlex source conversion
+
+0x0010c3b7 Mesa instruction defaults
+
+0x000a9945 fixed function source register writer
+
+0x000a98f1 fixed function temporary register allocation
+
+0x0025309a USC final instruction encoder
+0x001c22b0 USC input-list to control-flow builder
+0x00211977 USC output-component source resolver
+0x000283d8 scene fragment state writer
+0x00028559 scene pixel/constant state writer
+0x001be5bc USC operand category selector
+0x00219998 USC default UF instruction lowering
+0x0020f60f USC category-one UF lowering
+0x00203497 USC category-two UF lowering
+
+0x001c3ba5 UniFlex input to compiler IR
+
+0x0023d831 USC assembler-record construction
+
+0x0024c96a USC arithmetic instruction word encoding
+
+0x00033100 ordinary Mesa destination to UniFlex descriptor
+
+0x00033257 ordinary Mesa source to UniFlex descriptor
+
+0x0003435d alternate Mesa destination to UniFlex descriptor
+
+0x00034613 alternate Mesa source to UniFlex descriptor
+
+0x000311b6 Mesa swizzle to UniFlex source swizzle
+
+0x001deecc USC stage marker before and after early transforms
+0x00235ca2 USC early transform stage
+0x0020733b USC early transform stage
+0x0020906a USC per-block early transform stage
+0x0023ccdd USC early transform stage
+0x00239e10 USC conditional early transform stage
+0x001d4760 USC early per-block transform stage
+0x0022923e USC per-block lowering stage
+
+0x001c95f7 USC final instruction count and label assignment
+
+0x001c72a1 USC final instruction count traversal
+0x001c7187 USC final instruction count comparison
+0x00212b25 USC selected component helper
+0x00211c4d USC selected component helper
+0x00214363 USC selected component helper
+0x00211b37 selected output mapping
+0x002137bb selected primary-color input mapping
+0x00211ab9 selected source descriptor finalizer
+0x001be5bc selected MOV alternate-lowering guard
+0x001be0c0 scalar source legality check
+0x001be081 scalar source modifier legality check
+0x001c136a internal instruction initializer
+0x001beef1 internal instruction insertion
+0x002122d8 selected source modifier lowering
+0x0023ba46 virtual register allocator used by output remap
+0x0023c319 output register remap consumer
+0x00237b63 post-optimization pass
+0x001cc814 late USC pass
+0x001d2745 late USC pass
+0x002338b0 late USC pass
+0x000398bc fragment ProgramStringNotify callback
+0x000331dc fragment callback callee
+0x00235353 constant-pack operand selector
+0x00235322 constant-pack operand index
+0x00250aeb assembler opcode 0x9a encoder
+0x00228269 iselect MOV operand check
+0x0024ba46 SSA virtual register allocation
+0x0024bae2 SSA source remap
+0x0024ba83 SSA per-instruction use remap
+0x00236ac5 iselect block tail
+0x00249ccf assembler opcode normalization
+0x001c1789 USC internal instruction allocation/defaults

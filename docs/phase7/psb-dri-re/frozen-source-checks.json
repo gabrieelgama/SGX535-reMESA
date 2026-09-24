@@ -1,0 +1,87 @@
+{
+  "sources": [
+    {
+      "path": "/tmp/sgx535-pairing/psb-kmod-4.41.1-10.fc11.10/psb-kernel-source-4.41.1/drm_drv.c",
+      "sha256": "1d1a3513361b759b2cce23b5241b8079a4f360db649ae77b8068eed3a99b1c60",
+      "lines": "607-659",
+      "identity": "psb-kernel-source-4.41.1 bundled DRM core",
+      "provenance_index": "../xpsb-re/version-pairing.md;../xpsb-re/source-provenance.md",
+      "scope": "candidate source; exact ELF pairing INFERRED"
+    },
+    {
+      "path": "/tmp/sgx535-pairing/psb-kmod-4.41.1-10.fc11.10/psb-kernel-source-4.41.1/psb_regman.c",
+      "sha256": "5c0dffcb62a8bdc20e117769d3ac6dc66990ebf8754398b4d0cbed4dd74755d3",
+      "lines": "42-118",
+      "identity": "psb-kernel-source-4.41.1",
+      "provenance_index": "../xpsb-re/version-pairing.md;../xpsb-re/source-provenance.md",
+      "scope": "candidate source; exact ELF pairing INFERRED"
+    },
+    {
+      "path": "/tmp/sgx535-pairing/psb-kmod-4.41.1-10.fc11.10/psb-kernel-source-4.41.1/psb_sgx.c",
+      "sha256": "f17805b4a8959c064e222255baa5c885366c1970630b655dea04047daec79d02",
+      "lines": "631-787;1014-1088;1237-1435",
+      "identity": "psb-kernel-source-4.41.1",
+      "provenance_index": "../xpsb-re/version-pairing.md;../xpsb-re/source-provenance.md",
+      "scope": "candidate source; exact ELF pairing INFERRED"
+    },
+    {
+      "path": "/tmp/sgx535-pairing/psb-kmod-4.41.1-10.fc11.10/psb-kernel-source-4.41.1/psb_xhw.c",
+      "sha256": "73783fad6b072b655d50386621d09d7fe6f4cdd896cb991ed0258a2494330fc1",
+      "lines": "42-63;146-175;416-460",
+      "identity": "psb-kernel-source-4.41.1",
+      "provenance_index": "../xpsb-re/version-pairing.md;../xpsb-re/source-provenance.md",
+      "scope": "candidate source; exact ELF pairing INFERRED"
+    },
+    {
+      "path": "/tmp/sgx535-pairing/psb-kmod-4.41.1-10.fc11.10/psb-kernel-source-4.41.1/psb_schedule.c",
+      "sha256": "1a139a24cfbd6593e7a6c71315bd63d5ea649fda712555dc34ae30650f24eeca",
+      "lines": "199;313-328;1230-1294",
+      "identity": "psb-kernel-source-4.41.1",
+      "provenance_index": "../xpsb-re/version-pairing.md;../xpsb-re/source-provenance.md",
+      "scope": "candidate source; exact ELF pairing INFERRED"
+    },
+    {
+      "path": "/tmp/sgx535-libdrm-psb/libdrm-2.3.0/libdrm/xf86mm.h",
+      "sha256": "b3b96179db78e92f2952ce797beef7f74899ab9479a2ea41438d2385477a6fb7",
+      "lines": "97-106",
+      "identity": "libdrm-poulsbo 2.3.0 source",
+      "provenance_index": "../xpsb-re/version-pairing.md;../xpsb-re/source-provenance.md",
+      "scope": "candidate source; exact ELF pairing INFERRED"
+    },
+    {
+      "path": "/tmp/sgx535-libdrm-psb/libdrm-2.3.0/libdrm/xf86drm.c",
+      "sha256": "5db8e444c64af12dd88b24440e84c8c508bac9fdee38c76dd19d21f4a4a11587",
+      "lines": "2413-2425;2546-2578",
+      "identity": "libdrm-poulsbo 2.3.0 source",
+      "provenance_index": "../xpsb-re/version-pairing.md;../xpsb-re/source-provenance.md",
+      "scope": "candidate source; exact ELF pairing INFERRED"
+    },
+    {
+      "path": "/tmp/sgx535-libdrm-psb/libdrm-2.3.0/shared-core/drm.h",
+      "sha256": "e4e0c5dce5558d4aa09f33fa236832e354275ccc1612a7c4a1a906758bb51f41",
+      "lines": "642-652;1097-1104",
+      "identity": "libdrm-poulsbo 2.3.0 source",
+      "provenance_index": "../xpsb-re/version-pairing.md;../xpsb-re/source-provenance.md",
+      "scope": "candidate source; exact ELF pairing INFERRED"
+    },
+    {
+      "path": "/tmp/sgx535-pairing/psb-kmod-4.41.1-10.fc11.10/psb-kernel-source-4.41.1/psb_drm.h",
+      "sha256": "b4aeb1f85c5609c5811447f2c1ea691a4dbaedb439955df507b51b8302769494",
+      "lines": "265-273;293-363",
+      "identity": "psb-kernel-source-4.41.1",
+      "provenance_index": "../xpsb-re/version-pairing.md;../xpsb-re/source-provenance.md",
+      "scope": "candidate source; exact ELF pairing INFERRED"
+    },
+    {
+      "path": "/tmp/sgx535-pairing/psb-kmod-4.41.1-10.fc11.10/psb-kernel-source-4.41.1/psb_scene.c",
+      "sha256": "07309f6a189eb0ede64aaa98e7fbd858f44314256e2262226f48ba33d9b7528e",
+      "lines": "128-132",
+      "identity": "psb-kernel-source-4.41.1",
+      "provenance_index": "../xpsb-re/version-pairing.md;../xpsb-re/source-provenance.md",
+      "scope": "candidate source; exact ELF pairing INFERRED"
+    }
+  ],
+  "binary_sha256": "74ca42991906741ee91be1bc088ae0b142fa71b6a85658c5dad0851ce50dd0d8",
+  "hardware_access": false,
+  "historical_binary_execution": false
+}

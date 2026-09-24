@@ -1,0 +1,13 @@
+name,name_string_elf_va,pointer_section,pointer_elf_va,pointer_file_offset,following_u32,in_confirmed_extension_arrays
+DRI_GetDrawableInfo,0x00256990,,,,,NO
+DRI_Damage,0x002569a4,,,,,NO
+DRI_SystemTime,0x002569af,,,,,NO
+DRI_DRI2Loader,0x002569be,,,,,NO
+DRI_ReadDrawable,0x002569e8,.data.rel.ro,0x002b324c,0x2b224c,1,YES
+DRI_MediaStreamCounter,0x002569f9,.data.rel.ro,0x002b3254,0x2b2254,1,YES
+DRI_CopySubBuffer,0x00256a10,.data.rel.ro,0x002b3264,0x2b2264,1,YES
+DRI_SwapControl,0x00256a22,.data.rel.ro,0x002b3270,0x2b2270,1,YES
+DRI_Core,0x00256a32,.data.rel.ro,0x002b9620,0x2b8620,1,YES
+DRI_Legacy,0x00256a3b,.data.rel.ro,0x002b3280,0x2b2280,1,YES
+DRI_DRI2,0x00256a46,.data.rel.ro,0x002b3294,0x2b2294,1,YES
+DRI_FrameTracking,0x00256a4f,.data.rel.ro,0x002b32a8,0x2b22a8,1,YES

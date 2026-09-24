@@ -1,0 +1,18 @@
+# SGX, PDS and USSE evidence — checkpoint F
+
+This historical binary contains more than DRI glue and a 2D blitter. Binary string references and selected function bodies show Poulsbo-specific scene, TA, program and shader paths. They do **not** prove that this file alone can initialize the SGX535 or that the code matches any particular physical core revision.
+
+| evidence | supported conclusion | limit |
+|---|---|---|
+| `psb_use_compiler.c` references in `0x00034ce4` and `0x0003503d`; both invoke a large compiler path and copy result fields to driver structures | CONFIRMED: userspace prepares compiled program results, including instruction/result metadata | Actual compiler target revision and complete encoding remain UNKNOWN |
+| `usc/hw.c` assertions in `0x001fb7af`; the function allocates output space, calls encoder/generator helpers, and checks generated USSE instruction counts | CONFIRMED: this ELF contains a USC/USSE code-generation path, not just an external compiler import | No full ISA specification or hardware validation follows; decompiled implementation is evidence only |
+| `psb_vs.c` function `0x00040355` constructs a vertex/PDS-related program, reserves an output block, invokes helper `0x000381a0`, records relocations and emits fixed words | CONFIRMED: a Poulsbo vertex-program upload path is present; code and data are assembled into a driver-managed output buffer | Exact PDS instruction meaning, target SGX revision, and execution path remain UNKNOWN |
+| `0x00030ffd` reserves and zeroes a variable-length 8-byte-word buffer; `0x00030fb7` finalizes it; `0x0002fabd` identifies the slots as `psb_use.c`/`use_next_inst` instructions | CONFIRMED: userspace generates USE/USSE instruction bytes; `0x00040355` also creates a separate PDS-related vertex output block | A complete USE/USSE or PDS encoding and all call-site variants remain UNKNOWN; this corrects the earlier PDS label (P7F-003) |
+| `psb_ta.c` functions `0x0003b606` and `0x0003b73b` emit compact state words and assert PDS data alignment | CONFIRMED: TA state construction refers to a PDS program/data area | An assertion is not a full PDS encoding contract |
+| `psb_scene*.c`, `psb_render.c`, `psb_state_*`, `psb_use*.c`, `psb_ps_*` strings have multiple function XREFs | CONFIRMED: these source names are embedded and help locate driver code | String proximity alone does not classify every nearby stripped function |
+
+The USC evidence is strongest for **generated** USSE code. The vertex path also generates USE/USSE instructions and a PDS-related output block; the [bounded trace](bounded-path-closure.md) separates them. A static, bounded GPU program or microkernel blob has **not** been identified and traced through an upload call. Embedded tables and constants are numerous, but no specific table has yet met the address/size/XREF/upload-path test for a named GPU program. The answer for static microcode is UNKNOWN, rather than “none.”
+
+The library directly names only the six [DT_NEEDED dependencies](binary-inventory.md), none a PowerVR Services library. That supports the narrow statement that the observed compiler and command routines are inside this ELF. It does not show that the ELF alone supplies kernel initialization, a microkernel, or every historical X-server/DRM component. In particular, it does not validate TI/OMAP Services initialization material for Poulsbo.
+
+The clean implementation boundary is a new specification extracted from independently checked structures, values and behavior. The decompiled proprietary body is not a template to copy into Mesa. No PDS, USSE or other GPU code was executed here.

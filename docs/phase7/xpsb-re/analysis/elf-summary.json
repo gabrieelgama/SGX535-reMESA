@@ -1,0 +1,245 @@
+{
+  "binary": "references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/drivers/Xpsb.so",
+  "sha256": "da531587b1ec59fe433fa20ddd2e691b2f8b7fb35bb82525d4db99259c5e571f",
+  "bytes": 58888,
+  "elf": {
+    "class": "ELF32",
+    "endian": "little",
+    "machine": "Intel 80386",
+    "type": "DYN"
+  },
+  "program_headers": [
+    {
+      "type": 1,
+      "offset": 0,
+      "vaddr": 0,
+      "paddr": 0,
+      "filesz": 56144,
+      "memsz": 56144,
+      "flags": 5,
+      "align": 4096
+    },
+    {
+      "type": 1,
+      "offset": 57048,
+      "vaddr": 61144,
+      "paddr": 61144,
+      "filesz": 708,
+      "memsz": 740,
+      "flags": 6,
+      "align": 4096
+    },
+    {
+      "type": 2,
+      "offset": 57068,
+      "vaddr": 61164,
+      "paddr": 61164,
+      "filesz": 216,
+      "memsz": 216,
+      "flags": 6,
+      "align": 4
+    },
+    {
+      "type": 1685382481,
+      "offset": 0,
+      "vaddr": 0,
+      "paddr": 0,
+      "filesz": 0,
+      "memsz": 0,
+      "flags": 6,
+      "align": 4
+    },
+    {
+      "type": 1685382482,
+      "offset": 57048,
+      "vaddr": 61144,
+      "paddr": 61144,
+      "filesz": 296,
+      "memsz": 296,
+      "flags": 4,
+      "align": 1
+    }
+  ],
+  "sections": {
+    "": {
+      "type": 0,
+      "addr": 0,
+      "offset": 0,
+      "size": 0,
+      "entsize": 0
+    },
+    ".hash": {
+      "type": 5,
+      "addr": 212,
+      "offset": 212,
+      "size": 1184,
+      "entsize": 4
+    },
+    ".gnu.hash": {
+      "type": 1879048182,
+      "addr": 1396,
+      "offset": 1396,
+      "size": 944,
+      "entsize": 4
+    },
+    ".dynsym": {
+      "type": 11,
+      "addr": 2340,
+      "offset": 2340,
+      "size": 2608,
+      "entsize": 16
+    },
+    ".dynstr": {
+      "type": 3,
+      "addr": 4948,
+      "offset": 4948,
+      "size": 2604,
+      "entsize": 0
+    },
+    ".gnu.version": {
+      "type": 1879048191,
+      "addr": 7552,
+      "offset": 7552,
+      "size": 326,
+      "entsize": 2
+    },
+    ".gnu.version_r": {
+      "type": 1879048190,
+      "addr": 7880,
+      "offset": 7880,
+      "size": 144,
+      "entsize": 0
+    },
+    ".rel.dyn": {
+      "type": 9,
+      "addr": 8024,
+      "offset": 8024,
+      "size": 152,
+      "entsize": 8
+    },
+    ".rel.plt": {
+      "type": 9,
+      "addr": 8176,
+      "offset": 8176,
+      "size": 432,
+      "entsize": 8
+    },
+    ".init": {
+      "type": 1,
+      "addr": 8608,
+      "offset": 8608,
+      "size": 48,
+      "entsize": 0
+    },
+    ".plt": {
+      "type": 1,
+      "addr": 8656,
+      "offset": 8656,
+      "size": 880,
+      "entsize": 4
+    },
+    ".text": {
+      "type": 1,
+      "addr": 9536,
+      "offset": 9536,
+      "size": 43016,
+      "entsize": 0
+    },
+    ".fini": {
+      "type": 1,
+      "addr": 52552,
+      "offset": 52552,
+      "size": 28,
+      "entsize": 0
+    },
+    ".rodata": {
+      "type": 1,
+      "addr": 52608,
+      "offset": 52608,
+      "size": 3530,
+      "entsize": 0
+    },
+    ".eh_frame": {
+      "type": 1,
+      "addr": 56140,
+      "offset": 56140,
+      "size": 4,
+      "entsize": 0
+    },
+    ".ctors": {
+      "type": 1,
+      "addr": 61144,
+      "offset": 57048,
+      "size": 8,
+      "entsize": 0
+    },
+    ".dtors": {
+      "type": 1,
+      "addr": 61152,
+      "offset": 57056,
+      "size": 8,
+      "entsize": 0
+    },
+    ".jcr": {
+      "type": 1,
+      "addr": 61160,
+      "offset": 57064,
+      "size": 4,
+      "entsize": 0
+    },
+    ".dynamic": {
+      "type": 6,
+      "addr": 61164,
+      "offset": 57068,
+      "size": 216,
+      "entsize": 8
+    },
+    ".got": {
+      "type": 1,
+      "addr": 61380,
+      "offset": 57284,
+      "size": 48,
+      "entsize": 4
+    },
+    ".got.plt": {
+      "type": 1,
+      "addr": 61428,
+      "offset": 57332,
+      "size": 228,
+      "entsize": 4
+    },
+    ".data": {
+      "type": 1,
+      "addr": 61664,
+      "offset": 57568,
+      "size": 188,
+      "entsize": 0
+    },
+    ".bss": {
+      "type": 8,
+      "addr": 61852,
+      "offset": 57756,
+      "size": 32,
+      "entsize": 0
+    },
+    ".shstrtab": {
+      "type": 3,
+      "addr": 0,
+      "offset": 57756,
+      "size": 172,
+      "entsize": 0
+    }
+  },
+  "needed": [
+    "libpthread.so.0",
+    "libc.so.6"
+  ],
+  "counts": {
+    "dynamic_symbols": 163,
+    "imports": 59,
+    "exports": 103,
+    "relocations": 73,
+    "filtered_strings": 85
+  },
+  "address_convention": "ELF VA; Ghidra image base is separately checked; file offsets are separately recorded"
+}
