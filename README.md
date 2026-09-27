@@ -125,22 +125,17 @@ until evidence explains them.
 > ⚠️ **SGX535-reMESA is not yet a functional Mesa driver.**
 
 ```text
-Source archaeology         ████████████████████  ✓
-Poulsbo reconstruction     ████████████████████  ✓
-Passive hardware probe     ████████████████████  ✓
-Safe MMIO validation       ░░░░░░░░░░░░░░░░░░░░
-Active SGX bring-up        ░░░░░░░░░░░░░░░░░░░░
-Command submission         ░░░░░░░░░░░░░░░░░░░░
-First triangle             ░░░░░░░░░░░░░░░░░░░░
-Mesa                       ░░░░░░░░░░░░░░░░░░░░
+Phase 1     ████████████████████  ✓
+Phase 2     ████████████████████  ✓
+Phase 3     ████████████████████  ✓
+Phase 4     ████████████████████  ✓
+Phase 5     ████████████████████  ✓
+Phase 6     ████████████████████  ✓
+Phase 7     ██████████████████░░
+Phase 8     ░░░░░░░░░░░░░░░░░░░░
 ````
 
-A real Poulsbo machine has reached the passive hardware-inventory
-stage. (Dell Inspiron 1210)
-
-**No undocumented MMIO write is considered acceptable simply because
-an address looks plausible.**
-
+OBS: phase 8 is mesa
 ---
 
 ## 🖥️ Initial target
