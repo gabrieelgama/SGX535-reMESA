@@ -251,17 +251,33 @@ We currently use AI to assist with some research and documentation creation, but
 
 <details>
 <summary><b>📱 Wait... where is this being developed?</b></summary>
+# PRoot Is Not a Neofetch Screenshot Anymore
 
-<br>
+This project is being developed entirely from a **Samsung Galaxy Tab S7**, running an ARM64 Linux userspace through **PRoot**, with **Anland-Termux/Wayland** on Android.
 
-Entirely from a **Samsung Galaxy Tab S7** running an ARM64 Linux
-userspace through **PRoot**, using **Anland-Termux/Wayland** on Android.
+PRoot used to be the thing you installed to run `neofetch`, take a screenshot, and say:
 
-Yes.
+> “Look, Linux on Android.”
 
-The development machine trying to resurrect a 2008 PowerVR GPU
-is an Android tablet.
+Not anymore.
 
-**bro.**
+This environment is now being used for:
 
+- PowerVR SGX535 reverse engineering
+- PSB DRI reconstruction
+- Linux graphics-driver development
+- command-stream and hardware-state analysis
+- PDS/USE investigation
+- experimental 3D hardware bring-up
+- attempting to produce a hardware-accelerated frozen triangle on a GPU from 2008
+
+The host is an **ARM64 Android tablet**.
+
+The target is an **i686 Intel Atom/Poulsbo machine**.
+
+The development environment is **PRoot**.
+
+**PRoot is a workstation now.**
+
+bro.
 </details>
