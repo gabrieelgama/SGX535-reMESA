@@ -20,7 +20,7 @@
 
 ---
 ## Actual phase
-Actual phase: Phase 7 — PSB DRI reverse engineering / frozen-triangle bring-up (FG-02, PDS backing-provider proof).
+**Actual phase:** Phase 7 — PSB DRI reverse engineering / hardware-accelerated frozen-triangle bring-up (FG-02, PDS backing-provider proof).
 
 ## 🎯 What is SGX535-reMESA?
 
