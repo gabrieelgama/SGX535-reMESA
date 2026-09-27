@@ -12,9 +12,9 @@
 ![Linux](https://img.shields.io/badge/Linux-gma500-yellow)
 ![Mesa](https://img.shields.io/badge/Mesa-long--term%20goal-purple)
 
-> **We don't have the SGX535 programming manual.**
+> **We don't have the SGX535 programming manual (AND DRIVER).**
 >
-> **So we're reconstructing one.**
+> **So we're reconstructing one. (including the driver, YES)**
 
 </div>
 
