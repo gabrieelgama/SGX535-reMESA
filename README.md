@@ -251,7 +251,7 @@ We currently use AI to assist with some research and documentation creation, but
 
 <details>
 <summary><b>📱 Wait... where is this being developed?</b></summary>
-# PRoot Is Not a Neofetch Screenshot Anymore
+PRoot Is Not a Neofetch Screenshot Anymore
 
 This project is being developed entirely from a **Samsung Galaxy Tab S7**, running an ARM64 Linux userspace through **PRoot**, with **Anland-Termux/Wayland** on Android.
 
