@@ -40,8 +40,23 @@ public source code, historical drivers, documentation and carefully
 controlled observations of real hardware.
 
 ### REAL TIME UPDATE
-Poulsbo original CORE-ID is: CORE_ID=0x01130000
-CORE_REVISION = 0x00010201 (fields 1 / 2 / 1) edit: YESSSSSSSS ITS REV121
+The original Poulsbo hardware has now answered directly:
+
+**CORE_ID:** `0x01130000`  
+**CORE_REVISION:** `0x00010201`
+
+The observed `CORE_REVISION` decodes to:
+
+- Major: `1`
+- Minor: `2`
+- Maintenance: `1`
+
+**Yes — the physical Poulsbo SGX535 is rev121. 🎉**
+
+These values were obtained from controlled MMIO observations on original
+Intel Poulsbo / GMA 500 hardware.
+
+edit: YESSSSSSSS IT'S REV121
 ---
 
 ## 💡 Why?
