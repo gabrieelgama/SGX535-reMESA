@@ -39,6 +39,9 @@ So this project attempts to reconstruct that knowledge from surviving
 public source code, historical drivers, documentation and carefully
 controlled observations of real hardware.
 
+### REAL TIME UPDATE
+Poulsbo original CORE-ID is: CORE_ID=0x01130000
+
 ---
 
 ## 💡 Why?
