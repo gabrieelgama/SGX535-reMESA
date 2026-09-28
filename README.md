@@ -41,7 +41,7 @@ controlled observations of real hardware.
 
 ### REAL TIME UPDATE
 Poulsbo original CORE-ID is: CORE_ID=0x01130000
-CORE_REVISION = 0x00010201 (fields 1 / 2 / 1)
+CORE_REVISION = 0x00010201 (fields 1 / 2 / 1) edit: YESSSSSSSS ITS REV121
 ---
 
 ## 💡 Why?
