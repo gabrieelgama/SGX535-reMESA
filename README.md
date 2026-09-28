@@ -182,8 +182,8 @@ The reconstructed technical reference lives in [`docs/`](docs/).
 * [x] 🧩 Reconstruct Poulsbo-specific integration
 * [x] 📚 Build a traceable evidence model
 * [x] 🖥️ Begin passive validation on real hardware
-* [ ] 🔓 Establish the first demonstrably safe SGX register read
-* [ ] 🔬 Identify the physical SGX revision
+* [x] 🔓 Establish the first demonstrably safe SGX register read
+* [x] 🔬 Identify the physical SGX revision
 * [ ] ⚡ Controlled SGX bring-up
 * [ ] 🚚 Command submission
 * [ ] 🧪 First userspace GPU workload
