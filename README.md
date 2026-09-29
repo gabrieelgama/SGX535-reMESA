@@ -1,296 +1,514 @@
 <div align="center">
 
-# SGX535-reMESA Project
+# SGX535-reMESA
 
-### Reconstructing the PowerVR SGX535, one surviving piece of evidence at a time.
+### Reverse engineering a PowerVR SGX535 because apparently nobody stopped me.
 
-**Reverse engineering · Linux · Mesa**
+**Reverse engineering · Linux · Mesa · old GPU suffering**
 
 ![Status](https://img.shields.io/badge/status-research%20%2F%20bring--up-orange)
 ![GPU](https://img.shields.io/badge/GPU-PowerVR%20SGX535-blue)
 ![Platform](https://img.shields.io/badge/platform-Intel%20Poulsbo-lightgrey)
 ![Linux](https://img.shields.io/badge/Linux-gma500-yellow)
-![Mesa](https://img.shields.io/badge/Mesa-long--term%20goal-purple)
+![Mesa](https://img.shields.io/badge/Mesa-eventually™-purple)
 
-> **We don't have the SGX535 programming manual (AND MODERN DRIVER).**
+> **We don't have the SGX535 programming manual.**
 >
-> **So we're reconstructing one. (including the driver, YES)**
+> **We also don't have a modern driver.**
+>
+> So we're figuring it out ourselves.
+>
+> yes, including the driver.
 
 </div>
 
 ---
-## Actual phase
-**Actual phase:** Phase 7 — PSB DRI reverse engineering / hardware-accelerated frozen-triangle bring-up (FG-02, PDS backing-provider proof).
 
-## 🎯 What is SGX535-reMESA?
+## Current phase
 
-**SGX535-reMESA** is a reverse-engineering, documentation and
-hardware-preservation project for the **PowerVR SGX535**, initially
-focused on the **Intel Poulsbo / GMA 500** implementation.
+**Phase 7 — PSB DRI reverse engineering / frozen-triangle bring-up**
 
-The long-term objective is slightly ridiculous:
+Current problem:
 
-### 🐧 PowerVR SGX535 + Mesa
+```text
+PDS program:     reproducible
+PDS data/state:  pain
+GPU:             alive
+triangle:        not yet
+```
 
-The original programming documentation required to implement a modern
-open-source driver is not publicly available in sufficient detail.
+Current focus: **FG-02 — PDS backing-provider proof.**
 
-So this project attempts to reconstruct that knowledge from surviving
-public source code, historical drivers, documentation and carefully
-controlled observations of real hardware.
-
-### REAL TIME UPDATE
-The original Poulsbo hardware has now answered directly:
-
-**CORE_ID:** `0x01130000`  
-**CORE_REVISION:** `0x00010201`
-
-The observed `CORE_REVISION` decodes to:
-
-- Major: `1`
-- Minor: `2`
-- Maintenance: `1`
-
-**Yes — the physical Poulsbo SGX535 is rev121. 🎉**
-
-These values were obtained from controlled MMIO observations on original
-Intel Poulsbo / GMA 500 hardware.
-
-edit: YESSSSSSSS IT'S REV121
----
-
-## 💡 Why?
-
-Intel Poulsbo systems — including Atom Z5xx machines — contain a
-**PowerVR SGX535** GPU.
-
-Linux still supports their display hardware through the `gma500`
-DRM/KMS driver.
-
-What it does **not** have is a modern open-source SGX535 3D driver.
-
-> The machines still exist.  
-> The GPUs still exist.  
-> **The knowledge required to use them should not disappear.**
+The historical PDS program can now be reproduced, but some launch-state details still need to be accounted for before doing anything funny on the real GPU.
 
 ---
 
-## 🏺 Digital archaeology
+# What is this?
 
-Historical investigation has recovered substantially more information
-than initially expected.
+**SGX535-reMESA** is a reverse-engineering and driver-development project for the **PowerVR SGX535**, initially focused on the version inside **Intel Poulsbo / GMA 500** systems.
+
+The objective:
+
+```text
+SGX535
+   ↓
+Linux
+   ↓
+Mesa
+   ↓
+  🔺
+```
+
+Yes.
+
+We're doing all of this for a triangle.
+
+The SGX535 documentation needed to write a modern open-source driver is not publicly available in enough detail, so the project is reconstructing it from:
+
+- historical source code
+- old drivers
+- surviving documentation
+- register definitions
+- Linux sources
+- command/state analysis
+- real hardware
+- questionable amounts of `grep`
+
+---
+
+# THE GPU SPOKE
+
+Historical Poulsbo DDK material pointed strongly toward **SGX535 rev121**.
+
+But eventually we stopped asking old source code and asked the actual GPU.
+
+Controlled MMIO reads on original Poulsbo hardware returned:
+
+```text
+CORE_ID       = 0x01130000
+CORE_REVISION = 0x00010201
+```
+
+Decode:
+
+```text
+Major       = 1
+Minor       = 2
+Maintenance = 1
+```
+
+So the tested physical SGX535 is:
+
+# rev121
+
+yes.
+
+**YESSSSSSS IT'S REV121**
+
+Several days of archaeology were defeated by two `readl()`s.
+
+> This confirms rev121 on the tested machine. It does not automatically mean every Poulsbo SGX535 ever manufactured is rev121.
+
+---
+
+# Why?
+
+Poulsbo machines contain an actual **PowerVR SGX535**.
+
+Linux still supports the display side through `gma500`.
+
+3D acceleration, however:
+
+```text
+Linux:   display works 👍
+SGX535:  hello
+Mesa:    who are you
+```
+
+There is no modern open-source SGX535 3D driver.
+
+So that's what this project is trying to fix.
+
+Eventually™.
+
+---
+
+# Digital archaeology
+
+We have recovered a surprising amount of stuff.
 
 | Area | Status |
 |---|:---:|
 | SGX535 register definitions | ✅ |
 | Poulsbo DDK target | ✅ |
-| SGX535 rev121 historical target | ✅ |
-| MMU / BIF | ✅ Partial |
-| Power / reset | 🟡 Research |
-| Interrupts | 🟡 Research |
-| USE / USSE | 🟡 Partial |
-| PDS | 🟡 Partial |
-| Command submission | 🟡 Partial |
+| Historical rev121 target | ✅ |
+| Physical rev121 observation | ✅ |
+| MMU / BIF | 🟡 |
+| Power / reset | 🟡 |
+| Interrupts | 🟡 |
+| USE / USSE | 🟡 |
+| PDS | 🟡 |
+| Command submission | 🟡 |
 | Shader ISA | ❓ |
 | Microkernel | ❓ |
-| Safe active hardware bring-up | 🔒 Blocked |
-| First triangle | ⏳ |
-| Mesa driver | 🌌 Long-term |
+| Safe active bring-up | 🔒 |
+| Triangle | where |
+| Mesa driver | 💀 |
 
-Historical evidence includes:
+Useful historical material includes:
 
-- 📜 `sgx535defs.h`
-- 🖥️ `pc_i686_poulsbo_d0_linux`
-- 🧩 `services4/system/poulsbo`
-- 🧠 SGX535 register definitions
-- 🗺️ MMU/BIF information
-- ⚙️ USE/USSE and PDS definitions
-- 📬 host ↔ SGX communication structures
-- 🚚 historical command-submission infrastructure
-- 🐧 correlations with Linux `gma500`
+- `sgx535defs.h`
+- `pc_i686_poulsbo_d0_linux`
+- `services4/system/poulsbo`
+- SGX register definitions
+- MMU / BIF definitions
+- PDS / USE material
+- host ↔ SGX structures
+- command-submission code
+- Linux `gma500`
+- various ancient files that somehow survived until 2026
 
 ---
 
-## 🔎 Evidence policy
+# Evidence policy
 
-> **Evidence beats assumptions.**
+The main rule is:
 
-Undocumented hardware makes it extremely easy to turn a plausible
-guess into fake documentation.
+> **If we don't know, we don't know.**
 
-Every important finding is therefore classified as:
+No `0xDEADBEEF` archaeology where somebody looks at three bits and declares:
+
+> obviously this means `ENABLE_TRIANGLE_ENGINE`
+
+Findings are classified as:
 
 | | Classification | Meaning |
 |---|---|---|
-| 🟢 | **CONFIRMED** | Directly supported by traceable evidence |
-| 🟡 | **INFERRED** | Strongly suggested, but not directly established |
-| ⚫ | **UNKNOWN** | Insufficient evidence — nothing is invented |
+| 🟢 | **CONFIRMED** | Evidence actually says this |
+| 🟡 | **INFERRED** | Probably, but calm down |
+| ⚫ | **UNKNOWN** | ¯\\_(ツ)_/¯ |
 
-Where possible, claims reference the exact **repository, commit, file,
-line range, document revision or hardware observation**.
+Claims should ideally point to an exact:
 
-### `UNKNOWN` is a valid result.
+- repository
+- commit
+- file
+- line
+- document
+- experiment
+- hardware observation
 
-Conflicting historical implementations remain documented as conflicts
-until evidence explains them.
+### `UNKNOWN` is allowed.
 
----
+Making something up because it would make the documentation look more complete is not.
 
-## 🚦 Current status
-
-**Research / early bring-up**
-
-> ⚠️ **SGX535-reMESA is not yet a functional Mesa driver.**
+If an unexplained dword works, it remains:
 
 ```text
-Phase 1     ████████████████████  ✓
-Phase 2     ████████████████████  ✓
-Phase 3     ████████████████████  ✓
-Phase 4     ████████████████████  ✓
-Phase 5     ████████████████████  ✓
-Phase 6     ████████████████████  ✓
-Phase 7     ████████████████████  ✓
-Phase 8     ░░░░░░░░░░░░░░░░░░░░
-````
+mysterious_dword_that_works
+```
 
-OBS: phase 8 is mesa
----
-
-## 🖥️ Initial target
-
-|    | Component        | Target             |
-| -- | ---------------- | ------------------ |
-| 🧩 | Platform         | Intel Poulsbo      |
-| 💾 | Chipset          | Intel US15W family |
-| 🎮 | Graphics         | Intel GMA 500      |
-| 🔷 | GPU              | PowerVR SGX535     |
-| ⚙️ | CPU family       | Intel Atom Z5xx    |
-| 🐧 | Operating system | Linux              |
-
-> **Important:** historical DDK evidence identifies a Poulsbo target
-> configured for **SGX535 rev121**. This does not by itself prove that
-> every physical Poulsbo SGX535 contains that revision.
+until we actually know what it does.
 
 ---
 
-## 📚 Documentation
+# Current status
 
-The reconstructed technical reference lives in [`docs/`](docs/).
+> **This is not a working Mesa driver yet. Do not install it expecting Minecraft.**
 
-| Document                                                     | Subject                     |
-| ------------------------------------------------------------ | --------------------------- |
-| 🧠 [`architecture.md`](docs/architecture.md)                 | SGX architecture            |
-| 🗃️ [`registers.md`](docs/registers.md)                      | Register map                |
-| 🗺️ [`mmu-bif.md`](docs/mmu-bif.md)                          | MMU / BIF                   |
-| 🚚 [`command-submission.md`](docs/command-submission.md)     | Command submission          |
-| ⚙️ [`usse.md`](docs/usse.md)                                 | USE / USSE / PDS            |
-| 🤖 [`firmware.md`](docs/firmware.md)                         | Firmware / microkernel      |
-| 🐧 [`gma500-current-state.md`](docs/gma500-current-state.md) | Modern Linux                |
-| 🏺 [`poulsbo-evidence.md`](docs/poulsbo-evidence.md)         | Historical Poulsbo evidence |
-| 🧩 [`sgx535-missing-files.md`](docs/sgx535-missing-files.md) | Missing components          |
-| ❓ [`unknowns.md`](docs/unknowns.md)                          | Open questions              |
+```text
+Phase 1   ████████████████████   ✓
+Phase 2   ████████████████████   ✓
+Phase 3   ████████████████████   ✓
+Phase 4   ████████████████████   ✓
+Phase 5   ████████████████████   ✓
+Phase 6   ████████████████████   ✓
+Phase 7   ███████████████░░░░░   doing GPU archaeology
+Phase 8   ░░░░░░░░░░░░░░░░░░░░   Mesa 💀
+```
 
----
+Things Phase 7 has already produced:
 
-## 🗺️ Roadmap
+- real hardware MMIO access
+- `CORE_ID`
+- `CORE_REVISION`
+- physical rev121 confirmation
+- historical PDS reconstruction
+- reproducible PDS program words
+- considerably more knowledge about Poulsbo than was probably healthy
 
-* [x] 🏺 Recover historical SGX535 material
-* [x] 🔍 Identify the historical Poulsbo SGX target
-* [x] 🧠 Reconstruct major register/MMU/BIF information
-* [x] 🧩 Reconstruct Poulsbo-specific integration
-* [x] 📚 Build a traceable evidence model
-* [x] 🖥️ Begin passive validation on real hardware
-* [x] 🔓 Establish the first demonstrably safe SGX register read
-* [x] 🔬 Identify the physical SGX revision
-* [ ] ⚡ Controlled SGX bring-up
-* [ ] 🚚 Command submission
-* [ ] 🧪 First userspace GPU workload
-* [ ] 🔺 **First triangle**
-* [ ] 🐧 Minimal Mesa/Gallium driver
-* [ ] 🎮 Expand OpenGL support
+Current blocker:
 
----
+```text
+Can we account for the relevant launch state
+before telling a 2008 GPU to execute something?
+```
 
-## 🧬 Why `reMESA`?
+Until the answer is sufficiently convincing:
 
-After years without modern open-source Linux 3D acceleration, the
-ridiculous long-term objective is:
-
-<div align="center">
-
-### SGX535
-
-### ↓
-
-### Mesa
-
-### ↓
-
-### 🔺
-
-**Yes. The triangle.**
-
-</div>
+**no funny writes.**
 
 ---
 
-## 🤝 Contributing
+# Initial target
 
-Historical documentation is extremely valuable.
-
-Contributions involving SGX535, Poulsbo, PSB, EMGD, PowerVR Services,
-Mesa/Gallium, ISA research, provenance checking and documentation
-translation are welcome.
-
-**Please distinguish evidence from inference.**
+| Component | Target |
+|---|---|
+| Platform | Intel Poulsbo |
+| Chipset | Intel US15W |
+| Graphics | Intel GMA 500 |
+| GPU | PowerVR SGX535 |
+| Revision | rev121 on tested hardware |
+| CPU | Intel Atom Z5xx |
+| OS | Linux |
+| Age | ancient |
+| Will to live | unknown |
 
 ---
 
-## ⚖️ Disclaimer
+# Documentation
 
-This is an independent preservation and reverse-engineering research
-project.
+Actual technical documentation lives in [`docs/`](docs/).
 
-It is not affiliated with or endorsed by Imagination Technologies,
-Intel, Texas Instruments, Mesa, or the Linux kernel project.
+| Document | Subject |
+|---|---|
+| [`architecture.md`](docs/architecture.md) | SGX architecture |
+| [`registers.md`](docs/registers.md) | Registers |
+| [`mmu-bif.md`](docs/mmu-bif.md) | MMU / BIF |
+| [`command-submission.md`](docs/command-submission.md) | Command submission |
+| [`usse.md`](docs/usse.md) | USE / USSE / PDS |
+| [`firmware.md`](docs/firmware.md) | Firmware / microkernel |
+| [`gma500-current-state.md`](docs/gma500-current-state.md) | Current Linux situation |
+| [`poulsbo-evidence.md`](docs/poulsbo-evidence.md) | Poulsbo archaeology |
+| [`sgx535-missing-files.md`](docs/sgx535-missing-files.md) | Things the internet ate |
+| [`unknowns.md`](docs/unknowns.md) | ??? |
 
-Third-party source code remains subject to its respective licenses.
+---
 
-## ⚠️ important observation
-We currently use AI to assist with some research and documentation creation, but all facts are human-checked.
+# Roadmap
 
+- [x] Find ancient SGX535 stuff
+- [x] Find more ancient SGX535 stuff
+- [x] Realize there is a *lot* of ancient SGX535 stuff
+- [x] Identify Poulsbo DDK target
+- [x] Reconstruct registers
+- [x] Reconstruct MMU / BIF
+- [x] Reconstruct Poulsbo integration
+- [x] Build evidence tracking
+- [x] Touch real hardware
+- [x] Read SGX registers without exploding anything
+- [x] Read `CORE_ID`
+- [x] Read `CORE_REVISION`
+- [x] Discover that yes, it really is rev121
+- [ ] Finish launch-state reconstruction
+- [ ] Controlled SGX bring-up
+- [ ] Command submission
+- [ ] Make GPU do literally anything useful
+- [ ] 🔺 **TRIANGLE**
+- [ ] Mesa/Gallium driver
+- [ ] OpenGL
+- [ ] Minecraft on GMA 500 because it would be funny
+
+---
+
+# Why `reMESA`?
+
+The naming process was highly sophisticated:
+
+```text
+reverse engineering
+        +
+       Mesa
+        =
+     reMESA
+```
+
+The scientific objective is:
+
+```text
+            SGX535
+               │
+               ▼
+             Mesa
+               │
+               ▼
+              🔺
+```
+
+## THE TRIANGLE
+
+There will be no ray tracing.
+
+There will be no path tracing.
+
+There will probably not even be a texture at first.
+
+There will be:
+
+**three vertices.**
+
+And we will be happy.
+
+---
+
+# Contributing
+
+Useful things include:
+
+- SGX535 documentation
+- Poulsbo / PSB material
+- old PowerVR DDK files
+- EMGD material
+- PDS / USE / USSE research
+- command streams
+- shader ISA research
+- Mesa
+- `gma500`
+- old hardware
+- provenance checking
+- someone somehow having the SGX535 programming manual in a drawer since 2009
+
+Most important rule:
+
+> **Evidence first. Guessing second.**
+
+If your conclusion is:
+
+```text
+I have absolutely no idea what this register does
+```
+
+that's useful information too.
+
+---
+
+# Disclaimer
+
+This is an independent reverse-engineering and preservation project.
+
+It is not affiliated with or endorsed by Imagination Technologies, Intel, Texas Instruments, Mesa, or the Linux kernel project.
+
+Third-party material remains subject to its respective licenses.
+
+Please do not sue the triangle.
+
+---
+
+# AI usage
+
+AI is used to help with:
+
+- source archaeology
+- searching large trees
+- comparing code
+- organizing findings
+- documentation
+- experimental scaffolding
+
+But:
+
+```text
+AI said it
+   ≠
+hardware documentation
+```
+
+Important claims still need evidence from source material, analysis, or actual hardware.
+
+Sometimes the correct AI-assisted research result is still:
+
+```text
+UNKNOWN
+```
+
+good.
 
 ---
 
 <details>
-<summary><b>📱 Wait... where is this being developed?</b></summary>
-PRoot Is Not a Neofetch Screenshot Anymore
 
-This project is being developed entirely from a **Samsung Galaxy Tab S7**, running an ARM64 Linux userspace through **PRoot**, with **Anland-Termux/Wayland** on Android.
+<summary><b>📱 Wait... you're developing a GPU driver WHERE?</b></summary>
 
-PRoot used to be the thing you installed to run `neofetch`, take a screenshot, and say:
+<br>
 
-> “Look, Linux on Android.”
+On this:
 
-Not anymore.
+**Samsung Galaxy Tab S7.**
 
-This environment is now being used for:
+The main development environment is an ARM64 Linux userspace running through **PRoot on Android**.
 
-- PowerVR SGX535 reverse engineering
-- PSB DRI reconstruction
-- Linux graphics-driver development
-- command-stream and hardware-state analysis
-- PDS/USE investigation
-- experimental 3D hardware bring-up
-- attempting to produce a hardware-accelerated frozen triangle on a GPU from 2008
+Meanwhile the target is:
 
-The host is an **ARM64 Android tablet**.
+```text
+Dell / Intel Atom machine
+        ↓
+      i686
+        ↓
+     Poulsbo
+        ↓
+    GMA 500
+        ↓
+     SGX535
+        ↓
+      2008
+```
 
-The target is an **i686 Intel Atom/Poulsbo machine**.
+So yes:
 
-The development environment is **PRoot**.
+```text
+ARM64 Android tablet
+        │
+      PRoot
+        │
+      Linux
+        │
+        ├──── reverse engineering
+        ├──── driver development
+        ├──── PDS analysis
+        ├──── command-stream analysis
+        └──── cross compiling
+                     │
+                     ▼
+             Intel Atom Z5xx
+                     │
+                     ▼
+                  SGX535
+                     │
+                     ▼
+                    🔺
+```
+
+PRoot used to be:
+
+```console
+$ neofetch
+```
+
+> look guys ubuntu on my phone
+
+Now it's:
+
+```text
+"why does this 2008 PowerVR PDS allocation
+have nine dwords with no selected producer"
+```
 
 **PRoot is a workstation now.**
 
 bro.
+
 </details>
+
+---
+
+<div align="center">
+
+## SGX535-reMESA
+
+**Current objective:**
+
+# 🔺
+
+*how hard could three vertices possibly be*
+
+</div>
