@@ -380,6 +380,11 @@ I have absolutely no idea what this register does
 
 that's useful information too.
 
+meanwhile
+Eurasia.3D Input Parameter Format.1.3.37a.SGX535 1.2.External.pdf
+
+2009: exists
+2026: lol no
 ---
 
 # Disclaimer
