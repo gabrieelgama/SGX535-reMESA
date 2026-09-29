@@ -440,6 +440,11 @@ It was not.
 
 Thanks, Simon.
 
+Special thanks:
+0x07000345
+
+for wasting everyone's time
+and give me deep dark circles under my eyes.
 <details>
 
 <summary><b>📱 Wait... you're developing a GPU driver WHERE?</b></summary>
