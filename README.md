@@ -428,7 +428,17 @@ UNKNOWN
 
 good.
 
----
+# Thanks 
+I need to thank **Simon Fenney** for one seemingly small tip that ended
+up moving this project forward a lot:
+
+**Intel had its own PowerVR-based graphics drivers through EMGD.**
+
+That sounded like a small lead.
+
+It was not.
+
+Thanks, Simon.
 
 <details>
 
