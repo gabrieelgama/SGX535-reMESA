@@ -407,7 +407,7 @@ AI is used to help with:
 - searching large trees
 - comparing code
 - organizing findings
-- documentation
+- documentation (It's expected that the AI ​​will call me an operator, I'll change that soon)
 - experimental scaffolding
 
 But:
