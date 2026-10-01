@@ -27,24 +27,19 @@
 ---
 
 ## Current phase
+**Phase 8 — SGX535 first-load qualification / frozen-triangle bring-up**
 
-**Phase 7 — PSB DRI reverse engineering / frozen-triangle bring-up**
-
-Current problem:
+Current status:
 
 ```text
-PDS program:     reproducible
-PDS data/state:  pain
-GPU:             alive
-triangle:        not yet
-sanity:          negotiable
-```
-
-Current focus: **FG-02 — PDS backing-provider proof.**
-
-The historical PDS program can now be reproduced, but some launch-state
-details still need to be accounted for before doing anything funny on
-the real GPU.
+experimental first boot:  userspace reached
+privileged capture:       not established
+stock recovery:           passed
+Gate B:                   BLOCKED
+whitelist:                []
+SGX execution:            not attempted
+triangle:                 not attempted
+sanity:                   sudo -v
 
 Unfortunately:
 
