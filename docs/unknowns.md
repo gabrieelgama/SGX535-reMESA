@@ -80,12 +80,53 @@ The P7F [bounded-path trace](phase7/psb-dri-re/bounded-path-closure.md) narrows 
 
 ## Frozen triangle static checkpoint (P7G)
 
-[P7G](phase7/psb-dri-re/frozen-draw-closure.md) closes the historical GL-entry portion of P7B-U02/U18 and removes the falsely identified terminal-padding gap. It corrects the old setup geometry to eight four-dword positions. Seventeen state atoms, conditional width-eight vertex output and a three-index TA record are constrained. U17–U20/P7B-U02 remain **partially constrained**, not resolved: selected fragment words/register metadata, scene pixel/background records, PDS semantics, complete BO/fence lifecycle and bootstrap are still missing. The [FG-01–FG-07 table](phase7/psb-dri-re/frozen-draw-blockers.md) gives exact producers and next static sources; it does not claim all local binary evidence is exhausted. Candidate-kernel XHW readiness is now a confirmed software prerequisite, not a hardware power/reset guarantee. The physical core revision and all hardware-safety UNKNOWNs are unchanged; Gate B BLOCKED, whitelist `[]`.
+[P7G](phase7/psb-dri-re/frozen-draw-closure.md) closed the historical GL-entry portion of P7B-U02/U18 and removed the falsely identified terminal-padding gap. It corrected the old setup geometry to eight four-dword positions. Seventeen state atoms, conditional width-eight vertex output and a three-index TA record were constrained. At that checkpoint, U17–U20/P7B-U02 remained **partially constrained**: selected fragment words/register metadata, scene pixel/background records, PDS semantics, complete BO/fence lifecycle and bootstrap were still missing. The [FG-01–FG-07 table](phase7/psb-dri-re/frozen-draw-blockers.md) tracks subsequent closure without claiming all local evidence is exhausted. Candidate-kernel XHW readiness is a confirmed software prerequisite, not a hardware power/reset guarantee. The physical core revision and all hardware-safety UNKNOWNs remain unchanged; Gate B BLOCKED, whitelist `[]`.
 
-The [focused fragment checkpoint](phase7/psb-dri-re/frozen-fragment-compiler-checkpoint.md) narrows FG-01's *input*: the primary-color MOV's UniFlex destination class/index, source class/index and swizzle are now mapped, and the conditional `OutputsWritten & 4` insertion does not run for this draw. The final instruction count comes from compiler function `0x001c95f7` after lowering. The transformed IR, final USSE words and resource metadata remain **UNKNOWN**; this is not an SGX revision or hardware-safety finding (P7H-001/P7H-002).
+The [focused fragment checkpoint](phase7/psb-dri-re/frozen-fragment-compiler-checkpoint.md) narrowed FG-01's *input*: the primary-color MOV's UniFlex destination class/index, source class/index and swizzle, and exclusion of the `OutputsWritten & 4` insertion. At that checkpoint, final words and metadata were UNKNOWN (P7H-001/P7H-002). [The later selected-path trace](phase7/psb-dri-re/frozen-fragment-exact-output.md) closes that CPU-side question for MOV/END: main and secondary instruction counts are zero, both byte streams are empty, and selected result fields are derived (P7H-010/P7H-011). This does not identify SGX revision or settle hardware safety.
 
 For FG-07, the candidate historical DRM core's private-ioctl dispatch resolves one narrower concern: its disabled full-word check and caller-directed input copy allow the candidate XHW-init call despite the descriptor's opposite direction annotation (P7H-003). The exact built libdrm, DDX and kernel pairing remains **UNKNOWN**; this source-only correction does not imply the old stack worked on the Dell or that current gma500 accepts these ioctls.
 
-P7H-004 narrows FG-01 to ordinary four-component scalar lowering of the selected primary-color MOV. This is an internal compiler stage, not final USSE words/counts or resource metadata. P7H-006 gives conditional field formulas for the fragment link object, but cannot instantiate its compiler-derived fields. P7H-005 narrows FG-06: the retained Xpsb initializer supplies operation zero and the communication-BO handle, while the candidate kernel consumes those fields and later requests scene-info/bind-fire operations 1/2. Its three unused 32-bit input fields were not initialized in the retained routine, but the candidate operation-zero handler does not read them. The [current frozen-draw decision](phase7/psb-dri-re/frozen-draw-static-decision.md) keeps Result B and separates unfinished static compiler/scene work from missing PDS consumption evidence and exact pairing. U17–U20 remain partially constrained. Gate B BLOCKED, CORE_ID/CORE_REVISION not SAFE-CANDIDATE, whitelist `[]`.
+P7H-004 records the initial four-component scalar lowering; P7H-010/P7H-011 record its subsequent elimination and empty selected compiler stream. P7H-006 gives conditional field formulas for the fragment link object, still unevaluated for the selected result. P7H-005 narrows FG-06: the retained Xpsb initializer supplies operation zero and the communication-BO handle, while the candidate kernel consumes those fields and later requests scene-info/bind-fire operations 1/2. Its three unused 32-bit input fields were not initialized in the retained routine, but the candidate operation-zero handler does not read them. The [current frozen-draw decision](phase7/psb-dri-re/frozen-draw-static-decision.md) keeps Result B for FG-02 onward, PDS consumption, scene/BO/bootstrap and exact pairing. U17–U20 remain partially constrained; the fragment compiler-output subquestion within U17 is closed. Gate B BLOCKED, CORE_ID/CORE_REVISION not SAFE-CANDIDATE, whitelist `[]`.
 
 P7H-007 adds a dependency, not a revision measurement: historical `Xpsb_set_vopt` derives an option from SGX-mapping-relative `+0x14`; `Xpsb_scene_info` uses that option to choose a scene-sizing branch. P7H-008 checks both branches for the frozen 32×32 target: cookie words 0–14, size and clear-page outputs coincide, so the unknown option does not block this specific sizing calculation. Cookie word 15 is unwritten there, but the candidate initial successful bind/fire branch does not read it; later OOM behavior remains UNKNOWN. The Dell's SGX core revision and option value remain UNKNOWN. This does not permit reading the register or infer PCI revision `0x06` → any SGX revision.
+
+P7H-012/013 now distinguish the empty compiler output from its eight-byte linked fragment suffix and the four-byte secondary record. P7H-014 traces the selected primary fragment PDS emitter: nine committed dwords have no write in that branch. P7H-015 records the retained Xpsb constant-store extent helper; it does not decode whether the selected PDS instructions read those dwords. The exact read set remains UNKNOWN, as do target-dependent scene state and the other frozen-draw dependencies. [The bounded handoff](phase7/psb-dri-re/selected-pds-hard-boundary.md) gives the first missing fact. Result B and Gate B remain unchanged.
+
+P7H-016–020 extend that handoff with four literal occurrences, a [42-row instruction corpus](phase7/psb-dri-re/pds-instruction-corpus.csv), and [CPU field-arithmetic cross-checks](phase7/psb-dri-re/pds-comparative-encoding.md). An inferred three-dword read model fits the initialized triplets, but no applicable PDS decoder proves the selected `0x07000345` source count/selectors or the `0xaf000000` terminal read behavior. The nine producer-unwritten dwords remain **UNKNOWN**, as do all hardware-safety requirements. Result B, Gate B BLOCKED, and whitelist `[]` are unchanged.
+
+P7H-038/039 refine the Route C frontier in the [launch-state report](phase7/psb-dri-re/pds-launch-state-coverage.md). CPU count12 reaches packed bits31:26 as3, and the selected control word is0x00030000. L12 remains UNKNOWN: the hardware initialized-state domain and eligibility of other state for selected pre-definition reads. This is not a finding of an external read. FG-02 OPEN; backend preservation CONDITIONAL; Gate B BLOCKED.
+
+P7H-040 distinguishes middle-word resource quotient Q−1 from the separate PDS data-size count in [the narrow count report](phase7/psb-dri-re/pds-launch-count.md). L12 remains the source-eligibility rule for state outside the initialized prefix domain; no outside read or hardware count unit was established.
+
+P7H-041: [selected source availability](phase7/psb-dri-re/pds-selected-source-availability.md) leaves the pre-definition source-domain rule open. Temporary classes have a public descriptive lead; selected access/reset/persistence is not established. No actual outside read is claimed. L12/FG-02 OPEN.
+
+P7H-042–046: [independent frozen triangle map](phase7/psb-dri-re/frozen-triangle-spec.md) keeps L12 frozen OPEN. Even hypothetically closing it leaves auxiliary-program state coverage, target construction, complete BO validation and replacement-service contracts. CPU state packing/TA order have advanced; backend preservation and Gate B remain separate.
+
+P7H-047–051: [triangle burn-down](phase7/psb-dri-re/frozen-triangle-burn-down.md)
+closes FT-TARGET for the selected shared linear ARGB8888 surface contract.
+FT-BO narrows to device publication of initialized/relocated backing; FT-AUX
+requires auxiliary pre-definition input domains; FT-SERVICE requires a
+target-qualified revision-conditioned ready-state postcondition. L12 remains
+frozen OPEN. FG-02 OPEN; Gate B BLOCKED; whitelist []; hardware UNVERIFIED.
+
+P7H-052–054: [final static closure attempt](phase7/psb-dri-re/frozen-triangle-burn-down.md) finds four TA load kicks but retained completion mask7, versus the public header's distinct fourth bit8. Applicability/readiness remains unproved. B3 publication and B4 readiness remain independent; B1 and L12 share a source-domain contract category with distinct program/launch instances. Static triangle PARTIAL; FG-02 OPEN; Gate B unchanged.
+
+P7H-055–057 [three-rule analysis](phase7/psb-dri-re/frozen-triangle-burn-down.md) follows LOAD3 through selected TA/raster and IRQ paths; no later explicit bit8 wait appears there. Internal consumer/dependency remains UNKNOWN. Fresh status observations do not prove publication/readiness. B1/L12 source domains remain unbounded beyond existing partial evidence. Enumerated49 wire records are complete; the whole-path contract remains partial under R1/R2/R3.
+
+
+P7H-060: [strong clean-room contracts](phase7/psb-dri-re/cleanroom-final-closure.md)
+eliminate reliance on historical stale holes, timeout continuation and poll
+mask7. The PDF is optional future evidence. R1 still needs payload-domain
+visibility on completion; R2 needs target-qualified LOAD3/init readiness; R3
+needs complete pre-definition source-domain containment. B1/B4/L12 OPEN, B3
+CONDITIONAL, FG-02 OPEN; Gate B BLOCKED.
+
+P7H-059: [SGX535 PDS public-document hunt](phase7/psb-dri-re/sgx535-pds-document-hunt.md)
+found official archived SDK documentation paths but no copy or verified public
+release of the exact Eurasia PDF. No new R3 rule; B1/L12 remain OPEN.
+
+P7H-058: [external evidence acquisition](phase7/psb-dri-re/final-rules-external-evidence.md)
+leaves the same minimum three-rule set. New public sources do not decide R1
+completion-domain coverage, R2 target-qualified LOAD3/init readiness, or R3
+pre-definition eligibility across five auxiliary families and primary. Source
+rejection is not source-class exclusion. No outside read is demonstrated.

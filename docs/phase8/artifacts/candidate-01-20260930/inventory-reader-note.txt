@@ -1,0 +1,1 @@
+Initial evidence inventory expected object-valued manifest entries but the older toolchain manifest has plain SHA strings. TypeError occurred before source copying, table installation or build. Reader now accepts the two retained schemas and verifies every entry exactly; no input or implementation changed.

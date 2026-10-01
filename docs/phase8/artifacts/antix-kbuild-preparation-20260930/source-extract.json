@@ -1,0 +1,14 @@
+{
+  "command": [
+    "tar",
+    "-xzf",
+    "/tmp/sgx535-antix-source-6/linux-5.10.240-antix.1-486-smp_5.10.240-antix.1-486-smp.orig.tar.gz",
+    "-C",
+    "/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack"
+  ],
+  "exit": 0,
+  "stdout": "",
+  "stderr": "",
+  "member_count": 87970,
+  "inspection_note": "Kernel relative symlinks are accepted only when normalized targets remain inside the authenticated archive root."
+}

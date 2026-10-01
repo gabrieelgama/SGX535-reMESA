@@ -1,0 +1,9 @@
+stage,status,mask,evidence
+TA load INIT,300,4194304,Xpsb0x3df0; P7H-055
+fresh TA scene prepare,300,1051200,Xpsb0x4550 flags4; P7H-055
+TA cache phase,312,68,Xpsb0x4f10/0x5040; P7H-051
+TA cache phase,312,1,Xpsb0x4f10/0x5040; P7H-051
+TA cache phase,300,67108864,Xpsb0x4f10/0x5040; P7H-051
+RASTER cache phase,312,68,Xpsb0x4f10/0x5040; P7H-051
+RASTER cache phase,312,1,Xpsb0x4f10/0x5040; P7H-051
+RASTER cache phase,300,67108864,Xpsb0x4f10/0x5040; P7H-051

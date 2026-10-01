@@ -1,0 +1,497 @@
+{
+  "initial_repository_file_count": 1360,
+  "changed_preexisting_files": [
+    "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "docs/phase8/i386-gcc-offline-build-plan.md",
+    "docs/phase8/i386-gcc-toolchain-qualification.md",
+    "docs/phase8/post-attempt03-checkpoint-audit.md"
+  ],
+  "unrelated_preexisting_files_unchanged": 1356,
+  "new_files_before_final_manifest": [
+    "docs/phase8/antix-kbuild-successor-equivalence.md",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/README.md",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/actual-tool-identities.json",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/build-environment.json",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/compare-successor.py",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/comparison-diffs/.config.diff",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/comparison-diffs/include__config__auto.conf.cmd.diff",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/comparison-diffs/include__config__auto.conf.diff",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/comparison-diffs/include__generated__autoconf.h.diff",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/complete-equivalence.json",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/environment-cleanup.json",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/failed-output-before.json",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/failed-output-preservation.json",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/final-git-status.txt",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/initial-git-status.txt",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/initial-repository-files.json",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/inputs.json",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/modules_prepare.json",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/modules_prepare.stderr",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/modules_prepare.stdout",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/olddefconfig-guard.json",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/olddefconfig.json",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/olddefconfig.stderr",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/olddefconfig.stdout",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/paths.json",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/.config",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/asm/.syscalls_32.h.cmd",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/asm/early_ioremap.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/asm/export.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/asm/irq_regs.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/asm/local64.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/asm/mcs_spinlock.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/asm/mm-arch-hooks.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/asm/mmiowb.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/asm/module.lds.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/asm/rwonce.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/asm/syscalls_32.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/uapi/asm/.unistd_32.h.cmd",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/uapi/asm/.unistd_64.h.cmd",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/uapi/asm/.unistd_x32.h.cmd",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/uapi/asm/bpf_perf_event.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/uapi/asm/errno.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/uapi/asm/fcntl.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/uapi/asm/ioctl.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/uapi/asm/ioctls.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/uapi/asm/ipcbuf.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/uapi/asm/param.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/uapi/asm/poll.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/uapi/asm/resource.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/uapi/asm/socket.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/uapi/asm/sockios.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/uapi/asm/termbits.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/uapi/asm/termios.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/uapi/asm/types.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/uapi/asm/unistd_32.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/uapi/asm/unistd_64.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/uapi/asm/unistd_x32.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/include/config/auto.conf",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/include/config/auto.conf.cmd",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/include/config/kernel.release",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/include/generated/asm-offsets.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/include/generated/autoconf.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/include/generated/bounds.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/include/generated/package.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/include/generated/timeconst.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/include/generated/uapi/linux/version.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/include/generated/utsrelease.h",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/scripts/.module.lds.cmd",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/scripts/module.lds",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/progress.md",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/pwd.txt",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/qualified-tool-identity-check.json",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/source-contract/arch/x86/entry/syscalls/Makefile",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/source-contract/arch/x86/entry/syscalls/syscalltbl.sh",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/source-contract/init/Makefile",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/source-contract/scripts/module.lds.S",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/source-identity.json",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/verification/commands.json",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/verification/complete.stderr",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/verification/complete.stdout",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/verification/dry-run-1.stderr",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/verification/dry-run-1.stdout",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/verification/dry-run-2.stderr",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/verification/dry-run-2.stdout",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/verification/fixed-io-ubsan-build.stderr",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/verification/fixed-io-ubsan-build.stdout",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/verification/fixed-io-ubsan-run.stderr",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/verification/fixed-io-ubsan-run.stdout",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/verification/fixed-service-ubsan-build.stderr",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/verification/fixed-service-ubsan-build.stdout",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/verification/fixed-service-ubsan-run.stderr",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/verification/fixed-service-ubsan-run.stdout",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/verification/generator.stderr",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/verification/generator.stdout",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/verification/kernel-contract-ubsan-build.stderr",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/verification/kernel-contract-ubsan-build.stdout",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/verification/kernel-contract-ubsan-run.stderr",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/verification/kernel-contract-ubsan-run.stdout",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/verification/reference-symvers.stderr",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/verification/reference-symvers.stdout",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/verification/scoped-suite.stderr",
+    "docs/phase8/artifacts/antix-kbuild-successor-20260930/verification/scoped-suite.stdout"
+  ],
+  "git_status_short_listing_unchanged": true,
+  "git_diff_check": {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "documentation_links": [
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "post-attempt03-checkpoint-audit.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "i386-gcc-offline-build-plan.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "i386-gcc-toolchain-qualification.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "antix-kbuild-preparation-equivalence.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "antix-kbuild-successor-equivalence.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "../hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "attempt03-module-version-followup.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/candidate-target-table-check.json",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifact-manifest.json",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "artifacts/frozen-triangle-one-shot-i386.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "i386-gcc-toolchain-qualification.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "artifacts/i386-gcc-toolchain-20260930/README.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "antix-kbuild-preparation-equivalence.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "artifacts/antix-kbuild-preparation-20260930/README.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "antix-kbuild-successor-equivalence.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "artifacts/antix-kbuild-successor-20260930/README.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "i386-gcc-offline-build-plan.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "active-gma500-transition-review.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-offline-build-plan.md",
+      "link": "i386-gcc-toolchain-qualification.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-offline-build-plan.md",
+      "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-offline-build-plan.md",
+      "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifact-manifest.json",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-offline-build-plan.md",
+      "link": "antix-kbuild-preparation-equivalence.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-offline-build-plan.md",
+      "link": "antix-kbuild-successor-equivalence.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-offline-build-plan.md",
+      "link": "CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-toolchain-qualification.md",
+      "link": "antix-kbuild-successor-equivalence.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-toolchain-qualification.md",
+      "link": "i386-gcc-offline-build-plan.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-toolchain-qualification.md",
+      "link": "artifacts/i386-gcc-toolchain-20260930/provisioned-packages.json",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-toolchain-qualification.md",
+      "link": "artifacts/i386-gcc-toolchain-20260930/native-installed-packages.txt",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-toolchain-qualification.md",
+      "link": "artifacts/i386-gcc-toolchain-20260930/README.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-toolchain-qualification.md",
+      "link": "artifacts/i386-gcc-toolchain-20260930/environment.sh",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-toolchain-qualification.md",
+      "link": "artifacts/i386-gcc-toolchain-20260930/executable-identities.json",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-toolchain-qualification.md",
+      "link": "artifacts/i386-gcc-toolchain-20260930/tool-identities.json",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-toolchain-qualification.md",
+      "link": "artifacts/i386-gcc-toolchain-20260930/smoke-commands.json",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-toolchain-qualification.md",
+      "link": "artifacts/i386-gcc-toolchain-20260930/native-build-tool-smoke.json",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-toolchain-qualification.md",
+      "link": "artifacts/i386-gcc-toolchain-20260930/native-ssl-smoke.json",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "i386-gcc-toolchain-qualification.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "antix-kbuild-preparation-equivalence.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "antix-kbuild-successor-equivalence.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "i386-gcc-offline-build-plan.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "i386-gcc-toolchain-qualification.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-01/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-02/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-03/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-04/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-05/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-06/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-07/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "../hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "attempt03-module-version-followup.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "../phase4-2-data/antix-source/drivers/gpu/drm/gma500/psb_drv.c",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "../phase4-2-data/antix-source/drivers/gpu/drm/gma500/power.c",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "../phase4-2-data/antix-source/drivers/gpu/drm/gma500/psb_irq.c",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/antix-kbuild-successor-equivalence.md",
+      "link": "i386-gcc-offline-build-plan.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/antix-kbuild-successor-equivalence.md",
+      "link": "antix-kbuild-preparation-equivalence.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/antix-kbuild-successor-equivalence.md",
+      "link": "artifacts/antix-kbuild-successor-20260930/README.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/antix-kbuild-successor-equivalence.md",
+      "link": "artifacts/antix-kbuild-successor-20260930/inputs.json",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/antix-kbuild-successor-equivalence.md",
+      "link": "artifacts/antix-kbuild-successor-20260930/paths.json",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/antix-kbuild-successor-equivalence.md",
+      "link": "artifacts/antix-kbuild-successor-20260930/actual-tool-identities.json",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/antix-kbuild-successor-equivalence.md",
+      "link": "artifacts/antix-kbuild-successor-20260930/build-environment.json",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/antix-kbuild-successor-equivalence.md",
+      "link": "artifacts/antix-kbuild-successor-20260930/complete-equivalence.json",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/README.md",
+      "link": "../../antix-kbuild-successor-equivalence.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/README.md",
+      "link": "../antix-kbuild-preparation-20260930/README.md",
+      "exists": true
+    }
+  ],
+  "documentation_whitespace_errors": [],
+  "unique_handoff_section_headers": true,
+  "authoritative_input_hashes_unchanged": {
+    "/tmp/sgx535-antix-source-6/linux-5.10.240-antix.1-486-smp_5.10.240-antix.1-486-smp.orig.tar.gz": "e5c5d7c6bdcc7a845589e5956cbf50a8d6198232df017f0398a2902371042e1d",
+    "/home/gama/sgx535-gfx/docs/phase4-2-data/linux-5.10.240-antix.1-486-smp_5.10.240-antix.1-486-smp-6.diff.gz": "5c41ae456d77d9e0af181fe3153c4f80e89bacdd2b541ba15fbac0b297d69b03",
+    "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build__config": "93f4d7a779f4be65097b5f26db6c9b10431907c6d417109719eb2f16d6def3d9",
+    "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build_Module_symvers": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+    "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build_generated.tar": "f899bce235cc04a3aa3c74f569fe2ba793a0b606676144ff762a57be2aa1f45c",
+    "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build_Makefile": "70b5c7688f9067bd13b8413a205dc73ba9f66676b3de34c4092d7ceb9c260493"
+  },
+  "selected_source_hashes_unchanged": {
+    "Makefile": "70b5c7688f9067bd13b8413a205dc73ba9f66676b3de34c4092d7ceb9c260493",
+    "scripts/Makefile.modpost": "beaa578d66fb0d3965cea5da4ebd257e198aad9fbb930a4b3b09e06c190b90f1",
+    "scripts/Kbuild.include": "5ca9d37f3a59b5ddf15ac5ed98dc9bbf2f1ad1b40d94854244657ce467ab2073",
+    "scripts/Makefile.host": "7fb67f7741c3a4a118f7b8640edff12f9ad5da116076ef6d5a664870bd274c85",
+    "init/Kconfig": "9333ecc3958fb22cca37a1b68f6ca66a2f052ff4faeae7ba7b41660859bcf694",
+    "arch/x86/Makefile": "5efe17d86c101dcb701c305d17f6f287b48f3564034aa841696df4f0d3bc444b",
+    "arch/x86/entry/syscalls/syscalltbl.sh": "1900cd0f0c79e84de95c2a1829e1e21f3eeb6b039fc8a116b6314fc7b639e205",
+    "arch/x86/entry/syscalls/syscall_32.tbl": "ac7d333bad20a128ef7a1d3a5a3446dab430a247657884ccfe726e500b57c9fe",
+    "arch/x86/entry/syscalls/Makefile": "f7857161e29f29f19449b479cc751bb5636849805d79fc9c12230fef2351a6a0",
+    "include/linux/module.h": "8bfb46266e6834dd2c8ec75be6617832c80a3a67a40a24a1679ea33ffc1c262f"
+  },
+  "failed_preparation_evidence_manifest_unchanged_sha256": "0a7ed8fabab2432f32ec4628a9cce503aa13a43f845907a4b3e2c486be07bb13",
+  "failed_output_preservation": {
+    "entries": 10569,
+    "all_hashes_links_modes_inodes_and_mtimes_unchanged": true,
+    "failed_output": "/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/output",
+    "before_manifest_sha256": "1820bda1253d0d52365b887177efb8b1caa19a033840886bfd5307e40b8ae8d3",
+    "after_manifest_sha256": "1820bda1253d0d52365b887177efb8b1caa19a033840886bfd5307e40b8ae8d3"
+  },
+  "successor_comparison_files_revalidated": true,
+  "equivalence": "PASS",
+  "qualified_target_table_not_yet_installed": true,
+  "no_module_candidate_compiled": true,
+  "old_candidate_unchanged_sha256": "934bd97164c803e52d96528b9ec464d587a6a68e2f671aa255407657cc5342cf",
+  "target_contact": "NONE",
+  "gate_b": "BLOCKED",
+  "whitelist": [],
+  "implementation_changes": false,
+  "staging_commit_push": "NONE"
+}

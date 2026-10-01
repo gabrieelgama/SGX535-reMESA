@@ -1,0 +1,27 @@
+{
+  "dry_run_1": {
+    "exit_status": 0,
+    "sha256": "2e85beef0c1a7ec2f8ccc2656b49dd4fb054bf0f55424c226f5fda70e621720e"
+  },
+  "dry_run_2": {
+    "exit_status": 0,
+    "sha256": "2e85beef0c1a7ec2f8ccc2656b49dd4fb054bf0f55424c226f5fda70e621720e"
+  },
+  "complete": {
+    "exit_status": 1,
+    "stdout": "",
+    "stderr": "PARTIAL: L12, FT-AUX, FT-BO, FT-SERVICE\n"
+  },
+  "deterministic": true,
+  "full_scoped_python_tests": {
+    "tests": 193,
+    "exit_status": 0,
+    "result": "PASS",
+    "elapsed_seconds": 15.278
+  },
+  "module_version_tests": {
+    "tests": 10,
+    "exit_status": 0
+  },
+  "ubsan_harnesses": 3
+}

@@ -1,0 +1,33 @@
+{
+  "command_argv": [
+    "ssh",
+    "-T",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "ConnectTimeout=8",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "IdentitiesOnly=yes",
+    "-o",
+    "PasswordAuthentication=no",
+    "-o",
+    "KbdInteractiveAuthentication=no",
+    "-o",
+    "UserKnownHostsFile=/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260927-H0/ssh_known_hosts",
+    "-i",
+    "/home/gama/.ssh/id_ed25519_sgx535_h0",
+    "-p",
+    "22",
+    "gama@192.168.18.90",
+    "set -e; printf 'ARCH='; uname -m; printf 'VENDOR='; cat /sys/class/dmi/id/sys_vendor; printf 'PRODUCT='; cat /sys/class/dmi/id/product_name; printf 'BOARD='; cat /sys/class/dmi/id/board_name; printf 'BIOS='; cat /sys/class/dmi/id/bios_version; printf 'CPU='; grep -m1 '^model name' /proc/cpuinfo; printf 'PCI_VENDOR='; cat /sys/bus/pci/devices/0000:00:02.0/vendor; printf 'PCI_DEVICE='; cat /sys/bus/pci/devices/0000:00:02.0/device"
+  ],
+  "started_utc": "2026-09-27T22:56:34.066995+00:00",
+  "ended_utc": "2026-09-27T22:56:34.783312+00:00",
+  "exit_status": 0,
+  "stdout_sha256": "a9baa343f4e998bbfc51d4e7c87456727e7a6c929c98e44ccf00b522ed217901",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_bytes": 166,
+  "stderr_bytes": 0
+}

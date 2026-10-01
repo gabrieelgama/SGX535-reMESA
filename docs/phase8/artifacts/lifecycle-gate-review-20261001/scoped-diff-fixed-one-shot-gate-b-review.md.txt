@@ -1,0 +1,20 @@
+--- /home/gama/sgx535-offline/lifecycle-gate-review-20261001/before/docs/phase8/fixed-one-shot-gate-b-review.md	2026-10-01 00:22:17.963413374 +0000
++++ /home/gama/sgx535-gfx/docs/phase8/fixed-one-shot-gate-b-review.md	2026-10-01 00:32:50.395413133 +0000
+@@ -1,5 +1,17 @@
+ # Fixed 32×32 triangle: exact-action Gate B review (updated 2026-09-30)
+ 
++**Latest focused lifecycle review (2026-10-01):**
++[First-original-removal Gate B review](lifecycle-first-removal-gate-review.md)
++freshly verifies both frozen candidates/complete target CRCs and their preserved
++bit-identical repeats without rebuilding. Three added actual-source PCI
++remove/module-exit/immutable-original control tests bring verification to
++**208 tests, zero skips**. The PCI/devres and legacy IRQ-control paths do not
++supply the original's missing IRQ release. The derivative fixes its own
++teardown; it cannot change the active original. Every current Gate B predicate
++is classified individually in that review. **Gate B BLOCKED; whitelist `[]`;
++no target contact.** The separately scoped boot-route observation remains
++unperformed; no hot-removal replay or alternative deployment is authorized.
++
+ **Current offline build/lifecycle continuation:** [qualified candidate results](candidate-01-build-and-lifecycle-review.md)
+ close the mechanical patch and module ABI blockers. Candidate #1 and the separate
+ IRQ-lifecycle derivative both build through normal external Kbuild, match every

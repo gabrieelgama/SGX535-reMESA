@@ -1,0 +1,379 @@
+{
+  "schema": "sgx535-hardware-baseline-v1",
+  "session_id": "MINI12-20260927-H0",
+  "status": "CAPTURED_WITH_READ_ONLY_GAPS",
+  "target_freshly_identified": true,
+  "target_access_method": "SSH public-key as unprivileged gama; pinned first-use server key; no password or privilege escalation",
+  "target_capture_started_utc": "2026-09-27T22:56:34.066995+00:00",
+  "target_capture_finished_utc": "2026-09-27T23:21:59.792766+00:00",
+  "target_files": [
+    "raw/identity-after-fix-stdout.txt",
+    "raw/identity-after-fix-stderr.txt",
+    "raw/passive-probe-stdout.json",
+    "raw/passive-probe-stderr.txt",
+    "raw/baseline/time_and_os.stdout",
+    "raw/baseline/time_and_os.stderr",
+    "raw/baseline/modules.stdout",
+    "raw/baseline/modules.stderr",
+    "raw/baseline/pci_text.stdout",
+    "raw/baseline/pci_text.stderr",
+    "raw/baseline/drm_and_display.stdout",
+    "raw/baseline/drm_and_display.stderr",
+    "raw/baseline/interrupts.stdout",
+    "raw/baseline/interrupts.stderr",
+    "raw/baseline/graphics_module_parameters.stdout",
+    "raw/baseline/graphics_module_parameters.stderr",
+    "raw/baseline/graphics_packages.stdout",
+    "raw/baseline/graphics_packages.stderr",
+    "raw/baseline/graphics_module_info.stdout",
+    "raw/baseline/graphics_module_info.stderr",
+    "raw/baseline/service_nodes.stdout",
+    "raw/baseline/service_nodes.stderr",
+    "raw/baseline/kernel_log.stdout",
+    "raw/baseline/kernel_log.stderr",
+    "raw/baseline/clock_correlation.stdout",
+    "raw/baseline/clock_correlation.stderr",
+    "raw/baseline/journal_kernel.stdout",
+    "raw/baseline/journal_kernel.stderr",
+    "raw/baseline/installed_graphics_module.stdout",
+    "raw/baseline/installed_graphics_module.stderr",
+    "raw/baseline/display_processes.stdout",
+    "raw/baseline/display_processes.stderr",
+    "raw/baseline/readable_kernel_logs.stdout",
+    "raw/baseline/readable_kernel_logs.stderr",
+    "raw/baseline/drm_clients_passive.stdout",
+    "raw/baseline/drm_clients_passive.stderr",
+    "raw/baseline/module_package_owner.stdout",
+    "raw/baseline/module_package_owner.stderr",
+    "raw/baseline/recovery_capabilities.stdout",
+    "raw/baseline/recovery_capabilities.stderr",
+    "raw/installed-gma500_gfx.ko",
+    "raw/installed-gma500_gfx.ko.stderr",
+    "raw/baseline/kernel_log_authorized.stdout",
+    "raw/baseline/kernel_log_authorized.stderr",
+    "raw/loaded-gma500-build-id.note",
+    "raw/loaded-gma500-build-id.note.stderr",
+    "raw/operator-dmesg-mini12.txt",
+    "raw/operator-dmesg-mini12.txt.stderr",
+    "raw/operator-dmesg-mini12.stat",
+    "raw/operator-dmesg-mini12.stat.stderr"
+  ],
+  "target_hashes": [
+    {
+      "path": "raw/identity-after-fix-stdout.txt",
+      "sha256": "a9baa343f4e998bbfc51d4e7c87456727e7a6c929c98e44ccf00b522ed217901",
+      "bytes": 166
+    },
+    {
+      "path": "raw/identity-after-fix-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "raw/passive-probe-stdout.json",
+      "sha256": "07bef3e8b8785dfb5f7a9281c2f4557707995dc34a3ed2035acf32c08d4dc449",
+      "bytes": 5161
+    },
+    {
+      "path": "raw/passive-probe-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "raw/baseline/time_and_os.stdout",
+      "sha256": "50e38c97d6dcab385d058d8eb617fd474936de0f1e2cc01bd0dec7b60fc51b42",
+      "bytes": 668
+    },
+    {
+      "path": "raw/baseline/time_and_os.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "raw/baseline/modules.stdout",
+      "sha256": "30bc16b402f98a99b86901f80a301e834d361477a1e2d0340065367bb6d59e6d",
+      "bytes": 4349
+    },
+    {
+      "path": "raw/baseline/modules.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "raw/baseline/pci_text.stdout",
+      "sha256": "d15a3641aa2a98a2362590c405067732f27e2b8758fd5393a3626a4705161d4f",
+      "bytes": 1014
+    },
+    {
+      "path": "raw/baseline/pci_text.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "raw/baseline/drm_and_display.stdout",
+      "sha256": "7bd22b94b6e94122829fa8d75f891404bf1ab5a16c52b363d73b8aa3a5485d65",
+      "bytes": 874
+    },
+    {
+      "path": "raw/baseline/drm_and_display.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "raw/baseline/interrupts.stdout",
+      "sha256": "afe135262d98a981adb3d28198d198483919ca2906ccaaab40051cb6ba1d0b47",
+      "bytes": 1844
+    },
+    {
+      "path": "raw/baseline/interrupts.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "raw/baseline/graphics_module_parameters.stdout",
+      "sha256": "48ae5323e8ccd14ce891587db34623ef7e3b4f0b08ad2acc9c6a2a4353589002",
+      "bytes": 34
+    },
+    {
+      "path": "raw/baseline/graphics_module_parameters.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "raw/baseline/graphics_packages.stdout",
+      "sha256": "a1ff123af8647e5e9c24b066d14c4b45540a9f0cb294c0dcde9eebf24b9b553e",
+      "bytes": 3536
+    },
+    {
+      "path": "raw/baseline/graphics_packages.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "raw/baseline/graphics_module_info.stdout",
+      "sha256": "50d6330acf75339df37cc9ac68d241aabedbc9008d900acbd7874cb24458e26d",
+      "bytes": 41
+    },
+    {
+      "path": "raw/baseline/graphics_module_info.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "raw/baseline/service_nodes.stdout",
+      "sha256": "81960766e309a8a5839b4160ac095af6dc1d135e99053779a5e1c75e743b7013",
+      "bytes": 128
+    },
+    {
+      "path": "raw/baseline/service_nodes.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "raw/baseline/kernel_log.stdout",
+      "sha256": "eb7773ca6beb7854c1984fe13ca1a9c96b7c92861c48ec1f6e2c881c19f3084f",
+      "bytes": 58
+    },
+    {
+      "path": "raw/baseline/kernel_log.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "raw/baseline/clock_correlation.stdout",
+      "sha256": "531094a28acf4ae8041a72772785d98f75e4e485c0421bf98116a1507b0d9db7",
+      "bytes": 37
+    },
+    {
+      "path": "raw/baseline/clock_correlation.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "raw/baseline/journal_kernel.stdout",
+      "sha256": "fe4c75a89851fc5a0e79a0fc956fc6f25108332dc6c258bef53a99b403150627",
+      "bytes": 44
+    },
+    {
+      "path": "raw/baseline/journal_kernel.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "raw/baseline/installed_graphics_module.stdout",
+      "sha256": "9123196c8aa5a494e003028b910e5c1262d659bedd0c3d3e3496933c5746e35e",
+      "bytes": 230
+    },
+    {
+      "path": "raw/baseline/installed_graphics_module.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "raw/baseline/display_processes.stdout",
+      "sha256": "2096c120c5e875375381e49adad92a3549b06c4fe146436b44f989665c5373e2",
+      "bytes": 39
+    },
+    {
+      "path": "raw/baseline/display_processes.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "raw/baseline/readable_kernel_logs.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "raw/baseline/readable_kernel_logs.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "raw/baseline/drm_clients_passive.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "raw/baseline/drm_clients_passive.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "raw/baseline/module_package_owner.stdout",
+      "sha256": "d6adf58fe553f232d2ce13493ae1dd0825f1dfe02b857f47594358310545a92b",
+      "bytes": 120
+    },
+    {
+      "path": "raw/baseline/module_package_owner.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "raw/baseline/recovery_capabilities.stdout",
+      "sha256": "a9e277ebadb20b4a0974a8773904eca80877bd204f19e05b15ce9f4993101573",
+      "bytes": 422
+    },
+    {
+      "path": "raw/baseline/recovery_capabilities.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "raw/installed-gma500_gfx.ko",
+      "sha256": "7b42a99d157ad00494c358a7663a2daf438ba9fc9a8f2ca5076d28ddeb6adafb",
+      "bytes": 205964
+    },
+    {
+      "path": "raw/installed-gma500_gfx.ko.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "raw/baseline/kernel_log_authorized.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "raw/baseline/kernel_log_authorized.stderr",
+      "sha256": "9b3a3b7a78f239c4473bb193476b1a860c91f1c2b4fab9c7639eceea414a60fb",
+      "bytes": 29
+    },
+    {
+      "path": "raw/loaded-gma500-build-id.note",
+      "sha256": "484f90964d0c36b50256e42b1bc1cd8fb905fad8476b5a1bf5e549dc178792d7",
+      "bytes": 36
+    },
+    {
+      "path": "raw/loaded-gma500-build-id.note.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "raw/operator-dmesg-mini12.txt",
+      "sha256": "72974ea9c86ebf06b3af1ce392cac2023d56b8335724e1907b35e25e484ce9ec",
+      "bytes": 45575
+    },
+    {
+      "path": "raw/operator-dmesg-mini12.txt.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "raw/operator-dmesg-mini12.stat",
+      "sha256": "0c0af0fdb6f5dcf8e27c20ac75d15f06c75f5faab94f37e44a0107aebc97410a",
+      "bytes": 98
+    },
+    {
+      "path": "raw/operator-dmesg-mini12.stat.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  ],
+  "target_commands": [
+    {
+      "kind": "identity_preflight",
+      "metadata": "raw/identity-after-fix-meta.json"
+    },
+    {
+      "kind": "passive_probe_once",
+      "metadata": "raw/passive-probe-meta.json"
+    },
+    {
+      "kind": "read_only_baseline",
+      "metadata": "raw/baseline-captures.json",
+      "count": 19
+    },
+    {
+      "kind": "installed_module_read_only_copy",
+      "metadata": "raw/installed-gma500_gfx.ko.meta.json"
+    },
+    {
+      "kind": "loaded_module_sysfs_build_id",
+      "metadata": "raw/loaded-gma500-build-id.note.meta.json"
+    },
+    {
+      "kind": "operator_provided_kernel_log_file",
+      "metadata": "raw/operator-dmesg-mini12.txt.meta.json"
+    },
+    {
+      "kind": "operator_log_file_stat",
+      "metadata": "raw/operator-dmesg-mini12.stat.meta.json"
+    }
+  ],
+  "transport_attempts": [
+    {
+      "kind": "identity_preflight",
+      "result": "SSH_AUTHENTICATION_FAILED_BEFORE_REMOTE_EXECUTION",
+      "metadata": "raw/identity-meta.json",
+      "stdout": "raw/identity-stdout.txt",
+      "stderr": "raw/identity-stderr.txt"
+    },
+    {
+      "kind": "identity_preflight_after_key_install_report",
+      "result": "SSH_PUBLIC_KEY_REJECTED_BEFORE_REMOTE_EXECUTION",
+      "metadata": "raw/identity-verified-meta.json",
+      "stdout": "raw/identity-verified-stdout.txt",
+      "stderr": "raw/identity-verified-stderr.txt"
+    },
+    {
+      "kind": "identity_authentication_diagnostic",
+      "result": "OFFERED_ED25519_KEY_REJECTED_BEFORE_REMOTE_EXECUTION",
+      "metadata": "raw/identity-auth-debug-meta.json",
+      "stdout": "raw/identity-auth-debug-stdout.txt",
+      "stderr": "raw/identity-auth-debug-stderr.txt"
+    }
+  ],
+  "note": "Fresh passive DMI/CPU/PCI/probe identity matches TVZ-001 in overlapping fields. No SGX MMIO or GPU submission occurred. Passive recovery-capability inventory added: SysRq enabled in config and runtime mask 438; pstore not mounted, watchdog class empty. These do not prove recovery. Installed module copied read-only and hash matches target-side sha256sum; local readelf Build ID d8dcb4d38b774ad64799d5e13aaedede069371f3. Kernel log still unavailable. Operator-provided 45575-byte kernel-log file captured and hashed; gma500 initialization lines present; ACPI PowerButton event setup reports failure. Loaded module sysfs build ID matches on-disk module. No SGX register access.",
+  "probe_run_count_on_target": 1,
+  "baseline_gaps": [
+    "journalctl and modinfo not installed",
+    "no standard readable kernel-log file found",
+    "DRM client inventory not authoritative from unprivileged fuser result",
+    "SGX core revision and internal power/clock state not observed",
+    "direct unprivileged and exact approved sudo -n dmesg both refused; operator-provided readable log file captured, but its generation command/time were not directly observed",
+    "DRM client inventory remains non-authoritative",
+    "recovery procedure remains untested; no serial/watchdog/switched power"
+  ],
+  "clock_note": "At correlation the hosts returned UTC-formatted readings differing by approximately 2h09m36s. Neither host clock was independently checked against an external UTC reference; this is only an observed host-target offset, not a diagnosis of either clock. Capture-host metadata establishes local session order. No clock adjustment was performed."
+}

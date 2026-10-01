@@ -1,0 +1,40 @@
+--- /home/gama/sgx535-offline/candidate-01-build-20260930/documentation-before/active-gma500-transition-review.md	2026-09-30 23:57:05.811413951 +0000
++++ /home/gama/sgx535-gfx/docs/phase8/active-gma500-transition-review.md	2026-10-01 00:06:18.723413740 +0000
+@@ -1,5 +1,20 @@
+ # Fixed-scene active gma500 transition review
+ 
++**Current offline build/lifecycle continuation:** [qualified candidate results](candidate-01-build-and-lifecycle-review.md)
++close the mechanical patch and module ABI blockers. Candidate #1 and the separate
++IRQ-lifecycle derivative both build through normal external Kbuild, match every
++actual import against the captured target table, and repeat byte-identically.
++The derivative now pairs IRQ release before private/MMIO destruction and masks
++all device routing on actual handler removal, preserving direct-PM behavior.
++**The first hot removal of the active unpatched original remains BLOCKED.**
++The correction cannot change that original's teardown. Gate B remains BLOCKED,
++whitelist `[]`; no target contact or SGX action occurred. The next missing fact
++is the normal first-load boot/initramfs source and original fallback, requiring
++a separately authorized read-only boot-route inventory before a cold-start-only
++alternative can be reviewed. Current verification: 205 tests, zero skips; three
++UBSan harnesses plus lifecycle UBSan PASS; dry-run hash unchanged; `--complete`
++retains its four labels. Neither artifact is authorized for deployment.
++
+ **Current classification: BLOCKED.** The
+ [post-Attempt-03 checkpoint audit](post-attempt03-checkpoint-audit.md) records
+ the incompatible candidate and failed original-driver hot restoration. The
+@@ -85,14 +100,14 @@
+ authorized in the inventory turn; a new explicit operator authorization is
+ required before stage 0.**
+ 
+-## Exact artifacts and current ownership
++## Historical Attempt 03 artifact pins and ownership (superseded above)
+ 
+ - Original installed target module:
+   `/lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/gpu/drm/gma500/gma500_gfx.ko`,
+   SHA-256 `7b42a99d157ad00494c358a7663a2daf438ba9fc9a8f2ca5076d28ddeb6adafb`.
+   Its loaded GNU Build ID was
+   `d8dcb4d38b774ad64799d5e13aaedede069371f3` at preflight.
+-- Candidate module (still local):
++- Rejected historical candidate module:
+   `/tmp/sgx535-antix-source-6/source/drivers/gpu/drm/gma500/gma500_gfx.ko`,
+   SHA-256 `934bd97164c803e52d96528b9ec464d587a6a68e2f671aa255407657cc5342cf`,
+   GNU Build ID `d4cb8d750efa6eb401f82e6eaec7eb82ebdf9c3c`, target

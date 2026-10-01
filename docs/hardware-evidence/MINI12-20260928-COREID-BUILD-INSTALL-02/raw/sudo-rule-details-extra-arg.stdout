@@ -1,0 +1,6 @@
+Sudoers entry: /etc/sudoers
+    RunAsUsers: ALL
+    RunAsGroups: ALL
+    Commands:
+	ALL
+    Matched: /usr/local/libexec/sgx535-core-id forbidden_argument

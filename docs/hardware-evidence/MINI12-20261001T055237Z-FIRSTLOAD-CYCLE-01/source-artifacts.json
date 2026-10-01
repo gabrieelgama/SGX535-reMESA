@@ -1,0 +1,16 @@
+[
+  {
+    "path": "/home/gama/sgx535-gfx/docs/phase8/artifacts/experimental-first-load-01-20261001/build-03/initrd.img-sgx535-firstload-01",
+    "size": 50804481,
+    "sha256": "4ac6bd1bed7dbf53b3653037f3e6e757160672560176b1938a63488636efaa71",
+    "nlink": 1,
+    "symlink": false
+  },
+  {
+    "path": "/home/gama/sgx535-gfx/docs/phase8/artifacts/experimental-first-load-01-20261001/build-03/proposed-custom.cfg",
+    "size": 974,
+    "sha256": "181d33aa42cc9a73d35a50b5e7b1636121edb7a607c2949540fa04a4d0d32612",
+    "nlink": 1,
+    "symlink": false
+  }
+]

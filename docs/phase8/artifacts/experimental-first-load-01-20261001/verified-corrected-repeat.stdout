@@ -1,0 +1,52 @@
+{
+  "result": "BYTE-IDENTICAL",
+  "images": [
+    "/home/gama/sgx535-offline/experimental-first-load-20261001/build-03/initrd.img-sgx535-firstload-01",
+    "/home/gama/sgx535-offline/experimental-first-load-20261001/build-04/initrd.img-sgx535-firstload-01"
+  ],
+  "bytes": 50804481,
+  "sha256": "4ac6bd1bed7dbf53b3653037f3e6e757160672560176b1938a63488636efaa71",
+  "supersedes": "corrected-repeat-build.json whose runner retained old build01/02 read paths; no image is altered",
+  "shell_checks": [
+    {
+      "argv": [
+        "/bin/sh",
+        "-n",
+        "/home/gama/sgx535-offline/experimental-first-load-20261001/build-03/sgx535-first-load.sh"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "-n",
+        "/home/gama/sgx535-offline/experimental-first-load-20261001/build-03/modified-init"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "-n",
+        "/home/gama/sgx535-offline/experimental-first-load-20261001/build-04/sgx535-first-load.sh"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "-n",
+        "/home/gama/sgx535-offline/experimental-first-load-20261001/build-04/modified-init"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

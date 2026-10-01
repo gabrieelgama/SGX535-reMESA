@@ -1,0 +1,201 @@
+PID1
+    1 runit           runit
+DISPLAY_PROCESSES
+ 1409  1377 root     slimski         /usr/bin/slimski
+ 1766  1409 root     Xorg            /usr/lib/xorg/Xorg -nolisten tcp -auth /var/run/slimski.auth
+DISPLAY_MANAGER_SELECTOR
+/usr/bin/slimski
+SERVICE_DEFINITIONS
+-rwxr-xr-x 1 root root 3210 Aug  8  2021 /etc/init.d/slimski
+/etc/init.d/slimski
+a8c653938cf4b133f794cee2f2563e59f8009e1583d0e59afad86e85d0890021  /etc/init.d/slimski
+#!/usr/bin/sh
+
+# Largely adapted from xdm's init script:
+# Copyright 1998-2002, 2004, 2005 Branden Robinson <branden@debian.org>.
+# Copyright 2006 Eugene Konev <ejka@imfi.kspu.ru>
+
+### BEGIN INIT INFO
+# Provides:          slimski
+# Required-Start:    $local_fs $remote_fs
+# Required-Stop:     $local_fs $remote_fs
+# Should-Start:      xfs $named slapd
+# Should-Stop:       xfs $named slapd
+# Default-Start:     2 5
+# Default-Stop:      0 1 6
+# Short-Description: Start daemon at boot time
+# Description:       Debian init script for slimski
+### END INIT INFO
+
+test -z "$HEED_DEFAULT_DISPLAY_MANAGER" && HEED_DEFAULT_DISPLAY_MANAGER=true
+DEFAULT_DISPLAY_MANAGER_FILE=/etc/X11/default-display-manager
+
+NAME="slimski"
+DESC="X display manager"
+DAEMON=/usr/bin/slimski
+PIDFILE=/var/run/slimski.pidlock
+###    ^---- DO NOT EDIT THIS PATHSTRING.               ###
+###          It is HARDCODED within slimski App.cpp     ###
+
+SSD_START_ARGS="--pidfile $PIDFILE --name $(basename $DAEMON) --startas $DAEMON -- -d"
+SSD_STOP_ARGS="--pidfile $PIDFILE --name $(basename $DAEMON) --retry TERM/5/TERM/5"
+
+test -x $DAEMON || exit 0
+. /lib/lsb/init-functions
+
+case $1 in
+  start)
+    if [ "$HEED_DEFAULT_DISPLAY_MANAGER" = "true" ] &&
+       [ -e $DEFAULT_DISPLAY_MANAGER_FILE ] &&
+       [ "$(cat $DEFAULT_DISPLAY_MANAGER_FILE)" != "$DAEMON" ]; then
+       log_daemon_msg "Not starting $DESC ($NAME); it is not the default display manager." "$NAME"
+    else
+
+      # Set the final tsplash dot if starting X
+#      tsplash="/live/bin/tsplash"
+#      if [ -x "$tsplash" -a -d /live/config/tsplash ]; then
+#          openvt -w -c7 $tsplash 'start-x'
+#      fi
+
+      # shell env != "environment" during boot
+      # so we instead refer to bootline (as seen in /etc/init.d/console-setup.sh)
+      #
+      . /etc/default/locale
+      export LANG=$LANG
+      bl=$(awk -F= -v RS=" " '/^lang=/ {print $2}' /proc/cmdline)
+      #bl=$(cat /proc/cmdline)
+      export BLANG=$bl   # might be null, but the var will be set, and readable
+
+      log_daemon_msg "Starting $NAME" "$NAME"
+      start-stop-daemon --start --quiet $SSD_START_ARGS
+      log_end_msg $?
+
+#      if [ -x "$tsplash" -a -d /live/config/tsplash ]; then
+#          openvt -c 10 $tsplash clear-progress
+#      fi
+    fi
+  ;;
+
+  stop)
+
+    test -f $PIDFILE || exit 0
+
+    tsplash="/live/bin/tsplash"
+#    if [ -x "$tsplash" -a -d /live/config/tsplash ]; then
+#        case $(runlevel) in
+#            *0) openvt -c10 $tsplash shutdown ;;
+#            *6) openvt -c10 $tsplash reboot   ;;
+#             *) chvt 2                        ;;
+#        esac
+#    fi
+
+    log_daemon_msg "Stopping $DESC" "$NAME"
+    start-stop-daemon --stop --quiet $SSD_STOP_ARGS
+    log_end_msg $?
+    rm -f $PIDFILE
+
+    # This may not be needed
+#    [ -x "$tsplash" -a -d /live/config/tsplash ] || exit 0
+#    case $(runlevel) in
+#        *0|*6)       ;;
+#         *) chvt 2   ;;
+#    esac
+#    exit 0
+  ;;
+
+  restart)
+    $0 stop
+    sleep 2
+    $0 start
+  ;;
+
+  force-reload)
+    /etc/init.d/slimski restart
+  ;;
+
+  status)
+    status_of_proc /usr/bin/$NAME $NAME
+  ;;
+
+  *)
+    echo "Usage: /etc/init.d/slimski {start|stop|restart|force-reload|status}"
+    exit 1
+  ;;
+esac
+
+# End of file
+drwxr-xr-x 3 root root 4096 Sep 19 00:21 /etc/sv/slimski
+/etc/sv/slimski
+960d8efded2f12fa232bda56f90c867e18c73a46c6cbc8f3ad6b6e94a5f83096  /etc/sv/slimski/run
+#!/usr/bin/env /lib/runit/invoke-run
+set -e
+
+NAME="slimski"
+DAEMON=/usr/bin/slimski
+
+DEFAULT_DISPLAY_MANAGER_FILE=/etc/X11/default-display-manager
+DEFAULT_DISPLAY_MANAGER=$(cat $DEFAULT_DISPLAY_MANAGER_FILE)
+
+# Exit service if DAEMON is not installed
+if [ ! -x $DAEMON ]; then
+    exit 161
+fi
+
+# start only if slimski is the default DM
+if [ "$DEFAULT_DISPLAY_MANAGER" != "$DAEMON" ]; then
+    exit 161
+fi
+
+# Start elogind first (optional) - Don't start
+# sv start elogind && sv check elogind || true
+
+# Load language code
+. /etc/default/locale
+export LANG=$LANG
+bl=$(awk -F= -v RS=" " '/^lang=/ {print $2}' /proc/cmdline)
+export BLANG=$bl
+
+exec 2>&1
+
+exec $DAEMON
+lrwxrwxrwx 1 root root 19 Oct  9  2025 /etc/runit/runsvdir/default/slimski -> ../../../sv/slimski
+/etc/sv/slimski
+960d8efded2f12fa232bda56f90c867e18c73a46c6cbc8f3ad6b6e94a5f83096  /etc/runit/runsvdir/default/slimski/run
+#!/usr/bin/env /lib/runit/invoke-run
+set -e
+
+NAME="slimski"
+DAEMON=/usr/bin/slimski
+
+DEFAULT_DISPLAY_MANAGER_FILE=/etc/X11/default-display-manager
+DEFAULT_DISPLAY_MANAGER=$(cat $DEFAULT_DISPLAY_MANAGER_FILE)
+
+# Exit service if DAEMON is not installed
+if [ ! -x $DAEMON ]; then
+    exit 161
+fi
+
+# start only if slimski is the default DM
+if [ "$DEFAULT_DISPLAY_MANAGER" != "$DAEMON" ]; then
+    exit 161
+fi
+
+# Start elogind first (optional) - Don't start
+# sv start elogind && sv check elogind || true
+
+# Load language code
+. /etc/default/locale
+export LANG=$LANG
+bl=$(awk -F= -v RS=" " '/^lang=/ {print $2}' /proc/cmdline)
+export BLANG=$bl
+
+exec 2>&1
+
+exec $DAEMON
+DEPLOYMENT_TOOL_PATHS
+/usr/sbin/modprobe
+/usr/sbin/insmod
+/usr/sbin/service
+/usr/bin/sv
+GRAPHICS_DEVICE_FD_HOLDERS
+1766 Xorg 16 /dev/dri/card0

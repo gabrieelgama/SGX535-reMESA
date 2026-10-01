@@ -1,0 +1,20 @@
+--- /home/gama/sgx535-gfx/docs/phase8/artifacts/candidate-01-build-20260930/candidate-01/integrated-psb_irq.c	2026-10-01 00:00:37.803413870 +0000
++++ /home/gama/sgx535-gfx/docs/phase8/artifacts/candidate-01-build-20260930/candidate-02-lifecycle/integrated-psb_irq.c	2026-10-01 00:00:37.807413870 +0000
+@@ -398,9 +398,14 @@
+ 			psb_disable_pipestat(dev_priv, i, PIPE_VBLANK_INTERRUPT_ENABLE);
+ 	}
+ 
+-	dev_priv->vdc_irq_mask &= _PSB_IRQ_SGX_FLAG |
+-				  _PSB_IRQ_MSVDX_FLAG |
+-				  _LNC_IRQ_TOPAZ_FLAG;
++	/* drm_irq_uninstall clears irq_enabled before this callback.  A
++	 * direct PM call keeps its registered handler and historical mask. */
++	if (!dev->irq_enabled)
++		dev_priv->vdc_irq_mask = 0;
++	else
++		dev_priv->vdc_irq_mask &= _PSB_IRQ_SGX_FLAG |
++					  _PSB_IRQ_MSVDX_FLAG |
++					  _LNC_IRQ_TOPAZ_FLAG;
+ 
+ 	/* These two registers are safe even if display island is off */
+ 	PSB_WVDC32(~dev_priv->vdc_irq_mask, PSB_INT_MASK_R);

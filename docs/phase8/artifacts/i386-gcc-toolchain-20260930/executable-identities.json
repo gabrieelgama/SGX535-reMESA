@@ -1,0 +1,162 @@
+[
+  {
+    "invocation_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+    "resolved_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+    "sha256": "230e1e46df3d07477cbc1b0be63507738abbf22836e221affbc89167995a3d0a",
+    "ELF": "ELF64 little-endian AArch64",
+    "ldd_stdout": "\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000007d7ed40000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000003000000000)\n",
+    "ldd_stderr": ""
+  },
+  {
+    "invocation_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-cpp-14",
+    "resolved_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-cpp-14",
+    "sha256": "c3260ddd3836854dcf4bfd2620ca510f15c4706bed1c0566ffd84ba0368c6ba9",
+    "ELF": "ELF64 little-endian AArch64",
+    "ldd_stdout": "\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x00000077ab4c0000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000003000000000)\n",
+    "ldd_stderr": ""
+  },
+  {
+    "invocation_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-as",
+    "resolved_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-as",
+    "sha256": "e4e2e048401b9c6bbfab363465297fd3c427d0946bb6e6bdd98ddb32838b0ba2",
+    "ELF": "ELF64 little-endian AArch64",
+    "ldd_stdout": "\tlibbfd-2.44-i386.so => /home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/lib/aarch64-linux-gnu/libbfd-2.44-i386.so (0x00000070d7340000)\n\tlibz.so.1 => /lib/aarch64-linux-gnu/libz.so.1 (0x00000070d72f0000)\n\tlibzstd.so.1 => /lib/aarch64-linux-gnu/libzstd.so.1 (0x00000070d7220000)\n\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x00000070d7060000)\n\tlibsframe.so.1 => /lib/aarch64-linux-gnu/libsframe.so.1 (0x00000070d7030000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000003000000000)\n",
+    "ldd_stderr": ""
+  },
+  {
+    "invocation_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-ld.bfd",
+    "resolved_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-ld.bfd",
+    "sha256": "a10a5fbd0ab26c27336634b47287d4c4ce52577c1e924e818d51ae832465bcca",
+    "ELF": "ELF64 little-endian AArch64",
+    "ldd_stdout": "\tlibbfd-2.44-i386.so => /home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/lib/aarch64-linux-gnu/libbfd-2.44-i386.so (0x0000007345420000)\n\tlibctf-i386.so.0 => /home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/lib/aarch64-linux-gnu/libctf-i386.so.0 (0x00000073453d0000)\n\tlibjansson.so.4 => /lib/aarch64-linux-gnu/libjansson.so.4 (0x0000007345390000)\n\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x00000073451d0000)\n\tlibz.so.1 => /lib/aarch64-linux-gnu/libz.so.1 (0x0000007345190000)\n\tlibzstd.so.1 => /lib/aarch64-linux-gnu/libzstd.so.1 (0x00000073450c0000)\n\tlibsframe.so.1 => /lib/aarch64-linux-gnu/libsframe.so.1 (0x0000007345090000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000003000000000)\n",
+    "ldd_stderr": ""
+  },
+  {
+    "invocation_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-ar",
+    "resolved_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-ar",
+    "sha256": "e4566632f15d92d1599010d128a3d7ccc36689e8c558726b9ce2aea16bc8cca0",
+    "ELF": "ELF64 little-endian AArch64",
+    "ldd_stdout": "\tlibbfd-2.44-i386.so => /home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/lib/aarch64-linux-gnu/libbfd-2.44-i386.so (0x0000007b5dbc0000)\n\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000007b5d9e0000)\n\tlibz.so.1 => /lib/aarch64-linux-gnu/libz.so.1 (0x0000007b5d9a0000)\n\tlibzstd.so.1 => /lib/aarch64-linux-gnu/libzstd.so.1 (0x0000007b5d8d0000)\n\tlibsframe.so.1 => /lib/aarch64-linux-gnu/libsframe.so.1 (0x0000007b5d8a0000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000003000000000)\n",
+    "ldd_stderr": ""
+  },
+  {
+    "invocation_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-nm",
+    "resolved_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-nm",
+    "sha256": "586f89fded862529f947238ff5d914d32c4d1ea583d0061ab2ad8c6329edb23b",
+    "ELF": "ELF64 little-endian AArch64",
+    "ldd_stdout": "\tlibbfd-2.44-i386.so => /home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/lib/aarch64-linux-gnu/libbfd-2.44-i386.so (0x0000007d59110000)\n\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000007d58f30000)\n\tlibz.so.1 => /lib/aarch64-linux-gnu/libz.so.1 (0x0000007d58ef0000)\n\tlibzstd.so.1 => /lib/aarch64-linux-gnu/libzstd.so.1 (0x0000007d58e20000)\n\tlibsframe.so.1 => /lib/aarch64-linux-gnu/libsframe.so.1 (0x0000007d58df0000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000003000000000)\n",
+    "ldd_stderr": ""
+  },
+  {
+    "invocation_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-objcopy",
+    "resolved_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-objcopy",
+    "sha256": "24a5b155b76201ac9b7c885e8b2e0d16155d3a9b13cf3e22f12d316e73a0c034",
+    "ELF": "ELF64 little-endian AArch64",
+    "ldd_stdout": "\tlibbfd-2.44-i386.so => /home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/lib/aarch64-linux-gnu/libbfd-2.44-i386.so (0x000000715f720000)\n\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x000000715f540000)\n\tlibz.so.1 => /lib/aarch64-linux-gnu/libz.so.1 (0x000000715f500000)\n\tlibzstd.so.1 => /lib/aarch64-linux-gnu/libzstd.so.1 (0x000000715f430000)\n\tlibsframe.so.1 => /lib/aarch64-linux-gnu/libsframe.so.1 (0x000000715f400000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000003000000000)\n",
+    "ldd_stderr": ""
+  },
+  {
+    "invocation_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-objdump",
+    "resolved_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-objdump",
+    "sha256": "976e09f09995240271375a3ab73bd012c236eae4db509bc09041b8efc3ae6208",
+    "ELF": "ELF64 little-endian AArch64",
+    "ldd_stdout": "\tlibopcodes-2.44-i386.so => /home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/lib/aarch64-linux-gnu/libopcodes-2.44-i386.so (0x0000007eed420000)\n\tlibctf-i386.so.0 => /home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/lib/aarch64-linux-gnu/libctf-i386.so.0 (0x0000007eed3d0000)\n\tlibbfd-2.44-i386.so => /home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/lib/aarch64-linux-gnu/libbfd-2.44-i386.so (0x0000007eed260000)\n\tlibsframe.so.1 => /lib/aarch64-linux-gnu/libsframe.so.1 (0x0000007eed220000)\n\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000007eed060000)\n\tlibz.so.1 => /lib/aarch64-linux-gnu/libz.so.1 (0x0000007eed020000)\n\tlibzstd.so.1 => /lib/aarch64-linux-gnu/libzstd.so.1 (0x0000007eecf50000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000003000000000)\n",
+    "ldd_stderr": ""
+  },
+  {
+    "invocation_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-ranlib",
+    "resolved_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-ranlib",
+    "sha256": "59e7bd690ca0a7c227ec06f2d0edac4108f77209c3d532d513fca879f2f551b6",
+    "ELF": "ELF64 little-endian AArch64",
+    "ldd_stdout": "\tlibbfd-2.44-i386.so => /home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/lib/aarch64-linux-gnu/libbfd-2.44-i386.so (0x00000073ef8c0000)\n\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x00000073ef6e0000)\n\tlibz.so.1 => /lib/aarch64-linux-gnu/libz.so.1 (0x00000073ef6a0000)\n\tlibzstd.so.1 => /lib/aarch64-linux-gnu/libzstd.so.1 (0x00000073ef5d0000)\n\tlibsframe.so.1 => /lib/aarch64-linux-gnu/libsframe.so.1 (0x00000073ef5a0000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000003000000000)\n",
+    "ldd_stderr": ""
+  },
+  {
+    "invocation_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-readelf",
+    "resolved_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-readelf",
+    "sha256": "c0b7cb94c225b2ac723788ce94ab01539985edc52dab08c66999851e34c8d2e1",
+    "ELF": "ELF64 little-endian AArch64",
+    "ldd_stdout": "\tlibctf-nobfd-i386.so.0 => /home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/lib/aarch64-linux-gnu/libctf-nobfd-i386.so.0 (0x0000007fb5ea0000)\n\tlibz.so.1 => /lib/aarch64-linux-gnu/libz.so.1 (0x0000007fb5e50000)\n\tlibzstd.so.1 => /lib/aarch64-linux-gnu/libzstd.so.1 (0x0000007fb5d80000)\n\tlibsframe.so.1 => /lib/aarch64-linux-gnu/libsframe.so.1 (0x0000007fb5d50000)\n\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000007fb5b90000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000003000000000)\n",
+    "ldd_stderr": ""
+  },
+  {
+    "invocation_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-strip",
+    "resolved_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-strip",
+    "sha256": "10c39de3dadc0bdf85ef9ca81dd523d239361f338ed5e762b9682e7c7c7f344b",
+    "ELF": "ELF64 little-endian AArch64",
+    "ldd_stdout": "\tlibbfd-2.44-i386.so => /home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/lib/aarch64-linux-gnu/libbfd-2.44-i386.so (0x0000007591b00000)\n\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000007591920000)\n\tlibz.so.1 => /lib/aarch64-linux-gnu/libz.so.1 (0x00000075918e0000)\n\tlibzstd.so.1 => /lib/aarch64-linux-gnu/libzstd.so.1 (0x0000007591810000)\n\tlibsframe.so.1 => /lib/aarch64-linux-gnu/libsframe.so.1 (0x00000075917e0000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000003000000000)\n",
+    "ldd_stderr": ""
+  },
+  {
+    "invocation_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/bison",
+    "resolved_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/bison",
+    "sha256": "1b69eccf2120221423eec30dc039ea71ec81d230af3b5992596054d248b01bbb",
+    "ELF": "ELF64 little-endian AArch64",
+    "ldd_stdout": "\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000007233090000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000003000000000)\n",
+    "ldd_stderr": ""
+  },
+  {
+    "invocation_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/flex",
+    "resolved_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/flex",
+    "sha256": "2e5222b919e9ec50c4e4e5995202cb51ebd2cdd59196f0af9782a3c69643a718",
+    "ELF": "ELF64 little-endian AArch64",
+    "ldd_stdout": "\tlibm.so.6 => /lib/aarch64-linux-gnu/libm.so.6 (0x0000007d61190000)\n\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000007d60fd0000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000003000000000)\n",
+    "ldd_stderr": ""
+  },
+  {
+    "invocation_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/bc",
+    "resolved_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/bc",
+    "sha256": "cf072a005041160fe3c3e4142bb18789ad3ce08d8e74bae410b8d3620d1ec175",
+    "ELF": "ELF64 little-endian AArch64",
+    "ldd_stdout": "\tlibreadline.so.8 => /lib/aarch64-linux-gnu/libreadline.so.8 (0x00000074a3990000)\n\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x00000074a37d0000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000003000000000)\n\tlibtinfo.so.6 => /lib/aarch64-linux-gnu/libtinfo.so.6 (0x00000074a3780000)\n",
+    "ldd_stderr": ""
+  },
+  {
+    "invocation_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/m4",
+    "resolved_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/m4",
+    "sha256": "d64fc0f8671e6fe33c783df4490ffae67b2ec9148f352fd624c6b08ea7bbd390",
+    "ELF": "ELF64 little-endian AArch64",
+    "ldd_stdout": "\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x000000786ec40000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000003000000000)\n",
+    "ldd_stderr": ""
+  },
+  {
+    "invocation_path": "/usr/bin/gcc-14",
+    "resolved_path": "/usr/bin/aarch64-linux-gnu-gcc-14",
+    "sha256": "fb051a6c58961fb6aec758acf50d7d0375eecff740d0706388092829e3fb7a41",
+    "ELF": "ELF64 little-endian AArch64",
+    "ldd_stdout": "\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000007a83860000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000003000000000)\n",
+    "ldd_stderr": ""
+  },
+  {
+    "invocation_path": "/usr/bin/make",
+    "resolved_path": "/usr/bin/make",
+    "sha256": "442d0d9908e6e1968a2e1f9a82aad5231ff6b02deb3071ce38750e2e2f7a2a45",
+    "ELF": "ELF64 little-endian AArch64",
+    "ldd_stdout": "\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x00000070f3c70000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000003000000000)\n",
+    "ldd_stderr": ""
+  },
+  {
+    "invocation_path": "/usr/bin/as",
+    "resolved_path": "/usr/bin/aarch64-linux-gnu-as",
+    "sha256": "6d47317c37bd8596c9dcf0e3dd03185065dc6dd58cdc61e861fda7b9150e720a",
+    "ELF": "ELF64 little-endian AArch64",
+    "ldd_stdout": "\tlibopcodes-2.44-system.so => /lib/aarch64-linux-gnu/libopcodes-2.44-system.so (0x00000079d3110000)\n\tlibbfd-2.44-system.so => /lib/aarch64-linux-gnu/libbfd-2.44-system.so (0x00000079d2f60000)\n\tlibz.so.1 => /lib/aarch64-linux-gnu/libz.so.1 (0x00000079d2f20000)\n\tlibzstd.so.1 => /lib/aarch64-linux-gnu/libzstd.so.1 (0x00000079d2e50000)\n\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x00000079d2c90000)\n\tlibsframe.so.1 => /lib/aarch64-linux-gnu/libsframe.so.1 (0x00000079d2c60000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000003000000000)\n",
+    "ldd_stderr": ""
+  },
+  {
+    "invocation_path": "/usr/bin/ld.bfd",
+    "resolved_path": "/usr/bin/aarch64-linux-gnu-ld.bfd",
+    "sha256": "5a284e435cdf41bc05d93f0683da12b8a42608b93c79e187e7d03fab6a22ddf4",
+    "ELF": "ELF64 little-endian AArch64",
+    "ldd_stdout": "\tlibbfd-2.44-system.so => /lib/aarch64-linux-gnu/libbfd-2.44-system.so (0x00000075a2670000)\n\tlibctf.so.0 => /lib/aarch64-linux-gnu/libctf.so.0 (0x00000075a2610000)\n\tlibjansson.so.4 => /lib/aarch64-linux-gnu/libjansson.so.4 (0x00000075a25e0000)\n\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x00000075a2420000)\n\tlibz.so.1 => /lib/aarch64-linux-gnu/libz.so.1 (0x00000075a23e0000)\n\tlibzstd.so.1 => /lib/aarch64-linux-gnu/libzstd.so.1 (0x00000075a2310000)\n\tlibsframe.so.1 => /lib/aarch64-linux-gnu/libsframe.so.1 (0x00000075a22e0000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000003000000000)\n",
+    "ldd_stderr": ""
+  },
+  {
+    "invocation_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../libexec/gcc-cross/i686-linux-gnu/14/cc1",
+    "resolved_path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/libexec/gcc-cross/i686-linux-gnu/14/cc1",
+    "sha256": "21590a66c5b3b39e7b89bfb806952e1bf803f11f2a0617b2fda603b0045530af",
+    "ELF": "ELF64 little-endian AArch64",
+    "ldd_stdout": "\tlibisl.so.23 => /lib/aarch64-linux-gnu/libisl.so.23 (0x0000007e753b0000)\n\tlibmpc.so.3 => /lib/aarch64-linux-gnu/libmpc.so.3 (0x0000007e75370000)\n\tlibmpfr.so.6 => /lib/aarch64-linux-gnu/libmpfr.so.6 (0x0000007e752a0000)\n\tlibgmp.so.10 => /lib/aarch64-linux-gnu/libgmp.so.10 (0x0000007e75200000)\n\tlibz.so.1 => /lib/aarch64-linux-gnu/libz.so.1 (0x0000007e751c0000)\n\tlibzstd.so.1 => /lib/aarch64-linux-gnu/libzstd.so.1 (0x0000007e750f0000)\n\tlibm.so.6 => /lib/aarch64-linux-gnu/libm.so.6 (0x0000007e75040000)\n\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000007e74e80000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000003000000000)\n",
+    "ldd_stderr": ""
+  }
+]

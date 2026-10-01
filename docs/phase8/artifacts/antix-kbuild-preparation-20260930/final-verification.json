@@ -1,0 +1,434 @@
+{
+  "initial_file_count": 1247,
+  "changed_preexisting_files": [
+    "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "docs/phase8/i386-gcc-offline-build-plan.md",
+    "docs/phase8/i386-gcc-toolchain-qualification.md",
+    "docs/phase8/post-attempt03-checkpoint-audit.md"
+  ],
+  "unrelated_preexisting_files_unchanged": 1243,
+  "removed_preexisting_files": [],
+  "git_status_short_unchanged": true,
+  "git_diff_check": {
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "documentation_links": [
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "post-attempt03-checkpoint-audit.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "i386-gcc-offline-build-plan.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "i386-gcc-toolchain-qualification.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "antix-kbuild-preparation-equivalence.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "../hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "attempt03-module-version-followup.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/candidate-target-table-check.json",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifact-manifest.json",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "artifacts/frozen-triangle-one-shot-i386.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "i386-gcc-toolchain-qualification.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "artifacts/i386-gcc-toolchain-20260930/README.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "antix-kbuild-preparation-equivalence.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "artifacts/antix-kbuild-preparation-20260930/README.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "i386-gcc-offline-build-plan.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "link": "active-gma500-transition-review.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-offline-build-plan.md",
+      "link": "i386-gcc-toolchain-qualification.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-offline-build-plan.md",
+      "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-offline-build-plan.md",
+      "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifact-manifest.json",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-offline-build-plan.md",
+      "link": "antix-kbuild-preparation-equivalence.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-offline-build-plan.md",
+      "link": "CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-toolchain-qualification.md",
+      "link": "i386-gcc-offline-build-plan.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-toolchain-qualification.md",
+      "link": "artifacts/i386-gcc-toolchain-20260930/provisioned-packages.json",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-toolchain-qualification.md",
+      "link": "artifacts/i386-gcc-toolchain-20260930/native-installed-packages.txt",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-toolchain-qualification.md",
+      "link": "artifacts/i386-gcc-toolchain-20260930/README.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-toolchain-qualification.md",
+      "link": "artifacts/i386-gcc-toolchain-20260930/environment.sh",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-toolchain-qualification.md",
+      "link": "artifacts/i386-gcc-toolchain-20260930/executable-identities.json",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-toolchain-qualification.md",
+      "link": "artifacts/i386-gcc-toolchain-20260930/tool-identities.json",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-toolchain-qualification.md",
+      "link": "artifacts/i386-gcc-toolchain-20260930/smoke-commands.json",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-toolchain-qualification.md",
+      "link": "artifacts/i386-gcc-toolchain-20260930/native-build-tool-smoke.json",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/i386-gcc-toolchain-qualification.md",
+      "link": "artifacts/i386-gcc-toolchain-20260930/native-ssl-smoke.json",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "i386-gcc-toolchain-qualification.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "antix-kbuild-preparation-equivalence.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "i386-gcc-offline-build-plan.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "i386-gcc-toolchain-qualification.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-01/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-02/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-03/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-04/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-05/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-06/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-07/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "../hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/RESULT.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "attempt03-module-version-followup.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "../phase4-2-data/antix-source/drivers/gpu/drm/gma500/psb_drv.c",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "../phase4-2-data/antix-source/drivers/gpu/drm/gma500/power.c",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "link": "../phase4-2-data/antix-source/drivers/gpu/drm/gma500/psb_irq.c",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/antix-kbuild-preparation-equivalence.md",
+      "link": "i386-gcc-offline-build-plan.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/antix-kbuild-preparation-equivalence.md",
+      "link": "i386-gcc-toolchain-qualification.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/antix-kbuild-preparation-equivalence.md",
+      "link": "artifacts/antix-kbuild-preparation-20260930/README.md",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/antix-kbuild-preparation-equivalence.md",
+      "link": "artifacts/antix-kbuild-preparation-20260930/inputs.json",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/antix-kbuild-preparation-equivalence.md",
+      "link": "artifacts/antix-kbuild-preparation-20260930/build-environment.json",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/antix-kbuild-preparation-equivalence.md",
+      "link": "artifacts/antix-kbuild-preparation-20260930/raw-generated-comparison.json",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/antix-kbuild-preparation-equivalence.md",
+      "link": "artifacts/antix-kbuild-preparation-20260930/classified-comparison.json",
+      "exists": true
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/README.md",
+      "link": "../../antix-kbuild-preparation-equivalence.md",
+      "exists": true
+    }
+  ],
+  "new_document_whitespace_errors": [],
+  "immutable_inputs_unchanged": {
+    "/tmp/sgx535-antix-source-6/linux-5.10.240-antix.1-486-smp_5.10.240-antix.1-486-smp.orig.tar.gz": "e5c5d7c6bdcc7a845589e5956cbf50a8d6198232df017f0398a2902371042e1d",
+    "/home/gama/sgx535-gfx/docs/phase4-2-data/linux-5.10.240-antix.1-486-smp_5.10.240-antix.1-486-smp-6.diff.gz": "5c41ae456d77d9e0af181fe3153c4f80e89bacdd2b541ba15fbac0b297d69b03",
+    "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build__config": "93f4d7a779f4be65097b5f26db6c9b10431907c6d417109719eb2f16d6def3d9",
+    "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build_Module_symvers": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+    "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build_generated.tar": "f899bce235cc04a3aa3c74f569fe2ba793a0b606676144ff762a57be2aa1f45c",
+    "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build_Makefile": "70b5c7688f9067bd13b8413a205dc73ba9f66676b3de34c4092d7ceb9c260493"
+  },
+  "qualified_executable_hashes": [
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+      "expected": "230e1e46df3d07477cbc1b0be63507738abbf22836e221affbc89167995a3d0a",
+      "observed": "230e1e46df3d07477cbc1b0be63507738abbf22836e221affbc89167995a3d0a"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-cpp-14",
+      "expected": "c3260ddd3836854dcf4bfd2620ca510f15c4706bed1c0566ffd84ba0368c6ba9",
+      "observed": "c3260ddd3836854dcf4bfd2620ca510f15c4706bed1c0566ffd84ba0368c6ba9"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-as",
+      "expected": "e4e2e048401b9c6bbfab363465297fd3c427d0946bb6e6bdd98ddb32838b0ba2",
+      "observed": "e4e2e048401b9c6bbfab363465297fd3c427d0946bb6e6bdd98ddb32838b0ba2"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-ld.bfd",
+      "expected": "a10a5fbd0ab26c27336634b47287d4c4ce52577c1e924e818d51ae832465bcca",
+      "observed": "a10a5fbd0ab26c27336634b47287d4c4ce52577c1e924e818d51ae832465bcca"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-ar",
+      "expected": "e4566632f15d92d1599010d128a3d7ccc36689e8c558726b9ce2aea16bc8cca0",
+      "observed": "e4566632f15d92d1599010d128a3d7ccc36689e8c558726b9ce2aea16bc8cca0"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-nm",
+      "expected": "586f89fded862529f947238ff5d914d32c4d1ea583d0061ab2ad8c6329edb23b",
+      "observed": "586f89fded862529f947238ff5d914d32c4d1ea583d0061ab2ad8c6329edb23b"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-objcopy",
+      "expected": "24a5b155b76201ac9b7c885e8b2e0d16155d3a9b13cf3e22f12d316e73a0c034",
+      "observed": "24a5b155b76201ac9b7c885e8b2e0d16155d3a9b13cf3e22f12d316e73a0c034"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-objdump",
+      "expected": "976e09f09995240271375a3ab73bd012c236eae4db509bc09041b8efc3ae6208",
+      "observed": "976e09f09995240271375a3ab73bd012c236eae4db509bc09041b8efc3ae6208"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-ranlib",
+      "expected": "59e7bd690ca0a7c227ec06f2d0edac4108f77209c3d532d513fca879f2f551b6",
+      "observed": "59e7bd690ca0a7c227ec06f2d0edac4108f77209c3d532d513fca879f2f551b6"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-readelf",
+      "expected": "c0b7cb94c225b2ac723788ce94ab01539985edc52dab08c66999851e34c8d2e1",
+      "observed": "c0b7cb94c225b2ac723788ce94ab01539985edc52dab08c66999851e34c8d2e1"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-strip",
+      "expected": "10c39de3dadc0bdf85ef9ca81dd523d239361f338ed5e762b9682e7c7c7f344b",
+      "observed": "10c39de3dadc0bdf85ef9ca81dd523d239361f338ed5e762b9682e7c7c7f344b"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/bison",
+      "expected": "1b69eccf2120221423eec30dc039ea71ec81d230af3b5992596054d248b01bbb",
+      "observed": "1b69eccf2120221423eec30dc039ea71ec81d230af3b5992596054d248b01bbb"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/flex",
+      "expected": "2e5222b919e9ec50c4e4e5995202cb51ebd2cdd59196f0af9782a3c69643a718",
+      "observed": "2e5222b919e9ec50c4e4e5995202cb51ebd2cdd59196f0af9782a3c69643a718"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/bc",
+      "expected": "cf072a005041160fe3c3e4142bb18789ad3ce08d8e74bae410b8d3620d1ec175",
+      "observed": "cf072a005041160fe3c3e4142bb18789ad3ce08d8e74bae410b8d3620d1ec175"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/m4",
+      "expected": "d64fc0f8671e6fe33c783df4490ffae67b2ec9148f352fd624c6b08ea7bbd390",
+      "observed": "d64fc0f8671e6fe33c783df4490ffae67b2ec9148f352fd624c6b08ea7bbd390"
+    },
+    {
+      "path": "/usr/bin/aarch64-linux-gnu-gcc-14",
+      "expected": "fb051a6c58961fb6aec758acf50d7d0375eecff740d0706388092829e3fb7a41",
+      "observed": "fb051a6c58961fb6aec758acf50d7d0375eecff740d0706388092829e3fb7a41"
+    },
+    {
+      "path": "/usr/bin/make",
+      "expected": "442d0d9908e6e1968a2e1f9a82aad5231ff6b02deb3071ce38750e2e2f7a2a45",
+      "observed": "442d0d9908e6e1968a2e1f9a82aad5231ff6b02deb3071ce38750e2e2f7a2a45"
+    },
+    {
+      "path": "/usr/bin/aarch64-linux-gnu-as",
+      "expected": "6d47317c37bd8596c9dcf0e3dd03185065dc6dd58cdc61e861fda7b9150e720a",
+      "observed": "6d47317c37bd8596c9dcf0e3dd03185065dc6dd58cdc61e861fda7b9150e720a"
+    },
+    {
+      "path": "/usr/bin/aarch64-linux-gnu-ld.bfd",
+      "expected": "5a284e435cdf41bc05d93f0683da12b8a42608b93c79e187e7d03fab6a22ddf4",
+      "observed": "5a284e435cdf41bc05d93f0683da12b8a42608b93c79e187e7d03fab6a22ddf4"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/libexec/gcc-cross/i686-linux-gnu/14/cc1",
+      "expected": "21590a66c5b3b39e7b89bfb806952e1bf803f11f2a0617b2fda603b0045530af",
+      "observed": "21590a66c5b3b39e7b89bfb806952e1bf803f11f2a0617b2fda603b0045530af"
+    }
+  ],
+  "old_rejected_candidate_unchanged_sha256": "934bd97164c803e52d96528b9ec464d587a6a68e2f671aa255407657cc5342cf",
+  "equivalence_gate": "FAIL",
+  "failed_prepared_header_preserved": true,
+  "qualified_table_not_installed_in_failed_output": true,
+  "new_candidate_built": false,
+  "target_contact": "NONE",
+  "gate_b": "BLOCKED",
+  "whitelist": [],
+  "staging_commit_push": "NONE"
+}

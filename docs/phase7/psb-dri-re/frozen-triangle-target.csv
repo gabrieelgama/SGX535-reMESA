@@ -1,0 +1,2 @@
+width,height,cpp,pitch_pixels,stride_bytes,size,layout,word_format,memory_order,base_alignment,samples,depth,stencil,initial_value,status,evidence
+32,32,4,32,128,4096,LINEAR,ARGB8888,BGRA,4096,1,False,False,ZERO_BY_CLEANROOM_POLICY,DERIVED_CONFIRMED,P7H-048; DRI0x4c300/0x4e638/0x4effa/0x4b818/0x392ab/0x4b710

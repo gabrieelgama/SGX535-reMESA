@@ -1,0 +1,64 @@
+{
+  "original_sha256": "7b42a99d157ad00494c358a7663a2daf438ba9fc9a8f2ca5076d28ddeb6adafb",
+  "free_irq_import_present": true,
+  "free_irq_relocation_callers": {
+    "oaktrail_hdmi_i2c_init": 1,
+    "oaktrail_hdmi_i2c_exit": 1
+  },
+  "no_direct_irq_release_in_selected_teardown": true,
+  "classification": "CONFIRMED-FROM-ARTIFACT plus selected source call graph; exact recovery-oops pointer remains UNKNOWN",
+  "selected_teardown_external_relocation_targets": {
+    "psb_driver_unload": [
+      "gma_backlight_exit",
+      "psb_modeset_cleanup",
+      "__x86_indirect_thunk_edx",
+      "psb_intel_opregion_fini",
+      "psb_mmu_free_pagedir",
+      "down_read",
+      "psb_mmu_get_default_pd",
+      "psb_mmu_remove_pfn_sequence",
+      "up_read",
+      "psb_mmu_driver_takedown",
+      "psb_gtt_takedown",
+      "set_pages_wb",
+      "__free_pages",
+      "iounmap",
+      "iounmap",
+      "iounmap",
+      "pci_dev_put",
+      "pci_dev_put",
+      "psb_intel_destroy_bios",
+      "kfree",
+      "gma_power_uninit"
+    ],
+    "psb_pci_remove": [
+      "drm_dev_unregister",
+      "drm_dev_put"
+    ],
+    "psb_chip_teardown": [
+      "psb_lid_timer_takedown",
+      "gma_intel_teardown_gmbus"
+    ],
+    "psb_modeset_cleanup": [
+      "drm_kms_helper_poll_fini",
+      "drm_fb_helper_unregister_fbi",
+      "drm_fb_helper_fini",
+      "drm_framebuffer_unregister_private",
+      "drm_framebuffer_cleanup",
+      "kfree",
+      "kfree",
+      "drm_mode_config_cleanup",
+      "refcount_warn_saturate",
+      "drm_gem_object_free"
+    ],
+    "gma_power_uninit": [
+      "__pm_runtime_disable",
+      "__pm_runtime_set_status"
+    ]
+  },
+  "objdump_argv": [
+    "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-objdump",
+    "-dr",
+    "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260927-H0/raw/installed-gma500_gfx.ko"
+  ]
+}

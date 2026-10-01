@@ -1,0 +1,40 @@
+[
+  {
+    "command": [
+      "python3",
+      "tools/psb-dri-re/frozen_triangle_dry_run.py"
+    ],
+    "exit": 0,
+    "stdout_sha256": "2e85beef0c1a7ec2f8ccc2656b49dd4fb054bf0f55424c226f5fda70e621720e",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "tools/psb-dri-re/frozen_triangle_dry_run.py"
+    ],
+    "exit": 0,
+    "stdout_sha256": "2e85beef0c1a7ec2f8ccc2656b49dd4fb054bf0f55424c226f5fda70e621720e",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "tools/psb-dri-re/generate_frozen_kernel_initial.py",
+      "--check"
+    ],
+    "exit": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "tools/psb-dri-re/frozen_triangle_image.py",
+      "--complete"
+    ],
+    "exit": 1,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr": "PARTIAL: L12, FT-AUX, FT-BO, FT-SERVICE\n"
+  }
+]

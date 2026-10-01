@@ -1,5 +1,7 @@
 # Frozen fragment compiler: focused static trace
 
+**Later result:** [FG-01 exact selected output](frozen-fragment-exact-output.md) closes this checkpoint's output question for the frozen MOV/END input. Provisional UNKNOWN statements below describe the earlier investigation state, not the current FG-01 result.
+
 This checkpoint continues the P7G triangle analysis. Addresses are ELF virtual addresses in the retained `psb_dri.so` (SHA-256 `74ca42991906741ee91be1bc088ae0b142fa71b6a85658c5dad0851ce50dd0d8`); Ghidra's project address is ELF VA plus `0x10000`. The binary was only parsed and decompiled. No historical code or hardware was executed.
 
 ## Input and first transformations

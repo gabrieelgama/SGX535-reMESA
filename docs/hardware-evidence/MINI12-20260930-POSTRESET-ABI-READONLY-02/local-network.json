@@ -1,0 +1,29 @@
+{
+  "observed_utc": "2026-09-30T18:41:12.817663+00:00",
+  "scope": "LOCAL metadata only; no probes or configuration changes",
+  "operator_reported_target_ipv4": "169.254.77.254",
+  "commands": [
+    {
+      "argv": [
+        "ip",
+        "-4",
+        "route",
+        "show"
+      ],
+      "exit_status": 0,
+      "stdout": "192.168.18.0/24 dev wlan0 proto kernel scope link src 192.168.18.84 \n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "ip",
+        "-4",
+        "-brief",
+        "address"
+      ],
+      "exit_status": 0,
+      "stdout": "wlan0            UP             192.168.18.84/24 \nlo               UP             127.0.0.1/8 \n",
+      "stderr": ""
+    }
+  ]
+}

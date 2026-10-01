@@ -1,0 +1,6 @@
+# Prevent udev from loading any Nvidia modules
+blacklist nvidia
+blacklist nvidia-current
+blacklist nvidia-drm
+blacklist nvidia-modeset
+blacklist nvidia-uvm

@@ -1,0 +1,17 @@
+patching file .clang-format
+patching file .cocciconfig
+patching file .config.old
+patching file .get_maintainer.ignore
+patching file .mailmap
+patching file .version
+patching file CREDITS
+patching file MAINTAINERS
+patching file Makefile.orig
+patching file Module.symvers
+patching file README
+patching file debian/arch
+patching file debian/changelog
+patching file debian/control
+patching file debian/copyright
+patching file debian/rules
+patching file debian/source/format

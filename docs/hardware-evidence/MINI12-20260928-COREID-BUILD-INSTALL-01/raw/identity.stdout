@@ -1,0 +1,1 @@
+{"arch": "i686", "bios_version": "A02", "board_name": "0X605H", "pci_bdf": "0000:00:02.0", "pci_device": "0x8108", "pci_revision": "0x06", "pci_subsystem_device": "0x02b1", "pci_subsystem_vendor": "0x1028", "pci_vendor": "0x8086", "product_name": "Inspiron 1210", "sys_vendor": "Dell Inc.", "target_utc": "2026-09-28T01:17:28.949033+00:00"}

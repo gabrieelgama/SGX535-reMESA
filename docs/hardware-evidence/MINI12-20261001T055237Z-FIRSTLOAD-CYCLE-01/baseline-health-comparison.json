@@ -1,0 +1,18 @@
+{
+  "retained_capture": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/stdout.txt",
+  "retained_capture_sha256": "5fee2f01b32e0316e1d132278e213154a817a60517d28dd082c748fdaf4a2a8b",
+  "current_boot_id": "8ae37532-19d4-4ec7-9c29-a791acfd889f",
+  "retained_boot_id": "8ae37532-19d4-4ec7-9c29-a791acfd889f",
+  "all_guard_matches_identical_to_retained_baseline": true,
+  "matched_lines": [
+    "[   13.421480] ACPI Warning: Could not enable fixed event - PowerButton (2) (20200925/evxface-618)",
+    "[   13.704693] ACPI Warning: Could not enable fixed event - PowerButton (2) (20200925/evxface-618)",
+    "[   19.356593] gma500 0000:00:02.0: BL bug: Reg 00000000 save 00000000"
+  ],
+  "new_guard_matching_lines": [],
+  "entire_dmesg_identical_stripped": true,
+  "retained_dmesg_sha256_stripped": "2d1c9401ec6a5c73d639ddb4bc77d791f3798c1b92276eee98587ff19f37de0c",
+  "fresh_dmesg_sha256_stripped": "2d1c9401ec6a5c73d639ddb4bc77d791f3798c1b92276eee98587ff19f37de0c",
+  "guard_not_changed_or_waived": true,
+  "target_contact_stopped": true
+}

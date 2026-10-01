@@ -1,0 +1,1 @@
+omit-pci-remove-unload: /home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_irq_lifecycle.c:125: drm_dev_put: Assertion `unregister_event && !dev->dev_private && free_event' failed.

@@ -1,0 +1,111 @@
+UTC 2026-09-30T06:32:02Z
+KERNEL 5.10.240-antix.1-486-smp
+SERVICE down: /etc/runit/runsvdir/default/slimski: 150s, normally up
+MODULE ABSENT
+PCI_DRIVER ABSENT
+CARD0 ABSENT
+VTCON0 1
+VTCON1 CANDIDATE_SHA 934bd97164c803e52d96528b9ec464d587a6a68e2f671aa255407657cc5342cf  /root/sgx535-frozen-seq1/gma500_gfx.ko
+CANDIDATE_VERMAGIC 5.10.240-antix.1-486-smp SMP mod_unload modversions 486 
+DMESG_TAIL_BEGIN
+[   27.862182] uvcvideo: Found UVC 1.00 device Integrated Webcam (064e:a118)
+[   27.887439] input: Integrated Webcam: Integrated W as /devices/pci0000:00/0000:00:1d.7/usb1/1-6/1-6:1.0/input/input9
+[   27.889238] usbcore: registered new interface driver uvcvideo
+[   27.889248] USB Video Class driver (1.1.1)
+[   28.396955] lp: driver loaded but no devices found
+[   28.430147] ppdev: user-space parallel port driver
+[   28.513276] tun: Universal TUN/TAP device driver, 1.6
+[   29.200169] EXT4-fs (sda1): re-mounted. Opts: (null)
+[   30.254778] Adding 1011708k swap on /swap/swap.  Priority:-2 extents:3 across:1028092k FS
+[   33.661131] udevd[1420]: starting version 3.2.14
+[   33.687730] udevd[1420]: GOTO 'alsa_restore_std' has no matching label in: '/usr/lib/udev/rules.d/90-alsa-restore.rules'
+[   33.688166] udevd[1420]: GOTO 'alsa_restore_std' has no matching label in: '/usr/lib/udev/rules.d/90-alsa-restore.rules'
+[   33.694722] udevd[1420]: starting eudev-3.2.14
+[   45.210279] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[   45.210296] Bluetooth: BNEP filters: protocol multicast
+[   45.210319] Bluetooth: BNEP socket layer initialized
+[   45.600411] 8021q: 802.1Q VLAN Support v1.8
+[   45.873439] Bluetooth: RFCOMM TTY layer initialized
+[   45.873545] Bluetooth: RFCOMM socket layer initialized
+[   45.873588] Bluetooth: RFCOMM ver 1.11
+[   46.812743] RTL8201CP Ethernet r8169-0-200:00: attached PHY driver [RTL8201CP Ethernet] (mii_bus:phy_addr=r8169-0-200:00, irq=IGNORE)
+[   46.869997] r8169 0000:02:00.0 eth0: Link is Down
+[   48.044808] usb 3-1: USB disconnect, device number 2
+[   59.532983] gma500 0000:00:02.0: Backlight lvds set brightness 7a120000
+[   77.072263] Not activating Mandatory Access Control as /sbin/tomoyo-init does not exist.
+[21898.425197] gma500 0000:00:02.0: Backlight lvds set brightness 7a120000
+[21911.715415] Not activating Mandatory Access Control as /sbin/tomoyo-init does not exist.
+[24109.328370] Console: switching to colour VGA+ 80x25
+[24109.394256] Console: switching to colour frame buffer device 160x50
+[24126.768256] gma500 0000:00:02.0: Backlight lvds set brightness 7a120000
+[24140.062520] Not activating Mandatory Access Control as /sbin/tomoyo-init does not exist.
+[25226.580428] Console: switching to colour VGA+ 80x25
+[25270.500304] gma500 0000:00:02.0: Backlight lvds set brightness 7a1278da
+[25270.508584] ------------[ cut here ]------------
+[25270.508649] WARNING: CPU: 0 PID: 14537 at drivers/gpu/drm/drm_mode_config.c:510 drm_mode_config_cleanup+0x250/0x2b0 [drm]
+[25270.508656] Modules linked in: rfcomm(E) 8021q(E) garp(E) bnep(E) mrp(E) stp(E) llc(E) binfmt_misc(E) sch_fq_codel(E) tun(E) parport_pc(E) ppdev(E) lp(E) parport(E) uvcvideo(E) videobuf2_vmalloc(E) videobuf2_memops(E) videobuf2_v4l2(E) videobuf2_common(E) videodev(E) mc(E) btusb(E) btrtl(E) btbcm(E) btintel(E) bluetooth(E) ecdh_generic(E) ecc(E) wl(POE) compal_laptop(E) dell_laptop(E) snd_hda_codec_realtek(E) dell_smbios(E) dell_wmi_descriptor(E) snd_hda_codec_generic(E) ledtrig_audio(E) wmi(E) dcdbas(E) snd_hda_intel(E) snd_intel_dspcfg(E) soundwire_intel(E) soundwire_generic_allocation(E) soundwire_cadence(E) gma500_gfx(E-) snd_hda_codec(E) snd_hda_core(E) drm_kms_helper(E) soundwire_bus(E) snd_hwdep(E) cec(E) snd_soc_core(E) drm(E) snd_compress(E) snd_pcm_dmaengine(E) cfg80211(E) ac97_bus(E) snd_pcm(E) fb_sys_fops(E) syscopyarea(E) sysfillrect(E) snd_timer(E) sysimgblt(E) i2c_algo_bit(E) snd(E) coretemp(E) joydev(E) evdev(E) input_leds(E) rfkill(E) soundcore(E) ac(E)
+[25270.508931]  tiny_power_button(E) button(E) acpi_cpufreq(E) btrfs(E) blake2b_generic(E) xor(E) raid6_pq(E) libcrc32c(E) gpio_sch(E) i2c_isch(E) ums_realtek(E) uas(E) r8169(E) psmouse(E) serio_raw(E) usb_storage(E) lpc_sch(E) uhci_hcd(E) realtek(E) battery(E) rtc_cmos(E) video(E)
+[25270.509036] CPU: 0 PID: 14537 Comm: modprobe Tainted: P           OE     5.10.240-antix.1-486-smp #6
+[25270.509043] Hardware name: Dell Inc. Inspiron 1210   /0X605H, BIOS A02 12/01/2008
+[25270.509093] EIP: drm_mode_config_cleanup+0x250/0x2b0 [drm]
+[25270.509108] Code: c6 49 b1 d1 8b 87 18 01 00 00 8d 8f 18 01 00 00 39 c8 75 66 8b 45 f0 64 2b 05 e8 b6 ed c9 75 5e 8d 65 f4 5b 5e 5f 5d c3 66 90 <0f> 0b 89 da 89 f8 e8 d5 87 ff ff eb 12 8d 76 00 ff 70 34 68 18 fa
+[25270.509117] EAX: f46f6d94 EBX: e0ff7e48 ECX: 7fffffff EDX: f4449410
+[25270.509124] ESI: f46f6db4 EDI: f46f6c00 EBP: e0ff7e70 ESP: e0ff7e44
+[25270.509132] DS: 007b ES: 007b FS: 00d8 GS: 0033 SS: 0068 EFLAGS: 00210293
+[25270.509139] CR0: 80050033 CR2: bfe9bd20 CR3: 33bd4000 CR4: 000006d0
+[25270.509144] Call Trace:
+[25270.509161]  ? kfree+0x221/0x430
+[25270.509191]  ? psb_modeset_cleanup+0x80/0xb0 [gma500_gfx]
+[25270.509212]  ? psb_modeset_cleanup+0x80/0xb0 [gma500_gfx]
+[25270.509236]  psb_modeset_cleanup+0x91/0xb0 [gma500_gfx]
+[25270.509262]  psb_driver_unload+0x2c/0x160 [gma500_gfx]
+[25270.509288]  psb_pci_remove+0x18/0x30 [gma500_gfx]
+[25270.509304]  pci_device_remove+0x33/0x90
+[25270.509319]  __device_release_driver+0x148/0x200
+[25270.509332]  driver_detach+0x9a/0xf0
+[25270.509343]  bus_remove_driver+0x3b/0x90
+[25270.509355]  driver_unregister+0x20/0x40
+[25270.509366]  pci_unregister_driver+0x16/0x60
+[25270.509391]  psb_exit+0xd/0xa2d [gma500_gfx]
+[25270.509407]  __ia32_sys_delete_module+0x18b/0x2a0
+[25270.509421]  ? _cond_resched+0x13/0x50
+[25270.509436]  ? exit_to_user_mode_prepare+0xe9/0x120
+[25270.509490]  ? exit_to_user_mode_prepare+0xe9/0x120
+[25270.509505]  __do_fast_syscall_32+0x45/0x80
+[25270.509516]  do_fast_syscall_32+0x29/0x60
+[25270.509526]  do_SYSENTER_32+0x15/0x20
+[25270.509537]  entry_SYSENTER_32+0x98/0xf1
+[25270.509547] EIP: 0xb7f91549
+[25270.509557] Code: 03 74 c0 01 10 05 03 74 b8 01 10 06 03 74 b4 01 10 07 03 74 b0 01 10 08 03 74 d8 01 00 00 00 00 00 51 52 55 89 e5 0f 34 cd 80 <5d> 5a 59 c3 90 90 90 90 2e 8d b4 26 00 00 00 00 8d b4 26 00 00 00
+[25270.509565] EAX: ffffffda EBX: 00bf2458 ECX: 00000800 EDX: 0046f332
+[25270.509573] ESI: 00000000 EDI: 00bf2420 EBP: 00000000 ESP: bfa16cc8
+[25270.509581] DS: 007b ES: 007b FS: 0000 GS: 0033 SS: 007b EFLAGS: 00200202
+[25270.509594] ---[ end trace 1a9824dad8c7d3cc ]---
+[25270.509649] [drm:drm_mode_config_cleanup [drm]] *ERROR* connector LVDS-1 leaked!
+[25270.512679] ------------[ cut here ]------------
+[25270.512691] ida_free called for id=0 which is not allocated.
+[25270.512756] WARNING: CPU: 0 PID: 22 at lib/idr.c:525 ida_free+0xaa/0x120
+[25270.512762] Modules linked in: rfcomm(E) 8021q(E) garp(E) bnep(E) mrp(E) stp(E) llc(E) binfmt_misc(E) sch_fq_codel(E) tun(E) parport_pc(E) ppdev(E) lp(E) parport(E) uvcvideo(E) videobuf2_vmalloc(E) videobuf2_memops(E) videobuf2_v4l2(E) videobuf2_common(E) videodev(E) mc(E) btusb(E) btrtl(E) btbcm(E) btintel(E) bluetooth(E) ecdh_generic(E) ecc(E) wl(POE) compal_laptop(E) dell_laptop(E) snd_hda_codec_realtek(E) dell_smbios(E) dell_wmi_descriptor(E) snd_hda_codec_generic(E) ledtrig_audio(E) wmi(E) dcdbas(E) snd_hda_intel(E) snd_intel_dspcfg(E) soundwire_intel(E) soundwire_generic_allocation(E) soundwire_cadence(E) gma500_gfx(E-) snd_hda_codec(E) snd_hda_core(E) drm_kms_helper(E) soundwire_bus(E) snd_hwdep(E) cec(E) snd_soc_core(E) drm(E) snd_compress(E) snd_pcm_dmaengine(E) cfg80211(E) ac97_bus(E) snd_pcm(E) fb_sys_fops(E) syscopyarea(E) sysfillrect(E) snd_timer(E) sysimgblt(E) i2c_algo_bit(E) snd(E) coretemp(E) joydev(E) evdev(E) input_leds(E) rfkill(E) soundcore(E) ac(E)
+[25270.513054]  tiny_power_button(E) button(E) acpi_cpufreq(E) btrfs(E) blake2b_generic(E) xor(E) raid6_pq(E) libcrc32c(E) gpio_sch(E) i2c_isch(E) ums_realtek(E) uas(E) r8169(E) psmouse(E) serio_raw(E) usb_storage(E) lpc_sch(E) uhci_hcd(E) realtek(E) battery(E) rtc_cmos(E) video(E)
+[25270.513160] CPU: 0 PID: 22 Comm: kworker/0:1 Tainted: P        W  OE     5.10.240-antix.1-486-smp #6
+[25270.513166] Hardware name: Dell Inc. Inspiron 1210   /0X605H, BIOS A02 12/01/2008
+[25270.513221] Workqueue: events drm_connector_free_work_fn [drm]
+[25270.513244] EIP: ida_free+0xaa/0x120
+[25270.513256] Code: 0c 30 01 00 eb 6d 2e 8d b4 26 00 00 00 00 66 90 85 c0 75 34 8b 55 d4 8b 45 d8 e8 f1 02 50 00 53 68 14 5a c2 c9 e8 9c fe 4a 00 <0f> 0b 58 5a 8b 45 f0 64 2b 05 e8 b6 ed c9 75 58 8d 65 f4 5b 5e 5f
+[25270.513265] EAX: 00000030 EBX: 00000000 ECX: 00000000 EDX: 00000000
+[25270.513273] ESI: 00000000 EDI: c11aded4 EBP: c11adefc ESP: c11adec4
+[25270.513282] DS: 007b ES: 007b FS: 00d8 GS: 0000 SS: 0068 EFLAGS: 00010282
+[25270.513289] CR0: 80050033 CR2: bfe9bd20 CR3: 33bd4000 CR4: 000006d0
+[25270.513294] Call Trace:
+[25270.513351]  drm_connector_cleanup+0xf8/0x220 [drm]
+[25270.513381]  psb_intel_lvds_destroy+0x25/0x40 [gma500_gfx]
+[25270.513427]  drm_connector_free_work_fn+0x68/0x80 [drm]
+[25270.513442]  process_one_work+0x1ce/0x340
+[25270.513491]  worker_thread+0x3f/0x440
+[25270.513504]  kthread+0xf3/0x110
+[25270.513515]  ? process_one_work+0x340/0x340
+[25270.513525]  ? kthread_associate_blkcg+0xa0/0xa0
+[25270.513536]  ret_from_fork+0x19/0x30
+[25270.513548] ---[ end trace 1a9824dad8c7d3cd ]---
+[25284.996650] gma500_gfx: disagrees about version of symbol module_layout
+DMESG_TAIL_END

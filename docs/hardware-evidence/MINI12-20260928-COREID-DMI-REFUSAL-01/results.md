@@ -1,0 +1,9 @@
+# Operator-reported DMI refusal: bounded diagnosis
+
+The operator reported running `sudo /usr/local/libexec/sgx535-core-id` and receiving `REFUSE: DMI identity changed`. Its exit status and execution timestamp were not independently captured in this session. The installed v1 source and previously audited linked binary place this refusal before opening `resource0` or invoking `sgx535_load32_once`; the reported run therefore yielded no CORE_ID value or SGX MMIO load.
+
+A single pinned-SSH read inspected only the four DMI fields used by the helper, without executing it. Raw `/sys/class/dmi/id/product_name` bytes are `496e737069726f6e20313231302020200a` (`Inspiron 1210` + three spaces + newline). The v1 `token_equals()` removes just the newline, then compares against `"Inspiron 1210"`, so that check returns false. `sys_vendor`, `board_name` and `bios_version` match the v1 literals. The earlier Python identity preflight had used `.strip()`, which hid the trailing spaces in its report; no target identity change is established.
+
+A separate [revised source draft](../../../tools/sgx535-probe/privileged-core-id-dmi-fix/core_id_once.c) changes only the expected product-name literal to include the three observed spaces and adds a comment. Its assembly and sudoers draft are byte-identical to the reviewed v1 files. The source was checked against the captured raw bytes and passed an offline ARM64-host C syntax check with `__i386__` defined. It was **not** transferred, built, installed or executed on the target. The installed v1 artifact remains in place.
+
+No SGX MMIO was accessed by this diagnostic. MMIO attempt count remains `0`; CORE_ID UNKNOWN; CORE_REVISION untouched; Gate B BLOCKED; whitelist `[]`. Raw DMI stdout/stderr, exact read-only SSH command, host timestamps and hashes are preserved in [the manifest](manifest.json). No H0/P1/FIRST-MMIO-01 record was changed.

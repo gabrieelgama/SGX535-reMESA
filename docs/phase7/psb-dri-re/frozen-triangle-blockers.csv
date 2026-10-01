@@ -1,0 +1,9 @@
+blocker_id,layer,missing_fact,narrow_evidence,if_L12_closed,status
+L12,static-contract,Selected primary two-word pre-definition source domain,P7H-041; external dependency frozen for this pass,REMOVED HYPOTHETICALLY,OPEN
+FT-AUX,static-contract,Complete consumed-state coverage of vertex/state-upload/event/background programs beyond their deterministic CPU images,0x40355;0x287ff;0x392ab;0x39c5c; primary L12 does not cover these programs,REMAINS,OPEN
+FT-BO,static-submission,Device publication must preserve initialized and relocated BO contents through selected cache/TLB completion before first consumption,P7H-047; concrete BO/wire model exists; psb_invalidate_caches is a no-op; wmb is not SGX cache completion,REMAINS,CONDITIONAL
+FT-SERVICE,static-submission,Target-qualified ready-state postcondition for revision-conditioned service initialization and TA-table setup,P7H-050; branch/cookie CPU model does not prove applicability or awaited hardware table initialization,REMAINS,OPEN
+BACKEND,execution-contract,Concrete CPU-to-GPU content-preserving provider and synchronization,Route C CONDITIONAL,REMAINS,CONDITIONAL
+GATE-B,hardware-gate,Existing ownership/recovery/revision and safety requirements,BLOCKED; whitelist []; hardware UNVERIFIED,REMAINS,OPEN
+FT-ORDER,static-serialization,Scoped TA order and cache-diff packing recovered,P7H-043; initial empty cache; full bounds; no queries; software vertex branch,ALREADY CLOSED WITH STATED INPUTS,CLOSED
+FT-TARGET,static-contract,Selected linear ARGB8888 surface contract recovered,P7H-048,CLOSED,CLOSED

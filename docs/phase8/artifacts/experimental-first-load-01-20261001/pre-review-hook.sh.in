@@ -1,0 +1,86 @@
+#!/bin/sh
+# Fixed first-owner preload. Generated payload hashes; no caller-selected paths.
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+export PATH
+sgx_setup_log() {
+    umask 077
+    exec >>/run/initramfs/sgx535-first-load.log 2>&1
+}
+sgx_uname() { /bin/uname "$1"; }
+sgx_pci_paths() { printf '%s\n' /sys/bus/pci/devices/*; }
+sgx_read_file() { /bin/cat "$1"; }
+sgx_has_path() { [ -e "$1" ] || [ -L "$1" ]; }
+sgx_listed() { /bin/grep -Eq "^$1 " /proc/modules; }
+sgx_irq_owned() { /bin/grep -Eq '[[:space:]]gma500([,[:space:]]|$)' /proc/interrupts; }
+sgx_link_is() {
+    actual=$(/bin/readlink -f "$1") || return 1
+    expected=$(/bin/readlink -f "$2") || return 1
+    [ "$actual" = "$expected" ]
+}
+sgx_hash_ok() {
+    digest=$(/bin/sha256sum "$1") || return 1
+    [ "${digest%% *}" = "$2" ]
+}
+sgx_insert_file() { /sbin/insmod "$1"; }
+sgx_refuse() { printf 'SGX535-FIRSTLOAD HOLD: %s\n' "$1"; return 1; }
+sgx_first_load_main() {
+    sgx_setup_log || return 1
+    printf 'SGX535-FIRSTLOAD BEGIN\n'
+    release=$(sgx_uname -r) || return 1
+    [ "$release" = '5.10.240-antix.1-486-smp' ] || { sgx_refuse kernel; return 1; }
+    arch=$(sgx_uname -m) || return 1
+    [ "$arch" = i686 ] || { sgx_refuse architecture; return 1; }
+    machine=$(sgx_read_file /sys/class/dmi/id/product_name) || return 1
+    machine=${machine%"${machine##*[! ]}"}
+    [ "$machine" = "Inspiron 1210" ] || { sgx_refuse machine; return 1; }
+    for pair in vendor:0x8086 device:0x8108 subsystem_vendor:0x1028 subsystem_device:0x02b1; do
+        field=${pair%%:*}; expected=${pair#*:}
+        value=$(sgx_read_file "/sys/bus/pci/devices/0000:00:02.0/$field") || return 1
+        [ "$value" = "$expected" ] || { sgx_refuse pci-identity; return 1; }
+    done
+    paths=$(sgx_pci_paths) || return 1
+    for pci_path in $paths; do
+        vendor=$(sgx_read_file "$pci_path/vendor") || return 1
+        device=$(sgx_read_file "$pci_path/device") || return 1
+        case "$vendor:$device" in
+            @MATCHING_IDS@)
+                [ "$pci_path" = /sys/bus/pci/devices/0000:00:02.0 ] || { sgx_refuse additional-matching-device; return 1; } ;;
+        esac
+    done
+    for resource in /sys/class/drm/card0 /sys/class/graphics/fb0; do
+        sgx_has_path "$resource" && { sgx_refuse preexisting-display-resource; return 1; }
+    done
+    cmdline=$(sgx_read_file /proc/cmdline) || return 1
+    for arg in $cmdline; do
+        case "$arg" in
+            module_blacklist=*|modprobe.blacklist=*|blacklist=*|nomodeset|break|break=*)
+                sgx_refuse unexpected-loading-policy; return 1 ;;
+        esac
+    done
+    sgx_read_file /proc/modules >/dev/null || return 1
+    sgx_has_path /sys/bus/pci/devices/0000:00:02.0/driver && { sgx_refuse already-bound; return 1; }
+    for name in @MODULE_NAMES@; do
+        if sgx_has_path "/sys/module/$name" || sgx_listed "$name"; then
+            sgx_refuse preexisting-module; return 1
+        fi
+    done
+    sgx_irq_owned
+    irq_result=$?
+    [ "$irq_result" = 1 ] || { sgx_refuse preexisting-or-unreadable-irq; return 1; }
+@PAYLOAD_CHECKS@
+    printf 'SGX535-FIRSTLOAD FILES-VERIFIED; INSERTION-POSSIBLE\n'
+@INSERTIONS@
+    state=$(sgx_read_file /sys/module/gma500_gfx/initstate) || return 1
+    [ "$state" = live ] || { sgx_refuse module-not-live; return 1; }
+    sgx_hash_ok /sys/module/gma500_gfx/notes/.note.gnu.build-id @NOTE_HASH@ || { sgx_refuse loaded-identity; return 1; }
+    sgx_link_is /sys/bus/pci/devices/0000:00:02.0/driver /sys/bus/pci/drivers/gma500 || { sgx_refuse driver-binding; return 1; }
+    sgx_link_is /sys/bus/pci/drivers/gma500/module /sys/module/gma500_gfx || { sgx_refuse driver-owner; return 1; }
+    sgx_link_is /sys/class/drm/card0/device /sys/bus/pci/devices/0000:00:02.0 || { sgx_refuse drm-binding; return 1; }
+    fb=$(sgx_read_file /sys/class/graphics/fb0/name) || return 1
+    [ "$fb" = gma500drmfb ] || { sgx_refuse framebuffer; return 1; }
+    irq=$(sgx_read_file /sys/bus/pci/devices/0000:00:02.0/irq) || return 1
+    [ "$irq" = 16 ] || { sgx_refuse pci-irq; return 1; }
+    sgx_irq_owned || { sgx_refuse handler-absent; return 1; }
+    printf 'SGX535-FIRSTLOAD PASS: derivative first owner; boot may continue\n'
+}
+sgx_first_load_main

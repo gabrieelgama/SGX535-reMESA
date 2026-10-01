@@ -1,0 +1,144 @@
+category,item,field,metric,libdrm_value,kernel_value,retained_observation,classification,evidence
+wire_layout,drm_fence_arg,SIZE,size,48,48,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_fence_arg,handle,offset,0,0,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_fence_arg,handle,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_fence_arg,fence_class,offset,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_fence_arg,fence_class,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_fence_arg,type,offset,8,8,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_fence_arg,type,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_fence_arg,flags,offset,12,12,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_fence_arg,flags,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_fence_arg,signaled,offset,16,16,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_fence_arg,signaled,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_fence_arg,error,offset,20,20,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_fence_arg,error,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_fence_arg,sequence,offset,24,24,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_fence_arg,sequence,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_fence_arg,pad64,offset,28,28,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_fence_arg,pad64,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_fence_arg,expand_pad,offset,32,32,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_fence_arg,expand_pad,width,16,16,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_create_req,SIZE,size,32,32,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_create_req,mask,offset,0,0,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_create_req,mask,width,8,8,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_create_req,size,offset,8,8,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_create_req,size,width,8,8,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_create_req,buffer_start,offset,16,16,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_create_req,buffer_start,width,8,8,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_create_req,hint,offset,24,24,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_create_req,hint,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_create_req,page_alignment,offset,28,28,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_create_req,page_alignment,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_req,SIZE,size,48,48,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_req,mask,offset,0,0,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_req,mask,width,8,8,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_req,flags,offset,8,8,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_req,flags,width,8,8,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_req,handle,offset,16,16,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_req,handle,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_req,hint,offset,20,20,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_req,hint,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_req,fence_class,offset,24,24,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_req,fence_class,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_req,desired_tile_stride,offset,28,28,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_req,desired_tile_stride,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_req,tile_info,offset,32,32,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_req,tile_info,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_req,pad64,offset,36,36,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_req,pad64,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_req,presumed_offset,offset,40,40,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_req,presumed_offset,width,8,8,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,SIZE,size,112,112,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,flags,offset,0,0,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,flags,width,8,8,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,mask,offset,8,8,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,mask,width,8,8,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,size,offset,16,16,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,size,width,8,8,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,offset,offset,24,24,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,offset,width,8,8,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,arg_handle,offset,32,32,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,arg_handle,width,8,8,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,buffer_start,offset,40,40,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,buffer_start,width,8,8,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,handle,offset,48,48,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,handle,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,fence_flags,offset,52,52,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,fence_flags,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,rep_flags,offset,56,56,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,rep_flags,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,page_alignment,offset,60,60,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,page_alignment,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,desired_tile_stride,offset,64,64,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,desired_tile_stride,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,hw_tile_stride,offset,68,68,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,hw_tile_stride,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,tile_info,offset,72,72,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,tile_info,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,pad64,offset,76,76,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,pad64,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,expand_pad,offset,80,80,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_info_rep,expand_pad,width,32,32,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_arg_rep,SIZE,size,120,120,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_arg_rep,bo_info,offset,0,0,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_arg_rep,bo_info,width,112,112,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_arg_rep,ret,offset,112,112,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_arg_rep,ret,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_arg_rep,pad64,offset,116,116,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_arg_rep,pad64,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_create_arg,SIZE,size,112,112,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_create_arg,d,offset,0,0,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_create_arg,d,width,112,112,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_handle_arg,SIZE,size,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_handle_arg,handle,offset,0,0,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_handle_arg,handle,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_reference_info_arg,SIZE,size,112,112,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_reference_info_arg,d,offset,0,0,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_reference_info_arg,d,width,112,112,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_map_wait_idle_arg,SIZE,size,112,112,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_map_wait_idle_arg,d,offset,0,0,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_map_wait_idle_arg,d,width,112,112,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_op_req,SIZE,size,56,56,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_op_req,op,offset,0,0,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_op_req,op,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_op_req,arg_handle,offset,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_op_req,arg_handle,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_op_req,bo_req,offset,8,8,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_op_req,bo_req,width,48,48,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_op_arg,SIZE,size,136,136,0x37b51 clears 0x22 dwords at node+0xc (136 bytes),ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_op_arg,next,offset,0,0,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_op_arg,next,width,8,8,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_op_arg,d,offset,8,8,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_op_arg,d,width,120,120,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_op_arg,handled,offset,128,128,0x37b51 node+0x8c = argument+0x80,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_op_arg,handled,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_op_arg,pad64,offset,132,132,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+wire_layout,drm_bo_op_arg,pad64,width,4,4,UNKNOWN: not individually recovered in retained ELF,ABI-EQUIVALENT sources only,P7H-029
+ioctl,DRM_IOCTL_FENCE_CREATE,request,i386_word,0xc03064c4,0xc03064c4,Indirect through imported libdrm; command constant not embedded by DRI,ABI-EQUIVALENT sources only,P7H-029
+ioctl,DRM_IOCTL_FENCE_REFERENCE,request,i386_word,0xc03064c6,0xc03064c6,Indirect through imported libdrm; command constant not embedded by DRI,ABI-EQUIVALENT sources only,P7H-029
+ioctl,DRM_IOCTL_FENCE_UNREFERENCE,request,i386_word,0xc03064c7,0xc03064c7,Indirect through imported libdrm; command constant not embedded by DRI,ABI-EQUIVALENT sources only,P7H-029
+ioctl,DRM_IOCTL_FENCE_SIGNALED,request,i386_word,0xc03064c8,0xc03064c8,Indirect through imported libdrm; command constant not embedded by DRI,ABI-EQUIVALENT sources only,P7H-029
+ioctl,DRM_IOCTL_FENCE_FLUSH,request,i386_word,0xc03064c9,0xc03064c9,Indirect through imported libdrm; command constant not embedded by DRI,ABI-EQUIVALENT sources only,P7H-029
+ioctl,DRM_IOCTL_FENCE_WAIT,request,i386_word,0xc03064ca,0xc03064ca,Indirect through imported libdrm; command constant not embedded by DRI,ABI-EQUIVALENT sources only,P7H-029
+ioctl,DRM_IOCTL_FENCE_EMIT,request,i386_word,0xc03064cb,0xc03064cb,Indirect through imported libdrm; command constant not embedded by DRI,ABI-EQUIVALENT sources only,P7H-029
+ioctl,DRM_IOCTL_FENCE_BUFFERS,request,i386_word,0xc03064cc,0xc03064cc,Indirect through imported libdrm; command constant not embedded by DRI,ABI-EQUIVALENT sources only,P7H-029
+ioctl,DRM_IOCTL_BO_CREATE,request,i386_word,0xc07064cd,0xc07064cd,Indirect through imported libdrm; command constant not embedded by DRI,ABI-EQUIVALENT sources only,P7H-029
+ioctl,DRM_IOCTL_BO_MAP,request,i386_word,0xc07064cf,0xc07064cf,Indirect through imported libdrm; command constant not embedded by DRI,ABI-EQUIVALENT sources only,P7H-029
+ioctl,DRM_IOCTL_BO_UNMAP,request,i386_word,0xc00464d0,0xc00464d0,Indirect through imported libdrm; command constant not embedded by DRI,ABI-EQUIVALENT sources only,P7H-029
+ioctl,DRM_IOCTL_BO_REFERENCE,request,i386_word,0xc07064d1,0xc07064d1,Indirect through imported libdrm; command constant not embedded by DRI,ABI-EQUIVALENT sources only,P7H-029
+ioctl,DRM_IOCTL_BO_UNREFERENCE,request,i386_word,0xc00464d2,0xc00464d2,Indirect through imported libdrm; command constant not embedded by DRI,ABI-EQUIVALENT sources only,P7H-029
+ioctl,DRM_IOCTL_BO_SETSTATUS,request,i386_word,0xc07064d3,0xc07064d3,Indirect through imported libdrm; command constant not embedded by DRI,ABI-EQUIVALENT sources only,P7H-029
+ioctl,DRM_IOCTL_BO_INFO,request,i386_word,0xc07064d4,0xc07064d4,Indirect through imported libdrm; command constant not embedded by DRI,ABI-EQUIVALENT sources only,P7H-029
+ioctl,DRM_IOCTL_BO_WAIT_IDLE,request,i386_word,0xc07064d5,0xc07064d5,Indirect through imported libdrm; command constant not embedded by DRI,ABI-EQUIVALENT sources only,P7H-029
+allocation,PDS mask,mask,value,0x20000001,READ | MEM_PRIV2,0x48592 -> 0x4297b low 0x20000001 high 0,COMPATIBLE-INFERRED binary to sources,P7H-029
+allocation,PDS memory type,type,value,MEM_PRIV2 bit29,DRM_PSB_MEM_PDS=5,No translation in drmBOCreate,CONFIRMED source propagation,P7H-031
+allocation,BO create,buffer_start,value,0,drm_bo_type_dc,0x4297b user_buffer=NULL,COMPATIBLE-INFERRED binary to sources,P7H-029
+allocation,BO create,page_alignment,value,0,0 pages requested,0x4297b caller0x48592 passes0; userspace alignment4096 separate,COMPATIBLE-INFERRED binary to sources,P7H-029
+allocation,BO create,hint,value,4=DONT_FENCE,4=DONT_FENCE,0x4297b immediate4,COMPATIBLE-INFERRED binary to sources,P7H-029
+mapping,BO map,flags,value,3=READ|WRITE,3=READ|WRITE,0x4297b maps with3 hint0,COMPATIBLE-INFERRED binary to sources,P7H-029
+host_layout,drmBO,SIZE,size,112,not a kernel wire object,pool host200 embeds BO at+76; map output+188,COMPATIBLE-INFERRED binary to libdrm,P7H-029
+host_layout,drmFence,SIZE,size,40,wire fence48 differs,0x442bd copies10 dwords into host object+36,COMPATIBLE-INFERRED binary to libdrm,P7H-029
+private_ioctl,CMDBUF,request size,bytes,caller-supplied,144,0x37b51 drmCommandWrite index0 size0x90,COMPATIBLE-INFERRED observed private path,P7H-029
+private_ioctl,scene,request size,bytes,caller-supplied,20,0x374f5 drmCommandWriteRead index3 size0x14,COMPATIBLE-INFERRED observed private path,P7H-029
+private_format,relocation,SIZE,bytes,opaque to libdrm,40,0x37854 /0x38762 advance records by0x28,COMPATIBLE-INFERRED observed private path,P7H-029
+version,DRM runtime,accepted,version,drmGetVersion returns version,candidate4.41,0x21c89;0x4be92;0x1ed61 accept major4 minor>=0; patch not selected,CONFIRMED acceptance not build identity,P7H-029

@@ -1,0 +1,17 @@
+{
+  "source": "/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp",
+  "sha256": {
+    "drivers/pci/pci-driver.c": "1047ff4b2cbf549625fd1417cc61318be5d9f1f37522d7fe1ab95ab490e13ddf",
+    "drivers/pci/pci.h": "e3e1f1983a048efd3c5860702c80b56a153db07932ea719ffb4aa72f067c175b",
+    "drivers/base/dd.c": "c0c955d691bf0413a6f86e6369bd468f32dd682961f0a14c29cb73c96d90591e",
+    "drivers/base/driver.c": "50fd84f3901ba1a81ebd68214311b6dd9d5cce32bcfa4c4bd053a0f7fa5ab714",
+    "drivers/base/bus.c": "3f28a62238008037fd2cf2da7dc618377756c6a03614c38d3b5b91b105e1e56f",
+    "kernel/module.c": "23f2429baaced4b151b3de8fd850daaa883109f91c9bafae9d5e934df7f21d72",
+    "drivers/video/console/vgacon.c": "a015e6d9c3f133887397a824bf1c9b1ff15bbd8aa9a2f08b524091e1897e69fd",
+    "drivers/video/fbdev/core/fbmem.c": "4f22c063e482530c13baf460eb8366e628b5bca3f4cae308ae21220d171ec3ec",
+    "drivers/gpu/drm/gma500/gtt.c": "388c5b251cfa17545031c1841a4ef6afcf1bc7385a424e34221948959e15818d",
+    "drivers/gpu/drm/gma500/framebuffer.c": "ec0a8e81d02e6246600e14ed112bd3224ec07db7ee440e78bcae53b4b01541b6",
+    "drivers/gpu/drm/gma500/psb_device.c": "c02f8c825350ed89675d7618e158d503fbb92169a7f2f8aba4255b353de9a493",
+    "drivers/gpu/drm/gma500/Kconfig": "030826aac988353a60a55bf07d990ff5afdbb57b3bd18e1ebeef44ab09444c14"
+  }
+}

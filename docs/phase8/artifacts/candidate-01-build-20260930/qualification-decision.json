@@ -1,0 +1,20 @@
+{
+  "candidate_01": "ABI QUALIFICATION: PASS",
+  "candidate_02_lifecycle": "ABI QUALIFICATION: PASS",
+  "layout": "0xb84efb99",
+  "config_generated_hashes_unchanged": 7426,
+  "new_config_generated_entries": 0,
+  "all_authoritative_input_tool_hashes_unchanged": true,
+  "original_has_free_irq_import_only_other_chip_calls": true,
+  "original_selected_teardown_has_no_irq_release": "confirmed by source + binary callsites",
+  "current_original_hot_transition": "BLOCKED",
+  "gate_b": "BLOCKED",
+  "whitelist": [],
+  "target_contact": "NONE",
+  "sgx_fire": "NONE",
+  "completion_observed": false,
+  "color_readback": false,
+  "triangle_demonstrated": false,
+  "next_step_classification": "READ-ONLY TARGET OBSERVATION",
+  "next_step": "separately authorized normal boot module/initramfs/fallback inventory; no execution in this task"
+}

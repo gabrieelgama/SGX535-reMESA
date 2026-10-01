@@ -1,0 +1,18 @@
+DRM_NODES
+total 0
+drwxr-xr-x 2 root root      60 Sep 27 17:28 by-path
+crw-rw---- 1 root video 226, 0 Sep 27 17:28 card0
+DRM_CLASS
+total 0
+lrwxrwxrwx 1 root root    0 Sep 27 17:29 card0 -> ../../devices/pci0000:00/0000:00:02.0/drm/card0
+lrwxrwxrwx 1 root root    0 Sep 27 17:29 card0-LVDS-1 -> ../../devices/pci0000:00/0000:00:02.0/drm/card0/card0-LVDS-1
+lrwxrwxrwx 1 root root    0 Sep 27 17:29 card0-SVIDEO-1 -> ../../devices/pci0000:00/0000:00:02.0/drm/card0/card0-SVIDEO-1
+lrwxrwxrwx 1 root root    0 Sep 27 17:29 card0-SVIDEO-2 -> ../../devices/pci0000:00/0000:00:02.0/drm/card0/card0-SVIDEO-2
+lrwxrwxrwx 1 root root    0 Sep 27 17:29 card0-VGA-1 -> ../../devices/pci0000:00/0000:00:02.0/drm/card0/card0-VGA-1
+-r--r--r-- 1 root root 4096 Sep 27 17:29 version
+FRAMEBUFFER
+0 gma500drmfb
+fb0/name=gma500drmfb
+fb0/virtual_size=1280,800
+fb0/bits_per_pixel=32
+fb0/stride=8192

@@ -1,0 +1,28 @@
+{
+  "cpio_sha256": "4cd0ab6a3d30b873e26f58aab44017a4d3c96b7c064ec18d435f62554bd2047f",
+  "cpio_version": "cpio (GNU cpio) 2.15",
+  "checks": [
+    {
+      "archive": "early",
+      "argv": [
+        "/usr/bin/cpio",
+        "-it",
+        "--quiet"
+      ],
+      "exit_code": 0,
+      "members": 5,
+      "exact_catalog_agreement": true
+    },
+    {
+      "archive": "main",
+      "argv": [
+        "/usr/bin/cpio",
+        "-it",
+        "--quiet"
+      ],
+      "exit_code": 0,
+      "members": 2133,
+      "exact_catalog_agreement": true
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "sgx535-coreid-operator-observation-v1",
+  "session_id": "MINI12-20260928-COREID-OPERATOR-01",
+  "host_recorded_utc": "2026-09-28T04:09:25.240865+00:00",
+  "provenance": "operator-reported",
+  "raw_stdout_line": "CORE_ID=0x01130000",
+  "hw_observed_core_id_raw": "0x01130000",
+  "agent_mmio_attempts": 0,
+  "files": [
+    {
+      "path": "results.md",
+      "bytes": 1356,
+      "sha256": "8ade5e88b202de412ea7bc0fff3272e1cb30d9b7a8a38cefbba661094b7e250c"
+    }
+  ]
+}

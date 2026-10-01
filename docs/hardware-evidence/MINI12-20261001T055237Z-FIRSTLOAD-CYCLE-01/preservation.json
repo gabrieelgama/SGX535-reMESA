@@ -1,0 +1,45 @@
+{
+  "initial_repo_files": 2519,
+  "historical_image_and_operational_manifests": "PASS exact",
+  "all_initial_files_unchanged_except_additive_notices": true,
+  "changes": [
+    {
+      "path": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "before_sha256": "19309463c2d82319f85dae025d0408e141da22e64e45eeefee696400723c986b",
+      "after_sha256": "003c608acc331bb06a0c320f5e8a11cce0a0b717b894d4c575e19afac5c033af",
+      "classification": "additive current-state notice only; historical text preserved"
+    },
+    {
+      "path": "docs/phase8/active-gma500-transition-review.md",
+      "before_sha256": "e47b752ab8f5954a8137601bd995b41ed4688d8ebbbd19381582abc514edcd77",
+      "after_sha256": "7c3ab3a956d74134da205737f37c77929c3409c231db1bf6ceb5d359f9ada35e",
+      "classification": "additive current-state notice only; historical text preserved"
+    },
+    {
+      "path": "docs/phase8/first-load-boot-qualification.md",
+      "before_sha256": "6900ef4a603e515468b56e841ef1f9ae6995498e2b3749f209a77c815fbb41ed",
+      "after_sha256": "077b14bf735e92334405a705030955824ec4658c0b9a7f2c002e1654968e2ba1",
+      "classification": "additive current-state notice only; historical text preserved"
+    },
+    {
+      "path": "docs/phase8/first-load-operational-review.md",
+      "before_sha256": "23abc106a5304aa2ded4344ec056d6533cea6ff258863fbb4fd593c1d85a8d6d",
+      "after_sha256": "09166143dc1ef0ea7713ee2ecdd0b120a693a8040a67b37c424da2d8ce3ea4cd",
+      "classification": "additive current-state notice only; historical text preserved"
+    },
+    {
+      "path": "docs/phase8/fixed-one-shot-gate-b-review.md",
+      "before_sha256": "d7e5f7add42a992b54b3b42759c97218d007c1d3d721b7717fe30ed3be771d19",
+      "after_sha256": "2fb2ee5bb04521a0a4c80e4a4bc8fe37f8153c25ed9dce6e7bf03275a7ebff93",
+      "classification": "additive current-state notice only; historical text preserved"
+    },
+    {
+      "path": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "before_sha256": "422b2fc0fa19a5262610f21c72a6ad34dc753ea43343744f81522f591bc28c4c",
+      "after_sha256": "1075557540d4c979850f8723028dbd0584af347b966db0ac51aceab08f8332c4",
+      "classification": "additive current-state notice only; historical text preserved"
+    }
+  ],
+  "production_code_candidates_images_operational_guard_unchanged": true,
+  "no_stage_commit_push": true
+}

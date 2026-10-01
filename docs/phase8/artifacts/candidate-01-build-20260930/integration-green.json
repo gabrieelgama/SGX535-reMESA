@@ -1,0 +1,13 @@
+{
+  "exit_code": 0,
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tools/psb-dri-re",
+    "-p",
+    "test_frozen_kernel_integration.py"
+  ]
+}

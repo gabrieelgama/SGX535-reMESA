@@ -1,0 +1,77 @@
+{
+  "elf-header": {
+    "argv": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-readelf",
+      "-h",
+      "/home/gama/sgx535-offline/candidate-01-build-20260930/module/gma500_gfx.ko"
+    ],
+    "exit_code": 0
+  },
+  "elf-sections": {
+    "argv": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-readelf",
+      "-SW",
+      "/home/gama/sgx535-offline/candidate-01-build-20260930/module/gma500_gfx.ko"
+    ],
+    "exit_code": 0
+  },
+  "elf-notes": {
+    "argv": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-readelf",
+      "-n",
+      "/home/gama/sgx535-offline/candidate-01-build-20260930/module/gma500_gfx.ko"
+    ],
+    "exit_code": 0
+  },
+  "elf-symbols": {
+    "argv": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-readelf",
+      "-sW",
+      "/home/gama/sgx535-offline/candidate-01-build-20260930/module/gma500_gfx.ko"
+    ],
+    "exit_code": 0
+  },
+  "undefined-symbols": {
+    "argv": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-nm",
+      "-u",
+      "/home/gama/sgx535-offline/candidate-01-build-20260930/module/gma500_gfx.ko"
+    ],
+    "exit_code": 0
+  },
+  "modinfo": {
+    "argv": [
+      "/usr/sbin/modinfo",
+      "/home/gama/sgx535-offline/candidate-01-build-20260930/module/gma500_gfx.ko"
+    ],
+    "exit_code": 0
+  },
+  "vermagic": {
+    "argv": [
+      "/usr/sbin/modinfo",
+      "-F",
+      "vermagic",
+      "/home/gama/sgx535-offline/candidate-01-build-20260930/module/gma500_gfx.ko"
+    ],
+    "exit_code": 0
+  },
+  "dependencies": {
+    "argv": [
+      "/usr/sbin/modinfo",
+      "-F",
+      "depends",
+      "/home/gama/sgx535-offline/candidate-01-build-20260930/module/gma500_gfx.ko"
+    ],
+    "exit_code": 0
+  },
+  "target-table-check": {
+    "argv": [
+      "python3",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_module_versions.py",
+      "--check-symvers",
+      "/home/gama/sgx535-offline/candidate-01-build-20260930/module/gma500_gfx.ko",
+      "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build_Module_symvers"
+    ],
+    "exit_code": 0
+  }
+}

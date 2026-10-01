@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tools/psb-dri-re",
+    "-p",
+    "test_frozen_irq_lifecycle.py"
+  ],
+  "exit_code": 1
+}

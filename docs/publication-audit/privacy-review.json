@@ -1,0 +1,6782 @@
+{
+  "raw_network_and_path_matches": {
+    "private-or-link-local-ip": [
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/README.md",
+        "matches": 1,
+        "first_lines": [
+          7
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/baseline-captures.json",
+        "matches": 19,
+        "first_lines": [
+          27,
+          63,
+          99,
+          135,
+          171
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/identity-after-fix-meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/identity-auth-debug-meta.json",
+        "matches": 1,
+        "first_lines": [
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/identity-auth-debug-stderr.txt",
+        "matches": 5,
+        "first_lines": [
+          5,
+          5,
+          13,
+          27,
+          51
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/identity-meta.json",
+        "matches": 1,
+        "first_lines": [
+          15
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/identity-stderr.txt",
+        "matches": 2,
+        "first_lines": [
+          1,
+          2
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/identity-verified-meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/identity-verified-stderr.txt",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/installed-gma500_gfx.ko.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/loaded-gma500-build-id.note.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/operator-dmesg-mini12.stat.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/operator-dmesg-mini12.txt.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/passive-probe-meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/results.md",
+        "matches": 1,
+        "first_lines": [
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/__pycache__/capture.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/capture.py",
+        "matches": 1,
+        "first_lines": [
+          19
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/candidate-metadata.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/immediate-identity-bar.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/install-binary.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/install-sudoers.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/linked-load-routine.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/linked-main.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/make-build-dir.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/native-build.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/permission-list.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/single-core-revision-attempt.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/sudoers-validation.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/target-preflight.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/transfer-fixed-source.meta.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/transferred-hashes.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/verify-binary.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/verify-sudoers-root.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/verify-sudoers.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-01/capture.py",
+        "matches": 1,
+        "first_lines": [
+          19
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-01/raw/compiler-identity.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-01/raw/identity.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-01/raw/make-build-dir.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-01/raw/native-build.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-01/raw/transfer-reviewed-files.meta.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-01/raw/transferred-hashes.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/capture.py",
+        "matches": 1,
+        "first_lines": [
+          19
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/candidate-metadata.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/effective-sudo-permission.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/extra-argument-rejection.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/install-binary.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/install-path-precheck.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/install-sudoers.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/installed-binary-verification.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/installed-file-metadata.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/installed-parent-check.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/installed-sudoers-hash.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/installed-sudoers-validation.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/linked-load-routine.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/linked-main.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/load-symbol-references.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/native-build.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/sudo-rule-details-extra-arg.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/sudo-rule-details-no-args.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/sudoers-draft-validation-absolute.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/sudoers-draft-validation.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/capture.py",
+        "matches": 1,
+        "first_lines": [
+          19
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/candidate-metadata.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/installed-hash-before.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/installed-v2-final-check.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/linked-load-routine.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/linked-main.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/make-build-dir.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/native-build.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/replace-helper-binary.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/transfer-revised-source.meta.json",
+        "matches": 1,
+        "first_lines": [
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/transferred-source-hashes.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-REFUSAL-01/capture.py",
+        "matches": 1,
+        "first_lines": [
+          19
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-REFUSAL-01/raw/dmi-four-field-check.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-HEADER-PREREQ-01/query.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-FIRST-MMIO-01/capture_preflight.py",
+        "matches": 1,
+        "first_lines": [
+          18
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-FIRST-MMIO-01/raw/preflight.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-GATEB-P1/capture.py",
+        "matches": 1,
+        "first_lines": [
+          18
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-GATEB-P1/raw/display-processes.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-GATEB-P1/raw/identity.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-GATEB-P1/raw/snapshot.meta.json",
+        "matches": 1,
+        "first_lines": [
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/failure_status.capture.json",
+        "matches": 1,
+        "first_lines": [
+          32
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/load_original.capture.json",
+        "matches": 1,
+        "first_lines": [
+          32
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/precheck.capture.json",
+        "matches": 1,
+        "first_lines": [
+          32
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/run_stage.py",
+        "matches": 1,
+        "first_lines": [
+          26
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-CONSOLE-RELEASE-01/final.capture.json",
+        "matches": 1,
+        "first_lines": [
+          32
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-CONSOLE-RELEASE-01/release_rebind.capture.json",
+        "matches": 1,
+        "first_lines": [
+          32
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-CONSOLE-RELEASE-01/restore.capture.json",
+        "matches": 1,
+        "first_lines": [
+          32
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-CONSOLE-RELEASE-01/run_stage.py",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-CONSOLE-RELEASE-01/stage0.capture.json",
+        "matches": 1,
+        "first_lines": [
+          32
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-CONSOLE-RELEASE-01/stop.capture.json",
+        "matches": 1,
+        "first_lines": [
+          32
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-CREDENTIAL-TRANSPORT-TEST/cached.capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-CREDENTIAL-TRANSPORT-TEST/initial-cache.capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-CREDENTIAL-TRANSPORT-TEST/invalidate.capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-CREDENTIAL-TRANSPORT-TEST/uncached-check.capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-CREDENTIAL-TRANSPORT-TEST/uncached.capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-GMA500-REFCOUNT-READONLY-01/capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-GMA500-REFCOUNT-READONLY-01/holders.capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-01/RESULT.md",
+        "matches": 2,
+        "first_lines": [
+          10,
+          16
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-01/capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-01/stderr.txt",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-02/RESULT.md",
+        "matches": 7,
+        "first_lines": [
+          9,
+          15,
+          27,
+          29,
+          29
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-02/capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-02/local-network.json",
+        "matches": 4,
+        "first_lines": [
+          4,
+          14,
+          14,
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-02/stderr.txt",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-03/PLAN.md",
+        "matches": 1,
+        "first_lines": [
+          6
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-03/RESULT.md",
+        "matches": 5,
+        "first_lines": [
+          5,
+          12,
+          21,
+          22,
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-03/capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-03/stderr.txt",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-04/PLAN.md",
+        "matches": 1,
+        "first_lines": [
+          5
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-04/capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-05/PLAN.md",
+        "matches": 1,
+        "first_lines": [
+          37
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-05/capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-06/capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-07/capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRANSITION-INVENTORY/PLAN.md",
+        "matches": 1,
+        "first_lines": [
+          9
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRANSITION-INVENTORY/capture-root.json",
+        "matches": 1,
+        "first_lines": [
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRANSITION-INVENTORY/capture-supervisor.json",
+        "matches": 1,
+        "first_lines": [
+          26
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRANSITION-INVENTORY/capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-01/inventory.capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-01/preflight.capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-01/service-root.capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-01/service.capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-01/stage0-path-check.capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/inventory.capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/module-removal-preview.capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/post-restore-preflight.capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/post-service-stop.capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/pre-service-restore.capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/preflight.capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/root-stage.capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/service-restore.capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/service-stop.capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/stage0-check.capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/transfer-client.capture.json",
+        "matches": 1,
+        "first_lines": [
+          26
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/transfer-module.capture.json",
+        "matches": 1,
+        "first_lines": [
+          26
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/transfer-verify-absolute.capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/transfer-verify.capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/candidate.capture.json",
+        "matches": 1,
+        "first_lines": [
+          32
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/hold_status.capture.json",
+        "matches": 1,
+        "first_lines": [
+          32
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/preview.capture.json",
+        "matches": 1,
+        "first_lines": [
+          32
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/release.capture.json",
+        "matches": 1,
+        "first_lines": [
+          32
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/remove.capture.json",
+        "matches": 1,
+        "first_lines": [
+          32
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/run_stage.py",
+        "matches": 1,
+        "first_lines": [
+          26
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/stage0.capture.json",
+        "matches": 1,
+        "first_lines": [
+          32
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/stop.capture.json",
+        "matches": 1,
+        "first_lines": [
+          32
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-PREFLIGHT/capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T025947Z-BOOT-PROVENANCE-READONLY-01/PLAN.md",
+        "matches": 1,
+        "first_lines": [
+          8
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T025947Z-BOOT-PROVENANCE-READONLY-01/capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/PLAN.md",
+        "matches": 1,
+        "first_lines": [
+          18
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/capture.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/stdout.txt",
+        "matches": 11,
+        "first_lines": [
+          1322,
+          1322,
+          1323,
+          1323,
+          1324
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/transcript-without-base64.txt",
+        "matches": 11,
+        "first_lines": [
+          1212,
+          1212,
+          1213,
+          1213,
+          1214
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/preflight-02/command.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/preflight-command.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/experimental/command.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/preflight-01/command.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/preflight-02/command.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/staging/command.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/stock-recovery/command.json",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase4-1-data/intel-sch-octopart.pdf.txt",
+        "matches": 4,
+        "first_lines": [
+          6891,
+          6921,
+          6952,
+          6959
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase7/psb-dri-re/CODEX-HANDOFF-chronology.md",
+        "matches": 1,
+        "first_lines": [
+          74
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+        "matches": 3,
+        "first_lines": [
+          66,
+          67,
+          70
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+        "matches": 3,
+        "first_lines": [
+          81,
+          82,
+          85
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/first-load-stock-boot-observation.md",
+        "matches": 1,
+        "first_lines": [
+          201
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/post-attempt03-checkpoint-audit.md",
+        "matches": 3,
+        "first_lines": [
+          189,
+          190,
+          193
+        ],
+        "values": "REDACTED"
+      }
+    ],
+    "mac-address": [
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/operator-dmesg-mini12.txt",
+        "matches": 1,
+        "first_lines": [
+          553
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/failure_status.stdout",
+        "matches": 1,
+        "first_lines": [
+          574
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/precheck.stdout",
+        "matches": 1,
+        "first_lines": [
+          568
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/stdout.txt",
+        "matches": 1,
+        "first_lines": [
+          1153
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/transcript-without-base64.txt",
+        "matches": 1,
+        "first_lines": [
+          1043
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/preflight-02/stdout.txt",
+        "matches": 2,
+        "first_lines": [
+          48,
+          205
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/preflight-02/stdout.txt",
+        "matches": 2,
+        "first_lines": [
+          48,
+          344
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/staging/decoded-records.json",
+        "matches": 4,
+        "first_lines": [
+          49,
+          345,
+          591,
+          915
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/staging/stdout.txt",
+        "matches": 4,
+        "first_lines": [
+          48,
+          344,
+          504,
+          828
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/stock-recovery/stdout.txt",
+        "matches": 2,
+        "first_lines": [
+          48,
+          376
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-review-20261001/retained-boot-timeline.json",
+        "matches": 1,
+        "first_lines": [
+          39
+        ],
+        "values": "REDACTED"
+      }
+    ],
+    "home-directory": [
+      {
+        "path": "docs/archaeology-data/scan-method.py.txt",
+        "matches": 1,
+        "first_lines": [
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/README.md",
+        "matches": 1,
+        "first_lines": [
+          7
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/baseline-captures.json",
+        "matches": 38,
+        "first_lines": [
+          22,
+          24,
+          58,
+          60,
+          94
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/identity-after-fix-meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/identity-auth-debug-meta.json",
+        "matches": 2,
+        "first_lines": [
+          19,
+          21
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/identity-auth-debug-stderr.txt",
+        "matches": 5,
+        "first_lines": [
+          8,
+          9,
+          28,
+          47,
+          48
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/identity-meta.json",
+        "matches": 1,
+        "first_lines": [
+          12
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/identity-verified-meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/installed-gma500_gfx.ko.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/loaded-gma500-build-id.note.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/operator-dmesg-mini12.stat",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/operator-dmesg-mini12.stat.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/operator-dmesg-mini12.txt.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/passive-probe-meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260927-H0/results.md",
+        "matches": 1,
+        "first_lines": [
+          18
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/__pycache__/capture.cpython-313.pyc",
+        "matches": 3,
+        "first_lines": [
+          3,
+          3,
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/capture.py",
+        "matches": 2,
+        "first_lines": [
+          16,
+          17
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/candidate-metadata.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/immediate-identity-bar.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/install-binary.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/install-sudoers.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/linked-load-routine.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/linked-main.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/make-build-dir.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/native-build.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/permission-list.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/single-core-revision-attempt.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/sudoers-validation.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/target-preflight.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/transfer-fixed-source.meta.json",
+        "matches": 3,
+        "first_lines": [
+          17,
+          19,
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/transferred-hashes.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/verify-binary.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/verify-sudoers-root.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/verify-sudoers.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/remote-build-path.txt",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-01/capture.py",
+        "matches": 2,
+        "first_lines": [
+          16,
+          17
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-01/raw/compiler-identity.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-01/raw/identity.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-01/raw/make-build-dir.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-01/raw/native-build.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-01/raw/transfer-reviewed-files.meta.json",
+        "matches": 3,
+        "first_lines": [
+          17,
+          19,
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-01/raw/transferred-hashes.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-01/remote-build-path.txt",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-01/results.md",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/capture.py",
+        "matches": 2,
+        "first_lines": [
+          16,
+          17
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/candidate-metadata.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/effective-sudo-permission.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/extra-argument-rejection.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/install-binary.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/install-path-precheck.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/install-sudoers.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/installed-binary-verification.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/installed-file-metadata.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/installed-parent-check.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/installed-sudoers-hash.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/installed-sudoers-validation.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/linked-load-routine.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/linked-main.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/load-symbol-references.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/native-build.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/sudo-rule-details-extra-arg.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/sudo-rule-details-no-args.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/sudoers-draft-validation-absolute.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/sudoers-draft-validation.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/results.md",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/capture.py",
+        "matches": 2,
+        "first_lines": [
+          16,
+          17
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/candidate-metadata.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/installed-hash-before.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/installed-v2-final-check.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/linked-load-routine.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/linked-main.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/make-build-dir.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/native-build.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/replace-helper-binary.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/transfer-revised-source.meta.json",
+        "matches": 3,
+        "first_lines": [
+          17,
+          19,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/transferred-source-hashes.meta.json",
+        "matches": 3,
+        "first_lines": [
+          18,
+          20,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/remote-build-path.txt",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/results.md",
+        "matches": 1,
+        "first_lines": [
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-REFUSAL-01/capture.py",
+        "matches": 2,
+        "first_lines": [
+          16,
+          17
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-REFUSAL-01/raw/dmi-four-field-check.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-COREID-HEADER-PREREQ-01/query.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-FIRST-MMIO-01/capture_preflight.py",
+        "matches": 2,
+        "first_lines": [
+          16,
+          17
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-FIRST-MMIO-01/raw/preflight.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-GATEB-P1/capture.py",
+        "matches": 2,
+        "first_lines": [
+          16,
+          17
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-GATEB-P1/raw/display-processes.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-GATEB-P1/raw/identity.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260928-GATEB-P1/raw/snapshot.meta.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/failure_status.capture.json",
+        "matches": 2,
+        "first_lines": [
+          27,
+          29
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/load_original.capture.json",
+        "matches": 2,
+        "first_lines": [
+          27,
+          29
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/precheck.capture.json",
+        "matches": 2,
+        "first_lines": [
+          27,
+          29
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/run_stage.py",
+        "matches": 2,
+        "first_lines": [
+          24,
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-CONSOLE-RELEASE-01/final.capture.json",
+        "matches": 2,
+        "first_lines": [
+          27,
+          29
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-CONSOLE-RELEASE-01/release_rebind.capture.json",
+        "matches": 2,
+        "first_lines": [
+          27,
+          29
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-CONSOLE-RELEASE-01/restore.capture.json",
+        "matches": 2,
+        "first_lines": [
+          27,
+          29
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-CONSOLE-RELEASE-01/run_stage.py",
+        "matches": 2,
+        "first_lines": [
+          23,
+          24
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-CONSOLE-RELEASE-01/stage0.capture.json",
+        "matches": 2,
+        "first_lines": [
+          27,
+          29
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-CONSOLE-RELEASE-01/stop.capture.json",
+        "matches": 2,
+        "first_lines": [
+          27,
+          29
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-CREDENTIAL-TRANSPORT-TEST/cached.capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-CREDENTIAL-TRANSPORT-TEST/cached.stdout",
+        "matches": 2,
+        "first_lines": [
+          3,
+          4
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-CREDENTIAL-TRANSPORT-TEST/initial-cache.capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-CREDENTIAL-TRANSPORT-TEST/invalidate.capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-CREDENTIAL-TRANSPORT-TEST/uncached-check.capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-CREDENTIAL-TRANSPORT-TEST/uncached.capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-CREDENTIAL-TRANSPORT-TEST/uncached.stdout",
+        "matches": 2,
+        "first_lines": [
+          3,
+          4
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-GMA500-REFCOUNT-READONLY-01/capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-GMA500-REFCOUNT-READONLY-01/holders.capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-01/capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-02/capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-03/capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-04/capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-05/capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-06/capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-07/capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRANSITION-INVENTORY/PLAN.md",
+        "matches": 2,
+        "first_lines": [
+          20,
+          21
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRANSITION-INVENTORY/capture-supervisor.json",
+        "matches": 2,
+        "first_lines": [
+          21,
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRANSITION-INVENTORY/capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-01/inventory.capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-01/preflight.capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-01/service-root.capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-01/service.capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-01/stage0-path-check.capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-01/stage0-path-check.stdout",
+        "matches": 2,
+        "first_lines": [
+          2,
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/inventory.capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/module-removal-preview.capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/post-restore-preflight.capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/post-service-stop.capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/pre-service-restore.capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/preflight.capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/root-stage.capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/service-restore.capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/service-stop.capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/stage0-check.capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/stage0-check.stdout",
+        "matches": 2,
+        "first_lines": [
+          2,
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/transfer-client.capture.json",
+        "matches": 4,
+        "first_lines": [
+          20,
+          22,
+          25,
+          26
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/transfer-module.capture.json",
+        "matches": 3,
+        "first_lines": [
+          20,
+          22,
+          26
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/transfer-verify-absolute.capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/transfer-verify-absolute.stdout",
+        "matches": 2,
+        "first_lines": [
+          1,
+          2
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/transfer-verify.capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/transfer-verify.stdout",
+        "matches": 2,
+        "first_lines": [
+          1,
+          2
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/candidate.capture.json",
+        "matches": 2,
+        "first_lines": [
+          27,
+          29
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/hold_status.capture.json",
+        "matches": 2,
+        "first_lines": [
+          27,
+          29
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/preview.capture.json",
+        "matches": 2,
+        "first_lines": [
+          27,
+          29
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/release.capture.json",
+        "matches": 2,
+        "first_lines": [
+          27,
+          29
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/remove.capture.json",
+        "matches": 2,
+        "first_lines": [
+          27,
+          29
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/run_stage.py",
+        "matches": 2,
+        "first_lines": [
+          24,
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/stage0.capture.json",
+        "matches": 2,
+        "first_lines": [
+          27,
+          29
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/stop.capture.json",
+        "matches": 2,
+        "first_lines": [
+          27,
+          29
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-PREFLIGHT/capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T025947Z-BOOT-PROVENANCE-READONLY-01/capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T025947Z-BOOT-PROVENANCE-READONLY-01/initial-pwd.txt",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/capture.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/__pycache__/read_initramfs.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          13
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/decoder-red.stderr",
+        "matches": 2,
+        "first_lines": [
+          13,
+          16
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/dependency-coverage.json",
+        "matches": 27,
+        "first_lines": [
+          13,
+          15,
+          16,
+          30,
+          32
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/final-checks/checks.json",
+        "matches": 27,
+        "first_lines": [
+          12,
+          28,
+          39,
+          49,
+          59
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/final-checks/ubsan-contract",
+        "matches": 2,
+        "first_lines": [
+          112,
+          112
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/final-checks/ubsan-io",
+        "matches": 2,
+        "first_lines": [
+          23,
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/final-checks/ubsan-service",
+        "matches": 3,
+        "first_lines": [
+          140,
+          140,
+          140
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/initial-pwd.txt",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/run_final_guards.py",
+        "matches": 4,
+        "first_lines": [
+          3,
+          3,
+          6,
+          7
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/verify_archive_and_dependencies.py",
+        "matches": 1,
+        "first_lines": [
+          4
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/verify_record_integrity.py",
+        "matches": 2,
+        "first_lines": [
+          3,
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/__pycache__/test_captured_preflight.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          6
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/final-check-commands.json",
+        "matches": 4,
+        "first_lines": [
+          9,
+          15,
+          24,
+          33
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/initial-pwd.txt",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/offline-checks/checks.json",
+        "matches": 30,
+        "first_lines": [
+          12,
+          28,
+          38,
+          51,
+          64
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/offline-checks/ubsan-contract",
+        "matches": 2,
+        "first_lines": [
+          112,
+          112
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/offline-checks/ubsan-io",
+        "matches": 2,
+        "first_lines": [
+          23,
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/offline-checks/ubsan-service",
+        "matches": 3,
+        "first_lines": [
+          140,
+          140,
+          140
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/preflight-02/command.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/preflight-02/preflight.sh",
+        "matches": 3,
+        "first_lines": [
+          61,
+          64,
+          64
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/preflight-command.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/preflight.sh",
+        "matches": 3,
+        "first_lines": [
+          61,
+          64,
+          64
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/run_offline_checks.py",
+        "matches": 5,
+        "first_lines": [
+          3,
+          3,
+          5,
+          6,
+          7
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/source-artifacts.json",
+        "matches": 2,
+        "first_lines": [
+          3,
+          10
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/checks-terminal/checks.json",
+        "matches": 30,
+        "first_lines": [
+          12,
+          28,
+          38,
+          51,
+          64
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/checks-terminal/ubsan-contract",
+        "matches": 2,
+        "first_lines": [
+          112,
+          112
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/checks-terminal/ubsan-io",
+        "matches": 2,
+        "first_lines": [
+          23,
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/checks-terminal/ubsan-service",
+        "matches": 3,
+        "first_lines": [
+          140,
+          140,
+          140
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/experimental-observation.py",
+        "matches": 3,
+        "first_lines": [
+          61,
+          65,
+          65
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/experimental/command.json",
+        "matches": 5,
+        "first_lines": [
+          20,
+          22,
+          26,
+          26,
+          26
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/offline-capture-followup/capture-readiness-red.stderr",
+        "matches": 1,
+        "first_lines": [
+          12
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/offline-capture-followup/capture-timeout-red.stderr",
+        "matches": 1,
+        "first_lines": [
+          17
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/offline-capture-followup/capture-timing-red.stderr",
+        "matches": 5,
+        "first_lines": [
+          19,
+          28,
+          37,
+          46,
+          55
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/offline-capture-followup/existing-stage-red.stderr",
+        "matches": 10,
+        "first_lines": [
+          18,
+          27,
+          36,
+          45,
+          54
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/offline-capture-followup/uptime-source.json",
+        "matches": 1,
+        "first_lines": [
+          2
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/poststage-passive.py",
+        "matches": 3,
+        "first_lines": [
+          61,
+          65,
+          65
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/preflight-01/command.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/preflight-01/preflight.sh",
+        "matches": 3,
+        "first_lines": [
+          63,
+          66,
+          66
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/preflight-02/command.json",
+        "matches": 2,
+        "first_lines": [
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/preflight-02/preflight.sh",
+        "matches": 3,
+        "first_lines": [
+          63,
+          66,
+          66
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/preflight-02/stdout.txt",
+        "matches": 2,
+        "first_lines": [
+          240,
+          432
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/preflight.sh",
+        "matches": 3,
+        "first_lines": [
+          63,
+          66,
+          66
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/run_guards_terminal.py",
+        "matches": 5,
+        "first_lines": [
+          3,
+          3,
+          5,
+          6,
+          7
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/staging-writer.py",
+        "matches": 7,
+        "first_lines": [
+          4,
+          4,
+          4,
+          22,
+          40
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/staging/command.json",
+        "matches": 11,
+        "first_lines": [
+          20,
+          22,
+          26,
+          26,
+          26
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/staging/decoded-records.json",
+        "matches": 2,
+        "first_lines": [
+          241,
+          433
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/staging/stdout.txt",
+        "matches": 2,
+        "first_lines": [
+          240,
+          432
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/stock-recovery-observation.py",
+        "matches": 3,
+        "first_lines": [
+          61,
+          65,
+          65
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/stock-recovery/command.json",
+        "matches": 5,
+        "first_lines": [
+          20,
+          22,
+          26,
+          26,
+          26
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/working-tree-delta.json",
+        "matches": 1,
+        "first_lines": [
+          224
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase7/psb-dri-re/CODEX-HANDOFF-chronology.md",
+        "matches": 1,
+        "first_lines": [
+          12
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase7/xpsb-re/binary-inventory.md",
+        "matches": 1,
+        "first_lines": [
+          5
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+        "matches": 5,
+        "first_lines": [
+          111,
+          344,
+          380,
+          391,
+          529
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/antix-kbuild-preparation-equivalence.md",
+        "matches": 2,
+        "first_lines": [
+          30,
+          35
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/antix-kbuild-successor-equivalence.md",
+        "matches": 5,
+        "first_lines": [
+          35,
+          38,
+          41,
+          44,
+          58
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/build-environment.json",
+        "matches": 12,
+        "first_lines": [
+          2,
+          3,
+          4,
+          5,
+          8
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/classified-comparison.json",
+        "matches": 1,
+        "first_lines": [
+          326
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/comparison-diffs/build_include_config_auto_conf_cmd.diff",
+        "matches": 6,
+        "first_lines": [
+          8,
+          8,
+          12,
+          16,
+          29
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/final-verification.json",
+        "matches": 21,
+        "first_lines": [
+          317,
+          318,
+          319,
+          320,
+          321
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/inputs.json",
+        "matches": 5,
+        "first_lines": [
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/modules_prepare.json",
+        "matches": 11,
+        "first_lines": [
+          5,
+          6,
+          8,
+          9,
+          9
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/modules_prepare.stdout",
+        "matches": 246,
+        "first_lines": [
+          1,
+          2,
+          2,
+          3,
+          4
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/mrproper.json",
+        "matches": 10,
+        "first_lines": [
+          5,
+          7,
+          8,
+          8,
+          9
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/mrproper.stdout",
+        "matches": 1,
+        "first_lines": [
+          1817
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/olddefconfig.json",
+        "matches": 11,
+        "first_lines": [
+          5,
+          6,
+          8,
+          9,
+          9
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/olddefconfig.stdout",
+        "matches": 44,
+        "first_lines": [
+          1,
+          2,
+          2,
+          3,
+          4
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/package-patch-dry-run.json",
+        "matches": 2,
+        "first_lines": [
+          9,
+          11
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/paths.json",
+        "matches": 5,
+        "first_lines": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/prepared/include/config/auto.conf.cmd",
+        "matches": 6,
+        "first_lines": [
+          1359,
+          1359,
+          1362,
+          1365,
+          1377
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/pwd.txt",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/raw-generated-comparison.json",
+        "matches": 1,
+        "first_lines": [
+          288
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/source-extract.json",
+        "matches": 1,
+        "first_lines": [
+          7
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/syscall-diagnostic/command.json",
+        "matches": 3,
+        "first_lines": [
+          4,
+          5,
+          6
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/verification/commands.json",
+        "matches": 15,
+        "first_lines": [
+          71,
+          72,
+          91,
+          92,
+          93
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-successor-20260930/actual-tool-identities.json",
+        "matches": 5,
+        "first_lines": [
+          4,
+          13,
+          22,
+          31,
+          40
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-successor-20260930/build-environment.json",
+        "matches": 12,
+        "first_lines": [
+          2,
+          3,
+          4,
+          5,
+          8
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-successor-20260930/comparison-diffs/include__config__auto.conf.cmd.diff",
+        "matches": 6,
+        "first_lines": [
+          8,
+          8,
+          12,
+          16,
+          29
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-successor-20260930/complete-equivalence.json",
+        "matches": 93,
+        "first_lines": [
+          8,
+          9,
+          19,
+          20,
+          30
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-successor-20260930/environment-cleanup.json",
+        "matches": 12,
+        "first_lines": [
+          4,
+          5,
+          6,
+          7,
+          10
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-successor-20260930/failed-output-before.json",
+        "matches": 1,
+        "first_lines": [
+          89070
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-successor-20260930/failed-output-preservation.json",
+        "matches": 1,
+        "first_lines": [
+          4
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-successor-20260930/final-verification.json",
+        "matches": 6,
+        "first_lines": [
+          461,
+          462,
+          463,
+          464,
+          465
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-successor-20260930/inputs.json",
+        "matches": 5,
+        "first_lines": [
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-successor-20260930/modules_prepare.json",
+        "matches": 11,
+        "first_lines": [
+          5,
+          6,
+          8,
+          9,
+          9
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-successor-20260930/modules_prepare.stdout",
+        "matches": 248,
+        "first_lines": [
+          1,
+          2,
+          2,
+          3,
+          4
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-successor-20260930/olddefconfig.json",
+        "matches": 11,
+        "first_lines": [
+          5,
+          6,
+          8,
+          9,
+          9
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-successor-20260930/olddefconfig.stdout",
+        "matches": 44,
+        "first_lines": [
+          1,
+          2,
+          2,
+          3,
+          4
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-successor-20260930/paths.json",
+        "matches": 6,
+        "first_lines": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/asm/.syscalls_32.h.cmd",
+        "matches": 2,
+        "first_lines": [
+          1,
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/uapi/asm/.unistd_32.h.cmd",
+        "matches": 2,
+        "first_lines": [
+          1,
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/uapi/asm/.unistd_64.h.cmd",
+        "matches": 2,
+        "first_lines": [
+          1,
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/arch/x86/include/generated/uapi/asm/.unistd_x32.h.cmd",
+        "matches": 2,
+        "first_lines": [
+          1,
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/include/config/auto.conf.cmd",
+        "matches": 6,
+        "first_lines": [
+          1359,
+          1359,
+          1362,
+          1365,
+          1377
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-successor-20260930/prepared/scripts/.module.lds.cmd",
+        "matches": 14,
+        "first_lines": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-successor-20260930/pwd.txt",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-successor-20260930/qualified-tool-identity-check.json",
+        "matches": 16,
+        "first_lines": [
+          3,
+          8,
+          13,
+          18,
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-successor-20260930/source-identity.json",
+        "matches": 2,
+        "first_lines": [
+          2,
+          17
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/antix-kbuild-successor-20260930/verification/commands.json",
+        "matches": 13,
+        "first_lines": [
+          91,
+          92,
+          93,
+          95,
+          105
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-20260930/README.md",
+        "matches": 1,
+        "first_lines": [
+          7
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-20260930/actual-tool-identities.json",
+        "matches": 4,
+        "first_lines": [
+          5,
+          15,
+          25,
+          35
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-20260930/build-environment.json",
+        "matches": 12,
+        "first_lines": [
+          2,
+          3,
+          4,
+          5,
+          8
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-20260930/final-verification.json",
+        "matches": 5,
+        "first_lines": [
+          107,
+          121,
+          135,
+          149,
+          163
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-20260930/inputs.json",
+        "matches": 5,
+        "first_lines": [
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-20260930/other-patch-dry-runs.json",
+        "matches": 4,
+        "first_lines": [
+          11,
+          14,
+          28,
+          31
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-20260930/patch-application.json",
+        "matches": 2,
+        "first_lines": [
+          11,
+          14
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-20260930/patch-context-diagnosis.json",
+        "matches": 1,
+        "first_lines": [
+          4
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-20260930/paths.json",
+        "matches": 5,
+        "first_lines": [
+          2,
+          3,
+          4,
+          5,
+          7
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-20260930/preservation-check.json",
+        "matches": 3,
+        "first_lines": [
+          5,
+          10,
+          15
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-20260930/prior-evidence-check.json",
+        "matches": 3,
+        "first_lines": [
+          3,
+          8,
+          13
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-20260930/pwd.txt",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-20260930/source-identity.json",
+        "matches": 2,
+        "first_lines": [
+          2,
+          17
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-20260930/tool-identity-check.json",
+        "matches": 16,
+        "first_lines": [
+          3,
+          7,
+          11,
+          15,
+          19
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-20260930/verification/ubsan-commands.json",
+        "matches": 13,
+        "first_lines": [
+          15,
+          16,
+          17,
+          19,
+          27
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/README.md",
+        "matches": 2,
+        "first_lines": [
+          77,
+          78
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/actual-tool-identities.json",
+        "matches": 5,
+        "first_lines": [
+          5,
+          15,
+          25,
+          35,
+          45
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/build-1.json",
+        "matches": 23,
+        "first_lines": [
+          5,
+          6,
+          8,
+          8,
+          9
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/build-1.stderr",
+        "matches": 5,
+        "first_lines": [
+          1,
+          2,
+          2,
+          3,
+          4
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/build-1.stdout",
+        "matches": 1531,
+        "first_lines": [
+          1,
+          2,
+          2,
+          3,
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/build-2-provenance.json",
+        "matches": 3,
+        "first_lines": [
+          8,
+          13,
+          18
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/build-2.json",
+        "matches": 23,
+        "first_lines": [
+          5,
+          6,
+          8,
+          8,
+          9
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/build-2.stdout",
+        "matches": 1549,
+        "first_lines": [
+          1,
+          2,
+          2,
+          3,
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/build-3-repeat-provenance.json",
+        "matches": 3,
+        "first_lines": [
+          8,
+          13,
+          18
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/build-3-repeat.json",
+        "matches": 23,
+        "first_lines": [
+          5,
+          6,
+          8,
+          8,
+          9
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/build-3-repeat.stdout",
+        "matches": 1549,
+        "first_lines": [
+          1,
+          2,
+          2,
+          3,
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/build-4-lifecycle.json",
+        "matches": 23,
+        "first_lines": [
+          5,
+          6,
+          8,
+          8,
+          9
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/build-4-lifecycle.stderr",
+        "matches": 5,
+        "first_lines": [
+          1,
+          2,
+          2,
+          3,
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/build-4-lifecycle.stdout",
+        "matches": 928,
+        "first_lines": [
+          1,
+          2,
+          2,
+          3,
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/build-5-lifecycle.json",
+        "matches": 23,
+        "first_lines": [
+          5,
+          6,
+          8,
+          8,
+          9
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/build-5-lifecycle.stdout",
+        "matches": 1549,
+        "first_lines": [
+          1,
+          2,
+          2,
+          3,
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/build-6-lifecycle-final-provenance.json",
+        "matches": 3,
+        "first_lines": [
+          8,
+          13,
+          18
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/build-6-lifecycle-final.json",
+        "matches": 23,
+        "first_lines": [
+          5,
+          6,
+          8,
+          8,
+          9
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/build-6-lifecycle-final.stdout",
+        "matches": 1549,
+        "first_lines": [
+          1,
+          2,
+          2,
+          3,
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/build-7-lifecycle-repeat-provenance.json",
+        "matches": 3,
+        "first_lines": [
+          8,
+          13,
+          18
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/build-7-lifecycle-repeat.json",
+        "matches": 23,
+        "first_lines": [
+          5,
+          6,
+          8,
+          8,
+          9
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/build-7-lifecycle-repeat.stdout",
+        "matches": 1549,
+        "first_lines": [
+          1,
+          2,
+          2,
+          3,
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/build-argv.json",
+        "matches": 11,
+        "first_lines": [
+          4,
+          5,
+          7,
+          7,
+          8
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/build-environment.json",
+        "matches": 12,
+        "first_lines": [
+          2,
+          3,
+          4,
+          5,
+          8
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/candidate-01/commands.json",
+        "matches": 16,
+        "first_lines": [
+          4,
+          6,
+          12,
+          14,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/candidate-01/gma500_gfx.ko",
+        "matches": 7,
+        "first_lines": [
+          324,
+          343,
+          344,
+          344,
+          346
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/candidate-01/identity.json",
+        "matches": 2,
+        "first_lines": [
+          2,
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/candidate-01/modinfo.stdout",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/candidate-02-lifecycle/commands.json",
+        "matches": 16,
+        "first_lines": [
+          4,
+          6,
+          12,
+          14,
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/candidate-02-lifecycle/gma500_gfx.ko",
+        "matches": 7,
+        "first_lines": [
+          324,
+          343,
+          344,
+          344,
+          346
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/candidate-02-lifecycle/identity.json",
+        "matches": 2,
+        "first_lines": [
+          2,
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/candidate-02-lifecycle/modinfo.stdout",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/candidate-02-repeat.json",
+        "matches": 2,
+        "first_lines": [
+          2,
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/check-build-provenance.py",
+        "matches": 3,
+        "first_lines": [
+          3,
+          3,
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/check-lifecycle-build-provenance.py",
+        "matches": 3,
+        "first_lines": [
+          3,
+          3,
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/division-red.stderr",
+        "matches": 1,
+        "first_lines": [
+          6
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+        "matches": 8,
+        "first_lines": [
+          3,
+          231,
+          267,
+          278,
+          421
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/freeze-evidence.py",
+        "matches": 2,
+        "first_lines": [
+          3,
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/inputs.json",
+        "matches": 5,
+        "first_lines": [
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/integration-red.stderr",
+        "matches": 4,
+        "first_lines": [
+          6,
+          11,
+          24,
+          29
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/lifecycle-final-patch-application.json",
+        "matches": 16,
+        "first_lines": [
+          11,
+          14,
+          28,
+          30,
+          44
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/lifecycle-patch-application.json",
+        "matches": 16,
+        "first_lines": [
+          11,
+          14,
+          28,
+          30,
+          44
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/lifecycle-red.stderr",
+        "matches": 12,
+        "first_lines": [
+          6,
+          9,
+          12,
+          19,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/lifecycle-repeat-patch-application.json",
+        "matches": 16,
+        "first_lines": [
+          11,
+          14,
+          28,
+          30,
+          44
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/lifecycle-routing-red.stderr",
+        "matches": 15,
+        "first_lines": [
+          6,
+          9,
+          12,
+          19,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/original-irq-callsite-review.json",
+        "matches": 2,
+        "first_lines": [
+          60,
+          62
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/original-irq-disassembly.txt",
+        "matches": 1,
+        "first_lines": [
+          2
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/patch-application.json",
+        "matches": 12,
+        "first_lines": [
+          11,
+          14,
+          28,
+          30,
+          44
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/paths.json",
+        "matches": 4,
+        "first_lines": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/prepare-build.py",
+        "matches": 5,
+        "first_lines": [
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/pwd.txt",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/qualify-lifecycle-module.py",
+        "matches": 2,
+        "first_lines": [
+          3,
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/qualify-module.py",
+        "matches": 2,
+        "first_lines": [
+          3,
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/regression-before-lifecycle.json",
+        "matches": 13,
+        "first_lines": [
+          62,
+          63,
+          64,
+          66,
+          73
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/regression-final.json",
+        "matches": 13,
+        "first_lines": [
+          67,
+          68,
+          69,
+          71,
+          79
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/run-build.py",
+        "matches": 1,
+        "first_lines": [
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/run-offline-guards.py",
+        "matches": 3,
+        "first_lines": [
+          3,
+          3,
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/scoped-diff-CHATGPT-HANDOFF-POST-ATTEMPT03.md.txt",
+        "matches": 9,
+        "first_lines": [
+          1,
+          2,
+          6,
+          7,
+          132
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/scoped-diff-active-gma500-transition-review.md.txt",
+        "matches": 2,
+        "first_lines": [
+          1,
+          2
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/scoped-diff-antix-fixed-ioctl.patch.txt",
+        "matches": 2,
+        "first_lines": [
+          1,
+          2
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/scoped-diff-antix-fixed-makefile.patch.txt",
+        "matches": 2,
+        "first_lines": [
+          1,
+          2
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/scoped-diff-fixed-one-shot-gate-b-review.md.txt",
+        "matches": 2,
+        "first_lines": [
+          1,
+          2
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/scoped-diff-frozen_kernel_contract.c.txt",
+        "matches": 2,
+        "first_lines": [
+          1,
+          2
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/scoped-diff-i386-gcc-offline-build-plan.md.txt",
+        "matches": 2,
+        "first_lines": [
+          1,
+          2
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/scoped-diff-post-attempt03-checkpoint-audit.md.txt",
+        "matches": 2,
+        "first_lines": [
+          1,
+          2
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/stage-lifecycle-repeat.py",
+        "matches": 3,
+        "first_lines": [
+          3,
+          3,
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/table-installation.json",
+        "matches": 2,
+        "first_lines": [
+          2,
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/candidate-01-build-20260930/tool-identity-check.json",
+        "matches": 16,
+        "first_lines": [
+          3,
+          7,
+          11,
+          15,
+          19
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/build-commands.json",
+        "matches": 4,
+        "first_lines": [
+          8,
+          19,
+          29,
+          39
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/corrected-build-commands.json",
+        "matches": 4,
+        "first_lines": [
+          8,
+          19,
+          29,
+          39
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/corrected-inspection.stdout",
+        "matches": 2,
+        "first_lines": [
+          2,
+          10
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/corrected-repeat-build.json",
+        "matches": 2,
+        "first_lines": [
+          3,
+          4
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/final-checks/checks.json",
+        "matches": 27,
+        "first_lines": [
+          12,
+          28,
+          39,
+          49,
+          59
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/final-checks/ubsan-contract",
+        "matches": 2,
+        "first_lines": [
+          112,
+          112
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/final-checks/ubsan-io",
+        "matches": 2,
+        "first_lines": [
+          23,
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/final-checks/ubsan-service",
+        "matches": 3,
+        "first_lines": [
+          140,
+          140,
+          140
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/final-preservation.stderr",
+        "matches": 1,
+        "first_lines": [
+          2
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/finalize_checks.py",
+        "matches": 3,
+        "first_lines": [
+          3,
+          4,
+          4
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/finalize_preservation.py",
+        "matches": 3,
+        "first_lines": [
+          3,
+          4,
+          4
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/green-01.stderr",
+        "matches": 4,
+        "first_lines": [
+          14,
+          17,
+          19,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/independent-inspection-corrected/native-derivative.stdout",
+        "matches": 7,
+        "first_lines": [
+          324,
+          343,
+          344,
+          344,
+          346
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/independent-inspection-corrected/qualification.json",
+        "matches": 2,
+        "first_lines": [
+          2,
+          10
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/init-gate-red.stderr",
+        "matches": 1,
+        "first_lines": [
+          33
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/initial-pwd.txt",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/irq-review-red.stderr",
+        "matches": 3,
+        "first_lines": [
+          41,
+          50,
+          59
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/metadata-review-red.stderr",
+        "matches": 5,
+        "first_lines": [
+          43,
+          52,
+          61,
+          70,
+          79
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/preserve_evidence.py",
+        "matches": 1,
+        "first_lines": [
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/preserved-superseded-builds.json",
+        "matches": 5,
+        "first_lines": [
+          5,
+          9,
+          13,
+          15,
+          16
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/red.stderr",
+        "matches": 61,
+        "first_lines": [
+          6,
+          9,
+          11,
+          20,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/repeat-build.json",
+        "matches": 2,
+        "first_lines": [
+          3,
+          4
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/resource-guards-red.stderr",
+        "matches": 7,
+        "first_lines": [
+          37,
+          40,
+          49,
+          58,
+          61
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/run_build.py",
+        "matches": 1,
+        "first_lines": [
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/run_corrected_build.py",
+        "matches": 1,
+        "first_lines": [
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/run_final_guards.py",
+        "matches": 5,
+        "first_lines": [
+          3,
+          3,
+          5,
+          6,
+          7
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/run_negative_images.py",
+        "matches": 1,
+        "first_lines": [
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/update_checkpoint.py",
+        "matches": 1,
+        "first_lines": [
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/verified-corrected-repeat.json",
+        "matches": 6,
+        "first_lines": [
+          4,
+          5,
+          15,
+          25,
+          35
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/verified-corrected-repeat.stdout",
+        "matches": 6,
+        "first_lines": [
+          4,
+          5,
+          15,
+          25,
+          35
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-operational-review-20261001/checks-final/checks.json",
+        "matches": 30,
+        "first_lines": [
+          12,
+          28,
+          38,
+          51,
+          64
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-operational-review-20261001/checks-final/ubsan-contract",
+        "matches": 2,
+        "first_lines": [
+          112,
+          112
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-operational-review-20261001/checks-final/ubsan-io",
+        "matches": 2,
+        "first_lines": [
+          23,
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-operational-review-20261001/checks-final/ubsan-service",
+        "matches": 3,
+        "first_lines": [
+          140,
+          140,
+          140
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-operational-review-20261001/checks/checks.json",
+        "matches": 30,
+        "first_lines": [
+          12,
+          28,
+          38,
+          51,
+          64
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-operational-review-20261001/checks/ubsan-contract",
+        "matches": 2,
+        "first_lines": [
+          112,
+          112
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-operational-review-20261001/checks/ubsan-io",
+        "matches": 2,
+        "first_lines": [
+          23,
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-operational-review-20261001/checks/ubsan-service",
+        "matches": 3,
+        "first_lines": [
+          140,
+          140,
+          140
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-operational-review-20261001/final-repository-commands.json",
+        "matches": 2,
+        "first_lines": [
+          8,
+          17
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-operational-review-20261001/fresh-image-inspection/native-derivative.stdout",
+        "matches": 7,
+        "first_lines": [
+          324,
+          343,
+          344,
+          344,
+          346
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-operational-review-20261001/fresh-image-inspection/qualification.json",
+        "matches": 2,
+        "first_lines": [
+          2,
+          10
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-operational-review-20261001/guards-final.stderr",
+        "matches": 3,
+        "first_lines": [
+          2,
+          3,
+          8
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-operational-review-20261001/image-verifier.stdout",
+        "matches": 2,
+        "first_lines": [
+          2,
+          10
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-operational-review-20261001/initial-artifact-verification.json",
+        "matches": 2,
+        "first_lines": [
+          12,
+          14
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-operational-review-20261001/initial-pwd.txt",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-operational-review-20261001/post-documentation-qualified-checks/commands.json",
+        "matches": 3,
+        "first_lines": [
+          14,
+          23,
+          33
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-operational-review-20261001/post-documentation-qualified-checks/summary.json",
+        "matches": 2,
+        "first_lines": [
+          4,
+          5
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-operational-review-20261001/procedure-red.stderr",
+        "matches": 12,
+        "first_lines": [
+          6,
+          15,
+          24,
+          33,
+          42
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-operational-review-20261001/review-regressions-red.stderr",
+        "matches": 30,
+        "first_lines": [
+          53,
+          62,
+          71,
+          80,
+          89
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-operational-review-20261001/run_guards.py",
+        "matches": 5,
+        "first_lines": [
+          3,
+          3,
+          5,
+          6,
+          7
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-operational-review-20261001/run_guards_final.py",
+        "matches": 5,
+        "first_lines": [
+          3,
+          3,
+          5,
+          6,
+          7
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-operational-review-20261001/run_guards_final_successor.py",
+        "matches": 5,
+        "first_lines": [
+          3,
+          3,
+          5,
+          6,
+          7
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-operational-review-20261001/stage-identity-green.stderr",
+        "matches": 1,
+        "first_lines": [
+          13
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-operational-review-20261001/stage-identity-red-valid.stderr",
+        "matches": 1,
+        "first_lines": [
+          18
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-operational-review-20261001/stage-identity-red.stderr",
+        "matches": 1,
+        "first_lines": [
+          13
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-review-20261001/checks.json",
+        "matches": 13,
+        "first_lines": [
+          99,
+          100,
+          101,
+          103,
+          111
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-review-20261001/initial-pwd.txt",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-review-20261001/inspection-commands.json",
+        "matches": 2,
+        "first_lines": [
+          5,
+          12
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-review-20261001/lifecycle-derivative-modinfo.stdout",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-review-20261001/original-modinfo.stdout",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-review-20261001/retained-boot-timeline.json",
+        "matches": 1,
+        "first_lines": [
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-review-20261001/retained-inputs.json",
+        "matches": 8,
+        "first_lines": [
+          3,
+          8,
+          13,
+          18,
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-review-20261001/run-guards.py",
+        "matches": 3,
+        "first_lines": [
+          4,
+          5,
+          7
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/first-load-review-20261001/source-contracts.json",
+        "matches": 1,
+        "first_lines": [
+          2
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/i386-gcc-toolchain-20260930/README.md",
+        "matches": 1,
+        "first_lines": [
+          8
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/i386-gcc-toolchain-20260930/apt-options.json",
+        "matches": 5,
+        "first_lines": [
+          3,
+          5,
+          7,
+          9,
+          13
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/i386-gcc-toolchain-20260930/environment.sh",
+        "matches": 12,
+        "first_lines": [
+          3,
+          4,
+          5,
+          6,
+          9
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/i386-gcc-toolchain-20260930/executable-identities.json",
+        "matches": 44,
+        "first_lines": [
+          3,
+          4,
+          11,
+          12,
+          19
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/i386-gcc-toolchain-20260930/native-build-tool-smoke.json",
+        "matches": 5,
+        "first_lines": [
+          4,
+          30,
+          39,
+          66,
+          75
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/i386-gcc-toolchain-20260930/native-ssl-smoke.json",
+        "matches": 10,
+        "first_lines": [
+          8,
+          9,
+          17,
+          17,
+          26
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/i386-gcc-toolchain-20260930/provisioned-packages.json",
+        "matches": 50,
+        "first_lines": [
+          10,
+          11,
+          21,
+          22,
+          32
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/i386-gcc-toolchain-20260930/runtime-library-hashes.json",
+        "matches": 4,
+        "first_lines": [
+          4,
+          8,
+          10,
+          11
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/i386-gcc-toolchain-20260930/signature-verification.json",
+        "matches": 1,
+        "first_lines": [
+          6
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/i386-gcc-toolchain-20260930/smoke-commands.json",
+        "matches": 60,
+        "first_lines": [
+          4,
+          5,
+          22,
+          22,
+          22
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/i386-gcc-toolchain-20260930/smoke-results.json",
+        "matches": 3,
+        "first_lines": [
+          37,
+          38,
+          41
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/i386-gcc-toolchain-20260930/suite-result.txt",
+        "matches": 1,
+        "first_lines": [
+          2
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/i386-gcc-toolchain-20260930/tool-env.json",
+        "matches": 4,
+        "first_lines": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/i386-gcc-toolchain-20260930/tool-identities.json",
+        "matches": 40,
+        "first_lines": [
+          4,
+          13,
+          22,
+          27,
+          27
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/i386-gcc-toolchain-20260930/ubsan-checks.json",
+        "matches": 13,
+        "first_lines": [
+          13,
+          14,
+          15,
+          17,
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/kernel-health-qualification-20261001/checks-stage-qualified/checks.json",
+        "matches": 30,
+        "first_lines": [
+          12,
+          28,
+          38,
+          51,
+          64
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/kernel-health-qualification-20261001/checks-stage-qualified/ubsan-contract",
+        "matches": 2,
+        "first_lines": [
+          112,
+          112
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/kernel-health-qualification-20261001/checks-stage-qualified/ubsan-io",
+        "matches": 2,
+        "first_lines": [
+          23,
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/kernel-health-qualification-20261001/checks-stage-qualified/ubsan-service",
+        "matches": 3,
+        "first_lines": [
+          140,
+          140,
+          140
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/kernel-health-qualification-20261001/checks/checks.json",
+        "matches": 30,
+        "first_lines": [
+          12,
+          28,
+          38,
+          51,
+          64
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/kernel-health-qualification-20261001/checks/ubsan-contract",
+        "matches": 2,
+        "first_lines": [
+          112,
+          112
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/kernel-health-qualification-20261001/checks/ubsan-io",
+        "matches": 2,
+        "first_lines": [
+          23,
+          23
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/kernel-health-qualification-20261001/checks/ubsan-service",
+        "matches": 3,
+        "first_lines": [
+          140,
+          140,
+          140
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/kernel-health-qualification-20261001/initial-pwd.txt",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/kernel-health-qualification-20261001/preserved-before/__pycache__/frozen_first_load_procedure.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          10
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/kernel-health-qualification-20261001/red.stderr",
+        "matches": 36,
+        "first_lines": [
+          28,
+          31,
+          34,
+          37,
+          46
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/kernel-health-qualification-20261001/run_guards.py",
+        "matches": 5,
+        "first_lines": [
+          3,
+          3,
+          5,
+          6,
+          7
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/kernel-health-qualification-20261001/run_guards_stage.py",
+        "matches": 5,
+        "first_lines": [
+          3,
+          3,
+          5,
+          6,
+          7
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/kernel-health-qualification-20261001/source-provenance.json",
+        "matches": 1,
+        "first_lines": [
+          2
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/kernel-health-qualification-20261001/stage-red.stderr",
+        "matches": 1,
+        "first_lines": [
+          13
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/artifact-verification.json",
+        "matches": 26,
+        "first_lines": [
+          4,
+          24,
+          29,
+          31,
+          37
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+        "matches": 5,
+        "first_lines": [
+          3,
+          236,
+          272,
+          283,
+          417
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/build-environment.json",
+        "matches": 12,
+        "first_lines": [
+          2,
+          3,
+          4,
+          5,
+          8
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/candidate-01-modinfo.stdout",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/candidate-01-objdump.stdout",
+        "matches": 1,
+        "first_lines": [
+          2
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/candidate-02-lifecycle-modinfo.stdout",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/candidate-02-lifecycle-objdump.stdout",
+        "matches": 1,
+        "first_lines": [
+          2
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/candidate-difference-psb_drv.c.diff",
+        "matches": 2,
+        "first_lines": [
+          1,
+          2
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/candidate-difference-psb_irq.c.diff",
+        "matches": 2,
+        "first_lines": [
+          1,
+          2
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/check-lifecycle-paths.py",
+        "matches": 3,
+        "first_lines": [
+          4,
+          6,
+          7
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/checks.json",
+        "matches": 13,
+        "first_lines": [
+          83,
+          84,
+          85,
+          87,
+          95
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/fresh-tool-identities.json",
+        "matches": 5,
+        "first_lines": [
+          5,
+          15,
+          25,
+          35,
+          45
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/initial-pwd.txt",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/lifecycle-mutation-check.json",
+        "matches": 2,
+        "first_lines": [
+          18,
+          42
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/omit-owned-irq-release.stderr",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/omit-pci-remove-unload.stderr",
+        "matches": 1,
+        "first_lines": [
+          1
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/run-guards.py",
+        "matches": 3,
+        "first_lines": [
+          4,
+          5,
+          7
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/scoped-diff-CHATGPT-HANDOFF-POST-ATTEMPT03.md.txt",
+        "matches": 3,
+        "first_lines": [
+          1,
+          2,
+          18
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/scoped-diff-active-gma500-transition-review.md.txt",
+        "matches": 2,
+        "first_lines": [
+          1,
+          2
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/scoped-diff-fixed-one-shot-gate-b-review.md.txt",
+        "matches": 2,
+        "first_lines": [
+          1,
+          2
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/scoped-diff-post-attempt03-checkpoint-audit.md.txt",
+        "matches": 2,
+        "first_lines": [
+          1,
+          2
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/scoped-diff-test_frozen_irq_lifecycle.c.txt",
+        "matches": 2,
+        "first_lines": [
+          1,
+          2
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/scoped-diff-test_frozen_irq_lifecycle.py.txt",
+        "matches": 2,
+        "first_lines": [
+          1,
+          2
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/verify-artifacts.py",
+        "matches": 2,
+        "first_lines": [
+          4,
+          7
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/candidate-01-build-and-lifecycle-review.md",
+        "matches": 3,
+        "first_lines": [
+          57,
+          58,
+          59
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/candidate-01-offline-build-qualification.md",
+        "matches": 6,
+        "first_lines": [
+          12,
+          37,
+          72,
+          73,
+          74
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/first-load-staging-boot-recovery-procedure.md",
+        "matches": 1,
+        "first_lines": [
+          108
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/phase8/i386-gcc-toolchain-qualification.md",
+        "matches": 2,
+        "first_lines": [
+          26,
+          85
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/poulsbo-data/validate.py.txt",
+        "matches": 1,
+        "first_lines": [
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "docs/source-archaeology.md",
+        "matches": 1,
+        "first_lines": [
+          21
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "experiments/probe.txt",
+        "matches": 1,
+        "first_lines": [
+          3
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/DecompileSelected.java",
+        "matches": 1,
+        "first_lines": [
+          25
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/ExportPsb.java",
+        "matches": 1,
+        "first_lines": [
+          21
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/cleanroom_pds_image.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          10
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/frozen_first_load_image.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          5
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/frozen_first_load_procedure.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          12
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/frozen_kernel_health.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          16
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/frozen_module_versions.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          17
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/frozen_triangle_bo.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          10
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/frozen_triangle_closure.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          12
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/frozen_triangle_contracts.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          11
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/frozen_triangle_dry_run.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          18
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/frozen_triangle_image.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          16
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/generate_frozen_kernel_initial.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          7
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/mini12_sudo_transport.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          8
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/pds_launch_count_constraints.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          20
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/pds_launch_state_check.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          18
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/test_cleanroom_pds_image.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          7
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/test_frozen_fixed_io.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          10
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/test_frozen_fixed_service.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          9
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/test_frozen_kernel_contract.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          11
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/test_frozen_module_versions.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          21
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/test_frozen_scene_owner.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          9
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/test_frozen_triangle_bo.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          4
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/test_frozen_triangle_closure.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          4
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/test_frozen_triangle_contracts.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          4
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/test_frozen_triangle_dry_run.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          6
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/test_frozen_triangle_image.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          7
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/test_frozen_triangle_one_shot.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          9
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/test_frozen_va_pool.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          8
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/test_mini12_readonly_capture.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          14
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/test_mini12_sudo_transport.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          6
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/test_pds_launch_count_constraints.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          6
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/psb-dri-re/__pycache__/test_pds_launch_state_check.cpython-313.pyc",
+        "matches": 1,
+        "first_lines": [
+          4
+        ],
+        "values": "REDACTED"
+      },
+      {
+        "path": "tools/xpsb-re/DecompileXpsb.java",
+        "matches": 1,
+        "first_lines": [
+          18
+        ],
+        "values": "REDACTED"
+      }
+    ]
+  },
+  "device_identifier_leads": [
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/operator-dmesg-mini12.txt",
+      "line": 428,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/operator-dmesg-mini12.txt",
+      "line": 431,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "PCI ADDRESS, NOT UNIQUE SERIAL"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/operator-dmesg-mini12.txt",
+      "line": 512,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/operator-dmesg-mini12.txt",
+      "line": 515,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "POTENTIAL UNIQUE IDENTIFIER"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/operator-dmesg-mini12.txt",
+      "line": 525,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/operator-dmesg-mini12.txt",
+      "line": 528,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "PCI ADDRESS, NOT UNIQUE SERIAL"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/operator-dmesg-mini12.txt",
+      "line": 535,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/operator-dmesg-mini12.txt",
+      "line": 538,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "PCI ADDRESS, NOT UNIQUE SERIAL"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/operator-dmesg-mini12.txt",
+      "line": 545,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/operator-dmesg-mini12.txt",
+      "line": 548,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "PCI ADDRESS, NOT UNIQUE SERIAL"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/operator-dmesg-mini12.txt",
+      "line": 643,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/operator-dmesg-mini12.txt",
+      "line": 646,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "POTENTIAL UNIQUE IDENTIFIER"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/failure_status.stdout",
+      "line": 439,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/failure_status.stdout",
+      "line": 442,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "PCI ADDRESS, NOT UNIQUE SERIAL"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/failure_status.stdout",
+      "line": 504,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": true,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/failure_status.stdout",
+      "line": 522,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/failure_status.stdout",
+      "line": 525,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "POTENTIAL UNIQUE IDENTIFIER"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/failure_status.stdout",
+      "line": 541,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/failure_status.stdout",
+      "line": 544,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "PCI ADDRESS, NOT UNIQUE SERIAL"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/failure_status.stdout",
+      "line": 551,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/failure_status.stdout",
+      "line": 554,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "PCI ADDRESS, NOT UNIQUE SERIAL"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/failure_status.stdout",
+      "line": 561,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/failure_status.stdout",
+      "line": 564,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "PCI ADDRESS, NOT UNIQUE SERIAL"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/failure_status.stdout",
+      "line": 647,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/failure_status.stdout",
+      "line": 650,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "POTENTIAL UNIQUE IDENTIFIER"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/precheck.stdout",
+      "line": 433,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/precheck.stdout",
+      "line": 436,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "PCI ADDRESS, NOT UNIQUE SERIAL"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/precheck.stdout",
+      "line": 498,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": true,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/precheck.stdout",
+      "line": 516,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/precheck.stdout",
+      "line": 519,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "POTENTIAL UNIQUE IDENTIFIER"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/precheck.stdout",
+      "line": 535,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/precheck.stdout",
+      "line": 538,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "PCI ADDRESS, NOT UNIQUE SERIAL"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/precheck.stdout",
+      "line": 545,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/precheck.stdout",
+      "line": 548,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "PCI ADDRESS, NOT UNIQUE SERIAL"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/precheck.stdout",
+      "line": 555,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/precheck.stdout",
+      "line": 558,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "PCI ADDRESS, NOT UNIQUE SERIAL"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/precheck.stdout",
+      "line": 641,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/precheck.stdout",
+      "line": 644,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "POTENTIAL UNIQUE IDENTIFIER"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/boot-config",
+      "line": 1040,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "KERNEL CONFIGURATION, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/boot-config",
+      "line": 1702,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "KERNEL CONFIGURATION, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build__config",
+      "line": 1040,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "KERNEL CONFIGURATION, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build__config",
+      "line": 1702,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "KERNEL CONFIGURATION, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build_include_config_auto_conf",
+      "line": 4050,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "KERNEL CONFIGURATION, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build_include_config_auto_conf",
+      "line": 6086,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "KERNEL CONFIGURATION, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/transcript-without-base64.txt",
+      "line": 924,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/transcript-without-base64.txt",
+      "line": 927,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "PCI ADDRESS, NOT UNIQUE SERIAL"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/transcript-without-base64.txt",
+      "line": 1015,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/transcript-without-base64.txt",
+      "line": 1018,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "PCI ADDRESS, NOT UNIQUE SERIAL"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/transcript-without-base64.txt",
+      "line": 1025,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/transcript-without-base64.txt",
+      "line": 1028,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "PCI ADDRESS, NOT UNIQUE SERIAL"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/transcript-without-base64.txt",
+      "line": 1035,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/transcript-without-base64.txt",
+      "line": 1038,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "PCI ADDRESS, NOT UNIQUE SERIAL"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/transcript-without-base64.txt",
+      "line": 1047,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": true,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/transcript-without-base64.txt",
+      "line": 1051,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/transcript-without-base64.txt",
+      "line": 1054,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "POTENTIAL UNIQUE IDENTIFIER"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/transcript-without-base64.txt",
+      "line": 1057,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/transcript-without-base64.txt",
+      "line": 1060,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "POTENTIAL UNIQUE IDENTIFIER"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/transcript-without-base64.txt",
+      "line": 1198,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": true,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/preflight-02/stdout.txt",
+      "line": 48,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/preflight-02/stdout.txt",
+      "line": 205,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/preflight-02/stdout.txt",
+      "line": 48,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/preflight-02/stdout.txt",
+      "line": 344,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/staging/decoded-records.json",
+      "line": 49,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/staging/decoded-records.json",
+      "line": 345,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/staging/decoded-records.json",
+      "line": 591,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/staging/decoded-records.json",
+      "line": 915,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/staging/stdout.txt",
+      "line": 48,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/staging/stdout.txt",
+      "line": 344,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/staging/stdout.txt",
+      "line": 504,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/staging/stdout.txt",
+      "line": 828,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/stock-recovery/stdout.txt",
+      "line": 48,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/stock-recovery/stdout.txt",
+      "line": 376,
+      "value": "REDACTED",
+      "empty_or_zero_identifier": false,
+      "classification": "USB STRING INDEX, NOT SERIAL VALUE"
+    }
+  ],
+  "contact_review": "README collaboration contact is intentional; upstream author/licence contacts are technical attribution. Neither was automatically removed.",
+  "all_values": "REDACTED",
+  "review_required": "Raw network identifiers and unnecessary device/local identifiers require human release approval; original evidence was not edited."
+}

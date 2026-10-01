@@ -1,0 +1,20 @@
+[
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "cwd": "/home/gama/sgx535-gfx",
+    "exit_code": 0
+  },
+  {
+    "argv": [
+      "git",
+      "status",
+      "--short"
+    ],
+    "cwd": "/home/gama/sgx535-gfx",
+    "exit_code": 0
+  }
+]

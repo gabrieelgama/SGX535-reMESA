@@ -1,0 +1,17 @@
+checking file .clang-format
+checking file .cocciconfig
+checking file .config.old
+checking file .get_maintainer.ignore
+checking file .mailmap
+checking file .version
+checking file CREDITS
+checking file MAINTAINERS
+checking file Makefile.orig
+checking file Module.symvers
+checking file README
+checking file debian/arch
+checking file debian/changelog
+checking file debian/control
+checking file debian/copyright
+checking file debian/rules
+checking file debian/source/format

@@ -1,0 +1,22 @@
+[
+  "-o",
+  "Dir::State::lists=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/apt/lists",
+  "-o",
+  "Dir::State::status=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/apt/status",
+  "-o",
+  "Dir::Cache::archives=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/apt/archives",
+  "-o",
+  "Dir::Etc::sourcelist=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/apt/etc/sources.list",
+  "-o",
+  "Dir::Etc::sourceparts=-",
+  "-o",
+  "Dir::Log=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/apt/logs",
+  "-o",
+  "APT::Architecture=arm64",
+  "-o",
+  "APT::Architectures::=arm64",
+  "-o",
+  "Debug::NoLocking=1",
+  "-o",
+  "APT::Get::List-Cleanup=0"
+]

@@ -1,0 +1,55 @@
+[
+  {
+    "command": [
+      "/usr/bin/gcc-14",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-I/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/include",
+      "-L/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/lib/aarch64-linux-gnu",
+      "native-ssl-probe.c",
+      "-lcrypto",
+      "-o",
+      "native-ssl-probe"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "In file included from /home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/include/openssl/crypto.h:22,\n                 from native-ssl-probe.c:2:\n/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/include/openssl/macros.h:14:10: fatal error: openssl/opensslconf.h: No such file or directory\n   14 | #include <openssl/opensslconf.h>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n",
+    "expected": "Missing extracted multiarch include search path"
+  },
+  {
+    "command": [
+      "/usr/bin/gcc-14",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-I/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/include/aarch64-linux-gnu",
+      "-I/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/include",
+      "-L/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/lib/aarch64-linux-gnu",
+      "native-ssl-probe.c",
+      "-lcrypto",
+      "-o",
+      "native-ssl-probe"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/smoke/native-ssl-probe"
+    ],
+    "exit": 0,
+    "stdout": "OpenSSL 3.5.7 9 Jun 2026\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/usr/bin/ldd",
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/smoke/native-ssl-probe"
+    ],
+    "exit": 0,
+    "stdout": "\tlibcrypto.so.3 => /home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/lib/aarch64-linux-gnu/libcrypto.so.3 (0x000000704e5b0000)\n\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x000000704e3d0000)\n\tlibz.so.1 => /lib/aarch64-linux-gnu/libz.so.1 (0x000000704e390000)\n\tlibzstd.so.1 => /lib/aarch64-linux-gnu/libzstd.so.1 (0x000000704e2c0000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000003000000000)\n",
+    "stderr": ""
+  }
+]

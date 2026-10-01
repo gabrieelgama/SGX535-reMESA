@@ -1,0 +1,8 @@
+{
+  "confirmed": true,
+  "physical_presence": true,
+  "display_normal": true,
+  "GRUB_local_input_manual_power_controls": true,
+  "network_display_loss_and_poweroff_data_risk_understood": true,
+  "source": "explicit user response in this turn"
+}

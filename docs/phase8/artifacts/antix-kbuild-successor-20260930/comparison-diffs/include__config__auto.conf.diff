@@ -1,0 +1,11 @@
+--- target/include/config/auto.conf
++++ successor/include/config/auto.conf
+@@ -3105,7 +3105,7 @@
+ CONFIG_SND_OXYGEN=m
+ CONFIG_SERIAL_8250_BOCA=m
+ CONFIG_PCH_GBE=m
+-CONFIG_CC_VERSION_TEXT="gcc (Debian 14.2.0-19) 14.2.0"
++CONFIG_CC_VERSION_TEXT="i686-linux-gnu-gcc-14 (Debian 14.2.0-19) 14.2.0"
+ CONFIG_KEYBOARD_ATKBD=y
+ CONFIG_SCSI_QLA_ISCSI=m
+ CONFIG_AD5446=m

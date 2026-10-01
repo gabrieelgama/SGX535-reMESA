@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "sh",
+    "-n"
+  ],
+  "script_sha256": "a2c298389454924c292f9a358b82da762de9d4ff4a5bca76f32b35fae8daab29",
+  "exit_code": 0,
+  "stderr": ""
+}

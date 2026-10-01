@@ -1,0 +1,79 @@
+[
+  {
+    "file": "boot-config",
+    "target_source": "/boot/config-5.10.240-antix.1-486-smp",
+    "bytes": 244485,
+    "sha256": "93f4d7a779f4be65097b5f26db6c9b10431907c6d417109719eb2f16d6def3d9",
+    "target_hash_verified": true
+  },
+  {
+    "file": "build_Module_symvers",
+    "target_source": "/usr/src/linux-headers-5.10.240-antix.1-486-smp/Module.symvers",
+    "bytes": 1634895,
+    "sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+    "target_hash_verified": true
+  },
+  {
+    "file": "build__config",
+    "target_source": "/usr/src/linux-headers-5.10.240-antix.1-486-smp/.config",
+    "bytes": 244485,
+    "sha256": "93f4d7a779f4be65097b5f26db6c9b10431907c6d417109719eb2f16d6def3d9",
+    "target_hash_verified": true
+  },
+  {
+    "file": "build_include_config_auto_conf",
+    "target_source": "/usr/src/linux-headers-5.10.240-antix.1-486-smp/include/config/auto.conf",
+    "bytes": 175797,
+    "sha256": "0dd6d0f66e345120a57e53db422e820aa08534d5b049549e3273b886716c8c7b",
+    "target_hash_verified": true
+  },
+  {
+    "file": "build_include_config_auto_conf_cmd",
+    "target_source": "/usr/src/linux-headers-5.10.240-antix.1-486-smp/include/config/auto.conf.cmd",
+    "bytes": 43748,
+    "sha256": "deb992d7ff2ca9f50c98f9fc89daf3d0887eedc288aa7fea8416521ceed48978",
+    "target_hash_verified": true
+  },
+  {
+    "file": "build_include_config_kernel_release",
+    "target_source": "/usr/src/linux-headers-5.10.240-antix.1-486-smp/include/config/kernel.release",
+    "bytes": 25,
+    "sha256": "851a1b235a7413514ce18407feb2b7761dc5f733eeb5568613544653b60c4911",
+    "target_hash_verified": true
+  },
+  {
+    "file": "build_include_generated_autoconf_h",
+    "target_source": "/usr/src/linux-headers-5.10.240-antix.1-486-smp/include/generated/autoconf.h",
+    "bytes": 268820,
+    "sha256": "df4c243870d720c7fbb9481f0572cfd1fced552a24652d7a90474a3eb420340b",
+    "target_hash_verified": true
+  },
+  {
+    "file": "build_include_generated_utsrelease_h",
+    "target_source": "/usr/src/linux-headers-5.10.240-antix.1-486-smp/include/generated/utsrelease.h",
+    "bytes": 47,
+    "sha256": "829215a06900fa9d8cd030792507ba37742880744ff62c123de128c3fb936cf6",
+    "target_hash_verified": true
+  },
+  {
+    "file": "build_include_generated_compile_h",
+    "target_source": "/usr/src/linux-headers-5.10.240-antix.1-486-smp/include/generated/compile.h",
+    "bytes": 301,
+    "sha256": "bceac050fc0a65607e56f09b630b78609414850b0ca050244881aae3bc5657d9",
+    "target_hash_verified": true
+  },
+  {
+    "file": "build_Makefile",
+    "target_source": "/usr/src/linux-headers-5.10.240-antix.1-486-smp/Makefile",
+    "bytes": 66407,
+    "sha256": "70b5c7688f9067bd13b8413a205dc73ba9f66676b3de34c4092d7ceb9c260493",
+    "target_hash_verified": true
+  },
+  {
+    "file": "build_generated.tar",
+    "target_source": "/usr/src/linux-headers-5.10.240-antix.1-486-smp",
+    "bytes": 378880,
+    "sha256": "f899bce235cc04a3aa3c74f569fe2ba793a0b606676144ff762a57be2aa1f45c",
+    "target_hash_verified": false
+  }
+]

@@ -1,0 +1,7 @@
+kernel_release=5.10.240-antix.1-486-smp
+machine_arch=i686
+boot_id=8ae37532-19d4-4ec7-9c29-a791acfd889f
+#6 SMP Thu Aug 7 17:33:24 EDT 2025
+Linux version 5.10.240-antix.1-486-smp (demo@antix1) (gcc (Debian 14.2.0-19) 14.2.0, GNU ld (GNU Binutils for Debian) 2.44) #6 SMP Thu Aug 7 17:33:24 EDT 2025
+kernel_taint=12289
+product_name=Inspiron 1210   

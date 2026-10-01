@@ -1,0 +1,35 @@
+filename:       /home/gama/sgx535-gfx/docs/phase8/artifacts/candidate-01-build-20260930/candidate-01/gma500_gfx.ko
+license:        GPL
+description:    DRM driver for the Intel GMA500, GMA600, GMA3600, GMA3650
+author:         Alan Cox <alan@linux.intel.com> and others
+alias:          pci:v00008086d00000BEFsv*sd*bc*sc*i*
+alias:          pci:v00008086d00000BEEsv*sd*bc*sc*i*
+alias:          pci:v00008086d00000BEDsv*sd*bc*sc*i*
+alias:          pci:v00008086d00000BECsv*sd*bc*sc*i*
+alias:          pci:v00008086d00000BEBsv*sd*bc*sc*i*
+alias:          pci:v00008086d00000BEAsv*sd*bc*sc*i*
+alias:          pci:v00008086d00000BE9sv*sd*bc*sc*i*
+alias:          pci:v00008086d00000BE8sv*sd*bc*sc*i*
+alias:          pci:v00008086d00000BE7sv*sd*bc*sc*i*
+alias:          pci:v00008086d00000BE6sv*sd*bc*sc*i*
+alias:          pci:v00008086d00000BE5sv*sd*bc*sc*i*
+alias:          pci:v00008086d00000BE4sv*sd*bc*sc*i*
+alias:          pci:v00008086d00000BE3sv*sd*bc*sc*i*
+alias:          pci:v00008086d00000BE2sv*sd*bc*sc*i*
+alias:          pci:v00008086d00000BE1sv*sd*bc*sc*i*
+alias:          pci:v00008086d00000BE0sv*sd*bc*sc*i*
+alias:          pci:v00008086d00004108sv*sd*bc*sc*i*
+alias:          pci:v00008086d00004107sv*sd*bc*sc*i*
+alias:          pci:v00008086d00004106sv*sd*bc*sc*i*
+alias:          pci:v00008086d00004105sv*sd*bc*sc*i*
+alias:          pci:v00008086d00004104sv*sd*bc*sc*i*
+alias:          pci:v00008086d00004103sv*sd*bc*sc*i*
+alias:          pci:v00008086d00004102sv*sd*bc*sc*i*
+alias:          pci:v00008086d00004101sv*sd*bc*sc*i*
+alias:          pci:v00008086d00004100sv*sd*bc*sc*i*
+alias:          pci:v00008086d00008109sv*sd*bc*sc*i*
+alias:          pci:v00008086d00008108sv*sd*bc*sc*i*
+depends:        drm,drm_kms_helper,video,i2c-algo-bit
+retpoline:      Y
+name:           gma500_gfx
+vermagic:       5.10.240-antix.1-486-smp SMP mod_unload modversions 486 

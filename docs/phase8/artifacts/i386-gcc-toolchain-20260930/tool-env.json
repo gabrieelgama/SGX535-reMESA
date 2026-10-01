@@ -1,0 +1,7 @@
+{
+  "PATH": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin:/usr/bin:/bin",
+  "LD_LIBRARY_PATH": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/lib/aarch64-linux-gnu",
+  "BISON_PKGDATADIR": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/share/bison",
+  "M4": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/m4",
+  "LC_ALL": "C"
+}

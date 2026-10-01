@@ -1,0 +1,79 @@
+NOTE: This is only a simulation!
+      apt-get needs root privileges for real execution.
+      Keep also in mind that locking is deactivated,
+      so don't depend on the relevance to the real current situation!
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  gcc-14-cross-base gcc-14-i686-linux-gnu-base libasan8-i386-cross
+  libatomic1-i386-cross libc6-i386-cross libgcc-14-dev-i386-cross
+  libgcc-s1-i386-cross libgomp1-i386-cross libitm1-i386-cross
+  libquadmath0-i386-cross libssl3t64 libstdc++6-i386-cross
+  libubsan1-i386-cross linux-libc-dev-i386-cross m4 openssl
+  openssl-provider-legacy
+Suggested packages:
+  binutils-doc bison-doc gcc-14-locales cpp-14-doc flex-doc gcc-14-doc
+  libssl-doc m4-doc
+Recommended packages:
+  libfl-dev
+The following NEW packages will be installed:
+  bc binutils-i686-linux-gnu bison cpp-14-i686-linux-gnu flex
+  gcc-14-cross-base gcc-14-i686-linux-gnu gcc-14-i686-linux-gnu-base
+  libasan8-i386-cross libatomic1-i386-cross libc6-dev-i386-cross
+  libc6-i386-cross libgcc-14-dev-i386-cross libgcc-s1-i386-cross
+  libgomp1-i386-cross libitm1-i386-cross libquadmath0-i386-cross libssl-dev
+  libstdc++6-i386-cross libubsan1-i386-cross linux-libc-dev-i386-cross m4
+The following packages will be upgraded:
+  libssl3t64 openssl openssl-provider-legacy
+3 upgraded, 22 newly installed, 0 to remove and 79 not upgraded.
+Inst m4 (1.4.19-8 Debian:13.7/stable [arm64])
+Inst flex (2.6.4-8.2+b4 Debian:13.7/stable [arm64])
+Inst openssl-provider-legacy [3.5.6-1~deb13u2] (3.5.7-1~deb13u2 Debian:13.7/stable [arm64])
+Conf openssl-provider-legacy (3.5.7-1~deb13u2 Debian:13.7/stable [arm64])
+Inst libssl3t64 [3.5.6-1~deb13u2] (3.5.7-1~deb13u2 Debian:13.7/stable [arm64])
+Conf libssl3t64 (3.5.7-1~deb13u2 Debian:13.7/stable [arm64])
+Inst bc (1.07.1-4+b1 Debian:13.7/stable [arm64])
+Inst bison (2:3.8.2+dfsg-1+b2 Debian:13.7/stable [arm64])
+Inst gcc-14-i686-linux-gnu-base (14.2.0-19cross1 Debian:13.7/stable [arm64])
+Inst cpp-14-i686-linux-gnu (14.2.0-19cross1 Debian:13.7/stable [arm64])
+Inst gcc-14-cross-base (14.2.0-19cross1 Debian:13.7/stable [all])
+Inst binutils-i686-linux-gnu (2.44-3 Debian:13.7/stable [arm64])
+Inst libc6-i386-cross (2.41-11cross1 Debian:13.7/stable [all])
+Inst libgcc-s1-i386-cross (14.2.0-19cross1 Debian:13.7/stable [all])
+Inst libgomp1-i386-cross (14.2.0-19cross1 Debian:13.7/stable [all])
+Inst libitm1-i386-cross (14.2.0-19cross1 Debian:13.7/stable [all])
+Inst libatomic1-i386-cross (14.2.0-19cross1 Debian:13.7/stable [all])
+Inst libasan8-i386-cross (14.2.0-19cross1 Debian:13.7/stable [all])
+Inst libstdc++6-i386-cross (14.2.0-19cross1 Debian:13.7/stable [all])
+Inst libubsan1-i386-cross (14.2.0-19cross1 Debian:13.7/stable [all])
+Inst libquadmath0-i386-cross (14.2.0-19cross1 Debian:13.7/stable [all])
+Inst libgcc-14-dev-i386-cross (14.2.0-19cross1 Debian:13.7/stable [all])
+Inst gcc-14-i686-linux-gnu (14.2.0-19cross1 Debian:13.7/stable [arm64])
+Inst linux-libc-dev-i386-cross (6.12.38-1cross1 Debian:13.7/stable [all])
+Inst libc6-dev-i386-cross (2.41-11cross1 Debian:13.7/stable [all])
+Inst libssl-dev (3.5.7-1~deb13u2 Debian:13.7/stable [arm64])
+Inst openssl [3.5.6-1~deb13u2] (3.5.7-1~deb13u2 Debian:13.7/stable [arm64])
+Conf m4 (1.4.19-8 Debian:13.7/stable [arm64])
+Conf flex (2.6.4-8.2+b4 Debian:13.7/stable [arm64])
+Conf bc (1.07.1-4+b1 Debian:13.7/stable [arm64])
+Conf bison (2:3.8.2+dfsg-1+b2 Debian:13.7/stable [arm64])
+Conf gcc-14-i686-linux-gnu-base (14.2.0-19cross1 Debian:13.7/stable [arm64])
+Conf cpp-14-i686-linux-gnu (14.2.0-19cross1 Debian:13.7/stable [arm64])
+Conf gcc-14-cross-base (14.2.0-19cross1 Debian:13.7/stable [all])
+Conf binutils-i686-linux-gnu (2.44-3 Debian:13.7/stable [arm64])
+Conf libc6-i386-cross (2.41-11cross1 Debian:13.7/stable [all])
+Conf libgcc-s1-i386-cross (14.2.0-19cross1 Debian:13.7/stable [all])
+Conf libgomp1-i386-cross (14.2.0-19cross1 Debian:13.7/stable [all])
+Conf libitm1-i386-cross (14.2.0-19cross1 Debian:13.7/stable [all])
+Conf libatomic1-i386-cross (14.2.0-19cross1 Debian:13.7/stable [all])
+Conf libasan8-i386-cross (14.2.0-19cross1 Debian:13.7/stable [all])
+Conf libstdc++6-i386-cross (14.2.0-19cross1 Debian:13.7/stable [all])
+Conf libubsan1-i386-cross (14.2.0-19cross1 Debian:13.7/stable [all])
+Conf libquadmath0-i386-cross (14.2.0-19cross1 Debian:13.7/stable [all])
+Conf libgcc-14-dev-i386-cross (14.2.0-19cross1 Debian:13.7/stable [all])
+Conf gcc-14-i686-linux-gnu (14.2.0-19cross1 Debian:13.7/stable [arm64])
+Conf linux-libc-dev-i386-cross (6.12.38-1cross1 Debian:13.7/stable [all])
+Conf libc6-dev-i386-cross (2.41-11cross1 Debian:13.7/stable [all])
+Conf libssl-dev (3.5.7-1~deb13u2 Debian:13.7/stable [arm64])
+Conf openssl (3.5.7-1~deb13u2 Debian:13.7/stable [arm64])

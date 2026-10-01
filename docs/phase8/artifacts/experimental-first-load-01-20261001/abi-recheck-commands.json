@@ -1,0 +1,22 @@
+[
+  {
+    "argv": [
+      "python3",
+      "tools/psb-dri-re/frozen_module_versions.py",
+      "--check-symvers",
+      "docs/phase8/artifacts/candidate-01-build-20260930/candidate-01/gma500_gfx.ko",
+      "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build_Module_symvers"
+    ],
+    "exit_code": 0
+  },
+  {
+    "argv": [
+      "python3",
+      "tools/psb-dri-re/frozen_module_versions.py",
+      "--check-symvers",
+      "docs/phase8/artifacts/candidate-01-build-20260930/candidate-02-lifecycle/gma500_gfx.ko",
+      "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build_Module_symvers"
+    ],
+    "exit_code": 0
+  }
+]

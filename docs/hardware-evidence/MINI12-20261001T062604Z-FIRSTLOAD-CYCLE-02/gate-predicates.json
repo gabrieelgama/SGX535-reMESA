@@ -1,0 +1,18 @@
+{
+  "candidate_abi": "PASS retained and fresh checker",
+  "image_source_and_staging": "PASS",
+  "no_hot_transition": "PASS tool/action evidence",
+  "operator_menu_selection": "OPERATOR REPORTED ONCE,stockdefault",
+  "live_derivative_note": "UNKNOWN",
+  "ordered_hook_trace": "UNKNOWN",
+  "experimental_boot_id": "UNKNOWN",
+  "live_first_owner": "NOT ESTABLISHED",
+  "experimental_complete_kernel_health": "UNKNOWN",
+  "experimental_display_userspace": "OPERATOR REPORTED NORMAL",
+  "current_stock_driver_recovery": "PASS RAW OBSERVATION",
+  "complete_three_boot_recovery_contract": "NOT ESTABLISHED",
+  "sgx_execution_authorization": "ABSENT",
+  "gate_b": "BLOCKED",
+  "whitelist": [],
+  "smallest_missing_fact": "complete attributed experimental first-owner evidence; cannot be recovered by current source/config/static checks"
+}

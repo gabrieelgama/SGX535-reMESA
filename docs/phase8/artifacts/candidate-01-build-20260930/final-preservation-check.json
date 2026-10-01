@@ -1,0 +1,34 @@
+{
+  "initial_git_visible_files": 1539,
+  "changed_preexisting": [
+    "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "docs/phase8/active-gma500-transition-review.md",
+    "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "docs/phase8/i386-gcc-offline-build-plan.md",
+    "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "kernel/sgx535_frozen/patches/antix-fixed-ioctl.patch",
+    "kernel/sgx535_frozen/patches/antix-fixed-makefile.patch",
+    "tools/psb-dri-re/__pycache__/test_frozen_kernel_contract.cpython-313.pyc",
+    "tools/psb-dri-re/frozen_kernel_contract.c",
+    "tools/psb-dri-re/test_frozen_kernel_contract.py"
+  ],
+  "added_files_count_git_visible": 258,
+  "allowed_added_outside_evidence": [
+    "docs/phase8/candidate-01-build-and-lifecycle-review.md",
+    "kernel/sgx535_frozen/patches/antix-irq-lifecycle.patch",
+    "tools/psb-dri-re/test_frozen_irq_lifecycle.c",
+    "tools/psb-dri-re/test_frozen_irq_lifecycle.py",
+    "tools/psb-dri-re/test_frozen_kernel_integration.py"
+  ],
+  "unchanged_preexisting": 1529,
+  "removed_preexisting": [],
+  "unrelated_changes_overwritten": false,
+  "prior_attempt_capture_preparation_build_evidence_unchanged": true,
+  "old_rejected_module_sha256": "934bd97164c803e52d96528b9ec464d587a6a68e2f671aa255407657cc5342cf",
+  "original_sha256": "7b42a99d157ad00494c358a7663a2daf438ba9fc9a8f2ca5076d28ddeb6adafb",
+  "fixed_irq_patch_unchanged": true,
+  "preexisting_related_python_cache_refreshed": true,
+  "new_python_caches_removed": true,
+  "target_contact": "NONE",
+  "no_stage_commit_push": true
+}

@@ -1,0 +1,24 @@
+elf,sha256,store_va,word,classification
+references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/dri/psb_dri.so,74ca42991906741ee91be1bc088ae0b142fa71b6a85658c5dad0851ce50dd0d8,0x000262f0,0x07000345,CPU immediate memory store; GPU semantics UNKNOWN
+references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/dri/psb_dri.so,74ca42991906741ee91be1bc088ae0b142fa71b6a85658c5dad0851ce50dd0d8,0x000263e4,0xaf000000,CPU immediate memory store; GPU semantics UNKNOWN
+references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/dri/psb_dri.so,74ca42991906741ee91be1bc088ae0b142fa71b6a85658c5dad0851ce50dd0d8,0x00028fd5,0x07042345,CPU immediate memory store; GPU semantics UNKNOWN
+references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/dri/psb_dri.so,74ca42991906741ee91be1bc088ae0b142fa71b6a85658c5dad0851ce50dd0d8,0x00028fdb,0xaf000000,CPU immediate memory store; GPU semantics UNKNOWN
+references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/dri/psb_dri.so,74ca42991906741ee91be1bc088ae0b142fa71b6a85658c5dad0851ce50dd0d8,0x00029d20,0x07042345,CPU immediate memory store; GPU semantics UNKNOWN
+references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/dri/psb_dri.so,74ca42991906741ee91be1bc088ae0b142fa71b6a85658c5dad0851ce50dd0d8,0x00029d26,0xaf000000,CPU immediate memory store; GPU semantics UNKNOWN
+references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/dri/psb_dri.so,74ca42991906741ee91be1bc088ae0b142fa71b6a85658c5dad0851ce50dd0d8,0x00039693,0xaf000000,CPU immediate memory store; GPU semantics UNKNOWN
+references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/dri/psb_dri.so,74ca42991906741ee91be1bc088ae0b142fa71b6a85658c5dad0851ce50dd0d8,0x00039719,0x070b0345,CPU immediate memory store; GPU semantics UNKNOWN
+references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/dri/psb_dri.so,74ca42991906741ee91be1bc088ae0b142fa71b6a85658c5dad0851ce50dd0d8,0x00039723,0xaf000000,CPU immediate memory store; GPU semantics UNKNOWN
+references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/dri/psb_dri.so,74ca42991906741ee91be1bc088ae0b142fa71b6a85658c5dad0851ce50dd0d8,0x00039bd2,0x07000345,CPU immediate memory store; GPU semantics UNKNOWN
+references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/dri/psb_dri.so,74ca42991906741ee91be1bc088ae0b142fa71b6a85658c5dad0851ce50dd0d8,0x00039bd9,0xaf000000,CPU immediate memory store; GPU semantics UNKNOWN
+references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/dri/psb_dri.so,74ca42991906741ee91be1bc088ae0b142fa71b6a85658c5dad0851ce50dd0d8,0x00039e0c,0x07000345,CPU immediate memory store; GPU semantics UNKNOWN
+references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/dri/psb_dri.so,74ca42991906741ee91be1bc088ae0b142fa71b6a85658c5dad0851ce50dd0d8,0x00039e21,0xaf000000,CPU immediate memory store; GPU semantics UNKNOWN
+references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/dri/psb_dri.so,74ca42991906741ee91be1bc088ae0b142fa71b6a85658c5dad0851ce50dd0d8,0x0003a7e6,0x07042345,CPU immediate memory store; GPU semantics UNKNOWN
+references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/dri/psb_dri.so,74ca42991906741ee91be1bc088ae0b142fa71b6a85658c5dad0851ce50dd0d8,0x0003a7ec,0xaf000000,CPU immediate memory store; GPU semantics UNKNOWN
+references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/dri/psb_dri.so,74ca42991906741ee91be1bc088ae0b142fa71b6a85658c5dad0851ce50dd0d8,0x0003fafa,0xaf000000,CPU immediate memory store; GPU semantics UNKNOWN
+references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/dri/psb_dri.so,74ca42991906741ee91be1bc088ae0b142fa71b6a85658c5dad0851ce50dd0d8,0x000406f3,0xaf000000,CPU immediate memory store; GPU semantics UNKNOWN
+references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/dri/psb_dri.so,74ca42991906741ee91be1bc088ae0b142fa71b6a85658c5dad0851ce50dd0d8,0x0004286a,0xaf000000,CPU immediate memory store; GPU semantics UNKNOWN
+references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/drivers/Xpsb.so,da531587b1ec59fe433fa20ddd2e691b2f8b7fb35bb82525d4db99259c5e571f,0x00008203,0xaf000000,CPU immediate memory store; GPU semantics UNKNOWN
+references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/drivers/Xpsb.so,da531587b1ec59fe433fa20ddd2e691b2f8b7fb35bb82525d4db99259c5e571f,0x00008890,0xaf000000,CPU immediate memory store; GPU semantics UNKNOWN
+references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/drivers/Xpsb.so,da531587b1ec59fe433fa20ddd2e691b2f8b7fb35bb82525d4db99259c5e571f,0x00008953,0x07000345,CPU immediate memory store; GPU semantics UNKNOWN
+references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/drivers/Xpsb.so,da531587b1ec59fe433fa20ddd2e691b2f8b7fb35bb82525d4db99259c5e571f,0x00008a47,0xaf000000,CPU immediate memory store; GPU semantics UNKNOWN
+references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/drivers/Xpsb.so,da531587b1ec59fe433fa20ddd2e691b2f8b7fb35bb82525d4db99259c5e571f,0x00008b48,0xaf000000,CPU immediate memory store; GPU semantics UNKNOWN

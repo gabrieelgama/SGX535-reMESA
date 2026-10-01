@@ -1,0 +1,21 @@
+test_frozen_first_load_procedure (unittest.loader._FailedTest.test_frozen_first_load_procedure) ... ERROR
+
+======================================================================
+ERROR: test_frozen_first_load_procedure (unittest.loader._FailedTest.test_frozen_first_load_procedure)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_frozen_first_load_procedure
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/unittest/loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/lib/python3.13/unittest/loader.py", line 339, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 56
+    a,b=self.records();b['live_stock']['loaded_note_sha256']=self.plan['derivative_note_sha256']
+IndentationError: unexpected indent
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (errors=1)

@@ -1,0 +1,39 @@
+--- /home/gama/sgx535-offline/candidate-01-build-20260930/documentation-before/i386-gcc-offline-build-plan.md	2026-09-30 23:57:05.811413951 +0000
++++ /home/gama/sgx535-gfx/docs/phase8/i386-gcc-offline-build-plan.md	2026-09-30 23:57:05.835413951 +0000
+@@ -1,5 +1,20 @@
+ # Offline i386 GCC compatibility research and build plan
+ 
++**Current offline build/lifecycle continuation:** [qualified candidate results](candidate-01-build-and-lifecycle-review.md)
++close the mechanical patch and module ABI blockers. Candidate #1 and the separate
++IRQ-lifecycle derivative both build through normal external Kbuild, match every
++actual import against the captured target table, and repeat byte-identically.
++The derivative now pairs IRQ release before private/MMIO destruction and masks
++all device routing on actual handler removal, preserving direct-PM behavior.
++**The first hot removal of the active unpatched original remains BLOCKED.**
++The correction cannot change that original's teardown. Gate B remains BLOCKED,
++whitelist `[]`; no target contact or SGX action occurred. The next missing fact
++is the normal first-load boot/initramfs source and original fallback, requiring
++a separately authorized read-only boot-route inventory before a cold-start-only
++alternative can be reviewed. Current verification: 205 tests, zero skips; three
++UBSan harnesses plus lifecycle UBSan PASS; dry-run hash unchanged; `--complete`
++retains its four labels. Neither artifact is authorized for deployment.
++
+ Date: 2026-09-30. **Research/documentation only; commands below are proposed,
+ not executed.** No Mini 12 contact, package installation, candidate rebuild,
+ deployment, module operation or SGX action occurred in this research turn.
+@@ -329,13 +344,13 @@
+ evidence remain unchanged. No candidate compiled or table installed into
+ successor output in that task. No target contact or implementation changes.
+ 
+-**Newest candidate-build continuation:** [candidate #1 source/patch guard](candidate-01-offline-build-qualification.md)
++**Historical preceding candidate-build continuation:** [candidate #1 source/patch guard](candidate-01-offline-build-qualification.md)
+ STOPPED before Kbuild: the Makefile patch requests a nonexistent final blank
+ line; the ioctl patch also fails its strict no-fuzz dry run. IRQ dry run passes.
+ No patch applied or input changed, no table installed and no candidate built.
+ Qualified preparation/toolchain state remains unchanged.
+ 
+-**Current SINGLE SMALLEST NEXT STEP: OFFLINE** — separately correct/review the
++**Historical pre-correction SINGLE SMALLEST NEXT STEP: OFFLINE** — separately correct/review the
+ retained Makefile/ioctl integration patches against the qualified exact source,
+ requiring strict no-fuzz dry-run success. Then resume steps 6–8 and complete
+ candidate qualification with the unchanged captured table. No deployment is authorized. The

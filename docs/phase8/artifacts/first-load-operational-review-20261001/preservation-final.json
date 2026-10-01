@@ -1,0 +1,45 @@
+{
+  "initial_files_verified": 2360,
+  "historical_image_manifest_files_verified": 145,
+  "only_preexisting_changes": "six additive checkpoint notices, original text byte-recoverable",
+  "changes": [
+    {
+      "path": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "before_sha256": "928ad93db673daa5d335ab1215cc185c022f81a7de8f5b207d1c2366c998f5cb",
+      "after_sha256": "19309463c2d82319f85dae025d0408e141da22e64e45eeefee696400723c986b",
+      "classification": "additive checkpoint notice only; original text preserved"
+    },
+    {
+      "path": "docs/phase8/active-gma500-transition-review.md",
+      "before_sha256": "ecd9a2a868adbd44847c45cef35cb49278967f2fe765babf9bff7a437ef59a48",
+      "after_sha256": "e47b752ab8f5954a8137601bd995b41ed4688d8ebbbd19381582abc514edcd77",
+      "classification": "additive checkpoint notice only; original text preserved"
+    },
+    {
+      "path": "docs/phase8/experimental-first-load-image-qualification.md",
+      "before_sha256": "f80f80a084bbfe57751eccd28954424ce6e643869c7a2afd11345b1d34ff0282",
+      "after_sha256": "e881c289524efa8833191577e22749b2e1862ca1af019a46ce2e68377c372da4",
+      "classification": "additive checkpoint notice only; original text preserved"
+    },
+    {
+      "path": "docs/phase8/first-load-boot-qualification.md",
+      "before_sha256": "b1cf2fa39e8fb1bef10d5898eb0e8b6ad7b1035ab868f810290535fa86f8890f",
+      "after_sha256": "6900ef4a603e515468b56e841ef1f9ae6995498e2b3749f209a77c815fbb41ed",
+      "classification": "additive checkpoint notice only; original text preserved"
+    },
+    {
+      "path": "docs/phase8/fixed-one-shot-gate-b-review.md",
+      "before_sha256": "3458c115b2535ba55a4f3b7551c94d4d19c8e619d71686d21b10fbbc16c93568",
+      "after_sha256": "d7e5f7add42a992b54b3b42759c97218d007c1d3d721b7717fe30ed3be771d19",
+      "classification": "additive checkpoint notice only; original text preserved"
+    },
+    {
+      "path": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "before_sha256": "13e0f953f68e28215c49dad9601caca5b4ec0bcaed13f1e1740cb85bfdc064cf",
+      "after_sha256": "422b2fc0fa19a5262610f21c72a6ad34dc753ea43343744f81522f591bc28c4c",
+      "classification": "additive checkpoint notice only; original text preserved"
+    }
+  ],
+  "driver_source_candidates_images_unchanged": true,
+  "target_contact": false
+}

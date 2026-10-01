@@ -1,0 +1,405 @@
+--- target/arch/x86/include/generated/asm/syscalls_32.h
++++ prepared/arch/x86/include/generated/asm/syscalls_32.h
+@@ -427,402 +427,3 @@
+ __SYSCALL_I386(237, sys_fremovexattr)
+ __SYSCALL_I386(238, sys_tkill)
+ __SYSCALL_I386(239, sys_sendfile64)
+-__SYSCALL_I386(240, sys_futex_time32)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(241, sys_sched_setaffinity)
+-#else
+-__SYSCALL_I386(241, compat_sys_sched_setaffinity)
+-#endif
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(242, sys_sched_getaffinity)
+-#else
+-__SYSCALL_I386(242, compat_sys_sched_getaffinity)
+-#endif
+-__SYSCALL_I386(243, sys_set_thread_area)
+-__SYSCALL_I386(244, sys_get_thread_area)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(245, sys_io_setup)
+-#else
+-__SYSCALL_I386(245, compat_sys_io_setup)
+-#endif
+-__SYSCALL_I386(246, sys_io_destroy)
+-__SYSCALL_I386(247, sys_io_getevents_time32)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(248, sys_io_submit)
+-#else
+-__SYSCALL_I386(248, compat_sys_io_submit)
+-#endif
+-__SYSCALL_I386(249, sys_io_cancel)
+-__SYSCALL_I386(250, sys_ia32_fadvise64)
+-__SYSCALL_I386(252, sys_exit_group)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(253, sys_lookup_dcookie)
+-#else
+-__SYSCALL_I386(253, compat_sys_lookup_dcookie)
+-#endif
+-__SYSCALL_I386(254, sys_epoll_create)
+-__SYSCALL_I386(255, sys_epoll_ctl)
+-__SYSCALL_I386(256, sys_epoll_wait)
+-__SYSCALL_I386(257, sys_remap_file_pages)
+-__SYSCALL_I386(258, sys_set_tid_address)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(259, sys_timer_create)
+-#else
+-__SYSCALL_I386(259, compat_sys_timer_create)
+-#endif
+-__SYSCALL_I386(260, sys_timer_settime32)
+-__SYSCALL_I386(261, sys_timer_gettime32)
+-__SYSCALL_I386(262, sys_timer_getoverrun)
+-__SYSCALL_I386(263, sys_timer_delete)
+-__SYSCALL_I386(264, sys_clock_settime32)
+-__SYSCALL_I386(265, sys_clock_gettime32)
+-__SYSCALL_I386(266, sys_clock_getres_time32)
+-__SYSCALL_I386(267, sys_clock_nanosleep_time32)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(268, sys_statfs64)
+-#else
+-__SYSCALL_I386(268, compat_sys_statfs64)
+-#endif
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(269, sys_fstatfs64)
+-#else
+-__SYSCALL_I386(269, compat_sys_fstatfs64)
+-#endif
+-__SYSCALL_I386(270, sys_tgkill)
+-__SYSCALL_I386(271, sys_utimes_time32)
+-__SYSCALL_I386(272, sys_ia32_fadvise64_64)
+-__SYSCALL_I386(274, sys_mbind)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(275, sys_get_mempolicy)
+-#else
+-__SYSCALL_I386(275, compat_sys_get_mempolicy)
+-#endif
+-__SYSCALL_I386(276, sys_set_mempolicy)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(277, sys_mq_open)
+-#else
+-__SYSCALL_I386(277, compat_sys_mq_open)
+-#endif
+-__SYSCALL_I386(278, sys_mq_unlink)
+-__SYSCALL_I386(279, sys_mq_timedsend_time32)
+-__SYSCALL_I386(280, sys_mq_timedreceive_time32)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(281, sys_mq_notify)
+-#else
+-__SYSCALL_I386(281, compat_sys_mq_notify)
+-#endif
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(282, sys_mq_getsetattr)
+-#else
+-__SYSCALL_I386(282, compat_sys_mq_getsetattr)
+-#endif
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(283, sys_kexec_load)
+-#else
+-__SYSCALL_I386(283, compat_sys_kexec_load)
+-#endif
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(284, sys_waitid)
+-#else
+-__SYSCALL_I386(284, compat_sys_waitid)
+-#endif
+-__SYSCALL_I386(286, sys_add_key)
+-__SYSCALL_I386(287, sys_request_key)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(288, sys_keyctl)
+-#else
+-__SYSCALL_I386(288, compat_sys_keyctl)
+-#endif
+-__SYSCALL_I386(289, sys_ioprio_set)
+-__SYSCALL_I386(290, sys_ioprio_get)
+-__SYSCALL_I386(291, sys_inotify_init)
+-__SYSCALL_I386(292, sys_inotify_add_watch)
+-__SYSCALL_I386(293, sys_inotify_rm_watch)
+-__SYSCALL_I386(294, sys_migrate_pages)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(295, sys_openat)
+-#else
+-__SYSCALL_I386(295, compat_sys_openat)
+-#endif
+-__SYSCALL_I386(296, sys_mkdirat)
+-__SYSCALL_I386(297, sys_mknodat)
+-__SYSCALL_I386(298, sys_fchownat)
+-__SYSCALL_I386(299, sys_futimesat_time32)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(300, sys_fstatat64)
+-#else
+-__SYSCALL_I386(300, compat_sys_ia32_fstatat64)
+-#endif
+-__SYSCALL_I386(301, sys_unlinkat)
+-__SYSCALL_I386(302, sys_renameat)
+-__SYSCALL_I386(303, sys_linkat)
+-__SYSCALL_I386(304, sys_symlinkat)
+-__SYSCALL_I386(305, sys_readlinkat)
+-__SYSCALL_I386(306, sys_fchmodat)
+-__SYSCALL_I386(307, sys_faccessat)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(308, sys_pselect6_time32)
+-#else
+-__SYSCALL_I386(308, compat_sys_pselect6_time32)
+-#endif
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(309, sys_ppoll_time32)
+-#else
+-__SYSCALL_I386(309, compat_sys_ppoll_time32)
+-#endif
+-__SYSCALL_I386(310, sys_unshare)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(311, sys_set_robust_list)
+-#else
+-__SYSCALL_I386(311, compat_sys_set_robust_list)
+-#endif
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(312, sys_get_robust_list)
+-#else
+-__SYSCALL_I386(312, compat_sys_get_robust_list)
+-#endif
+-__SYSCALL_I386(313, sys_splice)
+-__SYSCALL_I386(314, sys_ia32_sync_file_range)
+-__SYSCALL_I386(315, sys_tee)
+-__SYSCALL_I386(316, sys_vmsplice)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(317, sys_move_pages)
+-#else
+-__SYSCALL_I386(317, compat_sys_move_pages)
+-#endif
+-__SYSCALL_I386(318, sys_getcpu)
+-__SYSCALL_I386(319, sys_epoll_pwait)
+-__SYSCALL_I386(320, sys_utimensat_time32)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(321, sys_signalfd)
+-#else
+-__SYSCALL_I386(321, compat_sys_signalfd)
+-#endif
+-__SYSCALL_I386(322, sys_timerfd_create)
+-__SYSCALL_I386(323, sys_eventfd)
+-__SYSCALL_I386(324, sys_ia32_fallocate)
+-__SYSCALL_I386(325, sys_timerfd_settime32)
+-__SYSCALL_I386(326, sys_timerfd_gettime32)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(327, sys_signalfd4)
+-#else
+-__SYSCALL_I386(327, compat_sys_signalfd4)
+-#endif
+-__SYSCALL_I386(328, sys_eventfd2)
+-__SYSCALL_I386(329, sys_epoll_create1)
+-__SYSCALL_I386(330, sys_dup3)
+-__SYSCALL_I386(331, sys_pipe2)
+-__SYSCALL_I386(332, sys_inotify_init1)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(333, sys_preadv)
+-#else
+-__SYSCALL_I386(333, compat_sys_preadv)
+-#endif
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(334, sys_pwritev)
+-#else
+-__SYSCALL_I386(334, compat_sys_pwritev)
+-#endif
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(335, sys_rt_tgsigqueueinfo)
+-#else
+-__SYSCALL_I386(335, compat_sys_rt_tgsigqueueinfo)
+-#endif
+-__SYSCALL_I386(336, sys_perf_event_open)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(337, sys_recvmmsg_time32)
+-#else
+-__SYSCALL_I386(337, compat_sys_recvmmsg_time32)
+-#endif
+-__SYSCALL_I386(338, sys_fanotify_init)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(339, sys_fanotify_mark)
+-#else
+-__SYSCALL_I386(339, compat_sys_fanotify_mark)
+-#endif
+-__SYSCALL_I386(340, sys_prlimit64)
+-__SYSCALL_I386(341, sys_name_to_handle_at)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(342, sys_open_by_handle_at)
+-#else
+-__SYSCALL_I386(342, compat_sys_open_by_handle_at)
+-#endif
+-__SYSCALL_I386(343, sys_clock_adjtime32)
+-__SYSCALL_I386(344, sys_syncfs)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(345, sys_sendmmsg)
+-#else
+-__SYSCALL_I386(345, compat_sys_sendmmsg)
+-#endif
+-__SYSCALL_I386(346, sys_setns)
+-__SYSCALL_I386(347, sys_process_vm_readv)
+-__SYSCALL_I386(348, sys_process_vm_writev)
+-__SYSCALL_I386(349, sys_kcmp)
+-__SYSCALL_I386(350, sys_finit_module)
+-__SYSCALL_I386(351, sys_sched_setattr)
+-__SYSCALL_I386(352, sys_sched_getattr)
+-__SYSCALL_I386(353, sys_renameat2)
+-__SYSCALL_I386(354, sys_seccomp)
+-__SYSCALL_I386(355, sys_getrandom)
+-__SYSCALL_I386(356, sys_memfd_create)
+-__SYSCALL_I386(357, sys_bpf)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(358, sys_execveat)
+-#else
+-__SYSCALL_I386(358, compat_sys_execveat)
+-#endif
+-__SYSCALL_I386(359, sys_socket)
+-__SYSCALL_I386(360, sys_socketpair)
+-__SYSCALL_I386(361, sys_bind)
+-__SYSCALL_I386(362, sys_connect)
+-__SYSCALL_I386(363, sys_listen)
+-__SYSCALL_I386(364, sys_accept4)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(365, sys_getsockopt)
+-#else
+-__SYSCALL_I386(365, sys_getsockopt)
+-#endif
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(366, sys_setsockopt)
+-#else
+-__SYSCALL_I386(366, sys_setsockopt)
+-#endif
+-__SYSCALL_I386(367, sys_getsockname)
+-__SYSCALL_I386(368, sys_getpeername)
+-__SYSCALL_I386(369, sys_sendto)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(370, sys_sendmsg)
+-#else
+-__SYSCALL_I386(370, compat_sys_sendmsg)
+-#endif
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(371, sys_recvfrom)
+-#else
+-__SYSCALL_I386(371, compat_sys_recvfrom)
+-#endif
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(372, sys_recvmsg)
+-#else
+-__SYSCALL_I386(372, compat_sys_recvmsg)
+-#endif
+-__SYSCALL_I386(373, sys_shutdown)
+-__SYSCALL_I386(374, sys_userfaultfd)
+-__SYSCALL_I386(375, sys_membarrier)
+-__SYSCALL_I386(376, sys_mlock2)
+-__SYSCALL_I386(377, sys_copy_file_range)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(378, sys_preadv2)
+-#else
+-__SYSCALL_I386(378, compat_sys_preadv2)
+-#endif
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(379, sys_pwritev2)
+-#else
+-__SYSCALL_I386(379, compat_sys_pwritev2)
+-#endif
+-__SYSCALL_I386(380, sys_pkey_mprotect)
+-__SYSCALL_I386(381, sys_pkey_alloc)
+-__SYSCALL_I386(382, sys_pkey_free)
+-__SYSCALL_I386(383, sys_statx)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(384, sys_arch_prctl)
+-#else
+-__SYSCALL_I386(384, compat_sys_arch_prctl)
+-#endif
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(385, sys_io_pgetevents_time32)
+-#else
+-__SYSCALL_I386(385, compat_sys_io_pgetevents)
+-#endif
+-__SYSCALL_I386(386, sys_rseq)
+-__SYSCALL_I386(393, sys_semget)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(394, sys_semctl)
+-#else
+-__SYSCALL_I386(394, compat_sys_semctl)
+-#endif
+-__SYSCALL_I386(395, sys_shmget)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(396, sys_shmctl)
+-#else
+-__SYSCALL_I386(396, compat_sys_shmctl)
+-#endif
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(397, sys_shmat)
+-#else
+-__SYSCALL_I386(397, compat_sys_shmat)
+-#endif
+-__SYSCALL_I386(398, sys_shmdt)
+-__SYSCALL_I386(399, sys_msgget)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(400, sys_msgsnd)
+-#else
+-__SYSCALL_I386(400, compat_sys_msgsnd)
+-#endif
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(401, sys_msgrcv)
+-#else
+-__SYSCALL_I386(401, compat_sys_msgrcv)
+-#endif
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(402, sys_msgctl)
+-#else
+-__SYSCALL_I386(402, compat_sys_msgctl)
+-#endif
+-__SYSCALL_I386(403, sys_clock_gettime)
+-__SYSCALL_I386(404, sys_clock_settime)
+-__SYSCALL_I386(405, sys_clock_adjtime)
+-__SYSCALL_I386(406, sys_clock_getres)
+-__SYSCALL_I386(407, sys_clock_nanosleep)
+-__SYSCALL_I386(408, sys_timer_gettime)
+-__SYSCALL_I386(409, sys_timer_settime)
+-__SYSCALL_I386(410, sys_timerfd_gettime)
+-__SYSCALL_I386(411, sys_timerfd_settime)
+-__SYSCALL_I386(412, sys_utimensat)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(413, sys_pselect6)
+-#else
+-__SYSCALL_I386(413, compat_sys_pselect6_time64)
+-#endif
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(414, sys_ppoll)
+-#else
+-__SYSCALL_I386(414, compat_sys_ppoll_time64)
+-#endif
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(416, sys_io_pgetevents)
+-#else
+-__SYSCALL_I386(416, compat_sys_io_pgetevents_time64)
+-#endif
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(417, sys_recvmmsg)
+-#else
+-__SYSCALL_I386(417, compat_sys_recvmmsg_time64)
+-#endif
+-__SYSCALL_I386(418, sys_mq_timedsend)
+-__SYSCALL_I386(419, sys_mq_timedreceive)
+-__SYSCALL_I386(420, sys_semtimedop)
+-#ifdef CONFIG_X86_32
+-__SYSCALL_I386(421, sys_rt_sigtimedwait)
+-#else
+-__SYSCALL_I386(421, compat_sys_rt_sigtimedwait_time64)
+-#endif
+-__SYSCALL_I386(422, sys_futex)
+-__SYSCALL_I386(423, sys_sched_rr_get_interval)
+-__SYSCALL_I386(424, sys_pidfd_send_signal)
+-__SYSCALL_I386(425, sys_io_uring_setup)
+-__SYSCALL_I386(426, sys_io_uring_enter)
+-__SYSCALL_I386(427, sys_io_uring_register)
+-__SYSCALL_I386(428, sys_open_tree)
+-__SYSCALL_I386(429, sys_move_mount)
+-__SYSCALL_I386(430, sys_fsopen)
+-__SYSCALL_I386(431, sys_fsconfig)
+-__SYSCALL_I386(432, sys_fsmount)
+-__SYSCALL_I386(433, sys_fspick)
+-__SYSCALL_I386(434, sys_pidfd_open)
+-__SYSCALL_I386(435, sys_clone3)
+-__SYSCALL_I386(436, sys_close_range)
+-__SYSCALL_I386(437, sys_openat2)
+-__SYSCALL_I386(438, sys_pidfd_getfd)
+-__SYSCALL_I386(439, sys_faccessat2)
+-__SYSCALL_I386(440, sys_process_madvise)

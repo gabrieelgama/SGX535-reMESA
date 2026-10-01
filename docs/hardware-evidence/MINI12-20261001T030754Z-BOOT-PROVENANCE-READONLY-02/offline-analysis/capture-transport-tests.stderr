@@ -1,0 +1,12 @@
+test_different_dmi_bytes_are_rejected (test_mini12_readonly_capture.ReadonlyCaptureIdentityTests.test_different_dmi_bytes_are_rejected) ... ok
+test_exact_retained_identity_is_accepted (test_mini12_readonly_capture.ReadonlyCaptureIdentityTests.test_exact_retained_identity_is_accepted) ... ok
+test_unqualified_taint_bits_are_rejected (test_mini12_readonly_capture.ReadonlyCaptureIdentityTests.test_unqualified_taint_bits_are_rejected) ... ok
+test_wrong_kernel_or_arch_is_rejected (test_mini12_readonly_capture.ReadonlyCaptureIdentityTests.test_wrong_kernel_or_arch_is_rejected) ... ok
+test_credential_and_script_use_separate_ssh_processes (test_mini12_sudo_transport.SudoTransportTests.test_credential_and_script_use_separate_ssh_processes) ... ok
+test_credential_newline_is_rejected_before_remote_call (test_mini12_sudo_transport.SudoTransportTests.test_credential_newline_is_rejected_before_remote_call) ... ok
+test_failed_auth_does_not_start_script (test_mini12_sudo_transport.SudoTransportTests.test_failed_auth_does_not_start_script) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.708s
+
+OK

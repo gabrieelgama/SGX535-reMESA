@@ -1,0 +1,35 @@
+[
+  {
+    "argv": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01",
+      "-p",
+      "test_captured_preflight.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "cwd": "/home/gama/sgx535-gfx"
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "cwd": "/home/gama/sgx535-gfx"
+  },
+  {
+    "argv": [
+      "git",
+      "status",
+      "--short"
+    ],
+    "exit_code": 0,
+    "cwd": "/home/gama/sgx535-gfx"
+  }
+]

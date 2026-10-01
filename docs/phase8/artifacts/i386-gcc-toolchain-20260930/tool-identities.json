@@ -1,0 +1,200 @@
+[
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+      "-dumpmachine"
+    ],
+    "exit": 0,
+    "stdout": "i686-linux-gnu\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+      "-dumpfullversion"
+    ],
+    "exit": 0,
+    "stdout": "14.2.0\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+      "-v"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "Using built-in specs.\nCOLLECT_GCC=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14\nCOLLECT_LTO_WRAPPER=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../libexec/gcc-cross/i686-linux-gnu/14/lto-wrapper\nTarget: i686-linux-gnu\nConfigured with: ../src/configure -v --with-pkgversion='Debian 14.2.0-19' --with-bugurl=file:///usr/share/doc/gcc-14/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-14 --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --without-target-system-zlib --enable-targets=all --enable-multiarch --disable-werror --with-arch-32=i686 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=i686-linux-gnu --program-prefix=i686-linux-gnu- --includedir=/usr/i686-linux-gnu/include --with-build-config=bootstrap-lto-lean --enable-link-serialization=4\nThread model: posix\nSupported LTO compression algorithms: zlib zstd\ngcc version 14.2.0 (Debian 14.2.0-19) \n"
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+      "-print-search-dirs"
+    ],
+    "exit": 0,
+    "stdout": "install: /home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/\nprograms: =/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../libexec/gcc-cross/i686-linux-gnu/14/:/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../libexec/gcc-cross/i386-linux-gnu/:/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../libexec/gcc-cross/:/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/../../../../i686-linux-gnu/bin/i686-linux-gnu/14/:/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/../../../../i686-linux-gnu/bin/i386-linux-gnu/:/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/../../../../i686-linux-gnu/bin/\nlibraries: =/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/:/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i386-linux-gnu/:/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/:/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/../../../../i686-linux-gnu/lib/i686-linux-gnu/14/:/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/../../../../i686-linux-gnu/lib/i386-linux-gnu/:/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/../../../../i686-linux-gnu/lib/../lib/:/lib/i686-linux-gnu/14/:/lib/i386-linux-gnu/:/lib/../lib/:/usr/lib/i686-linux-gnu/14/:/usr/lib/i386-linux-gnu/:/usr/lib/../lib/:/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/../../../../i686-linux-gnu/lib/:/lib/:/usr/lib/\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+      "-print-sysroot"
+    ],
+    "exit": 0,
+    "stdout": "/\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+      "-print-prog-name=cc1"
+    ],
+    "exit": 0,
+    "stdout": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../libexec/gcc-cross/i686-linux-gnu/14/cc1\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+      "-print-prog-name=as"
+    ],
+    "exit": 0,
+    "stdout": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/../../../../i686-linux-gnu/bin/as\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+      "-print-prog-name=ld"
+    ],
+    "exit": 0,
+    "stdout": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/../../../../i686-linux-gnu/bin/ld\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+      "-print-file-name=libgcc.a"
+    ],
+    "exit": 0,
+    "stdout": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/libgcc.a\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-as",
+      "--version"
+    ],
+    "exit": 0,
+    "stdout": "GNU assembler (GNU Binutils for Debian) 2.44\nCopyright (C) 2025 Free Software Foundation, Inc.\nThis program is free software; you may redistribute it under the terms of\nthe GNU General Public License version 3 or later.\nThis program has absolutely no warranty.\nThis assembler was configured for a target of `i686-linux-gnu'.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-ld.bfd",
+      "--version"
+    ],
+    "exit": 0,
+    "stdout": "GNU ld (GNU Binutils for Debian) 2.44\nCopyright (C) 2025 Free Software Foundation, Inc.\nThis program is free software; you may redistribute it under the terms of\nthe GNU General Public License version 3 or (at your option) a later version.\nThis program has absolutely no warranty.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-ar",
+      "--version"
+    ],
+    "exit": 0,
+    "stdout": "GNU ar (GNU Binutils for Debian) 2.44\nCopyright (C) 2025 Free Software Foundation, Inc.\nThis program is free software; you may redistribute it under the terms of\nthe GNU General Public License version 3 or (at your option) any later version.\nThis program has absolutely no warranty.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-nm",
+      "--version"
+    ],
+    "exit": 0,
+    "stdout": "GNU nm (GNU Binutils for Debian) 2.44\nCopyright (C) 2025 Free Software Foundation, Inc.\nThis program is free software; you may redistribute it under the terms of\nthe GNU General Public License version 3 or (at your option) any later version.\nThis program has absolutely no warranty.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-objcopy",
+      "--version"
+    ],
+    "exit": 0,
+    "stdout": "GNU objcopy (GNU Binutils for Debian) 2.44\nCopyright (C) 2025 Free Software Foundation, Inc.\nThis program is free software; you may redistribute it under the terms of\nthe GNU General Public License version 3 or (at your option) any later version.\nThis program has absolutely no warranty.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-readelf",
+      "--version"
+    ],
+    "exit": 0,
+    "stdout": "GNU readelf (GNU Binutils for Debian) 2.44\nCopyright (C) 2025 Free Software Foundation, Inc.\nThis program is free software; you may redistribute it under the terms of\nthe GNU General Public License version 3 or (at your option) any later version.\nThis program has absolutely no warranty.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-ld.bfd",
+      "-V"
+    ],
+    "exit": 0,
+    "stdout": "GNU ld (GNU Binutils for Debian) 2.44\n  Supported emulations:\n   elf_i386\n   elf_iamcu\n   elf_x86_64\n   elf32_x86_64\n   i386pep\n   i386pe\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/usr/bin/gcc-14",
+      "-dumpmachine"
+    ],
+    "exit": 0,
+    "stdout": "aarch64-linux-gnu\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/usr/bin/gcc-14",
+      "-v"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "Using built-in specs.\nCOLLECT_GCC=/usr/bin/gcc-14\nCOLLECT_LTO_WRAPPER=/usr/libexec/gcc/aarch64-linux-gnu/14/lto-wrapper\nOFFLOAD_TARGET_NAMES=nvptx-none\nOFFLOAD_TARGET_DEFAULT=1\nTarget: aarch64-linux-gnu\nConfigured with: ../src/configure -v --with-pkgversion='Debian 14.2.0-19' --with-bugurl=file:///usr/share/doc/gcc-14/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2,rust --prefix=/usr --with-gcc-major-version-only --program-suffix=-14 --program-prefix=aarch64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-offload-targets=nvptx-none=/build/reproducible-path/gcc-14-14.2.0/debian/tmp-nvptx/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=aarch64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2\nThread model: posix\nSupported LTO compression algorithms: zlib zstd\ngcc version 14.2.0 (Debian 14.2.0-19) \n"
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/bison",
+      "--version"
+    ],
+    "exit": 0,
+    "stdout": "bison (GNU Bison) 3.8.2\nWritten by Robert Corbett and Richard Stallman.\n\nCopyright (C) 2021 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/flex",
+      "--version"
+    ],
+    "exit": 0,
+    "stdout": "flex 2.6.4\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/bc",
+      "--version"
+    ],
+    "exit": 0,
+    "stdout": "bc 1.07.1\nCopyright 1991-1994, 1997, 1998, 2000, 2004, 2006, 2008, 2012-2017 Free Software Foundation, Inc.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/m4",
+      "--version"
+    ],
+    "exit": 0,
+    "stdout": "m4 (GNU M4) 1.4.19\nCopyright (C) 2021 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n\nWritten by Rene' Seindal.\n",
+    "stderr": ""
+  }
+]

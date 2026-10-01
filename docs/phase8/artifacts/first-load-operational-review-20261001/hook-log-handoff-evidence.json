@@ -1,0 +1,51 @@
+{
+  "run_init_records": [
+    {
+      "name": "scripts/init-bottom/ORDER",
+      "fields": [
+        666442,
+        33188,
+        0,
+        0,
+        1,
+        1789790142,
+        77,
+        8,
+        1,
+        0,
+        0,
+        26,
+        0
+      ],
+      "bytes": 77,
+      "sha256": "0bbd4b986672e719d7f21f02c8cc25bf6c09c4756088a1b115ebb80b3a64cde1"
+    },
+    {
+      "name": "usr/sbin/run-init",
+      "fields": [
+        666426,
+        33261,
+        0,
+        0,
+        269,
+        1772986658,
+        0,
+        8,
+        1,
+        0,
+        0,
+        18,
+        0
+      ],
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "stock_init_only_moves": [
+    "/sys",
+    "/proc"
+  ],
+  "stock_init_bottom_order": "udev only; udev moves /dev",
+  "log_post_pivot_availability": "UNKNOWN; must not assume /run log survives",
+  "no_image_modification": true
+}

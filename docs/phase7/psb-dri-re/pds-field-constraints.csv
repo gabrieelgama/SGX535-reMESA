@@ -1,0 +1,6 @@
+test,inputs,computed_word,retained_word,result,classification
+A2,DS1 index 1,0x070418a2,0x070418a2,CPU formula cross-check,CONFIRMED
+64,DS0 index 2; DS1 index 2,0x07042364,0x07042364,CPU formula cross-check,CONFIRMED
+45 hypothesis,indices 0;0,0x07000345,0x07000345,fits,INFERRED
+45 hypothesis,indices 2;2,0x07042345,0x07042345,fits,INFERRED
+45 hypothesis,indices 0..31,,0x070b0345,no matching pair,REJECTED-AS-COMPLETE

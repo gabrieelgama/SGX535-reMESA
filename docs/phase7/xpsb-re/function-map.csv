@@ -3,6 +3,7 @@ elf_va,original_symbol,semantic_role,evidence_class,evidence
 0x00002f10,XpsbTakeDown,X-server module teardown; XHW init-index takedown and BO cleanup,CONFIRMED,ELF disassembly and Ghidra decomp
 0x000030f0,XpsbThread,waits on direct PSB index 2 and dispatches shared BO operations,CONFIRMED,ELF disassembly and Ghidra decomp
 0x00003820,Xpsb_sgx_initialize,stores to register-mapping-derived addresses,CONFIRMED,ELF disassembly and Ghidra decomp; safe hardware semantics UNKNOWN
+0x00007eb0,Xpsb_emit_pixel_event_program,"emits a distinct 0x80-byte pixel-event block with PDS-shaped literal words 0x07000363 and 0x07070365",CONFIRMED,"ELF/Ghidra static decompilation; different data prefix and purpose from Xpsb_emit_pixel_shader; no read-set inference"
 0x00004af0,Xpsb_set_vopt,reads relative offset 0x14 then selects option fields,CONFIRMED,ELF disassembly and Ghidra decomp; physical revision mapping UNKNOWN
 0x000051c0,Xpsb3DContextInit,allocates shader/geometry/render-register BOs,CONFIRMED,ELF disassembly and Ghidra decomp
 0x00009cd0,XpsbFlush2D,validates BO list and prepares 2D command/fence path,CONFIRMED,ELF disassembly and Ghidra decomp
@@ -15,5 +16,7 @@ elf_va,original_symbol,semantic_role,evidence_class,evidence
 0x00005ee0,psb3DPrepareComposite,builds BO-backed composite state; calls XpsbCompositeShader then Xpsb_emit_pixel_shader,CONFIRMED,Ghidra decomp; calls at 0x5ee0 body
 0x00005c40,psb3DCompositeFinish,unmaps composite BO and calls XpsbFlush3D,CONFIRMED,Ghidra decomp of ELF 0x5c40
 0x00006430,psb3DCompositeQuad,adds quad; conditionally finalizes and prepares composite state,CONFIRMED,Ghidra decomp of ELF 0x6430
-0x000082c0,Xpsb_emit_pixel_shader,BO-backed pixel-shader state and USE relocation emission,CONFIRMED,Ghidra decomp of ELF 0x82c0; calls Xpsb_emit_use_relocation
+0x000082c0,Xpsb_emit_pixel_shader,BO-backed pixel-shader state and USE relocation emission; zero-texture branch stores 0x07000345 at ELF 0x8953,CONFIRMED,Ghidra decomp of ELF 0x82c0; calls Xpsb_emit_use_relocation; P7H-017 is CPU emission only
 0x0000a660,XpsbCompositeShader,selects 8 source bytes via 14-entry table and forms a 16-byte output record,CONFIRMED,Ghidra decomp and disassembly at ELF 0xa660-0xa7b2
+0x00007470,Xpsb_pds_get_num_constants,two-store PDS constant dword-extent arithmetic; not an instruction decoder,CONFIRMED,P7H-015; retained Xpsb.so ELF 0x7470; selected DRI read set remains UNKNOWN
+0x00004030,FUN_00014030,scene switch helper; selected raster flags15 and cookie14=0 bypass OOM/cookie15,CONFIRMED,P7H-046; llvm-objdump4030-4550; static branch only

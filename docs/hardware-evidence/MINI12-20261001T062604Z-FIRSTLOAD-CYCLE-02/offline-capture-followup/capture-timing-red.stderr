@@ -1,0 +1,63 @@
+test_cached_sudo_preserves_prefix_and_root_capture (test_frozen_first_load_capture.CaptureTransportTests.test_cached_sudo_preserves_prefix_and_root_capture) ... ERROR
+test_changed_boot_and_late_completion_refused (test_frozen_first_load_capture.CaptureTransportTests.test_changed_boot_and_late_completion_refused) ... 
+  test_changed_boot_and_late_completion_refused (test_frozen_first_load_capture.CaptureTransportTests.test_changed_boot_and_late_completion_refused) (kw={'bootids': ('boot-id-1', 'boot-id-2')}) ... FAIL
+  test_changed_boot_and_late_completion_refused (test_frozen_first_load_capture.CaptureTransportTests.test_changed_boot_and_late_completion_refused) (kw={'uptimes': (90.0, 121.0)}) ... FAIL
+  test_changed_boot_and_late_completion_refused (test_frozen_first_load_capture.CaptureTransportTests.test_changed_boot_and_late_completion_refused) (kw={'uptimes': (90.0, 89.0)}) ... FAIL
+test_child_argv_is_noninteractive_python_not_shell (test_frozen_first_load_capture.CaptureTransportTests.test_child_argv_is_noninteractive_python_not_shell) ... ok
+test_expired_kernel_clock_refused_before_privilege (test_frozen_first_load_capture.CaptureTransportTests.test_expired_kernel_clock_refused_before_privilege) ... FAIL
+test_explicit_ready_record_and_remaining_deadline (test_frozen_first_load_capture.CaptureTransportTests.test_explicit_ready_record_and_remaining_deadline) ... ok
+test_invalid_root_capture_refused_offline (test_frozen_first_load_capture.CaptureTransportTests.test_invalid_root_capture_refused_offline) ... ok
+test_missing_public_boot_id_stops_before_privilege (test_frozen_first_load_capture.CaptureTransportTests.test_missing_public_boot_id_stops_before_privilege) ... ok
+test_ready_userspace_without_sudo_witness_refused (test_frozen_first_load_capture.CaptureTransportTests.test_ready_userspace_without_sudo_witness_refused) ... ok
+test_root_script_is_an_argument_never_stdin (test_frozen_first_load_capture.CaptureTransportTests.test_root_script_is_an_argument_never_stdin) ... ok
+test_uncached_sudo_preserves_boot_id_without_shell_input (test_frozen_first_load_capture.CaptureTransportTests.test_uncached_sudo_preserves_boot_id_without_shell_input) ... ok
+
+======================================================================
+ERROR: test_cached_sudo_preserves_prefix_and_root_capture (test_frozen_first_load_capture.CaptureTransportTests.test_cached_sudo_preserves_prefix_and_root_capture)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture.py", line 16, in test_cached_sudo_preserves_prefix_and_root_capture
+    self.assertEqual(status,0);self.assertFalse(err);self.assertEqual(json.loads(out.splitlines()[0])['boot_id'],'boot-id-1');self.assertIn('{"root":true}',out);self.assertEqual(json.loads(out.splitlines()[-1])['uptime_end'],95.0)
+                                                                                                                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'uptime_end'
+
+======================================================================
+FAIL: test_changed_boot_and_late_completion_refused (test_frozen_first_load_capture.CaptureTransportTests.test_changed_boot_and_late_completion_refused) (kw={'bootids': ('boot-id-1', 'boot-id-2')})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture.py", line 32, in test_changed_boot_and_late_completion_refused
+    out,err,status,run=self.execute(subprocess.CompletedProcess([],0,'',''),**kw);self.assertEqual(status,1)
+                                                                                  ~~~~~~~~~~~~~~~~^^^^^^^^^^
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_changed_boot_and_late_completion_refused (test_frozen_first_load_capture.CaptureTransportTests.test_changed_boot_and_late_completion_refused) (kw={'uptimes': (90.0, 121.0)})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture.py", line 32, in test_changed_boot_and_late_completion_refused
+    out,err,status,run=self.execute(subprocess.CompletedProcess([],0,'',''),**kw);self.assertEqual(status,1)
+                                                                                  ~~~~~~~~~~~~~~~~^^^^^^^^^^
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_changed_boot_and_late_completion_refused (test_frozen_first_load_capture.CaptureTransportTests.test_changed_boot_and_late_completion_refused) (kw={'uptimes': (90.0, 89.0)})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture.py", line 32, in test_changed_boot_and_late_completion_refused
+    out,err,status,run=self.execute(subprocess.CompletedProcess([],0,'',''),**kw);self.assertEqual(status,1)
+                                                                                  ~~~~~~~~~~~~~~~~^^^^^^^^^^
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_expired_kernel_clock_refused_before_privilege (test_frozen_first_load_capture.CaptureTransportTests.test_expired_kernel_clock_refused_before_privilege)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture.py", line 28, in test_expired_kernel_clock_refused_before_privilege
+    self.assertEqual(status,1);run.assert_not_called();self.assertIn('STOP',out)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^
+AssertionError: 0 != 1
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.014s
+
+FAILED (failures=4, errors=1)

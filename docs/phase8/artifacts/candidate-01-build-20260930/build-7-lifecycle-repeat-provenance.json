@@ -1,0 +1,29 @@
+{
+  "build": "build-7-lifecycle-repeat",
+  "config_generated_state_unchanged": 7426,
+  "new_config_generated_files": {},
+  "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+  "native_host_helpers": [
+    {
+      "path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/scripts/mod/modpost",
+      "sha256": "ff22db3950db7979e9c1619cd15d8bc2285c116e38c5d8950edaaa9926453ff4",
+      "elf": "ELF64 AArch64"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/scripts/basic/fixdep",
+      "sha256": "a78e9396361c6af9b1cee9a904f12363c7e99cd292c3e72fd09fd421351afd8f",
+      "elf": "ELF64 AArch64"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/scripts/genksyms/genksyms",
+      "sha256": "f7542be069c86b5f000a63dd669aae16e1b386e1d5a1e64512f15e4617c943a1",
+      "elf": "ELF64 AArch64"
+    }
+  ],
+  "target_gcc_m32_i486": true,
+  "target_gnu_bfd_elf_i386": true,
+  "modpost_external_e_i_target_table": true,
+  "old_vmlinux_table_not_consumed": true,
+  "no_build_warnings": true,
+  "integrated_source_files_match": 86
+}

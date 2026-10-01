@@ -1,0 +1,59 @@
+{
+  "files": [
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/decoded-files/release_initrd",
+      "bytes": 50863580,
+      "sha256": "f02cde6c7e712fa0620f99438ef5dc81c131b481a84dc9dbc4f7b854c364e341"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/decoded-files/_boot_grub_grub_cfg",
+      "bytes": 10438,
+      "sha256": "396ac7dff0bdea48393fd0a25a5fc633d40e2368caf14872b855eba03e96089f"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/decoded-files/_boot_grub_grubenv",
+      "bytes": 1024,
+      "sha256": "72c291233d508c8ed06305f0bf9d33130ea206bfaf67873dbe77413f77d19927"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build_Module_symvers",
+      "bytes": 1634895,
+      "sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/boot-config",
+      "bytes": 244485,
+      "sha256": "93f4d7a779f4be65097b5f26db6c9b10431907c6d417109719eb2f16d6def3d9"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build__config",
+      "bytes": 244485,
+      "sha256": "93f4d7a779f4be65097b5f26db6c9b10431907c6d417109719eb2f16d6def3d9"
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/candidate-02-lifecycle/gma500_gfx.ko",
+      "bytes": 242724,
+      "sha256": "91a6040e743d9c6222cb1307067db6e29fe92558576716a33d9fe0f4f5a87d74"
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/candidate-01/gma500_gfx.ko",
+      "bytes": 242364,
+      "sha256": "13591674ef9fa82f185f075185d1fa09d94606ccce7253ed231627f2649c600f"
+    },
+    {
+      "path": "tools/psb-dri-re/frozen_first_load_image.py",
+      "bytes": 15045,
+      "sha256": "ce6093770b0e39311de92959f6997eabb72b545191ac90e84f6cb6522bac8cc8"
+    },
+    {
+      "path": "kernel/sgx535_frozen/first_load/preload.sh.in",
+      "bytes": 4183,
+      "sha256": "27e6a3985de7de4d8155dfadef8eb714a0deedeffe77004d9720afc924432c79"
+    }
+  ],
+  "kernel_image_hash_only": "cda6e6c7f61cae83793c974f745af888211bb3543d411283b9bcf79ce5304438",
+  "kernel_image_source": "capture02 transcript KERNEL_IMAGE_METADATA; binary was not captured",
+  "framework": "captured initramfs-tools0.148.3 /init retained except one guarded insertion",
+  "stock_members": 2138,
+  "target_contact": false
+}

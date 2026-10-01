@@ -1,0 +1,45 @@
+{
+  "classification": "PASS",
+  "output_files": {
+    "target.o": {
+      "sha256": "34a9264246a21afbebd906de9cd1f2ee824973e6fb048142dd5f503307c1d916",
+      "ELF_class": 32,
+      "endianness": "little",
+      "e_machine": 3
+    },
+    "target-linked.o": {
+      "sha256": "4923bbd6ccbc926dba132cf6a961615dd9905d0fdd2f157f06751b62162c8de2",
+      "ELF_class": 32,
+      "endianness": "little",
+      "e_machine": 3
+    },
+    "libc-probe": {
+      "sha256": "b4e6cc36f9adb0ea5fa41e79fdb384808cfaecb0b4f9f5a69d92fc3df5f3172b",
+      "ELF_class": 32,
+      "endianness": "little",
+      "e_machine": 3
+    },
+    "native-helper": {
+      "sha256": "c63ee90eaf04a28806d5a5f87188efab39e4f5b8aac713ac9b5be3baf684be94",
+      "ELF_class": 64,
+      "endianness": "little",
+      "e_machine": 183
+    },
+    "fixdep": {
+      "sha256": "a78e9396361c6af9b1cee9a904f12363c7e99cd292c3e72fd09fd421351afd8f",
+      "ELF_class": 64,
+      "endianness": "little",
+      "e_machine": 183
+    }
+  },
+  "fixdep_source_sha256": "b7138f39b82855a5014b25b0ab0d0291cc0196f32097082649f8207519c2273b",
+  "target_CC": [
+    "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+    "--sysroot=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root"
+  ],
+  "HOSTCC": "/usr/bin/gcc-14",
+  "cross_prefix": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-",
+  "target_execution": "NONE",
+  "kernel_preparation": "NOT PERFORMED",
+  "initial_extra_warning_flags_failure": "retained; corrected smoke to historical host flags"
+}

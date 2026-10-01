@@ -1,0 +1,32 @@
+[
+  {
+    "path": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01",
+    "records": 77,
+    "result": "PASS IMMUTABLE"
+  },
+  {
+    "path": "docs/phase8/artifacts/experimental-first-load-01-20261001",
+    "records": 145,
+    "result": "PASS IMMUTABLE"
+  },
+  {
+    "path": "docs/phase8/artifacts/first-load-operational-review-20261001",
+    "records": 151,
+    "result": "PASS IMMUTABLE"
+  },
+  {
+    "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/build-03/initrd.img-sgx535-firstload-01",
+    "sha256": "4ac6bd1bed7dbf53b3653037f3e6e757160672560176b1938a63488636efaa71",
+    "result": "PASS"
+  },
+  {
+    "path": "docs/phase8/artifacts/candidate-01-build-20260930/candidate-01/gma500_gfx.ko",
+    "sha256": "13591674ef9fa82f185f075185d1fa09d94606ccce7253ed231627f2649c600f",
+    "result": "PASS"
+  },
+  {
+    "path": "docs/phase8/artifacts/candidate-01-build-20260930/candidate-02-lifecycle/gma500_gfx.ko",
+    "sha256": "91a6040e743d9c6222cb1307067db6e29fe92558576716a33d9fe0f4f5a87d74",
+    "result": "PASS"
+  }
+]

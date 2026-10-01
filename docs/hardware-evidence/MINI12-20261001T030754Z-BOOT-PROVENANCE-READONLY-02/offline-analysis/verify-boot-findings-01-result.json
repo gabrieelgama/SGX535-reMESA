@@ -1,0 +1,5 @@
+{
+  "exit_code": 1,
+  "failure": "FileNotFoundError: local verification used underscored initramfs_tools instead of actual hyphenated artifact label; no evidence/input mutation",
+  "correction": "Resolve file label from exact target_source in hash-verified capture manifest"
+}

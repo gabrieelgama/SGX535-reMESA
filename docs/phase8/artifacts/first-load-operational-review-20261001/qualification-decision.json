@@ -1,0 +1,23 @@
+{
+  "experimental_image": "PASS OFFLINE; unchanged",
+  "staging_procedure": "PASS OFFLINE DESIGN",
+  "manual_boot_procedure": "PASS OFFLINE DESIGN",
+  "first_owner_observation_plan": "PASS OFFLINE",
+  "reset_to_stock_procedure": "PASS OFFLINE DESIGN",
+  "live_first_load": "UNKNOWN",
+  "live_display_ssh": "UNKNOWN",
+  "hook_log_post_pivot_delivery": "UNKNOWN",
+  "live_recovery": "UNKNOWN",
+  "practical_physical_menu_controls": "UNKNOWN; mandatory before experimental selection",
+  "first_load_boot_procedure": "READY TO REQUEST SEPARATE LIVE AUTHORIZATION; not executable until fresh prerequisites",
+  "sgx_execution_authorized": false,
+  "gate_b": "BLOCKED",
+  "whitelist": [],
+  "target_contact": false,
+  "target_mutation": false,
+  "staging": false,
+  "reboot": false,
+  "module_insertion_unload": false,
+  "sgx_fire": false,
+  "first_triangle": "NOT ATTEMPTED"
+}

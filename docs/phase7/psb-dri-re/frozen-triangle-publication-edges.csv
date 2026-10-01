@@ -1,0 +1,11 @@
+step,kind,scope,primitive,postcondition,evidence
+allocate_map,BACKING,user and kernel payloads,selected nonfixed TTM same backing; mapped protections,CONDITIONAL_PROVIDER,P7H-047
+initialize_cpu_payloads,CPU_DATA,all six user BOs; service/kernel producers separate,full zero then exact fields; no historical stale replacement claim,CPU_CONFIRMED,P7H-036;P7H-045;P7H-047
+validate_bind,PLACEMENT,six user validations; separate scene/TA validation,reject errors; validated addresses; same TTM route,CPU_CONFIRMED,psb_sgx.c1283;psb_scene.c;P7H-047
+relocate_validated_backing,CPU_DATA,49 wire writes,psb_fixup_relocs AFTER validation; reject errors,CPU_CONFIRMED,psb_sgx.c1289;P7H-047
+scene_ta_ready_join,BOOTSTRAP_JOIN,kernel scene and TA backing; B4 sub-sequence,scene validation after user relocation; require service-generated table readiness; not a CPU zeroed-table claim,B4_UNKNOWN,psb_sgx.c1394;psb_scene.c257-265;P7H-052
+finish_last_cpu_write,ORDER,payload relocations plus scene/table producers,no later write without renewed publication,CLEANROOM_POLICY,P7H-054
+cpu_memory_publication,CPU_VISIBILITY,UC/WC payloads; cached scene handled separately,mapping protection and required store/cache completion; wmb is not GPU cache invalidation,CONDITIONAL_PROVIDER,drm_vm.c;psb_sgx.c487-503;P7H-051
+translation_publication,TRANSLATION,bound pages/PTEs,PTE clflush; BIF invalidate/flush; readback; not payload flush,CPU_SEQUENCE_CONFIRMED,psb_mmu.c140-180;P7H-051
+device_invalidation_complete,GPU_VISIBILITY,selected TA and raster first consumers,three Xpsb phases; REQUIRE both polls each; abort failure,ARCHITECTURAL_POSTCONDITION_UNKNOWN,Xpsb0x4e10/0x4f10/0x5040;P7H-051;P7H-054
+first_consumer,ORDER,TA then selected raster service,no kick until publication AND bootstrap obligations closed,CLEANROOM_POLICY,P7H-054

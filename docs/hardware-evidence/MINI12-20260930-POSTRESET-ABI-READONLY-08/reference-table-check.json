@@ -1,0 +1,16 @@
+{
+  "classification": "PASS",
+  "scope": "REFERENCE_IMPORTS_ONLY",
+  "candidate_imports_verified": false,
+  "reference_sha256": "7b42a99d157ad00494c358a7663a2daf438ba9fc9a8f2ca5076d28ddeb6adafb",
+  "build_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+  "reference_import_count": 222,
+  "build_table_symbol_count": 23920,
+  "mismatched_count": 0,
+  "mismatches": {},
+  "missing_imports": [],
+  "module_layout": {
+    "reference": "0xb84efb99",
+    "build_table": "0xb84efb99"
+  }
+}

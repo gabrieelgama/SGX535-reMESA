@@ -1,0 +1,19 @@
+boot_id=8ae37532-19d4-4ec7-9c29-a791acfd889f
+kernel_release=5.10.240-antix.1-486-smp
+uid=1000
+PID1
+    1     0 runit           runit
+DISPLAY_PROCESSES
+ 1380  1325 runsv           runsv slimski
+ 1398  1380 slimski         /usr/bin/slimski
+ 1793  1398 Xorg            /usr/lib/xorg/Xorg -nolisten tcp -auth /var/run/slimski.auth
+SERVICE_LINK
+lrwxrwxrwx 1 root root 19 Oct  9  2025 /etc/runit/runsvdir/default/slimski -> ../../../sv/slimski
+/etc/sv/slimski
+SUPERVISE_METADATA
+drwx------ 2 root root 4096 Sep 30 15:38 /etc/runit/runsvdir/default/slimski/supervise
+ABSENT /etc/runit/runsvdir/default/slimski/supervise/status
+SV_STATUS_BEGIN
+warning: /etc/runit/runsvdir/default/slimski: unable to open supervise/ok: access denied
+SV_STATUS_END exit=1
+SERVICE_DIAGNOSTIC_DONE

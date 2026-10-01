@@ -1,0 +1,219 @@
+test_actual_bug_case_variants_still_reject (test_frozen_kernel_health.KernelHealthTests.test_actual_bug_case_variants_still_reject) ... ok
+test_changed_or_repeated_baseline_diagnostics_reject (test_frozen_kernel_health.KernelHealthTests.test_changed_or_repeated_baseline_diagnostics_reject) ... ok
+test_debug_suffix_is_not_kernel_bug (test_frozen_kernel_health.KernelHealthTests.test_debug_suffix_is_not_kernel_bug) ... ERROR
+test_empty_capture_does_not_pass (test_frozen_kernel_health.KernelHealthTests.test_empty_capture_does_not_pass) ... ok
+test_exact_retained_stock_baseline_passes (test_frozen_kernel_health.KernelHealthTests.test_exact_retained_stock_baseline_passes) ... ERROR
+test_genuine_oops_panic_fault_trace_controls_reject (test_frozen_kernel_health.KernelHealthTests.test_genuine_oops_panic_fault_trace_controls_reject) ... 
+  test_genuine_oops_panic_fault_trace_controls_reject (test_frozen_kernel_health.KernelHealthTests.test_genuine_oops_panic_fault_trace_controls_reject) (marker='general protection: 0000') ... FAIL
+  test_genuine_oops_panic_fault_trace_controls_reject (test_frozen_kernel_health.KernelHealthTests.test_genuine_oops_panic_fault_trace_controls_reject) (marker='kernel BUG at drivers/gpu/test.c:1!') ... FAIL
+test_lockup_and_hung_task_controls_reject (test_frozen_kernel_health.KernelHealthTests.test_lockup_and_hung_task_controls_reject) ... 
+  test_lockup_and_hung_task_controls_reject (test_frozen_kernel_health.KernelHealthTests.test_lockup_and_hung_task_controls_reject) (marker='NMI watchdog: Watchdog detected hard LOCKUP') ... FAIL
+  test_lockup_and_hung_task_controls_reject (test_frozen_kernel_health.KernelHealthTests.test_lockup_and_hung_task_controls_reject) (marker='INFO: task Xorg blocked for more than 120 seconds') ... FAIL
+  test_lockup_and_hung_task_controls_reject (test_frozen_kernel_health.KernelHealthTests.test_lockup_and_hung_task_controls_reject) (marker='rcu: INFO: rcu_sched detected stalls on CPUs/tasks') ... FAIL
+test_mutated_fault_bearing_baselines_reject (test_frozen_kernel_health.KernelHealthTests.test_mutated_fault_bearing_baselines_reject) ... ok
+test_new_gma_drm_and_sgx_faults_are_not_hidden (test_frozen_kernel_health.KernelHealthTests.test_new_gma_drm_and_sgx_faults_are_not_hidden) ... 
+  test_new_gma_drm_and_sgx_faults_are_not_hidden (test_frozen_kernel_health.KernelHealthTests.test_new_gma_drm_and_sgx_faults_are_not_hidden) (marker='gma500 0000:00:02.0: MMU fault') ... FAIL
+  test_new_gma_drm_and_sgx_faults_are_not_hidden (test_frozen_kernel_health.KernelHealthTests.test_new_gma_drm_and_sgx_faults_are_not_hidden) (marker='gma500 0000:00:02.0: timeout waiting for hardware') ... FAIL
+  test_new_gma_drm_and_sgx_faults_are_not_hidden (test_frozen_kernel_health.KernelHealthTests.test_new_gma_drm_and_sgx_faults_are_not_hidden) (marker='[drm] ERROR: failed to bind') ... FAIL
+  test_new_gma_drm_and_sgx_faults_are_not_hidden (test_frozen_kernel_health.KernelHealthTests.test_new_gma_drm_and_sgx_faults_are_not_hidden) (marker='SGX: fatal MMU error') ... FAIL
+test_real_warning_variants_reject (test_frozen_kernel_health.KernelHealthTests.test_real_warning_variants_reject) ... 
+  test_real_warning_variants_reject (test_frozen_kernel_health.KernelHealthTests.test_real_warning_variants_reject) (marker='gma500: WARN_ON failed') ... FAIL
+test_retained_acpi_diagnostics_are_bounded_and_explicit (test_frozen_kernel_health.KernelHealthTests.test_retained_acpi_diagnostics_are_bounded_and_explicit) ... ERROR
+test_stock_bl_diagnostic_is_not_generic_kernel_bug (test_frozen_kernel_health.KernelHealthTests.test_stock_bl_diagnostic_is_not_generic_kernel_bug) ... ERROR
+
+======================================================================
+ERROR: test_debug_suffix_is_not_kernel_bug (test_frozen_kernel_health.KernelHealthTests.test_debug_suffix_is_not_kernel_bug)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 22, in test_debug_suffix_is_not_kernel_bug
+    def test_debug_suffix_is_not_kernel_bug(self):self.gate('[ 2.000000] DEBUG: normal diagnostic')
+                                                  ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 15, in gate
+    procedure.bound_identity(self.plan,f,procedure.ORIGINAL_NOTE)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_first_load_procedure.py", line 78, in bound_identity
+    require(re.search(r'WARNING:|BUG:|Oops:|Kernel panic|general protection fault|Call Trace:',f['kernel_log'],re.I) is None,'kernel warning/fault')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_first_load_procedure.py", line 24, in require
+    if not condition:raise ValueError(reason)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: kernel warning/fault
+
+======================================================================
+ERROR: test_exact_retained_stock_baseline_passes (test_frozen_kernel_health.KernelHealthTests.test_exact_retained_stock_baseline_passes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 36, in test_exact_retained_stock_baseline_passes
+    def test_exact_retained_stock_baseline_passes(self):self.gate(self.capture['kernel_log'])
+                                                        ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 15, in gate
+    procedure.bound_identity(self.plan,f,procedure.ORIGINAL_NOTE)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_first_load_procedure.py", line 78, in bound_identity
+    require(re.search(r'WARNING:|BUG:|Oops:|Kernel panic|general protection fault|Call Trace:',f['kernel_log'],re.I) is None,'kernel warning/fault')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_first_load_procedure.py", line 24, in require
+    if not condition:raise ValueError(reason)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: kernel warning/fault
+
+======================================================================
+ERROR: test_retained_acpi_diagnostics_are_bounded_and_explicit (test_frozen_kernel_health.KernelHealthTests.test_retained_acpi_diagnostics_are_bounded_and_explicit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 32, in test_retained_acpi_diagnostics_are_bounded_and_explicit
+    def test_retained_acpi_diagnostics_are_bounded_and_explicit(self):self.gate('[ 13.0] '+ACPI)
+                                                                      ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 15, in gate
+    procedure.bound_identity(self.plan,f,procedure.ORIGINAL_NOTE)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_first_load_procedure.py", line 78, in bound_identity
+    require(re.search(r'WARNING:|BUG:|Oops:|Kernel panic|general protection fault|Call Trace:',f['kernel_log'],re.I) is None,'kernel warning/fault')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_first_load_procedure.py", line 24, in require
+    if not condition:raise ValueError(reason)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: kernel warning/fault
+
+======================================================================
+ERROR: test_stock_bl_diagnostic_is_not_generic_kernel_bug (test_frozen_kernel_health.KernelHealthTests.test_stock_bl_diagnostic_is_not_generic_kernel_bug)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 18, in test_stock_bl_diagnostic_is_not_generic_kernel_bug
+    def test_stock_bl_diagnostic_is_not_generic_kernel_bug(self):self.gate(BL)
+                                                                 ~~~~~~~~~^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 15, in gate
+    procedure.bound_identity(self.plan,f,procedure.ORIGINAL_NOTE)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_first_load_procedure.py", line 78, in bound_identity
+    require(re.search(r'WARNING:|BUG:|Oops:|Kernel panic|general protection fault|Call Trace:',f['kernel_log'],re.I) is None,'kernel warning/fault')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_first_load_procedure.py", line 24, in require
+    if not condition:raise ValueError(reason)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: kernel warning/fault
+
+======================================================================
+FAIL: test_genuine_oops_panic_fault_trace_controls_reject (test_frozen_kernel_health.KernelHealthTests.test_genuine_oops_panic_fault_trace_controls_reject) (marker='general protection: 0000')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 25, in test_genuine_oops_panic_fault_trace_controls_reject
+    with self.subTest(marker=marker):self.reject('[ 3.0] '+marker)
+                                     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 17, in reject
+    with self.assertRaises(ValueError):self.gate(log)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_genuine_oops_panic_fault_trace_controls_reject (test_frozen_kernel_health.KernelHealthTests.test_genuine_oops_panic_fault_trace_controls_reject) (marker='kernel BUG at drivers/gpu/test.c:1!')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 25, in test_genuine_oops_panic_fault_trace_controls_reject
+    with self.subTest(marker=marker):self.reject('[ 3.0] '+marker)
+                                     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 17, in reject
+    with self.assertRaises(ValueError):self.gate(log)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_lockup_and_hung_task_controls_reject (test_frozen_kernel_health.KernelHealthTests.test_lockup_and_hung_task_controls_reject) (marker='NMI watchdog: Watchdog detected hard LOCKUP')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 28, in test_lockup_and_hung_task_controls_reject
+    with self.subTest(marker=marker):self.reject('[ 4.0] '+marker)
+                                     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 17, in reject
+    with self.assertRaises(ValueError):self.gate(log)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_lockup_and_hung_task_controls_reject (test_frozen_kernel_health.KernelHealthTests.test_lockup_and_hung_task_controls_reject) (marker='INFO: task Xorg blocked for more than 120 seconds')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 28, in test_lockup_and_hung_task_controls_reject
+    with self.subTest(marker=marker):self.reject('[ 4.0] '+marker)
+                                     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 17, in reject
+    with self.assertRaises(ValueError):self.gate(log)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_lockup_and_hung_task_controls_reject (test_frozen_kernel_health.KernelHealthTests.test_lockup_and_hung_task_controls_reject) (marker='rcu: INFO: rcu_sched detected stalls on CPUs/tasks')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 28, in test_lockup_and_hung_task_controls_reject
+    with self.subTest(marker=marker):self.reject('[ 4.0] '+marker)
+                                     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 17, in reject
+    with self.assertRaises(ValueError):self.gate(log)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_new_gma_drm_and_sgx_faults_are_not_hidden (test_frozen_kernel_health.KernelHealthTests.test_new_gma_drm_and_sgx_faults_are_not_hidden) (marker='gma500 0000:00:02.0: MMU fault')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 35, in test_new_gma_drm_and_sgx_faults_are_not_hidden
+    with self.subTest(marker=marker):self.reject('[ 6.0] '+marker)
+                                     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 17, in reject
+    with self.assertRaises(ValueError):self.gate(log)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_new_gma_drm_and_sgx_faults_are_not_hidden (test_frozen_kernel_health.KernelHealthTests.test_new_gma_drm_and_sgx_faults_are_not_hidden) (marker='gma500 0000:00:02.0: timeout waiting for hardware')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 35, in test_new_gma_drm_and_sgx_faults_are_not_hidden
+    with self.subTest(marker=marker):self.reject('[ 6.0] '+marker)
+                                     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 17, in reject
+    with self.assertRaises(ValueError):self.gate(log)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_new_gma_drm_and_sgx_faults_are_not_hidden (test_frozen_kernel_health.KernelHealthTests.test_new_gma_drm_and_sgx_faults_are_not_hidden) (marker='[drm] ERROR: failed to bind')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 35, in test_new_gma_drm_and_sgx_faults_are_not_hidden
+    with self.subTest(marker=marker):self.reject('[ 6.0] '+marker)
+                                     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 17, in reject
+    with self.assertRaises(ValueError):self.gate(log)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_new_gma_drm_and_sgx_faults_are_not_hidden (test_frozen_kernel_health.KernelHealthTests.test_new_gma_drm_and_sgx_faults_are_not_hidden) (marker='SGX: fatal MMU error')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 35, in test_new_gma_drm_and_sgx_faults_are_not_hidden
+    with self.subTest(marker=marker):self.reject('[ 6.0] '+marker)
+                                     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 17, in reject
+    with self.assertRaises(ValueError):self.gate(log)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_real_warning_variants_reject (test_frozen_kernel_health.KernelHealthTests.test_real_warning_variants_reject) (marker='gma500: WARN_ON failed')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 31, in test_real_warning_variants_reject
+    with self.subTest(marker=marker):self.reject('[ 5.0] '+marker)
+                                     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 17, in reject
+    with self.assertRaises(ValueError):self.gate(log)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.118s
+
+FAILED (failures=10, errors=4)

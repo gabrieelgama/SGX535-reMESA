@@ -1,0 +1,17 @@
+[
+  {
+    "directory": "/home/gama/sgx535-gfx/docs/phase8/artifacts/i386-gcc-toolchain-20260930",
+    "manifest_sha256": "e48608e9de9735c08bd61508a6881bed2a05d2f53820a8474cb57fb6425e5107",
+    "entries_verified": 39
+  },
+  {
+    "directory": "/home/gama/sgx535-gfx/docs/phase8/artifacts/antix-kbuild-preparation-20260930",
+    "manifest_sha256": "0a7ed8fabab2432f32ec4628a9cce503aa13a43f845907a4b3e2c486be07bb13",
+    "entries_verified": 111
+  },
+  {
+    "directory": "/home/gama/sgx535-gfx/docs/phase8/artifacts/antix-kbuild-successor-20260930",
+    "manifest_sha256": "42a783907ea113bcfdc537e3ebe9b27c52bbc4ebcb8c8f76f40a4d873d6fe123",
+    "entries_verified": 102
+  }
+]

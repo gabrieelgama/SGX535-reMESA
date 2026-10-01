@@ -1,0 +1,11 @@
++ [ clean = clean ]
++ cleanup
++ rm -f .btf.*
++ rm -f .tmp_System.map
++ rm -f .tmp_vmlinux*
++ rm -f System.map
++ rm -f vmlinux
++ rm -f vmlinux.o
++ exit 0
++ on_exit
++ [ 0 -ne 0 ]

@@ -1,0 +1,39 @@
+test_actual_hash_helper_rejects_corrupt_or_missing_file (test_frozen_first_load_image.HookTests.test_actual_hash_helper_rejects_corrupt_or_missing_file) ... ok
+test_actual_irq_helper_requires_handler_on_irq16 (test_frozen_first_load_image.HookTests.test_actual_irq_helper_requires_handler_on_irq16) ... ok
+test_additional_matching_gpu (test_frozen_first_load_image.HookTests.test_additional_matching_gpu) ... ok
+test_already_bound (test_frozen_first_load_image.HookTests.test_already_bound) ... ok
+test_dependency_insertion_error_stops_immediately (test_frozen_first_load_image.HookTests.test_dependency_insertion_error_stops_immediately) ... ok
+test_expected_identity_allows_exact_fixed_order_once (test_frozen_first_load_image.HookTests.test_expected_identity_allows_exact_fixed_order_once) ... ok
+test_failure_at_each_insertion_retains_no_retry (test_frozen_first_load_image.HookTests.test_failure_at_each_insertion_retains_no_retry) ... ok
+test_init_hash_failure_even_with_matching_output_holds (test_frozen_first_load_image.HookTests.test_init_hash_failure_even_with_matching_output_holds) ... ok
+test_init_hook_failure_never_reaches_udev (test_frozen_first_load_image.HookTests.test_init_hook_failure_never_reaches_udev) ... ok
+test_init_success_precedes_udev (test_frozen_first_load_image.HookTests.test_init_success_precedes_udev) ... ok
+test_insertion_error_holds_no_retry (test_frozen_first_load_image.HookTests.test_insertion_error_holds_no_retry) ... ok
+test_kernel_blacklist (test_frozen_first_load_image.HookTests.test_kernel_blacklist) ... ok
+test_mutation_removing_machine_guard_is_detected (test_frozen_first_load_image.HookTests.test_mutation_removing_machine_guard_is_detected) ... ok
+test_no_hot_transition_or_submission_commands (test_frozen_first_load_image.HookTests.test_no_hot_transition_or_submission_commands) ... ok
+test_original_module_owner (test_frozen_first_load_image.HookTests.test_original_module_owner) ... ok
+test_original_proc_modules (test_frozen_first_load_image.HookTests.test_original_proc_modules) ... ok
+test_payload_hash_mismatch (test_frozen_first_load_image.HookTests.test_payload_hash_mismatch) ... ok
+test_post_load_mismatches_hold (test_frozen_first_load_image.HookTests.test_post_load_mismatches_hold) ... ok
+test_preexisting_drm (test_frozen_first_load_image.HookTests.test_preexisting_drm) ... ok
+test_preexisting_framebuffer (test_frozen_first_load_image.HookTests.test_preexisting_framebuffer) ... ok
+test_required_dependency_absent (test_frozen_first_load_image.HookTests.test_required_dependency_absent) ... ok
+test_wrong_architecture (test_frozen_first_load_image.HookTests.test_wrong_architecture) ... ok
+test_wrong_kernel (test_frozen_first_load_image.HookTests.test_wrong_kernel) ... ok
+test_wrong_machine (test_frozen_first_load_image.HookTests.test_wrong_machine) ... ok
+test_wrong_pci (test_frozen_first_load_image.HookTests.test_wrong_pci) ... ok
+test_bad_stock_entry_refused (test_frozen_first_load_image.ImageTests.test_bad_stock_entry_refused) ... ok
+test_dependency_cycle_and_missing_rejected (test_frozen_first_load_image.ImageTests.test_dependency_cycle_and_missing_rejected) ... ok
+test_dependency_topology (test_frozen_first_load_image.ImageTests.test_dependency_topology) ... ok
+test_non_saving_entry_and_unchanged_kernel_arguments (test_frozen_first_load_image.ImageTests.test_non_saving_entry_and_unchanged_kernel_arguments) ... ok
+test_nonexecutable_init_and_added_inode_collision_rejected (test_frozen_first_load_image.ImageTests.test_nonexecutable_init_and_added_inode_collision_rejected) ... ok
+test_retained_init_and_added_metadata_exact (test_frozen_first_load_image.ImageTests.test_retained_init_and_added_metadata_exact) ... ok
+test_splice_preserves_opaque_hardlink_records (test_frozen_first_load_image.ImageTests.test_splice_preserves_opaque_hardlink_records) ... ok
+test_traversal_rejected (test_frozen_first_load_image.ImageTests.test_traversal_rejected) ... ok
+test_truncated_and_duplicate_archives_rejected (test_frozen_first_load_image.ImageTests.test_truncated_and_duplicate_archives_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 1.930s
+
+OK

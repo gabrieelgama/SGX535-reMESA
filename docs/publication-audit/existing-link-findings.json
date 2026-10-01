@@ -1,0 +1,2641 @@
+[
+  {
+    "file": "docs/architecture.md",
+    "line": 23,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/architecture.md",
+    "line": 25,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxdefs.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/architecture.md",
+    "line": 25,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/eurasiacon/build/linux2/omap4430_linux/Makefile",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/architecture.md",
+    "line": 25,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/eurasiacon/build/linux2/omap5430_linux/Makefile",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/architecture.md",
+    "line": 27,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/architecture.md",
+    "line": 27,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/architecture.md",
+    "line": 27,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/architecture.md",
+    "line": 58,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/bridged/sgx/bridged_sgx_bridge.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/architecture.md",
+    "line": 58,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxkick.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/architecture.md",
+    "line": 58,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxkick.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/architecture.md",
+    "line": 58,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/architecture.md",
+    "line": 60,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/architecture.md",
+    "line": 60,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/architecture.md",
+    "line": 60,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/architecture.md",
+    "line": 62,
+    "target": "../references/linux/drivers/gpu/drm/gma500/gem.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/architecture.md",
+    "line": 66,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/architecture.md",
+    "line": 66,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/architecture.md",
+    "line": 68,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/architecture.md",
+    "line": 68,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/architecture.md",
+    "line": 72,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/README",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/architecture.md",
+    "line": 72,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxmmu.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/architecture.md",
+    "line": 72,
+    "target": "../references/linux/drivers/gpu/drm/gma500/mmu.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 5,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 5,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 5,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxkick.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 9,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 10,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 11,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 12,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 13,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 15,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 17,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgxinfo.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 17,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 17,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 22,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/bridged/sgx/bridged_sgx_bridge.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 22,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxkick.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 23,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxkick.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 23,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxkick.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 23,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxkick.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 24,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 25,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 25,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 26,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 26,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 28,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/bridged/sgx/bridged_sgx_bridge.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 28,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxkick.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 29,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxkick.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 29,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxkick.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 29,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxkick.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 30,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 31,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 31,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 32,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 32,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 39,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxkick.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 39,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 41,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 41,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 43,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxkick.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 43,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 48,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 48,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 50,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 50,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 53,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 53,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 63,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxtransfer.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 63,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxtransfer.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 63,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxtransfer.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 63,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxtransfer.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/command-submission.md",
+    "line": 67,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/firmware.md",
+    "line": 7,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgxinfo.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/firmware.md",
+    "line": 7,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/firmware.md",
+    "line": 9,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/include4/sgxscript.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/firmware.md",
+    "line": 9,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/firmware.md",
+    "line": 11,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/firmware.md",
+    "line": 11,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/firmware.md",
+    "line": 13,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/firmware.md",
+    "line": 30,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/eurasiacon/build/linux2/omap5430_linux/Makefile",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/firmware.md",
+    "line": 34,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/firmware.md",
+    "line": 34,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/firmware.md",
+    "line": 34,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxpower.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/firmware.md",
+    "line": 34,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxpower.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/firmware.md",
+    "line": 36,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 3,
+    "target": "../references/linux/drivers/gpu/drm/gma500/Makefile",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 9,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 10,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 10,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_device.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 11,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 11,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_device.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 12,
+    "target": "../references/linux/drivers/gpu/drm/gma500/gem.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 12,
+    "target": "../references/linux/drivers/gpu/drm/gma500/gem.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 12,
+    "target": "../references/linux/drivers/gpu/drm/gma500/gem.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 13,
+    "target": "../references/linux/drivers/gpu/drm/gma500/gtt.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 13,
+    "target": "../references/linux/drivers/gpu/drm/gma500/gtt.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 14,
+    "target": "../references/linux/drivers/gpu/drm/gma500/mmu.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 14,
+    "target": "../references/linux/drivers/gpu/drm/gma500/gem.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 14,
+    "target": "../references/linux/drivers/gpu/drm/gma500/gem.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 15,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 16,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 16,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 17,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 17,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 17,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 18,
+    "target": "../references/linux/drivers/gpu/drm/gma500/power.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 24,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 24,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 24,
+    "target": "../references/linux/drivers/gpu/drm/gma500/Kconfig",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 26,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 26,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 30,
+    "target": "../references/linux/drivers/gpu/drm/gma500/gem.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 30,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 30,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 34,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_device.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 34,
+    "target": "../references/linux/drivers/gpu/drm/gma500/power.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 36,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 36,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 36,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 48,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 48,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 48,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 48,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgxinfo.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/gma500-current-state.md",
+    "line": 48,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 7,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxmmu.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 7,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 9,
+    "target": "../references/linux/drivers/gpu/drm/gma500/mmu.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 9,
+    "target": "../references/linux/drivers/gpu/drm/gma500/mmu.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 9,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 19,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxmmu.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 19,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 25,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 25,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 25,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 27,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 27,
+    "target": "../references/linux/drivers/gpu/drm/gma500/mmu.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 36,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 36,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 36,
+    "target": "../references/linux/drivers/gpu/drm/gma500/mmu.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 38,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 42,
+    "target": "../references/linux/drivers/gpu/drm/gma500/gem.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 42,
+    "target": "../references/linux/drivers/gpu/drm/gma500/gem.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 44,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 44,
+    "target": "../references/linux/drivers/gpu/drm/gma500/gtt.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 46,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/system/omap5/sysconfig.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 48,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxconfig.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 48,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxconfig.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 52,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/mmu.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 52,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 52,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 54,
+    "target": "../references/linux/drivers/gpu/drm/gma500/mmu.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 58,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 58,
+    "target": "../references/linux/drivers/gpu/drm/gma500/mmu.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 60,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 66,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/common/buffer_manager.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 68,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/env/linux/osfunc.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/mmu-bif.md",
+    "line": 70,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/env/linux/mmap.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/phase7/psb-dri-re/binary-inventory.md",
+    "line": 5,
+    "target": "../../../references/home:lkundrak:poulsbo/xpsb-glx/xpsb-glx.spec",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/phase7/source-provenance.md",
+    "line": 11,
+    "target": "../../references/omap5-sgx-ddk-um-linux/README",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/phase7/source-provenance.md",
+    "line": 20,
+    "target": "../../references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/dri/psb_dri.so",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/phase7/source-provenance.md",
+    "line": 20,
+    "target": "../../references/home:lkundrak:poulsbo/xpsb-glx/xpsb-glx.spec",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/phase7/source-provenance.md",
+    "line": 22,
+    "target": "../../references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/drivers/Xpsb.so",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/phase7/xpsb-re/binary-inventory.md",
+    "line": 3,
+    "target": "../../../references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/drivers/Xpsb.so",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/phase7/xpsb-re/binary-inventory.md",
+    "line": 20,
+    "target": "../../../references/home:lkundrak:poulsbo/xpsb-glx/xpsb-glx.spec",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/phase7/xpsb-re/source-provenance.md",
+    "line": 5,
+    "target": "../../../references/home:lkundrak:poulsbo/xpsb-glx/xpsb-glx.spec",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 12,
+    "target": "i386-gcc-toolchain-qualification.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 14,
+    "target": "antix-kbuild-preparation-equivalence.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 16,
+    "target": "antix-kbuild-successor-equivalence.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 21,
+    "target": "candidate-01-offline-build-qualification.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 68,
+    "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 77,
+    "target": "../hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 132,
+    "target": "attempt03-module-version-followup.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 133,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/candidate-target-table-check.json",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 144,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 163,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifact-manifest.json",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 195,
+    "target": "artifacts/frozen-triangle-one-shot-i386.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 236,
+    "target": "i386-gcc-toolchain-qualification.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 237,
+    "target": "artifacts/i386-gcc-toolchain-20260930/README.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 251,
+    "target": "antix-kbuild-preparation-equivalence.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 252,
+    "target": "artifacts/antix-kbuild-preparation-20260930/README.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 275,
+    "target": "antix-kbuild-successor-equivalence.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 276,
+    "target": "artifacts/antix-kbuild-successor-20260930/README.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 402,
+    "target": "candidate-01-offline-build-qualification.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/active-gma500-transition-review.md",
+    "line": 6,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/active-gma500-transition-review.md",
+    "line": 13,
+    "target": "../hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/active-gma500-transition-review.md",
+    "line": 20,
+    "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/active-gma500-transition-review.md",
+    "line": 28,
+    "target": "attempt03-module-version-followup.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/active-gma500-transition-review.md",
+    "line": 38,
+    "target": "../hardware-evidence/MINI12-20260930-CONSOLE-RELEASE-01/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/active-gma500-transition-review.md",
+    "line": 52,
+    "target": "../hardware-evidence/MINI12-20260930-CONSOLE-RELEASE-01/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/active-gma500-transition-review.md",
+    "line": 58,
+    "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/active-gma500-transition-review.md",
+    "line": 69,
+    "target": "gma500-fbcon-refcount.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/active-gma500-transition-review.md",
+    "line": 70,
+    "target": "../hardware-evidence/MINI12-20260930-GMA500-REFCOUNT-READONLY-01/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/active-gma500-transition-review.md",
+    "line": 100,
+    "target": "artifacts/frozen-triangle-one-shot-i386.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/active-gma500-transition-review.md",
+    "line": 108,
+    "target": "../hardware-evidence/MINI12-20260930-TRANSITION-INVENTORY/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/active-gma500-transition-review.md",
+    "line": 139,
+    "target": "mini12-credential-delivery.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/active-gma500-transition-review.md",
+    "line": 180,
+    "target": "../hardware-evidence/MINI12-20260930-TRANSITION-INVENTORY/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/fixed-one-shot-gate-b-review.md",
+    "line": 7,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/fixed-one-shot-gate-b-review.md",
+    "line": 14,
+    "target": "attempt03-module-version-followup.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/fixed-one-shot-gate-b-review.md",
+    "line": 22,
+    "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/fixed-one-shot-gate-b-review.md",
+    "line": 29,
+    "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/fixed-one-shot-gate-b-review.md",
+    "line": 94,
+    "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-PREFLIGHT/README.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/fixed-one-shot-gate-b-review.md",
+    "line": 96,
+    "target": "../hardware-evidence/MINI12-20260930-TRANSITION-INVENTORY/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/fixed-one-shot-gate-b-review.md",
+    "line": 102,
+    "target": "artifacts/frozen-triangle-one-shot-i386.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/i386-gcc-offline-build-plan.md",
+    "line": 8,
+    "target": "i386-gcc-toolchain-qualification.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/i386-gcc-offline-build-plan.md",
+    "line": 32,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/i386-gcc-offline-build-plan.md",
+    "line": 48,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifact-manifest.json",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/i386-gcc-offline-build-plan.md",
+    "line": 319,
+    "target": "antix-kbuild-preparation-equivalence.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/i386-gcc-offline-build-plan.md",
+    "line": 326,
+    "target": "antix-kbuild-successor-equivalence.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/i386-gcc-offline-build-plan.md",
+    "line": 332,
+    "target": "candidate-01-offline-build-qualification.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+    "line": 10,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+    "line": 20,
+    "target": "antix-kbuild-preparation-equivalence.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+    "line": 22,
+    "target": "antix-kbuild-successor-equivalence.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+    "line": 29,
+    "target": "candidate-01-offline-build-qualification.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+    "line": 44,
+    "target": "i386-gcc-toolchain-qualification.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+    "line": 51,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-01/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+    "line": 58,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-02/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+    "line": 68,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-03/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+    "line": 75,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-04/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+    "line": 79,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-05/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+    "line": 81,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-06/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+    "line": 84,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-07/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+    "line": 98,
+    "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+    "line": 101,
+    "target": "../hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+    "line": 150,
+    "target": "attempt03-module-version-followup.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+    "line": 163,
+    "target": "../phase4-2-data/antix-source/drivers/gpu/drm/gma500/psb_drv.c",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+    "line": 168,
+    "target": "../phase4-2-data/antix-source/drivers/gpu/drm/gma500/power.c",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+    "line": 170,
+    "target": "../phase4-2-data/antix-source/drivers/gpu/drm/gma500/psb_irq.c",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 10,
+    "target": "i386-gcc-offline-build-plan.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 12,
+    "target": "i386-gcc-toolchain-qualification.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 14,
+    "target": "antix-kbuild-preparation-equivalence.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 16,
+    "target": "antix-kbuild-successor-equivalence.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 19,
+    "target": "candidate-01-build-and-lifecycle-review.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 73,
+    "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 82,
+    "target": "../hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 137,
+    "target": "attempt03-module-version-followup.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 138,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/candidate-target-table-check.json",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 149,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 168,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifact-manifest.json",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 200,
+    "target": "artifacts/frozen-triangle-one-shot-i386.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 241,
+    "target": "i386-gcc-toolchain-qualification.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 242,
+    "target": "artifacts/i386-gcc-toolchain-20260930/README.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 256,
+    "target": "antix-kbuild-preparation-equivalence.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 257,
+    "target": "artifacts/antix-kbuild-preparation-20260930/README.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 280,
+    "target": "antix-kbuild-successor-equivalence.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 281,
+    "target": "artifacts/antix-kbuild-successor-20260930/README.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 308,
+    "target": "i386-gcc-offline-build-plan.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 356,
+    "target": "candidate-01-build-and-lifecycle-review.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "line": 404,
+    "target": "candidate-01-build-and-lifecycle-review.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+    "line": 3,
+    "target": "candidate-01-build-and-lifecycle-review.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+    "line": 21,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+    "line": 28,
+    "target": "../hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+    "line": 35,
+    "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+    "line": 43,
+    "target": "attempt03-module-version-followup.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+    "line": 53,
+    "target": "../hardware-evidence/MINI12-20260930-CONSOLE-RELEASE-01/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+    "line": 67,
+    "target": "../hardware-evidence/MINI12-20260930-CONSOLE-RELEASE-01/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+    "line": 73,
+    "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+    "line": 84,
+    "target": "gma500-fbcon-refcount.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+    "line": 85,
+    "target": "../hardware-evidence/MINI12-20260930-GMA500-REFCOUNT-READONLY-01/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+    "line": 115,
+    "target": "artifacts/frozen-triangle-one-shot-i386.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+    "line": 123,
+    "target": "../hardware-evidence/MINI12-20260930-TRANSITION-INVENTORY/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+    "line": 154,
+    "target": "mini12-credential-delivery.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+    "line": 195,
+    "target": "../hardware-evidence/MINI12-20260930-TRANSITION-INVENTORY/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/fixed-one-shot-gate-b-review.md",
+    "line": 3,
+    "target": "candidate-01-build-and-lifecycle-review.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/fixed-one-shot-gate-b-review.md",
+    "line": 22,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/fixed-one-shot-gate-b-review.md",
+    "line": 29,
+    "target": "attempt03-module-version-followup.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/fixed-one-shot-gate-b-review.md",
+    "line": 37,
+    "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/fixed-one-shot-gate-b-review.md",
+    "line": 44,
+    "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/fixed-one-shot-gate-b-review.md",
+    "line": 109,
+    "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-PREFLIGHT/README.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/fixed-one-shot-gate-b-review.md",
+    "line": 111,
+    "target": "../hardware-evidence/MINI12-20260930-TRANSITION-INVENTORY/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/fixed-one-shot-gate-b-review.md",
+    "line": 117,
+    "target": "artifacts/frozen-triangle-one-shot-i386.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+    "line": 3,
+    "target": "candidate-01-build-and-lifecycle-review.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+    "line": 25,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+    "line": 35,
+    "target": "antix-kbuild-preparation-equivalence.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+    "line": 37,
+    "target": "antix-kbuild-successor-equivalence.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+    "line": 44,
+    "target": "candidate-01-offline-build-qualification.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+    "line": 56,
+    "target": "i386-gcc-offline-build-plan.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+    "line": 59,
+    "target": "i386-gcc-toolchain-qualification.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+    "line": 66,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-01/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+    "line": 73,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-02/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+    "line": 83,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-03/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+    "line": 90,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-04/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+    "line": 94,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-05/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+    "line": 96,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-06/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+    "line": 99,
+    "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-07/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+    "line": 113,
+    "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+    "line": 116,
+    "target": "../hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/RESULT.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+    "line": 165,
+    "target": "attempt03-module-version-followup.md",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+    "line": 178,
+    "target": "../phase4-2-data/antix-source/drivers/gpu/drm/gma500/psb_drv.c",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+    "line": 183,
+    "target": "../phase4-2-data/antix-source/drivers/gpu/drm/gma500/power.c",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+    "line": 185,
+    "target": "../phase4-2-data/antix-source/drivers/gpu/drm/gma500/psb_irq.c",
+    "state": "TARGET MISSING LOCALLY",
+    "historical_snapshot": true
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 9,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 9,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_device.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 9,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 15,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 16,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 17,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 18,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 19,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 20,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 21,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 22,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 23,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 24,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 25,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 26,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 27,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 28,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 29,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 30,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 31,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 32,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 33,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 34,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 35,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 36,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 37,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 38,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 39,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 43,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 45,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 45,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 47,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 47,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 53,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 54,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 55,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 55,
+    "target": "../references/linux/drivers/gpu/drm/gma500/gtt.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 56,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 57,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgxinfo.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 59,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 66,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/registers.md",
+    "line": 66,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 5,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxdefs.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 5,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/eurasiacon/build/linux2/omap4430_linux/Makefile",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 5,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/eurasiacon/build/linux2/omap5430_linux/Makefile",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 20,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 20,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxdefs.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 20,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxmmu.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 21,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 21,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxpower.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 21,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 21,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgxinfo.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 22,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/eurasiacon/build/linux2/omap4430_linux/Makefile",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 22,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/eurasiacon/build/linux2/omap5430_linux/Makefile",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 23,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/system/omap5/sysconfig.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 23,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/system/omap5/sysconfig.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 24,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/system/omap5/sysutils_linux.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 24,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/system/omap5/sysutils_linux.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 24,
+    "target": "../references/omap5-sgx-ddk-um-linux/README",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 25,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 25,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 25,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 25,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_device.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 26,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 26,
+    "target": "../references/linux/drivers/gpu/drm/gma500/gem.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 26,
+    "target": "../references/linux/drivers/gpu/drm/gma500/gem.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 26,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 26,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 27,
+    "target": "../references/linux/drivers/gpu/drm/gma500/power.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 27,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_device.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 27,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 27,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_device.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 31,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/system/omap5/sysconfig.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 31,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/system/omap5/sysconfig.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 33,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 33,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_device.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 33,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 35,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxerrata.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 35,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/ti-vs-poulsbo.md",
+    "line": 35,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/usse.md",
+    "line": 7,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/usse.md",
+    "line": 9,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/usse.md",
+    "line": 11,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/usse.md",
+    "line": 11,
+    "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/usse.md",
+    "line": 13,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/usse.md",
+    "line": 13,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/usse.md",
+    "line": 13,
+    "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxconfig.h",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  },
+  {
+    "file": "docs/usse.md",
+    "line": 21,
+    "target": "../references/omap5-sgx-ddk-um-linux/README",
+    "state": "EXISTS BUT EXCLUDED FROM PROPOSED TREE",
+    "historical_snapshot": false
+  }
+]

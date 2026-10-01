@@ -1,0 +1,163 @@
+{
+  "schema": 1,
+  "retrieved": "2026-09-27",
+  "scope": "Six new primary/archive source records; no rule closure; duplicate prior sources excluded from count",
+  "cache": "/tmp/sgx535-final-external",
+  "artifacts": [
+    {
+      "file": "sdk-3.4-tree.json",
+      "url": "https://api.github.com/repos/powervr-graphics/Native_SDK/git/trees/8350f668a443f88c22107c4b81d79675e3d6b536?recursive=1",
+      "source": "E01",
+      "bytes": 3200764,
+      "sha256": "6b97716988628b732b9a12812becc141b40f6d16bfb38affe35a84a56a315ce2",
+      "note": "GitHub recursive tree; 11443 entries; truncated false"
+    },
+    {
+      "file": "sdk34-license.txt",
+      "url": "https://raw.githubusercontent.com/powervr-graphics/Native_SDK/8350f668a443f88c22107c4b81d79675e3d6b536/LICENSE_POWERVR_SDK.txt",
+      "source": "E01",
+      "bytes": 1235,
+      "sha256": "d13ca884079437bd4ff3ad76d454e913a501304e11de8ee0d5dc1d010be3dd76",
+      "note": "MIT license"
+    },
+    {
+      "file": "sdk34-commit.json",
+      "url": "https://api.github.com/repos/powervr-graphics/Native_SDK/commits/8350f668a443f88c22107c4b81d79675e3d6b536",
+      "source": "E01",
+      "bytes": 1341859,
+      "sha256": "946abeea057cc2ea42705ab888693934403b569ce4fe58106bf8516934ef1a97",
+      "note": "Commit metadata; imported 2019-05-29; not original SDK release date"
+    },
+    {
+      "file": "sdk-tree.json",
+      "url": "https://api.github.com/repos/powervr-graphics/Native_SDK/git/trees/c1605c99281797e5cd4c8439e1bc679706bbb311?recursive=1",
+      "source": "E02",
+      "bytes": 2400239,
+      "sha256": "9020ae5a45570cd70ccd0ec59a56f9380bdb355dc04332c1a6b4a5e11740fe8e",
+      "note": "GitHub recursive tree; 8722 entries; truncated false"
+    },
+    {
+      "file": "sdk-tags.json",
+      "url": "https://api.github.com/repos/powervr-graphics/Native_SDK/tags?per_page=100",
+      "source": "E01;E02",
+      "bytes": 12992,
+      "sha256": "ffff3a9147d624718192ba122e61758c9ed1a91d0cb2301ed705d927a252c5f7",
+      "note": "28 visible tags; oldest named R14.2-v3.4; not all historical releases"
+    },
+    {
+      "file": "patent-memory.html",
+      "url": "https://patents.google.com/patent/US8669987B2/en",
+      "source": "E03",
+      "bytes": 356816,
+      "sha256": "60daa7c436b6ada8b7927a46eabb1a8a00431c27c3912d757fa959e64ea27f8b",
+      "note": "Published patent via Google Patents"
+    },
+    {
+      "file": "dma-guide.html",
+      "url": "https://www.kernel.org/doc/html/v6.12/core-api/dma-api-howto.html",
+      "source": "E05",
+      "bytes": 53611,
+      "sha256": "5100ccf751630de4354c422982a1b3a988a408283b9c31c1772539d941f6c677",
+      "note": "Pinned-version official documentation"
+    },
+    {
+      "file": "barriers.html",
+      "url": "https://www.kernel.org/doc/html/v6.12/core-api/wrappers/memory-barriers.html",
+      "source": "E06",
+      "bytes": 134892,
+      "sha256": "da7384843778ef4b4287dcb93aa891a49771c308679219f4658cce7c4cfc7b39",
+      "note": "Pinned-version official documentation"
+    },
+    {
+      "file": "archive-query.json",
+      "url": "https://archive.org/advancedsearch.php?q=%22Eurasia%22%20AND%20%22SGX535%22&output=json",
+      "source": "SEARCH",
+      "bytes": 318,
+      "sha256": "cffa6c70e7f98f88d08ac968e4896b5e4720519b0a3a5a7adf2a1da98a546ab4",
+      "note": "Internet Archive item metadata search; zero hits; not Wayback full-text search"
+    }
+  ],
+  "sources": [
+    {
+      "id": "E01",
+      "title": "Native SDK R14.2-v3.4 public tree",
+      "publisher": "Imagination Technologies / powervr-graphics",
+      "classification": "PUBLIC_PRIMARY",
+      "url": "https://github.com/powervr-graphics/Native_SDK/tree/8350f668a443f88c22107c4b81d79675e3d6b536",
+      "date": "R14.2 label; commit import 2019-05-29; original release day not established",
+      "license": "MIT top-level SDK notice",
+      "rule": "R3",
+      "applicability": "SDK manifest only; no architectural applicability",
+      "claim": "No path contains pds/eurasia/assembler (case-insensitive); not a content-wide absence proof",
+      "closes_rule": false
+    },
+    {
+      "id": "E02",
+      "title": "Native SDK snapshot referenced by SwiftShader",
+      "publisher": "Imagination Technologies / powervr-graphics",
+      "classification": "PUBLIC_PRIMARY",
+      "url": "https://github.com/powervr-graphics/Native_SDK/tree/c1605c99281797e5cd4c8439e1bc679706bbb311",
+      "date": "Pinned commit; release date not established",
+      "license": "Public official tree; no implementation imported",
+      "rule": "R3",
+      "applicability": "SDK manifest only",
+      "claim": "No pds/eurasia paths; assembler substring hits are Vulkan input-assembler documentation, not PDS encoders",
+      "closes_rule": false
+    },
+    {
+      "id": "E03",
+      "title": "US8669987B2 Memory management for systems for generating 3-dimensional computer images",
+      "publisher": "Imagination Technologies patent; USPTO publication via Google Patents",
+      "classification": "PUBLIC_PRIMARY",
+      "url": "https://patents.google.com/patent/US8669987B2/en",
+      "date": "2014-03-11 grant; US20080186318A1 published 2008-08-07",
+      "license": "Public patent disclosure; no software license or patent-rights conclusion",
+      "rule": "R2",
+      "applicability": "Generic architecture; no SGX535 or DHOST mapping established",
+      "claim": "Describes free-list/macrotile memory management; does not identify LOAD3 completion/dependency",
+      "closes_rule": false
+    },
+    {
+      "id": "E04",
+      "title": "Samsung Android SGX535 hardware definitions",
+      "publisher": "Imagination Technologies; AOSP kernel/samsung",
+      "classification": "HISTORICAL_PUBLIC_ARCHIVE",
+      "url": "https://android.googlesource.com/kernel/samsung/+/android-samsung-2.6.35-gingerbread/drivers/gpu/pvr/sgx535defs.h",
+      "date": "Copyright 2008; exact branch commit date not established",
+      "license": "GPLv2 explicit header",
+      "rule": "R1;R2",
+      "applicability": "Explicit SGX535 register names; not a target revision/behavioral contract",
+      "git_blob": "04f43be12b136acaac3515449f826075c9d6d00c",
+      "sha256": null,
+      "claim": "Independent header corroborates status2 DHOST bit8 and host enable/clear counterparts; no consumer-ordering implication",
+      "retrieval": "Web rendered source read; direct byte download HTTP503; no SHA256 claimed",
+      "closes_rule": false
+    },
+    {
+      "id": "E05",
+      "title": "Linux v6.12 Dynamic DMA mapping Guide",
+      "publisher": "Linux kernel project",
+      "classification": "PUBLIC_PRIMARY",
+      "url": "https://www.kernel.org/doc/html/v6.12/core-api/dma-api-howto.html",
+      "date": "v6.12 documentation",
+      "license": "Public kernel documentation; HTML per-file license not extracted",
+      "rule": "R1",
+      "applicability": "DMA API contract if a backend actually uses it; not legacy TTM or SGX internal-cache proof",
+      "claim": "Consistent DMA mappings provide CPU/device update visibility but still require ordering barriers; streaming mappings require correct ownership/synchronization",
+      "closes_rule": false
+    },
+    {
+      "id": "E06",
+      "title": "Linux v6.12 memory barriers",
+      "publisher": "Linux kernel project",
+      "classification": "PUBLIC_PRIMARY",
+      "url": "https://www.kernel.org/doc/html/v6.12/core-api/wrappers/memory-barriers.html",
+      "date": "v6.12 documentation",
+      "license": "Public kernel documentation; HTML per-file license not extracted",
+      "rule": "R1",
+      "applicability": "Host ordering/cache distinction only",
+      "claim": "A memory barrier alone does not replace cache maintenance on noncoherent DMA paths or define SGX completion coverage",
+      "closes_rule": false
+    }
+  ]
+}

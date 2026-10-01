@@ -1,0 +1,33 @@
+from pathlib import Path
+import os, stat, json, time
+pci=Path('/sys/bus/pci/devices/0000:00:02.0')
+fields={
+'dmi_vendor':Path('/sys/class/dmi/id/sys_vendor').read_bytes(),
+'dmi_product':Path('/sys/class/dmi/id/product_name').read_bytes(),
+'dmi_board':Path('/sys/class/dmi/id/board_name').read_bytes(),
+'dmi_bios':Path('/sys/class/dmi/id/bios_version').read_bytes(),
+'pci_vendor':(pci/'vendor').read_bytes(),
+'pci_device':(pci/'device').read_bytes(),
+'pci_subvendor':(pci/'subsystem_vendor').read_bytes(),
+'pci_subdevice':(pci/'subsystem_device').read_bytes(),
+'pci_revision':(pci/'revision').read_bytes(),
+'module':Path('/sys/module/gma500_gfx/initstate').read_bytes(),
+'enable':(pci/'enable').read_bytes(),
+'power_control':(pci/'power/control').read_bytes(),
+'power_status':(pci/'power/runtime_status').read_bytes(),
+}
+expected={
+'dmi_vendor':b'Dell Inc.\n','dmi_product':b'Inspiron 1210   \n','dmi_board':b'0X605H\n','dmi_bios':b'A02\n',
+'pci_vendor':b'0x8086\n','pci_device':b'0x8108\n','pci_subvendor':b'0x1028\n','pci_subdevice':b'0x02b1\n','pci_revision':b'0x06\n',
+'module':b'live\n','enable':b'1\n','power_control':b'on\n','power_status':b'active\n'}
+checks={k:fields[k]==v for k,v in expected.items()}
+checks['driver']=os.readlink(pci/'driver')=='../../../bus/pci/drivers/gma500'
+checks['bar0']=(pci/'resource').read_text().splitlines()[0].lower()=='0x00000000d8100000 0x00000000d817ffff 0x0000000000040200'
+checks['page_size']=os.sysconf('SC_PAGE_SIZE')==4096
+st=os.stat(pci/'resource0'); checks['resource0']=stat.S_ISREG(st.st_mode) and st.st_size==0x80000 and st.st_uid==0
+for name in ['/usr','/usr/local','/usr/local/libexec','/etc','/etc/sudoers.d']:
+    st=os.lstat(name); checks['secure_dir_'+name]=stat.S_ISDIR(st.st_mode) and st.st_uid==0 and not(st.st_mode&0o022)
+for name in ['/usr/local/libexec/sgx535-core-revision','/etc/sudoers.d/sgx535-core-revision']:
+    checks['absent_'+name]=not os.path.lexists(name)
+print(json.dumps({'target_utc':__import__('datetime').datetime.now(__import__('datetime').timezone.utc).isoformat(),'checks':checks,'bar0_line':(pci/'resource').read_text().splitlines()[0]},sort_keys=True))
+raise SystemExit(0 if all(checks.values()) else 1)

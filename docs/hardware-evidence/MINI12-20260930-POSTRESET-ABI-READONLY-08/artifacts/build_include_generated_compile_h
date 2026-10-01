@@ -1,0 +1,7 @@
+/* This file is auto generated, version 6 */
+/* SMP */
+#define UTS_MACHINE "i386"
+#define UTS_VERSION "#6 SMP Thu Aug 7 17:33:24 EDT 2025"
+#define LINUX_COMPILE_BY "demo"
+#define LINUX_COMPILE_HOST "antix1"
+#define LINUX_COMPILER "gcc (Debian 14.2.0-19) 14.2.0, GNU ld (GNU Binutils for Debian) 2.44"

@@ -1,0 +1,15 @@
+test_active_irq_quiesces_vblank_before_driver_resources_are_freed (test_frozen_irq_lifecycle.IRQLifecycleTests.test_active_irq_quiesces_vblank_before_driver_resources_are_freed) ... ok
+test_actual_uninstall_masks_all_sources_before_irq_handler_release (test_frozen_irq_lifecycle.IRQLifecycleTests.test_actual_uninstall_masks_all_sources_before_irq_handler_release) ... ok
+test_direct_suspend_retains_the_existing_non_display_irq_mask (test_frozen_irq_lifecycle.IRQLifecycleTests.test_direct_suspend_retains_the_existing_non_display_irq_mask) ... ok
+test_install_error_returns_before_modeset_and_uses_existing_cleanup (test_frozen_irq_lifecycle.IRQLifecycleTests.test_install_error_returns_before_modeset_and_uses_existing_cleanup) ... ok
+test_late_probe_error_unwinds_registered_irq_and_private_state (test_frozen_irq_lifecycle.IRQLifecycleTests.test_late_probe_error_unwinds_registered_irq_and_private_state) ... ok
+test_module_exit_uses_the_paired_pci_remove_path (test_frozen_irq_lifecycle.IRQLifecycleTests.test_module_exit_uses_the_paired_pci_remove_path) ... ok
+test_no_irq_and_no_private_state_do_not_uninstall_unowned_irq (test_frozen_irq_lifecycle.IRQLifecycleTests.test_no_irq_and_no_private_state_do_not_uninstall_unowned_irq) ... ok
+test_pci_remove_releases_irq_before_final_drm_reference (test_frozen_irq_lifecycle.IRQLifecycleTests.test_pci_remove_releases_irq_before_final_drm_reference) ... ok
+test_preserved_original_remove_leaves_irq_owned_after_private_teardown (test_frozen_irq_lifecycle.IRQLifecycleTests.test_preserved_original_remove_leaves_irq_owned_after_private_teardown) ... ok
+test_registered_irq_before_modeset_is_released_without_crtc_iteration (test_frozen_irq_lifecycle.IRQLifecycleTests.test_registered_irq_before_modeset_is_released_without_crtc_iteration) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 1.059s
+
+OK

@@ -1,0 +1,14 @@
+{
+  "post_documentation_suite": {
+    "exit_code": 0,
+    "tests": 249,
+    "skips": 0,
+    "output": "post-documentation-checks/final-suite.stderr"
+  },
+  "first_preservation_exit": 1,
+  "first_preservation_reason": "One newly generated disposable test pyc was detected. It was absent from initial-files.json, preserved in hash record and removed; no preexisting cache/evidence removed.",
+  "successor_preservation_exit": 0,
+  "successor_evidence": "post-documentation-preservation/summary.json",
+  "unchanged_historical_inputs": true,
+  "no_stage_commit_push": true
+}

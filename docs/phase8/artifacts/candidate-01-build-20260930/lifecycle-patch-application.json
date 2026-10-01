@@ -1,0 +1,134 @@
+[
+  {
+    "patch": "antix-fixed-makefile.patch",
+    "sha256": "0af78c9693d283d875db4751dd3cc4bbdf873c6c7c25a17f9d4059e61a34bbf1",
+    "argv": [
+      "patch",
+      "--batch",
+      "--fuzz=0",
+      "-p5",
+      "-i",
+      "/home/gama/sgx535-gfx/kernel/sgx535_frozen/patches/antix-fixed-makefile.patch",
+      "--dry-run"
+    ],
+    "cwd": "/home/gama/sgx535-offline/candidate-01-build-20260930/module",
+    "exit_code": 0,
+    "stdout": "checking file Makefile\n",
+    "stderr": ""
+  },
+  {
+    "patch": "antix-fixed-makefile.patch",
+    "sha256": "0af78c9693d283d875db4751dd3cc4bbdf873c6c7c25a17f9d4059e61a34bbf1",
+    "argv": [
+      "patch",
+      "--batch",
+      "--fuzz=0",
+      "-p5",
+      "-i",
+      "/home/gama/sgx535-gfx/kernel/sgx535_frozen/patches/antix-fixed-makefile.patch"
+    ],
+    "cwd": "/home/gama/sgx535-offline/candidate-01-build-20260930/module",
+    "exit_code": 0,
+    "stdout": "patching file Makefile\n",
+    "stderr": ""
+  },
+  {
+    "patch": "antix-fixed-irq.patch",
+    "sha256": "d9a2461f8d1b5783f21bf1fa7d4f440df62f55eef85923ef756020b35d45c833",
+    "argv": [
+      "patch",
+      "--batch",
+      "--fuzz=0",
+      "-p5",
+      "-i",
+      "/home/gama/sgx535-gfx/kernel/sgx535_frozen/patches/antix-fixed-irq.patch",
+      "--dry-run"
+    ],
+    "cwd": "/home/gama/sgx535-offline/candidate-01-build-20260930/module",
+    "exit_code": 0,
+    "stdout": "checking file psb_irq.c\n",
+    "stderr": ""
+  },
+  {
+    "patch": "antix-fixed-irq.patch",
+    "sha256": "d9a2461f8d1b5783f21bf1fa7d4f440df62f55eef85923ef756020b35d45c833",
+    "argv": [
+      "patch",
+      "--batch",
+      "--fuzz=0",
+      "-p5",
+      "-i",
+      "/home/gama/sgx535-gfx/kernel/sgx535_frozen/patches/antix-fixed-irq.patch"
+    ],
+    "cwd": "/home/gama/sgx535-offline/candidate-01-build-20260930/module",
+    "exit_code": 0,
+    "stdout": "patching file psb_irq.c\n",
+    "stderr": ""
+  },
+  {
+    "patch": "antix-irq-lifecycle.patch",
+    "sha256": "003ff4e4e56948934af828d5028f493a40cdb383fb43798a23a4775a9a63e366",
+    "argv": [
+      "patch",
+      "--batch",
+      "--fuzz=0",
+      "-p5",
+      "-i",
+      "/home/gama/sgx535-gfx/kernel/sgx535_frozen/patches/antix-irq-lifecycle.patch",
+      "--dry-run"
+    ],
+    "cwd": "/home/gama/sgx535-offline/candidate-01-build-20260930/module",
+    "exit_code": 0,
+    "stdout": "checking file psb_drv.c\n",
+    "stderr": ""
+  },
+  {
+    "patch": "antix-irq-lifecycle.patch",
+    "sha256": "003ff4e4e56948934af828d5028f493a40cdb383fb43798a23a4775a9a63e366",
+    "argv": [
+      "patch",
+      "--batch",
+      "--fuzz=0",
+      "-p5",
+      "-i",
+      "/home/gama/sgx535-gfx/kernel/sgx535_frozen/patches/antix-irq-lifecycle.patch"
+    ],
+    "cwd": "/home/gama/sgx535-offline/candidate-01-build-20260930/module",
+    "exit_code": 0,
+    "stdout": "patching file psb_drv.c\n",
+    "stderr": ""
+  },
+  {
+    "patch": "antix-fixed-ioctl.patch",
+    "sha256": "33c45a26f2cb63956ef94afb3512acaf285824e83175c6490e7b282a22474722",
+    "argv": [
+      "patch",
+      "--batch",
+      "--fuzz=0",
+      "-p5",
+      "-i",
+      "/home/gama/sgx535-gfx/kernel/sgx535_frozen/patches/antix-fixed-ioctl.patch",
+      "--dry-run"
+    ],
+    "cwd": "/home/gama/sgx535-offline/candidate-01-build-20260930/module",
+    "exit_code": 0,
+    "stdout": "checking file psb_drv.c\n",
+    "stderr": ""
+  },
+  {
+    "patch": "antix-fixed-ioctl.patch",
+    "sha256": "33c45a26f2cb63956ef94afb3512acaf285824e83175c6490e7b282a22474722",
+    "argv": [
+      "patch",
+      "--batch",
+      "--fuzz=0",
+      "-p5",
+      "-i",
+      "/home/gama/sgx535-gfx/kernel/sgx535_frozen/patches/antix-fixed-ioctl.patch"
+    ],
+    "cwd": "/home/gama/sgx535-offline/candidate-01-build-20260930/module",
+    "exit_code": 0,
+    "stdout": "patching file psb_drv.c\n",
+    "stderr": ""
+  }
+]

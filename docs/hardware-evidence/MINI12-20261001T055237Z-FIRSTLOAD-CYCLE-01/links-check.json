@@ -1,0 +1,81 @@
+{
+  "classification": "PASS",
+  "new_links": [
+    {
+      "source": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/README.md",
+      "target": "RESULT.md"
+    },
+    {
+      "source": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/README.md",
+      "target": "../../phase8/first-load-cycle-01-result.md"
+    },
+    {
+      "source": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/README.md",
+      "target": "PREFLIGHT-SCOPE.md"
+    },
+    {
+      "source": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/README.md",
+      "target": "operator-prerequisites.json"
+    },
+    {
+      "source": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/README.md",
+      "target": "authorization.md"
+    },
+    {
+      "source": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/README.md",
+      "target": "preflight-command.json"
+    },
+    {
+      "source": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/README.md",
+      "target": "preflight.stdout"
+    },
+    {
+      "source": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/README.md",
+      "target": "preflight.stderr"
+    },
+    {
+      "source": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/README.md",
+      "target": "preflight-02/command.json"
+    },
+    {
+      "source": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/README.md",
+      "target": "preflight-02/stdout.txt"
+    },
+    {
+      "source": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/README.md",
+      "target": "preflight-02/stderr.txt"
+    },
+    {
+      "source": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/README.md",
+      "target": "preflight-02/preflight.sh"
+    },
+    {
+      "source": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/README.md",
+      "target": "kernel-health-matches.json"
+    },
+    {
+      "source": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/README.md",
+      "target": "baseline-health-comparison.json"
+    },
+    {
+      "source": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/README.md",
+      "target": "test_captured_preflight.py"
+    },
+    {
+      "source": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/README.md",
+      "target": "capture-tests.stderr"
+    },
+    {
+      "source": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/README.md",
+      "target": "offline-checks/summary.json"
+    },
+    {
+      "source": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/README.md",
+      "target": "offline-checks/checks.json"
+    },
+    {
+      "source": "docs/phase8/first-load-cycle-01-result.md",
+      "target": "../hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/README.md"
+    }
+  ]
+}

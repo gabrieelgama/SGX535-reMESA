@@ -1,0 +1,16 @@
+{
+  "passive_28_of_28_exact_capture_match": true,
+  "prior_passive_sha256": "222999f8362ba55bdfe0f98692f7c775a20d0434793dcd9047063ce6740e7779",
+  "fresh_passive_sha256": "222999f8362ba55bdfe0f98692f7c775a20d0434793dcd9047063ce6740e7779",
+  "root_inventory_exact_capture_match": true,
+  "prior_root_sha256": "227de5ee5fc6502413a49b8ed9d9e83726cde160f50192a6a16aa7e6638d5161",
+  "fresh_root_sha256": "227de5ee5fc6502413a49b8ed9d9e83726cde160f50192a6a16aa7e6638d5161",
+  "root_service_status": "run: /etc/runit/runsvdir/default/slimski: (pid 1409) 28368s",
+  "active_transition_performed": false,
+  "sgx_submission_performed": false,
+  "stage0_path_check": "STOP_UNEXPECTED_STDERR",
+  "artifact_transfer_performed": false,
+  "service_stop_performed": false,
+  "module_unload_performed": false,
+  "candidate_load_performed": false
+}

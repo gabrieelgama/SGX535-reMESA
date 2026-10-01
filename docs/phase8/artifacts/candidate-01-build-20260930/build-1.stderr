@@ -1,0 +1,5 @@
+ERROR: modpost: "__umoddi3" [/home/gama/sgx535-offline/candidate-01-build-20260930/module/gma500_gfx.ko] undefined!
+make[2]: *** [/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp/scripts/Makefile.modpost:123: /home/gama/sgx535-offline/candidate-01-build-20260930/module/Module.symvers] Error 1
+make[2]: *** Deleting file '/home/gama/sgx535-offline/candidate-01-build-20260930/module/Module.symvers'
+make[1]: *** [/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp/Makefile:1791: modules] Error 2
+make: *** [Makefile:192: __sub-make] Error 2

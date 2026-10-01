@@ -1,0 +1,7 @@
+state,producer,first_consumer,observed_success,remaining,evidence
+address spaces and BO backing,provider memory managers; validation/bind,relocator and TA/raster fetches,creation/validation returns success and addresses fit explicit ranges,B3 publication,P7H-047
+USE base reservations,provider register allocator; USE op5/4/4 relocations,selected vertex/fragment/event USE tasks,CPU resolver checks explicit distinct DM reservations and window,B3 publication; B4 compatible initialized service,P7H-047
+revision-conditioned register state,Xpsb0x4af0 ->0x3820,Xpsb0x4f10/0x5040 via selected op2,init function returns zero after writes; op4 reply explicitly zero,B4 target-qualified ready postcondition; no init-ready poll,P7H-050;P7H-052
+scene context and cookie,psb_scene.c; Xpsb0x3a40; hardware context allocator,op2 bind/fire offset and hw_context; cookie2..8 or7/14,allocation/validation and service reply; known first-use cookie formulas,B4 service readiness; B3 publication; cookie is not full hardware scene state,P7H-008;P7H-046;P7H-047
+TA table/load state,psb_scene.c257-265 -> psb_xhw_ta_mem_load ->Xpsb0x3df0,first selected TA op2,request done and ret0; retained mask7 then INITEND poll,B4 applicability/completeness of ready predicate including fourth load,P7H-052
+request interface and completion,psb_xhw enqueue/done and XpsbThread dispatcher,op2 TA/raster requests,reply delivered; op9 helper result propagated,transport completion is not publication or initialized-state proof,P7H-046;P7H-052

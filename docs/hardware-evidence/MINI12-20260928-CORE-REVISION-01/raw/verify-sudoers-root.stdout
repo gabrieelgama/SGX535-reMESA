@@ -1,0 +1,4 @@
+7b5eda756a7800185dce238100d95e2911beef2f46570fe4ebf8acdb937e5803  /etc/sudoers.d/sgx535-core-revision
+root:root 440 /etc/sudoers.d/sgx535-core-revision
+/etc/sudoers.d/sgx535-core-revision: parsed OK
+gama ALL=(root) NOPASSWD:NOSETENV: /usr/local/libexec/sgx535-core-revision ""

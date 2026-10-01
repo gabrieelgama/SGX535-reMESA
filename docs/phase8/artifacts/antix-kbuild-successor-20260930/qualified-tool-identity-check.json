@@ -1,0 +1,102 @@
+[
+  {
+    "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+    "expected": "230e1e46df3d07477cbc1b0be63507738abbf22836e221affbc89167995a3d0a",
+    "observed": "230e1e46df3d07477cbc1b0be63507738abbf22836e221affbc89167995a3d0a"
+  },
+  {
+    "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-cpp-14",
+    "expected": "c3260ddd3836854dcf4bfd2620ca510f15c4706bed1c0566ffd84ba0368c6ba9",
+    "observed": "c3260ddd3836854dcf4bfd2620ca510f15c4706bed1c0566ffd84ba0368c6ba9"
+  },
+  {
+    "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-as",
+    "expected": "e4e2e048401b9c6bbfab363465297fd3c427d0946bb6e6bdd98ddb32838b0ba2",
+    "observed": "e4e2e048401b9c6bbfab363465297fd3c427d0946bb6e6bdd98ddb32838b0ba2"
+  },
+  {
+    "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-ld.bfd",
+    "expected": "a10a5fbd0ab26c27336634b47287d4c4ce52577c1e924e818d51ae832465bcca",
+    "observed": "a10a5fbd0ab26c27336634b47287d4c4ce52577c1e924e818d51ae832465bcca"
+  },
+  {
+    "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-ar",
+    "expected": "e4566632f15d92d1599010d128a3d7ccc36689e8c558726b9ce2aea16bc8cca0",
+    "observed": "e4566632f15d92d1599010d128a3d7ccc36689e8c558726b9ce2aea16bc8cca0"
+  },
+  {
+    "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-nm",
+    "expected": "586f89fded862529f947238ff5d914d32c4d1ea583d0061ab2ad8c6329edb23b",
+    "observed": "586f89fded862529f947238ff5d914d32c4d1ea583d0061ab2ad8c6329edb23b"
+  },
+  {
+    "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-objcopy",
+    "expected": "24a5b155b76201ac9b7c885e8b2e0d16155d3a9b13cf3e22f12d316e73a0c034",
+    "observed": "24a5b155b76201ac9b7c885e8b2e0d16155d3a9b13cf3e22f12d316e73a0c034"
+  },
+  {
+    "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-objdump",
+    "expected": "976e09f09995240271375a3ab73bd012c236eae4db509bc09041b8efc3ae6208",
+    "observed": "976e09f09995240271375a3ab73bd012c236eae4db509bc09041b8efc3ae6208"
+  },
+  {
+    "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-ranlib",
+    "expected": "59e7bd690ca0a7c227ec06f2d0edac4108f77209c3d532d513fca879f2f551b6",
+    "observed": "59e7bd690ca0a7c227ec06f2d0edac4108f77209c3d532d513fca879f2f551b6"
+  },
+  {
+    "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-readelf",
+    "expected": "c0b7cb94c225b2ac723788ce94ab01539985edc52dab08c66999851e34c8d2e1",
+    "observed": "c0b7cb94c225b2ac723788ce94ab01539985edc52dab08c66999851e34c8d2e1"
+  },
+  {
+    "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-strip",
+    "expected": "10c39de3dadc0bdf85ef9ca81dd523d239361f338ed5e762b9682e7c7c7f344b",
+    "observed": "10c39de3dadc0bdf85ef9ca81dd523d239361f338ed5e762b9682e7c7c7f344b"
+  },
+  {
+    "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/bison",
+    "expected": "1b69eccf2120221423eec30dc039ea71ec81d230af3b5992596054d248b01bbb",
+    "observed": "1b69eccf2120221423eec30dc039ea71ec81d230af3b5992596054d248b01bbb"
+  },
+  {
+    "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/flex",
+    "expected": "2e5222b919e9ec50c4e4e5995202cb51ebd2cdd59196f0af9782a3c69643a718",
+    "observed": "2e5222b919e9ec50c4e4e5995202cb51ebd2cdd59196f0af9782a3c69643a718"
+  },
+  {
+    "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/bc",
+    "expected": "cf072a005041160fe3c3e4142bb18789ad3ce08d8e74bae410b8d3620d1ec175",
+    "observed": "cf072a005041160fe3c3e4142bb18789ad3ce08d8e74bae410b8d3620d1ec175"
+  },
+  {
+    "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/m4",
+    "expected": "d64fc0f8671e6fe33c783df4490ffae67b2ec9148f352fd624c6b08ea7bbd390",
+    "observed": "d64fc0f8671e6fe33c783df4490ffae67b2ec9148f352fd624c6b08ea7bbd390"
+  },
+  {
+    "path": "/usr/bin/aarch64-linux-gnu-gcc-14",
+    "expected": "fb051a6c58961fb6aec758acf50d7d0375eecff740d0706388092829e3fb7a41",
+    "observed": "fb051a6c58961fb6aec758acf50d7d0375eecff740d0706388092829e3fb7a41"
+  },
+  {
+    "path": "/usr/bin/make",
+    "expected": "442d0d9908e6e1968a2e1f9a82aad5231ff6b02deb3071ce38750e2e2f7a2a45",
+    "observed": "442d0d9908e6e1968a2e1f9a82aad5231ff6b02deb3071ce38750e2e2f7a2a45"
+  },
+  {
+    "path": "/usr/bin/aarch64-linux-gnu-as",
+    "expected": "6d47317c37bd8596c9dcf0e3dd03185065dc6dd58cdc61e861fda7b9150e720a",
+    "observed": "6d47317c37bd8596c9dcf0e3dd03185065dc6dd58cdc61e861fda7b9150e720a"
+  },
+  {
+    "path": "/usr/bin/aarch64-linux-gnu-ld.bfd",
+    "expected": "5a284e435cdf41bc05d93f0683da12b8a42608b93c79e187e7d03fab6a22ddf4",
+    "observed": "5a284e435cdf41bc05d93f0683da12b8a42608b93c79e187e7d03fab6a22ddf4"
+  },
+  {
+    "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/libexec/gcc-cross/i686-linux-gnu/14/cc1",
+    "expected": "21590a66c5b3b39e7b89bfb806952e1bf803f11f2a0617b2fda603b0045530af",
+    "observed": "21590a66c5b3b39e7b89bfb806952e1bf803f11f2a0617b2fda603b0045530af"
+  }
+]

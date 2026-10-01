@@ -1,0 +1,19 @@
+test_changing_log_bytes_are_explicitly_unverified (test_decode_capture.DecodeTests.test_changing_log_bytes_are_explicitly_unverified) ... ok
+test_duplicate_label_is_rejected (test_decode_capture.DecodeTests.test_duplicate_label_is_rejected) ... ok
+test_hash_and_size_are_verified (test_decode_capture.DecodeTests.test_hash_and_size_are_verified) ... ok
+test_invalid_base64_is_rejected (test_decode_capture.DecodeTests.test_invalid_base64_is_rejected) ... ok
+test_path_traversal_label_is_rejected (test_decode_capture.DecodeTests.test_path_traversal_label_is_rejected) ... ok
+test_plus_in_real_boot_script_label_is_safe (test_decode_capture.DecodeTests.test_plus_in_real_boot_script_label_is_safe) ... ok
+test_source_mismatch_is_rejected (test_decode_capture.DecodeTests.test_source_mismatch_is_rejected) ... ok
+test_absolute_path_is_rejected (test_read_initramfs.InitramfsTests.test_absolute_path_is_rejected) ... ok
+test_corrupt_gzip_is_rejected (test_read_initramfs.InitramfsTests.test_corrupt_gzip_is_rejected) ... ok
+test_early_newc_then_padded_gzip_main (test_read_initramfs.InitramfsTests.test_early_newc_then_padded_gzip_main) ... ok
+test_nonempty_trailing_unknown_data_is_rejected (test_read_initramfs.InitramfsTests.test_nonempty_trailing_unknown_data_is_rejected) ... ok
+test_parent_path_is_rejected (test_read_initramfs.InitramfsTests.test_parent_path_is_rejected) ... ok
+test_truncated_header_is_rejected (test_read_initramfs.InitramfsTests.test_truncated_header_is_rejected) ... ok
+test_truncated_payload_is_rejected (test_read_initramfs.InitramfsTests.test_truncated_payload_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.004s
+
+OK

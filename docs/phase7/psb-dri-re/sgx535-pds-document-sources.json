@@ -1,0 +1,142 @@
+{
+  "schema": 1,
+  "target_filename": "Eurasia.3D Input Parameter Format.1.3.37a.SGX535 1.2.External.pdf",
+  "target_found": false,
+  "target_public_distribution": "UNVERIFIED",
+  "cache": "/tmp/sgx535-doc-hunt",
+  "records": [
+    {
+      "title": "PowerVR Insider OpenGL ES 2.x SGX SDK page",
+      "publisher": "Imagination Technologies",
+      "url": "https://web.archive.org/web/20080319032655id_/http://www.imgtec.com:80/powervr/insider/sdk/KhronosOpenGLES2xSGX.asp",
+      "original_url": "http://www.imgtec.com:80/powervr/insider/sdk/KhronosOpenGLES2xSGX.asp",
+      "capture_or_release_date": "2008-03-19 Wayback capture",
+      "retrieval_date": "2026-09-27",
+      "sha256": "b093a27b65c4b59be7f58909e7982de6fcaf28970c8d0d53612d707623202c9f",
+      "bytes": 21207,
+      "classification": "VERIFIED_HISTORICAL_PUBLIC_ARCHIVE",
+      "relevance_to_R3": "Public SDK landing page; no target title"
+    },
+    {
+      "title": "PowerVR Insider SDK download index",
+      "publisher": "Imagination Technologies",
+      "url": "https://web.archive.org/web/20080317214242id_/http://www.imgtec.com:80/powervr/insider/sdkdownloads/index.asp",
+      "original_url": "http://www.imgtec.com:80/powervr/insider/sdkdownloads/index.asp",
+      "capture_or_release_date": "2008-03-17 Wayback capture",
+      "retrieval_date": "2026-09-27",
+      "sha256": "6fa4b488bd5de962c8d8dd17b7ba3a20e1964e5df7daf3848b849be66c2c3891",
+      "bytes": 15760,
+      "classification": "VERIFIED_HISTORICAL_PUBLIC_ARCHIVE",
+      "relevance_to_R3": "LinuxOGLES2 login route; no target document"
+    },
+    {
+      "title": "PowerVR Insider SDK login page",
+      "publisher": "Imagination Technologies",
+      "url": "https://web.archive.org/web/20090413233538id_/http://www.imgtec.com:80/PowerVR/insider/powervr-login.asp?SDK=LinuxOGLES2",
+      "original_url": "http://www.imgtec.com:80/PowerVR/insider/powervr-login.asp?SDK=LinuxOGLES2",
+      "capture_or_release_date": "2009-04-13 Wayback capture",
+      "retrieval_date": "2026-09-27",
+      "sha256": "7747648ce981839791c390de8236cb38ddc7094e2b7af06a90b0f28f80144a4f",
+      "bytes": 13776,
+      "classification": "VERIFIED_HISTORICAL_PUBLIC_ARCHIVE",
+      "relevance_to_R3": "Login route only; no downloadable package URL"
+    },
+    {
+      "title": "PowerVR Insider legacy SDK listing",
+      "publisher": "Imagination Technologies",
+      "url": "https://web.archive.org/web/20120510031036id_/http://www.imgtec.com:80/PowerVR/insider/sdkdownloads/legacy.asp",
+      "original_url": "http://www.imgtec.com:80/PowerVR/insider/sdkdownloads/legacy.asp",
+      "capture_or_release_date": "2012-05-10 Wayback capture",
+      "retrieval_date": "2026-09-27",
+      "sha256": "ad7418f3bfd60794b6e820645e15d669dd2992869d17722265f549ec12c3d09e",
+      "bytes": 23157,
+      "classification": "VERIFIED_HISTORICAL_PUBLIC_ARCHIVE",
+      "relevance_to_R3": "No target document title"
+    },
+    {
+      "title": "PowerVR Insider SDK Documentation index",
+      "publisher": "Imagination Technologies",
+      "url": "https://web.archive.org/web/20110626090624id_/http://www.imgtec.com:80/powervr/insider/powervr-sdk-docs.asp",
+      "original_url": "http://www.imgtec.com:80/powervr/insider/powervr-sdk-docs.asp",
+      "capture_or_release_date": "2011-06-26 Wayback capture",
+      "retrieval_date": "2026-09-27",
+      "sha256": "a4ae00bf50efd9ac2b28a1799e041f218382ca011b07d8e27f821cea05547252",
+      "bytes": 21379,
+      "classification": "VERIFIED_HISTORICAL_PUBLIC_ARCHIVE",
+      "relevance_to_R3": "11 public PDF links; no target title"
+    },
+    {
+      "title": "PowerVR Insider SDK Documentation index",
+      "publisher": "Imagination Technologies",
+      "url": "https://web.archive.org/web/20120103200626id_/http://www.imgtec.com:80/powervr/insider/powervr-sdk-docs.asp",
+      "original_url": "http://www.imgtec.com:80/powervr/insider/powervr-sdk-docs.asp",
+      "capture_or_release_date": "2012-01-03 Wayback capture",
+      "retrieval_date": "2026-09-27",
+      "sha256": "fdc011342ed6a30ef10965743991083e6e0f1c97c156313a09c5005033e6fa03",
+      "bytes": 31144,
+      "classification": "VERIFIED_HISTORICAL_PUBLIC_ARCHIVE",
+      "relevance_to_R3": "22 public PDF links; no target title"
+    },
+    {
+      "title": "PowerVR Series 5 SGX Architecture Guide for Developers v1.0.13",
+      "publisher": "Imagination Technologies",
+      "url": "https://web.archive.org/web/20120417030743id_/http://www.imgtec.com:80/powervr/insider/docs/PowerVR%20Series%205.SGX%20Architecture%20Guide%20for%20Developers.1.0.13.External.pdf",
+      "original_url": "http://www.imgtec.com:80/powervr/insider/docs/PowerVR%20Series%205.SGX%20Architecture%20Guide%20for%20Developers.1.0.13.External.pdf",
+      "capture_or_release_date": "2011-11-01 issue; 2012-04-17 Wayback capture",
+      "retrieval_date": "2026-09-27",
+      "sha256": "2ef561fc5486a462a3b39eef2579dd58f207eb390778e2b1112ddf3d7fc14fbb",
+      "bytes": 3154656,
+      "classification": "VERIFIED_HISTORICAL_PUBLIC_ARCHIVE",
+      "relevance_to_R3": "Public front matter; POWERVR SDK REL_2.10@863987; no PDS/DS0/DS1/Eurasia; not target PDF"
+    },
+    {
+      "title": "Wayback CDX public-documents subtree result",
+      "publisher": "Internet Archive",
+      "url": "https://web.archive.org/cdx/search/cdx?url=www.imgtec.com%2Fpowervr%2Finsider%2Fdocs%2F&matchType=prefix&output=json&fl=timestamp%2Coriginal%2Cmimetype%2Cstatuscode&collapse=urlkey&limit=300",
+      "original_url": null,
+      "capture_or_release_date": "query 2026-09-27",
+      "retrieval_date": "2026-09-27",
+      "sha256": "3b4c131760a5b72eb1a1978c23c46674f6b272216b794630c7fb1235f30e367b",
+      "bytes": 5425,
+      "classification": "ARCHIVE_INDEX_ONLY",
+      "relevance_to_R3": "36 URL keys; 23 successful PDF captures; no target title"
+    },
+    {
+      "title": "Wayback CDX historical download filename result",
+      "publisher": "Internet Archive",
+      "url": "https://web.archive.org/cdx/search/cdx?url=www.imgtec.com%2Fpowervr%2Finsider%2F&matchType=prefix&output=json&fl=timestamp%2Coriginal%2Cstatuscode&collapse=urlkey&filter=original%3A.%2A%28zip%7Cgz%7Cexe%29%24&to=2011&limit=100",
+      "original_url": null,
+      "capture_or_release_date": "query 2026-09-27",
+      "retrieval_date": "2026-09-27",
+      "sha256": "2d968f87d953d4e5c38b0de6b5a2b1441043424ce4cd58af011f3b072ffad9af",
+      "bytes": 6444,
+      "classification": "ARCHIVE_INDEX_ONLY",
+      "relevance_to_R3": "2007 SGX SDK filenames but SDK archive paths captured as 404"
+    },
+    {
+      "title": "pvr-pi modified SDK Git tree",
+      "publisher": "anonymousjustice",
+      "url": "https://api.github.com/repos/anonymousjustice/pvr-pi/git/trees/master?recursive=1",
+      "original_url": null,
+      "capture_or_release_date": "retrieved 2026-09-27; original SDK release unknown",
+      "retrieval_date": "2026-09-27",
+      "sha256": "1b24d70d94130f78f87d769a5db3e57374d0261c8e056e8769c45a3a8402c50a",
+      "bytes": 857529,
+      "classification": "PUBLIC_MIRROR_UNQUALIFIED_FOR_TARGET",
+      "relevance_to_R3": "3043 entries; no target/encoder pathname; modified package"
+    },
+    {
+      "title": "Third-party copy of Series5 architecture guide",
+      "publisher": "anonymousjustice",
+      "url": "https://api.github.com/repos/anonymousjustice/pvr-pi/git/blobs/a9aac1dab40b016977d947978cf267174b67ba90",
+      "original_url": null,
+      "capture_or_release_date": "retrieved 2026-09-27; issue 2011-11-01",
+      "retrieval_date": "2026-09-27",
+      "sha256": "db334c948ef0eac9db9c8be26e1713881dd21b61d733c302d08a54d6db714d60",
+      "bytes": 3152279,
+      "classification": "PUBLIC_MIRROR_UNQUALIFIED_FOR_TARGET",
+      "relevance_to_R3": "Public-marked PDF text matches official archived guide; byte hash differs; no R3 rules"
+    }
+  ],
+  "archive_limits": "CDX and web search indexes are partial; no negative result proves historical absence; timed-out requests are not counted as successful negative searches."
+}

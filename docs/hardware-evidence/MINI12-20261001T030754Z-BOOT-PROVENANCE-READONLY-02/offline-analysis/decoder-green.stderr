@@ -1,0 +1,12 @@
+test_changing_log_bytes_are_explicitly_unverified (test_decode_capture.DecodeTests.test_changing_log_bytes_are_explicitly_unverified) ... ok
+test_duplicate_label_is_rejected (test_decode_capture.DecodeTests.test_duplicate_label_is_rejected) ... ok
+test_hash_and_size_are_verified (test_decode_capture.DecodeTests.test_hash_and_size_are_verified) ... ok
+test_invalid_base64_is_rejected (test_decode_capture.DecodeTests.test_invalid_base64_is_rejected) ... ok
+test_path_traversal_label_is_rejected (test_decode_capture.DecodeTests.test_path_traversal_label_is_rejected) ... ok
+test_plus_in_real_boot_script_label_is_safe (test_decode_capture.DecodeTests.test_plus_in_real_boot_script_label_is_safe) ... ok
+test_source_mismatch_is_rejected (test_decode_capture.DecodeTests.test_source_mismatch_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.002s
+
+OK

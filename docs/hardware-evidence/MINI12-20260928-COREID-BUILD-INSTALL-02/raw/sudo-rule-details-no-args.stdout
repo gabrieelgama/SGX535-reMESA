@@ -1,0 +1,6 @@
+Sudoers entry: /etc/sudoers.d/sgx535-core-id
+    RunAsUsers: root
+    Options: !setenv, !authenticate
+    Commands:
+	/usr/local/libexec/sgx535-core-id ""
+    Matched: /usr/local/libexec/sgx535-core-id

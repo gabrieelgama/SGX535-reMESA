@@ -1,0 +1,5 @@
+Command: python3 -m unittest discover -s tools/psb-dri-re -p 'test_*.py'
+Working directory: /home/gama/sgx535-gfx
+Exit: 0
+Ran 193 tests in 11.443s
+OK

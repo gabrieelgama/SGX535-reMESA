@@ -1,0 +1,7 @@
+934bd97164c803e52d96528b9ec464d587a6a68e2f671aa255407657cc5342cf  /home/gama/sgx535-frozen-seq1-candidate.ko
+758076e2f7e20d0eff2df565d4440c8b3fd3f846922427e770f55ebc472edccf  /home/gama/sgx535-frozen-seq1-client
+5.10.240-antix.1-486-smp SMP mod_unload modversions 486 
+  Class:                             ELF32
+  Machine:                           Intel 80386
+  Class:                             ELF32
+  Machine:                           Intel 80386

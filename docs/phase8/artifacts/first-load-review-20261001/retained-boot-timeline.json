@@ -1,0 +1,114 @@
+{
+  "source": {
+    "path": "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260927-H0/raw/operator-dmesg-mini12.txt",
+    "size": 45575,
+    "sha256": "72974ea9c86ebf06b3af1ce392cac2023d56b8335724e1907b35e25e484ce9ec"
+  },
+  "provenance": "operator-provided retained H0 dmesg; not fresh/direct root observation",
+  "lines": [
+    {
+      "line": 138,
+      "text": "[    0.083195] Console: colour VGA+ 80x25"
+    },
+    {
+      "line": 302,
+      "text": "[    0.339720] pci 0000:00:02.0: vgaarb: setting as boot VGA device"
+    },
+    {
+      "line": 389,
+      "text": "[    0.488919] Trying to unpack rootfs image as initramfs..."
+    },
+    {
+      "line": 390,
+      "text": "[    2.909566] Freeing initrd memory: 49672K"
+    },
+    {
+      "line": 497,
+      "text": "[    4.112868] Run /init as init process"
+    },
+    {
+      "line": 505,
+      "text": "[    4.580350] udevd[144]: starting version 3.2.14"
+    },
+    {
+      "line": 508,
+      "text": "[    4.587207] udevd[145]: starting eudev-3.2.14"
+    },
+    {
+      "line": 553,
+      "text": "[    4.916109] r8169 0000:02:00.0 eth0: RTL8102e/RTL8103e, 00:21:70:ce:1c:91, XID 24a, IRQ 16"
+    },
+    {
+      "line": 592,
+      "text": "[   12.122778] EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)"
+    },
+    {
+      "line": 594,
+      "text": "[   17.386963] udevd[463]: starting version 3.2.14"
+    },
+    {
+      "line": 595,
+      "text": "[   17.935287] udevd[463]: GOTO 'alsa_restore_std' has no matching label in: '/usr/lib/udev/rules.d/90-alsa-restore.rules'"
+    },
+    {
+      "line": 596,
+      "text": "[   17.935505] udevd[463]: GOTO 'alsa_restore_std' has no matching label in: '/usr/lib/udev/rules.d/90-alsa-restore.rules'"
+    },
+    {
+      "line": 597,
+      "text": "[   17.946993] udevd[464]: starting eudev-3.2.14"
+    },
+    {
+      "line": 623,
+      "text": "[   25.869134] fbcon: gma500drmfb (fb0) is primary device"
+    },
+    {
+      "line": 624,
+      "text": "[   25.927754] gma500 0000:00:02.0: BL bug: Reg 00000000 save 00000000"
+    },
+    {
+      "line": 632,
+      "text": "[   26.144344] Console: switching to colour frame buffer device 160x50"
+    },
+    {
+      "line": 635,
+      "text": "[   26.168671] gma500 0000:00:02.0: [drm] fb0: gma500drmfb frame buffer device"
+    },
+    {
+      "line": 636,
+      "text": "[   26.177704] gma500 0000:00:02.0: Backlight lvds set brightness 7a120000"
+    },
+    {
+      "line": 637,
+      "text": "[   26.179301] [drm] Initialized gma500 1.0.0 20140314 for 0000:00:02.0 on minor 0"
+    },
+    {
+      "line": 638,
+      "text": "[   26.285493] gma500 0000:00:02.0: Backlight lvds set brightness 7a120000"
+    },
+    {
+      "line": 664,
+      "text": "[   36.802389] udevd[1365]: starting version 3.2.14"
+    },
+    {
+      "line": 665,
+      "text": "[   36.826505] udevd[1365]: GOTO 'alsa_restore_std' has no matching label in: '/usr/lib/udev/rules.d/90-alsa-restore.rules'"
+    },
+    {
+      "line": 666,
+      "text": "[   36.829752] udevd[1365]: GOTO 'alsa_restore_std' has no matching label in: '/usr/lib/udev/rules.d/90-alsa-restore.rules'"
+    },
+    {
+      "line": 667,
+      "text": "[   36.838426] udevd[1365]: starting eudev-3.2.14"
+    },
+    {
+      "line": 670,
+      "text": "[   47.324091] r8169 0000:02:00.0 eth0: Link is Down"
+    },
+    {
+      "line": 672,
+      "text": "[   63.513151] gma500 0000:00:02.0: Backlight lvds set brightness 7a120000"
+    }
+  ]
+}

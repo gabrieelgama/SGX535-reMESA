@@ -1,0 +1,194 @@
+ M docs/evidence-matrix.csv
+ M docs/hardware-evidence/TVZ-001/README.md
+ M docs/phase7/7.0-gate.md
+ M docs/phase7/7.0-ownership-locking.md
+ M docs/phase7/README.md
+ M docs/phase7/psb-dri-re/README.md
+ M docs/phase7/psb-dri-re/bounded-path-closure.md
+ M docs/phase7/psb-dri-re/format-readiness.md
+ M docs/phase7/psb-dri-re/frozen-draw-blockers.md
+ M docs/phase7/psb-dri-re/frozen-draw-formats.csv
+ M docs/phase7/psb-dri-re/frozen-draw-objects.md
+ M docs/phase7/psb-dri-re/frozen-draw-static-decision.md
+ M docs/phase7/psb-dri-re/frozen-fragment-compiler-checkpoint.md
+ M docs/phase7/psb-dri-re/frozen-fragment-link-checkpoint.md
+ M docs/phase7/psb-dri-re/frozen-fragment-symbolic-trace.md
+ M docs/phase7/psb-dri-re/function-map.csv
+ M docs/phase7/psb-dri-re/unknowns.md
+ M docs/phase7/source-provenance.md
+ M docs/phase7/xpsb-re/function-map.csv
+ M docs/unknowns.md
+ M tools/psb-dri-re/README.md
+ M tools/psb-dri-re/targets.txt
+ M tools/xpsb-re/targets.txt
+?? docs/hardware-evidence/MINI12-20260927-H0/
+?? docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/
+?? docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-01/
+?? docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/
+?? docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/
+?? docs/hardware-evidence/MINI12-20260928-COREID-DMI-REFUSAL-01/
+?? docs/hardware-evidence/MINI12-20260928-COREID-HEADER-PREREQ-01/
+?? docs/hardware-evidence/MINI12-20260928-COREID-OPERATOR-01/
+?? docs/hardware-evidence/MINI12-20260928-FIRST-MMIO-01/
+?? docs/hardware-evidence/MINI12-20260928-GATEB-P1/
+?? docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/
+?? docs/hardware-evidence/MINI12-20260930-CONSOLE-RELEASE-01/
+?? docs/hardware-evidence/MINI12-20260930-CREDENTIAL-TRANSPORT-TEST/
+?? docs/hardware-evidence/MINI12-20260930-GMA500-REFCOUNT-READONLY-01/
+?? docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-01/
+?? docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-02/
+?? docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-03/
+?? docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-04/
+?? docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-05/
+?? docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-06/
+?? docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-07/
+?? docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/
+?? docs/hardware-evidence/MINI12-20260930-TRANSITION-INVENTORY/
+?? docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-01/
+?? docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/
+?? docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/
+?? docs/hardware-evidence/MINI12-20260930-TRIANGLE-PREFLIGHT/
+?? docs/hardware-evidence/MINI12-20261001T025947Z-BOOT-PROVENANCE-READONLY-01/
+?? docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/
+?? docs/phase7/7.0-installed-lifetime.md
+?? docs/phase7/7.0-installed-pm-exclusion.md
+?? docs/phase7/psb-dri-re/CODEX-HANDOFF-chronology.md
+?? docs/phase7/psb-dri-re/CODEX-HANDOFF.md
+?? docs/phase7/psb-dri-re/cleanroom-backing-contract.md
+?? docs/phase7/psb-dri-re/cleanroom-backing-transitions.csv
+?? docs/phase7/psb-dri-re/cleanroom-final-closure.md
+?? docs/phase7/psb-dri-re/cleanroom-final-rules.csv
+?? docs/phase7/psb-dri-re/cleanroom-pds-image.csv
+?? docs/phase7/psb-dri-re/cleanroom-publication-domains.csv
+?? docs/phase7/psb-dri-re/cleanroom-source-domains.csv
+?? docs/phase7/psb-dri-re/final-rules-external-evidence.md
+?? docs/phase7/psb-dri-re/final-rules-external-search.csv
+?? docs/phase7/psb-dri-re/final-rules-external-sources.json
+?? docs/phase7/psb-dri-re/frozen-fragment-exact-output.md
+?? docs/phase7/psb-dri-re/frozen-fragment-link-progress.md
+?? docs/phase7/psb-dri-re/frozen-triangle-auxiliary-domains.csv
+?? docs/phase7/psb-dri-re/frozen-triangle-auxiliary.csv
+?? docs/phase7/psb-dri-re/frozen-triangle-bindings.csv
+?? docs/phase7/psb-dri-re/frozen-triangle-blockers.csv
+?? docs/phase7/psb-dri-re/frozen-triangle-bootstrap-prerequisites.csv
+?? docs/phase7/psb-dri-re/frozen-triangle-bos.csv
+?? docs/phase7/psb-dri-re/frozen-triangle-burn-down.md
+?? docs/phase7/psb-dri-re/frozen-triangle-closure-obligations.csv
+?? docs/phase7/psb-dri-re/frozen-triangle-later-waits.csv
+?? docs/phase7/psb-dri-re/frozen-triangle-load-paths.csv
+?? docs/phase7/psb-dri-re/frozen-triangle-objects.csv
+?? docs/phase7/psb-dri-re/frozen-triangle-pds-families.csv
+?? docs/phase7/psb-dri-re/frozen-triangle-publication-edges.csv
+?? docs/phase7/psb-dri-re/frozen-triangle-publication.csv
+?? docs/phase7/psb-dri-re/frozen-triangle-relocations.csv
+?? docs/phase7/psb-dri-re/frozen-triangle-rule-discriminators.csv
+?? docs/phase7/psb-dri-re/frozen-triangle-service.csv
+?? docs/phase7/psb-dri-re/frozen-triangle-source-checks.json
+?? docs/phase7/psb-dri-re/frozen-triangle-spec.md
+?? docs/phase7/psb-dri-re/frozen-triangle-target.csv
+?? docs/phase7/psb-dri-re/frozen-triangle-validation.csv
+?? docs/phase7/psb-dri-re/frozen-triangle-wire-relocations.csv
+?? docs/phase7/psb-dri-re/pds-abi-pairing.csv
+?? docs/phase7/psb-dri-re/pds-allocation-callgraph.csv
+?? docs/phase7/psb-dri-re/pds-backing-acquisition.json
+?? docs/phase7/psb-dri-re/pds-backing-candidates.csv
+?? docs/phase7/psb-dri-re/pds-backing-file-comparison.csv
+?? docs/phase7/psb-dri-re/pds-backing-paths.csv
+?? docs/phase7/psb-dri-re/pds-backing-provider.md
+?? docs/phase7/psb-dri-re/pds-bit-influence.csv
+?? docs/phase7/psb-dri-re/pds-buffer-byte-provenance.csv
+?? docs/phase7/psb-dri-re/pds-buffer-lifecycle.md
+?? docs/phase7/psb-dri-re/pds-comparative-encoding.md
+?? docs/phase7/psb-dri-re/pds-differential-matrix.csv
+?? docs/phase7/psb-dri-re/pds-experiment43-retained-stores.csv
+?? docs/phase7/psb-dri-re/pds-experiment43.md
+?? docs/phase7/psb-dri-re/pds-field-constraints.csv
+?? docs/phase7/psb-dri-re/pds-first-use-timeline.csv
+?? docs/phase7/psb-dri-re/pds-hypotheses.md
+?? docs/phase7/psb-dri-re/pds-instruction-corpus.csv
+?? docs/phase7/psb-dri-re/pds-launch-count-corpus.csv
+?? docs/phase7/psb-dri-re/pds-launch-count.md
+?? docs/phase7/psb-dri-re/pds-launch-state-coverage.md
+?? docs/phase7/psb-dri-re/pds-launch-state.csv
+?? docs/phase7/psb-dri-re/pds-readset-search-ledger.md
+?? docs/phase7/psb-dri-re/pds-reuse-predecessors.csv
+?? docs/phase7/psb-dri-re/pds-selected-source-availability.md
+?? docs/phase7/psb-dri-re/pds-semantic-corpus.csv
+?? docs/phase7/psb-dri-re/pds-stack-pairing.md
+?? docs/phase7/psb-dri-re/pds-target-provider-discriminators.csv
+?? docs/phase7/psb-dri-re/pds-target-provider-identity.md
+?? docs/phase7/psb-dri-re/selected-pds-hard-boundary.md
+?? docs/phase7/psb-dri-re/series5-pds-external-evidence.md
+?? docs/phase7/psb-dri-re/sgx535-pds-document-hunt.csv
+?? docs/phase7/psb-dri-re/sgx535-pds-document-hunt.md
+?? docs/phase7/psb-dri-re/sgx535-pds-document-sources.json
+?? docs/phase8/
+?? kernel/
+?? tools/psb-dri-re/__pycache__/
+?? tools/psb-dri-re/cleanroom_pds_image.py
+?? tools/psb-dri-re/frozen_first_load_image.py
+?? tools/psb-dri-re/frozen_first_load_procedure.py
+?? tools/psb-dri-re/frozen_fixed_io.c
+?? tools/psb-dri-re/frozen_fixed_io.h
+?? tools/psb-dri-re/frozen_fixed_service.c
+?? tools/psb-dri-re/frozen_fixed_service.h
+?? tools/psb-dri-re/frozen_kernel_contract.c
+?? tools/psb-dri-re/frozen_kernel_contract.h
+?? tools/psb-dri-re/frozen_kernel_initial.inc
+?? tools/psb-dri-re/frozen_kernel_relocations.inc
+?? tools/psb-dri-re/frozen_module_versions.py
+?? tools/psb-dri-re/frozen_scene_owner.c
+?? tools/psb-dri-re/frozen_scene_owner.h
+?? tools/psb-dri-re/frozen_triangle_bo.py
+?? tools/psb-dri-re/frozen_triangle_closure.py
+?? tools/psb-dri-re/frozen_triangle_contracts.py
+?? tools/psb-dri-re/frozen_triangle_dry_run.py
+?? tools/psb-dri-re/frozen_triangle_image.py
+?? tools/psb-dri-re/frozen_triangle_one_shot.c
+?? tools/psb-dri-re/frozen_va_pool.c
+?? tools/psb-dri-re/frozen_va_pool.h
+?? tools/psb-dri-re/generate_frozen_kernel_initial.py
+?? tools/psb-dri-re/mini12_sudo_transport.py
+?? tools/psb-dri-re/pds_abi_layout_check.py
+?? tools/psb-dri-re/pds_backing_audit.py
+?? tools/psb-dri-re/pds_byte_sweep.py
+?? tools/psb-dri-re/pds_experiment43_survey.py
+?? tools/psb-dri-re/pds_field_constraints.py
+?? tools/psb-dri-re/pds_first_use_model.py
+?? tools/psb-dri-re/pds_launch_count_constraints.py
+?? tools/psb-dri-re/pds_launch_state_check.py
+?? tools/psb-dri-re/pds_literal_survey.py
+?? tools/psb-dri-re/pds_semantic_constraints.py
+?? tools/psb-dri-re/test_cleanroom_pds_image.py
+?? tools/psb-dri-re/test_frozen_first_load.c
+?? tools/psb-dri-re/test_frozen_first_load.py
+?? tools/psb-dri-re/test_frozen_first_load_image.py
+?? tools/psb-dri-re/test_frozen_first_load_procedure.py
+?? tools/psb-dri-re/test_frozen_fixed_io.c
+?? tools/psb-dri-re/test_frozen_fixed_io.py
+?? tools/psb-dri-re/test_frozen_fixed_service.c
+?? tools/psb-dri-re/test_frozen_fixed_service.py
+?? tools/psb-dri-re/test_frozen_irq_lifecycle.c
+?? tools/psb-dri-re/test_frozen_irq_lifecycle.py
+?? tools/psb-dri-re/test_frozen_kernel_contract.c
+?? tools/psb-dri-re/test_frozen_kernel_contract.py
+?? tools/psb-dri-re/test_frozen_kernel_integration.py
+?? tools/psb-dri-re/test_frozen_module_versions.py
+?? tools/psb-dri-re/test_frozen_scene_owner.c
+?? tools/psb-dri-re/test_frozen_scene_owner.py
+?? tools/psb-dri-re/test_frozen_triangle_bo.py
+?? tools/psb-dri-re/test_frozen_triangle_closure.py
+?? tools/psb-dri-re/test_frozen_triangle_contracts.py
+?? tools/psb-dri-re/test_frozen_triangle_dry_run.py
+?? tools/psb-dri-re/test_frozen_triangle_image.py
+?? tools/psb-dri-re/test_frozen_triangle_one_shot.py
+?? tools/psb-dri-re/test_frozen_va_pool.c
+?? tools/psb-dri-re/test_frozen_va_pool.py
+?? tools/psb-dri-re/test_mini12_readonly_capture.py
+?? tools/psb-dri-re/test_mini12_sudo_transport.py
+?? tools/psb-dri-re/test_pds_launch_count_constraints.py
+?? tools/psb-dri-re/test_pds_launch_state_check.py
+?? tools/psb-dri-re/verify_frozen_first_load_image.py
+?? tools/sgx535-probe/privileged-core-id-dmi-fix/
+?? tools/sgx535-probe/privileged-core-id/
+?? tools/sgx535-probe/privileged-core-revision/

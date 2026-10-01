@@ -1,0 +1,15 @@
+--- /home/gama/sgx535-gfx/docs/phase8/artifacts/candidate-01-20260930/fixed-inputs/frozen_kernel_contract.c	2026-09-30 23:01:41.807415219 +0000
++++ /home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c	2026-09-30 23:22:13.279414749 +0000
+@@ -157,7 +157,11 @@
+         }
+         if (bo->gpu_va > 0xffffffffULL)
+             return SGX535_FROZEN_BAD_ADDRESS;
+-        if ((bo->gpu_va % required->alignment) != 0)
++        /* Fixed alignments are powers of two. Avoid a 64-bit division
++         * runtime dependency on i386, and reject contract drift explicitly. */
++        if (required->alignment == 0 ||
++            (required->alignment & (required->alignment - 1U)) != 0 ||
++            (bo->gpu_va & (required->alignment - 1U)) != 0)
+             return SGX535_FROZEN_BAD_ALIGNMENT;
+         if (bo->domain == SGX535_DOMAIN_PDS) {
+             lower = 0x20000000ULL;

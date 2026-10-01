@@ -1,0 +1,16 @@
+
+**Newest offline image qualification (2026-10-01):**
+[Experimental first-load image](experimental-first-load-image-qualification.md)
+and its [evidence](artifacts/experimental-first-load-01-20261001/README.md) now
+establish construction/guards/pre-udev ordering, exact dependency CRC coverage,
+stock preservation and non-saving GRUB text **PASS OFFLINE**. The final image is
+50,804,481 bytes, SHA-256
+`4ac6bd1bed7dbf53b3653037f3e6e757160672560176b1938a63488636efaa71`;
+two corrected builds are byte-identical. **249 tests, zero skips; 34 new image
+checks; 14 boot-analysis tests; three UBSan harnesses PASS.** No module rebuilt,
+no target contact/mutation, no image/entry installed, no SGX fire. Actual early
+first ownership, display/SSH and reset/fallback remain UNKNOWN. The next step is
+OFFLINE exact staging/experimental-boot/reset-to-stock recovery review, followed
+by separate authorization if justified. **Gate B BLOCKED; whitelist `[]`.**
+Earlier “no image constructed”/next-step statements below are historical.
+

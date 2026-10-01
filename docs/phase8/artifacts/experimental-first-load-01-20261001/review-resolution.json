@@ -1,0 +1,18 @@
+{
+  "reviewer": "first_load_image_review",
+  "critical": 0,
+  "important": [
+    {
+      "finding": "post-load handler not tied to PCI IRQ16",
+      "resolution": "Separate any-line stale-handler predicate before load and exact IRQ16 predicate after load; actual helpers and emitted hook tested",
+      "test_evidence": "metadata-review-red.stderr / final-focused.stderr"
+    },
+    {
+      "finding": "verifier could accept nonexecutable init or colliding/hardlinked added records",
+      "resolution": "validate retained init metadata and deterministic disjoint new inode/type/mode/nlink/dev/owner/mtime records; actual-image mutations rejected",
+      "test_evidence": "metadata-review-red.stderr / negative-images/results.json"
+    }
+  ],
+  "new_review_required": false,
+  "no_target_contact": true
+}

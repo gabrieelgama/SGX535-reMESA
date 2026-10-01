@@ -1,0 +1,13 @@
+**Newest live first-load preflight (2026-10-01):**
+[Cycle01 result](first-load-cycle-01-result.md) records the separately authorized
+non-SGX cycle **STOPPED BEFORE STAGING**. Physical/operator prerequisites were
+confirmed. After local sudo authentication, the root read-only preflight verified
+stock identity/ownership/services but its kernel-health matcher refused three
+preexisting diagnostics. Complete fresh dmesg is identical to retained same-boot
+stock dmesg; this is an OFFLINE guard/baseline inconsistency, not evidence of a
+new SGX fault. No guard was waived or altered. No staging, experimental selection,
+reboot, module/service/PCI/VT mutation, fixed ioctl or SGX fire. Live first load
+and recovery remain UNKNOWN. **Gate B BLOCKED; whitelist `[]`; FIRST TRIANGLE
+NOT ATTEMPTED.** Next step: OFFLINE qualification of precise baseline-versus-fault
+health discrimination; no further target action in this stopped cycle.
+

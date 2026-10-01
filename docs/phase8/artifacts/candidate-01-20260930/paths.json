@@ -1,0 +1,8 @@
+{
+  "workspace": "/home/gama/sgx535-offline/candidate-01-20260930",
+  "module_staging": "/home/gama/sgx535-offline/candidate-01-20260930/module",
+  "qualified_source": "/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp",
+  "qualified_output": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output",
+  "candidate_path": null,
+  "failed_predecessor_output": "/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/output"
+}

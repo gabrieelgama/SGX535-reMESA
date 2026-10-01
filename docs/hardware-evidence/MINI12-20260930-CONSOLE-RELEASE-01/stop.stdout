@@ -1,0 +1,3 @@
+ok: down: /etc/runit/runsvdir/default/slimski: 0s, normally up
+SERVICE down: /etc/runit/runsvdir/default/slimski: 0s, normally up
+STOP_STAGE_PASS original-module refcount=1 vtcon0=0 vtcon1=1 no-graphics-holders

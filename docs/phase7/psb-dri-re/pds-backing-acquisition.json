@@ -1,0 +1,1043 @@
+[
+  {
+    "name": "lp-files-1381521.json",
+    "url": "https://api.launchpad.net/1.0/~gma500/+archive/ubuntu/ppa/+sourcepub/1381521?ws.op=sourceFileUrls",
+    "status": 200,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "bytes": 2,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "lp-files-1374937.json",
+    "url": "https://api.launchpad.net/1.0/~gma500/+archive/ubuntu/ppa/+sourcepub/1374937?ws.op=sourceFileUrls",
+    "status": 200,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "bytes": 2,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "lp-files-1381522.json",
+    "url": "https://api.launchpad.net/1.0/~gma500/+archive/ubuntu/ppa/+sourcepub/1381522?ws.op=sourceFileUrls",
+    "status": 200,
+    "sha256": "d3d592d283073e96e6ea37c829e06acac74855a390aaf90fd99994a9b078fa63",
+    "bytes": 311,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "lp-files-1309676.json",
+    "url": "https://api.launchpad.net/1.0/~gma500/+archive/ubuntu/ppa/+sourcepub/1309676?ws.op=sourceFileUrls",
+    "status": 200,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "bytes": 2,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "lp-files-1309150.json",
+    "url": "https://api.launchpad.net/1.0/~gma500/+archive/ubuntu/ppa/+sourcepub/1309150?ws.op=sourceFileUrls",
+    "status": 200,
+    "sha256": "04b3ac436794e4c3b62c405698a4cb4c78998383f7daaa9cb164a35b372a85cf",
+    "bytes": 319,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "lp-files-1261925.json",
+    "url": "https://api.launchpad.net/1.0/~gma500/+archive/ubuntu/ppa/+sourcepub/1261925?ws.op=sourceFileUrls",
+    "status": 200,
+    "sha256": "16c843dd13c643277800befc81ed378f3e26192b6bac9b0779466ee96e6eb7a2",
+    "bytes": 319,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "lp-files-1261385.json",
+    "url": "https://api.launchpad.net/1.0/~gma500/+archive/ubuntu/ppa/+sourcepub/1261385?ws.op=sourceFileUrls",
+    "status": 200,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "bytes": 2,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "lp-files-1183416.json",
+    "url": "https://api.launchpad.net/1.0/~gma500/+archive/ubuntu/ppa/+sourcepub/1183416?ws.op=sourceFileUrls",
+    "status": 200,
+    "sha256": "59a6a909b94eb9366bca88c8c722522b952e6c2f8ba258f7b7df05ad0acf96d4",
+    "bytes": 339,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "lp-files-1138145.json",
+    "url": "https://api.launchpad.net/1.0/~gma500/+archive/ubuntu/ppa/+sourcepub/1138145?ws.op=sourceFileUrls",
+    "status": 200,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "bytes": 2,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "lp-files-1135000.json",
+    "url": "https://api.launchpad.net/1.0/~gma500/+archive/ubuntu/ppa/+sourcepub/1135000?ws.op=sourceFileUrls",
+    "status": 200,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "bytes": 2,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "lp-files-1128095.json",
+    "url": "https://api.launchpad.net/1.0/~gma500/+archive/ubuntu/ppa/+sourcepub/1128095?ws.op=sourceFileUrls",
+    "status": 200,
+    "sha256": "cddb788ff73077e404ef6ca81e0276c413fb656b923e650405823d1b82987e60",
+    "bytes": 462,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "lp-files-1314212.json",
+    "url": "https://api.launchpad.net/1.0/~gma500/+archive/ubuntu/ppa/+sourcepub/1314212?ws.op=sourceFileUrls",
+    "status": 200,
+    "sha256": "f07b803cebee5dc66685642fd638bbccb335cb874d1bd8fd425d040411f4d67f",
+    "bytes": 452,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "lp-files-1314208.json",
+    "url": "https://api.launchpad.net/1.0/~gma500/+archive/ubuntu/ppa/+sourcepub/1314208?ws.op=sourceFileUrls",
+    "status": 200,
+    "sha256": "3a84a06305e39836fe9a4650a3c89c0b8e335de982127b5aeb7749afab5e3d01",
+    "bytes": 440,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "lp-files-1522810.json",
+    "url": "https://api.launchpad.net/1.0/~gma500/+archive/ubuntu/fix/+sourcepub/1522810?ws.op=sourceFileUrls",
+    "status": 200,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "bytes": 2,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "lp-files-1522807.json",
+    "url": "https://api.launchpad.net/1.0/~gma500/+archive/ubuntu/fix/+sourcepub/1522807?ws.op=sourceFileUrls",
+    "status": 200,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "bytes": 2,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "lp-files-1453521.json",
+    "url": "https://api.launchpad.net/1.0/~gma500/+archive/ubuntu/fix/+sourcepub/1453521?ws.op=sourceFileUrls",
+    "status": 200,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "bytes": 2,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "lp-files-1375441.json",
+    "url": "https://api.launchpad.net/1.0/~gma500/+archive/ubuntu/fix/+sourcepub/1375441?ws.op=sourceFileUrls",
+    "status": 200,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "bytes": 2,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "lp-files-1347518.json",
+    "url": "https://api.launchpad.net/1.0/~gma500/+archive/ubuntu/fix/+sourcepub/1347518?ws.op=sourceFileUrls",
+    "status": 200,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "bytes": 2,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "lp-files-1347487.json",
+    "url": "https://api.launchpad.net/1.0/~gma500/+archive/ubuntu/fix/+sourcepub/1347487?ws.op=sourceFileUrls",
+    "status": 200,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "bytes": 2,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "lp-files-1347353.json",
+    "url": "https://api.launchpad.net/1.0/~gma500/+archive/ubuntu/fix/+sourcepub/1347353?ws.op=sourceFileUrls",
+    "status": 200,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "bytes": 2,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "lp-files-1374916.json",
+    "url": "https://api.launchpad.net/1.0/~gma500/+archive/ubuntu/fix/+sourcepub/1374916?ws.op=sourceFileUrls",
+    "status": 200,
+    "sha256": "3e1a46324b6c59b6d2dbac2978f54800f1ed7816d2c5afd1c00c085f01a2b8f9",
+    "bytes": 311,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "lp-files-1374436.json",
+    "url": "https://api.launchpad.net/1.0/~gma500/+archive/ubuntu/fix/+sourcepub/1374436?ws.op=sourceFileUrls",
+    "status": 200,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "bytes": 2,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "lp-files-1374377.json",
+    "url": "https://api.launchpad.net/1.0/~gma500/+archive/ubuntu/fix/+sourcepub/1374377?ws.op=sourceFileUrls",
+    "status": 200,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "bytes": 2,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "lp-files-1374362.json",
+    "url": "https://api.launchpad.net/1.0/~gma500/+archive/ubuntu/fix/+sourcepub/1374362?ws.op=sourceFileUrls",
+    "status": 200,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "bytes": 2,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "lp-files-1157828.json",
+    "url": "https://api.launchpad.net/1.0/~gma500/+archive/ubuntu/fix/+sourcepub/1157828?ws.op=sourceFileUrls",
+    "status": 200,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "bytes": 2,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-history/ebcded4b7a1b6b40b982f78813888a41-0001-Rename-agp_memory.memory-to-pages.patch",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb/0001-Rename-agp_memory.memory-to-pages.patch?rev=1",
+    "status": 200,
+    "sha256": "86bc937d12445dcca4d64f099c3aca35260d4f42fd32dd36ac04839e787aa028",
+    "bytes": 2474,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-history/bb5ce08dcf0683cdeba0dcb25d20cfdf-0002-Euid-went-into-cred-structure-from-task_struct.patch",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb/0002-Euid-went-into-cred-structure-from-task_struct.patch?rev=1",
+    "status": 200,
+    "sha256": "f7c0e3db6e09d6af90ebc51cbeb2398e4fc04d78590635c6e8d9af2e4b18ee6b",
+    "bytes": 873,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-history/14ee15d4fab914d5f2ef04caed98c6c2-0003-Remove-id.patch",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb/0003-Remove-id.patch?rev=1",
+    "status": 200,
+    "sha256": "f016ec8c262775fd0320bce823ea5697b42c19f007c7fef2c09469b9e743e72e",
+    "bytes": 888,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-history/5ff9f056cf29bdc0361edd852a087472-psb-kmod-4.41.1_busid.patch",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb/psb-kmod-4.41.1_busid.patch?rev=1",
+    "status": 200,
+    "sha256": "40c5dd7e73a2680c8604461da65fa12a0908d5b37845cce93939390470c931cb",
+    "bytes": 400,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-history/f2b4944cbba7b02d9ce1389b2f532d56-psb-kmod-4.41.1_irqreturn.patch",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb/psb-kmod-4.41.1_irqreturn.patch?rev=1",
+    "status": 200,
+    "sha256": "ea8f8c4633e95b2c87391d0e9dbd1898fd141e90fd81b9eeb992a9facd188bea",
+    "bytes": 506,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-history/5bc631293140047e65ff7d40cda6b8b8-psb.spec",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb/psb.spec?rev=1",
+    "status": 200,
+    "sha256": "27023f91941066c40ce979942243c9432f636ab4520674ea30127b81499be300",
+    "bytes": 1394,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-history/f838cf1bd9b13fb1a9ed48571187da4f-0004-Silence-buildservice-warnings.patch",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb/0004-Silence-buildservice-warnings.patch?rev=2",
+    "status": 200,
+    "sha256": "34745a55f83fd8aaadee007c8190983e1cf2a489c13d8225c08bf8a516669584",
+    "bytes": 1593,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-history/cb59277225bd49f8070e29773c302d90-psb.spec",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb/psb.spec?rev=2",
+    "status": 200,
+    "sha256": "13db09ecca7dc369756d381d37aa417986455e4f9994e7183e750a2c97f46794",
+    "bytes": 1554,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-history/178124175d4a838a39baf3b2a1a69155-0004-Silence-buildservice-warnings.patch",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb/0004-Silence-buildservice-warnings.patch?rev=3",
+    "status": 200,
+    "sha256": "d16faa6531072afc8f025269acd916e05cc62aade9269935a79938edc1a442cc",
+    "bytes": 1551,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-history/2403c5754127a35a76a1d90a7dc0eea5-0004-Silence-buildservice-warnings.patch",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb/0004-Silence-buildservice-warnings.patch?rev=4",
+    "status": 200,
+    "sha256": "569829caf53c11ec1a73ccceb80f0a17161dc4185d8294da58e8b3928db356a8",
+    "bytes": 1535,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-history/cd0d7edbf34191d09311c53597b162d2-0005-Fix-build-with-2.6.32.patch",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb/0005-Fix-build-with-2.6.32.patch?rev=5",
+    "status": 200,
+    "sha256": "da1b23d502356273239a6f15482479252ba12bf3691a764807bd07ad1b382b97",
+    "bytes": 921,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-history/7db575af73d67b4bf7075f439a5526b1-psb.spec",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb/psb.spec?rev=5",
+    "status": 200,
+    "sha256": "1dfacda2645fac7b4c775ebfbc3cd39deb4e4d4fb8e1d12851498b475e05798b",
+    "bytes": 1648,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-history/e90ccbc678e7504b61ec3729099c6280-psb.spec",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb/psb.spec?rev=6",
+    "status": 200,
+    "sha256": "2debd64106ddb8a3d8756493abb21a963793a4bca824a66fc357e80df3163e5d",
+    "bytes": 1739,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-history/98b58664e5af05ca88184dcc58d7457d-psb.spec",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb/psb.spec?rev=7",
+    "status": 200,
+    "sha256": "a758f2867ce6dd15ca72dd083ec17cd2a4719379af14406afe95e4e886d2818d",
+    "bytes": 1815,
+    "batch": "acquisition-fifth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "launchpad-gma500.json",
+    "url": "https://api.launchpad.net/1.0/~gma500/+archive/ubuntu/ppa?ws.op=getPublishedSources&source_name=psb-kernel-source&exact_match=true",
+    "status": 200,
+    "sha256": "0db5764023f9910911443673fff9ec326f9724188173996399a5ddd1ff3dc5f3",
+    "bytes": 17962,
+    "batch": "acquisition-fourth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "launchpad-gma500-fix.json",
+    "url": "https://api.launchpad.net/1.0/~gma500/+archive/ubuntu/fix?ws.op=getPublishedSources&source_name=psb-kernel-source&exact_match=true",
+    "status": 200,
+    "sha256": "be582d36c45df654fa1c17c15c41886e5760b3e713faf773c703cc9d17337dd5",
+    "bytes": 17611,
+    "batch": "acquisition-fourth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "launchpad-ubuntu-mobile.json",
+    "url": "https://api.launchpad.net/1.0/~ubuntu-mobile/+archive/ubuntu/ppa?ws.op=getPublishedSources&source_name=psb-kernel-source&exact_match=true",
+    "error": "HTTP Error 404: Not Found",
+    "batch": "acquisition-fourth.json",
+    "use": "UNAVAILABLE; not evidence of contents"
+  },
+  {
+    "name": "obs-kernel-original.tar.gz",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb/psb-kernel-source_4.41.1.orig.tar.gz?rev=f9d9498beee28ac72ca14a4b562e2942",
+    "status": 200,
+    "sha256": "12fe32e61b313882bd72a1eeda87afceb5b5b326761392edddf294b404efb5cd",
+    "bytes": 391364,
+    "batch": "acquisition-fourth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "yocto-xpsb.bb",
+    "url": "https://raw.githubusercontent.com/yoctoproject/meta-intel/danny/meta-emenlow/recipes-graphics/xpsb-glx/xpsb-glx_0.18.bb",
+    "error": "HTTP Error 404: Not Found",
+    "batch": "acquisition-fourth.json",
+    "use": "UNAVAILABLE; not evidence of contents"
+  },
+  {
+    "name": "yocto-kernel.bbappend",
+    "url": "https://raw.githubusercontent.com/yoctoproject/meta-intel/danny/meta-emenlow/recipes-kernel/linux/linux-yocto_3.2.bbappend",
+    "error": "HTTP Error 404: Not Found",
+    "batch": "acquisition-fourth.json",
+    "use": "UNAVAILABLE; not evidence of contents"
+  },
+  {
+    "name": "gregkh-repo.json",
+    "url": "https://api.github.com/repos/gregkh/psb-kmp",
+    "status": 200,
+    "sha256": "a308bfcdaeeba76cbb420e651a3cee28893a0f7a53d1529c12071174067a6b02",
+    "bytes": 4996,
+    "batch": "acquisition-initial.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "gregkh-tree.json",
+    "url": "https://api.github.com/repos/gregkh/psb-kmp/git/trees/98b5307e5158a9ac401b29128ddd1184ae06b4d7?recursive=1",
+    "status": 200,
+    "sha256": "92a18b780cf8b36eba0f443434d67588fa46379c441d47cf732249991a0e8714",
+    "bytes": 21310,
+    "batch": "acquisition-initial.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-project.xml",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo",
+    "status": 200,
+    "sha256": "62d68fc2cfa6438b1140413b60aa5f55f3a576e713230e0f5c45a65f1d9897c0",
+    "bytes": 260,
+    "batch": "acquisition-initial.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "ubuntu-mobile-index.html",
+    "url": "https://ppa.launchpadcontent.net/ubuntu-mobile/ppa/ubuntu/pool/main/p/psb-kernel-source/",
+    "error": "HTTP Error 403: Forbidden",
+    "batch": "acquisition-initial.json",
+    "use": "UNAVAILABLE; not evidence of contents"
+  },
+  {
+    "name": "gregkh-ttm.c",
+    "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/drm_ttm.c",
+    "status": 200,
+    "sha256": "118952a4dc011dd5de5152715d0ef05356edbd6dbcfca16f349133f8fe215166",
+    "bytes": 9607,
+    "batch": "acquisition-initial.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-psb.xml",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb",
+    "status": 200,
+    "sha256": "3a677a0a7f7558acda8e0283e20ea97badf5367ebc44aad1e442daccb2d00748",
+    "bytes": 1188,
+    "batch": "acquisition-second.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-xpsb-glx.xml",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/xpsb-glx",
+    "status": 200,
+    "sha256": "57c1b443a3f58db8c3e4594e26af396da5d5e01735f73724b8d17e88cdd712b8",
+    "bytes": 319,
+    "batch": "acquisition-second.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-libdrm-poulsbo.xml",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/libdrm-poulsbo",
+    "status": 200,
+    "sha256": "9ab818a88c1cf064d8f28b9f08b50a591d2a3c59676f701a474b3774dfe14961",
+    "bytes": 1115,
+    "batch": "acquisition-second.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-xorg-x11-drv-psb.xml",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/xorg-x11-drv-psb",
+    "status": 200,
+    "sha256": "5667848370ae16467add7cd4c553dff890629ef952c237bc80d54164fb0eb091",
+    "bytes": 939,
+    "batch": "acquisition-second.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-psb-history.xml",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb/_history",
+    "status": 200,
+    "sha256": "0c0080ad0aa5c805e575c2b9efc37a9aa3a473a559ca8cba208be00822ba4c64",
+    "bytes": 1590,
+    "batch": "acquisition-second.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-xpsb-glx-history.xml",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/xpsb-glx/_history",
+    "status": 200,
+    "sha256": "dc0e22cf60f9ffeb414dd6a1ba3cb1afc78a33c0b923b5b9fbe59f43d04e548e",
+    "bytes": 700,
+    "batch": "acquisition-second.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "github-search-psb.json",
+    "url": "https://api.github.com/search/repositories?q=psb-kernel+in:name,description&per_page=30",
+    "status": 200,
+    "sha256": "99e035a99a518c9d3dc968eec5f876cea31f0e537d5fded2b30a299e603e04dd",
+    "bytes": 11394,
+    "batch": "acquisition-second.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "github-gregkh-history.json",
+    "url": "https://api.github.com/repos/gregkh/psb-kmp/commits?per_page=100",
+    "status": 200,
+    "sha256": "cb8a774741b633730860b77b148f5ef6853f4b312b30e1d893faf568ba2bd2e0",
+    "bytes": 25076,
+    "batch": "acquisition-second.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "linux-2.6.32-page_alloc.c",
+    "url": "https://raw.githubusercontent.com/torvalds/linux/v2.6.32/mm/page_alloc.c",
+    "status": 200,
+    "sha256": "b85b4102e7d2419ddeb3b3b8f8eefeb63aa06ce0b8d684f8824c52ee1c376c76",
+    "bytes": 142066,
+    "batch": "acquisition-seventh.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "linux-2.6.32-gfp.h",
+    "url": "https://raw.githubusercontent.com/torvalds/linux/v2.6.32/include/linux/gfp.h",
+    "status": 200,
+    "sha256": "bc5204ed7ff30cc16513fb403503217ddd8e4f9d00f6cc7c87e9ef7bae25b8e0",
+    "bytes": 11742,
+    "batch": "acquisition-seventh.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "gregkh-initial-ttm.c",
+    "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/0c4490c22402ba9fdc31a763c02e1948ec10f47d/drm_ttm.c",
+    "status": 200,
+    "sha256": "118952a4dc011dd5de5152715d0ef05356edbd6dbcfca16f349133f8fe215166",
+    "bytes": 9607,
+    "batch": "acquisition-seventh.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "gregkh-patch-commit.json",
+    "url": "https://api.github.com/repos/gregkh/psb-kmp/commits/4c1b7e45f677c356cc6ffa3c54c583d3e27c12f7",
+    "status": 200,
+    "sha256": "e15367d3c48ee4d2711be42ffc304de5465ef2320d661a8a181fd4347d16155d",
+    "bytes": 4229,
+    "batch": "acquisition-seventh.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "yocto-emenlow-tree.html",
+    "url": "https://git.yoctoproject.org/meta-intel/tree/meta-emenlow?h=danny",
+    "error": "HTTP Error 403: Forbidden",
+    "batch": "acquisition-seventh.json",
+    "use": "UNAVAILABLE; not evidence of contents"
+  },
+  {
+    "name": "yocto-xpsb-recipe.html",
+    "url": "https://git.yoctoproject.org/meta-intel/plain/common/recipes-graphics/xpsb-glx/xpsb-glx_0.18.bb?h=danny",
+    "error": "HTTP Error 403: Forbidden",
+    "batch": "acquisition-seventh.json",
+    "use": "UNAVAILABLE; not evidence of contents"
+  },
+  {
+    "name": "launchpad/psb-kernel-source_4.42.0-0ubuntu2~1004um3.1.tar.gz",
+    "url": "https://launchpad.net/~gma500/+archive/ubuntu/ppa/+sourcefiles/psb-kernel-source/4.42.0-0ubuntu2~1004um3.1/psb-kernel-source_4.42.0-0ubuntu2~1004um3.1.tar.gz",
+    "status": 200,
+    "sha256": "37d5c6718ed6585de8c73fc1906820e4647ff9e0c6c2240ce224a176730ebb0b",
+    "bytes": 469455,
+    "batch": "acquisition-sixth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "launchpad/psb-kernel-source_4.42.0-0ubuntu2~1004um3.1.dsc",
+    "url": "https://launchpad.net/~gma500/+archive/ubuntu/ppa/+sourcefiles/psb-kernel-source/4.42.0-0ubuntu2~1004um3.1/psb-kernel-source_4.42.0-0ubuntu2~1004um3.1.dsc",
+    "status": 200,
+    "sha256": "ce8e746065dab56db5fe074c6446293e9d17878740f01163635ba71a65ad079f",
+    "bytes": 1283,
+    "batch": "acquisition-sixth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "launchpad/psb-kernel-source_4.42.0-0ubuntu2~1010um5.tar.gz",
+    "url": "https://launchpad.net/~gma500/+archive/ubuntu/fix/+sourcefiles/psb-kernel-source/4.42.0-0ubuntu2~1010um5/psb-kernel-source_4.42.0-0ubuntu2~1010um5.tar.gz",
+    "status": 200,
+    "sha256": "56f04bec8bd8625a13acb6e456dc403adfc7dcb16d0d5e8b5108ba6ba48609bc",
+    "bytes": 481141,
+    "batch": "acquisition-sixth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "launchpad/psb-kernel-source_4.42.0-0ubuntu2~1010um5.dsc",
+    "url": "https://launchpad.net/~gma500/+archive/ubuntu/fix/+sourcefiles/psb-kernel-source/4.42.0-0ubuntu2~1010um5/psb-kernel-source_4.42.0-0ubuntu2~1010um5.dsc",
+    "status": 200,
+    "sha256": "e210c8a4eb08a04bd7d09bfdc3fed4b1ea9e98c0bfd498cf73a9f2cbca891d5a",
+    "bytes": 1275,
+    "batch": "acquisition-sixth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "launchpad/psb-kernel-source_4.42.0-0ubuntu2~1004um3.2.tar.gz",
+    "url": "https://launchpad.net/~gma500/+archive/ubuntu/ppa/+sourcefiles/psb-kernel-source/4.42.0-0ubuntu2~1004um3.2/psb-kernel-source_4.42.0-0ubuntu2~1004um3.2.tar.gz",
+    "status": 200,
+    "sha256": "70cef3de5d7f38c65ca5fc09aeaedc585bd63e2bc5aaa033bf98e0706548101b",
+    "bytes": 472542,
+    "batch": "acquisition-sixth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "launchpad/psb-kernel-source_4.42.0-0ubuntu2~1004um3.2.dsc",
+    "url": "https://launchpad.net/~gma500/+archive/ubuntu/ppa/+sourcefiles/psb-kernel-source/4.42.0-0ubuntu2~1004um3.2/psb-kernel-source_4.42.0-0ubuntu2~1004um3.2.dsc",
+    "status": 200,
+    "sha256": "7491cd660327643c60ee642bfcfa5611a8c020d6a9ea5bb18f6e75f150cacf26",
+    "bytes": 1283,
+    "batch": "acquisition-sixth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "launchpad/psb-kernel-source_4.42.0-0ubuntu2~1004um2+karmic.tar.gz",
+    "url": "https://launchpad.net/~gma500/+archive/ubuntu/ppa/+sourcefiles/psb-kernel-source/4.42.0-0ubuntu2~1004um2+karmic/psb-kernel-source_4.42.0-0ubuntu2~1004um2+karmic.tar.gz",
+    "status": 200,
+    "sha256": "5d0750fdef9e272b699a325e40dc0cecbd6cfcb91b841656453025c4ce8ba6a4",
+    "bytes": 467509,
+    "batch": "acquisition-sixth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "launchpad/psb-kernel-source_4.42.0-0ubuntu2~1004um2+karmic.dsc",
+    "url": "https://launchpad.net/~gma500/+archive/ubuntu/ppa/+sourcefiles/psb-kernel-source/4.42.0-0ubuntu2~1004um2+karmic/psb-kernel-source_4.42.0-0ubuntu2~1004um2+karmic.dsc",
+    "status": 200,
+    "sha256": "33ebbbfe251dae8d4384878a7e72eeac2abfb5a7d9e4ae669f37bbadd636abfd",
+    "bytes": 1302,
+    "batch": "acquisition-sixth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "launchpad/psb-kernel-source_4.41.1.orig.tar.gz",
+    "url": "https://launchpad.net/~gma500/+archive/ubuntu/ppa/+sourcefiles/psb-kernel-source/4.41.1-0ubuntu1~904um1/psb-kernel-source_4.41.1.orig.tar.gz",
+    "status": 200,
+    "sha256": "12fe32e61b313882bd72a1eeda87afceb5b5b326761392edddf294b404efb5cd",
+    "bytes": 391364,
+    "batch": "acquisition-sixth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "launchpad/psb-kernel-source_4.41.1-0ubuntu1~904um1.diff.gz",
+    "url": "https://launchpad.net/~gma500/+archive/ubuntu/ppa/+sourcefiles/psb-kernel-source/4.41.1-0ubuntu1~904um1/psb-kernel-source_4.41.1-0ubuntu1~904um1.diff.gz",
+    "status": 200,
+    "sha256": "9cb40baa745b9c324104d03987623d7889b008acb7d125a5903e55113ad086e5",
+    "bytes": 4099,
+    "batch": "acquisition-sixth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "launchpad/psb-kernel-source_4.41.1-0ubuntu1~904um1.dsc",
+    "url": "https://launchpad.net/~gma500/+archive/ubuntu/ppa/+sourcefiles/psb-kernel-source/4.41.1-0ubuntu1~904um1/psb-kernel-source_4.41.1-0ubuntu1~904um1.dsc",
+    "status": 200,
+    "sha256": "70750d0b4b947c232eebf5bb248610375f222786e74b4f806ab2b3934f6d6119",
+    "bytes": 1273,
+    "batch": "acquisition-sixth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "launchpad/psb-kernel-source_4.41.6.orig.tar.gz",
+    "url": "https://launchpad.net/~gma500/+archive/ubuntu/ppa/+sourcefiles/psb-kernel-source/4.41.6-0ubuntu1ppa9.10+3/psb-kernel-source_4.41.6.orig.tar.gz",
+    "status": 200,
+    "sha256": "daf02e159dab223ca14545a4e7af7e91f09f65272a5dbd34891b9a50af2bdd45",
+    "bytes": 394896,
+    "batch": "acquisition-sixth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "launchpad/psb-kernel-source_4.41.6-0ubuntu1ppa9.10+3.diff.gz",
+    "url": "https://launchpad.net/~gma500/+archive/ubuntu/ppa/+sourcefiles/psb-kernel-source/4.41.6-0ubuntu1ppa9.10+3/psb-kernel-source_4.41.6-0ubuntu1ppa9.10+3.diff.gz",
+    "status": 200,
+    "sha256": "2ea328e07f6d4153c77443b7c58fa827f2c82cd41a47ce93f42edf2cf3ab6d91",
+    "bytes": 4512,
+    "batch": "acquisition-sixth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "launchpad/psb-kernel-source_4.41.6-0ubuntu1ppa9.10+3.dsc",
+    "url": "https://launchpad.net/~gma500/+archive/ubuntu/ppa/+sourcefiles/psb-kernel-source/4.41.6-0ubuntu1ppa9.10+3/psb-kernel-source_4.41.6-0ubuntu1ppa9.10+3.dsc",
+    "status": 200,
+    "sha256": "6994cbc190836cdad81a89ad8f875046e99cfdae1f187641ee680e705d36d1c9",
+    "bytes": 1281,
+    "batch": "acquisition-sixth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "launchpad/psb-kernel-source_4.37.orig.tar.gz",
+    "url": "https://launchpad.net/~gma500/+archive/ubuntu/ppa/+sourcefiles/psb-kernel-source/4.37-0ubuntu1~810um1/psb-kernel-source_4.37.orig.tar.gz",
+    "status": 200,
+    "sha256": "acec3193bdad233a87bbefd9c6a01873abe1fbf1c3a701a399072eb74f8807ab",
+    "bytes": 393329,
+    "batch": "acquisition-sixth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "launchpad/psb-kernel-source_4.37-0ubuntu1~810um1.diff.gz",
+    "url": "https://launchpad.net/~gma500/+archive/ubuntu/ppa/+sourcefiles/psb-kernel-source/4.37-0ubuntu1~810um1/psb-kernel-source_4.37-0ubuntu1~810um1.diff.gz",
+    "status": 200,
+    "sha256": "f2650efc79920f54b1c8ded2b18d4142855ed34620e83f31bbbaeabbad053a4d",
+    "bytes": 4012,
+    "batch": "acquisition-sixth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "launchpad/psb-kernel-source_4.37-0ubuntu1~810um1.dsc",
+    "url": "https://launchpad.net/~gma500/+archive/ubuntu/ppa/+sourcefiles/psb-kernel-source/4.37-0ubuntu1~810um1/psb-kernel-source_4.37-0ubuntu1~810um1.dsc",
+    "status": 200,
+    "sha256": "d287c46e4bf22059602d60df29aeb34ea7f89312d4593c956c15783ff8f722b8",
+    "bytes": 1259,
+    "batch": "acquisition-sixth.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-psb-rev1.xml",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb?rev=1",
+    "status": 200,
+    "sha256": "160f47982613ae0a47abaf2971d10eb41762db9eeffbc3ba44ce2d5d821f57ac",
+    "bytes": 939,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-psb-rev2.xml",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb?rev=2",
+    "status": 200,
+    "sha256": "838bcf5e2fc3202242c5ef8746ce41f50221b3d4d480ad2168e963e26afeadc3",
+    "bytes": 1068,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-psb-rev3.xml",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb?rev=3",
+    "status": 200,
+    "sha256": "04598a2cd030cbd1baee04fc9c3425410cb10c7d7158ad8217410b5d7a09d61d",
+    "bytes": 1068,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-psb-rev4.xml",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb?rev=4",
+    "status": 200,
+    "sha256": "99c1d395ee8073ccf517f8d95b0c740e92e1fbc318f7903b95aefa276deb0e9e",
+    "bytes": 1068,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-psb-rev5.xml",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb?rev=5",
+    "status": 200,
+    "sha256": "a5bb7d87dac7d5162502f36233d8f6166bd29087890ab9efd92ab9c7de6be573",
+    "bytes": 1188,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-psb-rev6.xml",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb?rev=6",
+    "status": 200,
+    "sha256": "7d5df657876a84b04a1fa61756b20bdd372498b835aae63fa66343228f4c64ae",
+    "bytes": 1188,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-psb-rev7.xml",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb?rev=7",
+    "status": 200,
+    "sha256": "3a677a0a7f7558acda8e0283e20ea97badf5367ebc44aad1e442daccb2d00748",
+    "bytes": 1188,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-xpsb-rev1.spec",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/xpsb-glx/xpsb-glx.spec?rev=1",
+    "status": 200,
+    "sha256": "1e2094cb1646ae78339d269870bd76ebdf2fb9ff74e9471b5b46ac0a1eefa223",
+    "bytes": 1722,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-xpsb-rev2.spec",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/xpsb-glx/xpsb-glx.spec?rev=2",
+    "status": 200,
+    "sha256": "76736445beabc22932bcde8602f7f012881c98c0c34fd25245fd677ec4705e78",
+    "bytes": 1702,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs-xpsb-rev3.spec",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/xpsb-glx/xpsb-glx.spec?rev=3",
+    "status": 200,
+    "sha256": "60062e6850f6780e0c9a5d458b380f188188ed3ea2b58a0f5651dcd41b64c895",
+    "bytes": 1739,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs/psb/0001-Rename-agp_memory.memory-to-pages.patch",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb/0001-Rename-agp_memory.memory-to-pages.patch?rev=f9d9498beee28ac72ca14a4b562e2942",
+    "status": 200,
+    "sha256": "86bc937d12445dcca4d64f099c3aca35260d4f42fd32dd36ac04839e787aa028",
+    "bytes": 2474,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs/psb/0002-Euid-went-into-cred-structure-from-task_struct.patch",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb/0002-Euid-went-into-cred-structure-from-task_struct.patch?rev=f9d9498beee28ac72ca14a4b562e2942",
+    "status": 200,
+    "sha256": "f7c0e3db6e09d6af90ebc51cbeb2398e4fc04d78590635c6e8d9af2e4b18ee6b",
+    "bytes": 873,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs/psb/0003-Remove-id.patch",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb/0003-Remove-id.patch?rev=f9d9498beee28ac72ca14a4b562e2942",
+    "status": 200,
+    "sha256": "f016ec8c262775fd0320bce823ea5697b42c19f007c7fef2c09469b9e743e72e",
+    "bytes": 888,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs/psb/0004-Silence-buildservice-warnings.patch",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb/0004-Silence-buildservice-warnings.patch?rev=f9d9498beee28ac72ca14a4b562e2942",
+    "status": 200,
+    "sha256": "569829caf53c11ec1a73ccceb80f0a17161dc4185d8294da58e8b3928db356a8",
+    "bytes": 1535,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs/psb/0005-Fix-build-with-2.6.32.patch",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb/0005-Fix-build-with-2.6.32.patch?rev=f9d9498beee28ac72ca14a4b562e2942",
+    "status": 200,
+    "sha256": "da1b23d502356273239a6f15482479252ba12bf3691a764807bd07ad1b382b97",
+    "bytes": 921,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs/psb/psb-kmod-4.41.1_busid.patch",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb/psb-kmod-4.41.1_busid.patch?rev=f9d9498beee28ac72ca14a4b562e2942",
+    "status": 200,
+    "sha256": "40c5dd7e73a2680c8604461da65fa12a0908d5b37845cce93939390470c931cb",
+    "bytes": 400,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs/psb/psb-kmod-4.41.1_irqreturn.patch",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb/psb-kmod-4.41.1_irqreturn.patch?rev=f9d9498beee28ac72ca14a4b562e2942",
+    "status": 200,
+    "sha256": "ea8f8c4633e95b2c87391d0e9dbd1898fd141e90fd81b9eeb992a9facd188bea",
+    "bytes": 506,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs/psb/psb.spec",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/psb/psb.spec?rev=f9d9498beee28ac72ca14a4b562e2942",
+    "status": 200,
+    "sha256": "a758f2867ce6dd15ca72dd083ec17cd2a4719379af14406afe95e4e886d2818d",
+    "bytes": 1815,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs/xorg-x11-drv-psb/0001-Fix-up-buildservice-warnings.patch",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/xorg-x11-drv-psb/0001-Fix-up-buildservice-warnings.patch?rev=975cc7b06341e6238317aedd3b27d2d4",
+    "status": 200,
+    "sha256": "d728cae96b2bfb97770c077124277c9da7498e2fe89eb4f62aa80fa69ddfad88",
+    "bytes": 1519,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs/xorg-x11-drv-psb/xorg-x11-drv-psb-0.31.0-ignoreacpi.patch",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/xorg-x11-drv-psb/xorg-x11-drv-psb-0.31.0-ignoreacpi.patch?rev=975cc7b06341e6238317aedd3b27d2d4",
+    "status": 200,
+    "sha256": "8e3e4380c26724cd91031a3cf27d3dfd74292f845e1308cf22ed1ab2ecae8312",
+    "bytes": 465,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs/xorg-x11-drv-psb/xorg-x11-drv-psb-0.31.0-libdrm.patch",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/xorg-x11-drv-psb/xorg-x11-drv-psb-0.31.0-libdrm.patch?rev=975cc7b06341e6238317aedd3b27d2d4",
+    "status": 200,
+    "sha256": "f67794b243c4d3db40c28cd4e8076c5cefbbe78973f1aaea89f9e060bebae33b",
+    "bytes": 530,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs/xorg-x11-drv-psb/xorg-x11-drv-psb.spec",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/xorg-x11-drv-psb/xorg-x11-drv-psb.spec?rev=975cc7b06341e6238317aedd3b27d2d4",
+    "status": 200,
+    "sha256": "9091eba2874fbb01ce79a9578e9867827a202ef1a93478e4c90a6e9c03d2e124",
+    "bytes": 4888,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs/libdrm-poulsbo/libdrm-poulsbo-relocate_headers.patch",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/libdrm-poulsbo/libdrm-poulsbo-relocate_headers.patch?rev=0d0d6e096daffeca1e494ec3be74763c",
+    "status": 200,
+    "sha256": "9e42f15624623cf5618ef40c918e4446a149df2bb43580658036eccb9ecaf44f",
+    "bytes": 1289,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs/libdrm-poulsbo/libdrm-poulsbo.spec",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/libdrm-poulsbo/libdrm-poulsbo.spec?rev=0d0d6e096daffeca1e494ec3be74763c",
+    "status": 200,
+    "sha256": "49e0fb996d6a2190ee3191aaa1e715dc700c13f6691b56487c45f5ba37e9dd1a",
+    "bytes": 5466,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs/libdrm-poulsbo/libdrm-poulsbo_configure_debian.patch",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/libdrm-poulsbo/libdrm-poulsbo_configure_debian.patch?rev=0d0d6e096daffeca1e494ec3be74763c",
+    "status": 200,
+    "sha256": "bcb5498a2dc0c91304fb3612025e191c6cc5784a5eb49b91bc6d8a9173119fef",
+    "bytes": 389291,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "obs/libdrm-poulsbo/libdrm-poulsbo_headers_debian.patch",
+    "url": "https://api.opensuse.org/public/source/home:lkundrak:poulsbo/libdrm-poulsbo/libdrm-poulsbo_headers_debian.patch?rev=0d0d6e096daffeca1e494ec3be74763c",
+    "status": 200,
+    "sha256": "2cf3732c4d7596ebad371b1b24fdc7aa82eb4c78cb60ec4cfe0b0f5934afdfdd",
+    "bytes": 3368,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "gregkh/GPLv2_License.txt",
+    "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/GPLv2_License.txt",
+    "status": 200,
+    "sha256": "1cfece9336f04ba05cd3b0d735599c090d38ea8d76ce56cc154c7faf84490599",
+    "bytes": 18351,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "gregkh/drm.h",
+    "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/drm.h",
+    "status": 200,
+    "sha256": "e4e0c5dce5558d4aa09f33fa236832e354275ccc1612a7c4a1a906758bb51f41",
+    "bytes": 35805,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "gregkh/drm_bo.c",
+    "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/drm_bo.c",
+    "status": 200,
+    "sha256": "d194f8b961eb18fe03b1c9cda126b95097c4f9084a0cf5df3f92f752b596c8f2",
+    "bytes": 63465,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "gregkh/drm_bo_move.c",
+    "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/drm_bo_move.c",
+    "status": 200,
+    "sha256": "f4049f6921faacdf9818dfd507d69f35f512e1721df5871a22b5b444e85737c6",
+    "bytes": 15701,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "gregkh/drm_vm.c",
+    "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/drm_vm.c",
+    "status": 200,
+    "sha256": "04825cfdc25ddf03a87d604bb3f105221438e46842567bcc43fa2f8a9077b873",
+    "bytes": 29842,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "gregkh/psb_buffer.c",
+    "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/psb_buffer.c",
+    "status": 200,
+    "sha256": "f2e6833fc82de488c6c41e99a5da2c5b00ec0fea36b9defeb4057e70f464c147",
+    "bytes": 12282,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "gregkh/psb_drv.c",
+    "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/psb_drv.c",
+    "status": 200,
+    "sha256": "8aae96d114be1349e22f156a4f00f2bf6335f0c08be19d3d6e72382e1f9801fe",
+    "bytes": 27799,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "gregkh/psb_drv.h",
+    "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/psb_drv.h",
+    "status": 200,
+    "sha256": "08740e64688d04efc6a6b6c61fa1a3c7ef62af4bfb9823576ded590b5867ec62",
+    "bytes": 24134,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "gregkh/psb_drm.h",
+    "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/psb_drm.h",
+    "status": 200,
+    "sha256": "85f30c2f01eb29884778de7959f4f122353f0cbb4ed5cec00db9fb862707dc21",
+    "bytes": 10261,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  },
+  {
+    "name": "gregkh/psb_mmu.c",
+    "url": "https://raw.githubusercontent.com/gregkh/psb-kmp/98b5307e5158a9ac401b29128ddd1184ae06b4d7/psb_mmu.c",
+    "status": 200,
+    "sha256": "401954c022c8c7a76e6b30ae86b141e8a673f0b8587b7786f8c09bf7e4d05f5b",
+    "bytes": 24172,
+    "batch": "acquisition-third.json",
+    "use": "PUBLIC_SOURCE_OR_PACKAGE_METADATA; per-file notices and scope in pds-backing-provider.md"
+  }
+]

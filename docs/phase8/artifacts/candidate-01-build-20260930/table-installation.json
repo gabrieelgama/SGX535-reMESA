@@ -1,0 +1,6 @@
+{
+  "source": "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build_Module_symvers",
+  "destination": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/Module.symvers",
+  "sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+  "method": "byte-exact ordinary Kbuild input copy; not edited"
+}

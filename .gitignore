@@ -1,3 +1,11 @@
+# Local third-party source checkouts; keep their provenance records public.
 references/
 
+# Private AI/session continuity notes. Technical records belong in docs/.
+/internal/ai-handoffs/
+
+# Generated Python runtime files.
+__pycache__/
+*.pyc
+*.pyo
 docs/superpowers/

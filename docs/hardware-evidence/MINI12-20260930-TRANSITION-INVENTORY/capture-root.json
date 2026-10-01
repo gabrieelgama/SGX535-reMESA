@@ -1,0 +1,27 @@
+{
+  "schema": "sgx535-root-read-only-transition-inventory-v1",
+  "ssh_target": "gama@192.168.18.90:22",
+  "ssh_host_key": "docs/hardware-evidence/MINI12-20260927-H0/ssh_known_hosts",
+  "ssh_options": [
+    "-T",
+    "BatchMode=yes",
+    "ConnectTimeout=8",
+    "ConnectionAttempts=1",
+    "StrictHostKeyChecking=yes",
+    "IdentitiesOnly=yes",
+    "PasswordAuthentication=no",
+    "KbdInteractiveAuthentication=no"
+  ],
+  "remote_command": "sudo -S -p '' sh -s",
+  "authentication": "operator-supplied sudo credential via stdin; value not persisted",
+  "local_transport": "PTY with echo disabled; remote SSH PTY disabled",
+  "script_sha256": "1bfdb9f2d4fbef46fd0dcda703dd1dd78c704b23a88733aac06c54734910ff27",
+  "exit_status": 0,
+  "stdout_sha256": "227de5ee5fc6502413a49b8ed9d9e83726cde160f50192a6a16aa7e6638d5161",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_bytes": 5492,
+  "stderr_bytes": 0,
+  "local_capture_file_mtime_utc": "2026-09-30T01:03:13.994592+00:00",
+  "start_time_note": "exact UTC start not captured by interactive transport; stderr file creation was 2026-09-30 01:02:55 UTC",
+  "scope": "root read-only service/FD/tool inventory; no DRM open or graphics operation"
+}

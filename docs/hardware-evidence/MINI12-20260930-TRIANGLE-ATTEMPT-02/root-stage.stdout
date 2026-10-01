@@ -1,0 +1,7 @@
+934bd97164c803e52d96528b9ec464d587a6a68e2f671aa255407657cc5342cf  /root/sgx535-frozen-seq1/gma500_gfx.ko
+758076e2f7e20d0eff2df565d4440c8b3fd3f846922427e770f55ebc472edccf  /root/sgx535-frozen-seq1/frozen-triangle-one-shot-i386
+root:root:700 /root/sgx535-frozen-seq1
+root:root:600 /root/sgx535-frozen-seq1/gma500_gfx.ko
+root:root:700 /root/sgx535-frozen-seq1/frozen-triangle-one-shot-i386
+5.10.240-antix.1-486-smp SMP mod_unload modversions 486 
+STAGE0_ROOT_FILES_VERIFIED

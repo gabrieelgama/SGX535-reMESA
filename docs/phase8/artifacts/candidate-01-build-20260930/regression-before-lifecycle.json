@@ -1,0 +1,129 @@
+[
+  {
+    "name": "suite-before-lifecycle",
+    "argv": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools/psb-dri-re",
+      "-p",
+      "test_*.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "generator-check",
+    "argv": [
+      "python3",
+      "tools/psb-dri-re/generate_frozen_kernel_initial.py",
+      "--check"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "dry-1",
+    "argv": [
+      "python3",
+      "tools/psb-dri-re/frozen_triangle_dry_run.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "dry-2",
+    "argv": [
+      "python3",
+      "tools/psb-dri-re/frozen_triangle_dry_run.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "complete",
+    "argv": [
+      "python3",
+      "tools/psb-dri-re/frozen_triangle_image.py",
+      "--complete"
+    ],
+    "exit_code": 1
+  },
+  {
+    "name": "ubsan-service-build",
+    "argv": [
+      "/usr/bin/gcc-14",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-fsanitize=undefined",
+      "-fno-sanitize-recover=all",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_fixed_service.c",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_fixed_service.c",
+      "-o",
+      "/home/gama/sgx535-offline/candidate-01-build-20260930/ubsan-service"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "ubsan-service-run",
+    "argv": [
+      "/home/gama/sgx535-offline/candidate-01-build-20260930/ubsan-service"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "ubsan-io-build",
+    "argv": [
+      "/usr/bin/gcc-14",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-fsanitize=undefined",
+      "-fno-sanitize-recover=all",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_fixed_io.c",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_fixed_io.c",
+      "-o",
+      "/home/gama/sgx535-offline/candidate-01-build-20260930/ubsan-io"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "ubsan-io-run",
+    "argv": [
+      "/home/gama/sgx535-offline/candidate-01-build-20260930/ubsan-io"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "ubsan-contract-build",
+    "argv": [
+      "/usr/bin/gcc-14",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-fsanitize=undefined",
+      "-fno-sanitize-recover=all",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_contract.c",
+      "-o",
+      "/home/gama/sgx535-offline/candidate-01-build-20260930/ubsan-contract"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "ubsan-contract-run",
+    "argv": [
+      "/home/gama/sgx535-offline/candidate-01-build-20260930/ubsan-contract"
+    ],
+    "exit_code": 0
+  }
+]

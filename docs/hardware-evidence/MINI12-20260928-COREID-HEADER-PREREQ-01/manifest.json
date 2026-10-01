@@ -1,0 +1,38 @@
+{
+  "schema": "sgx535-coreid-header-prereq-v1",
+  "session_id": "MINI12-20260928-COREID-HEADER-PREREQ-01",
+  "host_generated_utc": "2026-09-28T03:32:28.630614+00:00",
+  "target_package": "libc6-dev",
+  "target_package_status": "not-installed",
+  "package_installation_performed": false,
+  "native_build_retried": false,
+  "helper_executed": false,
+  "mmio_read_attempts": 0,
+  "files": [
+    {
+      "path": "query.meta.json",
+      "bytes": 906,
+      "sha256": "c23e61b5ff0dd5144a1fc5745ab094e95d48bb8b8dbc2c50fe2affa637310489"
+    },
+    {
+      "path": "query.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "query.stdin",
+      "bytes": 1194,
+      "sha256": "a5fcba0f7d0ea3b55fe19cbefc6a62f83083fd48abbd20dc75486d63ee35d6a7"
+    },
+    {
+      "path": "query.stdout",
+      "bytes": 469,
+      "sha256": "6da9688a9c284b8b93dea19572f46c06deef4078d9e7951c92d688c2d395d4fb"
+    },
+    {
+      "path": "results.md",
+      "bytes": 1013,
+      "sha256": "0b2467544fbd5f9a6046193958878590dd1427fa60886bbc2b04e5832ea350e1"
+    }
+  ]
+}

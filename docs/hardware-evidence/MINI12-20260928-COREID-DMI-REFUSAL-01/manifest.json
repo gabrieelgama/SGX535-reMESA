@@ -1,0 +1,45 @@
+{
+  "schema": "sgx535-coreid-dmi-refusal-v1",
+  "session_id": "MINI12-20260928-COREID-DMI-REFUSAL-01",
+  "host_generated_utc": "2026-09-28T03:53:06.448914+00:00",
+  "operator_report": "REFUSE: DMI identity changed",
+  "diagnostic_target_commands": 1,
+  "helper_executed_by_agent": false,
+  "mmio_read_attempts": 0,
+  "h0_manifest_sha256": "22b8c5e5b196ca9dbef5537a162a5047c2ee3006dd785dd691e26b203e34b130",
+  "p1_manifest_sha256": "d7fb5cf5827ba89a7cfcaa7b3f88192ce70ad9b41dfdb04189f9ec61a0582eee",
+  "first_mmio_01_manifest_sha256": "8a7f805e13f5f3afa534cca420f5b4abdb18ced3338c2af6182eacb9d9b3141d",
+  "installed_v1_build_manifest_sha256": "5b7b47996f3322e688d312aa0732ac793e9cab4851507ba3ae4876ab54367060",
+  "files": [
+    {
+      "path": "capture.py",
+      "bytes": 2559,
+      "sha256": "3e5b29c6d12f586da116b50fb34a32711958739df0dbf0950ae361e79c3ea7c0"
+    },
+    {
+      "path": "raw/dmi-four-field-check.meta.json",
+      "bytes": 980,
+      "sha256": "e8a4db547190537b3992a0be5fd696195ba15533393d1d490130b58bfa38ddcb"
+    },
+    {
+      "path": "raw/dmi-four-field-check.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/dmi-four-field-check.stdin",
+      "bytes": 781,
+      "sha256": "b87b69e93e18396f7d2d956ad592a203b07088ab88526e0699d6d25fc42688c2"
+    },
+    {
+      "path": "raw/dmi-four-field-check.stdout",
+      "bytes": 703,
+      "sha256": "9f206a74f6174d37a6a53ffbc805d798e62bb876f6f1acdbb98cbb8d210941dd"
+    },
+    {
+      "path": "results.md",
+      "bytes": 1886,
+      "sha256": "a9f3fa7d82366dd127db51ce500093ebd2333e674cf446596bd485256b4df4e3"
+    }
+  ]
+}

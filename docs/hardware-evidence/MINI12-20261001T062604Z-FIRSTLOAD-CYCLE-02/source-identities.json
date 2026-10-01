@@ -1,0 +1,6 @@
+{
+  "health_source_sha256": "8f86bc38d94b22d2031a0fb20f554ce1d66bee291726137322119e7aeb6ef05c",
+  "preflight_script_sha256": "866980698f54dc3d444258a6090d82e6f93dd81f2543ddf2e8e1be27f7f2c124",
+  "predecessor_capture": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/preflight-02",
+  "authorization": "renewed user instruction current turn; first-load only, SGX prohibited"
+}

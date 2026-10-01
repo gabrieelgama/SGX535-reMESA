@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/usr/bin/make",
+    "-C",
+    "/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp",
+    "O=/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/output",
+    "ARCH=x86",
+    "CROSS_COMPILE=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-",
+    "CC=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14 --sysroot=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root",
+    "LD=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-ld.bfd",
+    "AS=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-as",
+    "HOSTCC=/usr/bin/gcc-14",
+    "HOSTCFLAGS=-I/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/include -I/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/include/aarch64-linux-gnu",
+    "HOSTLDFLAGS=-L/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/lib/aarch64-linux-gnu",
+    "LOCALVERSION=-486-smp",
+    "V=1",
+    "modules_prepare"
+  ],
+  "cwd": "/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp",
+  "status": "FINISHED",
+  "resumption": "Prior interrupted invocation had no exit record; this completes the same isolated preparation.",
+  "exit": 0
+}

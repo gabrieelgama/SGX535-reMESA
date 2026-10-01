@@ -1,0 +1,4 @@
+rule,blockers,status,missing,evidence
+PUB,"[""B3""]",UNKNOWN,Successful selected publication sequence must publish every initialized/relocated payload to its first consumer; status0x138 masks0x44/1 lack an applicable completion-domain contract,P7H-051;P7H-054;P7H-057
+READY,"[""B4""]",UNKNOWN,"Target-qualified ready postcondition for revision-conditioned initialization and TA loads, including whether the fourth load is complete when retained mask7 succeeds",P7H-050;P7H-052;P7H-055
+SOURCE_DOMAIN,"[""B1"",""L12""]",UNKNOWN,Complete pre-definition source eligibility for the five auxiliary instruction streams in their launch contexts and the primary pair; CPU bytes and equal instructions do not prove context-independent coverage,P7H-041;P7H-049;P7H-053;P7H-056

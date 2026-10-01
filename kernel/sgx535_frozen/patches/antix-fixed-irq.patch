@@ -1,0 +1,37 @@
+--- a/drivers/gpu/drm/gma500/psb_irq.c
++++ b/drivers/gpu/drm/gma500/psb_irq.c
+@@ -16,6 +16,7 @@
+ #include "psb_intel_reg.h"
+ #include "psb_irq.h"
+ #include "psb_reg.h"
++#include "gma500_fixed_backend.h"
+ 
+ /*
+  * inline functions
+@@ -255,6 +256,7 @@
+ 	struct drm_psb_private *dev_priv = dev->dev_private;
+ 	uint32_t vdc_stat, dsp_int = 0, sgx_int = 0, hotplug_int = 0;
+ 	u32 sgx_stat_1, sgx_stat_2;
++	unsigned long fixed_flags;
+ 	int handled = 0;
+ 
+ 	spin_lock(&dev_priv->irqmask_lock);
+@@ -283,9 +285,13 @@
+ 	}
+ 
+ 	if (sgx_int) {
++		fixed_flags = sgx535_gma500_fixed_irq_lock();
+ 		sgx_stat_1 = PSB_RSGX32(PSB_CR_EVENT_STATUS);
+ 		sgx_stat_2 = PSB_RSGX32(PSB_CR_EVENT_STATUS2);
++		sgx535_gma500_fixed_irq_capture_locked(dev, sgx_stat_1,
++						   sgx_stat_2);
+ 		psb_sgx_interrupt(dev, sgx_stat_1, sgx_stat_2);
++		sgx535_gma500_fixed_irq_unlock(fixed_flags);
+ 		handled = 1;
+ 	}
+ 
+@@ -673,4 +679,3 @@
+ 
+ 	return count;
+ }
+-

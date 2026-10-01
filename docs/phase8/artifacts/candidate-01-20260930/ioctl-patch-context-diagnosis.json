@@ -1,0 +1,27 @@
+{
+  "source_sha256": "db2699f9301563dfe7cd8c87e7087d00a1c7af432a41161a6e2ec21b07d3d576",
+  "patch_sha256": "989841d7bf59156f197ecf46165e7ca0d4e5c03196770dc9c76e31e9964c40ed",
+  "hunks": [
+    {
+      "header": "@@ -31,4 +31,6 @@",
+      "old_context": "#include \"mid_bios.h\"\n#include \"power.h\"\n#include \"psb_drv.h\"\n#include \"psb_intel_reg.h\"\n",
+      "byte_exact_occurrences": [
+        31
+      ]
+    },
+    {
+      "header": "@@ -103,3 +105,5 @@",
+      "old_context": " */\nstatic const struct drm_ioctl_desc psb_ioctls[] = {\n};\n",
+      "byte_exact_occurrences": [
+        103
+      ]
+    }
+  ],
+  "verbose_dry_run": {
+    "exit_code": 1,
+    "stdout": "Hmm...  Looks like a unified diff to me...\nThe text leading up to this was:\n--------------------------\n|--- a/drivers/gpu/drm/gma500/psb_drv.c\n|+++ b/drivers/gpu/drm/gma500/psb_drv.c\n--------------------------\nchecking file psb_drv.c\nHunk #1 FAILED at 31.\nHunk #2 FAILED at 103.\n2 out of 2 hunks FAILED\ndone\n",
+    "stderr": ""
+  },
+  "conclusion": "Both old-context blocks occur byte-exactly in source, but retained patch is rejected by strict GNU patch dry run. No corrected patch or relaxed-fuzz application attempted.",
+  "exact_cause_of_strict_ioctl_patch_rejection": "UNKNOWN; separately review patch representation/context boundaries"
+}

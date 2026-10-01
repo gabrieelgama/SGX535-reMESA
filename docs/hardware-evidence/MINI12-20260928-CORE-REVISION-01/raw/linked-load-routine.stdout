@@ -1,0 +1,16 @@
+
+sgx535-core-revision.candidate:     file format elf32-i386
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .text:
+
+080497d5 <sgx535_load32_once>:
+ 80497d5:	8b 44 24 04          	mov    eax,DWORD PTR [esp+0x4]
+ 80497d9:	8b 00                	mov    eax,DWORD PTR [eax]
+ 80497db:	c3                   	ret
+
+Disassembly of section .fini:

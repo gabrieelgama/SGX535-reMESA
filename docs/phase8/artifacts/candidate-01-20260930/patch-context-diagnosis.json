@@ -1,0 +1,20 @@
+{
+  "classification": "CONFIRMED-FROM-ARTIFACT",
+  "reason": "Retained Makefile patch requires a blank context line at source line 57. Exact source ends at line 56 after the obj declaration; that blank line does not exist.",
+  "source_path": "/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp/drivers/gpu/drm/gma500/Makefile",
+  "source_sha256": "0166a146c2b03ee7065384598e5ee55b870e7e37bfe4b03c75373469636aa6ad",
+  "source_bytes": 1113,
+  "source_lines": 56,
+  "source_last_line": "obj-$(CONFIG_DRM_GMA500) += gma500_gfx.o\n",
+  "required_old_hunk": "\nobj-$(CONFIG_DRM_GMA500) += gma500_gfx.o\n\n",
+  "actual_source_hunk": "\nobj-$(CONFIG_DRM_GMA500) += gma500_gfx.o\n",
+  "missing_bytes_hex": "0a",
+  "patch_sha256": "e0537bb0b72c1513de1c0ad6e9fa2c32706aeb0c2f747d22fe8f2511b2fc5467",
+  "archive_member": "linux-5.10.240-antix.1-486-smp/drivers/gpu/drm/gma500/Makefile",
+  "archive_member_sha256": "0166a146c2b03ee7065384598e5ee55b870e7e37bfe4b03c75373469636aa6ad",
+  "archive_and_workspace_source_exact": true,
+  "implementation_modified": false,
+  "patch_applied": false,
+  "kbuild_started": false,
+  "table_installed": false
+}

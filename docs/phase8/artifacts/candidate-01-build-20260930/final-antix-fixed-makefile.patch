@@ -1,0 +1,11 @@
+--- a/drivers/gpu/drm/gma500/Makefile
++++ b/drivers/gpu/drm/gma500/Makefile
+@@ -54,3 +54,8 @@
+ 	  tc35876x-dsi-lvds.o
+ 
+ obj-$(CONFIG_DRM_GMA500) += gma500_gfx.o
++
++# Exact fixed-scene path; the separately reviewed ioctl patch installs its only caller.
++gma500_gfx-y += gma500_bo_owner.o frozen_kernel_contract.o \
++                 frozen_fixed_service.o frozen_fixed_io.o \
++                 gma500_fixed_backend.o gma500_fixed_entry.o

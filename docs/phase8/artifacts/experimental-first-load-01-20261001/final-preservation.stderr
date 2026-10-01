@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/gama/sgx535-offline/experimental-first-load-20261001/finalize_checks.py", line 26, in <module>
+    for name in added:assert name in expected or name.startswith(str(e.relative_to(r))+'/'),('unexpected new path',name)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('unexpected new path', 'tools/psb-dri-re/__pycache__/test_frozen_first_load_image.cpython-313.pyc')

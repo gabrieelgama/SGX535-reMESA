@@ -1,0 +1,2 @@
+insmod: ERROR: could not insert module /root/sgx535-frozen-seq1/gma500_gfx.ko: Invalid module format
+HOLD: candidate-load-failed

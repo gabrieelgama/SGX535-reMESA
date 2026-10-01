@@ -1,0 +1,13 @@
+source_class,query_or_scope,result,qualification,next_lead
+Exact title and normalized search,"Exact filename; title without version; 1.3.37a SGX535; underscore/dot/case variants",2009 forum and USITC title only; no PDF URL,PUBLIC_CITATION_ONLY,Vendor distribution confirmation
+Official archived SDK page,2008 SGX SDK page and download index,Linux OpenGL ES 2.0 route enters SDK=LinuxOGLES2 login; no target title,VERIFIED_HISTORICAL_PUBLIC_ARCHIVE,Original vendor release manifest
+Archived login route,2009 and 2010 SDK=LinuxOGLES2 pages,Login forms; no captured package URL or target title,VERIFIED_HISTORICAL_PUBLIC_ARCHIVE,Vendor release manifest
+Official SDK documentation indexes,2011 and 2012 docs pages,11 and 22 PDF links respectively; no Eurasia/Input Parameter/PDS title,NEGATIVE_BOUNDED,Partner documentation distribution path
+Wayback document subtree,www.imgtec.com/powervr/insider/docs/ CDX prefix,36 distinct URL keys including 23 successful PDF captures; none names target,NEGATIVE_BOUNDED,Uncaptured or other directory
+Wayback exact candidate URLs,Exact target under docs/ and Documentation/ with space/dot variants,Completed queries empty; some timed out,NEGATIVE_WITH_ACCESS_LIMIT,Original target URL
+Neighbor official public PDF,Series5 architecture guide v1.0.13 at docs/ URL,Public guide recovered; SDK REL_2.10@863987; no PDS/DS0/DS1/Eurasia,VERIFIED_HISTORICAL_PUBLIC_ARCHIVE,Adjacent historical docs tree
+Modified SDK mirror,anonymousjustice/pvr-pi full Git tree,3043 paths; no target or PDS/assembler path; modified SDK and guide mirror,NEGATIVE_BOUNDED,Original unmodified 2009 SDK package
+Historical FTP metadata,"ftp.imgtec.com; ftp.powervr.com; ftp.videologic.com",No identified SGX535 PDS document path; archive coverage incomplete,NEGATIVE_BOUNDED,Original vendor path from publisher
+Historical SDK package metadata,SDK_OGLES2_LINUX_PCEMULATION_2.01.21.0983.tar.gz,Archived URLs are 404 captures only; package not recovered,NEGATIVE_BOUNDED,Verified original release file manifest
+Distro package/recipe discovery,"Debian package search; OpenEmbedded img-pvr-sdk",No target title; later SDK 3.3.2 recipes do not qualify 2009 manual,NO_TARGET_LINK,Contemporaneous source manifest
+Public code/encoder search,"Eurasia filename fragments; SGX535 PDS assembler/encoder",No verified Series5 source eligibility encoder; modern Rogue/PSP2 results inapplicable,NO_APPLICABLE_ENCODER,Publisher archive or explicit public encoder

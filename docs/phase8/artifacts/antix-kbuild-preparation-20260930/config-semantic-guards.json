@@ -1,0 +1,26 @@
+{
+  "configured_symbols": 8788,
+  "config_difference_keys": [
+    "CONFIG_CC_VERSION_TEXT"
+  ],
+  "auto_conf_enabled_value_count": 7384,
+  "autoconf_definition_count": 7384,
+  "auto_conf_only_banner_difference": true,
+  "autoconf_only_banner_difference": true,
+  "critical_config": {
+    "CONFIG_X86_32": "CONFIG_X86_32=y",
+    "CONFIG_X86_64": "not present in target/prepared config",
+    "CONFIG_M486": "CONFIG_M486=y",
+    "CONFIG_SMP": "CONFIG_SMP=y",
+    "CONFIG_MODVERSIONS": "CONFIG_MODVERSIONS=y",
+    "CONFIG_GCC_VERSION": "CONFIG_GCC_VERSION=140200",
+    "CONFIG_AS_VERSION": "CONFIG_AS_VERSION=24400",
+    "CONFIG_LD_VERSION": "CONFIG_LD_VERSION=244000000",
+    "CONFIG_LOCALVERSION": "CONFIG_LOCALVERSION=\"\"",
+    "CONFIG_LOCALVERSION_AUTO": "# CONFIG_LOCALVERSION_AUTO is not set",
+    "CONFIG_RANDSTRUCT_FULL": "not present in target/prepared config",
+    "CONFIG_GCC_PLUGIN_RANDSTRUCT": "not present in target/prepared config"
+  },
+  "kernel_release": "5.10.240-antix.1-486-smp",
+  "prepared_config_sha256": "a9f866159ee08437f22c569b0f6864dd2d9cf8f4b777dd90d0397eba339f5ca4"
+}

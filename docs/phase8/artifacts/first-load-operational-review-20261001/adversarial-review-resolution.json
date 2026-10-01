@@ -1,0 +1,30 @@
+{
+  "critical": 0,
+  "important": 5,
+  "findings": [
+    {
+      "issue": "missing/contradictory boot references",
+      "resolution": "nonempty references and three distinct pre-stage/experimental/recovery IDs required"
+    },
+    {
+      "issue": "first-load services ignored",
+      "resolution": "slimski/Xorg required for overall first-load record acceptance"
+    },
+    {
+      "issue": "stock recovery defaults/framebuffer unchecked",
+      "resolution": "saved stock ID only; no next-entry; framebuffer1280x800"
+    },
+    {
+      "issue": "extra hook errors admitted",
+      "resolution": "raw trace must exactly match the three ordered success lines; no extra diagnostics"
+    },
+    {
+      "issue": "observation deadline ignored",
+      "resolution": "finite nonnegative elapsed_seconds <=120 required for both observation captures"
+    }
+  ],
+  "regression_red": "17 tests; 30 failing negative subcases, exit1",
+  "regression_green": "17 tests PASS, exit0",
+  "no_target_contact": true,
+  "no_image_change": true
+}

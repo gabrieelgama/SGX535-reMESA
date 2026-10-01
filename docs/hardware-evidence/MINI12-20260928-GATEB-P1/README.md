@@ -1,0 +1,5 @@
+# Mini 12 Gate B passive target pass P1
+
+This is a new, bounded, unprivileged OS-visible target capture on 2026-09-28. It does **not** repeat or overwrite [H0](../MINI12-20260927-H0/README.md). The pinned H0 SSH host-key file and existing key were reused. Fresh DMI/CPU/PCI identity was checked before the snapshot. Three SSH executions occurred: identity, selected sysfs/procfs snapshot, and one narrow display-process follow-up. Each executed the captured read-only Python source from standard input; no program file was installed on the target.
+
+See [results](results.md), [individual Gate B reassessment](gate-b-passive-reassessment.md), and [manifest](manifest.json). `raw/` retains exact stdout, stderr and per-command metadata. Host and target UTC-formatted timestamps are recorded separately; neither clock was independently verified against external UTC. No SGX MMIO, `/dev/mem`, DRM/SGX ioctl, GPU submission, module operation, reset, power/clock change, suspend/resume or recovery test occurred.

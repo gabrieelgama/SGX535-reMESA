@@ -1,0 +1,39 @@
+{
+  "psb_driver_unload": [
+    "gma_backlight_exit",
+    "psb_modeset_cleanup",
+    "__x86_indirect_thunk_edx",
+    "psb_intel_opregion_fini",
+    "psb_mmu_free_pagedir",
+    "down_read",
+    "psb_mmu_get_default_pd",
+    "psb_mmu_remove_pfn_sequence",
+    "up_read",
+    "psb_mmu_driver_takedown",
+    "psb_gtt_takedown",
+    "set_pages_wb",
+    "__free_pages",
+    "iounmap",
+    "iounmap",
+    "iounmap",
+    "pci_dev_put",
+    "pci_dev_put",
+    "psb_intel_destroy_bios",
+    "kfree",
+    "gma_power_uninit"
+  ],
+  "psb_pci_remove": [
+    "drm_dev_unregister",
+    "drm_dev_put"
+  ],
+  "init_module": [
+    ".rodata.str1.1",
+    "__this_module",
+    ".data",
+    "__pci_register_driver"
+  ],
+  "cleanup_module": [
+    ".data",
+    "pci_unregister_driver"
+  ]
+}

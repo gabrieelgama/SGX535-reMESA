@@ -1,0 +1,4 @@
+Hunks with less prefix context than suffix context (after applying fuzz)
+must apply at the start of the file if their first line number is\ 1.  Hunks
+with more prefix context than suffix context (after applying fuzz) must apply
+at the end of the file.

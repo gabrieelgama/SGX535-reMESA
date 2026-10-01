@@ -39,3 +39,8 @@
 0xbf20 XpsbFenceFinish
 0xc060 XpsbBatchPoolInit
 0xc7f0 XpsbDRMPoolInit
+0x7470 Xpsb_pds_get_num_constants
+
+0x7eb0 Xpsb_emit_pixel_event_program
+
+0x4030 selected_scene_switch_helper

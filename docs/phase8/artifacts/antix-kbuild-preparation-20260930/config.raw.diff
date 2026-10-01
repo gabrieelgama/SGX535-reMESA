@@ -1,0 +1,11 @@
+--- captured_target_config
++++ prepared_config
+@@ -2,7 +2,7 @@
+ # Automatically generated file; DO NOT EDIT.
+ # Linux/x86 5.10.240-antix.1 Kernel Configuration
+ #
+-CONFIG_CC_VERSION_TEXT="gcc (Debian 14.2.0-19) 14.2.0"
++CONFIG_CC_VERSION_TEXT="i686-linux-gnu-gcc-14 (Debian 14.2.0-19) 14.2.0"
+ CONFIG_CC_IS_GCC=y
+ CONFIG_GCC_VERSION=140200
+ CONFIG_LD_VERSION=244000000

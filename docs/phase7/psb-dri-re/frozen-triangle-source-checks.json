@@ -1,0 +1,86 @@
+{
+  "scope": "Existing qualified public sources; no new acquisition; tmp paths ephemeral",
+  "reproduction": "Use existing source-provenance.md and xpsb-re/version-pairing.md acquisition records",
+  "sources": [
+    {
+      "path": "/tmp/sgx535-pairing/psb-kmod-4.41.1-10.fc11.10/psb-kernel-source-4.41.1/psb_scene.c",
+      "sha256": "07309f6a189eb0ede64aaa98e7fbd858f44314256e2262226f48ba33d9b7528e"
+    },
+    {
+      "path": "/tmp/sgx535-pairing/psb-kmod-4.41.1-10.fc11.10/psb-kernel-source-4.41.1/psb_xhw.c",
+      "sha256": "73783fad6b072b655d50386621d09d7fe6f4cdd896cb991ed0258a2494330fc1"
+    },
+    {
+      "path": "/tmp/sgx535-pairing/psb-kmod-4.41.1-10.fc11.10/psb-kernel-source-4.41.1/psb_drv.c",
+      "sha256": "1b8ea67bcdcea0b99073d98ddb322b6cf32dec0cae0dce091e32510005115736"
+    },
+    {
+      "path": "/tmp/sgx535-pairing/psb-kmod-4.41.1-10.fc11.10/psb-kernel-source-4.41.1/psb_drm.h",
+      "sha256": "b4aeb1f85c5609c5811447f2c1ea691a4dbaedb439955df507b51b8302769494"
+    },
+    {
+      "path": "/tmp/sgx535-mesa-7.4.4/Mesa-7.4.4/src/mesa/main/depth.c",
+      "sha256": "a2c28707a5138756897c7083fa03cff372e4e73dd417de444fb6d026c3d3f1c3"
+    },
+    {
+      "path": "/tmp/sgx535-mesa-7.4.4/Mesa-7.4.4/src/mesa/main/stencil.c",
+      "sha256": "9a4aada16bf67bcb37f3993d3cdab36060a0b0feded8e3348b8a36633b345b7f"
+    },
+    {
+      "path": "/tmp/sgx535-pairing/psb-kmod-4.41.1-10.fc11.10/psb-kernel-source-4.41.1/psb_schedule.c",
+      "sha256": "1a139a24cfbd6593e7a6c71315bd63d5ea649fda712555dc34ae30650f24eeca"
+    },
+    {
+      "path": "/tmp/sgx535-pairing/psb-kmod-4.41.1-10.fc11.10/psb-kernel-source-4.41.1/psb_sgx.c",
+      "sha256": "f17805b4a8959c064e222255baa5c885366c1970630b655dea04047daec79d02"
+    },
+    {
+      "path": "/tmp/sgx535-pairing/psb-kmod-4.41.1-10.fc11.10/psb-kernel-source-4.41.1/psb_buffer.c",
+      "sha256": "f2e6833fc82de488c6c41e99a5da2c5b00ec0fea36b9defeb4057e70f464c147"
+    },
+    {
+      "path": "/tmp/sgx535-pairing/psb-kmod-4.41.1-10.fc11.10/psb-kernel-source-4.41.1/drm_bo.c",
+      "sha256": "d194f8b961eb18fe03b1c9cda126b95097c4f9084a0cf5df3f92f752b596c8f2"
+    },
+    {
+      "path": "/tmp/sgx535-pairing/psb-kmod-4.41.1-10.fc11.10/psb-kernel-source-4.41.1/drm_bo_move.c",
+      "sha256": "f4049f6921faacdf9818dfd507d69f35f512e1721df5871a22b5b444e85737c6"
+    },
+    {
+      "path": "/tmp/sgx535-pairing/psb-kmod-4.41.1-10.fc11.10/psb-kernel-source-4.41.1/drm_vm.c",
+      "sha256": "04825cfdc25ddf03a87d604bb3f105221438e46842567bcc43fa2f8a9077b873"
+    },
+    {
+      "path": "/tmp/sgx535-pairing/psb-kmod-4.41.1-10.fc11.10/psb-kernel-source-4.41.1/psb_mmu.c",
+      "sha256": "401954c022c8c7a76e6b30ae86b141e8a673f0b8587b7786f8c09bf7e4d05f5b"
+    },
+    {
+      "path": "/tmp/sgx535-pairing/psb-kmod-4.41.1-10.fc11.10/psb-kernel-source-4.41.1/drm.h",
+      "sha256": "e4e0c5dce5558d4aa09f33fa236832e354275ccc1612a7c4a1a906758bb51f41"
+    },
+    {
+      "path": "/tmp/sgx535-pairing/psb-kmod-4.41.1-10.fc11.10/psb-kernel-source-4.41.1/psb_reg.h",
+      "sha256": "512563057c48f651176928ccd33666a8a1145f19eb28c60296382776be1c4344"
+    },
+    {
+      "path": "/tmp/sgx535-pairing/psb-kmod-4.41.1-10.fc11.10/psb-kernel-source-4.41.1/psb_regman.c",
+      "sha256": "5c0dffcb62a8bdc20e117769d3ac6dc66990ebf8754398b4d0cbed4dd74755d3"
+    },
+    {
+      "path": "/tmp/sgx535-xorg-psb/xserver-xorg-video-psb-0.32.0/src/psb_buffers.c",
+      "sha256": "331eb8cabd35b5a7fb140a699bbdb13623e4d8642fd339027e5dc02af661d4c0"
+    },
+    {
+      "path": "/tmp/sgx535-xorg-psb/xserver-xorg-video-psb-0.32.0/src/psb_dri.c",
+      "sha256": "8bf50e08b106699e83cf18919359bd76330b2f49b1bf3b37ef1c5e295798bb64"
+    },
+    {
+      "path": "docs/poulsbo-data/EMGD_drm_pvr_services4_srvkm_hwdefs_sgx535defs_h.txt",
+      "sha256": "634fbb74645d373e0c60ad5e01194fa96e91bb6b26d60dbc35a71a2eda49d12c"
+    },
+    {
+      "path": "/tmp/sgx535-pairing/psb-kmod-4.41.1-10.fc11.10/psb-kernel-source-4.41.1/psb_irq.c",
+      "sha256": "1240c2ff093450fa578e6759ecedaf71f20df9f9a0897285be2db893cf19f1b3"
+    }
+  ]
+}

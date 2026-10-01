@@ -1,5 +1,7 @@
 # Fragment link record for the frozen draw
 
+**Historical checkpoint:** the [selected compiler result](frozen-fragment-exact-output.md) now supplies the values that this checkpoint previously marked UNKNOWN (`+0xb4=0`, `+0xb8=0x2`, `+0x1d8=0`, `+0x1cc=1`, `+0x1d0=0`). The table below preserves the earlier conditional link formulas. The later [FG-02 trace](frozen-fragment-link-progress.md) substitutes those fields, derives the link-time suffix and secondary fast path, and records the pixel-state work that remains.
+
 The linker at retained DRI ELF `0x000370d8` initializes an `0x88`-byte object to zero, then fills selected fields from the fragment key and compiler result. These are **CONFIRMED binary construction rules**, not completed values for the frozen triangle. Its caller and downstream scene atoms are in the [frozen draw](frozen-draw-closure.md); source identity is the DRI SHA-256 in the [compiler checkpoint](frozen-fragment-compiler-checkpoint.md).
 
 | link-object offset | producer rule | selected-path limit |

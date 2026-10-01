@@ -1,0 +1,3 @@
+UNBIND write_rc=0 vtcon1=0 vtcon0=1 refcount=0 build_note=040000001400000003000000474e5500d8dcb4d38b774ad64799d5e13aaedede069371f3 pci_driver=/sys/bus/pci/drivers/gma500
+REBIND write_rc=0 vtcon1=1 vtcon0=0 refcount=1 build_note=040000001400000003000000474e5500d8dcb4d38b774ad64799d5e13aaedede069371f3 pci_driver=/sys/bus/pci/drivers/gma500
+CONSOLE_TEST_RESULT=RELEASE_OBSERVED ORIGINAL_STATE_READY_FOR_SERVICE_RESTORE

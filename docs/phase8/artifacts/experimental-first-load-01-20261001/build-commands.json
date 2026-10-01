@@ -1,0 +1,44 @@
+[
+  {
+    "name": "build-1",
+    "argv": [
+      "python3",
+      "tools/psb-dri-re/frozen_first_load_image.py",
+      "--output",
+      "/home/gama/sgx535-offline/experimental-first-load-20261001/build-01"
+    ],
+    "start_result_recorded_utc": "2026-10-01T04:32:53.213582+00:00",
+    "exit_code": 0
+  },
+  {
+    "name": "build-2",
+    "argv": [
+      "python3",
+      "tools/psb-dri-re/frozen_first_load_image.py",
+      "--output",
+      "/home/gama/sgx535-offline/experimental-first-load-20261001/build-02"
+    ],
+    "start_result_recorded_utc": "2026-10-01T04:33:11.309478+00:00",
+    "exit_code": 0
+  },
+  {
+    "name": "hook-shell-syntax",
+    "argv": [
+      "/bin/sh",
+      "-n",
+      "/home/gama/sgx535-offline/experimental-first-load-20261001/build-01/sgx535-first-load.sh"
+    ],
+    "start_result_recorded_utc": "2026-10-01T04:33:11.461349+00:00",
+    "exit_code": 0
+  },
+  {
+    "name": "init-shell-syntax",
+    "argv": [
+      "/bin/sh",
+      "-n",
+      "/home/gama/sgx535-offline/experimental-first-load-20261001/build-01/modified-init"
+    ],
+    "start_result_recorded_utc": "2026-10-01T04:33:11.468749+00:00",
+    "exit_code": 0
+  }
+]

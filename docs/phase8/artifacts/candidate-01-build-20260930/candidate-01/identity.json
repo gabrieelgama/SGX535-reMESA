@@ -1,0 +1,32 @@
+{
+  "path": "/home/gama/sgx535-offline/candidate-01-build-20260930/module/gma500_gfx.ko",
+  "preserved_path": "/home/gama/sgx535-offline/candidate-01-build-20260930/candidate-01/gma500_gfx.ko",
+  "size": 242364,
+  "sha256": "13591674ef9fa82f185f075185d1fa09d94606ccce7253ed231627f2649c600f",
+  "build_id": "d72f19c97c5fd1feffddad07634e12333562ae60",
+  "elf": "ELF32 little-endian ET_REL EM_386",
+  "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 ",
+  "module_layout": "0xb84efb99",
+  "imports_total": 230,
+  "imports_covered": 230,
+  "missing_imports": 0,
+  "crc_mismatches": 0,
+  "candidate_only_imports": [
+    "drm_clflush_pages",
+    "memcmp",
+    "module_put",
+    "request_resource",
+    "try_module_get",
+    "usleep_range",
+    "vmap",
+    "vunmap"
+  ],
+  "removed_imports": [],
+  "dependencies": "drm,drm_kms_helper,video,i2c-algo-bit",
+  "module_signature_trailer_present": false,
+  "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+  "abi_import_guard": "PASS",
+  "full_qualification": "ABI QUALIFICATION: PASS",
+  "repeat_build": "BIT IDENTICAL",
+  "regression_suite": "198 tests PASS; qualified i386 object regression executed without skips"
+}

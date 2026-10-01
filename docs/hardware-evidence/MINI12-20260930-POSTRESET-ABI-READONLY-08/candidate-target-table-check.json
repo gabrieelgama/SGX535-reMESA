@@ -1,0 +1,638 @@
+{
+  "table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+  "candidate_sha256": "934bd97164c803e52d96528b9ec464d587a6a68e2f671aa255407657cc5342cf",
+  "candidate_import_count": 228,
+  "missing_imports": [],
+  "candidate_crc_mismatches": {
+    "__alloc_pages_nodemask": {
+      "target": "0xfb95539a",
+      "rejected_candidate": "0x52e9067c"
+    },
+    "__free_pages": {
+      "target": "0x91176bb3",
+      "rejected_candidate": "0x2895a056"
+    },
+    "__pci_register_driver": {
+      "target": "0x4630e387",
+      "rejected_candidate": "0xa1a6e8ab"
+    },
+    "__pm_runtime_disable": {
+      "target": "0x7e434ac1",
+      "rejected_candidate": "0xc9138c21"
+    },
+    "__pm_runtime_idle": {
+      "target": "0x41159394",
+      "rejected_candidate": "0x58d7fa5d"
+    },
+    "__pm_runtime_resume": {
+      "target": "0xfa6551ed",
+      "rejected_candidate": "0x4f90a027"
+    },
+    "__pm_runtime_set_status": {
+      "target": "0xc4dac443",
+      "rejected_candidate": "0xd537b3f0"
+    },
+    "_dev_err": {
+      "target": "0x3b73b2f8",
+      "rejected_candidate": "0x9be7888f"
+    },
+    "_dev_info": {
+      "target": "0x59a2c442",
+      "rejected_candidate": "0xba69684f"
+    },
+    "_dev_warn": {
+      "target": "0xe0eef788",
+      "rejected_candidate": "0xd47569d1"
+    },
+    "backlight_device_register": {
+      "target": "0x8996100d",
+      "rejected_candidate": "0x19022d0b"
+    },
+    "backlight_device_unregister": {
+      "target": "0xc0af53d9",
+      "rejected_candidate": "0x889d791d"
+    },
+    "current_task": {
+      "target": "0xf69073fc",
+      "rejected_candidate": "0x923b481f"
+    },
+    "dev_printk": {
+      "target": "0xcb147e11",
+      "rejected_candidate": "0x6690650b"
+    },
+    "drm_add_edid_modes": {
+      "target": "0x08749094",
+      "rejected_candidate": "0x9d14529a"
+    },
+    "drm_clflush_pages": {
+      "target": "0xceb9549d",
+      "rejected_candidate": "0xf4f138ec"
+    },
+    "drm_connector_attach_encoder": {
+      "target": "0x2afd5eeb",
+      "rejected_candidate": "0xff1c350f"
+    },
+    "drm_connector_cleanup": {
+      "target": "0x858bdd00",
+      "rejected_candidate": "0x5bf0801c"
+    },
+    "drm_connector_init": {
+      "target": "0x12b0a306",
+      "rejected_candidate": "0x8c3e6025"
+    },
+    "drm_connector_register": {
+      "target": "0x7f70cea3",
+      "rejected_candidate": "0x5f2f6153"
+    },
+    "drm_connector_unregister": {
+      "target": "0x6b387114",
+      "rejected_candidate": "0xa9467613"
+    },
+    "drm_connector_update_edid_property": {
+      "target": "0x1b9a5879",
+      "rejected_candidate": "0x0e1f2734"
+    },
+    "drm_crtc_cleanup": {
+      "target": "0xe8bd5d28",
+      "rejected_candidate": "0x5e7f6596"
+    },
+    "drm_crtc_from_index": {
+      "target": "0x4368f3cc",
+      "rejected_candidate": "0x07316d65"
+    },
+    "drm_crtc_helper_set_config": {
+      "target": "0x4f9901a6",
+      "rejected_candidate": "0x3fd8d82b"
+    },
+    "drm_crtc_helper_set_mode": {
+      "target": "0x67461dec",
+      "rejected_candidate": "0xb1b639cb"
+    },
+    "drm_crtc_init": {
+      "target": "0x2d6a8bc8",
+      "rejected_candidate": "0x4ef1a388"
+    },
+    "drm_crtc_send_vblank_event": {
+      "target": "0xf2c3ddde",
+      "rejected_candidate": "0xe7e5616d"
+    },
+    "drm_crtc_vblank_get": {
+      "target": "0x07cdd1ec",
+      "rejected_candidate": "0xad9584c4"
+    },
+    "drm_crtc_vblank_off": {
+      "target": "0xac68f77e",
+      "rejected_candidate": "0x0525cb92"
+    },
+    "drm_crtc_vblank_on": {
+      "target": "0x9fc58800",
+      "rejected_candidate": "0x19169def"
+    },
+    "drm_crtc_vblank_put": {
+      "target": "0x687fcdb7",
+      "rejected_candidate": "0x4a3f6744"
+    },
+    "drm_dev_alloc": {
+      "target": "0xdf97e01a",
+      "rejected_candidate": "0xd864de8a"
+    },
+    "drm_dev_put": {
+      "target": "0xe5341f76",
+      "rejected_candidate": "0x9d661f7d"
+    },
+    "drm_dev_register": {
+      "target": "0xc18f35cf",
+      "rejected_candidate": "0xa30ad871"
+    },
+    "drm_dev_unregister": {
+      "target": "0xd740f14e",
+      "rejected_candidate": "0x119fb322"
+    },
+    "drm_encoder_cleanup": {
+      "target": "0xc16ba3da",
+      "rejected_candidate": "0xd11faacc"
+    },
+    "drm_encoder_init": {
+      "target": "0x551ee7db",
+      "rejected_candidate": "0x16d9c8a9"
+    },
+    "drm_fb_helper_alloc_fbi": {
+      "target": "0xa39f1333",
+      "rejected_candidate": "0xb74cecb2"
+    },
+    "drm_fb_helper_blank": {
+      "target": "0x1fe37898",
+      "rejected_candidate": "0x06233ac2"
+    },
+    "drm_fb_helper_cfb_copyarea": {
+      "target": "0x444d1216",
+      "rejected_candidate": "0x1bc71479"
+    },
+    "drm_fb_helper_cfb_fillrect": {
+      "target": "0xd3d56752",
+      "rejected_candidate": "0x45f77f59"
+    },
+    "drm_fb_helper_cfb_imageblit": {
+      "target": "0x9096c66f",
+      "rejected_candidate": "0xc23c4dc3"
+    },
+    "drm_fb_helper_check_var": {
+      "target": "0xe12afd06",
+      "rejected_candidate": "0x2b4c8b6d"
+    },
+    "drm_fb_helper_debug_enter": {
+      "target": "0x87e5108a",
+      "rejected_candidate": "0x00515fa7"
+    },
+    "drm_fb_helper_debug_leave": {
+      "target": "0xd8b6e74b",
+      "rejected_candidate": "0xa45783e8"
+    },
+    "drm_fb_helper_fill_info": {
+      "target": "0xfedc87a9",
+      "rejected_candidate": "0x5bdcd777"
+    },
+    "drm_fb_helper_fini": {
+      "target": "0x75027430",
+      "rejected_candidate": "0x572388be"
+    },
+    "drm_fb_helper_init": {
+      "target": "0x465a409c",
+      "rejected_candidate": "0x207f0ccd"
+    },
+    "drm_fb_helper_initial_config": {
+      "target": "0x92e27e4c",
+      "rejected_candidate": "0x3959cfbc"
+    },
+    "drm_fb_helper_ioctl": {
+      "target": "0x1d82eef7",
+      "rejected_candidate": "0x06929a4c"
+    },
+    "drm_fb_helper_lastclose": {
+      "target": "0xb117f672",
+      "rejected_candidate": "0xccd29311"
+    },
+    "drm_fb_helper_output_poll_changed": {
+      "target": "0x14417647",
+      "rejected_candidate": "0x3ebbaaa5"
+    },
+    "drm_fb_helper_pan_display": {
+      "target": "0x5f2a228d",
+      "rejected_candidate": "0x2168c1d3"
+    },
+    "drm_fb_helper_prepare": {
+      "target": "0x60e4830d",
+      "rejected_candidate": "0x7d842329"
+    },
+    "drm_fb_helper_set_par": {
+      "target": "0xcd87ff6d",
+      "rejected_candidate": "0x5a9a8007"
+    },
+    "drm_fb_helper_setcmap": {
+      "target": "0x2c5831c7",
+      "rejected_candidate": "0x5b6e1528"
+    },
+    "drm_fb_helper_unregister_fbi": {
+      "target": "0xe38e77f5",
+      "rejected_candidate": "0x41e00b69"
+    },
+    "drm_framebuffer_cleanup": {
+      "target": "0x840a269a",
+      "rejected_candidate": "0x0ebc5dbf"
+    },
+    "drm_framebuffer_init": {
+      "target": "0x9db17175",
+      "rejected_candidate": "0x7fdbe23d"
+    },
+    "drm_framebuffer_unregister_private": {
+      "target": "0x836177c6",
+      "rejected_candidate": "0x093e4421"
+    },
+    "drm_gem_fb_create_handle": {
+      "target": "0x09bf6df8",
+      "rejected_candidate": "0x74e6f783"
+    },
+    "drm_gem_fb_destroy": {
+      "target": "0x77e0e5fd",
+      "rejected_candidate": "0x95c1efa3"
+    },
+    "drm_gem_free_mmap_offset": {
+      "target": "0xc4ca3c10",
+      "rejected_candidate": "0xce5d02f2"
+    },
+    "drm_gem_get_pages": {
+      "target": "0x9e66b37b",
+      "rejected_candidate": "0x65af6d7b"
+    },
+    "drm_gem_handle_create": {
+      "target": "0xb0562a59",
+      "rejected_candidate": "0x6bf1c956"
+    },
+    "drm_gem_mmap": {
+      "target": "0x0e78caa7",
+      "rejected_candidate": "0x8f0ce75f"
+    },
+    "drm_gem_object_init": {
+      "target": "0x78c90161",
+      "rejected_candidate": "0x07638789"
+    },
+    "drm_gem_object_lookup": {
+      "target": "0xf2761d23",
+      "rejected_candidate": "0x4204cb37"
+    },
+    "drm_gem_object_release": {
+      "target": "0x07d8bd61",
+      "rejected_candidate": "0x33722b7c"
+    },
+    "drm_gem_private_object_init": {
+      "target": "0xa88f45a6",
+      "rejected_candidate": "0xf18fc6ec"
+    },
+    "drm_gem_put_pages": {
+      "target": "0x35c6d5d3",
+      "rejected_candidate": "0x9baba9f9"
+    },
+    "drm_gem_vm_close": {
+      "target": "0x1b36caf0",
+      "rejected_candidate": "0xe44582d5"
+    },
+    "drm_gem_vm_open": {
+      "target": "0xfbdb5e8b",
+      "rejected_candidate": "0xf588287f"
+    },
+    "drm_get_edid": {
+      "target": "0x45f25a3d",
+      "rejected_candidate": "0x6c4f81d0"
+    },
+    "drm_handle_vblank": {
+      "target": "0xb89ddae4",
+      "rejected_candidate": "0xeac3eb89"
+    },
+    "drm_helper_connector_dpms": {
+      "target": "0x2d873b87",
+      "rejected_candidate": "0xa811f8d3"
+    },
+    "drm_helper_crtc_in_use": {
+      "target": "0xe1d30b20",
+      "rejected_candidate": "0xa8a4d969"
+    },
+    "drm_helper_disable_unused_functions": {
+      "target": "0x4bce10a3",
+      "rejected_candidate": "0x36091ca9"
+    },
+    "drm_helper_hpd_irq_event": {
+      "target": "0xd3beb144",
+      "rejected_candidate": "0x432d36f2"
+    },
+    "drm_helper_mode_fill_fb_struct": {
+      "target": "0x5b74cea2",
+      "rejected_candidate": "0x5eef6ebe"
+    },
+    "drm_helper_probe_single_connector_modes": {
+      "target": "0xd76161c0",
+      "rejected_candidate": "0x15166d8a"
+    },
+    "drm_helper_resume_force_mode": {
+      "target": "0x09a18ac2",
+      "rejected_candidate": "0x650e93c6"
+    },
+    "drm_ioctl": {
+      "target": "0xf181243d",
+      "rejected_candidate": "0xb048f72b"
+    },
+    "drm_irq_install": {
+      "target": "0xbc397fa0",
+      "rejected_candidate": "0xb4051380"
+    },
+    "drm_kms_helper_poll_fini": {
+      "target": "0x6b48f7f4",
+      "rejected_candidate": "0x23f40368"
+    },
+    "drm_kms_helper_poll_init": {
+      "target": "0x43cfd3f1",
+      "rejected_candidate": "0xaab4a23d"
+    },
+    "drm_mode_config_cleanup": {
+      "target": "0x1fd3769c",
+      "rejected_candidate": "0x3f5c7923"
+    },
+    "drm_mode_config_reset": {
+      "target": "0xf06e404f",
+      "rejected_candidate": "0xc75cf509"
+    },
+    "drm_mode_create_scaling_mode_property": {
+      "target": "0xc0532d32",
+      "rejected_candidate": "0x42b79656"
+    },
+    "drm_mode_crtc_set_gamma_size": {
+      "target": "0x91c87124",
+      "rejected_candidate": "0x15e92c3c"
+    },
+    "drm_mode_destroy": {
+      "target": "0x6dbf006b",
+      "rejected_candidate": "0x777f6e9c"
+    },
+    "drm_mode_duplicate": {
+      "target": "0x929ceebb",
+      "rejected_candidate": "0xcf6527d3"
+    },
+    "drm_mode_probed_add": {
+      "target": "0xdfd5dfb2",
+      "rejected_candidate": "0x9922852c"
+    },
+    "drm_modeset_lock_all": {
+      "target": "0x406a67cc",
+      "rejected_candidate": "0x82fe4832"
+    },
+    "drm_modeset_unlock_all": {
+      "target": "0xce3da969",
+      "rejected_candidate": "0x8982ff6d"
+    },
+    "drm_object_attach_property": {
+      "target": "0x43754b83",
+      "rejected_candidate": "0x3df35055"
+    },
+    "drm_object_property_get_value": {
+      "target": "0x6d43f07c",
+      "rejected_candidate": "0xcd22b266"
+    },
+    "drm_object_property_set_value": {
+      "target": "0xd12f0779",
+      "rejected_candidate": "0xbad19888"
+    },
+    "drm_open": {
+      "target": "0x6a6db2ab",
+      "rejected_candidate": "0x1646f4ef"
+    },
+    "drm_poll": {
+      "target": "0xe34e0bb7",
+      "rejected_candidate": "0x0589cf21"
+    },
+    "drm_property_add_enum": {
+      "target": "0x747c36b6",
+      "rejected_candidate": "0x66e0a715"
+    },
+    "drm_property_create": {
+      "target": "0x760e2a89",
+      "rejected_candidate": "0xf6fe3738"
+    },
+    "drm_property_create_range": {
+      "target": "0x32cc6692",
+      "rejected_candidate": "0x9676c4e4"
+    },
+    "drm_read": {
+      "target": "0x55ad16fa",
+      "rejected_candidate": "0xc846f3d0"
+    },
+    "drm_release": {
+      "target": "0xc33876fd",
+      "rejected_candidate": "0x86c67358"
+    },
+    "drm_simple_encoder_init": {
+      "target": "0xab201322",
+      "rejected_candidate": "0xdc2b476c"
+    },
+    "drm_vblank_init": {
+      "target": "0x4af99876",
+      "rejected_candidate": "0xf91fc96b"
+    },
+    "drmm_mode_config_init": {
+      "target": "0x7f5fa731",
+      "rejected_candidate": "0xcc648ccd"
+    },
+    "i2c_add_adapter": {
+      "target": "0x8c78730c",
+      "rejected_candidate": "0x59707e1d"
+    },
+    "i2c_add_numbered_adapter": {
+      "target": "0xffd0284f",
+      "rejected_candidate": "0x8ac8dbd5"
+    },
+    "i2c_bit_add_bus": {
+      "target": "0xc50fcddf",
+      "rejected_candidate": "0x045ab863"
+    },
+    "i2c_del_adapter": {
+      "target": "0x28992518",
+      "rejected_candidate": "0x795fa93f"
+    },
+    "i2c_get_adapter": {
+      "target": "0x4d895b02",
+      "rejected_candidate": "0x38c80b63"
+    },
+    "i2c_transfer": {
+      "target": "0xf10874d6",
+      "rejected_candidate": "0xafe6a091"
+    },
+    "kmalloc_caches": {
+      "target": "0x72208652",
+      "rejected_candidate": "0x93f6c7d4"
+    },
+    "kmap_atomic_high_prot": {
+      "target": "0x3d31df56",
+      "rejected_candidate": "0x28bd1d96"
+    },
+    "kmap_high": {
+      "target": "0x47361169",
+      "rejected_candidate": "0x433f8e3a"
+    },
+    "kmem_cache_alloc_trace": {
+      "target": "0x0bed2f44",
+      "rejected_candidate": "0xcf5e5e47"
+    },
+    "kunmap_high": {
+      "target": "0x2c023f17",
+      "rejected_candidate": "0x3f1bc846"
+    },
+    "mem_section": {
+      "target": "0xe5357507",
+      "rejected_candidate": "0x218b72bf"
+    },
+    "module_layout": {
+      "target": "0xb84efb99",
+      "rejected_candidate": "0x995e9910"
+    },
+    "module_put": {
+      "target": "0x59ab9688",
+      "rejected_candidate": "0x076994bd"
+    },
+    "page_address": {
+      "target": "0xb5696f27",
+      "rejected_candidate": "0x3fbb8862"
+    },
+    "pci_dev_put": {
+      "target": "0x70c0ebae",
+      "rejected_candidate": "0xf769a5a9"
+    },
+    "pci_disable_device": {
+      "target": "0x84e4ba64",
+      "rejected_candidate": "0x8c97124e"
+    },
+    "pci_enable_device": {
+      "target": "0x79482b20",
+      "rejected_candidate": "0x2190d48c"
+    },
+    "pci_enable_msi": {
+      "target": "0xabf6fe8a",
+      "rejected_candidate": "0x8d4301c0"
+    },
+    "pci_get_device": {
+      "target": "0x4139df38",
+      "rejected_candidate": "0x284714b8"
+    },
+    "pci_get_domain_bus_and_slot": {
+      "target": "0x752b3c0c",
+      "rejected_candidate": "0x1c55f78c"
+    },
+    "pci_map_rom": {
+      "target": "0xb7acac2f",
+      "rejected_candidate": "0x74bf5fa1"
+    },
+    "pci_read_config_byte": {
+      "target": "0x06c3e3bb",
+      "rejected_candidate": "0xba22a046"
+    },
+    "pci_read_config_dword": {
+      "target": "0x293cd72b",
+      "rejected_candidate": "0xab5c00dc"
+    },
+    "pci_read_config_word": {
+      "target": "0x6052417c",
+      "rejected_candidate": "0xc2c35614"
+    },
+    "pci_restore_state": {
+      "target": "0x1c2be14b",
+      "rejected_candidate": "0xae345c85"
+    },
+    "pci_save_state": {
+      "target": "0xfbc6e7a2",
+      "rejected_candidate": "0x55a3f5f0"
+    },
+    "pci_set_master": {
+      "target": "0xdcf50fed",
+      "rejected_candidate": "0x76e2f600"
+    },
+    "pci_set_power_state": {
+      "target": "0x2d0d9f74",
+      "rejected_candidate": "0x465a2dc3"
+    },
+    "pci_unmap_rom": {
+      "target": "0x15cf16aa",
+      "rejected_candidate": "0x92ec3ced"
+    },
+    "pci_unregister_driver": {
+      "target": "0xc8b19419",
+      "rejected_candidate": "0x5b4ad2be"
+    },
+    "pci_write_config_byte": {
+      "target": "0xfb69fc17",
+      "rejected_candidate": "0xf2874f90"
+    },
+    "pci_write_config_dword": {
+      "target": "0x1ecc4509",
+      "rejected_candidate": "0x7a024d72"
+    },
+    "pci_write_config_word": {
+      "target": "0x52ff6b8c",
+      "rejected_candidate": "0x79d60cd8"
+    },
+    "pm_runtime_allow": {
+      "target": "0x315aafc2",
+      "rejected_candidate": "0x2203fc0d"
+    },
+    "pm_runtime_forbid": {
+      "target": "0x56ca8bb8",
+      "rejected_candidate": "0x2eaddf63"
+    },
+    "pv_ops": {
+      "target": "0xb8053ad8",
+      "rejected_candidate": "0x145a2937"
+    },
+    "set_pages_array_wb": {
+      "target": "0x7ab2b3a9",
+      "rejected_candidate": "0x8671731e"
+    },
+    "set_pages_array_wc": {
+      "target": "0xdaa0b66c",
+      "rejected_candidate": "0xb4ec0709"
+    },
+    "set_pages_uc": {
+      "target": "0x05c0eb1f",
+      "rejected_candidate": "0x39059813"
+    },
+    "set_pages_wb": {
+      "target": "0x64f50708",
+      "rejected_candidate": "0x749c2966"
+    },
+    "try_module_get": {
+      "target": "0x502b702c",
+      "rejected_candidate": "0xc885bfb1"
+    },
+    "vmap": {
+      "target": "0x75f5ea6d",
+      "rejected_candidate": "0xde87e76f"
+    },
+    "vmf_insert_mixed": {
+      "target": "0x7be8e88e",
+      "rejected_candidate": "0xef8ba952"
+    },
+    "vmf_insert_pfn": {
+      "target": "0x76655b7f",
+      "rejected_candidate": "0xd003dbef"
+    }
+  },
+  "nine_candidate_only_imports": {
+    "drm_clflush_pages": "0xceb9549d",
+    "memcmp": "0x5152e605",
+    "memcpy": "0x2e60bace",
+    "module_put": "0x59ab9688",
+    "request_resource": "0xe0a6b585",
+    "try_module_get": "0x502b702c",
+    "usleep_range": "0x12a38747",
+    "vmap": "0x75f5ea6d",
+    "vunmap": "0x94961283"
+  },
+  "old_table_symbols": 25195,
+  "target_table_symbols": 23920,
+  "shared_table_crc_mismatches": 17520
+}

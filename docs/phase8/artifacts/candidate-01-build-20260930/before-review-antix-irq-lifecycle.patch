@@ -1,0 +1,44 @@
+--- a/drivers/gpu/drm/gma500/psb_drv.c
++++ b/drivers/gpu/drm/gma500/psb_drv.c
+@@ -148,9 +148,19 @@
+ {
+ 	struct drm_psb_private *dev_priv = dev->dev_private;
+ 
+-	/* TODO: Kill vblank etc here */
+-
+ 	if (dev_priv) {
++		/* Quiesce KMS users before unregistering the IRQ, while all
++		 * private state and register mappings are still alive. */
++		if (dev_priv->modeset) {
++			struct drm_crtc *crtc;
++
++			drm_kms_helper_poll_disable(dev);
++			drm_for_each_crtc(crtc, dev)
++				drm_crtc_vblank_off(crtc);
++		}
++		if (dev->irq_enabled)
++			drm_irq_uninstall(dev);
++
+ 		if (dev_priv->backlight_device)
+ 			gma_backlight_exit(dev);
+ 		psb_modeset_cleanup(dev);
+@@ -362,7 +372,9 @@
+ 	PSB_WVDC32(0xFFFFFFFF, PSB_INT_MASK_R);
+ 	spin_unlock_irqrestore(&dev_priv->irqmask_lock, irqflags);
+ 
+-	drm_irq_install(dev, dev->pdev->irq);
++	ret = drm_irq_install(dev, dev->pdev->irq);
++	if (ret)
++		goto out_err;
+ 
+ 	dev->max_vblank_count = 0xffffff; /* only 24 bits of frame count */
+ 
+@@ -384,7 +396,7 @@
+ 	}
+ 
+ 	if (ret)
+-		return ret;
++		goto out_err;
+ 	psb_intel_opregion_enable_asle(dev);
+ #if 0
+ 	/* Enable runtime pm at last */

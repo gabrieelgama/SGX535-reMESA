@@ -1,0 +1,17 @@
+test_experimental_ssh_is_separate_not_required_for_local_proof (test_frozen_first_load_procedure.ProcedureTests.test_experimental_ssh_is_separate_not_required_for_local_proof) ... ok
+test_live_first_owner_pass_requires_trace_not_display_alone (test_frozen_first_load_procedure.ProcedureTests.test_live_first_owner_pass_requires_trace_not_display_alone) ... ok
+test_live_missing_duplicate_reordered_or_hold_trace_rejected (test_frozen_first_load_procedure.ProcedureTests.test_live_missing_duplicate_reordered_or_hold_trace_rejected) ... ok
+test_live_wrong_note_irq_binding_fault_or_second_boot_refused (test_frozen_first_load_procedure.ProcedureTests.test_live_wrong_note_irq_binding_fault_or_second_boot_refused) ... ok
+test_plan_extra_boot_fire_retry_or_hot_restore_refused (test_frozen_first_load_procedure.ProcedureTests.test_plan_extra_boot_fire_retry_or_hot_restore_refused) ... ok
+test_plan_stock_overwrite_refused (test_frozen_first_load_procedure.ProcedureTests.test_plan_stock_overwrite_refused) ... ok
+test_recovery_requires_stock_identity_and_new_boot_not_power_alone (test_frozen_first_load_procedure.ProcedureTests.test_recovery_requires_stock_identity_and_new_boot_not_power_alone) ... ok
+test_staged_record_needs_all_guards_and_readback (test_frozen_first_load_procedure.ProcedureTests.test_staged_record_needs_all_guards_and_readback) ... ok
+test_staged_stock_change_or_saved_experimental_selection_refused (test_frozen_first_load_procedure.ProcedureTests.test_staged_stock_change_or_saved_experimental_selection_refused) ... ok
+test_staged_symlink_hardlink_wrong_owner_mode_or_hash_rejected (test_frozen_first_load_procedure.ProcedureTests.test_staged_symlink_hardlink_wrong_owner_mode_or_hash_rejected) ... ok
+test_valid_plan_matches_pinned_inputs (test_frozen_first_load_procedure.ProcedureTests.test_valid_plan_matches_pinned_inputs) ... ok
+test_validator_cannot_execute_stage_boot_or_remote_actions (test_frozen_first_load_procedure.ProcedureTests.test_validator_cannot_execute_stage_boot_or_remote_actions) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.206s
+
+OK

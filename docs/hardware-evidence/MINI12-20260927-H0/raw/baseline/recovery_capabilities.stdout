@@ -1,0 +1,20 @@
+SYSRQ=438
+panic=0
+panic_on_oops=0
+hung_task_timeout_secs=UNAVAILABLE
+watchdog=UNAVAILABLE
+PSTORE_DIR
+total 0
+dr-xr-xr-x 2 root root 0 Sep 27 18:04 .
+drwxr-xr-x 7 root root 0 Sep 27 17:28 ..
+PSTORE_MOUNTS
+WATCHDOG_CLASS
+total 0
+drwxr-xr-x  2 root root 0 Sep 27 18:04 .
+drwxr-xr-x 62 root root 0 Sep 27 17:55 ..
+KERNEL_CONFIG
+CONFIG_WATCHDOG=y
+CONFIG_SOFT_WATCHDOG=m
+CONFIG_PSTORE=y
+CONFIG_PSTORE_RAM=m
+CONFIG_MAGIC_SYSRQ=y

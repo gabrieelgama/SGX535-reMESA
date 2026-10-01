@@ -1,0 +1,22 @@
+{
+  "preflight": "STOP BEFORE STAGING",
+  "earliest_failed_guard": "current-boot kernel health",
+  "diagnosis": "reviewed case-insensitive health matcher rejects exact retained known-stock log; no new matcher-hit diagnostics",
+  "stock_current_boot_id": "8ae37532-19d4-4ec7-9c29-a791acfd889f",
+  "root_readonly_capture": true,
+  "operator_prerequisites_confirmed": true,
+  "experimental_staging": false,
+  "experimental_boot_count": 0,
+  "derivative_insertion": false,
+  "hot_module_actions": false,
+  "SGX_actions": 0,
+  "reset_recovery_boot": false,
+  "live_first_load": "UNKNOWN",
+  "live_first_owner": "UNKNOWN",
+  "live_recovery": "UNKNOWN",
+  "gate_b": "BLOCKED",
+  "whitelist": [],
+  "SGX_execution_authorized": false,
+  "first_triangle": "NOT ATTEMPTED",
+  "single_next_step": "OFFLINE: qualify health discriminator on real stock baseline plus genuine fault controls before another fresh preflight"
+}

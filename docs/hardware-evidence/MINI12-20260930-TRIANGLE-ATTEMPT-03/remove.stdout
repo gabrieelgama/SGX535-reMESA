@@ -1,0 +1,3 @@
+REMOVAL_POSSIBLE original-module-only nonforced
+REMOVE_RC=0
+REMOVE_PASS module-absent pci-unbound card0-absent

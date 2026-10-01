@@ -1,5 +1,12 @@
 # Unknown reduction from the xpsb-glx ELF
 
+**Route C frontier (P7H-036/037):** see
+[the clean-room contract](cleanroom-backing-contract.md). Historical provider
+identity remains UNKNOWN but no longer gates the new construction. CPU bytes
+are deterministic; the next inference premise is a complete deterministic PDS
+launch-state superset. GPU-provider refinement is also not implemented. No
+exact read-set, terminal-semantics, or gate promotion follows.
+
 This is a static update to the existing [project unknown register](../../unknowns.md). An ELF finding can confirm what historical userspace bytes do; it cannot establish the Dell's SGX power state or authorize hardware access.
 
 | existing ID | result from this artifact | classification change |
@@ -32,8 +39,37 @@ P7B-U02 is further constrained, not closed: `0x00029251` dispatches scene dirty 
 The earlier description of `0x00030ffd`/`0x00030fb7` as a PDS instruction buffer was incorrect. `psb_use.c`/`use_next_inst` assertions identify their eight-byte slots as USE/USSE instructions (P7F-003). `0x00040355` separately emits a PDS-related vertex output block. This changes the classification of that **buffer**, not the physical SGX revision, safety gate, or the requirement for a complete program contract. See the ranked [remaining gaps](preimplementation-decision.md).
 
 
-P7G closes the historical DrawElements → private-renderer entry of P7B-U02 and removes the apparent second terminal word. Its [frozen-draw blockers](frozen-draw-blockers.md) keep fragment compiler output, scene records and bootstrap UNKNOWN. U01–U06 and Gate B are unchanged.
+P7G closed the historical DrawElements → private-renderer entry of P7B-U02 and removed the apparent second terminal word. At that point, the [frozen-draw blockers](frozen-draw-blockers.md) included fragment compiler output, scene records and bootstrap. U01–U06 and Gate B were unchanged.
 
-The [P7H compiler checkpoint](frozen-fragment-compiler-checkpoint.md) partially constrains FG-01/P7B-U02 with a two-record UniFlex input and locates the post-lowering instruction-count producer. It does not establish the emitted USSE program, link metadata or scene pixel state. The selected compiler IR after lowering remains a static reverse-engineering target, not a hardware-observation requirement.
+The initial [P7H compiler checkpoint](frozen-fragment-compiler-checkpoint.md) constrained FG-01/P7B-U02 to two UniFlex records and four scalar color-component MOVs. The later [FG-01 selected-output trace](frozen-fragment-exact-output.md) follows those MOVs through DCE and finalization: they are removed, no replacement is inserted, and the selected compiler returns zero main/secondary instructions with derived metadata (P7H-010/P7H-011). Thus the **selected compiler-output** subquestion is closed. The linked pixel program, PDS consumption, scene bytes, BO/fence values, bootstrap and exact pairing remain UNKNOWN or partially constrained. Candidate-family XHW init fields and operations are separately narrowed by P7H-005. [Result B](frozen-draw-static-decision.md), Gate B BLOCKED and hardware-safety UNKNOWNs remain unchanged.
 
-The same trace now identifies the ordinary scalar lowerer and four selected color-component visits (P7H-004); later optimization, register assignment and encoding still determine the actual output. Candidate-family XHW init fields and operation mapping are narrowed separately (P7H-005), without establishing the full service lifetime or exact built pair. The [current frozen-draw decision](frozen-draw-static-decision.md) retains Result B and classifies each remaining edge by source and recoverability.
+The later [FG-02 link trace](frozen-fragment-link-progress.md) narrows P7B-U02/U19: it derives an eight-byte **link-time** USSE suffix `00 00 00 00 40 01 04 f8`, despite FG-01's empty compiler stream, and the selected four-byte secondary record `0xaf000000` (P7H-012/013). The [primary PDS handoff](selected-pds-hard-boundary.md) identifies nine producer-unwritten committed dwords and the exact missing SGX535 instruction read set (P7H-014/015). No emitted-hole byte or PDS read semantics has been promoted from UNKNOWN; Result B and Gate B remain unchanged.
+
+The [comparative PDS search](pds-readset-search-ledger.md) adds P7H-016/017: the exact first word is reused by DRI clear/texture-replace emitters and by Xpsb's named pixel-shader emitter, with different later instructions and stores. This narrows a likely common data set but cannot prove that no unwritten slot is read; P7B-U02/U19 and FG-02 remain open. The smallest missing artifact is an applicable SGX535 instruction-source decode, not another occurrence of the same literal.
+
+P7H-018 excludes a tempting zero-fill shortcut: the selected outbuf reset can reuse a BO through `driBOData` with a null source, and its map path does not clear the committed range. The actual bytes in each producer-unwritten slot remain UNKNOWN. This does not change the PDS read-set classification or Gate B.
+
+P7H-019/020 add a [curated PDS instruction corpus](pds-instruction-corpus.csv) and [differential field constraints](pds-comparative-encoding.md). The dynamic CPU formulas reproduce separate retained literal words; a `0x45` index-pair hypothesis fits both primary and secondary literals and their initialized data triplets. It remains **INFERRED** as a hardware interpretation. The first word's source count/selectors and terminal word's data-read behavior are **UNKNOWN**, so all nine producer-unwritten primary dwords remain unresolved. The simple two-index formula is not a complete decoder: it cannot generate `0x070b0345`. Neither P7B-U02/U19 nor FG-02 closes; Result B and Gate B remain unchanged.
+
+P7H-021/022 refine the counterexample with the [CPU semantic corpus](pds-semantic-corpus.csv) and [hypothesis audit](pds-hypotheses.md): a candidate pair field plus unexplained bits 16–17 reproduces `0x070b0345` and correlates with an event data pair. A model with a fixed fourth source at an unwritten slot still matches all retained CPU emissions; `0xaf000000` is CPU-final in inspected subprograms but has no proven no-read semantics. The exact `0x45` source count and the `0xaf` read behavior remain **UNKNOWN**. FG-02/03, Result B and Gate B do not change.
+
+P7H-029–031 [pairing/first-use refinement](pds-stack-pairing.md): the
+selected first-scene primary range is untouched at slot0x160 or0x1c0; the
+internal-clear secondary allocation is included. Candidate generic BO/fence
+headers are identical and the candidate's PDS mapping preserves fresh-zero
+TTM pages. The remaining condition is the applicable target backing
+provider's equivalent allocation/visibility implementation. Version4.0
+minimum acceptance and package-family metadata do not establish it. No
+PDS ISA promotion, FG-02 closure, or hardware-gate change follows.
+
+P7H-042–046 adds the [independent closure map](frozen-triangle-spec.md): L12 OPEN/FROZEN; scoped CPU ordering closed; auxiliary source coverage, target, complete BO inventory and service contract remain explicit. No outside PDS read is asserted.
+
+P7H-060 [strong clean-room closure review](cleanroom-final-closure.md): the
+historical SGX535 PDS PDF is OPTIONAL FUTURE EVIDENCE, not a prerequisite.
+Whole user-BO zeroing, strict maintenance aborts and a fresh full-mask LOAD3
+bootstrap check are modeled as ENFORCED_CONTRACT host policies. R1 still needs
+the selected device payload-visibility implication; R2 still needs the
+target-qualified LOAD3/INITEND readiness implication; R3 still needs the
+complete selected pre-definition source-eligibility implication. B1/B4/L12
+OPEN, B3 CONDITIONAL, FG-02 OPEN, Gate B BLOCKED. These are not observed
+stale reads, hardware failures or reasons to restore historical PDF dependency.

@@ -1,0 +1,12 @@
+{
+  "prepared_bytes": 11385,
+  "target_bytes": 22421,
+  "prepared_lines": 429,
+  "target_lines": 828,
+  "prepared_is_exact_target_prefix": true,
+  "generator_reinvoked_in_resumed_log": false,
+  "exact_interruption_cause": "UNKNOWN",
+  "interrupted_non_atomic_generation_hypothesis": "INFERRED",
+  "source_Module_symvers_exists": false,
+  "output_Module_symvers_exists": false
+}

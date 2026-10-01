@@ -1,0 +1,27 @@
+#!/usr/bin/env /lib/runit/invoke-run
+set -e
+
+NAME="ssh"
+
+# don't start if 'sshd_not_to_be_run' exists
+if [ -e /etc/ssh/sshd_not_to_be_run ]; then exit 161; fi
+
+#Create /run/sshd
+mkdir -p /run/sshd && chmod 0755 /run/sshd
+
+# ensuring privilege seperation user sshd exists 
+if id -u sshd >/dev/null 2>&1 ; then 
+echo "User 'sshd' already exists"
+else useradd -r sshd -s /bin/nologin >/dev/null 2>&1
+fi
+
+/usr/bin/ssh-keygen -A
+touch /var/log/lastlog && chgrp utmp /var/log/lastlog && chmod 664 /var/log/lastlog
+
+exec 2>&1
+
+#Config test
+/usr/sbin/sshd -t || exit 162
+
+echo "Starting $NAME..."
+exec /usr/sbin/sshd -D -e $SSHD_OPTS

@@ -1,0 +1,610 @@
+{
+  "equivalence": "PASS",
+  "captured_header_count": 35,
+  "exact_captured_header_count": 33,
+  "full_comparison_rows": [
+    {
+      "item": "arch/x86/include/generated/asm/early_ioremap.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/arch/x86/include/generated/asm/early_ioremap.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/asm/early_ioremap.h",
+      "target_sha256": "b1a54c24a12ce2c0f283661121974436cdb09ae91822497458072f5f97447c5d",
+      "successor_sha256": "b1a54c24a12ce2c0f283661121974436cdb09ae91822497458072f5f97447c5d",
+      "target_bytes": 39,
+      "successor_bytes": 39,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "arch/x86/include/generated/asm/export.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/arch/x86/include/generated/asm/export.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/asm/export.h",
+      "target_sha256": "ac6f95e54f0c6de92266ba712b4d371b5468f300225c530c710d097c61c52cbd",
+      "successor_sha256": "ac6f95e54f0c6de92266ba712b4d371b5468f300225c530c710d097c61c52cbd",
+      "target_bytes": 32,
+      "successor_bytes": 32,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "arch/x86/include/generated/asm/irq_regs.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/arch/x86/include/generated/asm/irq_regs.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/asm/irq_regs.h",
+      "target_sha256": "436a9c327f7568c64cbdb7f7083365fe5ca2bb2ce3dd0d718bef9483efdf6ae5",
+      "successor_sha256": "436a9c327f7568c64cbdb7f7083365fe5ca2bb2ce3dd0d718bef9483efdf6ae5",
+      "target_bytes": 34,
+      "successor_bytes": 34,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "arch/x86/include/generated/asm/local64.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/arch/x86/include/generated/asm/local64.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/asm/local64.h",
+      "target_sha256": "60fcbd6c2f3f7207d61791f97406e59efeb90d071c82492f56a386ee54ab8c5e",
+      "successor_sha256": "60fcbd6c2f3f7207d61791f97406e59efeb90d071c82492f56a386ee54ab8c5e",
+      "target_bytes": 33,
+      "successor_bytes": 33,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "arch/x86/include/generated/asm/mcs_spinlock.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/arch/x86/include/generated/asm/mcs_spinlock.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/asm/mcs_spinlock.h",
+      "target_sha256": "dd864107295503e102ea339e0fd4496204c697bdd5c1b1a35864dfefe504a990",
+      "successor_sha256": "dd864107295503e102ea339e0fd4496204c697bdd5c1b1a35864dfefe504a990",
+      "target_bytes": 38,
+      "successor_bytes": 38,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "arch/x86/include/generated/asm/mm-arch-hooks.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/arch/x86/include/generated/asm/mm-arch-hooks.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/asm/mm-arch-hooks.h",
+      "target_sha256": "782ce66804d000472b3c601978fa9bd98dcf3b2750d608c684dc52dd1aa0eb7e",
+      "successor_sha256": "782ce66804d000472b3c601978fa9bd98dcf3b2750d608c684dc52dd1aa0eb7e",
+      "target_bytes": 39,
+      "successor_bytes": 39,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "arch/x86/include/generated/asm/mmiowb.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/arch/x86/include/generated/asm/mmiowb.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/asm/mmiowb.h",
+      "target_sha256": "562185c822e79d362de4f9f76a1a7016e1529a01d88a7da9552140f666c6a947",
+      "successor_sha256": "562185c822e79d362de4f9f76a1a7016e1529a01d88a7da9552140f666c6a947",
+      "target_bytes": 32,
+      "successor_bytes": 32,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "arch/x86/include/generated/asm/module.lds.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/arch/x86/include/generated/asm/module.lds.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/asm/module.lds.h",
+      "target_sha256": "396cd13655f6bb5df6a53bc76aa32db3366f55916ab3538fbc78804a8a1a289b",
+      "successor_sha256": "396cd13655f6bb5df6a53bc76aa32db3366f55916ab3538fbc78804a8a1a289b",
+      "target_bytes": 36,
+      "successor_bytes": 36,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "arch/x86/include/generated/asm/rwonce.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/arch/x86/include/generated/asm/rwonce.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/asm/rwonce.h",
+      "target_sha256": "e65428b6b0334c3fa3b08c940356e87132ccb205a984bb0d561110b122738963",
+      "successor_sha256": "e65428b6b0334c3fa3b08c940356e87132ccb205a984bb0d561110b122738963",
+      "target_bytes": 32,
+      "successor_bytes": 32,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "arch/x86/include/generated/asm/syscalls_32.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/arch/x86/include/generated/asm/syscalls_32.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/asm/syscalls_32.h",
+      "target_sha256": "c4fcafae0822cf103d2822c0d842c6f8bb8f24b00bbb0633a3150ef36033d9fd",
+      "successor_sha256": "c4fcafae0822cf103d2822c0d842c6f8bb8f24b00bbb0633a3150ef36033d9fd",
+      "target_bytes": 22421,
+      "successor_bytes": 22421,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "arch/x86/include/generated/uapi/asm/bpf_perf_event.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/arch/x86/include/generated/uapi/asm/bpf_perf_event.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/uapi/asm/bpf_perf_event.h",
+      "target_sha256": "bfb40dfccf983dce09e3ee0f570f3bcc969d4bab8c1f3d4572ecf3b5da7f936d",
+      "successor_sha256": "bfb40dfccf983dce09e3ee0f570f3bcc969d4bab8c1f3d4572ecf3b5da7f936d",
+      "target_bytes": 40,
+      "successor_bytes": 40,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "arch/x86/include/generated/uapi/asm/errno.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/arch/x86/include/generated/uapi/asm/errno.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/uapi/asm/errno.h",
+      "target_sha256": "4ee384515a4325315992e61dd957f0fa91f3858fe7c079de59f56edded51de86",
+      "successor_sha256": "4ee384515a4325315992e61dd957f0fa91f3858fe7c079de59f56edded51de86",
+      "target_bytes": 31,
+      "successor_bytes": 31,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "arch/x86/include/generated/uapi/asm/fcntl.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/arch/x86/include/generated/uapi/asm/fcntl.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/uapi/asm/fcntl.h",
+      "target_sha256": "716ef40c102b1701970c7b0c34e6633d8a0ea1c89e7527252fcb07e63074221d",
+      "successor_sha256": "716ef40c102b1701970c7b0c34e6633d8a0ea1c89e7527252fcb07e63074221d",
+      "target_bytes": 31,
+      "successor_bytes": 31,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "arch/x86/include/generated/uapi/asm/ioctl.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/arch/x86/include/generated/uapi/asm/ioctl.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/uapi/asm/ioctl.h",
+      "target_sha256": "9c6ca9e365296a6b66747cbebdcf76972b8cce7aab91e55bf4ab1f3581df9c2a",
+      "successor_sha256": "9c6ca9e365296a6b66747cbebdcf76972b8cce7aab91e55bf4ab1f3581df9c2a",
+      "target_bytes": 31,
+      "successor_bytes": 31,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "arch/x86/include/generated/uapi/asm/ioctls.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/arch/x86/include/generated/uapi/asm/ioctls.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/uapi/asm/ioctls.h",
+      "target_sha256": "857d11a8415a18e7a6ccf23640cf9bddf245a5f90c43b3014d08d3ae19faf952",
+      "successor_sha256": "857d11a8415a18e7a6ccf23640cf9bddf245a5f90c43b3014d08d3ae19faf952",
+      "target_bytes": 32,
+      "successor_bytes": 32,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "arch/x86/include/generated/uapi/asm/ipcbuf.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/arch/x86/include/generated/uapi/asm/ipcbuf.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/uapi/asm/ipcbuf.h",
+      "target_sha256": "7d7b26fc15cfa914dc6e03d976570242ea37377491f3619ab287e6169025df66",
+      "successor_sha256": "7d7b26fc15cfa914dc6e03d976570242ea37377491f3619ab287e6169025df66",
+      "target_bytes": 32,
+      "successor_bytes": 32,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "arch/x86/include/generated/uapi/asm/param.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/arch/x86/include/generated/uapi/asm/param.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/uapi/asm/param.h",
+      "target_sha256": "6bf1865f0ddba5c80877463ad6650d7fee66931486956a07884f53deaa13e2b8",
+      "successor_sha256": "6bf1865f0ddba5c80877463ad6650d7fee66931486956a07884f53deaa13e2b8",
+      "target_bytes": 31,
+      "successor_bytes": 31,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "arch/x86/include/generated/uapi/asm/poll.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/arch/x86/include/generated/uapi/asm/poll.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/uapi/asm/poll.h",
+      "target_sha256": "0b6ca981303acc042195061225039c080c900169b231ab343c7e9ec6530864ea",
+      "successor_sha256": "0b6ca981303acc042195061225039c080c900169b231ab343c7e9ec6530864ea",
+      "target_bytes": 30,
+      "successor_bytes": 30,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "arch/x86/include/generated/uapi/asm/resource.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/arch/x86/include/generated/uapi/asm/resource.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/uapi/asm/resource.h",
+      "target_sha256": "6d9c7f1ca98f275aafe3c5533d274aec702ea6029f8036bdb577b0c53e08f7d9",
+      "successor_sha256": "6d9c7f1ca98f275aafe3c5533d274aec702ea6029f8036bdb577b0c53e08f7d9",
+      "target_bytes": 34,
+      "successor_bytes": 34,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "arch/x86/include/generated/uapi/asm/socket.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/arch/x86/include/generated/uapi/asm/socket.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/uapi/asm/socket.h",
+      "target_sha256": "48e0940e8a6e8861eaaaf90853a685fa803c4e039166060a3c921c8d79001e3c",
+      "successor_sha256": "48e0940e8a6e8861eaaaf90853a685fa803c4e039166060a3c921c8d79001e3c",
+      "target_bytes": 32,
+      "successor_bytes": 32,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "arch/x86/include/generated/uapi/asm/sockios.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/arch/x86/include/generated/uapi/asm/sockios.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/uapi/asm/sockios.h",
+      "target_sha256": "ac496b3bcc37452f0caa104b2205a8a19dde0196a7791988b3b74e23c2174c1e",
+      "successor_sha256": "ac496b3bcc37452f0caa104b2205a8a19dde0196a7791988b3b74e23c2174c1e",
+      "target_bytes": 33,
+      "successor_bytes": 33,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "arch/x86/include/generated/uapi/asm/termbits.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/arch/x86/include/generated/uapi/asm/termbits.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/uapi/asm/termbits.h",
+      "target_sha256": "cba6faa5749f84248b3e73894fb6731dc558af01f8f5a626d8f44ba6fad46977",
+      "successor_sha256": "cba6faa5749f84248b3e73894fb6731dc558af01f8f5a626d8f44ba6fad46977",
+      "target_bytes": 34,
+      "successor_bytes": 34,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "arch/x86/include/generated/uapi/asm/termios.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/arch/x86/include/generated/uapi/asm/termios.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/uapi/asm/termios.h",
+      "target_sha256": "0c0899ba44a3545c5e137ead0f121480c1d6d3851c8d481f1d6822e39a4cc60d",
+      "successor_sha256": "0c0899ba44a3545c5e137ead0f121480c1d6d3851c8d481f1d6822e39a4cc60d",
+      "target_bytes": 33,
+      "successor_bytes": 33,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "arch/x86/include/generated/uapi/asm/types.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/arch/x86/include/generated/uapi/asm/types.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/uapi/asm/types.h",
+      "target_sha256": "b6bdcd528bce555b2ecb58e8a1624e3e13e09312c31318023c4e86b957e2b01f",
+      "successor_sha256": "b6bdcd528bce555b2ecb58e8a1624e3e13e09312c31318023c4e86b957e2b01f",
+      "target_bytes": 31,
+      "successor_bytes": 31,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "arch/x86/include/generated/uapi/asm/unistd_32.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/arch/x86/include/generated/uapi/asm/unistd_32.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/uapi/asm/unistd_32.h",
+      "target_sha256": "d1605bd4a9e94ac937992ea3aa1d28fbf58ecf46eafc1d4d1f84ac4aa9ae7668",
+      "successor_sha256": "d1605bd4a9e94ac937992ea3aa1d28fbf58ecf46eafc1d4d1f84ac4aa9ae7668",
+      "target_bytes": 11674,
+      "successor_bytes": 11674,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "arch/x86/include/generated/uapi/asm/unistd_64.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/arch/x86/include/generated/uapi/asm/unistd_64.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/uapi/asm/unistd_64.h",
+      "target_sha256": "a7872e1eded95d4e0f164828f2b57b00a5800e4f44fcf9644143654ddc12e42b",
+      "successor_sha256": "a7872e1eded95d4e0f164828f2b57b00a5800e4f44fcf9644143654ddc12e42b",
+      "target_bytes": 9485,
+      "successor_bytes": 9485,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "arch/x86/include/generated/uapi/asm/unistd_x32.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/arch/x86/include/generated/uapi/asm/unistd_x32.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/uapi/asm/unistd_x32.h",
+      "target_sha256": "839cdfcb7a523408ce0127d489501e6015916813f4ce83ed62e07c486122db40",
+      "successor_sha256": "839cdfcb7a523408ce0127d489501e6015916813f4ce83ed62e07c486122db40",
+      "target_bytes": 16676,
+      "successor_bytes": 16676,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "include/generated/asm-offsets.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/include/generated/asm-offsets.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/include/generated/asm-offsets.h",
+      "target_sha256": "01ba9d6d50eaf3b06b65fd3b59bb6a05cc904adb21a1d466567c4b2ddf42c3f0",
+      "successor_sha256": "01ba9d6d50eaf3b06b65fd3b59bb6a05cc904adb21a1d466567c4b2ddf42c3f0",
+      "target_bytes": 4246,
+      "successor_bytes": 4246,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "include/generated/autoconf.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/include/generated/autoconf.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/include/generated/autoconf.h",
+      "target_sha256": "df4c243870d720c7fbb9481f0572cfd1fced552a24652d7a90474a3eb420340b",
+      "successor_sha256": "950833ba0b0940a659adbc51595253233db6d55b28a2ce1398b48f210a2b494b",
+      "target_bytes": 268820,
+      "successor_bytes": 268838,
+      "classification": "EXPECTED/DOCUMENTED CROSS-BUILD METADATA DIFFERENCE",
+      "reason": "Only the previously documented compiler executable-name banner; raw bytes retained",
+      "comparison_only_transform": {
+        "replace": "i686-linux-gnu-gcc-14 (Debian 14.2.0-19) 14.2.0",
+        "with": "gcc (Debian 14.2.0-19) 14.2.0"
+      },
+      "raw_diff": "comparison-diffs/include__generated__autoconf.h.diff"
+    },
+    {
+      "item": "include/generated/bounds.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/include/generated/bounds.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/include/generated/bounds.h",
+      "target_sha256": "f805fd503f786d3acaba554d709aa27ddee0613cadc14f52f4ec50c689dcd408",
+      "successor_sha256": "f805fd503f786d3acaba554d709aa27ddee0613cadc14f52f4ec50c689dcd408",
+      "target_bytes": 324,
+      "successor_bytes": 324,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "include/generated/compile.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/include/generated/compile.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/include/generated/compile.h",
+      "target_sha256": "bceac050fc0a65607e56f09b630b78609414850b0ca050244881aae3bc5657d9",
+      "successor_sha256": null,
+      "target_bytes": 301,
+      "successor_bytes": null,
+      "classification": "UNDERSTOOD NON-ABI/NON-LAYOUT DIFFERENCE",
+      "reason": "compile.h is full-kernel init/version.o build-identity metadata; modules_prepare does not generate it; no copied/spoofed identity"
+    },
+    {
+      "item": "include/generated/package.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/include/generated/package.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/include/generated/package.h",
+      "target_sha256": "e3c548113630c94218ccace35506d4920c979690dff754e141da2a5308da0337",
+      "successor_sha256": "e3c548113630c94218ccace35506d4920c979690dff754e141da2a5308da0337",
+      "target_bytes": 28,
+      "successor_bytes": 28,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "include/generated/timeconst.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/include/generated/timeconst.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/include/generated/timeconst.h",
+      "target_sha256": "da0ba6765f2969482bf8eaf21249552557fe4d6831749d9cfe4c25f4661f8726",
+      "successor_sha256": "da0ba6765f2969482bf8eaf21249552557fe4d6831749d9cfe4c25f4661f8726",
+      "target_bytes": 1100,
+      "successor_bytes": 1100,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "include/generated/uapi/linux/version.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/include/generated/uapi/linux/version.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/include/generated/uapi/linux/version.h",
+      "target_sha256": "352759eda06981a13dd9ffc2cac9c2a683c3ce20a6b9db870ea17c8577434de1",
+      "successor_sha256": "352759eda06981a13dd9ffc2cac9c2a683c3ce20a6b9db870ea17c8577434de1",
+      "target_bytes": 117,
+      "successor_bytes": 117,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "include/generated/utsrelease.h",
+      "target_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/captured-reference/include/generated/utsrelease.h",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/include/generated/utsrelease.h",
+      "target_sha256": "829215a06900fa9d8cd030792507ba37742880744ff62c123de128c3fb936cf6",
+      "successor_sha256": "829215a06900fa9d8cd030792507ba37742880744ff62c123de128c3fb936cf6",
+      "target_bytes": 47,
+      "successor_bytes": 47,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": ".config",
+      "target_path": "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build__config",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/.config",
+      "target_sha256": "93f4d7a779f4be65097b5f26db6c9b10431907c6d417109719eb2f16d6def3d9",
+      "successor_sha256": "a9f866159ee08437f22c569b0f6864dd2d9cf8f4b777dd90d0397eba339f5ca4",
+      "target_bytes": 244485,
+      "successor_bytes": 244503,
+      "classification": "EXPECTED/DOCUMENTED CROSS-BUILD METADATA DIFFERENCE",
+      "reason": "Only the previously documented compiler executable-name banner; raw bytes retained",
+      "comparison_only_transform": {
+        "replace": "i686-linux-gnu-gcc-14 (Debian 14.2.0-19) 14.2.0",
+        "with": "gcc (Debian 14.2.0-19) 14.2.0"
+      },
+      "raw_diff": "comparison-diffs/.config.diff"
+    },
+    {
+      "item": "include/config/auto.conf",
+      "target_path": "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build_include_config_auto_conf",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/include/config/auto.conf",
+      "target_sha256": "0dd6d0f66e345120a57e53db422e820aa08534d5b049549e3273b886716c8c7b",
+      "successor_sha256": "8de0c2a9ff924b513f2c5ed439f5d53c012ec97fb5e81ef49b501627b38f8279",
+      "target_bytes": 175797,
+      "successor_bytes": 175815,
+      "classification": "EXPECTED/DOCUMENTED CROSS-BUILD METADATA DIFFERENCE",
+      "reason": "Only the previously documented compiler executable-name banner; raw bytes retained",
+      "comparison_only_transform": {
+        "replace": "i686-linux-gnu-gcc-14 (Debian 14.2.0-19) 14.2.0",
+        "with": "gcc (Debian 14.2.0-19) 14.2.0"
+      },
+      "raw_diff": "comparison-diffs/include__config__auto.conf.diff"
+    },
+    {
+      "item": "include/config/auto.conf.cmd",
+      "target_path": "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build_include_config_auto_conf_cmd",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/include/config/auto.conf.cmd",
+      "target_sha256": "deb992d7ff2ca9f50c98f9fc89daf3d0887eedc288aa7fea8416521ceed48978",
+      "successor_sha256": "0c385fce06a92fd7d5340c4d0265bc45014db6332eac51def5474f136c574333",
+      "target_bytes": 43748,
+      "successor_bytes": 44303,
+      "classification": "UNDERSTOOD NON-ABI/NON-LAYOUT DIFFERENCE",
+      "reason": "Exactly six tool/path/banner dependency selectors change; dependency list and remaining content exact",
+      "selectors": [
+        {
+          "key": "CC",
+          "target": "gcc",
+          "successor": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14 --sysroot=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root"
+        },
+        {
+          "key": "CC_VERSION_TEXT",
+          "target": "gcc (Debian 14.2.0-19) 14.2.0",
+          "successor": "i686-linux-gnu-gcc-14 (Debian 14.2.0-19) 14.2.0"
+        },
+        {
+          "key": "LD",
+          "target": "ld",
+          "successor": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-ld.bfd"
+        },
+        {
+          "key": "NM",
+          "target": "nm",
+          "successor": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-nm"
+        },
+        {
+          "key": "OBJCOPY",
+          "target": "objcopy",
+          "successor": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-objcopy"
+        },
+        {
+          "key": "srctree",
+          "target": ".",
+          "successor": "/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp"
+        }
+      ],
+      "comparison_only_transform": "replace only six explicitly validated ifneq dependency-selector values; raw diffs retained",
+      "raw_diff": "comparison-diffs/include__config__auto.conf.cmd.diff"
+    },
+    {
+      "item": "include/config/kernel.release",
+      "target_path": "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build_include_config_kernel_release",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/include/config/kernel.release",
+      "target_sha256": "851a1b235a7413514ce18407feb2b7761dc5f733eeb5568613544653b60c4911",
+      "successor_sha256": "851a1b235a7413514ce18407feb2b7761dc5f733eeb5568613544653b60c4911",
+      "target_bytes": 25,
+      "successor_bytes": 25,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    },
+    {
+      "item": "source/Makefile",
+      "target_path": "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build_Makefile",
+      "successor_path": "/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp/Makefile",
+      "target_sha256": "70b5c7688f9067bd13b8413a205dc73ba9f66676b3de34c4092d7ceb9c260493",
+      "successor_sha256": "70b5c7688f9067bd13b8413a205dc73ba9f66676b3de34c4092d7ceb9c260493",
+      "target_bytes": 66407,
+      "successor_bytes": 66407,
+      "classification": "EXACT MATCH",
+      "reason": "Byte-exact match"
+    }
+  ],
+  "extra_generated_inputs": [
+    {
+      "item": "arch/x86/include/generated/asm/.syscalls_32.h.cmd",
+      "sha256": "36b3cdd2247f3ec23fc7cf51aca82903cddbc8862f38daa8ec802828e49c6213",
+      "classification": "UNDERSTOOD NON-ABI/NON-LAYOUT DIFFERENCE",
+      "reason": "Kbuild command/dependency record, not interface/layout definitions"
+    },
+    {
+      "item": "arch/x86/include/generated/uapi/asm/.unistd_32.h.cmd",
+      "sha256": "92ac7df35a568d853389d01fca5c360c5e421ddf7c60c214f431ef8bb7d66237",
+      "classification": "UNDERSTOOD NON-ABI/NON-LAYOUT DIFFERENCE",
+      "reason": "Kbuild command/dependency record, not interface/layout definitions"
+    },
+    {
+      "item": "arch/x86/include/generated/uapi/asm/.unistd_64.h.cmd",
+      "sha256": "650cae194e788fdb16a498dc70b90581ce8b7027ed402aa6bc5b5dcec90340e2",
+      "classification": "UNDERSTOOD NON-ABI/NON-LAYOUT DIFFERENCE",
+      "reason": "Kbuild command/dependency record, not interface/layout definitions"
+    },
+    {
+      "item": "arch/x86/include/generated/uapi/asm/.unistd_x32.h.cmd",
+      "sha256": "77831fe88d5b60f4e806cc8a828e03bb10b6e4387e5f90cd642d7ee97c685945",
+      "classification": "UNDERSTOOD NON-ABI/NON-LAYOUT DIFFERENCE",
+      "reason": "Kbuild command/dependency record, not interface/layout definitions"
+    }
+  ],
+  "semantic_config": {
+    "target_symbols": 8788,
+    "successor_symbols": 8788,
+    "differences": [
+      {
+        "key": "CONFIG_CC_VERSION_TEXT",
+        "target": "\"gcc (Debian 14.2.0-19) 14.2.0\"",
+        "successor": "\"i686-linux-gnu-gcc-14 (Debian 14.2.0-19) 14.2.0\""
+      }
+    ],
+    "pass": true
+  },
+  "syscall_generation": {
+    "path": "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/arch/x86/include/generated/asm/syscalls_32.h",
+    "sha256": "c4fcafae0822cf103d2822c0d842c6f8bb8f24b00bbb0633a3150ef36033d9fd",
+    "size": 22421,
+    "lines": 828,
+    "mode": "0o664",
+    "inode": 1672025,
+    "device": 66325,
+    "mtime_ns": 1790807288023415987,
+    "absent_before_preparation": true,
+    "expected_generator_commands": [
+      "  sh '/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp/arch/x86/entry/syscalls/syscalltbl.sh' /home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp/arch/x86/entry/syscalls/syscall_32.tbl arch/x86/include/generated/asm/syscalls_32.h"
+    ],
+    "matches_captured_target": true,
+    "contains_syscall_440": true,
+    "contains_syscall_239": true,
+    "distinct_from_failed_inode": true
+  },
+  "elf_identities": [
+    {
+      "file": "scripts/basic/fixdep",
+      "sha256": "a78e9396361c6af9b1cee9a904f12363c7e99cd292c3e72fd09fd421351afd8f",
+      "argv": [
+        "/usr/bin/readelf",
+        "-h",
+        "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/scripts/basic/fixdep"
+      ],
+      "exit_code": 0,
+      "stdout": "ELF Header:\n  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 \n  Class:                             ELF64\n  Data:                              2's complement, little endian\n  Version:                           1 (current)\n  OS/ABI:                            UNIX - System V\n  ABI Version:                       0\n  Type:                              DYN (Position-Independent Executable file)\n  Machine:                           AArch64\n  Version:                           0x1\n  Entry point address:               0x1140\n  Start of program headers:          64 (bytes into file)\n  Start of section headers:          69624 (bytes into file)\n  Flags:                             0x0\n  Size of this header:               64 (bytes)\n  Size of program headers:           56 (bytes)\n  Number of program headers:         10\n  Size of section headers:           64 (bytes)\n  Number of section headers:         29\n  Section header string table index: 28\n",
+      "stderr": "",
+      "expected_architecture_verified": true
+    },
+    {
+      "file": "scripts/kconfig/conf",
+      "sha256": "2995c6ab65c9b72a9926344b36757fd8b8153a34ccba81df4d42672d6524de68",
+      "argv": [
+        "/usr/bin/readelf",
+        "-h",
+        "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/scripts/kconfig/conf"
+      ],
+      "exit_code": 0,
+      "stdout": "ELF Header:\n  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 \n  Class:                             ELF64\n  Data:                              2's complement, little endian\n  Version:                           1 (current)\n  OS/ABI:                            UNIX - System V\n  ABI Version:                       0\n  Type:                              DYN (Position-Independent Executable file)\n  Machine:                           AArch64\n  Version:                           0x1\n  Entry point address:               0x2fc0\n  Start of program headers:          64 (bytes into file)\n  Start of section headers:          150632 (bytes into file)\n  Flags:                             0x0\n  Size of this header:               64 (bytes)\n  Size of program headers:           56 (bytes)\n  Number of program headers:         10\n  Size of section headers:           64 (bytes)\n  Number of section headers:         30\n  Section header string table index: 29\n",
+      "stderr": "",
+      "expected_architecture_verified": true
+    },
+    {
+      "file": "scripts/mod/modpost",
+      "sha256": "ff22db3950db7979e9c1619cd15d8bc2285c116e38c5d8950edaaa9926453ff4",
+      "argv": [
+        "/usr/bin/readelf",
+        "-h",
+        "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/scripts/mod/modpost"
+      ],
+      "exit_code": 0,
+      "stdout": "ELF Header:\n  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 \n  Class:                             ELF64\n  Data:                              2's complement, little endian\n  Version:                           1 (current)\n  OS/ABI:                            UNIX - System V\n  ABI Version:                       0\n  Type:                              DYN (Position-Independent Executable file)\n  Machine:                           AArch64\n  Version:                           0x1\n  Entry point address:               0x3f40\n  Start of program headers:          64 (bytes into file)\n  Start of section headers:          140920 (bytes into file)\n  Flags:                             0x0\n  Size of this header:               64 (bytes)\n  Size of program headers:           56 (bytes)\n  Number of program headers:         10\n  Size of section headers:           64 (bytes)\n  Number of section headers:         30\n  Section header string table index: 29\n",
+      "stderr": "",
+      "expected_architecture_verified": true
+    },
+    {
+      "file": "scripts/mod/empty.o",
+      "sha256": "3a4ac30bde3a276f97cd0e17c82636e88c392e726b888496745a82ed8e10e7db",
+      "argv": [
+        "/usr/bin/readelf",
+        "-h",
+        "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output/scripts/mod/empty.o"
+      ],
+      "exit_code": 0,
+      "stdout": "ELF Header:\n  Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 \n  Class:                             ELF32\n  Data:                              2's complement, little endian\n  Version:                           1 (current)\n  OS/ABI:                            UNIX - System V\n  ABI Version:                       0\n  Type:                              REL (Relocatable file)\n  Machine:                           Intel 80386\n  Version:                           0x1\n  Entry point address:               0x0\n  Start of program headers:          0 (bytes into file)\n  Start of section headers:          196 (bytes into file)\n  Flags:                             0x0\n  Size of this header:               52 (bytes)\n  Size of program headers:           0 (bytes)\n  Number of program headers:         0\n  Size of section headers:           40 (bytes)\n  Number of section headers:         9\n  Section header string table index: 8\n",
+      "stderr": "",
+      "expected_architecture_verified": true
+    }
+  ],
+  "unexpected_drift": [],
+  "source_Module_symvers_exists": false,
+  "output_Module_symvers_exists": false,
+  "candidate_compilation_in_this_task": false
+}

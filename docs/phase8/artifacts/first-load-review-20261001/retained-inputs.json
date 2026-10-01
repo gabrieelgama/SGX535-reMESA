@@ -1,0 +1,42 @@
+{
+  "original": {
+    "path": "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260927-H0/raw/installed-gma500_gfx.ko",
+    "size": 205964,
+    "sha256": "7b42a99d157ad00494c358a7663a2daf438ba9fc9a8f2ca5076d28ddeb6adafb"
+  },
+  "candidate-01": {
+    "path": "/home/gama/sgx535-gfx/docs/phase8/artifacts/candidate-01-build-20260930/candidate-01/gma500_gfx.ko",
+    "size": 242364,
+    "sha256": "13591674ef9fa82f185f075185d1fa09d94606ccce7253ed231627f2649c600f"
+  },
+  "lifecycle-derivative": {
+    "path": "/home/gama/sgx535-gfx/docs/phase8/artifacts/candidate-01-build-20260930/candidate-02-lifecycle/gma500_gfx.ko",
+    "size": 242724,
+    "sha256": "91a6040e743d9c6222cb1307067db6e29fe92558576716a33d9fe0f4f5a87d74"
+  },
+  "captured-config": {
+    "path": "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/boot-config",
+    "size": 244485,
+    "sha256": "93f4d7a779f4be65097b5f26db6c9b10431907c6d417109719eb2f16d6def3d9"
+  },
+  "target-symvers": {
+    "path": "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build_Module_symvers",
+    "size": 1634895,
+    "sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca"
+  },
+  "h0-commandline": {
+    "path": "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260927-H0/raw/baseline/time_and_os.stdout",
+    "size": 668,
+    "sha256": "50e38c97d6dcab385d058d8eb617fd474936de0f1e2cc01bd0dec7b60fc51b42"
+  },
+  "h0-operator-dmesg": {
+    "path": "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260927-H0/raw/operator-dmesg-mini12.txt",
+    "size": 45575,
+    "sha256": "72974ea9c86ebf06b3af1ce392cac2023d56b8335724e1907b35e25e484ce9ec"
+  },
+  "integrated-derivative-driver": {
+    "path": "/home/gama/sgx535-gfx/docs/phase8/artifacts/lifecycle-gate-review-20261001/candidate-02-lifecycle-integrated-psb_drv.c",
+    "size": 15956,
+    "sha256": "a52706cdc6868d005c65dd94ff14044643f64e628749999b772e767f7fc58fa7"
+  }
+}

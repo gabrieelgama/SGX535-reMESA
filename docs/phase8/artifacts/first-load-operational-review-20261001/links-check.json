@@ -1,0 +1,126 @@
+{
+  "classification": "PASS",
+  "scope": "new review docs/README/checkpoint-notice links",
+  "links": [
+    {
+      "source": "docs/phase8/first-load-staging-boot-recovery-procedure.md",
+      "target": "first-load-operational-procedure.json"
+    },
+    {
+      "source": "docs/phase8/first-load-staging-boot-recovery-procedure.md",
+      "target": "first-load-operator-checklist.md"
+    },
+    {
+      "source": "docs/phase8/first-load-staging-boot-recovery-procedure.md",
+      "target": "first-load-operational-review.md"
+    },
+    {
+      "source": "docs/phase8/first-load-operator-checklist.md",
+      "target": "first-load-staging-boot-recovery-procedure.md"
+    },
+    {
+      "source": "docs/phase8/first-load-operator-checklist.md",
+      "target": "first-load-operational-procedure.json"
+    },
+    {
+      "source": "docs/phase8/first-load-operational-review.md",
+      "target": "first-load-staging-boot-recovery-procedure.md"
+    },
+    {
+      "source": "docs/phase8/first-load-operational-review.md",
+      "target": "first-load-operator-checklist.md"
+    },
+    {
+      "source": "docs/phase8/first-load-operational-review.md",
+      "target": "first-load-operational-procedure.json"
+    },
+    {
+      "source": "docs/phase8/first-load-operational-review.md",
+      "target": "artifacts/first-load-operational-review-20261001/README.md"
+    },
+    {
+      "source": "docs/phase8/artifacts/first-load-operational-review-20261001/README.md",
+      "target": "../../first-load-operational-review.md"
+    },
+    {
+      "source": "docs/phase8/artifacts/first-load-operational-review-20261001/README.md",
+      "target": "../../first-load-staging-boot-recovery-procedure.md"
+    },
+    {
+      "source": "docs/phase8/artifacts/first-load-operational-review-20261001/README.md",
+      "target": "../../first-load-operator-checklist.md"
+    },
+    {
+      "source": "docs/phase8/artifacts/first-load-operational-review-20261001/README.md",
+      "target": "../../first-load-operational-procedure.json"
+    },
+    {
+      "source": "docs/phase8/artifacts/first-load-operational-review-20261001/README.md",
+      "target": "checks-final/summary.json"
+    },
+    {
+      "source": "docs/phase8/artifacts/first-load-operational-review-20261001/README.md",
+      "target": "checks-final/checks.json"
+    },
+    {
+      "source": "docs/phase8/artifacts/first-load-operational-review-20261001/README.md",
+      "target": "run_guards_final_successor.py"
+    },
+    {
+      "source": "docs/phase8/artifacts/first-load-operational-review-20261001/README.md",
+      "target": "post-documentation-qualified-checks/summary.json"
+    },
+    {
+      "source": "docs/phase8/artifacts/first-load-operational-review-20261001/README.md",
+      "target": "fresh-image-inspection"
+    },
+    {
+      "source": "docs/phase8/artifacts/first-load-operational-review-20261001/README.md",
+      "target": "initial-artifact-verification.json"
+    },
+    {
+      "source": "docs/phase8/artifacts/first-load-operational-review-20261001/README.md",
+      "target": "adversarial-review-resolution.json"
+    },
+    {
+      "source": "docs/phase8/artifacts/first-load-operational-review-20261001/README.md",
+      "target": "hook-log-handoff-evidence.json"
+    },
+    {
+      "source": "docs/phase8/artifacts/first-load-operational-review-20261001/README.md",
+      "target": "initial-git-status.txt"
+    },
+    {
+      "source": "docs/phase8/artifacts/first-load-operational-review-20261001/README.md",
+      "target": "initial-files.json"
+    },
+    {
+      "source": "docs/phase8/artifacts/first-load-operational-review-20261001/README.md",
+      "target": "preservation-initial-files.json"
+    },
+    {
+      "source": "docs/phase8/artifacts/first-load-operational-review-20261001/README.md",
+      "target": "historical-image-manifest-final.json"
+    },
+    {
+      "source": "docs/phase8/artifacts/first-load-operational-review-20261001/README.md",
+      "target": "links-check.json"
+    },
+    {
+      "source": "docs/phase8/artifacts/first-load-operational-review-20261001/README.md",
+      "target": "qualification-decision.json"
+    },
+    {
+      "source": "docs/phase8/artifacts/first-load-operational-review-20261001/README.md",
+      "target": "preservation-final.json"
+    },
+    {
+      "source": "docs/phase8/artifacts/first-load-operational-review-20261001/README.md",
+      "target": "working-tree-delta.json"
+    },
+    {
+      "source": "docs/phase8/artifacts/first-load-operational-review-20261001/README.md",
+      "target": "manifest.json"
+    }
+  ]
+}

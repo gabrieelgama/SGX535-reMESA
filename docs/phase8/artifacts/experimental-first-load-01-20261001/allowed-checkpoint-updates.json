@@ -1,0 +1,38 @@
+[
+  {
+    "path": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "original_sha256": "19ab5527fe61f0da8099c0ca3e414714c703fb73a9657242d9c8ee95e1629fb6",
+    "current_sha256": "928ad93db673daa5d335ab1215cc185c022f81a7de8f5b207d1c2366c998f5cb",
+    "original_bytes_preserved_by_removing_one_new_notice": true
+  },
+  {
+    "path": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "original_sha256": "a1f65f285cb3b2380b0243a37e6f9aeb3b1135c1a07332f27e22e7b2db3f38b1",
+    "current_sha256": "13e0f953f68e28215c49dad9601caca5b4ec0bcaed13f1e1740cb85bfdc064cf",
+    "original_bytes_preserved_by_removing_one_new_notice": true
+  },
+  {
+    "path": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "original_sha256": "2156c92a0214bb28078a579d4a6e3fd7de549f1afbf8f11528a10af1f9e1dc46",
+    "current_sha256": "3458c115b2535ba55a4f3b7551c94d4d19c8e619d71686d21b10fbbc16c93568",
+    "original_bytes_preserved_by_removing_one_new_notice": true
+  },
+  {
+    "path": "docs/phase8/active-gma500-transition-review.md",
+    "original_sha256": "801ff0af3c7b5a8ae592c7f8d2c82773d510676fe83c37188e92b439e8047918",
+    "current_sha256": "ecd9a2a868adbd44847c45cef35cb49278967f2fe765babf9bff7a437ef59a48",
+    "original_bytes_preserved_by_removing_one_new_notice": true
+  },
+  {
+    "path": "docs/phase8/first-load-boot-qualification.md",
+    "original_sha256": "07a54c06487fd231dade1f5231b5e3131bb2c34ad9681c6fb877582af30074ec",
+    "current_sha256": "b1cf2fa39e8fb1bef10d5898eb0e8b6ad7b1035ab868f810290535fa86f8890f",
+    "original_bytes_preserved_by_removing_one_new_notice": true
+  },
+  {
+    "path": "docs/phase8/first-load-stock-boot-observation.md",
+    "original_sha256": "ebaf8be55b8572a2c567428d2ebc8d3511b147ba7b49e7c2462978caa06e1fe7",
+    "current_sha256": "d92a785d829d67220f788cfb89cb8228ac2f4fc3194c6eb4ac3856c994d476d4",
+    "original_bytes_preserved_by_removing_one_new_notice": true
+  }
+]

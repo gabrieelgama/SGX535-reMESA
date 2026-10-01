@@ -1,0 +1,6 @@
+MODULE_HOLDERS
+NONE
+FB0_DEVICE /sys/devices/pci0000:00/0000:00:02.0
+DRM_CARD_DEVICE /sys/devices/pci0000:00/0000:00:02.0
+VTCON1_NAME (M) frame buffer device
+VTCON1_BIND 1

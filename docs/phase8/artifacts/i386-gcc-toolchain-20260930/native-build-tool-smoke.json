@@ -1,0 +1,96 @@
+[
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/flex",
+      "-o",
+      "lexer.c",
+      "lexer.l"
+    ],
+    "input": null,
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/usr/bin/gcc-14",
+      "-O2",
+      "-Wall",
+      "lexer.c",
+      "-o",
+      "native-lexer"
+    ],
+    "input": null,
+    "exit": 0,
+    "stdout": "",
+    "stderr": "lexer.c:1127:16: warning: 'input' defined but not used [-Wunused-function]\n 1127 |     static int input  (void)\n      |                ^~~~~\nlexer.c:1084:17: warning: 'yyunput' defined but not used [-Wunused-function]\n 1084 |     static void yyunput (int c, char * yy_bp )\n      |                 ^~~~~~~\n"
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/smoke/native-lexer"
+    ],
+    "input": "native smoke\n",
+    "exit": 0,
+    "stdout": "native\nsmoke\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/bison",
+      "-o",
+      "parser.c",
+      "--defines=parser.h",
+      "parser.y"
+    ],
+    "input": null,
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/usr/bin/gcc-14",
+      "-O2",
+      "-Wall",
+      "parser.c",
+      "-o",
+      "native-parser"
+    ],
+    "input": null,
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/smoke/native-parser"
+    ],
+    "input": null,
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/bc"
+    ],
+    "input": "2+3\n",
+    "exit": 0,
+    "stdout": "5\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/usr/bin/gcc-14",
+      "-v",
+      "-c",
+      "native.c",
+      "-o",
+      "native.o"
+    ],
+    "input": null,
+    "exit": 0,
+    "stdout": "",
+    "stderr": "Using built-in specs.\nCOLLECT_GCC=/usr/bin/gcc-14\nOFFLOAD_TARGET_NAMES=nvptx-none\nOFFLOAD_TARGET_DEFAULT=1\nTarget: aarch64-linux-gnu\nConfigured with: ../src/configure -v --with-pkgversion='Debian 14.2.0-19' --with-bugurl=file:///usr/share/doc/gcc-14/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2,rust --prefix=/usr --with-gcc-major-version-only --program-suffix=-14 --program-prefix=aarch64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-offload-targets=nvptx-none=/build/reproducible-path/gcc-14-14.2.0/debian/tmp-nvptx/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=aarch64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2\nThread model: posix\nSupported LTO compression algorithms: zlib zstd\ngcc version 14.2.0 (Debian 14.2.0-19) \nCOLLECT_GCC_OPTIONS='-v' '-c' '-o' 'native.o' '-mlittle-endian' '-mabi=lp64'\n /usr/libexec/gcc/aarch64-linux-gnu/14/cc1 -quiet -v -imultiarch aarch64-linux-gnu native.c -quiet -dumpbase native.c -dumpbase-ext .c -mlittle-endian -mabi=lp64 -version -fasynchronous-unwind-tables -o /tmp/ccdqw7pU.s\nGNU C17 (Debian 14.2.0-19) version 14.2.0 (aarch64-linux-gnu)\n\tcompiled by GNU C version 14.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.27-GMP\n\nwarning: MPFR header version 4.2.1 differs from library version 4.2.2.\nGGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072\nignoring nonexistent directory \"/usr/local/include/aarch64-linux-gnu\"\nignoring nonexistent directory \"/usr/lib/gcc/aarch64-linux-gnu/14/include-fixed/aarch64-linux-gnu\"\nignoring nonexistent directory \"/usr/lib/gcc/aarch64-linux-gnu/14/include-fixed\"\nignoring nonexistent directory \"/usr/lib/gcc/aarch64-linux-gnu/14/../../../../aarch64-linux-gnu/include\"\n#include \"...\" search starts here:\n#include <...> search starts here:\n /usr/lib/gcc/aarch64-linux-gnu/14/include\n /usr/local/include\n /usr/include/aarch64-linux-gnu\n /usr/include\nEnd of search list.\nCompiler executable checksum: 07cded30d2a9b3cda97e4b164823fd45\nCOLLECT_GCC_OPTIONS='-v' '-c' '-o' 'native.o' '-mlittle-endian' '-mabi=lp64'\n as -v -EL -mabi=lp64 -o native.o /tmp/ccdqw7pU.s\nGNU assembler version 2.44 (aarch64-linux-gnu) using BFD version (GNU Binutils for Debian) 2.44\nCOMPILER_PATH=/usr/libexec/gcc/aarch64-linux-gnu/14/:/usr/libexec/gcc/aarch64-linux-gnu/14/:/usr/libexec/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/14/:/usr/lib/gcc/aarch64-linux-gnu/\nLIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/14/:/usr/lib/gcc/aarch64-linux-gnu/14/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/14/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/14/../../../:/lib/:/usr/lib/\nCOLLECT_GCC_OPTIONS='-v' '-c' '-o' 'native.o' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'native.'\n"
+  }
+]

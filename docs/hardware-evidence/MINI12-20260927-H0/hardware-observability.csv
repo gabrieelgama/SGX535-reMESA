@@ -1,0 +1,12 @@
+rule,signal,source,read_mechanism,mutating,interpretation,ambiguity,target_verified,useful_discriminator
+H0,PCI identity and subsystem,PCI sysfs text,passive probe,NO,identifies Poulsbo PCI function,does not identify SGX core revision,YES,YES_IDENTITY_ONLY
+H0,DMI board and BIOS,public DMI sysfs text,passive probe,NO,compares current machine with TVZ-001,does not authenticate SGX core revision,YES,YES_IDENTITY_ONLY
+H1,kernel and bound graphics driver,procfs and driver symlink,passive probe plus passive metadata,NO,qualifies installed stack,does not authenticate installed binary to archived source,YES,YES_STACK_ONLY
+H2,PCI runtime status,PCI sysfs text,passive probe,NO,reports PCI PM-core state,does not prove internal SGX clocks or safe MMIO,YES,NO
+H2,interrupt counters,procfs,read-only capture,NO,baseline for later deltas,shared IRQ and non-specific cause,YES,YES_DIAGNOSTIC_ONLY
+H2,kernel log,operator-provided readable target file,unprivileged SSH file read,NO,boot and driver diagnostic snapshot,generation command and time not independently observed; direct dmesg denied,YES_QUALIFIED,YES_DIAGNOSTIC_ONLY
+R1,maintenance request/completion,SGX service or register state,NOT_APPROVED,UNKNOWN,would timestamp selected maintenance,completion-domain payload visibility unproved,NO,CONDITIONAL
+R1,first-consumer payload result,approved minimal GPU consumer,NOT_AVAILABLE,YES,would distinguish final from stale contents,consumer and recovery not qualified,NO,CONDITIONAL
+R2,LOAD3 bit 0x8 and full mask,SGX status register,NOT_APPROVED,UNKNOWN,would observe fresh load completion,bit alone does not prove TA readiness,NO,CONDITIONAL
+R2,INITEND and table/service state,service or register status,NOT_APPROVED,UNKNOWN,would observe bootstrap predicate,consumer readiness postcondition unproved,NO,CONDITIONAL
+R3,selected PDS result,approved output buffer,NOT_AVAILABLE,YES,would measure one selected stream outcome,requires isolated source-class discriminator and submission gate,NO,CONDITIONAL

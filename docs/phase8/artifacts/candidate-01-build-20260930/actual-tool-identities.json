@@ -1,0 +1,72 @@
+[
+  {
+    "name": "gcc",
+    "argv": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "i686-linux-gnu-gcc-14 (Debian 14.2.0-19) 14.2.0\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+    "stderr": ""
+  },
+  {
+    "name": "gcc-machine",
+    "argv": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+      "-dumpmachine"
+    ],
+    "exit_code": 0,
+    "stdout": "i686-linux-gnu\n",
+    "stderr": ""
+  },
+  {
+    "name": "gcc-fullversion",
+    "argv": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+      "-dumpfullversion"
+    ],
+    "exit_code": 0,
+    "stdout": "14.2.0\n",
+    "stderr": ""
+  },
+  {
+    "name": "as",
+    "argv": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-as",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "GNU assembler (GNU Binutils for Debian) 2.44\nCopyright (C) 2025 Free Software Foundation, Inc.\nThis program is free software; you may redistribute it under the terms of\nthe GNU General Public License version 3 or later.\nThis program has absolutely no warranty.\nThis assembler was configured for a target of `i686-linux-gnu'.\n",
+    "stderr": ""
+  },
+  {
+    "name": "ld",
+    "argv": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-ld.bfd",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "GNU ld (GNU Binutils for Debian) 2.44\nCopyright (C) 2025 Free Software Foundation, Inc.\nThis program is free software; you may redistribute it under the terms of\nthe GNU General Public License version 3 or (at your option) a later version.\nThis program has absolutely no warranty.\n",
+    "stderr": ""
+  },
+  {
+    "name": "hostcc",
+    "argv": [
+      "/usr/bin/gcc-14",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "gcc-14 (Debian 14.2.0-19) 14.2.0\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+    "stderr": ""
+  },
+  {
+    "name": "hostcc-machine",
+    "argv": [
+      "/usr/bin/gcc-14",
+      "-dumpmachine"
+    ],
+    "exit_code": 0,
+    "stdout": "aarch64-linux-gnu\n",
+    "stderr": ""
+  }
+]

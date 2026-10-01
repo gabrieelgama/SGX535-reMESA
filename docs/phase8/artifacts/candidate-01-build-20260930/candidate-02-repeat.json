@@ -1,0 +1,10 @@
+{
+  "first": "/home/gama/sgx535-offline/candidate-01-build-20260930/candidate-02-lifecycle/gma500_gfx.ko",
+  "repeat": "/home/gama/sgx535-offline/candidate-01-build-20260930/module/gma500_gfx.ko",
+  "sha256": "91a6040e743d9c6222cb1307067db6e29fe92558576716a33d9fe0f4f5a87d74",
+  "size": 242724,
+  "result": "BIT IDENTICAL",
+  "fresh_source_tree": true,
+  "same_M_path": true,
+  "same_pinned_build_environment": true
+}

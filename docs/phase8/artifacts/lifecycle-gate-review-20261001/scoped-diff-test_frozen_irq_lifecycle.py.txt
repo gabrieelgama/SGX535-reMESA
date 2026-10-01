@@ -1,0 +1,44 @@
+--- /home/gama/sgx535-offline/lifecycle-gate-review-20261001/before/tools/psb-dri-re/test_frozen_irq_lifecycle.py	2026-10-01 00:22:17.959413374 +0000
++++ /home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_irq_lifecycle.py	2026-10-01 00:24:24.607413326 +0000
+@@ -78,7 +78,23 @@
+                 + source[late_start:late_end] +
+                 'next_phase_seen = 1; return 0;\n'
+                 + error_tail + '\n}\n')
+-        (directory / 'extracted-lifecycle.inc').write_text(unload + '\n' + install + late)
++        remove = extract_function(source, 'static void psb_pci_remove(')
++        exit_function = extract_function(source, 'static void __exit psb_exit(')
++        # Exercise the real PCI remove and module-exit entry points too. The
++        # PCI boundary dispatches the selected driver's actual remove callback.
++        binding = ('\nstatic struct pci_driver psb_pci_driver = '
++                   '{ .remove = psb_pci_remove };\n')
++        original = FIXTURE.read_text()
++        original_unload = extract_function(original, 'static void psb_driver_unload(')
++        original_remove = extract_function(original, 'static void psb_pci_remove(')
++        # Test-only symbol renaming allows the immutable original to serve as
++        # a negative control alongside the corrected implementation.
++        original_unload = original_unload.replace('psb_driver_unload(', 'original_driver_unload(')
++        original_remove = original_remove.replace('psb_pci_remove(', 'original_pci_remove(')
++        original_remove = original_remove.replace('psb_driver_unload(', 'original_driver_unload(')
++        (directory / 'extracted-lifecycle.inc').write_text(
++            unload + '\n' + install + late + remove + binding + exit_function + '\n'
++            + original_unload + '\n' + original_remove)
+         cls.binary = directory / 'lifecycle-test'
+         build = subprocess.run([
+             '/usr/bin/gcc-14', '-std=c11', '-O2', '-Wall', '-Wextra', '-Werror',
+@@ -119,6 +135,16 @@
+         self.run_case(6)
+         self.run_case(7)
+ 
++    def test_pci_remove_releases_irq_before_final_drm_reference(self):
++        self.run_case(10)
++
++    def test_module_exit_uses_the_paired_pci_remove_path(self):
++        self.run_case(11)
++
++    def test_preserved_original_remove_leaves_irq_owned_after_private_teardown(self):
++        # Characterizes the unsafe original; does not execute a stale handler.
++        self.run_case(12)
++
+ 
+ if __name__ == '__main__':
+     unittest.main()

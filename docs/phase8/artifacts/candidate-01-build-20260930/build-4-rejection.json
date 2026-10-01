@@ -1,0 +1,5 @@
+{
+  "reason": "stale pre-correction fixed-input hash rejected staging at frozen_kernel_contract.c; build launched in error before checking exit status; terminated, NOT a candidate",
+  "stale_manifest": "fixed-inputs.json",
+  "qualified_replacement_manifest": "integrated-source-manifest-successful-build.json"
+}

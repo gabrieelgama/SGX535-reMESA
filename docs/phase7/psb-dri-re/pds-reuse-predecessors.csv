@@ -1,0 +1,11 @@
+predecessor_family,emitter_elf_va,same_outbuf_evidence,known_relative_data_writes,can_determine_selected_hole_values_after_slot_reuse,reason
+scene pixel event,0x000392ab,DRI 0x27060 passes owner +0x6c outbuf,+0x10/+0x14/+0x20 and other event fields,NO,prior slot origin and next selected absolute offset are not fixed
+clear pixel PDS,0x00039ac4,DRI 0x27060 passes owner +0x6c outbuf,+0x00/+0x04/+0x20,NO,prior placement and scene branches are dynamic
+texture-replace pixel PDS,0x00039c5c,DRI 0x27060 passes owner +0x6c outbuf,+0x00/+0x04/+0x08/+0x0c/+0x20/+0x24/+0x28,NO,prior placement and scene branches are dynamic
+fragment primary PDS,0x00025970,DRI 0x283d8 passes owner +0x6c outbuf,selected +0x00/+0x04/+0x20 and variable-input stores,NO,earlier program key and slot reuse history are dynamic
+fragment secondary PDS,0x00039ea0,DRI 0x28559 uses PDS outbuf family,conditional +0x08/+0x0c/+0x28 or terminal-only,NO,variant and prior placement are dynamic
+vertex primary PDS,0x00040355,DRI 0x29dd9 passes owner +0x6c outbuf,conditional DS writes in variable program,NO,variant and prior placement are dynamic
+other owner +0x6c allocations,UNKNOWN,callers of owner +0x6c in DRI draw and state paths,UNKNOWN,NO,complete prior-use sequence for a reused pool slot is not a fixed frozen input
+scene vertex bytes,0x0003f94c,0x29fbd passes owner +0x6c with 4 and 8 dimensions,memcpy +0x00 through +0x7f,NO,128 copied bytes; overlap determined by prior start P and selected start S
+scene six-index bytes,0x00037409,0x29fbd passes owner +0x6c and six u16 indices,memcpy +0x00 through +0x0b,NO,12 copied bytes; overlap determined by P and S
+draw index reservation,0x00037409;0x00027fa0,0x27fa0 uses owner +0x6c for at least 0x2000 u16 entries,used subset written later by index conversion; remainder not initially copied,NO,null source reservation preserves old bytes until later explicit index writes

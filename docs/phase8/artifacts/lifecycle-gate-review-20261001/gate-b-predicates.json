@@ -1,0 +1,162 @@
+{
+  "gate_b": "BLOCKED",
+  "whitelist": [],
+  "target_contact": "NONE",
+  "predicates": [
+    {
+      "predicate": "Exact target/rev121 guards",
+      "state": "PASS",
+      "evidence_limit": "Retained identity and fixed kernel guard; no rediscovery"
+    },
+    {
+      "predicate": "Expected kernel ABI/config/generated layout",
+      "state": "PASS",
+      "evidence_limit": "Captured target table, successor equivalence, fresh unchanged-state checks"
+    },
+    {
+      "predicate": "Candidate artifact identity and complete imports",
+      "state": "PASS",
+      "evidence_limit": "Both frozen binaries freshly checked; derivative is the lifecycle-corrected choice"
+    },
+    {
+      "predicate": "Integration/source/toolchain provenance",
+      "state": "PASS",
+      "evidence_limit": "Strict four-patch replay, input manifests, normal Kbuild evidence and unchanged generated state"
+    },
+    {
+      "predicate": "Static i386 client/UAPI/operation flag",
+      "state": "PASS",
+      "evidence_limit": "Existing artifact/input and inert-flag regressions, unchanged pinned client"
+    },
+    {
+      "predicate": "Ten private BOs/VA/MMU and 49 relocations",
+      "state": "PASS",
+      "evidence_limit": "Tested fixed ownership/bounds/golden equivalence; live postconditions remain unobserved"
+    },
+    {
+      "predicate": "USE 3/4 reservation/programming/lifetime",
+      "state": "PASS",
+      "evidence_limit": "Fixed service tests and ownership retention; no live reservation claimed"
+    },
+    {
+      "predicate": "Publication decision for this frozen scene",
+      "state": "PASS",
+      "evidence_limit": "Recorded operator acceptance only; architectural visibility remains UNKNOWN"
+    },
+    {
+      "predicate": "Historical operational bootstrap predicate",
+      "state": "PASS",
+      "evidence_limit": "Bounded selected init/TA-load executor and failure injection; live ready status unobserved"
+    },
+    {
+      "predicate": "Fixed scene/TA/XHW/raster ordering",
+      "state": "PASS",
+      "evidence_limit": "Narrow kernel-owned plans and one-shot tests; no general userspace command path"
+    },
+    {
+      "predicate": "Attributed TA/PBE/DPM events and selected fault mapping",
+      "state": "PASS",
+      "evidence_limit": "Status-ledger/IRQ capture tests; DPM_TA_MEM_FREE nonterminal; no live event claimed"
+    },
+    {
+      "predicate": "ISP bracket risk decision",
+      "state": "PASS",
+      "evidence_limit": "Recorded scoped acceptance; no new reset/platform safety proof"
+    },
+    {
+      "predicate": "L12 risk decision",
+      "state": "PASS",
+      "evidence_limit": "Recorded scoped acceptance; architectural source containment remains UNKNOWN"
+    },
+    {
+      "predicate": "FT-AUX risk decision",
+      "state": "PASS",
+      "evidence_limit": "Recorded scoped acceptance; auxiliary source containment remains UNKNOWN"
+    },
+    {
+      "predicate": "One scene, sequence 1, at most one TA and raster fire",
+      "state": "PASS",
+      "evidence_limit": "Existing fixed UAPI, latch and failure injection; no automatic retry"
+    },
+    {
+      "predicate": "5\u00d7HZ/300,000-sample limits and HOLD",
+      "state": "PASS",
+      "evidence_limit": "Existing bounded executor/ledger; not a whole-platform hang bound"
+    },
+    {
+      "predicate": "HOLD BO/USE/scene/module ownership",
+      "state": "PASS",
+      "evidence_limit": "No release after ambiguity; held attempt retains module reference; PCI unbind prohibited"
+    },
+    {
+      "predicate": "Completion/readback success criterion",
+      "state": "PASS",
+      "evidence_limit": "Requires attributable events plus defined color output; no current readback, GPU-to-CPU visibility proof or triangle result"
+    },
+    {
+      "predicate": "Derivative IRQ/modeset/error unwind",
+      "state": "PASS",
+      "evidence_limit": "Exact-source tests, core contracts, compiled relocations and paired release; scoped offline qualification"
+    },
+    {
+      "predicate": "Original preserved recovery artifact",
+      "state": "PASS",
+      "evidence_limit": "Preserved original hash/evidence; availability is not hot-restoration safety"
+    },
+    {
+      "predicate": "Original display/console/service teardown facts",
+      "state": "PASS",
+      "evidence_limit": "Retained console-release/service observations only"
+    },
+    {
+      "predicate": "First hot removal of active original",
+      "state": "BLOCKED",
+      "evidence_limit": "Missing IRQ release before private/MMIO/module lifetime ends"
+    },
+    {
+      "predicate": "Replacement insertion after that removal",
+      "state": "BLOCKED",
+      "evidence_limit": "Old-action-drained invariant cannot be established by the existing procedure"
+    },
+    {
+      "predicate": "Normal hot original restoration",
+      "state": "BLOCKED",
+      "evidence_limit": "Retained restoration oops; clean PCI unlink does not prove IRQ cleanup"
+    },
+    {
+      "predicate": "First-load alternative and original fallback",
+      "state": "UNKNOWN",
+      "evidence_limit": "Selected boot/initramfs/loading/fallback provenance absent; not an invented replacement procedure"
+    },
+    {
+      "predicate": "Fresh live kernel/module/PCI/DRM/fb/VT/FD/service guards",
+      "state": "UNKNOWN",
+      "evidence_limit": "Capture 08 is dated; no target contact permitted while this gate is blocked"
+    },
+    {
+      "predicate": "Fresh loaded candidate identity/binding",
+      "state": "UNKNOWN",
+      "evidence_limit": "Never inserted; only meaningful after a qualified transition"
+    },
+    {
+      "predicate": "Runtime module-signature enforcement",
+      "state": "UNKNOWN",
+      "evidence_limit": "Both unsigned; config does not force signing; original unsigned load is retained observation, not a fresh policy check"
+    },
+    {
+      "predicate": "Physically present operator/independent capture/root staging",
+      "state": "UNKNOWN",
+      "evidence_limit": "Future action must newly establish them; prior attempt presence is not current proof"
+    },
+    {
+      "predicate": "Current exact transition and recovery authorization",
+      "state": "BLOCKED",
+      "evidence_limit": "Existing hot procedure is disproved; conditional execution request cannot bypass its missing predicate or authorize an invented route"
+    },
+    {
+      "predicate": "Current Gate B and exact-action whitelist",
+      "state": "BLOCKED",
+      "evidence_limit": "No qualified executable transition; whitelist stays `[]`"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+from datetime import datetime, timezone
+from subprocess import run, PIPE
+import base64,json
+start=datetime.now(timezone.utc).isoformat()
+proc=run(['/usr/bin/sudo','-n','/usr/local/libexec/sgx535-core-revision'],stdout=PIPE,stderr=PIPE,check=False)
+end=datetime.now(timezone.utc).isoformat()
+print(json.dumps({'target_started_utc':start,'target_finished_utc':end,'helper_exit_status':proc.returncode,'helper_stdout_b64':base64.b64encode(proc.stdout).decode('ascii'),'helper_stderr_b64':base64.b64encode(proc.stderr).decode('ascii')},sort_keys=True))

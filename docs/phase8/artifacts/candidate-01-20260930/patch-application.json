@@ -1,0 +1,19 @@
+[
+  {
+    "patch": "kernel/sgx535_frozen/patches/antix-fixed-makefile.patch",
+    "sha256": "e0537bb0b72c1513de1c0ad6e9fa2c32706aeb0c2f747d22fe8f2511b2fc5467",
+    "argv": [
+      "/usr/bin/patch",
+      "--batch",
+      "--fuzz=0",
+      "-p5",
+      "-i",
+      "/home/gama/sgx535-gfx/kernel/sgx535_frozen/patches/antix-fixed-makefile.patch",
+      "--dry-run"
+    ],
+    "cwd": "/home/gama/sgx535-offline/candidate-01-20260930/module",
+    "exit_code": 1,
+    "stdout": "checking file Makefile\nHunk #1 FAILED at 55.\n1 out of 1 hunk FAILED\n",
+    "stderr": ""
+  }
+]

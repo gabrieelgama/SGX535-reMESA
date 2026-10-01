@@ -1,0 +1,7 @@
+bo,index,flags,mask,hint,presumed,handle,next,scope
+pds,0,536870913,3096229022007431,0,False,HANDLE(pds),next CPU validation node or zero,user set; kernel scene/TA objects separately validated by scene path
+use,1,2251800350556161,3096229022007431,0,False,HANDLE(use),next CPU validation node or zero,user set; kernel scene/TA objects separately validated by scene path
+vertex_ta,2,281475245146113,3096229022007431,0,False,HANDLE(vertex_ta),next CPU validation node or zero,user set; kernel scene/TA objects separately validated by scene path
+background,3,2147483649,3096229022007431,0,False,HANDLE(background),next CPU validation node or zero,user set; kernel scene/TA objects separately validated by scene path
+control,4,16777348,3096229022007431,0,False,HANDLE(control),next CPU validation node or zero,user set; kernel scene/TA objects separately validated by scene path
+color,5,268435459,3096229022007431,0,False,HANDLE(color),next CPU validation node or zero,user set; kernel scene/TA objects separately validated by scene path

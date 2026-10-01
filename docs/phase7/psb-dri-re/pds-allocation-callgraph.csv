@@ -1,0 +1,23 @@
+stage,caller_elf_va,callee_elf_va,object_or_effect,evidence_status
+context pool creation,0x00048592,0x0004297b,Creates 30 fixed-size PDS pool slots in one drmBOCreate backing BO,CONFIRMED retained CPU
+outbuf owner creation,0x00048592,0x00027a1e,Creates owner containing PDS outbuf at +0x6c,CONFIRMED retained CPU
+PDS outbuf wrapper,0x00027a1e,0x00038a9b,Allocates 0x54-byte host outbuf with 0x20000 or 0x40000 slot capacity and 0x1000 base alignment,CONFIRMED retained CPU
+BO wrapper construction,0x00038a9b,0x00043d8c,Allocates 0x3c-byte host BO wrapper; backing block acquired later,CONFIRMED retained CPU
+selected primary cache miss,0x000283d8,0x00025970,Builds selected PDS program in owner +0x6c outbuf,CONFIRMED selected branch
+aligned reservation,0x00025970,0x00038762,Reserves 400 bytes at aligned mapped cursor and returns descriptor offset,CONFIRMED retained CPU
+pool block acquisition,0x00044c90,0x00042f93,Removes a fixed slot from pool free list when BO data is created/replaced,CONFIRMED retained CPU
+outbuf map/reset,0x00038762,0x0003865f,Maps current slot and resets cursor to mapped base without clearing,CONFIRMED retained CPU
+pool CPU map,0x00043ffe,0x000430c3,Returns kernel BO mapped base plus fixed slot offset,CONFIRMED retained CPU
+selected commit,0x00025970,0x000384ab,Records length 56 and advances outbuf cursor,CONFIRMED selected branch
+BO wrapper release,0x00038762,0x00043c89,Drops old wrapper on rotation; may return underlying slot,CONFIRMED retained CPU
+pool slot release,0x00043c89,0x00042e37,Requeues slot immediately or pending fence without clearing data bytes,CONFIRMED retained CPU
+fenced slot reclamation,0x00042e37,0x00042c98,Waits or polls fence then requeues unchanged slot,CONFIRMED retained CPU
+owner destruction,0x00027735,0x000385af,Unrefs outbuf BO wrapper and frees host outbuf,CONFIRMED retained CPU
+primary descriptor publish,0x000283d8,0x00029251,Copies six primary descriptor words to scene +0x430 for later dirty-state consumption,CONFIRMED dataflow; not direct call
+pixel state serialization,0x00028fff,0x000287ff,Uses primary BO offset and data-prefix count; no primary length read in present-bit-0x40 branch,CONFIRMED CPU branch
+pre-submit unmap,0x0002a39a,0x00027890,Unmaps owner +0x6c and four other outbufs without data clear,CONFIRMED retained CPU
+pool unmap dispatch,0x00045124,0x00042940,Clears host slot mapping flag only,CONFIRMED vtable dispatch
+submission wrapper,0x0002a39a,0x00037b51,Builds command/validation argument; no selected-hole normalization found,CONFIRMED inspected path
+fence association,0x0004423a,0x00042f2d,Stores referenced fence in separate host slot descriptor,CONFIRMED vtable dispatch
+map fence check,0x000430c3,0x00042ed3,Waits and drops stored fence before returning mapped slot address,CONFIRMED retained CPU
+pool destruction,0x00042d82,drmBOUnreference,Releases backing BO and host pool metadata after draining slots,CONFIRMED retained CPU

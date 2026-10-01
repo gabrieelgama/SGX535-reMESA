@@ -1370,5 +1370,3 @@ Bring ancient files.
 # 🔺
 
 **THE TRIANGLE HAS A BUDGET NOW**
-
-</div>

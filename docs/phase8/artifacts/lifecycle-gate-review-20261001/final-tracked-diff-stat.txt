@@ -1,0 +1,24 @@
+ docs/evidence-matrix.csv                           |  72 ++++++++-
+ docs/hardware-evidence/TVZ-001/README.md           |   8 +
+ docs/phase7/7.0-gate.md                            |  14 +-
+ docs/phase7/7.0-ownership-locking.md               |   4 +-
+ docs/phase7/README.md                              |  96 +++++++++++-
+ docs/phase7/psb-dri-re/README.md                   |  91 ++++++++++-
+ docs/phase7/psb-dri-re/bounded-path-closure.md     |   2 +
+ docs/phase7/psb-dri-re/format-readiness.md         |   2 +
+ docs/phase7/psb-dri-re/frozen-draw-blockers.md     | 104 ++++++++++++-
+ docs/phase7/psb-dri-re/frozen-draw-formats.csv     |  15 ++
+ docs/phase7/psb-dri-re/frozen-draw-objects.md      |  10 ++
+ .../psb-dri-re/frozen-draw-static-decision.md      |  33 +++-
+ .../frozen-fragment-compiler-checkpoint.md         |   2 +
+ .../psb-dri-re/frozen-fragment-link-checkpoint.md  |   2 +
+ .../psb-dri-re/frozen-fragment-symbolic-trace.md   |  44 ++++++
+ docs/phase7/psb-dri-re/function-map.csv            |  41 +++++
+ docs/phase7/psb-dri-re/unknowns.md                 |  42 ++++-
+ docs/phase7/source-provenance.md                   | 169 +++++++++++++++++++++
+ docs/phase7/xpsb-re/function-map.csv               |   5 +-
+ docs/unknowns.md                                   |  47 +++++-
+ tools/psb-dri-re/README.md                         |  19 +++
+ tools/psb-dri-re/targets.txt                       | 130 ++++++++++++++--
+ tools/xpsb-re/targets.txt                          |   5 +
+ 23 files changed, 920 insertions(+), 37 deletions(-)

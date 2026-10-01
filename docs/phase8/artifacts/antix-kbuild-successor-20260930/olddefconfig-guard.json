@@ -1,0 +1,11 @@
+{
+  "target_symbol_count": 8788,
+  "successor_symbol_count": 8788,
+  "differences": [
+    {
+      "key": "CONFIG_CC_VERSION_TEXT",
+      "target": "\"gcc (Debian 14.2.0-19) 14.2.0\"",
+      "successor": "\"i686-linux-gnu-gcc-14 (Debian 14.2.0-19) 14.2.0\""
+    }
+  ]
+}

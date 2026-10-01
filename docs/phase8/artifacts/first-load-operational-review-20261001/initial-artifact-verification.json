@@ -1,0 +1,18 @@
+[
+  {
+    "evidence_bundle": "docs/phase8/artifacts/experimental-first-load-01-20261001",
+    "files_verified": 145,
+    "all_hashes_and_sizes": "PASS"
+  },
+  {
+    "argv": [
+      "python3",
+      "tools/psb-dri-re/verify_frozen_first_load_image.py",
+      "--image",
+      "/home/gama/sgx535-gfx/docs/phase8/artifacts/experimental-first-load-01-20261001/build-03/initrd.img-sgx535-firstload-01",
+      "--proof",
+      "/home/gama/sgx535-offline/first-load-operational-review-20261001T050731Z/fresh-image-inspection"
+    ],
+    "exit_code": 0
+  }
+]

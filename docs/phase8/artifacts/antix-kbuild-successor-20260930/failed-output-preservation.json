@@ -1,0 +1,7 @@
+{
+  "entries": 10569,
+  "all_hashes_links_modes_inodes_and_mtimes_unchanged": true,
+  "failed_output": "/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/output",
+  "before_manifest_sha256": "1820bda1253d0d52365b887177efb8b1caa19a033840886bfd5307e40b8ae8d3",
+  "after_manifest_sha256": "1820bda1253d0d52365b887177efb8b1caa19a033840886bfd5307e40b8ae8d3"
+}

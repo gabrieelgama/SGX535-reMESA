@@ -1,0 +1,17 @@
+number,requirement,prior_documentary_status,current_target_status,evidence_needed
+01,exact SGX535/Poulsbo identity,PASS_SCOPED,PASS_SCOPED,fresh DMI and PCI 8086:8108 match inherited TVZ; SGX core revision remains separate
+02,exact SGX-relative register offset,PASS_SCOPED,PASS_SCOPED,loaded module Build ID and 8086:8108 psb_chip_ops mapping establish BAR0 plus 0x40000 length 0x8000; candidate register offsets 0x10/0x14 remain cited source facts
+03,register access width,PASS_SCOPED,UNKNOWN,applicability of documented 32-bit access to the target
+04,explicit read semantics,UNKNOWN,UNKNOWN,applicable access-attribute contract for each proposed register
+05,no destructive read side effects,UNKNOWN,UNKNOWN,positive side-effect-free contract
+06,required power state,UNKNOWN,UNKNOWN,independent passive proof of the required internal power state
+07,required clock state,UNKNOWN,UNKNOWN,independent passive proof of the SGX register clock
+08,required reset state,UNKNOWN,UNKNOWN,applicable reset/access ordering and target state proof
+09,physical core revision applicability,UNKNOWN,UNKNOWN,SGX core revision and applicable revision coverage without using PCI revision as proxy
+10,applicable errata,UNKNOWN,UNKNOWN,target BRN/errata coverage for the exact observation
+11,single owner of SGX mapping,PASS_SCOPED,PASS_SCOPED,fresh gma500 binding and loaded module observed; complete observation exclusion still missing
+12,mapping lifetime,PASS_SCOPED,UNKNOWN,loaded module identity linked by sysfs Build ID but future observer must pin mapping through read and teardown
+13,locking and concurrency exclusion,UNKNOWN,UNKNOWN,complete driver-owner exclusion protocol for the observation
+14,suspend/resume exclusion,UNKNOWN,UNKNOWN,serialized PM and observation protocol
+15,bounded failure behavior,UNKNOWN,UNKNOWN,CPU-visible failure/completion contract for the proposed access
+16,adequate recovery strategy,UNKNOWN,UNKNOWN,operator reports physical keyboard/power-button and known-working boot but no serial/watchdog/switched power; log reports ACPI PowerButton event setup failure; destructive recovery untested and prohibited this pass

@@ -1,0 +1,4 @@
+make[2]: *** Deleting file '/home/gama/sgx535-offline/candidate-01-build-20260930/module/cdv_intel_hdmi.o'
+make[2]: *** [/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp/scripts/Makefile.build:286: /home/gama/sgx535-offline/candidate-01-build-20260930/module/cdv_intel_hdmi.o] Terminated
+make[1]: *** [/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp/Makefile:1864: /home/gama/sgx535-offline/candidate-01-build-20260930/module] Terminated
+make: *** [Makefile:192: __sub-make] Terminated

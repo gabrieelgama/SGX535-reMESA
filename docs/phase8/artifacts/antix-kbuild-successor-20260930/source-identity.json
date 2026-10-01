@@ -1,0 +1,19 @@
+{
+  "source": "/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp",
+  "archive_sha256": "e5c5d7c6bdcc7a845589e5956cbf50a8d6198232df017f0398a2902371042e1d",
+  "package_diff_sha256": "5c41ae456d77d9e0af181fe3153c4f80e89bacdd2b541ba15fbac0b297d69b03",
+  "checked_source_files": {
+    "Makefile": "70b5c7688f9067bd13b8413a205dc73ba9f66676b3de34c4092d7ceb9c260493",
+    "scripts/Makefile.modpost": "beaa578d66fb0d3965cea5da4ebd257e198aad9fbb930a4b3b09e06c190b90f1",
+    "scripts/Kbuild.include": "5ca9d37f3a59b5ddf15ac5ed98dc9bbf2f1ad1b40d94854244657ce467ab2073",
+    "scripts/Makefile.host": "7fb67f7741c3a4a118f7b8640edff12f9ad5da116076ef6d5a664870bd274c85",
+    "init/Kconfig": "9333ecc3958fb22cca37a1b68f6ca66a2f052ff4faeae7ba7b41660859bcf694",
+    "arch/x86/Makefile": "5efe17d86c101dcb701c305d17f6f287b48f3564034aa841696df4f0d3bc444b",
+    "arch/x86/entry/syscalls/syscalltbl.sh": "1900cd0f0c79e84de95c2a1829e1e21f3eeb6b039fc8a116b6314fc7b639e205",
+    "arch/x86/entry/syscalls/syscall_32.tbl": "ac7d333bad20a128ef7a1d3a5a3446dab430a247657884ccfe726e500b57c9fe",
+    "arch/x86/entry/syscalls/Makefile": "f7857161e29f29f19449b479cc751bb5636849805d79fc9c12230fef2351a6a0",
+    "include/linux/module.h": "8bfb46266e6834dd2c8ec75be6617832c80a3a67a40a24a1679ea33ffc1c262f"
+  },
+  "reconstruction_evidence": "/home/gama/sgx535-gfx/docs/phase8/artifacts/antix-kbuild-preparation-20260930/source-extract.json",
+  "source_clean_for_O_build": true
+}

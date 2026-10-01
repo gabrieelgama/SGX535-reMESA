@@ -1,0 +1,25 @@
+from pathlib import Path
+from datetime import datetime, timezone
+import json, subprocess
+
+def run(args):
+ p=subprocess.run(args,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True)
+ return {"status":p.returncode,"stdout":p.stdout,"stderr":p.stderr}
+show=run(["apt-cache","show","libc6-dev"])
+paragraph=show["stdout"].split("\n\n",1)[0]
+fields={}
+for line in paragraph.splitlines():
+ if line and not line[0].isspace() and ": " in line:
+  key,value=line.split(": ",1)
+  if key in ("Package","Version","Architecture","Description"):
+   fields[key]=value
+listing=run(["dpkg-query","-L","libc6-dev"])
+result={"target_utc":datetime.now(timezone.utc).isoformat(),
+ "architecture":run(["dpkg","--print-architecture"]),
+ "libc6_dev_status":run(["dpkg-query","-W","-f=${binary:Package} ${Status} ${Version}\n","libc6-dev"]),
+ "libc6_dev_available":show["status"],"libc6_dev_metadata":fields,
+ "libc6_dev_file_list_status":listing["status"],
+ "libc6_dev_file_list_has_inttypes": "/usr/include/inttypes.h" in listing["stdout"].splitlines(),
+ "header_exists":Path("/usr/include/inttypes.h").exists(),
+ "header_is_file":Path("/usr/include/inttypes.h").is_file()}
+print(json.dumps(result,sort_keys=True))

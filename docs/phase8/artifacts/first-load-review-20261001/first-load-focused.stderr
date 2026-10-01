@@ -1,0 +1,12 @@
+test_actual_pci_table_selects_poulsbo_and_rejects_other_device (test_frozen_first_load.FirstLoadTests.test_actual_pci_table_selects_poulsbo_and_rejects_other_device) ... ok
+test_already_owned_device_is_not_replaced (test_frozen_first_load.FirstLoadTests.test_already_owned_device_is_not_replaced) ... ok
+test_deliberate_ownership_and_blacklist_mutations_are_detected (test_frozen_first_load.FirstLoadTests.test_deliberate_ownership_and_blacklist_mutations_are_detected) ... ok
+test_kernel_blacklist_blocks_both_same_named_artifacts (test_frozen_first_load.FirstLoadTests.test_kernel_blacklist_blocks_both_same_named_artifacts) ... ok
+test_negative_probe_result_clears_core_owner_and_pm_reference (test_frozen_first_load.FirstLoadTests.test_negative_probe_result_clears_core_owner_and_pm_reference) ... ok
+test_original_and_derivative_share_the_retained_target_alias_and_name (test_frozen_first_load.FirstLoadTests.test_original_and_derivative_share_the_retained_target_alias_and_name) ... ok
+test_unbound_match_assigns_owner_before_probe (test_frozen_first_load.FirstLoadTests.test_unbound_match_assigns_owner_before_probe) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 2.047s
+
+OK

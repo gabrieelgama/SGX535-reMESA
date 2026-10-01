@@ -1,0 +1,326 @@
+FFFFFFFFFFFFFFFFFFFFFFFFFF
+======================================================================
+FAIL: test_already_bound (test_frozen_first_load_image.HookTests.test_already_bound)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 134, in test_already_bound
+    def test_already_bound(self):self.guard('bound')
+                                 ~~~~~~~~~~^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 141, in guard
+    cp=self.run_hook(case);self.assertNotEqual(cp.returncode,0);self.assertNotIn('INSERT:',cp.stdout);self.assertNotIn('BOOT_CONTINUE',cp.stdout);self.assertIn('HOLD',cp.stdout)
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 60, in run_hook
+    self.assertIsNotNone(image,'actual preload hook not implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : actual preload hook not implemented
+
+======================================================================
+FAIL: test_dependency_insertion_error_stops_immediately (test_frozen_first_load_image.HookTests.test_dependency_insertion_error_stops_immediately)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 146, in test_dependency_insertion_error_stops_immediately
+    cp=self.run_hook('dependency_insert_failure');self.assertNotEqual(cp.returncode,0);self.assertEqual(cp.stdout.count('INSERT:'),1)
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 60, in run_hook
+    self.assertIsNotNone(image,'actual preload hook not implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : actual preload hook not implemented
+
+======================================================================
+FAIL: test_expected_identity_allows_exact_fixed_order_once (test_frozen_first_load_image.HookTests.test_expected_identity_allows_exact_fixed_order_once)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 127, in test_expected_identity_allows_exact_fixed_order_once
+    cp=self.run_hook();self.assertEqual(cp.returncode,0,cp.stdout+cp.stderr)
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 60, in run_hook
+    self.assertIsNotNone(image,'actual preload hook not implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : actual preload hook not implemented
+
+======================================================================
+FAIL: test_insertion_error_holds_no_retry (test_frozen_first_load_image.HookTests.test_insertion_error_holds_no_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 143, in test_insertion_error_holds_no_retry
+    cp=self.run_hook('insert_failure');self.assertNotEqual(cp.returncode,0);self.assertNotIn('BOOT_CONTINUE',cp.stdout)
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 60, in run_hook
+    self.assertIsNotNone(image,'actual preload hook not implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : actual preload hook not implemented
+
+======================================================================
+FAIL: test_kernel_blacklist (test_frozen_first_load_image.HookTests.test_kernel_blacklist)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 139, in test_kernel_blacklist
+    def test_kernel_blacklist(self):self.guard('kernel_blacklist')
+                                    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 141, in guard
+    cp=self.run_hook(case);self.assertNotEqual(cp.returncode,0);self.assertNotIn('INSERT:',cp.stdout);self.assertNotIn('BOOT_CONTINUE',cp.stdout);self.assertIn('HOLD',cp.stdout)
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 60, in run_hook
+    self.assertIsNotNone(image,'actual preload hook not implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : actual preload hook not implemented
+
+======================================================================
+FAIL: test_mutation_removing_machine_guard_is_detected (test_frozen_first_load_image.HookTests.test_mutation_removing_machine_guard_is_detected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 152, in test_mutation_removing_machine_guard_is_detected
+    cp=self.run_hook('wrong_machine',lambda s:s.replace('[ "$machine" = "Inspiron 1210" ]','true'))
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 60, in run_hook
+    self.assertIsNotNone(image,'actual preload hook not implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : actual preload hook not implemented
+
+======================================================================
+FAIL: test_no_hot_transition_or_submission_commands (test_frozen_first_load_image.HookTests.test_no_hot_transition_or_submission_commands)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 155, in test_no_hot_transition_or_submission_commands
+    self.assertIsNotNone(image)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_original_module_owner (test_frozen_first_load_image.HookTests.test_original_module_owner)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 135, in test_original_module_owner
+    def test_original_module_owner(self):self.guard('original_owner')
+                                         ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 141, in guard
+    cp=self.run_hook(case);self.assertNotEqual(cp.returncode,0);self.assertNotIn('INSERT:',cp.stdout);self.assertNotIn('BOOT_CONTINUE',cp.stdout);self.assertIn('HOLD',cp.stdout)
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 60, in run_hook
+    self.assertIsNotNone(image,'actual preload hook not implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : actual preload hook not implemented
+
+======================================================================
+FAIL: test_original_proc_modules (test_frozen_first_load_image.HookTests.test_original_proc_modules)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 136, in test_original_proc_modules
+    def test_original_proc_modules(self):self.guard('original_proc')
+                                         ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 141, in guard
+    cp=self.run_hook(case);self.assertNotEqual(cp.returncode,0);self.assertNotIn('INSERT:',cp.stdout);self.assertNotIn('BOOT_CONTINUE',cp.stdout);self.assertIn('HOLD',cp.stdout)
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 60, in run_hook
+    self.assertIsNotNone(image,'actual preload hook not implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : actual preload hook not implemented
+
+======================================================================
+FAIL: test_payload_hash_mismatch (test_frozen_first_load_image.HookTests.test_payload_hash_mismatch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 138, in test_payload_hash_mismatch
+    def test_payload_hash_mismatch(self):self.guard('bad_hash')
+                                         ~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 141, in guard
+    cp=self.run_hook(case);self.assertNotEqual(cp.returncode,0);self.assertNotIn('INSERT:',cp.stdout);self.assertNotIn('BOOT_CONTINUE',cp.stdout);self.assertIn('HOLD',cp.stdout)
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 60, in run_hook
+    self.assertIsNotNone(image,'actual preload hook not implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : actual preload hook not implemented
+
+======================================================================
+FAIL: test_post_load_mismatches_hold (test_frozen_first_load_image.HookTests.test_post_load_mismatches_hold) (case='wrong_binding')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 150, in test_post_load_mismatches_hold
+    cp=self.run_hook(case);self.assertNotEqual(cp.returncode,0);self.assertNotIn('BOOT_CONTINUE',cp.stdout);self.assertIn('HOLD',cp.stdout)
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 60, in run_hook
+    self.assertIsNotNone(image,'actual preload hook not implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : actual preload hook not implemented
+
+======================================================================
+FAIL: test_post_load_mismatches_hold (test_frozen_first_load_image.HookTests.test_post_load_mismatches_hold) (case='wrong_note')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 150, in test_post_load_mismatches_hold
+    cp=self.run_hook(case);self.assertNotEqual(cp.returncode,0);self.assertNotIn('BOOT_CONTINUE',cp.stdout);self.assertIn('HOLD',cp.stdout)
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 60, in run_hook
+    self.assertIsNotNone(image,'actual preload hook not implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : actual preload hook not implemented
+
+======================================================================
+FAIL: test_post_load_mismatches_hold (test_frozen_first_load_image.HookTests.test_post_load_mismatches_hold) (case='wrong_live')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 150, in test_post_load_mismatches_hold
+    cp=self.run_hook(case);self.assertNotEqual(cp.returncode,0);self.assertNotIn('BOOT_CONTINUE',cp.stdout);self.assertIn('HOLD',cp.stdout)
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 60, in run_hook
+    self.assertIsNotNone(image,'actual preload hook not implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : actual preload hook not implemented
+
+======================================================================
+FAIL: test_post_load_mismatches_hold (test_frozen_first_load_image.HookTests.test_post_load_mismatches_hold) (case='wrong_irq')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 150, in test_post_load_mismatches_hold
+    cp=self.run_hook(case);self.assertNotEqual(cp.returncode,0);self.assertNotIn('BOOT_CONTINUE',cp.stdout);self.assertIn('HOLD',cp.stdout)
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 60, in run_hook
+    self.assertIsNotNone(image,'actual preload hook not implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : actual preload hook not implemented
+
+======================================================================
+FAIL: test_required_dependency_absent (test_frozen_first_load_image.HookTests.test_required_dependency_absent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 137, in test_required_dependency_absent
+    def test_required_dependency_absent(self):self.guard('missing_dependency')
+                                              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 141, in guard
+    cp=self.run_hook(case);self.assertNotEqual(cp.returncode,0);self.assertNotIn('INSERT:',cp.stdout);self.assertNotIn('BOOT_CONTINUE',cp.stdout);self.assertIn('HOLD',cp.stdout)
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 60, in run_hook
+    self.assertIsNotNone(image,'actual preload hook not implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : actual preload hook not implemented
+
+======================================================================
+FAIL: test_wrong_architecture (test_frozen_first_load_image.HookTests.test_wrong_architecture)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 132, in test_wrong_architecture
+    def test_wrong_architecture(self):self.guard('wrong_arch')
+                                      ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 141, in guard
+    cp=self.run_hook(case);self.assertNotEqual(cp.returncode,0);self.assertNotIn('INSERT:',cp.stdout);self.assertNotIn('BOOT_CONTINUE',cp.stdout);self.assertIn('HOLD',cp.stdout)
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 60, in run_hook
+    self.assertIsNotNone(image,'actual preload hook not implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : actual preload hook not implemented
+
+======================================================================
+FAIL: test_wrong_kernel (test_frozen_first_load_image.HookTests.test_wrong_kernel)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 131, in test_wrong_kernel
+    def test_wrong_kernel(self):self.guard('wrong_kernel')
+                                ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 141, in guard
+    cp=self.run_hook(case);self.assertNotEqual(cp.returncode,0);self.assertNotIn('INSERT:',cp.stdout);self.assertNotIn('BOOT_CONTINUE',cp.stdout);self.assertIn('HOLD',cp.stdout)
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 60, in run_hook
+    self.assertIsNotNone(image,'actual preload hook not implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : actual preload hook not implemented
+
+======================================================================
+FAIL: test_wrong_machine (test_frozen_first_load_image.HookTests.test_wrong_machine)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 130, in test_wrong_machine
+    def test_wrong_machine(self):self.guard('wrong_machine')
+                                 ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 141, in guard
+    cp=self.run_hook(case);self.assertNotEqual(cp.returncode,0);self.assertNotIn('INSERT:',cp.stdout);self.assertNotIn('BOOT_CONTINUE',cp.stdout);self.assertIn('HOLD',cp.stdout)
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 60, in run_hook
+    self.assertIsNotNone(image,'actual preload hook not implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : actual preload hook not implemented
+
+======================================================================
+FAIL: test_wrong_pci (test_frozen_first_load_image.HookTests.test_wrong_pci)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 133, in test_wrong_pci
+    def test_wrong_pci(self):self.guard('wrong_pci')
+                             ~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 141, in guard
+    cp=self.run_hook(case);self.assertNotEqual(cp.returncode,0);self.assertNotIn('INSERT:',cp.stdout);self.assertNotIn('BOOT_CONTINUE',cp.stdout);self.assertIn('HOLD',cp.stdout)
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 60, in run_hook
+    self.assertIsNotNone(image,'actual preload hook not implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : actual preload hook not implemented
+
+======================================================================
+FAIL: test_bad_stock_entry_refused (test_frozen_first_load_image.ImageTests.test_bad_stock_entry_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 50, in test_bad_stock_entry_refused
+    self.require();cfg=(ROOT/image.CAPTURE/'decoded-files/_boot_grub_grub_cfg').read_text()
+    ~~~~~~~~~~~~^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 16, in require
+    self.assertIsNotNone(image,'fixed first-load image construction is not implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : fixed first-load image construction is not implemented
+
+======================================================================
+FAIL: test_dependency_cycle_and_missing_rejected (test_frozen_first_load_image.ImageTests.test_dependency_cycle_and_missing_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 37, in test_dependency_cycle_and_missing_rejected
+    self.require()
+    ~~~~~~~~~~~~^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 16, in require
+    self.assertIsNotNone(image,'fixed first-load image construction is not implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : fixed first-load image construction is not implemented
+
+======================================================================
+FAIL: test_dependency_topology (test_frozen_first_load_image.ImageTests.test_dependency_topology)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 41, in test_dependency_topology
+    self.require();self.assertEqual(image.order_dependencies(['helper'],{'helper':['fb','drm'],'fb':[],'drm':[]}),['fb','drm','helper'])
+    ~~~~~~~~~~~~^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 16, in require
+    self.assertIsNotNone(image,'fixed first-load image construction is not implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : fixed first-load image construction is not implemented
+
+======================================================================
+FAIL: test_non_saving_entry_and_unchanged_kernel_arguments (test_frozen_first_load_image.ImageTests.test_non_saving_entry_and_unchanged_kernel_arguments)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 43, in test_non_saving_entry_and_unchanged_kernel_arguments
+    self.require();cfg=(ROOT/image.CAPTURE/'decoded-files/_boot_grub_grub_cfg').read_text()
+    ~~~~~~~~~~~~^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 16, in require
+    self.assertIsNotNone(image,'fixed first-load image construction is not implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : fixed first-load image construction is not implemented
+
+======================================================================
+FAIL: test_splice_preserves_opaque_hardlink_records (test_frozen_first_load_image.ImageTests.test_splice_preserves_opaque_hardlink_records)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 18, in test_splice_preserves_opaque_hardlink_records
+    self.require()
+    ~~~~~~~~~~~~^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 16, in require
+    self.assertIsNotNone(image,'fixed first-load image construction is not implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : fixed first-load image construction is not implemented
+
+======================================================================
+FAIL: test_traversal_rejected (test_frozen_first_load_image.ImageTests.test_traversal_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 34, in test_traversal_rejected
+    self.require()
+    ~~~~~~~~~~~~^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 16, in require
+    self.assertIsNotNone(image,'fixed first-load image construction is not implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : fixed first-load image construction is not implemented
+
+======================================================================
+FAIL: test_truncated_and_duplicate_archives_rejected (test_frozen_first_load_image.ImageTests.test_truncated_and_duplicate_archives_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 30, in test_truncated_and_duplicate_archives_rejected
+    self.require()
+    ~~~~~~~~~~~~^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_image.py", line 16, in require
+    self.assertIsNotNone(image,'fixed first-load image construction is not implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : fixed first-load image construction is not implemented
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.027s
+
+FAILED (failures=26)

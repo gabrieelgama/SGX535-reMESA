@@ -1,0 +1,53 @@
+[
+  {
+    "label": "native-main-list",
+    "argv": [
+      "/usr/bin/cpio",
+      "-it",
+      "--quiet"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "native-early-list",
+    "argv": [
+      "/usr/bin/cpio",
+      "-it",
+      "--quiet"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "native-derivative",
+    "argv": [
+      "/usr/bin/cpio",
+      "-i",
+      "--to-stdout",
+      "--quiet",
+      "usr/lib/sgx535-first-load/gma500_gfx.ko"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "native-hook",
+    "argv": [
+      "/usr/bin/cpio",
+      "-i",
+      "--to-stdout",
+      "--quiet",
+      "scripts/sgx535-first-load"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "native-init",
+    "argv": [
+      "/usr/bin/cpio",
+      "-i",
+      "--to-stdout",
+      "--quiet",
+      "init"
+    ],
+    "exit_code": 0
+  }
+]

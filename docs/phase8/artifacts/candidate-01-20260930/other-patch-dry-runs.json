@@ -1,0 +1,36 @@
+[
+  {
+    "patch": "kernel/sgx535_frozen/patches/antix-fixed-irq.patch",
+    "sha256": "d9a2461f8d1b5783f21bf1fa7d4f440df62f55eef85923ef756020b35d45c833",
+    "argv": [
+      "/usr/bin/patch",
+      "--batch",
+      "--fuzz=0",
+      "-p5",
+      "-i",
+      "/home/gama/sgx535-gfx/kernel/sgx535_frozen/patches/antix-fixed-irq.patch",
+      "--dry-run"
+    ],
+    "cwd": "/home/gama/sgx535-offline/candidate-01-20260930/module",
+    "exit_code": 0,
+    "stdout": "checking file psb_irq.c\n",
+    "stderr": ""
+  },
+  {
+    "patch": "kernel/sgx535_frozen/patches/antix-fixed-ioctl.patch",
+    "sha256": "989841d7bf59156f197ecf46165e7ca0d4e5c03196770dc9c76e31e9964c40ed",
+    "argv": [
+      "/usr/bin/patch",
+      "--batch",
+      "--fuzz=0",
+      "-p5",
+      "-i",
+      "/home/gama/sgx535-gfx/kernel/sgx535_frozen/patches/antix-fixed-ioctl.patch",
+      "--dry-run"
+    ],
+    "cwd": "/home/gama/sgx535-offline/candidate-01-20260930/module",
+    "exit_code": 1,
+    "stdout": "checking file psb_drv.c\nHunk #1 FAILED at 31.\nHunk #2 FAILED at 103.\n2 out of 2 hunks FAILED\n",
+    "stderr": ""
+  }
+]

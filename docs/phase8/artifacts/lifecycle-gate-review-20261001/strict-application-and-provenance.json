@@ -1,0 +1,63 @@
+{
+  "patches": [
+    {
+      "patch": "antix-fixed-makefile.patch",
+      "dry": true,
+      "exit": 0,
+      "stdout": "checking file Makefile\n",
+      "stderr": ""
+    },
+    {
+      "patch": "antix-fixed-makefile.patch",
+      "dry": false,
+      "exit": 0,
+      "stdout": "patching file Makefile\n",
+      "stderr": ""
+    },
+    {
+      "patch": "antix-fixed-irq.patch",
+      "dry": true,
+      "exit": 0,
+      "stdout": "checking file psb_irq.c\n",
+      "stderr": ""
+    },
+    {
+      "patch": "antix-fixed-irq.patch",
+      "dry": false,
+      "exit": 0,
+      "stdout": "patching file psb_irq.c\n",
+      "stderr": ""
+    },
+    {
+      "patch": "antix-irq-lifecycle.patch",
+      "dry": true,
+      "exit": 0,
+      "stdout": "checking file psb_drv.c\nchecking file psb_irq.c\n",
+      "stderr": ""
+    },
+    {
+      "patch": "antix-irq-lifecycle.patch",
+      "dry": false,
+      "exit": 0,
+      "stdout": "patching file psb_drv.c\npatching file psb_irq.c\n",
+      "stderr": ""
+    },
+    {
+      "patch": "antix-fixed-ioctl.patch",
+      "dry": true,
+      "exit": 0,
+      "stdout": "checking file psb_drv.c\n",
+      "stderr": ""
+    },
+    {
+      "patch": "antix-fixed-ioctl.patch",
+      "dry": false,
+      "exit": 0,
+      "stdout": "patching file psb_drv.c\n",
+      "stderr": ""
+    }
+  ],
+  "fixed_inputs": 15,
+  "prepared_state_unchanged": 7426,
+  "result": "PASS"
+}

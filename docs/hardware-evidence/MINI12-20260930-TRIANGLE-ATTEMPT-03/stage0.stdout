@@ -1,0 +1,2 @@
+run: /etc/runit/runsvdir/default/slimski: (pid 29327) 628s
+STAGE0_PASS original-module refcount=2 vtcon0=0 vtcon1=1 holder=card0 pinned-artifacts

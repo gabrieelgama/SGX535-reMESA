@@ -1,0 +1,9 @@
+{
+  "rejected_run": "post-documentation-checks/suite.stderr",
+  "observed": "266 tests, skipped1; zero-skip assertion rejected",
+  "cause": "default host environment omitted qualified i686 toolchain and SGX535_I686_SYSROOT",
+  "source": "tools/psb-dri-re/test_frozen_kernel_contract.py:21-25",
+  "correction": "successor verification uses existing qualified environment, same tests and guards",
+  "successor": "post-documentation-qualified-checks",
+  "no_production_or_test_guard_change": true
+}

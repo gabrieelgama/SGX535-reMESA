@@ -1,0 +1,22 @@
+{
+  "target_boot_config_equals_build_config": true,
+  "enabled_config_count": 7384,
+  "auto_conf_agrees": true,
+  "autoconf_h_agrees": true,
+  "public_package_config_sha256": "93f4d7a779f4be65097b5f26db6c9b10431907c6d417109719eb2f16d6def3d9",
+  "build_compiler": "/* This file is auto generated, version 6 */\n/* SMP */\n#define UTS_MACHINE \"i386\"\n#define UTS_VERSION \"#6 SMP Thu Aug 7 17:33:24 EDT 2025\"\n#define LINUX_COMPILE_BY \"demo\"\n#define LINUX_COMPILE_HOST \"antix1\"\n#define LINUX_COMPILER \"gcc (Debian 14.2.0-19) 14.2.0, GNU ld (GNU Binutils for Debian) 2.44\"\n",
+  "local_gcc_target": "aarch64-linux-gnu",
+  "local_i386_gcc_cross_compiler_present": false,
+  "rebuild_performed": false,
+  "autoconf_numeric_normalizations": {
+    "CONFIG_ILLEGAL_POINTER_VALUE": {
+      "config": "0",
+      "header": "0x0"
+    },
+    "CONFIG_MTD_NAND_DISKONCHIP_PROBE_ADDRESS": {
+      "config": "0",
+      "header": "0x0"
+    }
+  },
+  "source_package_makefile_matches_installed_headers": true
+}

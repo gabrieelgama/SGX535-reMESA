@@ -1,0 +1,176 @@
+[
+  {
+    "name": "scoped-suite",
+    "argv": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools/psb-dri-re",
+      "-p",
+      "test_*.py"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 21.013,
+    "stdout_sha256": "97da79429f789b75f6cf7033bbcee359a658c90c0b484b4133aca59e18a66193",
+    "stderr": ".................................................................................................................................................................................................\n----------------------------------------------------------------------\nRan 193 tests in 20.653s\n\nOK\n"
+  },
+  {
+    "name": "dry-run-1",
+    "argv": [
+      "python3",
+      "tools/psb-dri-re/frozen_triangle_dry_run.py"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.307,
+    "stdout_sha256": "2e85beef0c1a7ec2f8ccc2656b49dd4fb054bf0f55424c226f5fda70e621720e",
+    "stderr": ""
+  },
+  {
+    "name": "dry-run-2",
+    "argv": [
+      "python3",
+      "tools/psb-dri-re/frozen_triangle_dry_run.py"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.207,
+    "stdout_sha256": "2e85beef0c1a7ec2f8ccc2656b49dd4fb054bf0f55424c226f5fda70e621720e",
+    "stderr": ""
+  },
+  {
+    "name": "generator",
+    "argv": [
+      "python3",
+      "tools/psb-dri-re/generate_frozen_kernel_initial.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.164,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr": ""
+  },
+  {
+    "name": "complete",
+    "argv": [
+      "python3",
+      "tools/psb-dri-re/frozen_triangle_image.py",
+      "--complete"
+    ],
+    "exit_code": 1,
+    "elapsed_seconds": 0.309,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr": "PARTIAL: L12, FT-AUX, FT-BO, FT-SERVICE\n"
+  },
+  {
+    "name": "reference-symvers",
+    "argv": [
+      "python3",
+      "tools/psb-dri-re/frozen_module_versions.py",
+      "--check-symvers",
+      "docs/hardware-evidence/MINI12-20260927-H0/raw/installed-gma500_gfx.ko",
+      "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build_Module_symvers"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.3,
+    "stdout_sha256": "f0126411df02677cd4d81a462f077203679857d18bab49c644c8d2b814a41ca1",
+    "stderr": ""
+  },
+  {
+    "name": "fixed-service-ubsan-build",
+    "argv": [
+      "/usr/bin/gcc-14",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-fsanitize=undefined",
+      "-fno-sanitize-recover=all",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_fixed_service.c",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_fixed_service.c",
+      "-o",
+      "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/verification/fixed-service"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 1.997,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr": ""
+  },
+  {
+    "name": "fixed-service-ubsan-run",
+    "argv": [
+      "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/verification/fixed-service"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.02,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr": ""
+  },
+  {
+    "name": "fixed-io-ubsan-build",
+    "argv": [
+      "/usr/bin/gcc-14",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-fsanitize=undefined",
+      "-fno-sanitize-recover=all",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_fixed_io.c",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_fixed_io.c",
+      "-o",
+      "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/verification/fixed-io"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.658,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr": ""
+  },
+  {
+    "name": "fixed-io-ubsan-run",
+    "argv": [
+      "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/verification/fixed-io"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.007,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr": ""
+  },
+  {
+    "name": "kernel-contract-ubsan-build",
+    "argv": [
+      "/usr/bin/gcc-14",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-fsanitize=undefined",
+      "-fno-sanitize-recover=all",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_contract.c",
+      "-o",
+      "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/verification/kernel-contract"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 2.196,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr": ""
+  },
+  {
+    "name": "kernel-contract-ubsan-run",
+    "argv": [
+      "/home/gama/sgx535-offline/antix-kbuild-successor-20260930/verification/kernel-contract"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.01,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr": ""
+  }
+]

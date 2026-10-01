@@ -1,0 +1,87 @@
+[
+  {
+    "harness": "service",
+    "stage": "build",
+    "argv": [
+      "/usr/bin/gcc-14",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-fsanitize=undefined",
+      "-fno-sanitize-recover=all",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_fixed_service.c",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_fixed_service.c",
+      "-o",
+      "/home/gama/sgx535-offline/candidate-01-20260930/ubsan-service"
+    ],
+    "exit_code": 0
+  },
+  {
+    "harness": "service",
+    "stage": "run",
+    "argv": [
+      "/home/gama/sgx535-offline/candidate-01-20260930/ubsan-service"
+    ],
+    "exit_code": 0
+  },
+  {
+    "harness": "io",
+    "stage": "build",
+    "argv": [
+      "/usr/bin/gcc-14",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-fsanitize=undefined",
+      "-fno-sanitize-recover=all",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_fixed_io.c",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_fixed_io.c",
+      "-o",
+      "/home/gama/sgx535-offline/candidate-01-20260930/ubsan-io"
+    ],
+    "exit_code": 0
+  },
+  {
+    "harness": "io",
+    "stage": "run",
+    "argv": [
+      "/home/gama/sgx535-offline/candidate-01-20260930/ubsan-io"
+    ],
+    "exit_code": 0
+  },
+  {
+    "harness": "contract",
+    "stage": "build",
+    "argv": [
+      "/usr/bin/gcc-14",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-fsanitize=undefined",
+      "-fno-sanitize-recover=all",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_contract.c",
+      "-o",
+      "/home/gama/sgx535-offline/candidate-01-20260930/ubsan-contract"
+    ],
+    "exit_code": 0
+  },
+  {
+    "harness": "contract",
+    "stage": "run",
+    "argv": [
+      "/home/gama/sgx535-offline/candidate-01-20260930/ubsan-contract"
+    ],
+    "exit_code": 0
+  }
+]

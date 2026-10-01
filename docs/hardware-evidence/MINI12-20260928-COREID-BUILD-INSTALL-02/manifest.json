@@ -1,0 +1,324 @@
+{
+  "schema": "sgx535-coreid-build-install-v2",
+  "session_id": "MINI12-20260928-COREID-BUILD-INSTALL-02",
+  "host_generated_utc": "2026-09-28T03:45:48.620138+00:00",
+  "target_build": "PASS",
+  "installed": true,
+  "helper_executed": false,
+  "mmio_read_attempts": 0,
+  "gate_b": "BLOCKED",
+  "whitelist": [],
+  "h0_manifest_sha256": "22b8c5e5b196ca9dbef5537a162a5047c2ee3006dd785dd691e26b203e34b130",
+  "p1_manifest_sha256": "d7fb5cf5827ba89a7cfcaa7b3f88192ce70ad9b41dfdb04189f9ec61a0582eee",
+  "first_mmio_01_manifest_sha256": "8a7f805e13f5f3afa534cca420f5b4abdb18ced3338c2af6182eacb9d9b3141d",
+  "prior_build_manifest_sha256": "dcd339851aae9c920a52ebad930659d0deda714d6adfb8a01432b4e1067d30e9",
+  "prereq_manifest_sha256": "92a843454116e5cc98f6bdf3cd6920bc43a21b6fde603309f03d9afe6ab3f6b3",
+  "candidate_sha256": "050b110abdb11d301f4cc75ec3d4370a5192a354a61d86f86d3d9023bee82e58",
+  "files": [
+    {
+      "path": "capture.py",
+      "bytes": 2559,
+      "sha256": "3e5b29c6d12f586da116b50fb34a32711958739df0dbf0950ae361e79c3ea7c0"
+    },
+    {
+      "path": "raw/candidate-metadata.meta.json",
+      "bytes": 1160,
+      "sha256": "ce3e9dbc22014b2f342957a01b1052a699b654d5241b34ad1c112573bb13d49f"
+    },
+    {
+      "path": "raw/candidate-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/candidate-metadata.stdout",
+      "bytes": 4508,
+      "sha256": "b44aff6e2b42a18fa146df38d8de31f13616c5d7d3447b6a08f14721769b52f7"
+    },
+    {
+      "path": "raw/effective-sudo-permission.meta.json",
+      "bytes": 962,
+      "sha256": "82de2248e7597527e0f881d7b198d392d080e696b6c4df6c4b366068734a0b06"
+    },
+    {
+      "path": "raw/effective-sudo-permission.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/effective-sudo-permission.stdout",
+      "bytes": 34,
+      "sha256": "6e8526e3a642ec5ab96ff7782c47d68ca5dac025e977b8cc28c976c6fbda844e"
+    },
+    {
+      "path": "raw/extra-argument-rejection.meta.json",
+      "bytes": 981,
+      "sha256": "d2e6ce0af1941f870b88dc0cd4f15862d57780507cbe319d967468448e6de614"
+    },
+    {
+      "path": "raw/extra-argument-rejection.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/extra-argument-rejection.stdout",
+      "bytes": 53,
+      "sha256": "d2e57215842137bbac76d487828c04344ff3837c7876a5e8c12a17a50dcc25ac"
+    },
+    {
+      "path": "raw/install-binary.meta.json",
+      "bytes": 1076,
+      "sha256": "9519f55e1b482b216e6a8a5ad8a67cc8ad59e497d0eee7f8a452b882743d2858"
+    },
+    {
+      "path": "raw/install-binary.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/install-binary.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/install-path-precheck.meta.json",
+      "bytes": 980,
+      "sha256": "3ad733df3a41aec9d9f83ae48ebfaba593085d3ec0f0eb44cc9b0a7c96d90398"
+    },
+    {
+      "path": "raw/install-path-precheck.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/install-path-precheck.stdin",
+      "bytes": 578,
+      "sha256": "a23e6e5af8ef8d66a3ac4175a0c8ca5a5590e4022b88fdec2656c0cdfd4ff59a"
+    },
+    {
+      "path": "raw/install-path-precheck.stdout",
+      "bytes": 719,
+      "sha256": "d90f73804961d073bfbabffc5f755de42050bb0ac9c4d3fb7f9454fd65f5987f"
+    },
+    {
+      "path": "raw/install-sudoers.meta.json",
+      "bytes": 1061,
+      "sha256": "80653d48fbf7be342830fba270a8f6526d34d83e243458d30b1f06ca248623ce"
+    },
+    {
+      "path": "raw/install-sudoers.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/install-sudoers.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/installed-binary-verification.meta.json",
+      "bytes": 1017,
+      "sha256": "cdb364d541b6919f926576be08fedb0e6bf209872c6703988eb1c45ea2152f77"
+    },
+    {
+      "path": "raw/installed-binary-verification.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/installed-binary-verification.stdout",
+      "bytes": 155,
+      "sha256": "f8e8c2a131ae7e1ec2c9474406bf65902f9c050de5b66fc88f6120f0cf455dc2"
+    },
+    {
+      "path": "raw/installed-file-metadata.meta.json",
+      "bytes": 1047,
+      "sha256": "b3b315005e7d50a9feb3e239ff18e51276804406853f90e94ff20ee78a031160"
+    },
+    {
+      "path": "raw/installed-file-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/installed-file-metadata.stdout",
+      "bytes": 206,
+      "sha256": "b814dfa8917eed691c439584af644b352a0da5859cb847e738b0d242bb08d004"
+    },
+    {
+      "path": "raw/installed-parent-check.meta.json",
+      "bytes": 980,
+      "sha256": "bc4ba9df5d809a93bae1d062680e13e3d9712f1fcd12c7370c0395c59d011d97"
+    },
+    {
+      "path": "raw/installed-parent-check.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/installed-parent-check.stdin",
+      "bytes": 340,
+      "sha256": "0483e8661d815d8495ad45fe47a405fc23b18ff89f9555875bd750102b803fa7"
+    },
+    {
+      "path": "raw/installed-parent-check.stdout",
+      "bytes": 531,
+      "sha256": "fcd30598f117577035f8c415c8da6a14c24a1e571e7811077bed66098e742c02"
+    },
+    {
+      "path": "raw/installed-sudoers-hash.meta.json",
+      "bytes": 974,
+      "sha256": "01249ceb365fa583e521161ea67e0880774af06ece4e0eca1c201a2a210b2e75"
+    },
+    {
+      "path": "raw/installed-sudoers-hash.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/installed-sudoers-hash.stdout",
+      "bytes": 96,
+      "sha256": "6efbf48860e93bf74275530ebd7ee62583727fec6c1cc074743e3d43494985ea"
+    },
+    {
+      "path": "raw/installed-sudoers-validation.meta.json",
+      "bytes": 976,
+      "sha256": "a76d9a506c6330568f8acd8a924d2469f92450692f129b6d8d73bf1a6b30ae09"
+    },
+    {
+      "path": "raw/installed-sudoers-validation.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/installed-sudoers-validation.stdout",
+      "bytes": 41,
+      "sha256": "00dba7b9ae0f450045f6f11beab8afe1b376f31c0644598d6b58d3c19337f50d"
+    },
+    {
+      "path": "raw/linked-load-routine.meta.json",
+      "bytes": 1040,
+      "sha256": "a01747bd2d55722f23b3a1acd9ed8e2a2bc0ceb5f3bee7a4b2c403daada2d424"
+    },
+    {
+      "path": "raw/linked-load-routine.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/linked-load-routine.stdout",
+      "bytes": 368,
+      "sha256": "a547bafdc8d55ff896db9adcdf4cc856e0f2340e804939929fde3ae03ba8b92e"
+    },
+    {
+      "path": "raw/linked-main.meta.json",
+      "bytes": 1028,
+      "sha256": "ea5a22a899414cce2ef0ee90ce915b0bcd457ef418a94304f2ed2569310ae9cd"
+    },
+    {
+      "path": "raw/linked-main.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/linked-main.stdout",
+      "bytes": 17934,
+      "sha256": "996aa861151faa0a450343b6fc7ef40e9194be916b9a21acc44ea85562792e27"
+    },
+    {
+      "path": "raw/load-symbol-references.meta.json",
+      "bytes": 993,
+      "sha256": "2e23928c15da4d7f0e51afd78e016a17f330476474e60d6d2651104e0722d303"
+    },
+    {
+      "path": "raw/load-symbol-references.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/load-symbol-references.stdout",
+      "bytes": 1400,
+      "sha256": "03f5e6d3d24bbfb85095b9fb9d00fc1ecf2ec2e72348bd985601ee33b04f44d8"
+    },
+    {
+      "path": "raw/native-build.meta.json",
+      "bytes": 1100,
+      "sha256": "f148cfe2a2f90d18a2ee8068517c35f89c4a5ddb8708844f9301fd565bbf3aa9"
+    },
+    {
+      "path": "raw/native-build.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/native-build.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/sudo-rule-details-extra-arg.meta.json",
+      "bytes": 983,
+      "sha256": "0a57e35c560d9875951764be27c198cf76a632b3e050a3557bc2b422d1cf8216"
+    },
+    {
+      "path": "raw/sudo-rule-details-extra-arg.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/sudo-rule-details-extra-arg.stdout",
+      "bytes": 154,
+      "sha256": "1b445aa46cfca4a423bd7246d5108289056ead907fcc01937c0be13813d8d70c"
+    },
+    {
+      "path": "raw/sudo-rule-details-no-args.meta.json",
+      "bytes": 964,
+      "sha256": "0661336c44dbb32b3ed50394c6541b2bae0470c911b4e9615bdbe0bc3c812687"
+    },
+    {
+      "path": "raw/sudo-rule-details-no-args.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/sudo-rule-details-no-args.stdout",
+      "bytes": 201,
+      "sha256": "fc514caaef09b788e8e7f21e5beba4e4e636d770b6ef8c8e593451b222f5316b"
+    },
+    {
+      "path": "raw/sudoers-draft-validation-absolute.meta.json",
+      "bytes": 995,
+      "sha256": "18c88350d7420f7fd75a8958e5370f09844ea88112d74d8334889bfc4a12d0f0"
+    },
+    {
+      "path": "raw/sudoers-draft-validation-absolute.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/sudoers-draft-validation-absolute.stdout",
+      "bytes": 25,
+      "sha256": "b37561a302ce707faf6609314e6d052a242e183e4f5194c4ba4f561cb78769e6"
+    },
+    {
+      "path": "raw/sudoers-draft-validation.meta.json",
+      "bytes": 987,
+      "sha256": "3ffdb3ee0f28cdbd1e711aa7defff0260a4ba4c9b87b824bdf3663adaf7026f3"
+    },
+    {
+      "path": "raw/sudoers-draft-validation.stderr",
+      "bytes": 40,
+      "sha256": "8a8112d547e721205f2a4323c7d963af4fbc07c28b8ba82a2dee5a2b0d6f9125"
+    },
+    {
+      "path": "raw/sudoers-draft-validation.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results.md",
+      "bytes": 4262,
+      "sha256": "334f301f0c1f101d66d7a02325859c197779af9c5f57b2526ca0292b2dd84710"
+    }
+  ]
+}

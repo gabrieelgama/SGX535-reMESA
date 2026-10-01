@@ -1,0 +1,1116 @@
+{
+  "created_utc": "2026-10-01T03:48:02.899961+00:00",
+  "scope": "Successful read-only target capture plus separately labeled offline analysis; no experimental boot image/entry",
+  "files": [
+    {
+      "path": "PLAN.md",
+      "bytes": 4956,
+      "sha256": "f7c8ba2daa1f690dbc42d3a97e5f67ea5556fbf91bd8c91074bf56a70380d7b9"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1261,
+      "sha256": "e6f14fa5c36b66e3a2136a561ccb66f9672ffe10a47401c905ef69805e125deb"
+    },
+    {
+      "path": "RESULT.md",
+      "bytes": 2747,
+      "sha256": "98e15fb9b3a53faad9179d35bfeeb4b8e5345a675e0851b2efe43881d6370643"
+    },
+    {
+      "path": "artifact-manifest.json",
+      "bytes": 25449,
+      "sha256": "f20e3c466b7a6819ff265328982913b2f5d12f926a8448cc4e7e9de92047bc6a"
+    },
+    {
+      "path": "capture.json",
+      "bytes": 1173,
+      "sha256": "0c2198004b66f221aa668634ff7f01ba0e8a72f04e9741c048ecd95c5128df50"
+    },
+    {
+      "path": "capture.sh",
+      "bytes": 9704,
+      "sha256": "a2c298389454924c292f9a358b82da762de9d4ff4a5bca76f32b35fae8daab29"
+    },
+    {
+      "path": "decoded-files/_boot_grub_grub_cfg",
+      "bytes": 10438,
+      "sha256": "396ac7dff0bdea48393fd0a25a5fc633d40e2368caf14872b855eba03e96089f"
+    },
+    {
+      "path": "decoded-files/_boot_grub_grubenv",
+      "bytes": 1024,
+      "sha256": "72c291233d508c8ed06305f0bf9d33130ea206bfaf67873dbe77413f77d19927"
+    },
+    {
+      "path": "decoded-files/_etc_default_grub",
+      "bytes": 2429,
+      "sha256": "b3703635f3be94049aab22fde94abd8fce9aebcfac427239cb2d5c09d2c1d96f"
+    },
+    {
+      "path": "decoded-files/_etc_default_networking",
+      "bytes": 1032,
+      "sha256": "501ecff8663613257ea966ec0882e022fe66e75b35bc41e30da5a53d82ebdb1e"
+    },
+    {
+      "path": "decoded-files/_etc_grub_d_00_header",
+      "bytes": 10080,
+      "sha256": "a38c74e6b33fecc1c7cb3497204f7838ee8312eb58dd3a4b0ab11f394dd124a3"
+    },
+    {
+      "path": "decoded-files/_etc_grub_d_05_debian_theme",
+      "bytes": 6400,
+      "sha256": "a3b68466edb11cf5e8298751214eae1e7699daa207e2a514369a071ed1caa9d9"
+    },
+    {
+      "path": "decoded-files/_etc_grub_d_10_linux",
+      "bytes": 15732,
+      "sha256": "29c55837fe0f2e8c4887b0f7e4aa45fb6964b45170b5ba11a06caad776b46f23"
+    },
+    {
+      "path": "decoded-files/_etc_grub_d_20_linux_xen",
+      "bytes": 16571,
+      "sha256": "3d274bd8a3a7d8282197396e75a5f68a1b8baabb21e603e9af961bfaf5ef1e99"
+    },
+    {
+      "path": "decoded-files/_etc_grub_d_20_memtest86+",
+      "bytes": 1444,
+      "sha256": "02f66bbd918adecc87bc0a3f74a0d0b3ff50721da5f4bc2c6283b7f5a71bb849"
+    },
+    {
+      "path": "decoded-files/_etc_grub_d_25_bli",
+      "bytes": 786,
+      "sha256": "42e04f5bac1965535cb6bdb30c62bb199b1ba21d1ec6b22d0da159dfc925b8bb"
+    },
+    {
+      "path": "decoded-files/_etc_grub_d_30_os-prober",
+      "bytes": 12661,
+      "sha256": "735a1995a02d08caa73735556014c69b90ffba28bb41ceae19d77555438023cd"
+    },
+    {
+      "path": "decoded-files/_etc_grub_d_30_uefi-firmware",
+      "bytes": 1174,
+      "sha256": "09b6f70999eb043f858a7eccac1f70bd1bddf00cdde4d6e67c417756f63ad389"
+    },
+    {
+      "path": "decoded-files/_etc_grub_d_40_custom",
+      "bytes": 214,
+      "sha256": "894dd8e4ca1bb62e055f674f9390a39c4643ebdd1014702feef000c47e36a003"
+    },
+    {
+      "path": "decoded-files/_etc_grub_d_41_custom",
+      "bytes": 215,
+      "sha256": "44b8dc291dc04537f5d9a8fec7f6ebb209fbfa3101d5b1085230ace35b7f6c31"
+    },
+    {
+      "path": "decoded-files/_etc_grub_d_README",
+      "bytes": 483,
+      "sha256": "cd72738c7dfd3b205e4e91528c0d25169bb3e8e6ebeec11c916662d8d0c3e47c"
+    },
+    {
+      "path": "decoded-files/_etc_init_d_kmod",
+      "bytes": 2043,
+      "sha256": "486134eede4ca083ff4f681941fe93811c10f8be0749ad934ba7978efde62c2e"
+    },
+    {
+      "path": "decoded-files/_etc_init_d_networking",
+      "bytes": 4531,
+      "sha256": "94110176853ff753c8c500efe0b3d582da29639987478750e41c223c9d29cb50"
+    },
+    {
+      "path": "decoded-files/_etc_init_d_ssh",
+      "bytes": 4060,
+      "sha256": "aa7a68603ff32afc694615fea4fc2781487acd88971dfd750d0f39b8c5cc1295"
+    },
+    {
+      "path": "decoded-files/_etc_init_d_udev",
+      "bytes": 6464,
+      "sha256": "741f9ba4ba931f8a838563196640fd030ec690434e27d433ab2eb2c3f22971e8"
+    },
+    {
+      "path": "decoded-files/_etc_initramfs-tools_initramfs_conf",
+      "bytes": 1583,
+      "sha256": "38519ff00d7f524ef5328ad29b35a0dda8810465be54bbd57a4d3226f099732f"
+    },
+    {
+      "path": "decoded-files/_etc_initramfs-tools_modules",
+      "bytes": 246,
+      "sha256": "66fd46e4c248ec53d9ae0efaf68c591ae810a4c23f77a07a90cb134323652680"
+    },
+    {
+      "path": "decoded-files/_etc_modprobe_d_amd64-microcode-blacklist_conf",
+      "bytes": 154,
+      "sha256": "f17b12aa7a202bb4f0ed09cbb45561417986fded2cfcf861364f84c8f3d42fb8"
+    },
+    {
+      "path": "decoded-files/_etc_modprobe_d_blacklist-nvidia_conf",
+      "bytes": 156,
+      "sha256": "094ca68eb1585f472bec1400f0ef854ee1962c93bc433698d8bafc92db813d03"
+    },
+    {
+      "path": "decoded-files/_etc_modprobe_d_broadcom-sta-dkms_conf",
+      "bytes": 180,
+      "sha256": "25563d4fc5e4d0e721bc224b943ce04aa0cfdf73ce452c192384c573cb2602ad"
+    },
+    {
+      "path": "decoded-files/_etc_modprobe_d_dkms_conf",
+      "bytes": 127,
+      "sha256": "4593302665ccbab8ea21bcf161360880f6071f6260363f2d76111cc980a881e4"
+    },
+    {
+      "path": "decoded-files/_etc_modprobe_d_hang-on-shutdown_conf",
+      "bytes": 562,
+      "sha256": "45caaa4ed71016d61b49eaee8d1efc8c97bea36f94d6ce86027997dffa09668a"
+    },
+    {
+      "path": "decoded-files/_etc_modprobe_d_i915-power-saving_conf",
+      "bytes": 666,
+      "sha256": "2f2d17505e0c7242af0289b9ebbc1e4f730152639df973cfc20b02d41e15c1b2"
+    },
+    {
+      "path": "decoded-files/_etc_modprobe_d_intel-microcode-blacklist_conf",
+      "bytes": 154,
+      "sha256": "f17b12aa7a202bb4f0ed09cbb45561417986fded2cfcf861364f84c8f3d42fb8"
+    },
+    {
+      "path": "decoded-files/_etc_modprobe_d_iwlwifi-no-blink_conf",
+      "bytes": 461,
+      "sha256": "2c1d0b2834b382614a62b299cdace476c7558209999705c243c2c84be4c963e8"
+    },
+    {
+      "path": "decoded-files/_etc_modprobe_d_pc-speaker_conf",
+      "bytes": 288,
+      "sha256": "0239984bcfe39150bfd2ba4c8932d10c7efd1c0093e13c69b54ae8e81ad3ffcf"
+    },
+    {
+      "path": "decoded-files/_etc_modules",
+      "bytes": 212,
+      "sha256": "c0d37c5c430cb5c978a4ea00e42ddc4551b04f76352d149d6be5d5b65346df65"
+    },
+    {
+      "path": "decoded-files/_etc_modules-load_d_cups-filters_conf",
+      "bytes": 119,
+      "sha256": "612c6cda4bf105e70bc87cd414feccd90808d7c797bcf6b3a3bc33652fe7f4c8"
+    },
+    {
+      "path": "decoded-files/_etc_modules-load_d_fuse3_conf",
+      "bytes": 5,
+      "sha256": "c4dd7cab2c42d9d4996a9a8eff44dc5c35f9e4c60bbb423a5dae62688b01927c"
+    },
+    {
+      "path": "decoded-files/_etc_modules-load_d_tun_conf",
+      "bytes": 4,
+      "sha256": "56343424eabf5b3bfed7df07e8ec7703d405c47dc783163158f1e5e985061dd1"
+    },
+    {
+      "path": "decoded-files/_etc_runit_1",
+      "bytes": 1006,
+      "sha256": "a6cb86f1a53e71a645d3370b91fcda023d0ca903a3be4d8cc39f2087d6f36916"
+    },
+    {
+      "path": "decoded-files/_etc_runit_runsvdir_default_slimski_run",
+      "bytes": 664,
+      "sha256": "960d8efded2f12fa232bda56f90c867e18c73a46c6cbc8f3ad6b6e94a5f83096"
+    },
+    {
+      "path": "decoded-files/_etc_sv_ssh_finish",
+      "bytes": 470,
+      "sha256": "acf3ed5788b88953e2cfe210d4ff0bcd85446048989fc6c3d4b7e3159ade1991"
+    },
+    {
+      "path": "decoded-files/_etc_sv_ssh_run",
+      "bytes": 626,
+      "sha256": "18763d8488bea2c415ad84a2b577bef9906f95b5e61aebde3e020182cf2526d0"
+    },
+    {
+      "path": "decoded-files/_lib_modprobe_d_aliases_conf",
+      "bytes": 326,
+      "sha256": "0ffc97a5b69113438c1b7e162ef6871e197e24973f359bfbeef448b089bd67e5"
+    },
+    {
+      "path": "decoded-files/_lib_modprobe_d_fbdev-blacklist_conf",
+      "bytes": 390,
+      "sha256": "e99b6166cf309aa1cbbd296d9fbf93af567148c7316c8d5d7a057cf3e85113ea"
+    },
+    {
+      "path": "decoded-files/_lib_udev_rules_d_50-udev-default_rules",
+      "bytes": 5253,
+      "sha256": "aabc83c1a47e7324a6e338666443f412e8288156a9f646fc0dd7e6e13a1454a2"
+    },
+    {
+      "path": "decoded-files/_lib_udev_rules_d_60-autosuspend_rules",
+      "bytes": 532,
+      "sha256": "7ffae083695390282bc7e953cff18d6bba874c3ca4bd7c77391d5b3c2e3add25"
+    },
+    {
+      "path": "decoded-files/_lib_udev_rules_d_60-pcmcia_rules",
+      "bytes": 912,
+      "sha256": "0a6f3ccaf3b42674163a405fd086cc4ddba6a2983e4978f1323043c1a79f6427"
+    },
+    {
+      "path": "decoded-files/_lib_udev_rules_d_80-drivers_rules",
+      "bytes": 715,
+      "sha256": "d6659ede564449c1ee8b0c8bea80b7c94d8e5946834d75db79c4e6b26e5aafa4"
+    },
+    {
+      "path": "decoded-files/_usr_lib_modprobe_d_aliases_conf",
+      "bytes": 326,
+      "sha256": "0ffc97a5b69113438c1b7e162ef6871e197e24973f359bfbeef448b089bd67e5"
+    },
+    {
+      "path": "decoded-files/_usr_lib_modprobe_d_fbdev-blacklist_conf",
+      "bytes": 390,
+      "sha256": "e99b6166cf309aa1cbbd296d9fbf93af567148c7316c8d5d7a057cf3e85113ea"
+    },
+    {
+      "path": "decoded-files/_usr_share_initramfs-tools_hooks_udev",
+      "bytes": 1857,
+      "sha256": "003c263a0c53e34a0571ffe8ccc92dde1283fe7558626c7238802d5684e54c8c"
+    },
+    {
+      "path": "decoded-files/_usr_share_initramfs-tools_init",
+      "bytes": 6787,
+      "sha256": "0a9bb34973c78987922b57f010e99c36ddf102e8a5a2fd198385566539f5d6d5"
+    },
+    {
+      "path": "decoded-files/_usr_share_initramfs-tools_scripts_init-top_blacklist",
+      "bytes": 296,
+      "sha256": "e3fd2f67b92756f053ee3045c45f4d40ba957bf310f2ca64c11f80f6f25604a1"
+    },
+    {
+      "path": "decoded-files/_usr_share_initramfs-tools_scripts_init-top_udev",
+      "bytes": 658,
+      "sha256": "0b375e793f70de3329064fa1efcefee7d59e054aff46ce885c73e9a6aeb08f5f"
+    },
+    {
+      "path": "decoded-files/modules_modules_alias",
+      "bytes": 1391442,
+      "sha256": "72a84b9abb9671716ed611c16957269658ca51b9f1b93bc656670c5c1b4c85a7"
+    },
+    {
+      "path": "decoded-files/modules_modules_builtin",
+      "bytes": 11011,
+      "sha256": "f328ee108d6e2b18f85c099b355b938c66aa6cf4defe012a177c2fa2a7bb2388"
+    },
+    {
+      "path": "decoded-files/modules_modules_dep",
+      "bytes": 591107,
+      "sha256": "8144939a55a5cba43f6e0386c464c57425c2c8bfa80a3da1dfd6c61f66d37168"
+    },
+    {
+      "path": "decoded-files/modules_modules_softdep",
+      "bytes": 1037,
+      "sha256": "5d1927f2feb0293f30415ff4fb1d9c62a56b62fb2c53711d64d3895369b8d88a"
+    },
+    {
+      "path": "decoded-files/release_initrd",
+      "bytes": 50863580,
+      "sha256": "f02cde6c7e712fa0620f99438ef5dc81c131b481a84dc9dbc4f7b854c364e341"
+    },
+    {
+      "path": "offline-analysis/boot-provenance-analysis.json",
+      "bytes": 4458,
+      "sha256": "16796dd3129fa6fda0fd6c05b5b5a23840b37b1ae9ef735c40b26ea92ca6f146"
+    },
+    {
+      "path": "offline-analysis/capture-transport-tests.stderr",
+      "bytes": 1143,
+      "sha256": "541676bf7993e4322b7794d09433a0fc1dedc58b7e165a5f553d0530e3da337c"
+    },
+    {
+      "path": "offline-analysis/capture-transport-tests.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/cec-crc-check.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/cec-crc-check.stdout",
+      "bytes": 517,
+      "sha256": "692de6664372c8942415644ddea668356afc342937c4752e636ccbc47d3c6ed5"
+    },
+    {
+      "path": "offline-analysis/decode-capture-01-rejected-plus.py",
+      "bytes": 3459,
+      "sha256": "da2107552d504c0e0e99d8b0bb4505a34d265984e8a8a82b9cc6259f5cb29054"
+    },
+    {
+      "path": "offline-analysis/decode_capture.py",
+      "bytes": 3477,
+      "sha256": "72689d2377c870c2bcb186d563684c3d332e1f72387174d89e4a95600ae2061f"
+    },
+    {
+      "path": "offline-analysis/decoder-capture.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/decoder-capture.stdout",
+      "bytes": 55,
+      "sha256": "4d0b031c09f6a4d2a3b4eeac11a9b90364a235c10da1daf2909f121969d67913"
+    },
+    {
+      "path": "offline-analysis/decoder-green.stderr",
+      "bytes": 909,
+      "sha256": "b7a45a0eef9161f9616ffa02ff4d55213eb22053ee7eda449cb568644d12e2a6"
+    },
+    {
+      "path": "offline-analysis/decoder-green.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/decoder-red.stderr",
+      "bytes": 1737,
+      "sha256": "10587afa4e8304320eb12a4a89db4296a8c9132b86602a1b5603cb68a28f14f1"
+    },
+    {
+      "path": "offline-analysis/decoder-red.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/dependency-coverage.json",
+      "bytes": 7998,
+      "sha256": "f08df85ae2f833ed01d5aa746f051e1e54b37c6ecffed86799f476fdb4a0b2ce"
+    },
+    {
+      "path": "offline-analysis/dependency-modules/kernel/drivers/acpi/video.ko",
+      "bytes": 61568,
+      "sha256": "83d359cb34190ff9833ddf101d99c02a443677dce37c7e526243be0ecd0e6f8e"
+    },
+    {
+      "path": "offline-analysis/dependency-modules/kernel/drivers/gpu/drm/drm.ko",
+      "bytes": 579348,
+      "sha256": "d1d7bf85268e40bc0fe30ac98f5083cd06ba16f0d10fc38ff810f974f22229c3"
+    },
+    {
+      "path": "offline-analysis/dependency-modules/kernel/drivers/gpu/drm/drm_kms_helper.ko",
+      "bytes": 277476,
+      "sha256": "9757eb58238b9166485ed78f48a4004e6a31ab1e116aa6aa2eec9df7ade21076"
+    },
+    {
+      "path": "offline-analysis/dependency-modules/kernel/drivers/i2c/algos/i2c-algo-bit.ko",
+      "bytes": 11440,
+      "sha256": "3179bdd4f98d3ea876531257f75db850608e2e983e7cb1626406e89df04de1b7"
+    },
+    {
+      "path": "offline-analysis/dependency-modules/kernel/drivers/media/cec/core/cec.ko",
+      "bytes": 57872,
+      "sha256": "33c9184040ca309997146c1cb2545026029f399f85cd011dbc6aed1b6e09d9e8"
+    },
+    {
+      "path": "offline-analysis/dependency-modules/kernel/drivers/video/fbdev/core/fb_sys_fops.ko",
+      "bytes": 4312,
+      "sha256": "e9a32aa2e359917fc61d056d84c931d10504ff228fee50c10566697265e37402"
+    },
+    {
+      "path": "offline-analysis/dependency-modules/kernel/drivers/video/fbdev/core/syscopyarea.ko",
+      "bytes": 5584,
+      "sha256": "073ef524e5d71941b894c62e567672a2912059bccdf6b7bc4f84e550876d4a00"
+    },
+    {
+      "path": "offline-analysis/dependency-modules/kernel/drivers/video/fbdev/core/sysfillrect.ko",
+      "bytes": 6480,
+      "sha256": "2ba264e98a234ee5eb51fd34fa60bcb9ef56a85db4b640422da9aa229c3747ed"
+    },
+    {
+      "path": "offline-analysis/dependency-modules/kernel/drivers/video/fbdev/core/sysimgblt.ko",
+      "bytes": 5660,
+      "sha256": "c39c1a63a5f072333050cae22f9699c37f89358d956c81cab6bb1765ec1d0a39"
+    },
+    {
+      "path": "offline-analysis/drm-crc-check.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/drm-crc-check.stdout",
+      "bytes": 518,
+      "sha256": "ffb91c1e1ecfd3e10ee2db94ae09a9af8d94f068410e490ab3f31bed10190b62"
+    },
+    {
+      "path": "offline-analysis/drm_kms_helper-crc-check.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/drm_kms_helper-crc-check.stdout",
+      "bytes": 518,
+      "sha256": "6c48110042383439cf87b8cc75edc4778833a0a2a254f500d9e8b9e8b6fea39e"
+    },
+    {
+      "path": "offline-analysis/early-cpio-list.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/early-cpio-list.stdout",
+      "bytes": 131,
+      "sha256": "6ba022cd80db4ab0e594a056d19dd97bac4cc6ccef672f829c37e9ace3682255"
+    },
+    {
+      "path": "offline-analysis/fb_sys_fops-crc-check.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/fb_sys_fops-crc-check.stdout",
+      "bytes": 516,
+      "sha256": "fc0719040f42d6216ad9461bfc7ebeb85ec73820a5067a84d49ac6deaf30cf59"
+    },
+    {
+      "path": "offline-analysis/final-checks/analysis-helper-tests.stderr",
+      "bytes": 1708,
+      "sha256": "594460787f379b3e8200a5b11b5890b2e1d30fc3027b300c4bb8d11d7fde1293"
+    },
+    {
+      "path": "offline-analysis/final-checks/analysis-helper-tests.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/final-checks/checks.json",
+      "bytes": 4604,
+      "sha256": "421a9a2fc4d4dca4ecae46a3f97a7e79dc567f0c04506a9aa4f29d9030ee0be8"
+    },
+    {
+      "path": "offline-analysis/final-checks/complete.stderr",
+      "bytes": 40,
+      "sha256": "6a77e53a345e089e5f41ba4d1e7b5205a189472c41d392833c149b4e6ff8747b"
+    },
+    {
+      "path": "offline-analysis/final-checks/complete.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/final-checks/dry-1.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/final-checks/dry-1.stdout",
+      "bytes": 118605,
+      "sha256": "2e85beef0c1a7ec2f8ccc2656b49dd4fb054bf0f55424c226f5fda70e621720e"
+    },
+    {
+      "path": "offline-analysis/final-checks/dry-2.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/final-checks/dry-2.stdout",
+      "bytes": 118605,
+      "sha256": "2e85beef0c1a7ec2f8ccc2656b49dd4fb054bf0f55424c226f5fda70e621720e"
+    },
+    {
+      "path": "offline-analysis/final-checks/final-diff-check.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/final-checks/final-diff-check.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/final-checks/final-git-status.stdout",
+      "bytes": 9766,
+      "sha256": "98de576c360f0a47e07e7bf38f9bcf1d18482d5357db134e830f81edef8a9c1d"
+    },
+    {
+      "path": "offline-analysis/final-checks/generator.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/final-checks/generator.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/final-checks/git-diff-check.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/final-checks/git-diff-check.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/final-checks/git-status.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/final-checks/git-status.stdout",
+      "bytes": 9766,
+      "sha256": "98de576c360f0a47e07e7bf38f9bcf1d18482d5357db134e830f81edef8a9c1d"
+    },
+    {
+      "path": "offline-analysis/final-checks/record-integrity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/final-checks/record-integrity.stdout",
+      "bytes": 165,
+      "sha256": "6149fb4e7a1ed2a1e46b1f323d4fc33aad21560e6804afb2db5559ccdf7d4b28"
+    },
+    {
+      "path": "offline-analysis/final-checks/repository-delta.json",
+      "bytes": 35940,
+      "sha256": "190d4e01901f43d30dcd089d06e0782a187527a7e70839ac664be5c9ab199bf2"
+    },
+    {
+      "path": "offline-analysis/final-checks/suite.stderr",
+      "bytes": 316,
+      "sha256": "a10e8430a91c1b81476dddd036ef37cdb96f67643fa3d5e9d33743c078564c48"
+    },
+    {
+      "path": "offline-analysis/final-checks/suite.stdout",
+      "bytes": 52,
+      "sha256": "97da79429f789b75f6cf7033bbcee359a658c90c0b484b4133aca59e18a66193"
+    },
+    {
+      "path": "offline-analysis/final-checks/summary.json",
+      "bytes": 391,
+      "sha256": "851aaebca0b68016c860fd1c0c5bf622d840772b91f6c75ebcc40745bcbaf34b"
+    },
+    {
+      "path": "offline-analysis/final-checks/ubsan-contract",
+      "bytes": 165544,
+      "sha256": "23a67c1510b15957c30f072cc55fe7c361656a537d19f93f6e51ba159b010fd7"
+    },
+    {
+      "path": "offline-analysis/final-checks/ubsan-contract-build.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/final-checks/ubsan-contract-build.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/final-checks/ubsan-contract-run.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/final-checks/ubsan-contract-run.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/final-checks/ubsan-io",
+      "bytes": 72248,
+      "sha256": "520939eb466cf1c530f2b67fdfc4f0d31e10dcefb9792eeb29fb53adc0d0eb01"
+    },
+    {
+      "path": "offline-analysis/final-checks/ubsan-io-build.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/final-checks/ubsan-io-build.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/final-checks/ubsan-io-run.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/final-checks/ubsan-io-run.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/final-checks/ubsan-service",
+      "bytes": 159136,
+      "sha256": "d07e4b171c1421a2054c7d69cbae4220ebc6c46cf2d1f5610e2ab55ff6697f15"
+    },
+    {
+      "path": "offline-analysis/final-checks/ubsan-service-build.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/final-checks/ubsan-service-build.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/final-checks/ubsan-service-run.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/final-checks/ubsan-service-run.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/i2c-algo-bit-crc-check.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/i2c-algo-bit-crc-check.stdout",
+      "bytes": 517,
+      "sha256": "bd64014bec839c238d714f388cacce54d110340884b5cc144e8af15660b108df"
+    },
+    {
+      "path": "offline-analysis/initial-git-status.txt",
+      "bytes": 9608,
+      "sha256": "69826347a71289de153f5afeb1a9872f7833138b4342a4b85d640fbbb5f57691"
+    },
+    {
+      "path": "offline-analysis/initial-pwd.txt",
+      "bytes": 22,
+      "sha256": "b44fb32ed4882192254e3de92de436f694c53295b706aef2c7d786f9dbacf35d"
+    },
+    {
+      "path": "offline-analysis/initial-repository-files.json",
+      "bytes": 283565,
+      "sha256": "aa73045c018bee8b583290241c2f76549c35cfacb5f92e38ccdcdb146562beb2"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/catalog.json",
+      "bytes": 785597,
+      "sha256": "a385d1a68dddcc9297175ffb151180d774c269f68cda0e239df69a396688bf4c"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/conf/arch.conf",
+      "bytes": 15,
+      "sha256": "3b46d027ffe3f5ae20d0ea8767e1c274488d9f43f2146c1c590e9da5683fc5c2"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/conf/initramfs.conf",
+      "bytes": 1583,
+      "sha256": "38519ff00d7f524ef5328ad29b35a0dda8810465be54bbd57a4d3226f099732f"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/etc/modprobe.d/amd64-microcode-blacklist.conf",
+      "bytes": 154,
+      "sha256": "f17b12aa7a202bb4f0ed09cbb45561417986fded2cfcf861364f84c8f3d42fb8"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/etc/modprobe.d/blacklist-nvidia.conf",
+      "bytes": 156,
+      "sha256": "094ca68eb1585f472bec1400f0ef854ee1962c93bc433698d8bafc92db813d03"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/etc/modprobe.d/broadcom-sta-dkms.conf",
+      "bytes": 180,
+      "sha256": "25563d4fc5e4d0e721bc224b943ce04aa0cfdf73ce452c192384c573cb2602ad"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/etc/modprobe.d/dkms.conf",
+      "bytes": 127,
+      "sha256": "4593302665ccbab8ea21bcf161360880f6071f6260363f2d76111cc980a881e4"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/etc/modprobe.d/hang-on-shutdown.conf",
+      "bytes": 562,
+      "sha256": "45caaa4ed71016d61b49eaee8d1efc8c97bea36f94d6ce86027997dffa09668a"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/etc/modprobe.d/i915-power-saving.conf",
+      "bytes": 666,
+      "sha256": "2f2d17505e0c7242af0289b9ebbc1e4f730152639df973cfc20b02d41e15c1b2"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/etc/modprobe.d/intel-microcode-blacklist.conf",
+      "bytes": 154,
+      "sha256": "f17b12aa7a202bb4f0ed09cbb45561417986fded2cfcf861364f84c8f3d42fb8"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/etc/modprobe.d/iwlwifi-no-blink.conf",
+      "bytes": 461,
+      "sha256": "2c1d0b2834b382614a62b299cdace476c7558209999705c243c2c84be4c963e8"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/etc/modprobe.d/pc-speaker.conf",
+      "bytes": 288,
+      "sha256": "0239984bcfe39150bfd2ba4c8932d10c7efd1c0093e13c69b54ae8e81ad3ffcf"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/etc/udev/udev.conf",
+      "bytes": 319,
+      "sha256": "bf5a6b4d7ce3f3cd939263e8b5d9d0af739b99de10b0da942e398241b02730b3"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/init",
+      "bytes": 6787,
+      "sha256": "0a9bb34973c78987922b57f010e99c36ddf102e8a5a2fd198385566539f5d6d5"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/scripts/functions",
+      "bytes": 15285,
+      "sha256": "b328b49756e00ec7c692dcdd28526831def5e9e0d7a0d0963087b450c2db4743"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/scripts/init-bottom/ORDER",
+      "bytes": 77,
+      "sha256": "0bbd4b986672e719d7f21f02c8cc25bf6c09c4756088a1b115ebb80b3a64cde1"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/scripts/init-bottom/udev",
+      "bytes": 403,
+      "sha256": "b7d524c5c0f085c4aa7470b36a7707ed158d09d7ffa6bc9bdb47c7e2b5f30cf5"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/scripts/init-top/ORDER",
+      "bytes": 314,
+      "sha256": "d550aefa50c796756833fe9b39441f55e50b87939f7451d381deb8a93d53cb7a"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/scripts/init-top/all_generic_ide",
+      "bytes": 396,
+      "sha256": "59697cff80663c30132578d3fc6128692ff15826b4e32df3468e85db03ba3b93"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/scripts/init-top/blacklist",
+      "bytes": 296,
+      "sha256": "e3fd2f67b92756f053ee3045c45f4d40ba957bf310f2ca64c11f80f6f25604a1"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/scripts/init-top/keymap",
+      "bytes": 167,
+      "sha256": "2d04d7d7705d1c06cb9fff4c5290c02e719120e43ac65c387f00d8ef37b2d4cf"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/scripts/init-top/udev",
+      "bytes": 658,
+      "sha256": "0b375e793f70de3329064fa1efcefee7d59e054aff46ce885c73e9a6aeb08f5f"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/scripts/local",
+      "bytes": 5331,
+      "sha256": "e4af112fd0d528fcb9b6094a9a2dd529b8936310d6939f7272299951b9a27448"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/scripts/local-block/ORDER",
+      "bytes": 82,
+      "sha256": "042ffa1b45e8711a737ca4e00200af1ac85f914776b14c68446a4e78e62b61cd"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/scripts/local-block/cryptroot",
+      "bytes": 246,
+      "sha256": "a0fbd833a8420a18dc0d87ae41325842f1be50604b8bfb1f29abf12ae25b8306"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/scripts/local-bottom/ORDER",
+      "bytes": 336,
+      "sha256": "41bd2250d1ba5c839c6d5387719262ebdce4afe321a73d106c7b562ab52f3182"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/scripts/local-bottom/cryptgnupg-sc",
+      "bytes": 253,
+      "sha256": "4af31bf99d709441e447bb878160582775f952712725f2024f17de9eca3f13ff"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/scripts/local-bottom/cryptopensc",
+      "bytes": 449,
+      "sha256": "a797ac8a0eebd5e3a0441ceb63c275b5619dfabedff3839d791a0f72e22629ff"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/scripts/local-bottom/cryptroot",
+      "bytes": 1038,
+      "sha256": "d65e7207a91710d0fd868aab93abeef2985a55fb31eba39fc80c3cfa2304377d"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/scripts/local-bottom/ntfs_3g",
+      "bytes": 345,
+      "sha256": "a9fc8e10ba7af2a21513b88f2443c0bfeae129f370e02592776ff31f246b7227"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/scripts/local-premount/ORDER",
+      "bytes": 246,
+      "sha256": "0fd8b567c1d4cd9e5732424a2ab5912f561fdcf4e6af404ac4c7c09da47a826c"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/scripts/local-premount/btrfs",
+      "bytes": 274,
+      "sha256": "642807af4437aa1c88a764933169a3907b90e8bff4714191b65d56b6a517f49d"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/scripts/local-premount/ntfs_3g",
+      "bytes": 226,
+      "sha256": "1d5253aa05e2fc6ca4cb887296a1b1324b403b27fda74e368995c701336f1c25"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/scripts/local-premount/resume",
+      "bytes": 863,
+      "sha256": "e8b4ec9ba6e78965e9c054cd296291b3ed1441b3eef25c9c94b8a37afee53b3a"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/scripts/local-top/ORDER",
+      "bytes": 162,
+      "sha256": "43a21a0f3cf8e9095d4c9b9c011b3dffec9041c8648102917772aa75b64a4c9d"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/scripts/local-top/cryptopensc",
+      "bytes": 757,
+      "sha256": "48387c4868e05dc729d57988b58f195de78906b3e15ad94c5bd2233de7fb01c6"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/scripts/local-top/cryptroot",
+      "bytes": 8150,
+      "sha256": "7b33e5ecea7377f2b11513c3d2c90696d3a152da01d294ac716647b377ad4f15"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/scripts/nfs",
+      "bytes": 3125,
+      "sha256": "6d8787c085c49528afe7c3766a26ffa9196a5fcf90079984a52e5b1e8fc4917d"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/usr/lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/acpi/video.ko",
+      "bytes": 61568,
+      "sha256": "83d359cb34190ff9833ddf101d99c02a443677dce37c7e526243be0ecd0e6f8e"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/usr/lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/gpu/drm/drm.ko",
+      "bytes": 579348,
+      "sha256": "d1d7bf85268e40bc0fe30ac98f5083cd06ba16f0d10fc38ff810f974f22229c3"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/usr/lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/gpu/drm/drm_kms_helper.ko",
+      "bytes": 277476,
+      "sha256": "9757eb58238b9166485ed78f48a4004e6a31ab1e116aa6aa2eec9df7ade21076"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/usr/lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/i2c/algos/i2c-algo-bit.ko",
+      "bytes": 11440,
+      "sha256": "3179bdd4f98d3ea876531257f75db850608e2e983e7cb1626406e89df04de1b7"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/usr/lib/modules/5.10.240-antix.1-486-smp/modules.alias",
+      "bytes": 410156,
+      "sha256": "213e27d321e48e9180602746b4cc75610a85a8129dcbfadd6bfd76987ec345b5"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/usr/lib/modules/5.10.240-antix.1-486-smp/modules.builtin",
+      "bytes": 11011,
+      "sha256": "f328ee108d6e2b18f85c099b355b938c66aa6cf4defe012a177c2fa2a7bb2388"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/usr/lib/modules/5.10.240-antix.1-486-smp/modules.dep",
+      "bytes": 74293,
+      "sha256": "c48bd7a6682e493cc2c1b3b5be6556457b2ded05c79c7dee06fb98927854042e"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/usr/lib/modules/5.10.240-antix.1-486-smp/modules.softdep",
+      "bytes": 508,
+      "sha256": "85c4c9378b154c9077452697794887a109ede00118b20a8501c6b3c60973d6b7"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/usr/lib/udev/rules.d/50-udev-default.rules",
+      "bytes": 5253,
+      "sha256": "aabc83c1a47e7324a6e338666443f412e8288156a9f646fc0dd7e6e13a1454a2"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/usr/lib/udev/rules.d/55-dm.rules",
+      "bytes": 8519,
+      "sha256": "106ec258d978828312aca9c5730a674811542e74f403d9971c07ff3195d857e5"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/usr/lib/udev/rules.d/60-persistent-storage-dm.rules",
+      "bytes": 2310,
+      "sha256": "a19445a6c7d2b79858510c38b3409a5a419d40f5d3f78b009be08c8551a52fbc"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/usr/lib/udev/rules.d/60-persistent-storage.rules",
+      "bytes": 8346,
+      "sha256": "38ec44b7d342afb863201de148e06e1d693e9e92b5bf0359f1dd72a20324b4cd"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/usr/lib/udev/rules.d/64-btrfs-dm.rules",
+      "bytes": 387,
+      "sha256": "ba9da67a41dce05c3b9606dac86fd514e41635b0280371df1f46046a3ae485ee"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/usr/lib/udev/rules.d/64-btrfs.rules",
+      "bytes": 612,
+      "sha256": "d039055ad6614820d4190ccad91b7c45736e6d541d2506e858e8edb7a8627386"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/usr/lib/udev/rules.d/80-drivers.rules",
+      "bytes": 715,
+      "sha256": "d6659ede564449c1ee8b0c8bea80b7c94d8e5946834d75db79c4e6b26e5aafa4"
+    },
+    {
+      "path": "offline-analysis/initramfs-analysis/selected-files/usr/lib/udev/rules.d/95-dm-notify.rules",
+      "bytes": 483,
+      "sha256": "d24e725fc78306ff2355eb91e4eebcc7dc9388d54dc27d20d6fe6f695054d536"
+    },
+    {
+      "path": "offline-analysis/main-cpio-list.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/main-cpio-list.stdout",
+      "bytes": 132883,
+      "sha256": "f69aabee01cfd2d6877f9b5f5dd478ad584413b11871cfc1b204bcc8a7380530"
+    },
+    {
+      "path": "offline-analysis/native-cpio-verification.json",
+      "bytes": 554,
+      "sha256": "3652636ff96fc42ab140dc66926c25af54824b3e6a9f3e596a7e973b079d15aa"
+    },
+    {
+      "path": "offline-analysis/pinned-artifact-identities.json",
+      "bytes": 417,
+      "sha256": "8d57ff1aff8c8b08a30e0882a66e15ebfca03688739f32d3744f76c6d9361f7a"
+    },
+    {
+      "path": "offline-analysis/read_initramfs.py",
+      "bytes": 4245,
+      "sha256": "937e11716add8fdcc3d79668baa0fb7431dc94634db07d7e746cd3ddca7c9f51"
+    },
+    {
+      "path": "offline-analysis/run_final_guards.py",
+      "bytes": 2544,
+      "sha256": "33a58ffda3a950081b63043bc3d6479d55d4204acd208bcb635abac7c4da3b44"
+    },
+    {
+      "path": "offline-analysis/scoped-suite.stderr",
+      "bytes": 316,
+      "sha256": "8595bf36cd15973ae529996232b41b647d877cef28f4a06ea8cb31729e11817e"
+    },
+    {
+      "path": "offline-analysis/scoped-suite.stdout",
+      "bytes": 52,
+      "sha256": "97da79429f789b75f6cf7033bbcee359a658c90c0b484b4133aca59e18a66193"
+    },
+    {
+      "path": "offline-analysis/syscopyarea-crc-check.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/syscopyarea-crc-check.stdout",
+      "bytes": 516,
+      "sha256": "a8581dfc4e3168a8792a2c668edfab3b90f5a66a0dd67f6e706b4b26fda592aa"
+    },
+    {
+      "path": "offline-analysis/sysfillrect-crc-check.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/sysfillrect-crc-check.stdout",
+      "bytes": 516,
+      "sha256": "cc8220874958cbb234b91ad755f44e7ba8be081ce0c2d6a815890163ab31f1ca"
+    },
+    {
+      "path": "offline-analysis/sysimgblt-crc-check.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/sysimgblt-crc-check.stdout",
+      "bytes": 516,
+      "sha256": "fe16ec0bc5b961f3ccc661f1d79cb0da035a2b4d01449459a7b05cbb411342f1"
+    },
+    {
+      "path": "offline-analysis/test_decode_capture.py",
+      "bytes": 1608,
+      "sha256": "0a559e308e162931807a0c5755b70cbfa8c6aa55441d5277ef1f8077a6b9af86"
+    },
+    {
+      "path": "offline-analysis/test_read_initramfs.py",
+      "bytes": 1816,
+      "sha256": "0b9579c57ecc67ae3d4dfc3994105fa807f20597cee0113e655dc049f5feefdd"
+    },
+    {
+      "path": "offline-analysis/verification.json",
+      "bytes": 453,
+      "sha256": "94ba149cc20bfd959eb9b06f886b9961546532312a6944d09e6fbf08a65619ca"
+    },
+    {
+      "path": "offline-analysis/verify-boot-findings-01-label-error.txt",
+      "bytes": 3235,
+      "sha256": "f7bcaaf0436c64a06abdcd90989f83ea1dcc6b4d132914d091ee87c4973494a9"
+    },
+    {
+      "path": "offline-analysis/verify-boot-findings-01-result.json",
+      "bytes": 277,
+      "sha256": "1b3eca5ef62e4fd54c0efc3af984bac158a0e68338ea194811c6b952218583d3"
+    },
+    {
+      "path": "offline-analysis/verify-boot-findings-result.json",
+      "bytes": 175,
+      "sha256": "dec7f443eff25c2dc13904da9c6ce4787a977ccde5b3ea6967bde0c26046b1f2"
+    },
+    {
+      "path": "offline-analysis/verify-boot-findings.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/verify-boot-findings.stdout",
+      "bytes": 189,
+      "sha256": "d33c0cc195d674091b0c704100d14aaa179769e0ce647f13fd8892a03d0a3f4d"
+    },
+    {
+      "path": "offline-analysis/verify_archive_and_dependencies.py",
+      "bytes": 3821,
+      "sha256": "d9628a5200fb72f3866706e3646da4b858dfce61362777e3266aa1783f82c727"
+    },
+    {
+      "path": "offline-analysis/verify_boot_findings.py",
+      "bytes": 3295,
+      "sha256": "e9fc4ee1a690085e399a14b0d0bb18af6dc1baf6449a4a8e91816adfa11b369a"
+    },
+    {
+      "path": "offline-analysis/verify_record_integrity.py",
+      "bytes": 3803,
+      "sha256": "d874ebdef1b3d2907df48acd5cb41de839da1dc2e66f81fcdf5ccdfbf6653c07"
+    },
+    {
+      "path": "offline-analysis/video-crc-check.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "offline-analysis/video-crc-check.stdout",
+      "bytes": 517,
+      "sha256": "feb1d56ea83a7c3a7cab65d2972072360aa8e0f50cfd8d536dc1fe4a0889ff4c"
+    },
+    {
+      "path": "run_capture.py",
+      "bytes": 2046,
+      "sha256": "dbd516b539645e0e91f075a89c217b66cd3fdbc6fc978df97d438265d967015e"
+    },
+    {
+      "path": "shell-syntax-check.json",
+      "bytes": 160,
+      "sha256": "d1644048636925baac399dd4ebccd87b63791d0dcf0debac915d845b6f7ee217"
+    },
+    {
+      "path": "stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "stdout.txt",
+      "bytes": 70717268,
+      "sha256": "5fee2f01b32e0316e1d132278e213154a817a60517d28dd082c748fdaf4a2a8b"
+    },
+    {
+      "path": "transcript-without-base64.txt",
+      "bytes": 75402,
+      "sha256": "dcb0dcafb08a0b310faa803408533b9aae42fa8bf64fb80905b959070b7a457e"
+    }
+  ]
+}

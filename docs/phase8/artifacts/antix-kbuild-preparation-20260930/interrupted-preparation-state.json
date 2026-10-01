@@ -1,0 +1,34 @@
+{
+  "cause": "Runner/exit record unavailable after the session and permission transition; exact cessation cause UNKNOWN. No matching preparation process observed.",
+  "stage_exit": "UNKNOWN",
+  "partial_outputs": {
+    ".config": {
+      "exists": true,
+      "sha256": "a9f866159ee08437f22c569b0f6864dd2d9cf8f4b777dd90d0397eba339f5ca4"
+    },
+    "include/config/auto.conf": {
+      "exists": true,
+      "sha256": "8de0c2a9ff924b513f2c5ed439f5d53c012ec97fb5e81ef49b501627b38f8279"
+    },
+    "include/config/auto.conf.cmd": {
+      "exists": true,
+      "sha256": "0c385fce06a92fd7d5340c4d0265bc45014db6332eac51def5474f136c574333"
+    },
+    "include/generated/autoconf.h": {
+      "exists": true,
+      "sha256": "950833ba0b0940a659adbc51595253233db6d55b28a2ce1398b48f210a2b494b"
+    },
+    "include/generated/utsrelease.h": {
+      "exists": false,
+      "sha256": null
+    },
+    "include/generated/bounds.h": {
+      "exists": false,
+      "sha256": null
+    },
+    "include/generated/asm-offsets.h": {
+      "exists": false,
+      "sha256": null
+    }
+  }
+}

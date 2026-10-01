@@ -1,0 +1,13 @@
+{
+  "repository": "https://deb.debian.org/debian",
+  "suite": "trixie",
+  "architecture": "arm64",
+  "apt_update_exit": 0,
+  "keyring_sha256": "506b815cbb32d9b6066b4a2aa524071e071761e7e7f68c3ac74f3061ba852017",
+  "apt_status_sha256": "c02f8edd96f0d447408c8441bf3ce769edd5c195972a805e284b88a41f146bef",
+  "apt_list_hashes": {
+    "apt/lists/deb.debian.org_debian_dists_trixie_InRelease": "0584fba32e13e0ab8285fb16c27adea1ec03a73669c18702821094fd6ca86675",
+    "apt/lists/deb.debian.org_debian_dists_trixie_main_binary-arm64_Packages.lz4": "dbe3c5b7a1587b7669b7dfd760350f40d12947572ecf9ec75908e08aac3a2e22"
+  },
+  "native_packages_sha256": "a1a5685031639202ff65a644f0897b16992a56434a7eb6dd1403ad8a0c40e031"
+}

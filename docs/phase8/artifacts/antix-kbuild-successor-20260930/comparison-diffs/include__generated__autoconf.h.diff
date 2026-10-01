@@ -1,0 +1,11 @@
+--- target/include/generated/autoconf.h
++++ successor/include/generated/autoconf.h
+@@ -3107,7 +3107,7 @@
+ #define CONFIG_SND_OXYGEN_MODULE 1
+ #define CONFIG_SERIAL_8250_BOCA_MODULE 1
+ #define CONFIG_PCH_GBE_MODULE 1
+-#define CONFIG_CC_VERSION_TEXT "gcc (Debian 14.2.0-19) 14.2.0"
++#define CONFIG_CC_VERSION_TEXT "i686-linux-gnu-gcc-14 (Debian 14.2.0-19) 14.2.0"
+ #define CONFIG_KEYBOARD_ATKBD 1
+ #define CONFIG_SCSI_QLA_ISCSI_MODULE 1
+ #define CONFIG_AD5446_MODULE 1

@@ -1,0 +1,185 @@
+{
+  "host": {
+    "cpu_architecture": "i686",
+    "dmi": {
+      "bios_date": "12/01/2008",
+      "bios_vendor": "Dell Inc.",
+      "bios_version": "A02",
+      "board_name": "0X605H",
+      "board_vendor": "Dell Inc.",
+      "board_version": "A02",
+      "product_name": "Inspiron 1210",
+      "product_version": "A02",
+      "sys_vendor": "Dell Inc."
+    },
+    "kernel_release": "5.10.240-antix.1-486-smp",
+    "kernel_version": "Linux version 5.10.240-antix.1-486-smp (demo@antix1) (gcc (Debian 14.2.0-19) 14.2.0, GNU ld (GNU Binutils for Debian) 2.44) #6 SMP Thu Aug 7 17:33:24 EDT 2025"
+  },
+  "kernel_binding": {
+    "driver": "gma500",
+    "drm_nodes": [
+      {
+        "dev": "226:0",
+        "name": "card0"
+      }
+    ]
+  },
+  "memory": {
+    "gtt": null,
+    "note": "No audited passive gma500 sysfs interface exposes derived GTT or stolen-memory sizes.",
+    "pci_resources_available": true,
+    "stolen_memory": null
+  },
+  "pci": {
+    "address": "0000:00:02.0",
+    "class": "0x030000",
+    "device": "0x8108",
+    "irq": "16",
+    "resources": [
+      {
+        "end": "0x00000000d817ffff",
+        "flags": "0x0000000000040200",
+        "index": 0,
+        "kind": "BAR0",
+        "size_bytes": 524288,
+        "start": "0x00000000d8100000"
+      },
+      {
+        "end": "0x0000000000001807",
+        "flags": "0x0000000000040101",
+        "index": 1,
+        "kind": "BAR1",
+        "size_bytes": 8,
+        "start": "0x0000000000001800"
+      },
+      {
+        "end": "0x00000000d7ffffff",
+        "flags": "0x0000000000040200",
+        "index": 2,
+        "kind": "BAR2",
+        "size_bytes": 134217728,
+        "start": "0x00000000d0000000"
+      },
+      {
+        "end": "0x00000000d839ffff",
+        "flags": "0x0000000000040200",
+        "index": 3,
+        "kind": "BAR3",
+        "size_bytes": 131072,
+        "start": "0x00000000d8380000"
+      },
+      {
+        "end": "0x0000000000000000",
+        "flags": "0x0000000000000000",
+        "index": 4,
+        "kind": "BAR4",
+        "size_bytes": 0,
+        "start": "0x0000000000000000"
+      },
+      {
+        "end": "0x0000000000000000",
+        "flags": "0x0000000000000000",
+        "index": 5,
+        "kind": "BAR5",
+        "size_bytes": 0,
+        "start": "0x0000000000000000"
+      },
+      {
+        "end": "0x00000000000dffff",
+        "flags": "0x0000000000000212",
+        "index": 6,
+        "kind": "non-BAR PCI resource",
+        "size_bytes": 131072,
+        "start": "0x00000000000c0000"
+      },
+      {
+        "end": "0x0000000000000000",
+        "flags": "0x0000000000000000",
+        "index": 7,
+        "kind": "non-BAR PCI resource",
+        "size_bytes": 0,
+        "start": "0x0000000000000000"
+      },
+      {
+        "end": "0x0000000000000000",
+        "flags": "0x0000000000000000",
+        "index": 8,
+        "kind": "non-BAR PCI resource",
+        "size_bytes": 0,
+        "start": "0x0000000000000000"
+      },
+      {
+        "end": "0x0000000000000000",
+        "flags": "0x0000000000000000",
+        "index": 9,
+        "kind": "non-BAR PCI resource",
+        "size_bytes": 0,
+        "start": "0x0000000000000000"
+      },
+      {
+        "end": "0x0000000000000000",
+        "flags": "0x0000000000000000",
+        "index": 10,
+        "kind": "non-BAR PCI resource",
+        "size_bytes": 0,
+        "start": "0x0000000000000000"
+      },
+      {
+        "end": "0x0000000000000000",
+        "flags": "0x0000000000000000",
+        "index": 11,
+        "kind": "non-BAR PCI resource",
+        "size_bytes": 0,
+        "start": "0x0000000000000000"
+      },
+      {
+        "end": "0x0000000000000000",
+        "flags": "0x0000000000000000",
+        "index": 12,
+        "kind": "non-BAR PCI resource",
+        "size_bytes": 0,
+        "start": "0x0000000000000000"
+      }
+    ],
+    "revision": "0x06",
+    "subsystem_device": "0x02b1",
+    "subsystem_vendor": "0x1028",
+    "vendor": "0x8086"
+  },
+  "platform": {
+    "confidence": "CONFIRMED",
+    "detected": "Intel Poulsbo PCI function",
+    "sgx535_basis": "Exact PCI IDs are named Poulsbo by the audited Linux source; that table does not identify the SGX core revision.",
+    "sgx535_identity": "INFERRED",
+    "target_match": true
+  },
+  "power": {
+    "note": "PCI runtime status is not evidence that every SGX clock or internal power domain is enabled.",
+    "pci_power_state": null,
+    "runtime_active_time_ms": "1147739",
+    "runtime_status": "active",
+    "runtime_suspended_time_ms": "0"
+  },
+  "safety": {
+    "bar_mappings": false,
+    "command_submission": false,
+    "drm_device_opened": false,
+    "firmware_loading": false,
+    "interfaces_used": [
+      "sysfs text attributes",
+      "procfs text attributes",
+      "uname"
+    ],
+    "mmio_reads": false,
+    "mmio_writes": false,
+    "pci_config_reads": false,
+    "pci_config_writes": false,
+    "pds_or_usse_execution": false,
+    "reset": false,
+    "runtime_pm_changed": false,
+    "scope_note": "A bound kernel driver may have changed hardware state before this probe runs.",
+    "state_modified_by_probe": false
+  },
+  "schema": "sgx535-gfx-passive-probe-v1",
+  "title": "SGX535-GFX passive probe"
+}

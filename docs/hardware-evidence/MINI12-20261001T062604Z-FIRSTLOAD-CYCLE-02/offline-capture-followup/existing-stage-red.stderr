@@ -1,0 +1,107 @@
+test_actual_stock_recovery_keeps_exact_created_files (test_frozen_existing_stage.ExistingStageTests.test_actual_stock_recovery_keeps_exact_created_files) ... ERROR
+test_hash_owner_type_mode_link_mutations_refused (test_frozen_existing_stage.ExistingStageTests.test_hash_owner_type_mode_link_mutations_refused) ... 
+  test_hash_owner_type_mode_link_mutations_refused (test_frozen_existing_stage.ExistingStageTests.test_hash_owner_type_mode_link_mutations_refused) (field='sha256') ... ERROR
+  test_hash_owner_type_mode_link_mutations_refused (test_frozen_existing_stage.ExistingStageTests.test_hash_owner_type_mode_link_mutations_refused) (field='uid') ... ERROR
+  test_hash_owner_type_mode_link_mutations_refused (test_frozen_existing_stage.ExistingStageTests.test_hash_owner_type_mode_link_mutations_refused) (field='mode') ... ERROR
+  test_hash_owner_type_mode_link_mutations_refused (test_frozen_existing_stage.ExistingStageTests.test_hash_owner_type_mode_link_mutations_refused) (field='nlink') ... ERROR
+  test_hash_owner_type_mode_link_mutations_refused (test_frozen_existing_stage.ExistingStageTests.test_hash_owner_type_mode_link_mutations_refused) (field='symlink') ... ERROR
+  test_hash_owner_type_mode_link_mutations_refused (test_frozen_existing_stage.ExistingStageTests.test_hash_owner_type_mode_link_mutations_refused) (field='type') ... ERROR
+test_missing_extra_or_duplicate_receipt_refused (test_frozen_existing_stage.ExistingStageTests.test_missing_extra_or_duplicate_receipt_refused) ... ERROR
+test_same_bytes_different_inode_refused (test_frozen_existing_stage.ExistingStageTests.test_same_bytes_different_inode_refused) ... 
+  test_same_bytes_different_inode_refused (test_frozen_existing_stage.ExistingStageTests.test_same_bytes_different_inode_refused) (field='dev') ... ERROR
+  test_same_bytes_different_inode_refused (test_frozen_existing_stage.ExistingStageTests.test_same_bytes_different_inode_refused) (field='ino') ... ERROR
+
+======================================================================
+ERROR: test_actual_stock_recovery_keeps_exact_created_files (test_frozen_existing_stage.ExistingStageTests.test_actual_stock_recovery_keeps_exact_created_files)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_existing_stage.py", line 9, in test_actual_stock_recovery_keeps_exact_created_files
+    def test_actual_stock_recovery_keeps_exact_created_files(self):self.assertIn('PASS',p.validate_existing_stage_files(self.plan,self.created,self.fresh)['classification'])
+                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'frozen_first_load_procedure' has no attribute 'validate_existing_stage_files'
+
+======================================================================
+ERROR: test_hash_owner_type_mode_link_mutations_refused (test_frozen_existing_stage.ExistingStageTests.test_hash_owner_type_mode_link_mutations_refused) (field='sha256')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_existing_stage.py", line 21, in test_hash_owner_type_mode_link_mutations_refused
+    with self.subTest(field=key),self.assertRaises(ValueError):p.validate_existing_stage_files(self.plan,self.created,f)
+                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'frozen_first_load_procedure' has no attribute 'validate_existing_stage_files'
+
+======================================================================
+ERROR: test_hash_owner_type_mode_link_mutations_refused (test_frozen_existing_stage.ExistingStageTests.test_hash_owner_type_mode_link_mutations_refused) (field='uid')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_existing_stage.py", line 21, in test_hash_owner_type_mode_link_mutations_refused
+    with self.subTest(field=key),self.assertRaises(ValueError):p.validate_existing_stage_files(self.plan,self.created,f)
+                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'frozen_first_load_procedure' has no attribute 'validate_existing_stage_files'
+
+======================================================================
+ERROR: test_hash_owner_type_mode_link_mutations_refused (test_frozen_existing_stage.ExistingStageTests.test_hash_owner_type_mode_link_mutations_refused) (field='mode')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_existing_stage.py", line 21, in test_hash_owner_type_mode_link_mutations_refused
+    with self.subTest(field=key),self.assertRaises(ValueError):p.validate_existing_stage_files(self.plan,self.created,f)
+                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'frozen_first_load_procedure' has no attribute 'validate_existing_stage_files'
+
+======================================================================
+ERROR: test_hash_owner_type_mode_link_mutations_refused (test_frozen_existing_stage.ExistingStageTests.test_hash_owner_type_mode_link_mutations_refused) (field='nlink')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_existing_stage.py", line 21, in test_hash_owner_type_mode_link_mutations_refused
+    with self.subTest(field=key),self.assertRaises(ValueError):p.validate_existing_stage_files(self.plan,self.created,f)
+                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'frozen_first_load_procedure' has no attribute 'validate_existing_stage_files'
+
+======================================================================
+ERROR: test_hash_owner_type_mode_link_mutations_refused (test_frozen_existing_stage.ExistingStageTests.test_hash_owner_type_mode_link_mutations_refused) (field='symlink')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_existing_stage.py", line 21, in test_hash_owner_type_mode_link_mutations_refused
+    with self.subTest(field=key),self.assertRaises(ValueError):p.validate_existing_stage_files(self.plan,self.created,f)
+                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'frozen_first_load_procedure' has no attribute 'validate_existing_stage_files'
+
+======================================================================
+ERROR: test_hash_owner_type_mode_link_mutations_refused (test_frozen_existing_stage.ExistingStageTests.test_hash_owner_type_mode_link_mutations_refused) (field='type')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_existing_stage.py", line 21, in test_hash_owner_type_mode_link_mutations_refused
+    with self.subTest(field=key),self.assertRaises(ValueError):p.validate_existing_stage_files(self.plan,self.created,f)
+                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'frozen_first_load_procedure' has no attribute 'validate_existing_stage_files'
+
+======================================================================
+ERROR: test_missing_extra_or_duplicate_receipt_refused (test_frozen_existing_stage.ExistingStageTests.test_missing_extra_or_duplicate_receipt_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_existing_stage.py", line 16, in test_missing_extra_or_duplicate_receipt_refused
+    with self.assertRaises(ValueError):p.validate_existing_stage_files(self.plan,records,self.fresh)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'frozen_first_load_procedure' has no attribute 'validate_existing_stage_files'
+
+======================================================================
+ERROR: test_same_bytes_different_inode_refused (test_frozen_existing_stage.ExistingStageTests.test_same_bytes_different_inode_refused) (field='dev')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_existing_stage.py", line 13, in test_same_bytes_different_inode_refused
+    with self.subTest(field=field),self.assertRaises(ValueError):p.validate_existing_stage_files(self.plan,self.created,f)
+                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'frozen_first_load_procedure' has no attribute 'validate_existing_stage_files'
+
+======================================================================
+ERROR: test_same_bytes_different_inode_refused (test_frozen_existing_stage.ExistingStageTests.test_same_bytes_different_inode_refused) (field='ino')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_existing_stage.py", line 13, in test_same_bytes_different_inode_refused
+    with self.subTest(field=field),self.assertRaises(ValueError):p.validate_existing_stage_files(self.plan,self.created,f)
+                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'frozen_first_load_procedure' has no attribute 'validate_existing_stage_files'
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.043s
+
+FAILED (errors=10)

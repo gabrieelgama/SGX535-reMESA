@@ -1,0 +1,9 @@
+{
+  "Makefile": "old hunk includes nonexistent line 57 blank after EOF; corrected diff generated against real source EOF",
+  "ioctl": "prefix/suffix contexts are 3/1 and 2/1; GNU patch requires more-prefix-than-suffix hunks to apply at EOF when fuzz=0, but both are interior hunks. Regenerated conventional balanced three-line context without changing intended additions.",
+  "manual_path": "/usr/share/man/man1/patch.1.gz",
+  "manual_sha256": "2df338451081a2af29c59235b1fa5d6febde16d2bc1ce15855cded5c663f54c1",
+  "classification": "CONFIRMED-FROM-LOCAL-TOOL-DOCUMENTATION and CONFIRMED-BY-TEST",
+  "source_identity_exact_to_qualified_source": true,
+  "semantic_changes_from_intended_integration": false
+}

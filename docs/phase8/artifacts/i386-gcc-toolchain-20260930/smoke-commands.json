@@ -1,0 +1,174 @@
+[
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+      "--sysroot=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root",
+      "-m32",
+      "-march=i486",
+      "-ffreestanding",
+      "-fno-pie",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-v",
+      "-c",
+      "target.c",
+      "-o",
+      "target.o"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "Using built-in specs.\nCOLLECT_GCC=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14\nTarget: i686-linux-gnu\nConfigured with: ../src/configure -v --with-pkgversion='Debian 14.2.0-19' --with-bugurl=file:///usr/share/doc/gcc-14/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-14 --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --without-target-system-zlib --enable-targets=all --enable-multiarch --disable-werror --with-arch-32=i686 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=i686-linux-gnu --program-prefix=i686-linux-gnu- --includedir=/usr/i686-linux-gnu/include --with-build-config=bootstrap-lto-lean --enable-link-serialization=4\nThread model: posix\nSupported LTO compression algorithms: zlib zstd\ngcc version 14.2.0 (Debian 14.2.0-19) \nCOLLECT_GCC_OPTIONS='--sysroot=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root' '-m32' '-march=i486' '-ffreestanding' '-fno-pie' '-O2' '-Wall' '-Wextra' '-Werror' '-v' '-c' '-o' 'target.o'\n /home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../libexec/gcc-cross/i686-linux-gnu/14/cc1 -quiet -v -imultiarch i386-linux-gnu -iprefix /home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/ -isysroot /home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root target.c -quiet -dumpbase target.c -dumpbase-ext .c -m32 -march=i486 -O2 -Wall -Wextra -Werror -version -ffreestanding -fno-pie -fasynchronous-unwind-tables -o /tmp/ccLpUvyT.s\nGNU C17 (Debian 14.2.0-19) version 14.2.0 (i686-linux-gnu)\n\tcompiled by GNU C version 14.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.27-GMP\n\nwarning: MPFR header version 4.2.1 differs from library version 4.2.2.\nGGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072\nignoring nonexistent directory \"/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/include-fixed/i386-linux-gnu\"\nignoring nonexistent directory \"/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/include-fixed\"\nignoring duplicate directory \"/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/../../lib/gcc-cross/i686-linux-gnu/14/include\"\nignoring nonexistent directory \"/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/local/include/i386-linux-gnu\"\nignoring nonexistent directory \"/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/../../lib/gcc-cross/i686-linux-gnu/14/include-fixed/i386-linux-gnu\"\nignoring nonexistent directory \"/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/../../lib/gcc-cross/i686-linux-gnu/14/include-fixed\"\nignoring duplicate directory \"/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/../../lib/gcc-cross/i686-linux-gnu/14/../../../../i686-linux-gnu/include\"\nignoring nonexistent directory \"/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/include/i386-linux-gnu\"\n#include \"...\" search starts here:\n#include <...> search starts here:\n /home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/include\n /home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/../../../../i686-linux-gnu/include\n /home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/include\nEnd of search list.\nCompiler executable checksum: 58f8286988d055d42655844f2b3c52f9\nCOLLECT_GCC_OPTIONS='--sysroot=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root' '-m32' '-march=i486' '-ffreestanding' '-fno-pie' '-O2' '-Wall' '-Wextra' '-Werror' '-v' '-c' '-o' 'target.o'\n /home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/../../../../i686-linux-gnu/bin/as -v --32 -o target.o /tmp/ccLpUvyT.s\nGNU assembler version 2.44 (i686-linux-gnu) using BFD version (GNU Binutils for Debian) 2.44\nCOMPILER_PATH=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../libexec/gcc-cross/i686-linux-gnu/14/:/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../libexec/gcc-cross/:/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/../../../../i686-linux-gnu/bin/\nLIBRARY_PATH=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/:/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/:/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/../../../../i686-linux-gnu/lib/../lib/:/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/lib/i386-linux-gnu/:/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/lib/../lib/:/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/../../../../i686-linux-gnu/lib/:/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/lib/\nCOLLECT_GCC_OPTIONS='--sysroot=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root' '-m32' '-march=i486' '-ffreestanding' '-fno-pie' '-O2' '-Wall' '-Wextra' '-Werror' '-v' '-c' '-o' 'target.o' '-dumpdir' 'target.'\n"
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-ld.bfd",
+      "-m",
+      "elf_i386",
+      "-r",
+      "target.o",
+      "-o",
+      "target-linked.o"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-readelf",
+      "-h",
+      "target.o"
+    ],
+    "exit": 0,
+    "stdout": "ELF Header:\n  Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 \n  Class:                             ELF32\n  Data:                              2's complement, little endian\n  Version:                           1 (current)\n  OS/ABI:                            UNIX - System V\n  ABI Version:                       0\n  Type:                              REL (Relocatable file)\n  Machine:                           Intel 80386\n  Version:                           0x1\n  Entry point address:               0x0\n  Start of program headers:          0 (bytes into file)\n  Start of section headers:          328 (bytes into file)\n  Flags:                             0x0\n  Size of this header:               52 (bytes)\n  Size of program headers:           0 (bytes)\n  Number of program headers:         0\n  Size of section headers:           40 (bytes)\n  Number of section headers:         11\n  Section header string table index: 10\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-readelf",
+      "-h",
+      "target-linked.o"
+    ],
+    "exit": 0,
+    "stdout": "ELF Header:\n  Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 \n  Class:                             ELF32\n  Data:                              2's complement, little endian\n  Version:                           1 (current)\n  OS/ABI:                            UNIX - System V\n  ABI Version:                       0\n  Type:                              REL (Relocatable file)\n  Machine:                           Intel 80386\n  Version:                           0x1\n  Entry point address:               0x0\n  Start of program headers:          0 (bytes into file)\n  Start of section headers:          408 (bytes into file)\n  Flags:                             0x0\n  Size of this header:               52 (bytes)\n  Size of program headers:           0 (bytes)\n  Number of program headers:         0\n  Size of section headers:           40 (bytes)\n  Number of section headers:         11\n  Section header string table index: 10\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+      "--sysroot=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root",
+      "-m32",
+      "-march=i486",
+      "-Wl,-t",
+      "libc-probe.c",
+      "-o",
+      "libc-probe"
+    ],
+    "exit": 0,
+    "stdout": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/../../../../i686-linux-gnu/lib/../lib/Scrt1.o\n/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/../../../../i686-linux-gnu/lib/../lib/crti.o\n/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/crtbeginS.o\n/tmp/ccFS6ZcT.o\n/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/libgcc.a\n/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/libgcc_s.so\n/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/../../../../i686-linux-gnu/lib/../lib/libgcc_s.so.1\n/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/libgcc.a\n/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/../../../../i686-linux-gnu/lib/../lib/libc.so\n/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/i686-linux-gnu/lib/libc.so.6\n/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/i686-linux-gnu/lib/libc_nonshared.a\n/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/i686-linux-gnu/lib/ld-linux.so.2\n/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/i686-linux-gnu/lib/libc_nonshared.a\n/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/i686-linux-gnu/lib/ld-linux.so.2\n/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/libgcc.a\n/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/libgcc_s.so\n/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/../../../../i686-linux-gnu/lib/../lib/libgcc_s.so.1\n/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/libgcc.a\n/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/crtendS.o\n/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/../../../../i686-linux-gnu/lib/../lib/crtn.o\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-readelf",
+      "-h",
+      "libc-probe"
+    ],
+    "exit": 0,
+    "stdout": "ELF Header:\n  Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 \n  Class:                             ELF32\n  Data:                              2's complement, little endian\n  Version:                           1 (current)\n  OS/ABI:                            UNIX - System V\n  ABI Version:                       0\n  Type:                              DYN (Position-Independent Executable file)\n  Machine:                           Intel 80386\n  Version:                           0x1\n  Entry point address:               0x1050\n  Start of program headers:          52 (bytes into file)\n  Start of section headers:          13768 (bytes into file)\n  Flags:                             0x0\n  Size of this header:               52 (bytes)\n  Size of program headers:           32 (bytes)\n  Number of program headers:         12\n  Size of section headers:           40 (bytes)\n  Number of section headers:         31\n  Section header string table index: 30\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/bin/sh",
+      "/tmp/sgx535-antix-source-6/source/scripts/cc-can-link.sh",
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+      "--sysroot=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root",
+      "-m32",
+      "-march=i486"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/usr/bin/gcc-14",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "native.c",
+      "-o",
+      "native-helper"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/smoke/native-helper"
+    ],
+    "exit": 0,
+    "stdout": "ARM64 native HOSTCC smoke PASS\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/usr/bin/readelf",
+      "-h",
+      "native-helper"
+    ],
+    "exit": 0,
+    "stdout": "ELF Header:\n  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 \n  Class:                             ELF64\n  Data:                              2's complement, little endian\n  Version:                           1 (current)\n  OS/ABI:                            UNIX - System V\n  ABI Version:                       0\n  Type:                              DYN (Position-Independent Executable file)\n  Machine:                           AArch64\n  Version:                           0x1\n  Entry point address:               0x6c0\n  Start of program headers:          64 (bytes into file)\n  Start of section headers:          68584 (bytes into file)\n  Flags:                             0x0\n  Size of this header:               64 (bytes)\n  Size of program headers:           56 (bytes)\n  Number of program headers:         10\n  Size of section headers:           64 (bytes)\n  Number of section headers:         29\n  Section header string table index: 28\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/usr/bin/make",
+      "-f",
+      "HOSTCC-smoke.mk",
+      "HOSTCC=/usr/bin/gcc-14",
+      "all"
+    ],
+    "exit": 2,
+    "stdout": "/usr/bin/gcc-14 -O2 -Wall -Wextra -Werror /tmp/sgx535-antix-source-6/source/scripts/basic/fixdep.c -o fixdep\n",
+    "stderr": "/tmp/sgx535-antix-source-6/source/scripts/basic/fixdep.c: In function 'is_defined_config':\n/tmp/sgx535-antix-source-6/source/scripts/basic/fixdep.c:187:51: error: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Werror=sign-compare]\n  187 |                 if (aux->hash == hash && aux->len == len &&\n      |                                                   ^~\ncc1: all warnings being treated as errors\nmake: *** [HOSTCC-smoke.mk:5: fixdep] Error 1\n"
+  },
+  {
+    "command": [
+      "/usr/bin/make",
+      "-f",
+      "HOSTCC-smoke.mk",
+      "HOSTCC=/usr/bin/gcc-14",
+      "all"
+    ],
+    "exit": 0,
+    "stdout": "/usr/bin/gcc-14 -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer -std=gnu89 /tmp/sgx535-antix-source-6/source/scripts/basic/fixdep.c -o fixdep\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/usr/bin/readelf",
+      "-h",
+      "fixdep"
+    ],
+    "exit": 0,
+    "stdout": "ELF Header:\n  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 \n  Class:                             ELF64\n  Data:                              2's complement, little endian\n  Version:                           1 (current)\n  OS/ABI:                            UNIX - System V\n  ABI Version:                       0\n  Type:                              DYN (Position-Independent Executable file)\n  Machine:                           AArch64\n  Version:                           0x1\n  Entry point address:               0x1140\n  Start of program headers:          64 (bytes into file)\n  Start of section headers:          69624 (bytes into file)\n  Flags:                             0x0\n  Size of this header:               64 (bytes)\n  Size of program headers:           56 (bytes)\n  Number of program headers:         10\n  Size of section headers:           64 (bytes)\n  Number of section headers:         29\n  Section header string table index: 28\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/smoke/fixdep",
+      "target.d",
+      "target.o",
+      "recorded-target-command"
+    ],
+    "exit": 0,
+    "stdout": "cmd_target.o := recorded-target-command\n\nsource_target.o := target.c\n\ndeps_target.o := \\\n\ntarget.o: $(deps_target.o)\n\n$(deps_target.o):\n",
+    "stderr": ""
+  }
+]

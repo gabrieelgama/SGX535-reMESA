@@ -1,0 +1,49 @@
+There are 40 section headers, starting at offset 0x3ade4:
+
+Section Headers:
+  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] .text             PROGBITS        00000000 000034 01e8bd 00  AX  0   0 64
+  [ 2] .rel.text         REL             00000000 032398 006f98 08   I 37   1  4
+  [ 3] .altinstr_replacement PROGBITS        00000000 01e8f1 000035 00  AX  0   0  1
+  [ 4] .rel.altinstr_replacement REL             00000000 039330 000008 08   I 37   3  4
+  [ 5] .text.unlikely    PROGBITS        00000000 01e926 000796 00  AX  0   0  1
+  [ 6] .rel.text.unlikely REL             00000000 039338 0006b8 08   I 37   5  4
+  [ 7] .init.text        PROGBITS        00000000 01f0bc 000019 00  AX  0   0  1
+  [ 8] .rel.init.text    REL             00000000 0399f0 000020 08   I 37   7  4
+  [ 9] .exit.text        PROGBITS        00000000 01f0d5 00000f 00  AX  0   0  1
+  [10] .rel.exit.text    REL             00000000 039a10 000010 08   I 37   9  4
+  [11] .altinstr_aux     PROGBITS        00000000 01f0e4 000012 00  AX  0   0  1
+  [12] .rel.altinstr_aux REL             00000000 039a20 000018 08   I 37  11  4
+  [13] .altinstructions  PROGBITS        00000000 01f0f8 0000d8 00   A  0   0  8
+  [14] .rel.altinstructions REL             00000000 039a38 000120 08   I 37  13  4
+  [15] .rodata           PROGBITS        00000000 01f1d0 003894 00   A  0   0 32
+  [16] .rel.rodata       REL             00000000 039b58 000e20 08   I 37  15  4
+  [17] .rodata.str1.1    PROGBITS        00000000 022a64 001584 01 AMS  0   0  1
+  [18] .smp_locks        PROGBITS        00000000 023fe8 000018 00   A  0   0  4
+  [19] .rel.smp_locks    REL             00000000 03a978 000030 08   I 37  18  4
+  [20] .rodata.str1.4    PROGBITS        00000000 024000 0019f6 01 AMS  0   0  4
+  [21] .parainstructions PROGBITS        00000000 0259f8 000048 00   A  0   0  4
+  [22] .rel.parainstructions REL             00000000 03a9a8 000048 08   I 37  21  4
+  [23] .modinfo          PROGBITS        00000000 025a40 000599 00   A  0   0  1
+  [24] .rodata.cst2      PROGBITS        00000000 025fda 000002 02  AM  0   0  2
+  [25] .note.gnu.build-id NOTE            00000000 025fdc 000024 00   A  0   0  4
+  [26] .note.Linux       NOTE            00000000 026000 000018 00   A  0   0  4
+  [27] __versions        PROGBITS        00000000 026018 003a00 00   A  0   0 32
+  [28] __bug_table       PROGBITS        00000000 029a18 000138 00  WA  0   0  8
+  [29] .rel__bug_table   REL             00000000 03a9f0 0001a0 08   I 37  28  4
+  [30] .data             PROGBITS        00000000 029b50 000440 00  WA  0   0 32
+  [31] .rel.data         REL             00000000 03ab90 0000c8 08   I 37  30  4
+  [32] .gnu.linkonce.this_module PROGBITS        00000000 029f90 000240 00  WA  0   0 64
+  [33] .rel.gnu.linkonce.this_module REL             00000000 03ac58 000010 08   I 37  32  4
+  [34] .bss              NOBITS          00000000 02a1d0 000061 00  WA  0   0 32
+  [35] .note.GNU-stack   PROGBITS        00000000 02a1d0 000000 00      0   0  1
+  [36] .comment          PROGBITS        00000000 02a1d0 000540 01  MS  0   0  1
+  [37] .symtab           SYMTAB          00000000 02a710 0037b0 10     38 443  4
+  [38] .strtab           STRTAB          00000000 02dec0 0044d5 00      0   0  1
+  [39] .shstrtab         STRTAB          00000000 03ac68 00017c 00      0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  D (mbind), p (processor specific)

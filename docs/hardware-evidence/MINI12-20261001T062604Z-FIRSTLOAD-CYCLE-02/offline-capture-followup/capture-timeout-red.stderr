@@ -1,0 +1,25 @@
+test_cached_sudo_preserves_prefix_and_root_capture (test_frozen_first_load_capture.CaptureTransportTests.test_cached_sudo_preserves_prefix_and_root_capture) ... ok
+test_changed_boot_and_late_completion_refused (test_frozen_first_load_capture.CaptureTransportTests.test_changed_boot_and_late_completion_refused) ... ok
+test_child_argv_is_noninteractive_python_not_shell (test_frozen_first_load_capture.CaptureTransportTests.test_child_argv_is_noninteractive_python_not_shell) ... ok
+test_expired_kernel_clock_refused_before_privilege (test_frozen_first_load_capture.CaptureTransportTests.test_expired_kernel_clock_refused_before_privilege) ... ok
+test_explicit_ready_record_and_remaining_deadline (test_frozen_first_load_capture.CaptureTransportTests.test_explicit_ready_record_and_remaining_deadline) ... ok
+test_invalid_root_capture_refused_offline (test_frozen_first_load_capture.CaptureTransportTests.test_invalid_root_capture_refused_offline) ... ok
+test_missing_public_boot_id_stops_before_privilege (test_frozen_first_load_capture.CaptureTransportTests.test_missing_public_boot_id_stops_before_privilege) ... ok
+test_ready_userspace_without_sudo_witness_refused (test_frozen_first_load_capture.CaptureTransportTests.test_ready_userspace_without_sudo_witness_refused) ... ok
+test_root_script_is_an_argument_never_stdin (test_frozen_first_load_capture.CaptureTransportTests.test_root_script_is_an_argument_never_stdin) ... ok
+test_timeout_preserves_partial_root_output (test_frozen_first_load_capture.CaptureTransportTests.test_timeout_preserves_partial_root_output) ... FAIL
+test_uncached_sudo_preserves_boot_id_without_shell_input (test_frozen_first_load_capture.CaptureTransportTests.test_uncached_sudo_preserves_boot_id_without_shell_input) ... ok
+
+======================================================================
+FAIL: test_timeout_preserves_partial_root_output (test_frozen_first_load_capture.CaptureTransportTests.test_timeout_preserves_partial_root_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture.py", line 35, in test_timeout_preserves_partial_root_output
+    self.assertEqual(status,1);self.assertIn('partial capture',out);self.assertIn('partial error',err);self.assertIn('boot-id-1',out)
+                               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'partial capture' not found in '{"phase": "unprivileged-boot-identity", "boot_id": "boot-id-1", "kernel": "5.10.240-antix.1-486-smp", "architecture": "i686", "uptime_start": 90.0}\n{"phase": "STOP", "error": "passive capture deadline exceeded", "boot_id": "boot-id-1"}\n'
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.018s
+
+FAILED (failures=1)

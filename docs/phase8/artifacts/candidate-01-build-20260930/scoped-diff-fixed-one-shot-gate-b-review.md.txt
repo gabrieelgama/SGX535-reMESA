@@ -1,0 +1,42 @@
+--- /home/gama/sgx535-offline/candidate-01-build-20260930/documentation-before/fixed-one-shot-gate-b-review.md	2026-09-30 23:57:05.819413951 +0000
++++ /home/gama/sgx535-gfx/docs/phase8/fixed-one-shot-gate-b-review.md	2026-10-01 00:06:18.727413740 +0000
+@@ -1,13 +1,28 @@
+ # Fixed 32×32 triangle: exact-action Gate B review (updated 2026-09-30)
+ 
++**Current offline build/lifecycle continuation:** [qualified candidate results](candidate-01-build-and-lifecycle-review.md)
++close the mechanical patch and module ABI blockers. Candidate #1 and the separate
++IRQ-lifecycle derivative both build through normal external Kbuild, match every
++actual import against the captured target table, and repeat byte-identically.
++The derivative now pairs IRQ release before private/MMIO destruction and masks
++all device routing on actual handler removal, preserving direct-PM behavior.
++**The first hot removal of the active unpatched original remains BLOCKED.**
++The correction cannot change that original's teardown. Gate B remains BLOCKED,
++whitelist `[]`; no target contact or SGX action occurred. The next missing fact
++is the normal first-load boot/initramfs source and original fallback, requiring
++a separately authorized read-only boot-route inventory before a cold-start-only
++alternative can be reviewed. Current verification: 205 tests, zero skips; three
++UBSan harnesses plus lifecycle UBSan PASS; dry-run hash unchanged; `--complete`
++retains its four labels. Neither artifact is authorized for deployment.
++
+ **Current checkpoint audit:** [Post-Attempt-03 audit](post-attempt03-checkpoint-audit.md)
+ supersedes the execution classifications below. **Gate B: BLOCKED. Active
+ whitelist: `[]`.** The rejected candidate is ABI-incompatible, the original
+ driver's hot restoration faulted, and no new attempt is authorized. The
+ operator reset the Mini 12; [capture 08](../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md)
+ now independently confirms the normal original driver/display state and
+-qualified installed export table/configuration. No compatible rebuilt
+-candidate or revised hot-transition qualification exists yet. Previous
++qualified installed export table/configuration. Compatible candidates now exist offline; no executable original-driver
++hot-transition qualification exists. Previous
+ one-attempt risk acceptances remain recorded as decisions, not architectural
+ proof or an unspent authorization. The PASS and whitelist below are historical.
+ 
+@@ -129,7 +144,7 @@
+ import with a target-qualified symbol table. Matching vermagic alone must
+ not be used as the module-compatibility gate.
+ 
+-## Exact-action classifications
++## Historical Attempt 03 exact-action classifications (superseded above)
+ 
+ | Item | Classification | Basis and remaining condition |
+ | --- | --- | --- |

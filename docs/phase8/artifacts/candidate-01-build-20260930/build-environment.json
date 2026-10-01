@@ -1,0 +1,20 @@
+{
+  "PATH": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin:/usr/bin:/bin",
+  "LD_LIBRARY_PATH": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/lib/aarch64-linux-gnu",
+  "BISON_PKGDATADIR": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/share/bison",
+  "M4": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/m4",
+  "LC_ALL": "C",
+  "HOSTCC": "/usr/bin/gcc-14",
+  "CC": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14 --sysroot=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root",
+  "CROSS_COMPILE": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-",
+  "LD": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-ld.bfd",
+  "AS": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-as",
+  "HOSTCFLAGS": "-I/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/include -I/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/include/aarch64-linux-gnu",
+  "HOSTLDFLAGS": "-L/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/lib/aarch64-linux-gnu",
+  "CONFIG_SHELL": "/bin/sh",
+  "KBUILD_BUILD_TIMESTAMP": "2026-09-30 23:17:22 UTC",
+  "KBUILD_BUILD_USER": "gama",
+  "KBUILD_BUILD_HOST": "localhost",
+  "KBUILD_BUILD_VERSION": "1",
+  "SOURCE_DATE_EPOCH": "1790810242"
+}

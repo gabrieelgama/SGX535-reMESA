@@ -1,0 +1,9 @@
+{
+  "proof_class": "OPERATOR OBSERVATION",
+  "verbatim": "STOCK manually selected, normal userspace reached, sudo -v succeeded, elapsed time: 90SEC",
+  "manual_stock_selected": true,
+  "normal_userspace": true,
+  "local_sudo_ready": true,
+  "reported_elapsed_seconds_before_capture": 90,
+  "exact_capture_completion_elapsed": "PENDING OPERATOR CONFIRMATION"
+}

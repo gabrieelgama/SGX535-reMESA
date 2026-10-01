@@ -1,0 +1,39 @@
+id,owner,offset,target,formula,mask,right_shift,left_shift,background,kind,target_alignment,evidence
+primary_pds+00,primary_pds,0,fragment_use,USE_BASE(dm=1) mask0xf; USE_OFFSET>>15<<4 mask0xf0; USE_OFFSET>>4<<8 mask0x7ff00; background=0x0,0xffffffff,0,0,0x00000000,USE_THREE_RECORDS,32,P7G-011;P7H-042;P7H-043
+vertex_pds+00,vertex_pds,0,vertices,GPU(vertices),0xffffffff,0,0,0x00000000,OFFSET,4,P7G-011;P7H-042;P7H-043
+vertex_pds+10,vertex_pds,16,vertex_use,USE_BASE(dm=0) mask0xf; USE_OFFSET>>15<<4 mask0xf0; USE_OFFSET>>4<<8 mask0x7ff00; background=0x200000,0xffffffff,0,0,0x00200000,USE_THREE_RECORDS,32,P7G-011;P7H-042;P7H-043
+bounds_vertex_pds+00,bounds_vertex_pds,0,bounds_vertices,GPU(bounds_vertices),0xffffffff,0,0,0x00000000,OFFSET,4,P7G-011;P7H-042;P7H-043
+bounds_vertex_pds+10,bounds_vertex_pds,16,bounds_vertex_use,USE_BASE(dm=0) mask0xf; USE_OFFSET>>15<<4 mask0xf0; USE_OFFSET>>4<<8 mask0x7ff00; background=0x200000,0xffffffff,0,0,0x00200000,USE_THREE_RECORDS,32,P7G-011;P7H-042;P7H-043
+bounds_state_pds+00,bounds_state_pds,0,bounds_state,GPU(bounds_state),0xffffffff,0,0,0x00000000,OFFSET,4,P7G-011;P7H-042;P7H-043
+bounds_state_pds+08,bounds_state_pds,8,bounds_state_use,USE_BASE(dm=0) mask0xf; USE_OFFSET>>15<<4 mask0xf0; USE_OFFSET>>4<<8 mask0x7ff00; background=0x200000,0xffffffff,0,0,0x00200000,USE_THREE_RECORDS,32,P7G-011;P7H-042;P7H-043
+bounds_state_ta+00,bounds_state_ta,0,bounds_state_pds,((GPU(bounds_state_pds)>>4)&0xfffffff)|0x40000000,0x0fffffff,4,0,0x40000000,OFFSET,16,P7G-011;P7H-042;P7H-043
+triangle_state_pds+00,triangle_state_pds,0,triangle_state,GPU(triangle_state),0xffffffff,0,0,0x00000000,OFFSET,4,P7G-011;P7H-042;P7H-043
+triangle_state_pds+08,triangle_state_pds,8,triangle_state_use,USE_BASE(dm=0) mask0xf; USE_OFFSET>>15<<4 mask0xf0; USE_OFFSET>>4<<8 mask0x7ff00; background=0x200000,0xffffffff,0,0,0x00200000,USE_THREE_RECORDS,32,P7G-011;P7H-042;P7H-043
+triangle_state_ta+00,triangle_state_ta,0,triangle_state_pds,((GPU(triangle_state_pds)>>4)&0xfffffff)|0x40000000,0x0fffffff,4,0,0x40000000,OFFSET,16,P7G-011;P7H-042;P7H-043
+terminate_state_pds+00,terminate_state_pds,0,terminate_state,GPU(terminate_state),0xffffffff,0,0,0x00000000,OFFSET,4,P7G-011;P7H-042;P7H-043
+terminate_state_pds+08,terminate_state_pds,8,terminate_state_use,USE_BASE(dm=0) mask0xf; USE_OFFSET>>15<<4 mask0xf0; USE_OFFSET>>4<<8 mask0x7ff00; background=0x200000,0xffffffff,0,0,0x00200000,USE_THREE_RECORDS,32,P7G-011;P7H-042;P7H-043
+terminate_state_ta+00,terminate_state_ta,0,terminate_state_pds,((GPU(terminate_state_pds)>>4)&0xfffffff)|0x60000000,0x0fffffff,4,0,0x60000000,OFFSET,16,P7G-011;P7H-042;P7H-043
+triangle_state+08,triangle_state,8,secondary_pds,((GPU(secondary_pds)>>4)&0xffffff)|0x0,0x00ffffff,4,0,0x00000000,OFFSET,16,P7G-011;P7H-042;P7H-043
+triangle_state+10,triangle_state,16,primary_pds,((GPU(primary_pds)>>4)&0xffffff)|0xc000000,0x00ffffff,4,0,0x0c000000,OFFSET,16,P7G-011;P7H-042;P7H-043
+triangle_index+04,triangle_index,4,indices,GPU(indices),0xffffffff,0,0,0x00000000,OFFSET,4,P7G-011;P7H-042;P7H-043
+triangle_index+0c,triangle_index,12,vertex_pds,((GPU(vertex_pds)>>4)&0xfffffff)|0x0,0x0fffffff,4,0,0x00000000,OFFSET,16,P7G-011;P7H-042;P7H-043
+bounds_index+04,bounds_index,4,bounds_indices,GPU(bounds_indices),0xffffffff,0,0,0x00000000,OFFSET,4,P7G-011;P7H-042;P7H-043
+bounds_index+0c,bounds_index,12,bounds_vertex_pds,((GPU(bounds_vertex_pds)>>4)&0xfffffff)|0x0,0x0fffffff,4,0,0x00000000,OFFSET,16,P7G-011;P7H-042;P7H-043
+target_data+04,target_data,4,color,GPU(color) with relocation placement 0x16000000/mask0xff000000; address mask0xfffffffc; right2 left2,0xfffffffc,2,2,0x00000000,OFFSET,4,P7G-011;P7H-042;P7H-043
+event_pds+00,event_pds,0,event_helper_use,USE_BASE(dm=1) mask0xf; USE_OFFSET>>15<<4 mask0xf0; USE_OFFSET>>4<<8 mask0x7ff00; background=0x0,0xffffffff,0,0,0x00000000,USE_THREE_RECORDS,32,P7G-011;P7H-042;P7H-043
+event_pds+08,event_pds,8,target_data,GPU(target_data),0xffffffff,0,0,0x00000000,OFFSET,4,P7G-011;P7H-042;P7H-043
+event_pds+10,event_pds,16,event_use,USE_BASE(dm=1) mask0xf; USE_OFFSET>>15<<4 mask0xf0; USE_OFFSET>>4<<8 mask0x7ff00; background=0x200000,0xffffffff,0,0,0x00200000,USE_THREE_RECORDS,32,P7G-011;P7H-042;P7H-043
+background_pds+00,background_pds,0,background_use,USE_BASE(dm=1) mask0xf; USE_OFFSET>>15<<4 mask0xf0; USE_OFFSET>>4<<8 mask0x7ff00; background=0x100000,0xffffffff,0,0,0x00100000,USE_THREE_RECORDS,32,P7G-011;P7H-042;P7H-043
+background_pds+28,background_pds,40,color,GPU(color); placement0x16000000/mask0xff000000,0xffffffff,0,0,0x00000000,OFFSET,4,P7G-011;P7H-042;P7H-043
+background_object+00,background_object,0,background_secondary,((GPU(background_secondary)>>4)&0xffffff)|0x0,0x00ffffff,4,0,0x00000000,OFFSET,16,P7G-011;P7H-042;P7H-043
+background_object+08,background_object,8,background_pds,((GPU(background_pds)>>4)&0xffffff)|0xc000000,0x00ffffff,4,0,0x0c000000,OFFSET,16,P7G-011;P7H-042;P7H-043
+raster_registers+8c,raster_registers,140,background_object,((GPU(background_object)>>4)&0xffffff)|0x2000000,0x00ffffff,4,0,0x02000000,OFFSET,16,P7G-011;P7H-042;P7H-043
+raster_registers+bc,raster_registers,188,event_pds,(GPU(event_pds)>>4)<<4,0xffffffff,4,4,0x00000000,OFFSET,16,P7G-011;P7H-042;P7H-043
+ta_stream+00,ta_stream,0,bounds_state_pds,((GPU(bounds_state_pds)>>4)&0xfffffff)|0x40000000,0x0fffffff,4,0,0x40000000,OFFSET,16,P7G-011;P7H-042;P7H-043
+ta_stream+0c,ta_stream,12,bounds_indices,GPU(bounds_indices),0xffffffff,0,0,0x00000000,OFFSET,4,P7G-011;P7H-042;P7H-043
+ta_stream+14,ta_stream,20,bounds_vertex_pds,((GPU(bounds_vertex_pds)>>4)&0xfffffff)|0x0,0x0fffffff,4,0,0x00000000,OFFSET,16,P7G-011;P7H-042;P7H-043
+ta_stream+1c,ta_stream,28,triangle_state_pds,((GPU(triangle_state_pds)>>4)&0xfffffff)|0x40000000,0x0fffffff,4,0,0x40000000,OFFSET,16,P7G-011;P7H-042;P7H-043
+ta_stream+28,ta_stream,40,indices,GPU(indices),0xffffffff,0,0,0x00000000,OFFSET,4,P7G-011;P7H-042;P7H-043
+ta_stream+30,ta_stream,48,vertex_pds,((GPU(vertex_pds)>>4)&0xfffffff)|0x0,0x0fffffff,4,0,0x00000000,OFFSET,16,P7G-011;P7H-042;P7H-043
+ta_stream+38,ta_stream,56,terminate_state_pds,((GPU(terminate_state_pds)>>4)&0xfffffff)|0x60000000,0x0fffffff,4,0,0x60000000,OFFSET,16,P7G-011;P7H-042;P7H-043
+ta_registers+34,ta_registers,52,ta_stream,GPU(ta_stream),0xffffffff,0,0,0x00000000,OFFSET,4,P7G-011;P7H-042;P7H-043

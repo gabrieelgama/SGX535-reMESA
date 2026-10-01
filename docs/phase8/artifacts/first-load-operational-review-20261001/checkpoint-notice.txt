@@ -1,0 +1,13 @@
+**Newest offline operational review (2026-10-01):**
+[Procedure qualification](first-load-operational-review.md),
+[exact procedure](first-load-staging-boot-recovery-procedure.md) and
+[checklist](first-load-operator-checklist.md) complete the staging/manual-first-load/
+operator-reset-to-stock design review. Pinned image/candidates unchanged; no target
+contact or staging. **266 tests, zero skips; 14 boot-analysis tests; three UBSan
+harnesses PASS.** The non-SGX procedure is **READY TO REQUEST SEPARATE LIVE
+AUTHORIZATION**, conditional on fresh stock, privilege, physical-control and visible
+menu guards. Live first ownership/display/SSH/recovery remain UNKNOWN; volatile
+hook-log delivery after pivot is UNKNOWN and missing trace prevents qualification.
+No hot transition/restoration or SGX action is authorized. **Gate B BLOCKED;
+whitelist `[]`; FIRST TRIANGLE NOT ATTEMPTED.** Earlier next-step notices are historical.
+

@@ -1,0 +1,50 @@
+[
+  {
+    "mutation": "omit-owned-irq-release",
+    "compile_argv": [
+      "/usr/bin/gcc-14",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Wno-unused-function",
+      "-Wno-unused-parameter",
+      "-Wno-unused-label",
+      "-fsanitize=undefined",
+      "-fno-sanitize-recover=all",
+      "-I",
+      "/tmp/tmpd6ho0baj",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_irq_lifecycle.c",
+      "-o",
+      "/tmp/tmpd6ho0baj/omit-owned-irq-release"
+    ],
+    "scenario": 10,
+    "exit": -6,
+    "result": "REJECTED as required"
+  },
+  {
+    "mutation": "omit-pci-remove-unload",
+    "compile_argv": [
+      "/usr/bin/gcc-14",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Wno-unused-function",
+      "-Wno-unused-parameter",
+      "-Wno-unused-label",
+      "-fsanitize=undefined",
+      "-fno-sanitize-recover=all",
+      "-I",
+      "/tmp/tmpd6ho0baj",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_irq_lifecycle.c",
+      "-o",
+      "/tmp/tmpd6ho0baj/omit-pci-remove-unload"
+    ],
+    "scenario": 10,
+    "exit": -6,
+    "result": "REJECTED as required"
+  }
+]

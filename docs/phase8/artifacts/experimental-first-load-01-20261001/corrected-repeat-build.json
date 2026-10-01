@@ -1,0 +1,7 @@
+{
+  "result": "BYTE-IDENTICAL",
+  "build1": "/home/gama/sgx535-offline/experimental-first-load-20261001/build-03",
+  "build2": "/home/gama/sgx535-offline/experimental-first-load-20261001/build-04",
+  "bytes": 50804481,
+  "sha256": "601f41a11b92a4eb234eea8ead006493bd442fc11b037994ddc7a2f0a7a50f3d"
+}

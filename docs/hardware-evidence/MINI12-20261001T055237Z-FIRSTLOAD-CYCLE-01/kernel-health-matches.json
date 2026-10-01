@@ -1,0 +1,77 @@
+[
+  {
+    "line": 604,
+    "match": "[   13.421480] ACPI Warning: Could not enable fixed event - PowerButton (2) (20200925/evxface-618)",
+    "context": [
+      "[   13.416773] input: Power Button as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input4",
+      "[   13.420655] ACPI: Power Button [PWRB]",
+      "[   13.421033] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input5",
+      "[   13.421292] ACPI: Power Button [PWRF]",
+      "[   13.421313] ACPI Error: Could not enable PowerButton event (20200925/evxfevnt-182)",
+      "[   13.421480] ACPI Warning: Could not enable fixed event - PowerButton (2) (20200925/evxface-618)",
+      "[   13.425682] button: probe of LNXPWRBN:00 failed with error -22",
+      "[   13.704518] ACPI Error: Could not enable PowerButton event (20200925/evxfevnt-182)",
+      "[   13.704693] ACPI Warning: Could not enable fixed event - PowerButton (2) (20200925/evxface-618)",
+      "[   13.704767] tiny-power-button: probe of LNXPWRBN:00 failed with error -22",
+      "[   13.764670] ACPI: AC Adapter [ACAD] (on-line)",
+      "[   15.276698] cfg80211: Loading compiled-in X.509 certificates for regulatory database",
+      "[   15.279666] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'",
+      "[   15.283055] cfg80211: Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'",
+      "[   15.506698] intel_powerclamp: No package C-state available",
+      "[   16.019973] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2",
+      "[   16.019993] cfg80211: failed to load regulatory.db",
+      "[   17.058398] ACPI: bus type drm_connector registered",
+      "[   17.863749] ACPI: Video Device [GFX0] (multi-head: yes  rom: no  post: no)"
+    ]
+  },
+  {
+    "line": 607,
+    "match": "[   13.704693] ACPI Warning: Could not enable fixed event - PowerButton (2) (20200925/evxface-618)",
+    "context": [
+      "[   13.421292] ACPI: Power Button [PWRF]",
+      "[   13.421313] ACPI Error: Could not enable PowerButton event (20200925/evxfevnt-182)",
+      "[   13.421480] ACPI Warning: Could not enable fixed event - PowerButton (2) (20200925/evxface-618)",
+      "[   13.425682] button: probe of LNXPWRBN:00 failed with error -22",
+      "[   13.704518] ACPI Error: Could not enable PowerButton event (20200925/evxfevnt-182)",
+      "[   13.704693] ACPI Warning: Could not enable fixed event - PowerButton (2) (20200925/evxface-618)",
+      "[   13.704767] tiny-power-button: probe of LNXPWRBN:00 failed with error -22",
+      "[   13.764670] ACPI: AC Adapter [ACAD] (on-line)",
+      "[   15.276698] cfg80211: Loading compiled-in X.509 certificates for regulatory database",
+      "[   15.279666] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'",
+      "[   15.283055] cfg80211: Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'",
+      "[   15.506698] intel_powerclamp: No package C-state available",
+      "[   16.019973] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2",
+      "[   16.019993] cfg80211: failed to load regulatory.db",
+      "[   17.058398] ACPI: bus type drm_connector registered",
+      "[   17.863749] ACPI: Video Device [GFX0] (multi-head: yes  rom: no  post: no)",
+      "[   17.868333] acpi device:04: registered as cooling_device2",
+      "[   17.868733] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/LNXVIDEO:00/input/input6",
+      "[   18.242593] dell_smm_hwmon: unable to get SMM Dell signature"
+    ]
+  },
+  {
+    "line": 623,
+    "match": "[   19.356593] gma500 0000:00:02.0: BL bug: Reg 00000000 save 00000000",
+    "context": [
+      "[   17.868333] acpi device:04: registered as cooling_device2",
+      "[   17.868733] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/LNXVIDEO:00/input/input6",
+      "[   18.242593] dell_smm_hwmon: unable to get SMM Dell signature",
+      "[   18.915821] dcdbas dcdbas: Dell Systems Management Base Driver (version 5.6.0-3.4)",
+      "[   19.297957] fbcon: gma500drmfb (fb0) is primary device",
+      "[   19.356593] gma500 0000:00:02.0: BL bug: Reg 00000000 save 00000000",
+      "[   19.503341] Console: switching to colour frame buffer device 160x50",
+      "[   19.525711] gma500 0000:00:02.0: [drm] fb0: gma500drmfb frame buffer device",
+      "[   19.529659] gma500 0000:00:02.0: Backlight lvds set brightness 7a120000",
+      "[   19.530798] [drm] Initialized gma500 1.0.0 20140314 for 0000:00:02.0 on minor 0",
+      "[   19.637600] gma500 0000:00:02.0: Backlight lvds set brightness 7a120000",
+      "[   20.653051] snd_hda_codec_realtek hdaudioC0D0: autoconfig for ALC269: line_outs=1 (0x14/0x0/0x0/0x0/0x0) type:speaker",
+      "[   20.653066] snd_hda_codec_realtek hdaudioC0D0:    speaker_outs=0 (0x0/0x0/0x0/0x0/0x0)",
+      "[   20.653076] snd_hda_codec_realtek hdaudioC0D0:    hp_outs=1 (0x15/0x0/0x0/0x0/0x0)",
+      "[   20.653083] snd_hda_codec_realtek hdaudioC0D0:    mono: mono_out=0x0",
+      "[   20.653090] snd_hda_codec_realtek hdaudioC0D0:    inputs:",
+      "[   20.653099] snd_hda_codec_realtek hdaudioC0D0:      Internal Mic=0x19",
+      "[   20.653108] snd_hda_codec_realtek hdaudioC0D0:      Mic=0x18",
+      "[   20.713298] input: HDA Intel MID Mic as /devices/pci0000:00/0000:00:1b.0/sound/card0/input7"
+    ]
+  }
+]

@@ -1,0 +1,23 @@
+test_changing_log_bytes_are_explicitly_unverified (test_decode_capture.DecodeTests.test_changing_log_bytes_are_explicitly_unverified) ... ok
+test_duplicate_label_is_rejected (test_decode_capture.DecodeTests.test_duplicate_label_is_rejected) ... ok
+test_hash_and_size_are_verified (test_decode_capture.DecodeTests.test_hash_and_size_are_verified) ... ok
+test_invalid_base64_is_rejected (test_decode_capture.DecodeTests.test_invalid_base64_is_rejected) ... ok
+test_path_traversal_label_is_rejected (test_decode_capture.DecodeTests.test_path_traversal_label_is_rejected) ... ok
+test_plus_in_real_boot_script_label_is_safe (test_decode_capture.DecodeTests.test_plus_in_real_boot_script_label_is_safe) ... ERROR
+test_source_mismatch_is_rejected (test_decode_capture.DecodeTests.test_source_mismatch_is_rejected) ... ok
+
+======================================================================
+ERROR: test_plus_in_real_boot_script_label_is_safe (test_decode_capture.DecodeTests.test_plus_in_real_boot_script_label_is_safe)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-offline/boot-provenance-readonly-20261001T025947Z/test_decode_capture.py", line 15, in test_plus_in_real_boot_script_label_is_safe
+    p=decode_records(frame('_etc_grub_d_20_memtest86+'))[0]
+      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-offline/boot-provenance-readonly-20261001T025947Z/decode_capture.py", line 17, in decode_records
+    raise ValueError('unsafe or duplicate artifact label')
+ValueError: unsafe or duplicate artifact label
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.009s
+
+FAILED (errors=1)

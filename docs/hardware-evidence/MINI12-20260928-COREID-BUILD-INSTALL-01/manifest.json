@@ -1,0 +1,130 @@
+{
+  "schema": "sgx535-coreid-build-install-v1",
+  "session_id": "MINI12-20260928-COREID-BUILD-INSTALL-01",
+  "host_generated_utc": "2026-09-28T03:28:22.685429+00:00",
+  "target_build": "FAIL",
+  "installed": false,
+  "mmio_read_attempts": 0,
+  "gate_b": "BLOCKED",
+  "whitelist": [],
+  "h0_manifest_sha256": "22b8c5e5b196ca9dbef5537a162a5047c2ee3006dd785dd691e26b203e34b130",
+  "p1_manifest_sha256": "d7fb5cf5827ba89a7cfcaa7b3f88192ce70ad9b41dfdb04189f9ec61a0582eee",
+  "first_mmio_01_manifest_sha256": "8a7f805e13f5f3afa534cca420f5b4abdb18ced3338c2af6182eacb9d9b3141d",
+  "files": [
+    {
+      "path": "capture.py",
+      "bytes": 2559,
+      "sha256": "3e5b29c6d12f586da116b50fb34a32711958739df0dbf0950ae361e79c3ea7c0"
+    },
+    {
+      "path": "raw/compiler-identity.meta.json",
+      "bytes": 1024,
+      "sha256": "72c50ef1e7271a893d804ab5c6fa5da37c68c53932bb529b1e916e0db4fed80a"
+    },
+    {
+      "path": "raw/compiler-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/compiler-identity.stdout",
+      "bytes": 267,
+      "sha256": "0ec5c658bf09a438b656b62e35803f2a2be3af6d497886f339abe8e150cf354d"
+    },
+    {
+      "path": "raw/identity.meta.json",
+      "bytes": 980,
+      "sha256": "1613145ee7823a681875b10aaf5a0dfee23dbdc842541935e1756f93a6d3b3a4"
+    },
+    {
+      "path": "raw/identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/identity.stdin",
+      "bytes": 776,
+      "sha256": "216ad92aa8014d8eeea170362b38e234adfcc039bbcfc58ba5e377dd82b29e3c"
+    },
+    {
+      "path": "raw/identity.stdout",
+      "bytes": 341,
+      "sha256": "74293ff9283976dfc9941a4addebce598bbbb2afde3eab6ad894f5030cac84cc"
+    },
+    {
+      "path": "raw/make-build-dir.meta.json",
+      "bytes": 981,
+      "sha256": "7ce4ddd00da1bfbd45d7ab201463d34c23ddfe299ab72b6398a70c181f9ea1e5"
+    },
+    {
+      "path": "raw/make-build-dir.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/make-build-dir.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/native-build.meta.json",
+      "bytes": 1102,
+      "sha256": "b57afdb82055acc6b4288a5bfff82b17ef5b34ce5049b859e9caec5b00b7b73a"
+    },
+    {
+      "path": "raw/native-build.stderr",
+      "bytes": 156,
+      "sha256": "ecedc31c765d296127d7e4ee3021688dd54edd51e2b9dc65e4d6b9d8aacce259"
+    },
+    {
+      "path": "raw/native-build.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/transfer-reviewed-files.meta.json",
+      "bytes": 1115,
+      "sha256": "3fcc47628cbfce6e38101c31bf8d96d775368446e29ee61e09604894ff025ca8"
+    },
+    {
+      "path": "raw/transfer-reviewed-files.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/transfer-reviewed-files.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/transferred-hashes.meta.json",
+      "bytes": 1014,
+      "sha256": "ce65adfb3d49b3d36a55dc0d56244231e3efff256a8da4c7bd9f806f43fe12bf"
+    },
+    {
+      "path": "raw/transferred-hashes.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/transferred-hashes.stdout",
+      "bytes": 241,
+      "sha256": "e7a7088f646d88707c9a8475ae9c26171f3672aabeecd93d9583ff60747deec0"
+    },
+    {
+      "path": "remote-build-path.txt",
+      "bytes": 46,
+      "sha256": "7a3139975d224d5517a22eca53dfdfcc132efd26b801b081a5c6367ff29dc78d"
+    },
+    {
+      "path": "results.md",
+      "bytes": 2599,
+      "sha256": "5145a911aabb6e6826e492317a40388a6198d2f60d7135028b71a12065d44007"
+    },
+    {
+      "path": "source-hashes.txt",
+      "bytes": 241,
+      "sha256": "e7a7088f646d88707c9a8475ae9c26171f3672aabeecd93d9583ff60747deec0"
+    }
+  ]
+}

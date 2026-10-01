@@ -1,0 +1,1223 @@
+{
+  "docs/phase7/psb-dri-re/CODEX-HANDOFF.md": [
+    {
+      "file": "docs/hardware-evidence/MINI12-20260927-H0/README.md",
+      "line": 5,
+      "kind": "markdown-link"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T025947Z-BOOT-PROVENANCE-READONLY-01/initial-git-status.txt",
+      "line": 54,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T025947Z-BOOT-PROVENANCE-READONLY-01/initial-repository-files.json",
+      "line": 571,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/final-checks/final-git-status.stdout",
+      "line": 56,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/final-checks/git-status.stdout",
+      "line": 56,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/initial-git-status.txt",
+      "line": 54,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/initial-repository-files.json",
+      "line": 571,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/git-status-final.stdout",
+      "line": 57,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/initial-files.json",
+      "line": 1081,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/initial-git-status.txt",
+      "line": 57,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/offline-checks/git-status.stdout",
+      "line": 57,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/checks-terminal/git-status.stdout",
+      "line": 58,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase7/README.md",
+      "line": 4,
+      "kind": "markdown-link"
+    },
+    {
+      "file": "docs/phase7/psb-dri-re/CODEX-HANDOFF-chronology.md",
+      "line": 3,
+      "kind": "markdown-link"
+    },
+    {
+      "file": "docs/phase7/psb-dri-re/pds-target-provider-discriminators.csv",
+      "line": 8,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase7/psb-dri-re/pds-target-provider-identity.md",
+      "line": 106,
+      "kind": "markdown-link"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/final-git-status.txt",
+      "line": 54,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/initial-git-status.txt",
+      "line": 54,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/initial-repository-files.json",
+      "line": 571,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/final-git-status.txt",
+      "line": 54,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/initial-git-status.txt",
+      "line": 54,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/initial-repository-files.json",
+      "line": 846,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-20260930/final-git-status.txt",
+      "line": 54,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-20260930/initial-git-status.txt",
+      "line": 54,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-20260930/initial-repository-files.json",
+      "line": 846,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/final-git-status.txt",
+      "line": 54,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/initial-git-status.txt",
+      "line": 54,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/initial-repository-files.json",
+      "line": 571,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/experimental-first-load-01-20261001/final-checks/git-status.stdout",
+      "line": 56,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/experimental-first-load-01-20261001/final-git-status.txt",
+      "line": 56,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/experimental-first-load-01-20261001/initial-files.json",
+      "line": 806,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/experimental-first-load-01-20261001/initial-git-status.txt",
+      "line": 56,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/experimental-first-load-01-20261001/post-documentation-checks/final-status.stdout",
+      "line": 56,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/experimental-first-load-01-20261001/post-documentation-preservation/final-status.stdout",
+      "line": 56,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-operational-review-20261001/checks-final/git-status.stdout",
+      "line": 56,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-operational-review-20261001/checks/git-status.stdout",
+      "line": 56,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-operational-review-20261001/final-git-status.stdout",
+      "line": 56,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-operational-review-20261001/initial-files.json",
+      "line": 806,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-operational-review-20261001/initial-git-status.txt",
+      "line": 56,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-review-20261001/final-git-status.txt",
+      "line": 54,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-review-20261001/initial-git-status.txt",
+      "line": 54,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-review-20261001/initial-repository-files.json",
+      "line": 571,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/i386-gcc-toolchain-20260930/initial-git-status.txt",
+      "line": 54,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/kernel-health-qualification-20261001/checks-stage-qualified/git-status.stdout",
+      "line": 58,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/kernel-health-qualification-20261001/checks/git-status.stdout",
+      "line": 57,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/kernel-health-qualification-20261001/initial-git-status.txt",
+      "line": 57,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/final-git-status.txt",
+      "line": 54,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/initial-git-status.txt",
+      "line": 54,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/initial-repository-files.json",
+      "line": 571,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/first-triangle-offline-checkpoint.md",
+      "line": 3,
+      "kind": "markdown-link"
+    }
+  ],
+  "docs/phase7/psb-dri-re/CODEX-HANDOFF-chronology.md": [
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T025947Z-BOOT-PROVENANCE-READONLY-01/initial-git-status.txt",
+      "line": 53,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T025947Z-BOOT-PROVENANCE-READONLY-01/initial-repository-files.json",
+      "line": 570,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/final-checks/final-git-status.stdout",
+      "line": 55,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/final-checks/git-status.stdout",
+      "line": 55,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/initial-git-status.txt",
+      "line": 53,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/initial-repository-files.json",
+      "line": 570,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/git-status-final.stdout",
+      "line": 56,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/initial-files.json",
+      "line": 1080,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/initial-git-status.txt",
+      "line": 56,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/offline-checks/git-status.stdout",
+      "line": 56,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/checks-terminal/git-status.stdout",
+      "line": 57,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase7/psb-dri-re/CODEX-HANDOFF.md",
+      "line": 3,
+      "kind": "markdown-link"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/final-git-status.txt",
+      "line": 53,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/initial-git-status.txt",
+      "line": 53,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/initial-repository-files.json",
+      "line": 570,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/final-git-status.txt",
+      "line": 53,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/initial-git-status.txt",
+      "line": 53,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/initial-repository-files.json",
+      "line": 845,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-20260930/final-git-status.txt",
+      "line": 53,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-20260930/initial-git-status.txt",
+      "line": 53,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-20260930/initial-repository-files.json",
+      "line": 845,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/final-git-status.txt",
+      "line": 53,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/initial-git-status.txt",
+      "line": 53,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/initial-repository-files.json",
+      "line": 570,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/experimental-first-load-01-20261001/final-checks/git-status.stdout",
+      "line": 55,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/experimental-first-load-01-20261001/final-git-status.txt",
+      "line": 55,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/experimental-first-load-01-20261001/initial-files.json",
+      "line": 805,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/experimental-first-load-01-20261001/initial-git-status.txt",
+      "line": 55,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/experimental-first-load-01-20261001/post-documentation-checks/final-status.stdout",
+      "line": 55,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/experimental-first-load-01-20261001/post-documentation-preservation/final-status.stdout",
+      "line": 55,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-operational-review-20261001/checks-final/git-status.stdout",
+      "line": 55,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-operational-review-20261001/checks/git-status.stdout",
+      "line": 55,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-operational-review-20261001/final-git-status.stdout",
+      "line": 55,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-operational-review-20261001/initial-files.json",
+      "line": 805,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-operational-review-20261001/initial-git-status.txt",
+      "line": 55,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-review-20261001/final-git-status.txt",
+      "line": 53,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-review-20261001/initial-git-status.txt",
+      "line": 53,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-review-20261001/initial-repository-files.json",
+      "line": 570,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/i386-gcc-toolchain-20260930/initial-git-status.txt",
+      "line": 53,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/kernel-health-qualification-20261001/checks-stage-qualified/git-status.stdout",
+      "line": 57,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/kernel-health-qualification-20261001/checks/git-status.stdout",
+      "line": 56,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/kernel-health-qualification-20261001/initial-git-status.txt",
+      "line": 56,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/final-git-status.txt",
+      "line": 53,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/initial-git-status.txt",
+      "line": 53,
+      "kind": "historical-status-listing"
+    },
+    {
+      "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/initial-repository-files.json",
+      "line": 570,
+      "kind": "hash-or-provenance-record"
+    }
+  ],
+  "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md": [
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T025947Z-BOOT-PROVENANCE-READONLY-01/initial-repository-files.json",
+      "line": 640,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T025947Z-BOOT-PROVENANCE-READONLY-01/initial-repository-files.json",
+      "line": 1040,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T025947Z-BOOT-PROVENANCE-READONLY-01/initial-repository-files.json",
+      "line": 1135,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T025947Z-BOOT-PROVENANCE-READONLY-01/initial-repository-files.json",
+      "line": 1300,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T025947Z-BOOT-PROVENANCE-READONLY-01/initial-repository-files.json",
+      "line": 1373,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/final-checks/repository-delta.json",
+      "line": 4,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/final-checks/repository-delta.json",
+      "line": 330,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/initial-repository-files.json",
+      "line": 640,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/initial-repository-files.json",
+      "line": 1040,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/initial-repository-files.json",
+      "line": 1135,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/initial-repository-files.json",
+      "line": 1300,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/initial-repository-files.json",
+      "line": 1373,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/verify_record_integrity.py",
+      "line": 5,
+      "kind": "recorded-script-path"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/allowed-checkpoint-updates.json",
+      "line": 2,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/initial-files.json",
+      "line": 1211,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/initial-files.json",
+      "line": 1611,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/initial-files.json",
+      "line": 1706,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/initial-files.json",
+      "line": 2169,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/initial-files.json",
+      "line": 2242,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/preservation.json",
+      "line": 7,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/reviewed-inputs.json",
+      "line": 11,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/working-tree-delta.json",
+      "line": 4,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/working-tree-delta.json",
+      "line": 3,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "line": 530,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/final-verification.json",
+      "line": 4,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/final-verification.json",
+      "line": 19,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/final-verification.json",
+      "line": 24,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/final-verification.json",
+      "line": 29,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/final-verification.json",
+      "line": 34,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/final-verification.json",
+      "line": 39,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/final-verification.json",
+      "line": 44,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/final-verification.json",
+      "line": 49,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/final-verification.json",
+      "line": 54,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/final-verification.json",
+      "line": 59,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/final-verification.json",
+      "line": 64,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/final-verification.json",
+      "line": 69,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/final-verification.json",
+      "line": 74,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/final-verification.json",
+      "line": 79,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/final-verification.json",
+      "line": 84,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/final-verification.json",
+      "line": 89,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/final-verification.json",
+      "line": 94,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/final-verification.json",
+      "line": 99,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/final-verification.json",
+      "line": 125,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/final-verification.json",
+      "line": 205,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-preparation-20260930/initial-repository-files.json",
+      "line": 640,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/final-verification.json",
+      "line": 4,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/final-verification.json",
+      "line": 122,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/final-verification.json",
+      "line": 127,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/final-verification.json",
+      "line": 132,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/final-verification.json",
+      "line": 137,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/final-verification.json",
+      "line": 142,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/final-verification.json",
+      "line": 147,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/final-verification.json",
+      "line": 152,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/final-verification.json",
+      "line": 157,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/final-verification.json",
+      "line": 162,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/final-verification.json",
+      "line": 167,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/final-verification.json",
+      "line": 172,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/final-verification.json",
+      "line": 177,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/final-verification.json",
+      "line": 182,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/final-verification.json",
+      "line": 187,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/final-verification.json",
+      "line": 192,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/final-verification.json",
+      "line": 197,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/final-verification.json",
+      "line": 202,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/final-verification.json",
+      "line": 207,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/final-verification.json",
+      "line": 212,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/final-verification.json",
+      "line": 217,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/final-verification.json",
+      "line": 248,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/final-verification.json",
+      "line": 338,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/antix-kbuild-successor-20260930/initial-repository-files.json",
+      "line": 976,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-20260930/final-verification.json",
+      "line": 4,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-20260930/final-verification.json",
+      "line": 107,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-20260930/initial-repository-files.json",
+      "line": 976,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "line": 420,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/i386-gcc-offline-build-plan.md",
+      "line": 345,
+      "kind": "markdown-link"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+      "line": 45,
+      "kind": "markdown-link"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-link-check.json",
+      "line": 26,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-link-check.json",
+      "line": 30,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-link-check.json",
+      "line": 34,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-link-check.json",
+      "line": 38,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-link-check.json",
+      "line": 42,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-link-check.json",
+      "line": 46,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-link-check.json",
+      "line": 50,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-link-check.json",
+      "line": 54,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-link-check.json",
+      "line": 58,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-link-check.json",
+      "line": 62,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-link-check.json",
+      "line": 66,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-link-check.json",
+      "line": 70,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-link-check.json",
+      "line": 74,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-link-check.json",
+      "line": 78,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-link-check.json",
+      "line": 82,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-link-check.json",
+      "line": 86,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-link-check.json",
+      "line": 90,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-link-check.json",
+      "line": 94,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-link-check.json",
+      "line": 98,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-link-check.json",
+      "line": 102,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-link-check.json",
+      "line": 106,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-link-check.json",
+      "line": 110,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/final-preservation-check.json",
+      "line": 4,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/final-working-tree-delta.json",
+      "line": 3,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/final-working-tree-delta.json",
+      "line": 122,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/final-working-tree-delta.json",
+      "line": 215,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/initial-repository-files.json",
+      "line": 640,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/manifest.json",
+      "line": 109,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/manifest.json",
+      "line": 203,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/scoped-diff-CHATGPT-HANDOFF-POST-ATTEMPT03.md.txt",
+      "line": 1,
+      "kind": "scoped-diff-path"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/scoped-diff-CHATGPT-HANDOFF-POST-ATTEMPT03.md.txt",
+      "line": 2,
+      "kind": "scoped-diff-path"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/scoped-diff-CHATGPT-HANDOFF-POST-ATTEMPT03.md.txt",
+      "line": 131,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/candidate-01-build-20260930/scoped-diff-CHATGPT-HANDOFF-POST-ATTEMPT03.md.txt",
+      "line": 167,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/experimental-first-load-01-20261001/allowed-checkpoint-updates.json",
+      "line": 3,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/experimental-first-load-01-20261001/initial-files.json",
+      "line": 875,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/experimental-first-load-01-20261001/initial-files.json",
+      "line": 1275,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/experimental-first-load-01-20261001/initial-files.json",
+      "line": 1370,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/experimental-first-load-01-20261001/initial-files.json",
+      "line": 1535,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/experimental-first-load-01-20261001/initial-files.json",
+      "line": 1608,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/experimental-first-load-01-20261001/post-documentation-preservation/document-links.json",
+      "line": 38,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/experimental-first-load-01-20261001/post-documentation-preservation/document-links.json",
+      "line": 43,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/experimental-first-load-01-20261001/update_checkpoint.py",
+      "line": 20,
+      "kind": "recorded-script-path"
+    },
+    {
+      "file": "docs/phase8/artifacts/experimental-first-load-01-20261001/working-tree-delta.json",
+      "line": 6,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-operational-review-20261001/allowed-checkpoint-updates.json",
+      "line": 2,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-operational-review-20261001/initial-files.json",
+      "line": 875,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-operational-review-20261001/initial-files.json",
+      "line": 1275,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-operational-review-20261001/initial-files.json",
+      "line": 1370,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-operational-review-20261001/initial-files.json",
+      "line": 1681,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-operational-review-20261001/initial-files.json",
+      "line": 1754,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-operational-review-20261001/preservation-final.json",
+      "line": 7,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-operational-review-20261001/preservation-initial-files.json",
+      "line": 6,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-operational-review-20261001/working-tree-delta.json",
+      "line": 5,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-review-20261001/initial-repository-files.json",
+      "line": 640,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-review-20261001/initial-repository-files.json",
+      "line": 1040,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-review-20261001/initial-repository-files.json",
+      "line": 1135,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-review-20261001/initial-repository-files.json",
+      "line": 1234,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-review-20261001/initial-repository-files.json",
+      "line": 1307,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/first-load-review-20261001/working-tree-delta.json",
+      "line": 4,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/i386-gcc-toolchain-20260930/final-verification.json",
+      "line": 3,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "line": 418,
+      "kind": "mention"
+    },
+    {
+      "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+      "line": 60,
+      "kind": "markdown-link"
+    },
+    {
+      "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/final-preservation-check.json",
+      "line": 4,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/final-preservation-check.json",
+      "line": 17,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/final-preservation-check.json",
+      "line": 88,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/initial-repository-files.json",
+      "line": 640,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/initial-repository-files.json",
+      "line": 1040,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/initial-repository-files.json",
+      "line": 1135,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/manifest.json",
+      "line": 5,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/manifest.json",
+      "line": 77,
+      "kind": "hash-or-provenance-record"
+    },
+    {
+      "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/scoped-diff-CHATGPT-HANDOFF-POST-ATTEMPT03.md.txt",
+      "line": 1,
+      "kind": "scoped-diff-path"
+    },
+    {
+      "file": "docs/phase8/artifacts/lifecycle-gate-review-20261001/scoped-diff-CHATGPT-HANDOFF-POST-ATTEMPT03.md.txt",
+      "line": 2,
+      "kind": "scoped-diff-path"
+    },
+    {
+      "file": "docs/phase8/i386-gcc-offline-build-plan.md",
+      "line": 360,
+      "kind": "markdown-link"
+    },
+    {
+      "file": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "line": 168,
+      "kind": "markdown-link"
+    }
+  ]
+}

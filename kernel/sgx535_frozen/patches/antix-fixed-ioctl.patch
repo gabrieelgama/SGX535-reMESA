@@ -1,0 +1,20 @@
+--- a/drivers/gpu/drm/gma500/psb_drv.c
++++ b/drivers/gpu/drm/gma500/psb_drv.c
+@@ -31,6 +31,8 @@
+ #include "mid_bios.h"
+ #include "power.h"
+ #include "psb_drv.h"
++#include "gma500_fixed_entry.h"
++#include "gma500_fixed_uapi.h"
+ #include "psb_intel_reg.h"
+ #include "psb_reg.h"
+ 
+@@ -102,6 +104,8 @@
+  * Standard IOCTLs.
+  */
+ static const struct drm_ioctl_desc psb_ioctls[] = {
++	DRM_IOCTL_DEF_DRV(PSB_FIXED_TRIANGLE, sgx535_gma500_fixed_ioctl,
++			   DRM_ROOT_ONLY),
+ };
+ 
+ static int psb_do_init(struct drm_device *dev)

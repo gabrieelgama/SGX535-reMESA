@@ -1,0 +1,26 @@
+{
+  "preflight": {
+    "root_01": "authentication failure, script not run",
+    "root_02": "49/49 PASS"
+  },
+  "staging": "PASS exact exclusive copies/readback; stock unchanged",
+  "experimental_selection": "OPERATOR REPORTED ONCE; stock default",
+  "experimental_userspace": "OPERATOR REPORTED WITHIN120",
+  "experimental_root_capture": "FAILED AUTH BEFORE SCRIPT",
+  "first_owner": "NOT ESTABLISHED",
+  "live_first_load": "NOT ESTABLISHED",
+  "experimental_boot_id": "UNKNOWN",
+  "recovery": "CURRENT STOCK STACK PASS; complete three-boot cycle NOT ESTABLISHED",
+  "sgx_fire": false,
+  "hot_unload_replace": false,
+  "gate_b": "BLOCKED",
+  "whitelist": [],
+  "current_boot_id": "83fd48ed-7a27-4d4d-bd88-62880c3ffa78",
+  "current_loaded_owner": "preserved original gma500_gfx",
+  "stock_physical_display_and_capture_deadline": "OPERATOR FINAL CONFIRMATION PENDING",
+  "stock_physical_display": "PASS OPERATOR CONFIRMED",
+  "stock_capture_deadline": "OPERATOR CONFIRMED; independent clock corroboration UNKNOWN",
+  "experimental_cycle_authorization": "SPENT; no second experimental boot",
+  "current_stock_machine_health": "PASS SELECTED READ-ONLY GUARDS",
+  "sgx_execution_authorized": false
+}

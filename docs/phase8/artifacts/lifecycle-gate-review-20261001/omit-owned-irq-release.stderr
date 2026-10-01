@@ -1,0 +1,1 @@
+omit-owned-irq-release: /home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_irq_lifecycle.c:94: psb_modeset_cleanup: Assertion `observe_original || !dev->irq_enabled' failed.

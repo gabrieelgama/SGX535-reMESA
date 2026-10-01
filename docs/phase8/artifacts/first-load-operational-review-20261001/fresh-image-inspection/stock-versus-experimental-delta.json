@@ -1,0 +1,18 @@
+{
+  "stock_members": 2138,
+  "experimental_members": 2141,
+  "added": [
+    "scripts/sgx535-first-load",
+    "usr/lib/sgx535-first-load",
+    "usr/lib/sgx535-first-load/gma500_gfx.ko"
+  ],
+  "modified": [
+    "init"
+  ],
+  "removed": [],
+  "unchanged_main_raw_records": 2132,
+  "early_prefix_byte_exact": true,
+  "all_unchanged_records_preserve_headers_payloads_padding_and_hardlink_ids": true,
+  "dependency_indices": "stock indices untouched; private payload loaded by explicit fixed-path insmod",
+  "full_stock_framework_preserved_except_guarded_init_insertion": true
+}

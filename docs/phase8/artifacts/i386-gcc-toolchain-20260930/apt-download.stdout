@@ -1,0 +1,54 @@
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  gcc-14-cross-base gcc-14-i686-linux-gnu-base libasan8-i386-cross
+  libatomic1-i386-cross libc6-i386-cross libgcc-14-dev-i386-cross
+  libgcc-s1-i386-cross libgomp1-i386-cross libitm1-i386-cross
+  libquadmath0-i386-cross libssl3t64 libstdc++6-i386-cross
+  libubsan1-i386-cross linux-libc-dev-i386-cross m4 openssl
+  openssl-provider-legacy
+Suggested packages:
+  binutils-doc bison-doc gcc-14-locales cpp-14-doc flex-doc gcc-14-doc
+  libssl-doc m4-doc
+Recommended packages:
+  libfl-dev
+The following NEW packages will be installed:
+  bc binutils-i686-linux-gnu bison cpp-14-i686-linux-gnu flex
+  gcc-14-cross-base gcc-14-i686-linux-gnu gcc-14-i686-linux-gnu-base
+  libasan8-i386-cross libatomic1-i386-cross libc6-dev-i386-cross
+  libc6-i386-cross libgcc-14-dev-i386-cross libgcc-s1-i386-cross
+  libgomp1-i386-cross libitm1-i386-cross libquadmath0-i386-cross libssl-dev
+  libstdc++6-i386-cross libubsan1-i386-cross linux-libc-dev-i386-cross m4
+The following packages will be upgraded:
+  libssl3t64 openssl openssl-provider-legacy
+3 upgraded, 22 newly installed, 0 to remove and 79 not upgraded.
+Need to get 55.0 MB of archives.
+After this operation, 184 MB of additional disk space will be used.
+Get:1 https://deb.debian.org/debian trixie/main arm64 m4 arm64 1.4.19-8 [285 kB]
+Get:2 https://deb.debian.org/debian trixie/main arm64 flex arm64 2.6.4-8.2+b4 [412 kB]
+Get:3 https://deb.debian.org/debian trixie/main arm64 openssl-provider-legacy arm64 3.5.7-1~deb13u2 [313 kB]
+Get:4 https://deb.debian.org/debian trixie/main arm64 libssl3t64 arm64 3.5.7-1~deb13u2 [2766 kB]
+Get:5 https://deb.debian.org/debian trixie/main arm64 bc arm64 1.07.1-4+b1 [101 kB]
+Get:6 https://deb.debian.org/debian trixie/main arm64 bison arm64 2:3.8.2+dfsg-1+b2 [1149 kB]
+Get:7 https://deb.debian.org/debian trixie/main arm64 gcc-14-i686-linux-gnu-base arm64 14.2.0-19cross1 [49.6 kB]
+Get:8 https://deb.debian.org/debian trixie/main arm64 cpp-14-i686-linux-gnu arm64 14.2.0-19cross1 [10.4 MB]
+Get:9 https://deb.debian.org/debian trixie/main arm64 gcc-14-cross-base all 14.2.0-19cross1 [44.9 kB]
+Get:10 https://deb.debian.org/debian trixie/main arm64 binutils-i686-linux-gnu arm64 2.44-3 [1479 kB]
+Get:11 https://deb.debian.org/debian trixie/main arm64 libc6-i386-cross all 2.41-11cross1 [1424 kB]
+Get:12 https://deb.debian.org/debian trixie/main arm64 libgcc-s1-i386-cross all 14.2.0-19cross1 [88.2 kB]
+Get:13 https://deb.debian.org/debian trixie/main arm64 libgomp1-i386-cross all 14.2.0-19cross1 [136 kB]
+Get:14 https://deb.debian.org/debian trixie/main arm64 libitm1-i386-cross all 14.2.0-19cross1 [26.9 kB]
+Get:15 https://deb.debian.org/debian trixie/main arm64 libatomic1-i386-cross all 14.2.0-19cross1 [7384 B]
+Get:16 https://deb.debian.org/debian trixie/main arm64 libasan8-i386-cross all 14.2.0-19cross1 [2597 kB]
+Get:17 https://deb.debian.org/debian trixie/main arm64 libstdc++6-i386-cross all 14.2.0-19cross1 [719 kB]
+Get:18 https://deb.debian.org/debian trixie/main arm64 libubsan1-i386-cross all 14.2.0-19cross1 [1052 kB]
+Get:19 https://deb.debian.org/debian trixie/main arm64 libquadmath0-i386-cross all 14.2.0-19cross1 [231 kB]
+Get:20 https://deb.debian.org/debian trixie/main arm64 libgcc-14-dev-i386-cross all 14.2.0-19cross1 [2583 kB]
+Get:21 https://deb.debian.org/debian trixie/main arm64 gcc-14-i686-linux-gnu arm64 14.2.0-19cross1 [20.0 MB]
+Get:22 https://deb.debian.org/debian trixie/main arm64 linux-libc-dev-i386-cross all 6.12.38-1cross1 [2470 kB]
+Get:23 https://deb.debian.org/debian trixie/main arm64 libc6-dev-i386-cross all 2.41-11cross1 [1806 kB]
+Get:24 https://deb.debian.org/debian trixie/main arm64 libssl-dev arm64 3.5.7-1~deb13u2 [3394 kB]
+Get:25 https://deb.debian.org/debian trixie/main arm64 openssl arm64 3.5.7-1~deb13u2 [1472 kB]
+Fetched 55.0 MB in 50s (1103 kB/s)
+Download complete and in download only mode

@@ -1,0 +1,77 @@
+[
+  {
+    "repository_path": "kernel/sgx535_frozen/gma500_bo_owner.c",
+    "module_filename": "gma500_bo_owner.c",
+    "sha256": "81721337bbfcf7ccf7eb2c9e863141173fe1b7f1e735c99983741d01587cc8e5"
+  },
+  {
+    "repository_path": "kernel/sgx535_frozen/gma500_bo_owner.h",
+    "module_filename": "gma500_bo_owner.h",
+    "sha256": "16d017f4f7641617765adaf9a2d0fe68840026db7deba16d0a718b807dc73378"
+  },
+  {
+    "repository_path": "kernel/sgx535_frozen/gma500_fixed_backend.c",
+    "module_filename": "gma500_fixed_backend.c",
+    "sha256": "09dddfe438a1b66cba539a0c9509908df07ffc08ff0251d5c9377e58edd85fab"
+  },
+  {
+    "repository_path": "kernel/sgx535_frozen/gma500_fixed_backend.h",
+    "module_filename": "gma500_fixed_backend.h",
+    "sha256": "1421ff4444349f27aa25fb33559aa87d0be532fc97520bb1ad4fb41a3ab1b735"
+  },
+  {
+    "repository_path": "kernel/sgx535_frozen/gma500_fixed_entry.c",
+    "module_filename": "gma500_fixed_entry.c",
+    "sha256": "d78555bb35ab816f96257a74d4c70b50fc6d86dcde88f392d776774d53eb5b27"
+  },
+  {
+    "repository_path": "kernel/sgx535_frozen/gma500_fixed_entry.h",
+    "module_filename": "gma500_fixed_entry.h",
+    "sha256": "3525bf7a2126e087bb8c6766a8a8f083b9fe51d8d5c733b3af13d5f331e3c046"
+  },
+  {
+    "repository_path": "kernel/sgx535_frozen/gma500_fixed_uapi.h",
+    "module_filename": "gma500_fixed_uapi.h",
+    "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420"
+  },
+  {
+    "repository_path": "tools/psb-dri-re/frozen_kernel_contract.c",
+    "module_filename": "frozen_kernel_contract.c",
+    "sha256": "2d3679a5fec14a4a0e2259e397fe53abf979b89a2db3595c0f059fab9f64485a"
+  },
+  {
+    "repository_path": "tools/psb-dri-re/frozen_kernel_contract.h",
+    "module_filename": "frozen_kernel_contract.h",
+    "sha256": "6bdd02e87f6a11bbc8de3033a78ab49335964b1fcb03d6d8de527aa6ecdaeca2"
+  },
+  {
+    "repository_path": "tools/psb-dri-re/frozen_fixed_service.c",
+    "module_filename": "frozen_fixed_service.c",
+    "sha256": "408293ed00b24c47ea33fbb7469b3cabec4d4a2078e16b78cbf4cb0631fdb746"
+  },
+  {
+    "repository_path": "tools/psb-dri-re/frozen_fixed_service.h",
+    "module_filename": "frozen_fixed_service.h",
+    "sha256": "38321e7cb362c08c3521315dc3d30c01d8e149b614cd5fe98c910a87b5b3ee60"
+  },
+  {
+    "repository_path": "tools/psb-dri-re/frozen_fixed_io.c",
+    "module_filename": "frozen_fixed_io.c",
+    "sha256": "b6edb5e886b48ba9054f9c008283e7862510809b82f4e85cca6dade56ce06343"
+  },
+  {
+    "repository_path": "tools/psb-dri-re/frozen_fixed_io.h",
+    "module_filename": "frozen_fixed_io.h",
+    "sha256": "5189a82db12c20f9a6d243a03c7819636a8e9dbd7acf03baf1f2d12fdc446718"
+  },
+  {
+    "repository_path": "tools/psb-dri-re/frozen_kernel_initial.inc",
+    "module_filename": "frozen_kernel_initial.inc",
+    "sha256": "bea8ffb63a0635cbb44363ad8d500ead22fba6fd11d21eeaf3a217439c0f6d2c"
+  },
+  {
+    "repository_path": "tools/psb-dri-re/frozen_kernel_relocations.inc",
+    "module_filename": "frozen_kernel_relocations.inc",
+    "sha256": "8fa3937379ffbefeab742f6b5cfc027f6fc8e91c1918d238765812158fd74a24"
+  }
+]

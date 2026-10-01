@@ -1,0 +1,7 @@
+{
+  "verbatim": "Physical display is normal. The stock recovery capture completed before the 120-second handoff limit.",
+  "proof_class": "OPERATOR OBSERVATION",
+  "display_normal": true,
+  "reported_capture_within120": true,
+  "machine_clock_corroboration": "NOT CAPTURED; see timing-interpretation.json"
+}

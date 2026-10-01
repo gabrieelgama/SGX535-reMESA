@@ -1,0 +1,217 @@
+--- /home/gama/sgx535-offline/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md	2026-09-30 23:57:05.807413951 +0000
++++ /home/gama/sgx535-gfx/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md	2026-10-01 00:06:18.723413740 +0000
+@@ -1,6 +1,6 @@
+ # ChatGPT handoff — post-Attempt-03, qualified target ABI evidence
+ 
+-Updated: 2026-09-30. Repository: `/home/gama/sgx535-gfx`.
++Updated: 2026-10-01. Repository: `/home/gama/sgx535-gfx`.
+ **FIRST TRIANGLE: NOT ATTEMPTED at the SGX submission stage.**
+ **Gate B BLOCKED; whitelist `[]`; no new SGX attempt is authorized.**
+ 
+@@ -16,15 +16,20 @@
+ A separate [fresh-output successor](antix-kbuild-successor-equivalence.md)
+ now PASSES the complete documented preparation/config/header/layout gate;
+ the failed output/evidence remain unchanged.
+-No target contact, candidate rebuild/deployment, staging, commit or push occurred.
+-
+-**Newest build continuation:** [candidate #1 integration qualification](candidate-01-offline-build-qualification.md)
+-STOPPED before Kbuild. The retained Makefile patch requires an EOF blank line
+-absent from the exact archive; its strict dry run fails. The ioctl patch also
+-fails a strict dry run despite exact old-context occurrences; IRQ dry run passes.
+-No patches applied, no target table installed, no new candidate compiled.
+-Preparation/toolchain gates remain PASS. Next step is separately scoped
+-integration-patch correction/review, not another preparation or target action.
++**Current offline build/lifecycle continuation:** [qualified candidate results](candidate-01-build-and-lifecycle-review.md)
++close the mechanical patch and module ABI blockers. Candidate #1 and the separate
++IRQ-lifecycle derivative both build through normal external Kbuild, match every
++actual import against the captured target table, and repeat byte-identically.
++The derivative now pairs IRQ release before private/MMIO destruction and masks
++all device routing on actual handler removal, preserving direct-PM behavior.
++**The first hot removal of the active unpatched original remains BLOCKED.**
++The correction cannot change that original's teardown. Gate B remains BLOCKED,
++whitelist `[]`; no target contact or SGX action occurred. The next missing fact
++is the normal first-load boot/initramfs source and original fallback, requiring
++a separately authorized read-only boot-route inventory before a cold-start-only
++alternative can be reviewed. Current verification: 205 tests, zero skips; three
++UBSan harnesses plus lifecycle UBSan PASS; dry-run hash unchanged; `--complete`
++retains its four labels. Neither artifact is authorized for deployment.
+ 
+ ## 1. Project, target and experiment
+ 
+@@ -56,9 +61,9 @@
+ | Target export-table provenance/original import coverage | Established; 222/222 match |
+ | Candidate-only target CRC evidence | Established for all nine names |
+ | Old candidate | REJECTED; 154 CRC mismatches against qualified target table |
+-| New compatible candidate | Not built |
++| New candidates | Candidate #1 and lifecycle derivative: ABI PASS offline; not deployed |
+ | i386 GCC toolchain | PASS for local rootless provisioning/identity/smoke checks |
+-| Isolated Kbuild preparation/equivalence | PASS for fresh successor; failed predecessor preserved; no candidate compiled |
++| Isolated Kbuild preparation/equivalence | PASS for fresh successor; 7,426 config/generated-state hashes unchanged across new builds |
+ | GMA500 hot-transition/recovery | BLOCKED; previous restore oopsed |
+ | Gate B / whitelist | BLOCKED / `[]` |
+ | Active SGX action | NOT PERFORMED; no TA/raster work occurred in Attempt 03 |
+@@ -201,7 +206,7 @@
+ scene-memory event, **not** triangle completion or an automatically fatal
+ fault. Existing regression preserves that correction.
+ 
+-## 8. Fresh offline verification in this documentation turn
++## 8. Historical research-turn verification (newer results above)
+ 
+ **PROVEN BY REPOSITORY EVIDENCE / TEST OUTPUT:**
+ 
+@@ -348,21 +353,18 @@
+ 
+ ## 11. Independent transition/recovery blocker
+ 
+-**PROVEN BY REPOSITORY EVIDENCE:** original removal emitted connector/IDA
+-cleanup warnings; original hot restoration oopsed in IRQ registration. The
+-retained source calls drm_irq_install during load, but unload lacks a
+-matching drm_irq_uninstall; drm_dev_unregister on this driver is not that
+-release. The callback psb_irq_uninstall masks hardware and is not free_irq.
+-See [active transition review](active-gma500-transition-review.md).
+-
+-**REASONABLE INFERENCE:** a surviving stale IRQ action/name is consistent
+-with the recovery stack. **UNKNOWN:** exact faulting pointer and full cause,
+-and whether a prospective lifecycle repair makes hot transition safe. A new
+-CRC-compatible candidate alone does not fix the original module's removal.
+-Do not reproduce unload/reload, change console/service state, reset/reboot,
+-force an operation or propose the old restoration path as guaranteed safe.
+-This needs a separate evidence-based offline lifecycle/recovery review before
+-any new deployment procedure or authorization.
++The new [lifecycle review](candidate-01-build-and-lifecycle-review.md) proves a
++missing IRQ release in the original source/imports and implements a scoped
++correction in a separate ABI-qualified derivative. Actual-source tests cover
++release ordering, failure unwind and routing disable, including preservation
++of the direct suspend callback. The retained recovery oops remains consistent
++with stale action/name lifetime; exact crash causation is INFERRED, not proven.
++
++**The active original still has the old unload implementation.** A replacement
++cannot fix the preceding removal of that original. Do not replay the failed
++hot-transition/recovery procedure. A cold-start-only first-load route may avoid
++this boundary, but its bootloader/initramfs module source and original fallback
++are not established by retained evidence. No such deployment is authorized.
+ 
+ ## 12. Architectural UNKNOWNs, decisions and authorization
+ 
+@@ -397,73 +399,57 @@
+ 
+ ## 14. Remaining critical path and single next step
+ 
+-1. **OFFLINE:** correct/review the retained Makefile/ioctl integration patches
+-   against the exact source and establish strict no-fuzz application first;
+-   see the [candidate #1 STOP evidence](candidate-01-offline-build-qualification.md).
+-   Then perform a separately scoped external candidate build using the
+-   equivalence-qualified successor output and unchanged captured target table;
+-   qualify every imported symbol/CRC and all source/config/artifact invariants.
+-   Preserve failed and successor preparation evidence.
+-2. **OFFLINE:** resolve/review hot-transition IRQ/lifetime/recovery separately.
+-3. Review the new exact artifact and bounded transition, obtain new operator
+-   authorization, then perform only the authorized fresh guards/one-shot test.
+-   None of those target actions occurs in this research turn.
+-
+-**SINGLE SMALLEST NEXT STEP: OFFLINE — separately scoped correction/review of
+-the retained Makefile/ioctl integration patches against the qualified exact
+-source, requiring strict no-fuzz dry-run success before candidate compilation.**
+-No new target fact is needed for that step.
++1. **READ-ONLY TARGET OBSERVATION, separately authorized:** capture the normal
++   boot module-loading source and original fallback, as narrowly specified in
++   the [current report](candidate-01-build-and-lifecycle-review.md). Do not
++   execute this observation automatically.
++2. Review a concrete first-load deployment/recovery route that avoids removing
++   the active original with its unpaired IRQ registration.
++3. Review the distinct lifecycle-corrected artifact and exact action; obtain
++   new operator authorization before any fresh guards/deployment/one-shot test.
++
++**SINGLE SMALLEST NEXT STEP: READ-ONLY TARGET OBSERVATION — boot-route inventory.**
++ABI qualification is complete offline; it is not a runtime or authorization PASS.
+ 
+ ## COPY/PASTE CHECKPOINT FOR CHATGPT
+ 
+ ```text
+-Continue SGX535-reMESA from docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md
+-and docs/phase8/i386-gcc-offline-build-plan.md. Repository /home/gama/sgx535-gfx.
+-Target Dell Mini12/Poulsbo/SGX535 rev121, i686 antiX kernel
+-5.10.240-antix.1-486-smp. IDs retained: 01130000 / 00010201.
+-Fixed 32x32 scene, ten BOs, 49 relocations, one-shot kernel service and static
+-i386 client exist. No TA/raster/ioctl occurred in Attempt03: normal original
+-unload succeeded but candidate insertion failed module_layout CRC check.
+-Old candidate SHA 934bd97164c803e52d96528b9ec464d587a6a68e2f671aa255407657cc5342cf
+-is REJECTED: module_layout 995e9910, 154 mismatches against target table.
+-Original module SHA 7b42a99d157ad00494c358a7663a2daf438ba9fc9a8f2ca5076d28ddeb6adafb
+-expects module_layout b84efb99. Subsequent hot restore oopsed in IRQ setup;
+-operator reset, then capture08 independently verified original/display normal.
+-Capture08 target Module.symvers SHA
+-faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca:
+-222/222 original imports match; all nine candidate-only imports covered.
+-Target boot/header/public-package config SHA
+-93f4d7a779f4be65097b5f26db6c9b10431907c6d417109719eb2f16d6def3d9.
+-Why old public table differs is UNKNOWN. Do not edit CRCs or bypass checks.
+-Local rootless toolchain qualification PASS: ARM64-host GCC 14.2.0-19cross1
+-+ binutils 2.44-3. Evidence: i386-gcc-toolchain-qualification.md. Prefix:
+-/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root.
+-Use explicit target GCC14 --sysroot=<prefix>, native /usr/bin/gcc-14 HOSTCC,
+-and recorded environment. Fresh successor Kbuild preparation and complete
+-config/header/layout equivalence PASS: 33/35 captured headers exact; remaining
+-differences are documented compiler banner and phase-specific compile.h absence,
+-plus dependency-path metadata. Syscall header generated normally, 22421 bytes,
+-target-exact SHA c4fcafae0822cf103d2822c0d842c6f8bb8f24b00bbb0633a3150ef36033d9fd.
+-Qualified output /home/gama/sgx535-offline/antix-kbuild-successor-20260930/output.
+-See antix-kbuild-successor-equivalence.md and new artifact index. Failed output
+-/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/output remains
+-unchanged (10569 entries verified). Exact prior interruption cause UNKNOWN.
+-No target table installed into successor; no new candidate compiled. Use
+-captured table, qualified tools and exact antiX source for scoped future build.
+-Stop on config/layout/CRC drift; check every import in the rebuilt .ko.
+-193 tests PASS, three strict UBSan harnesses PASS; dryrun SHA
++Repo /home/gama/sgx535-gfx; read candidate-01-build-and-lifecycle-review.md,
++CHATGPT-HANDOFF-POST-ATTEMPT03.md and new artifact README first.
++Target Mini12/Poulsbo/SGX535 rev121; retained IDs 01130000 / 00010201.
++antiX 5.10.240-antix.1-486-smp, i686. No target contact/SGX action this pass.
++Toolchain and successor config/header/layout preparation PASS; do not redo.
++Integration Makefile EOF and ioctl asymmetric context fixed, same intended
++semantics; fixed IRQ patch unchanged. All strict applications no fuzz/offsets/rejects.
++i386 __umoddi3 dependency removed via guarded power2 alignment mask; regression PASS.
++Candidate1 SHA13591674ef9fa82f185f075185d1fa09d94606ccce7253ed231627f2649c600f
++BuildIDd72f19c97c5fd1feffddad07634e12333562ae60, 242364bytes,230/230imports PASS.
++Lifecycle derivative SHA91a6040e743d9c6222cb1307067db6e29fe92558576716a33d9fe0f4f5a87d74
++BuildID074c650d48ccb463e37e90428b486dccdb23eb80,242724bytes,232/232imports PASS.
++Both ELF32LE/i386, exact vermagic, module_layout b84efb99,0missing/0mismatch,
++ABI QUALIFICATION PASS offline, clean repeat BIT IDENTICAL, unsigned.
++Target table faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca
++consumed by normal external modpost; all7426 config/generated hashes unchanged.
++Source e5c5d7c6bdcc7a845589e5956cbf50a8d6198232df017f0398a2902371042e1d,
++captured config93f4d7a779f4be65097b5f26db6c9b10431907c6d417109719eb2f16d6def3d9.
++GCC14.2i686/GNUbinutils2.44, nativeHOSTCC/usr/bin/gcc-14; environment logged.
++Apply patches in order Makefile -> fixed IRQ -> lifecycle -> ioctl.
++Lifecycle derivative quiesces poll/vblank, calls drm_irq_uninstall before private
++teardown, checks install/late-init errors. Actual core removal callback masks all
++routing; direct PM retains old mask. Actual-source UBSan7tests/10scenarios PASS.
++205tests PASS zero skips,3other UBSan PASS,generator PASS,dryrun both
+ 2e85beef0c1a7ec2f8ccc2656b49dd4fb054bf0f55424c226f5fda70e621720e.
+---complete exit1 PARTIAL L12, FT-AUX, FT-BO, FT-SERVICE (static-proof scope).
+-L12/FT-AUX/publication remain architectural UNKNOWNs with scoped historical
+-operator acceptances. Hot-transition/recovery separately BLOCKED: missing IRQ
+-uninstall in retained unload is proved; stale-IRQ cause remains inferred.
+-Gate B BLOCKED, whitelist [], no new target contact/deployment/SGX attempt
+-is authorized. Do not repeat Phase7, IDs, scene, client, capture or Attempt03.
+-Newest candidate #1 staging STOPPED before Kbuild: Makefile patch requires an
+-EOF blank line absent from exact source; ioctl strict dry run also fails;
+-IRQ dry run passes. No input modified, table installed or candidate compiled.
+-See candidate-01-offline-build-qualification.md. Smallest next step OFFLINE:
+-separately correct/review those integration patches with strict no-fuzz checks;
+-then build/qualify every import/CRC/source/config/artifact. No target action.
+-Preserve existing changes/evidence; do not stage, commit or push.
++--complete remains exit1 PARTIAL L12,FT-AUX,FT-BO,FT-SERVICE; not a GateB checker.
++Old candidate934bd971... remains REJECTED(layout995e9910,154mismatches).
++Attempts/recovery unchanged; no SGX submission occurred. Capture08 verified
++original/display recovery after operator reset. Runtime signature policy UNKNOWN.
++FIRST HOT TRANSITION BLOCKED: currently active original still lacks IRQ release;
++new derivative cannot fix its preceding removal. Oops stale-IRQ causation INFERRED.
++GateB BLOCKED,whitelist[],prior attempt auth spent; no deployment/SGX authorized.
++Single next step READ-ONLY TARGET OBSERVATION, separately approved: identify
++normal boot module source/initramfs and original fallback to review cold-start-only
++first loading without original hot teardown. Not executed this pass.
++Do not redo Phase7, IDs, scene,49relocations,client,capture08,Attempt03,recovery,
++toolchain/preparation. Preserve old evidence and both new artifacts. No force,
++manual CRCs, target experiments, staging, commit or push.
+ ```

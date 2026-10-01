@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tools/psb-dri-re",
+    "-p",
+    "test_*.py"
+  ],
+  "exit_code": 0
+}

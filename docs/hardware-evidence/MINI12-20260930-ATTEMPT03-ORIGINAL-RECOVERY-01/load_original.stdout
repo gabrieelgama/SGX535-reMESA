@@ -1,0 +1,7 @@
+LOAD_PLAN_BEGIN
+insmod /lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/i2c/algos/i2c-algo-bit.ko
+insmod /lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/gpu/drm/drm_kms_helper.ko
+insmod /lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/gpu/drm/gma500/gma500_gfx.ko
+LOAD_PLAN_END
+3179bdd4f98d3ea876531257f75db850608e2e983e7cb1626406e89df04de1b7  /lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/i2c/algos/i2c-algo-bit.ko
+9757eb58238b9166485ed78f48a4004e6a31ab1e116aa6aa2eec9df7ade21076  /lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/gpu/drm/drm_kms_helper.ko

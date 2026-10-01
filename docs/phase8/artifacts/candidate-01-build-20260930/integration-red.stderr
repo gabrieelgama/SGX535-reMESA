@@ -1,0 +1,40 @@
+.F.F
+======================================================================
+FAIL: test_ioctl_integrates_only_fixed_headers_and_root_only_entry (test_frozen_kernel_integration.FixedIntegrationTests.test_ioctl_integrates_only_fixed_headers_and_root_only_entry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_integration.py", line 52, in test_ioctl_integrates_only_fixed_headers_and_root_only_entry
+    self.assertEqual(self.apply_patch('psb_drv.c', 'antix-fixed-ioctl.patch',
+                     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                     source), expected)
+                                     ^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_integration.py", line 21, in apply_patch
+    self.assertEqual(dry.returncode, 0, dry.stdout + dry.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : checking file psb_drv.c
+Hunk #1 FAILED at 31.
+Hunk #2 FAILED at 103.
+2 out of 2 hunks FAILED
+
+
+======================================================================
+FAIL: test_makefile_appends_only_the_fixed_object_list_at_real_eof (test_frozen_kernel_integration.FixedIntegrationTests.test_makefile_appends_only_the_fixed_object_list_at_real_eof)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_integration.py", line 39, in test_makefile_appends_only_the_fixed_object_list_at_real_eof
+    self.assertEqual(self.apply_patch('Makefile', 'antix-fixed-makefile.patch',
+                     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                     source), expected)
+                                     ^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_integration.py", line 21, in apply_patch
+    self.assertEqual(dry.returncode, 0, dry.stdout + dry.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : checking file Makefile
+Hunk #1 FAILED at 55.
+1 out of 1 hunk FAILED
+
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.076s
+
+FAILED (failures=2)

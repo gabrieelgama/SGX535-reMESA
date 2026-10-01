@@ -1,0 +1,11 @@
+ABSENT /root/sgx535-frozen-seq1
+ABSENT /home/gama/sgx535-frozen-seq1-candidate.ko
+ABSENT /home/gama/sgx535-frozen-seq1-client
+run: /etc/runit/runsvdir/default/slimski: (pid 1409) 29343s
+/usr/bin/sha256sum
+/usr/bin/stat
+/usr/bin/od
+/usr/sbin/modprobe
+/usr/sbin/insmod
+/usr/sbin/modinfo
+/usr/bin/readelf

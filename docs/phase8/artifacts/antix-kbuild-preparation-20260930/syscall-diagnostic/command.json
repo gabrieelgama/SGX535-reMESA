@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "/bin/sh",
+    "/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp/arch/x86/entry/syscalls/syscalltbl.sh",
+    "/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp/arch/x86/entry/syscalls/syscall_32.tbl",
+    "/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/syscall-diagnostic/syscalls_32.h"
+  ],
+  "purpose": "diagnostic fresh generation only; prepared output remains unchanged"
+}

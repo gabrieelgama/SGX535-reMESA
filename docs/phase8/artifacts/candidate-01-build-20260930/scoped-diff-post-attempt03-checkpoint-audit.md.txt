@@ -1,0 +1,94 @@
+--- /home/gama/sgx535-offline/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md	2026-09-30 23:57:05.811413951 +0000
++++ /home/gama/sgx535-gfx/docs/phase8/post-attempt03-checkpoint-audit.md	2026-10-01 00:06:18.723413740 +0000
+@@ -1,5 +1,20 @@
+ # Post-Attempt-03 checkpoint audit — 2026-09-30
+ 
++**Current offline build/lifecycle continuation:** [qualified candidate results](candidate-01-build-and-lifecycle-review.md)
++close the mechanical patch and module ABI blockers. Candidate #1 and the separate
++IRQ-lifecycle derivative both build through normal external Kbuild, match every
++actual import against the captured target table, and repeat byte-identically.
++The derivative now pairs IRQ release before private/MMIO destruction and masks
++all device routing on actual handler removal, preserving direct-PM behavior.
++**The first hot removal of the active unpatched original remains BLOCKED.**
++The correction cannot change that original's teardown. Gate B remains BLOCKED,
++whitelist `[]`; no target contact or SGX action occurred. The next missing fact
++is the normal first-load boot/initramfs source and original fallback, requiring
++a separately authorized read-only boot-route inventory before a cold-start-only
++alternative can be reviewed. Current verification: 205 tests, zero skips; three
++UBSan harnesses plus lifecycle UBSan PASS; dry-run hash unchanged; `--complete`
++retains its four labels. Neither artifact is authorized for deployment.
++
+ Current execution classification: **Gate B BLOCKED; active whitelist `[]`;
+ no Attempt 04 authorized or performed.** This audit used local repository and
+ preserved artifacts only. It did not contact the Mini 12, rebuild a candidate,
+@@ -26,7 +41,7 @@
+ compiler-name banner; all non-exact metadata is explicitly classified.
+ The next build must preserve captured configuration. Gate B BLOCKED, whitelist `[]`.
+ 
+-**Newest offline candidate-build result:** [candidate #1 integration guard](candidate-01-offline-build-qualification.md)
++**Historical preceding candidate-build result (superseded by the current continuation above):** [candidate #1 integration guard](candidate-01-offline-build-qualification.md)
+ STOPPED before compilation. The retained Makefile patch requires a blank line
+ after the exact source's EOF; its strict dry run fails. The ioctl patch also
+ fails strict application; IRQ dry run passes. No source/patch was changed,
+@@ -35,7 +50,7 @@
+ smallest next step is OFFLINE integration-patch correction/review with strict
+ no-fuzz dry-run success, before any candidate compilation.
+ The connection/authentication chronology below is historical, superseded by
+-this successful capture. Full current suite: **193 tests PASS**.
++this successful capture. Full suite at that preceding checkpoint: **193 tests PASS**.
+ 
+ **Research/documentation continuation:** The
+ [offline GCC build plan](i386-gcc-offline-build-plan.md) now establishes a
+@@ -107,10 +122,10 @@
+   bindings, framebuffer, VT ownership and runit/display process chain. The
+   old partial/unbound state is no longer current. Capture 08 additionally
+   establishes root supervisor status and installed build-input provenance.
+-- **Still requiring verification:** an isolated candidate rebuild using the
+-  qualified target CRC table/configuration; a revised deployment route that
+-  addresses the failed hot recovery; and the eventual experiment runtime
+-  postconditions. No deployment or additional target action is authorized.
++- **Still requiring verification:** a revised deployment route that avoids
++  the active original's unpaired IRQ teardown and provides a reviewed fallback;
++  and eventual experiment runtime postconditions. Candidate ABI qualification
++  is now complete offline. No deployment or additional target action is authorized.
+ 
+ ## Current blocker classification
+ 
+@@ -131,13 +146,13 @@
+ | Installed-kernel exported CRCs/config/generated-header evidence | CLOSED | Capture 08: exact installed image/header package version; all 222 original imports match; boot/build config and generated configuration agree. | Preserve captured evidence. This is not a complete prepared build environment or a candidate artifact. |
+ | Nine candidate-only import CRCs | CLOSED | Captured attributable table covers all nine, and all 228 rejected-candidate imports. | Verify every import in a newly built artifact; coverage is not acceptance of the old CRCs. |
+ | Successor preparation/config/header/layout gate | CLOSED | Fresh normal Kbuild generates target-exact syscall header; complete independent comparison passes with only documented metadata differences; failed predecessor preserved. | Preserve successor/evidence; future candidate build must use qualified inputs unchanged. |
+-| Compatible candidate artifact/build qualification | OPEN-OFFLINE | Existing 934bd9… remains rejected; captured table/config, tools and successor preparation gate qualified. Candidate #1 stopped at failed Makefile/ioctl strict patch dry runs, before Kbuild. | Correct/review integration patches against exact source first; then separately scoped compilation and every import/CRC/source/config/metadata/new hash check. |
+-| Hot gma500 transition/rollback qualification | OPEN-OFFLINE | Normal removal emitted cleanup warnings; normal original reload oopsed during IRQ registration. Source teardown gap is described below. | Resolve/review the lifecycle and recovery route before another deployment; the old remove/restore procedure is insufficient. |
++| Compatible candidate artifact/build qualification | CLOSED | Candidate #1:230/230; lifecycle derivative:232/232; zero missing/mismatched CRCs, exact ELF/vermagic/layout, qualified provenance and bit-identical repeats. Old 934bd9… remains rejected. | Preserve both distinct artifacts/evidence; this closes offline ABI obligations only. |
++| Hot gma500 transition/rollback qualification | NEEDS-READ-ONLY-TARGET-EVIDENCE | Derivative cleanup correction is compiled/tested; active original still lacks DRM IRQ release. Replaying its first hot unload remains blocked. | Capture normal boot module-loading/initramfs and original fallback facts, then review a first-load route avoiding original hot teardown. No such observation or action is authorized here. |
+ | Public post-reset driver/display state | CLOSED | Captures 05/06 verify original hash/build ID/Live state, PCI/DRM/fb/VT and runit→runsv→slimski→Xorg on the expected kernel. | Observation matches the baseline; dynamic guards must still be rechecked before any future authorized deployment. |
+ | Privileged supervisor status / scoped build capture | CLOSED | Capture 08 root sv status and final guards pass; build evidence preserved and hashed. | No further target observation required for these scoped facts. |
+ | Old residual-fbcon blocker and old partial-state-as-current claim | SUPERSEDED | Console release was tested; normal removal actually succeeded. Operator later reports reset and restored display. | Do not repeat reference archaeology or treat the old partial state as current. Fresh state still needs verification. |
+ | Old Gate B PASS / whitelist execution authorization | SUPERSEDED | Attempt 03 authorization was spent; its pinned artifact failed and the normal restoration path faulted. | A new exact-action review and explicit authorization after ABI and transition correction. |
+-| Current Gate B readiness | OPEN-OFFLINE | Rejected artifact and unqualified transition are independent of accepted PDS/publication uncertainties. | Revised artifact/transition review using verified current state; then a new narrow whitelist and authorization. |
++| Current Gate B readiness | NEEDS-READ-ONLY-TARGET-EVIDENCE | ABI-qualified derivative exists; no executable original-driver transition/fallback route is qualified. Prior one-attempt authorization is spent. | Boot-route evidence and exact revised transition/recovery review, then new whitelist/authorization and fresh guards. |
+ 
+ The fixed service is not missing merely because upstream gma500 has no
+ legacy CMDBUF/XHW service: the narrow internal equivalent is implemented in
+@@ -169,8 +184,9 @@
+ only disables runtime PM/sets its suspended state.
+ [`psb_irq_uninstall`](../phase4-2-data/antix-source/drivers/gpu/drm/gma500/psb_irq.c)
+ is the hardware-mask callback; it is not the DRM helper that releases the
+-registered IRQ with `free_irq`. The candidate integration patches do not
+-repair this teardown path. These source facts justify reopening **transition
++registered IRQ with `free_irq`. The preceding three integration patches do not
++repair it. The new separate lifecycle patch corrects the derivative, but cannot
++change teardown of the active original; see the current report. These source facts justify reopening **transition
+ lifecycle qualification**, not Phase 7 archaeology. A stale IRQ action/name
+ is consistent with the retained `strcmp → register_handler_proc → __setup_irq`
+ recovery trace, but the precise faulting pointer/root cause is **INFERRED,
+@@ -200,7 +216,7 @@
+ ABI, hot-reload safety, post-reset state, or authorization. Its output and
+ fail-closed predicates were not weakened; its docstring now states this scope.
+ 
+-## Shortest critical path after capture 08
++## Historical critical path after capture 08 (superseded above)
+ 
+ 1. **OFFLINE:** separately scope the first external candidate build using the
+    equivalence-qualified successor, unchanged captured target export table and

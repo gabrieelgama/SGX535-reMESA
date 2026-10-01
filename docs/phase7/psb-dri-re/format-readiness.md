@@ -2,6 +2,8 @@
 
 This is a field inventory, not a decoder or an implementation. Binary addresses refer to retained `psb_dri.so` SHA-256 `74ca42991906741ee91be1bc088ae0b142fa71b6a85658c5dad0851ce50dd0d8`. Candidate kernel declarations are from public `psb-kernel-source-4.41.1` (`psb_drm.h` SHA-256 `b4aeb1f85c5609c5811447f2c1ea691a4dbaedb439955df507b51b8302769494`). The two ELFs and this source share `5.0.1.0046`, but no exact linked stack is authenticated. [The field CSV](format-fields.csv) records offsets, producers, consumers and evidence scope.
 
+For the specific frozen no-texture fragment input, [FG-01](frozen-fragment-exact-output.md) now derives an empty compiler USSE stream and selected compiler metadata. This does not specify the subsequent linked pixel program, general USSE encoding, or the separate vertex USE buffer below.
+
 | layer | established format/operation | specification limit |
 |---|---|---|
 | PDS-related vertex output | `0x00040355` reserves a separate output block, uses `0x000381a0` for one/two-part address data, records relocations and emits fixed words. See the [bounded layout](bounded-path-closure.md). | Some literal words and formulas are known. Full format, target revision and required execution ordering are UNKNOWN. |

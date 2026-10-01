@@ -1,0 +1,15 @@
+--- /home/gama/sgx535-offline/candidate-01-build-20260930/before-antix-fixed-makefile.patch	2026-09-30 23:13:03.279414959 +0000
++++ /home/gama/sgx535-gfx/kernel/sgx535_frozen/patches/antix-fixed-makefile.patch	2026-09-30 23:15:17.703414908 +0000
+@@ -1,9 +1,10 @@
+ --- a/drivers/gpu/drm/gma500/Makefile
+ +++ b/drivers/gpu/drm/gma500/Makefile
+-@@ -55,3 +55,7 @@
++@@ -54,3 +54,8 @@
++ 	  tc35876x-dsi-lvds.o
+  
+  obj-$(CONFIG_DRM_GMA500) += gma500_gfx.o
+- 
+++
+ +# Exact fixed-scene path; the separately reviewed ioctl patch installs its only caller.
+ +gma500_gfx-y += gma500_bo_owner.o frozen_kernel_contract.o \
+ +                 frozen_fixed_service.o frozen_fixed_io.o \

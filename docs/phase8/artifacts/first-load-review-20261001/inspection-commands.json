@@ -1,0 +1,16 @@
+[
+  {
+    "argv": [
+      "/usr/sbin/modinfo",
+      "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260927-H0/raw/installed-gma500_gfx.ko"
+    ],
+    "exit_code": 0
+  },
+  {
+    "argv": [
+      "/usr/sbin/modinfo",
+      "/home/gama/sgx535-gfx/docs/phase8/artifacts/candidate-01-build-20260930/candidate-02-lifecycle/gma500_gfx.ko"
+    ],
+    "exit_code": 0
+  }
+]

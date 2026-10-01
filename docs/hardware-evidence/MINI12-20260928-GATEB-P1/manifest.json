@@ -1,0 +1,96 @@
+{
+  "schema": "sgx535-gateb-passive-v1",
+  "session_id": "MINI12-20260928-GATEB-P1",
+  "host_generated_utc": "2026-09-28T02:59:02.893623+00:00",
+  "h0_manifest_sha256": "22b8c5e5b196ca9dbef5537a162a5047c2ee3006dd785dd691e26b203e34b130",
+  "ssh_executions": 3,
+  "target_operation": "unprivileged selected sysfs/procfs read-only",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1007,
+      "sha256": "2f31089b15d89e4e581f57759438c7634b5bee5d7c44d0130eaa07c08a5c2b95"
+    },
+    {
+      "path": "capture.py",
+      "bytes": 3418,
+      "sha256": "5cb0a30a74ca770c8914a67f07561dbea12a88538eba96d2c48aab850994de07"
+    },
+    {
+      "path": "display-processes.py",
+      "bytes": 1006,
+      "sha256": "b22ae8d4e8b9e07db6fba85c9b41de0a88b6e4e5530683452e107e3a1bfa447f"
+    },
+    {
+      "path": "gate-b-passive-reassessment.md",
+      "bytes": 4208,
+      "sha256": "b541185ca0c3f6859647fb4d82199e7333e1825c56ed3a6b36d2efd296a07a21"
+    },
+    {
+      "path": "identity.py",
+      "bytes": 1194,
+      "sha256": "59b14ac99ed7afe8c0b7a91c891ae60c29601ef4da116dd9cb4a749e88cf78ec"
+    },
+    {
+      "path": "raw/display-processes.meta.json",
+      "bytes": 1000,
+      "sha256": "adfe235091822d10881f760199f28decfc1e577947333df163ac2db586d12091"
+    },
+    {
+      "path": "raw/display-processes.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/display-processes.stdout",
+      "bytes": 189,
+      "sha256": "ed973188795cf29b46b4110c2afa20dc781dd28053566ea1bdc927d74a9209c7"
+    },
+    {
+      "path": "raw/identity-check.json",
+      "bytes": 38,
+      "sha256": "701ff94d240768190701a28a813b460b05e0606ea52969faf7874c8673bb764b"
+    },
+    {
+      "path": "raw/identity.meta.json",
+      "bytes": 991,
+      "sha256": "ba4221232cc42131526a8bec6a7fef366bf3c5f00240ed9c3bc1ca249834606b"
+    },
+    {
+      "path": "raw/identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/identity.stdout",
+      "bytes": 436,
+      "sha256": "dfad4997665c5be7e400cd28e0daf12ee951adbe678183d8942c390dd481f1fd"
+    },
+    {
+      "path": "raw/snapshot.meta.json",
+      "bytes": 992,
+      "sha256": "95d855885f51b39e47746fa450239498f627aa7c8b11148df95852077ead95c4"
+    },
+    {
+      "path": "raw/snapshot.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/snapshot.stdout",
+      "bytes": 3615,
+      "sha256": "3500a5e5c1ca85f1eb3a740480fb80fac8769c9ccb09979c6b143c19447ff194"
+    },
+    {
+      "path": "results.md",
+      "bytes": 5142,
+      "sha256": "2d904b80781f70f9aabcf92a6de5bad2b10510d938b2066c6ba90530555569e6"
+    },
+    {
+      "path": "snapshot.py",
+      "bytes": 4599,
+      "sha256": "3d10e25e4e36098765926fad4a9c1ffd7d62f92fe02f878c04b1004e5016446f"
+    }
+  ],
+  "note": "Host and target UTC-formatted timestamps are separate in command metadata and target stdout; neither clock independently calibrated. No SGX MMIO, GPU command, power or recovery operation."
+}

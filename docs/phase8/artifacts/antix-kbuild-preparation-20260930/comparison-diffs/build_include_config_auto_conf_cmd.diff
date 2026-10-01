@@ -1,0 +1,36 @@
+--- target/build_include_config_auto_conf_cmd
++++ prepared/include/config/auto.conf.cmd
+@@ -1356,13 +1356,13 @@
+ ifneq "$(KERNELVERSION)" "5.10.240-antix.1"
+ include/config/auto.conf: FORCE
+ endif
+-ifneq "$(CC)" "gcc"
++ifneq "$(CC)" "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14 --sysroot=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root"
+ include/config/auto.conf: FORCE
+ endif
+-ifneq "$(LD)" "ld"
++ifneq "$(LD)" "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-ld.bfd"
+ include/config/auto.conf: FORCE
+ endif
+-ifneq "$(srctree)" "."
++ifneq "$(srctree)" "/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp"
+ include/config/auto.conf: FORCE
+ endif
+ ifneq "$(SRCARCH)" "x86"
+@@ -1371,13 +1371,13 @@
+ ifneq "$(KBUILD_DEFCONFIG)" "i386_defconfig"
+ include/config/auto.conf: FORCE
+ endif
+-ifneq "$(CC_VERSION_TEXT)" "gcc (Debian 14.2.0-19) 14.2.0"
++ifneq "$(CC_VERSION_TEXT)" "i686-linux-gnu-gcc-14 (Debian 14.2.0-19) 14.2.0"
+ include/config/auto.conf: FORCE
+ endif
+-ifneq "$(NM)" "nm"
++ifneq "$(NM)" "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-nm"
+ include/config/auto.conf: FORCE
+ endif
+-ifneq "$(OBJCOPY)" "objcopy"
++ifneq "$(OBJCOPY)" "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-objcopy"
+ include/config/auto.conf: FORCE
+ endif
+ 

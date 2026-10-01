@@ -1,0 +1,82 @@
+{
+  "schema": 1,
+  "kernel_release": "5.10.240-antix.1-486-smp",
+  "stock": {
+    "kernel": {
+      "path": "/boot/vmlinuz-5.10.240-antix.1-486-smp",
+      "size": 5984416,
+      "sha256": "cda6e6c7f61cae83793c974f745af888211bb3543d411283b9bcf79ce5304438"
+    },
+    "initrd": {
+      "path": "/boot/initrd.img-5.10.240-antix.1-486-smp",
+      "size": 50863580,
+      "sha256": "f02cde6c7e712fa0620f99438ef5dc81c131b481a84dc9dbc4f7b854c364e341"
+    },
+    "grub_cfg": {
+      "path": "/boot/grub/grub.cfg",
+      "size": 10438,
+      "sha256": "396ac7dff0bdea48393fd0a25a5fc633d40e2368caf14872b855eba03e96089f"
+    },
+    "grub_env": {
+      "path": "/boot/grub/grubenv",
+      "size": 1024,
+      "sha256": "72c291233d508c8ed06305f0bf9d33130ea206bfaf67873dbe77413f77d19927"
+    },
+    "original_module": {
+      "path": "/lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/gpu/drm/gma500/gma500_gfx.ko",
+      "sha256": "7b42a99d157ad00494c358a7663a2daf438ba9fc9a8f2ca5076d28ddeb6adafb"
+    }
+  },
+  "stock_entry_id": "gnulinux-5.10.240-antix.1-486-smp-advanced-6da9b4a7-ede2-4e27-bbfc-b537f568eaf1",
+  "experimental_entry_id": "sgx535-rev121-firstload-01",
+  "experimental": {
+    "image": {
+      "source": "docs/phase8/artifacts/experimental-first-load-01-20261001/build-03/initrd.img-sgx535-firstload-01",
+      "destination": "/boot/initrd.img-5.10.240-antix.1-486-smp-sgx535-firstload-01",
+      "size": 50804481,
+      "sha256": "4ac6bd1bed7dbf53b3653037f3e6e757160672560176b1938a63488636efaa71"
+    },
+    "entry": {
+      "source": "docs/phase8/artifacts/experimental-first-load-01-20261001/build-03/proposed-custom.cfg",
+      "destination": "/boot/grub/custom.cfg",
+      "size": 974,
+      "sha256": "181d33aa42cc9a73d35a50b5e7b1636121edb7a607c2949540fa04a4d0d32612"
+    }
+  },
+  "derivative_sha256": "91a6040e743d9c6222cb1307067db6e29fe92558576716a33d9fe0f4f5a87d74",
+  "derivative_note_sha256": "96eb5049d143a3c7a6e7d672aed1651fa51db069ea9efd3484388b3401f29eaf",
+  "original_note_sha256": "484f90964d0c36b50256e42b1bc1cd8fb905fad8476b5a1bf5e549dc178792d7",
+  "policy": {
+    "max_experimental_boots": 1,
+    "sgx_actions": 0,
+    "automatic_retry": false,
+    "hot_restoration": false,
+    "automatic_reset": false,
+    "change_default": false,
+    "overwrite_stock": false,
+    "exclusive_create": true,
+    "minimum_boot_free_bytes": 134217728,
+    "boot_observation_seconds": 120,
+    "stock_observation_seconds": 120,
+    "selection": "manual only",
+    "recovery": "operator full reset/power boundary; manual stock selection",
+    "sgx_gate_b": "BLOCKED",
+    "sgx_whitelist": []
+  },
+  "stage_order": [
+    "fresh_stock_guards",
+    "exclusive_image_copy",
+    "fsync_image",
+    "image_readback",
+    "exclusive_entry_copy",
+    "fsync_entry",
+    "entry_readback",
+    "stock_recheck",
+    "manual_menu_guard",
+    "manual_experimental_selection",
+    "passive_evidence",
+    "operator_reset_boundary",
+    "manual_stock_selection",
+    "passive_stock_recovery"
+  ]
+}

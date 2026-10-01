@@ -1,0 +1,15 @@
+{
+  "target_config_sha256": "93f4d7a779f4be65097b5f26db6c9b10431907c6d417109719eb2f16d6def3d9",
+  "prepared_config_sha256": "a9f866159ee08437f22c569b0f6864dd2d9cf8f4b777dd90d0397eba339f5ca4",
+  "target_symbol_count": 8788,
+  "prepared_symbol_count": 8788,
+  "differences": [
+    {
+      "key": "CONFIG_CC_VERSION_TEXT",
+      "target": "\"gcc (Debian 14.2.0-19) 14.2.0\"",
+      "prepared": "\"i686-linux-gnu-gcc-14 (Debian 14.2.0-19) 14.2.0\"",
+      "classification": "expected/documented cross-build metadata difference"
+    }
+  ],
+  "gate": "PASS"
+}

@@ -1,0 +1,12 @@
+{
+  "source": "operator answer to manual-selection question",
+  "captured_utc": "2026-10-01T06:41:59.566572+00:00",
+  "verbatim": "STOCK is still the GRUB default. EXPERIMENTAL was selected exactly once and reached normal userspace successfully within the 120-second window. No hang or HOLD observed.",
+  "manual_experimental_selections": 1,
+  "reported_userspace_within_window": true,
+  "reported_no_hang_or_hold": true,
+  "sudo_validation_confirmation": "NOT PROVIDED",
+  "exact_elapsed_seconds": "UNKNOWN",
+  "experimental_boot_id": "UNKNOWN",
+  "proof_class": "OPERATOR OBSERVATION; not loaded-code/first-owner evidence"
+}

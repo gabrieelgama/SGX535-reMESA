@@ -1,0 +1,14 @@
+{
+  "tests": 215,
+  "skips": 0,
+  "irq_lifecycle_tests": 10,
+  "first_load_tests": 7,
+  "lifecycle_scenarios": 13,
+  "ubsan_harnesses": 3,
+  "dry_hashes": [
+    "2e85beef0c1a7ec2f8ccc2656b49dd4fb054bf0f55424c226f5fda70e621720e",
+    "2e85beef0c1a7ec2f8ccc2656b49dd4fb054bf0f55424c226f5fda70e621720e"
+  ],
+  "complete": "PARTIAL: L12, FT-AUX, FT-BO, FT-SERVICE",
+  "result": "PASS"
+}

@@ -1,0 +1,43 @@
+elf,emitter_va,store_va,program,code_offset,word,construction,code_class,evidence,context
+psb_dri.so,0x00025970,0x000262f0,frozen_fragment_primary,0x30,0x07000345,literal,CONFIRMED,DRI:0x25970,"zero descriptor branch; DS prefix stores +00/+04/+20"
+psb_dri.so,0x00025970,0x00026353,fragment_primary_descriptor_extension,dynamic,0x070400a2|fields,formula,CONFIRMED,DRI:0x25970,"field from DS1 index in auStack_128; absent frozen path"
+psb_dri.so,0x00025970,0x00026398,fragment_primary_descriptor_extension,dynamic,0x07000064|fields,formula,CONFIRMED,DRI:0x25970,"fields from DS0 index in auStack_5c and DS1 index in auStack_a8; absent frozen path"
+psb_dri.so,0x00025970,0x000263e4,frozen_fragment_primary,0x34,0xaf000000,literal,CONFIRMED,DRI:0x25970,terminal CPU store
+psb_dri.so,0x00039ac4,0x00039bd2,clear_pixel_program,0x30,0x07000345,literal,CONFIRMED,DRI:0x39ac4,"same +00/+04/+20 stores; no extra instruction"
+psb_dri.so,0x00039ac4,0x00039bd9,clear_pixel_program,0x34,0xaf000000,literal,CONFIRMED,DRI:0x39ac4,terminal CPU store
+psb_dri.so,0x00039c5c,0x00039e0c,texture_replace_pixel,0x30,0x07000345,literal,CONFIRMED,DRI:0x39c5c,"additional data at +08/+0c/+24/+28"
+psb_dri.so,0x00039c5c,0x00039e13,texture_replace_pixel,0x34,0x070418a2,literal,CONFIRMED,DRI:0x39c5c,"matches DRI 0x25970 A2 formula with DS1 index 1"
+psb_dri.so,0x00039c5c,0x00039e1a,texture_replace_pixel,0x38,0x07042364,literal,CONFIRMED,DRI:0x39c5c,"matches DRI 0x25970 64 formula with DS0 index 2 / DS1 index 2"
+psb_dri.so,0x00039c5c,0x00039e21,texture_replace_pixel,0x3c,0xaf000000,literal,CONFIRMED,DRI:0x39c5c,terminal CPU store
+psb_dri.so,0x000287ff,0x00028fba,fragment_secondary_complex,0x30,0x07030223,literal,CONFIRMED,DRI:0x287ff,"DS0 +00/+04 and +08/+0c written"
+psb_dri.so,0x000287ff,0x00028fcc,fragment_secondary_complex,conditional,0x07601763,literal,CONFIRMED,DRI:0x287ff,conditional extra instruction
+psb_dri.so,0x000287ff,0x00028fd5,fragment_secondary_complex,conditional,0x07042345,literal,CONFIRMED,DRI:0x287ff,"DS0 +08/+0c and DS1 +28 written; compare selected 0x07000345"
+psb_dri.so,0x00029385,0x00029d06,fragment_secondary_variant,0x30,0x07030223,literal,CONFIRMED,DRI:0x29385,similar shape to DRI 0x287ff
+psb_dri.so,0x00029385,0x00029d17,fragment_secondary_variant,conditional,0x07601763,literal,CONFIRMED,DRI:0x29385,conditional extra instruction
+psb_dri.so,0x00029385,0x00029d20,fragment_secondary_variant,conditional,0x07042345,literal,CONFIRMED,DRI:0x29385,similar shape to DRI 0x287ff
+psb_dri.so,0x00039ea0,0x0003a7c9,fragment_secondary_compiled,variable,0x07030223,literal,CONFIRMED,DRI:0x39ea0,non-frozen secondary path
+psb_dri.so,0x00039ea0,0x0003a7dd,fragment_secondary_compiled,conditional,0x07601763,literal,CONFIRMED,DRI:0x39ea0,non-frozen conditional path
+psb_dri.so,0x00039ea0,0x0003a7e6,fragment_secondary_compiled,variable,0x07042345,literal,CONFIRMED,DRI:0x39ea0,non-frozen secondary path
+psb_dri.so,0x0003faa3,0x0003fafa,fragment_secondary_empty,0x00,0xaf000000,literal,CONFIRMED,DRI:0x3faa3,selected fast path commits only this four-byte word
+psb_dri.so,0x00040355,0x000406ce,vertex_primary,0x30,0x67800070,literal,CONFIRMED,DRI:0x40355,vertex code prefix
+psb_dri.so,0x00040355,0x000406d4,vertex_primary,0x34,0x2f030343,literal,CONFIRMED,DRI:0x40355,"DS0 +00/+04 initialized"
+psb_dri.so,0x00040355,0x000406e4,vertex_primary,conditional,0x2f070343,literal,CONFIRMED,DRI:0x40355,"optional DS0 +08/+0c; XOR with preceding word = 0x00040000"
+psb_dri.so,0x00040355,0x000406ed,vertex_primary,variable,0x030803e5,literal,CONFIRMED,DRI:0x40355,terminal before 0xaf000000
+psb_dri.so,0x0004252d,0x00042845,vertex_primary_variant,0x30,0x67800070,literal,CONFIRMED,DRI:0x4252d,similar vertex template
+psb_dri.so,0x0004252d,0x0004284b,vertex_primary_variant,0x34,0x2f030343,literal,CONFIRMED,DRI:0x4252d,similar vertex template
+psb_dri.so,0x0004252d,0x0004285b,vertex_primary_variant,conditional,0x2f070343,literal,CONFIRMED,DRI:0x4252d,similar vertex template
+psb_dri.so,0x0004252d,0x00042864,vertex_primary_variant,variable,0x030803e5,literal,CONFIRMED,DRI:0x4252d,similar vertex template
+psb_dri.so,0x000392ab,0x0003968c,mixed_event_candidate,0x4c,0x070003e5,literal,CANDIDATE,DRI:0x392ab,"mixed 0x94-byte region; program boundary not established"
+psb_dri.so,0x000392ab,0x000396c3,mixed_event_candidate,0x60,0x07042363,literal,CANDIDATE,DRI:0x392ab,"mixed 0x94-byte region; program boundary not established"
+psb_dri.so,0x000392ab,0x00039719,mixed_event_candidate,0x8c,0x070b0345,literal,CANDIDATE,DRI:0x392ab,"mixed 0x94-byte region; two-index 0x45 template does not explain this word"
+Xpsb.so,0x000082c0,0x00008953,pixel_shader_zero_texture,0x30,0x07000345,literal,CONFIRMED,Xpsb:0x82c0,"independent ELF; same software pattern; possible shared source lineage"
+Xpsb.so,0x000082c0,,pixel_shader_texture_extension,dynamic,0x070400a2|fields,formula,CONFIRMED,Xpsb:0x82c0,same index arithmetic as DRI A2 extension
+Xpsb.so,0x000082c0,,pixel_shader_texture_extension,dynamic,0x07000064|fields,formula,CONFIRMED,Xpsb:0x82c0,same index arithmetic as DRI 64 extension
+Xpsb.so,0x000082c0,0x0000887c,pixel_shader_tail_multi,0x30,0x07030223,literal,CONFIRMED,Xpsb:0x82c0,"param_10 > 1 branch; different data layout"
+Xpsb.so,0x000082c0,0x00008883,pixel_shader_tail_split,0x34,0x07601763,literal,CONFIRMED,Xpsb:0x82c0,conditional split branch
+Xpsb.so,0x000082c0,0x00008890,pixel_shader_tail_split,variable,0xaf000000,literal,CONFIRMED,Xpsb:0x82c0,terminal CPU store
+Xpsb.so,0x000082c0,0x00008b39,pixel_shader_tail_one,0x20,0x07030226,literal,CONFIRMED,Xpsb:0x82c0,"param_10 == 1; one source dword at +00"
+Xpsb.so,0x000082c0,0x00008b48,pixel_shader_tail_one,0x24,0xaf000000,literal,CONFIRMED,Xpsb:0x82c0,terminal CPU store
+Xpsb.so,0x000082c0,0x00008ca1,pixel_shader_tail_multi,0x30,0x07030223,literal,CONFIRMED,Xpsb:0x82c0,"param_10 > 1; terminal follows at +34"
+Xpsb.so,0x00007eb0,0x000081af,pixel_event_candidate,0x4c,0x07000363,literal,CANDIDATE,Xpsb:0x7eb0,different mixed event-program layout
+Xpsb.so,0x00007eb0,0x000081fc,pixel_event_candidate,0x78,0x07070365,literal,CANDIDATE,Xpsb:0x7eb0,different mixed event-program layout

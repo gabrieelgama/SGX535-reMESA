@@ -69,3 +69,13 @@ Candidate kernel `psb_xhw.c:42–63` rejects queueing when `xhw_submit_ok` is fa
 | Correct real SGX state, revision and failure/recovery behavior | BLOCKING-UNKNOWN for execution | separate hardware-safety investigation; no static path authorizes it |
 
 No further package search was warranted by the fence-size difference: the already recovered headers explain it. The `5.0.1.0046` correlation remains **RELEASE-FAMILY MATCH**. The DDX loader-name mismatch and older bundled libdrm header remain in [version pairing](../xpsb-re/version-pairing.md). That report also records the XHW direction difference and the candidate DRM core's request-number dispatch, which resolves the narrow direction concern for the candidate source without proving an exact binary pairing.
+
+## Selected-path refinement (P7H-042–046)
+
+Use the [current specification](frozen-triangle-spec.md) for selected bytes and
+remaining blockers. The general scheduler description above mentions op0;
+the frozen draw's non-null scene actually takes op2 for **both** TA and raster.
+Selected request fields and cookie15 exclusion are in the new service table.
+Auxiliary CPU holes now have explicit Route C initialization provenance; their
+architectural source coverage remains open. The new report does not revise
+historical recycled bytes, provider identity or L12.

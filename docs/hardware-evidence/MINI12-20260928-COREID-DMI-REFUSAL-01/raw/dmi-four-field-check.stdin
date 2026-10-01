@@ -1,0 +1,22 @@
+import json,os,stat
+expected={"sys_vendor":"Dell Inc.","product_name":"Inspiron 1210","board_name":"0X605H","bios_version":"A02"}
+out={}
+for name,want in expected.items():
+ path="/sys/class/dmi/id/"+name
+ record={"expected":want}
+ try:
+  st=os.lstat(path)
+  record["lstat_mode"]=oct(stat.S_IMODE(st.st_mode))
+  record["is_symlink"]=stat.S_ISLNK(st.st_mode)
+  fd=os.open(path,os.O_RDONLY|os.O_CLOEXEC|os.O_NOFOLLOW)
+  try: raw=os.read(fd,127)
+  finally: os.close(fd)
+  text=raw.decode("utf-8","replace")
+  record["raw_hex"]=raw.hex()
+  record["raw_repr"]=repr(text)
+  record["helper_comparison"]=(text[:-1] if text.endswith("\n") else text)==want
+ except OSError as exc:
+  record["errno"]=exc.errno
+  record["error"]=str(exc)
+ out[name]=record
+print(json.dumps(out,sort_keys=True))

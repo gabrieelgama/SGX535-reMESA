@@ -1,0 +1,54 @@
+{
+  "schema": "sgx535-first-mmio-preflight-v1",
+  "session_id": "MINI12-20260928-FIRST-MMIO-01",
+  "host_generated_utc": "2026-09-28T03:10:53.994932+00:00",
+  "h0_manifest_sha256": "22b8c5e5b196ca9dbef5537a162a5047c2ee3006dd785dd691e26b203e34b130",
+  "p1_manifest_sha256": "d7fb5cf5827ba89a7cfcaa7b3f88192ce70ad9b41dfdb04189f9ec61a0582eee",
+  "ssh_preflight_executions": 1,
+  "mmio_read_attempts": 0,
+  "gate_b": "BLOCKED",
+  "whitelist": [],
+  "experiment_status": "OPERATOR-AUTHORIZED despite unresolved Gate B requirements; NOT EXECUTED",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1184,
+      "sha256": "bc707d2d460e6817120433831a7ee3b9282365b64c3759b93dc2bdd40c1a0100"
+    },
+    {
+      "path": "capture_preflight.py",
+      "bytes": 2080,
+      "sha256": "0e81d2663768605f953f947f01ac8c9e31a3d92793bc2635a6d6611b35dd36bf"
+    },
+    {
+      "path": "preflight-decision.md",
+      "bytes": 3358,
+      "sha256": "cbdda9d4d037a7425278bf688bf80f50bda7d5a31413e48f99c4b77ea4a287da"
+    },
+    {
+      "path": "preflight.py",
+      "bytes": 3107,
+      "sha256": "3f2843281376ddc244de332a9a228ab1f886868fbfbb2c8784f26b25fbcc933f"
+    },
+    {
+      "path": "raw/preflight.meta.json",
+      "bytes": 993,
+      "sha256": "48ad5fb0115fd7541a342942901df3c9add5e39de4996d05513b46c41e467f58"
+    },
+    {
+      "path": "raw/preflight.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/preflight.stdout",
+      "bytes": 2300,
+      "sha256": "8492db14b5bd43937227842c71fddcbcd8a83360c95f2f0c47149421e070e842"
+    },
+    {
+      "path": "results.md",
+      "bytes": 3456,
+      "sha256": "abeecd61009720416916d8e6c35610aa3e355c6cab900cb42838f608cef3f9ac"
+    }
+  ]
+}

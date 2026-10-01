@@ -1,0 +1,322 @@
+test_experimental_ssh_is_separate_not_required_for_local_proof (test_frozen_first_load_procedure.ProcedureTests.test_experimental_ssh_is_separate_not_required_for_local_proof) ... ok
+test_hook_extra_error_or_unexplained_line_refused (test_frozen_first_load_procedure.ProcedureTests.test_hook_extra_error_or_unexplained_line_refused) ... 
+  test_hook_extra_error_or_unexplained_line_refused (test_frozen_first_load_procedure.ProcedureTests.test_hook_extra_error_or_unexplained_line_refused) (extra='insmod: ERROR: insertion or probe error') ... FAIL
+  test_hook_extra_error_or_unexplained_line_refused (test_frozen_first_load_procedure.ProcedureTests.test_hook_extra_error_or_unexplained_line_refused) (extra='unexpected diagnostic') ... FAIL
+test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) ... 
+  test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_first_owner', value=None) ... FAIL
+  test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_first_owner', value=-1) ... FAIL
+  test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_first_owner', value=121) ... FAIL
+  test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_first_owner', value=True) ... FAIL
+  test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_first_owner', value='60') ... FAIL
+  test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_first_owner', value=nan) ... FAIL
+  test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_first_owner', value=inf) ... FAIL
+  test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_recovery', value=None) ... FAIL
+  test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_recovery', value=-1) ... FAIL
+  test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_recovery', value=121) ... FAIL
+  test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_recovery', value=True) ... FAIL
+  test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_recovery', value='60') ... FAIL
+  test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_recovery', value=nan) ... FAIL
+  test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_recovery', value=inf) ... FAIL
+test_live_first_owner_pass_requires_trace_not_display_alone (test_frozen_first_load_procedure.ProcedureTests.test_live_first_owner_pass_requires_trace_not_display_alone) ... ok
+test_live_missing_duplicate_reordered_or_hold_trace_rejected (test_frozen_first_load_procedure.ProcedureTests.test_live_missing_duplicate_reordered_or_hold_trace_rejected) ... ok
+test_live_requires_prior_boot_reference_and_services (test_frozen_first_load_procedure.ProcedureTests.test_live_requires_prior_boot_reference_and_services) ... 
+  test_live_requires_prior_boot_reference_and_services (test_frozen_first_load_procedure.ProcedureTests.test_live_requires_prior_boot_reference_and_services) (key='prior_boot_id', value=None) ... FAIL
+  test_live_requires_prior_boot_reference_and_services (test_frozen_first_load_procedure.ProcedureTests.test_live_requires_prior_boot_reference_and_services) (key='prior_boot_id', value='') ... FAIL
+  test_live_requires_prior_boot_reference_and_services (test_frozen_first_load_procedure.ProcedureTests.test_live_requires_prior_boot_reference_and_services) (key='slimski_running', value=False) ... FAIL
+  test_live_requires_prior_boot_reference_and_services (test_frozen_first_load_procedure.ProcedureTests.test_live_requires_prior_boot_reference_and_services) (key='xorg_running', value=False) ... FAIL
+test_live_wrong_note_irq_binding_fault_or_second_boot_refused (test_frozen_first_load_procedure.ProcedureTests.test_live_wrong_note_irq_binding_fault_or_second_boot_refused) ... ok
+test_plan_extra_boot_fire_retry_or_hot_restore_refused (test_frozen_first_load_procedure.ProcedureTests.test_plan_extra_boot_fire_retry_or_hot_restore_refused) ... ok
+test_plan_stock_overwrite_refused (test_frozen_first_load_procedure.ProcedureTests.test_plan_stock_overwrite_refused) ... ok
+test_recovery_requires_stock_identity_and_new_boot_not_power_alone (test_frozen_first_load_procedure.ProcedureTests.test_recovery_requires_stock_identity_and_new_boot_not_power_alone) ... ok
+test_recovery_requires_stock_selection_and_framebuffer (test_frozen_first_load_procedure.ProcedureTests.test_recovery_requires_stock_selection_and_framebuffer) ... 
+  test_recovery_requires_stock_selection_and_framebuffer (test_frozen_first_load_procedure.ProcedureTests.test_recovery_requires_stock_selection_and_framebuffer) (key='grub_env', value=None) ... FAIL
+  test_recovery_requires_stock_selection_and_framebuffer (test_frozen_first_load_procedure.ProcedureTests.test_recovery_requires_stock_selection_and_framebuffer) (key='grub_env', value={'saved_entry': 'sgx535-rev121-firstload-01'}) ... FAIL
+  test_recovery_requires_stock_selection_and_framebuffer (test_frozen_first_load_procedure.ProcedureTests.test_recovery_requires_stock_selection_and_framebuffer) (key='grub_env', value={'saved_entry': 'gnulinux-5.10.240-antix.1-486-smp-advanced-6da9b4a7-ede2-4e27-bbfc-b537f568eaf1', 'next_entry': 'sgx535-rev121-firstload-01'}) ... FAIL
+  test_recovery_requires_stock_selection_and_framebuffer (test_frozen_first_load_procedure.ProcedureTests.test_recovery_requires_stock_selection_and_framebuffer) (key='framebuffer_dimensions', value='640x480') ... FAIL
+test_recovery_requires_three_distinct_attributed_boots (test_frozen_first_load_procedure.ProcedureTests.test_recovery_requires_three_distinct_attributed_boots) ... 
+  test_recovery_requires_three_distinct_attributed_boots (test_frozen_first_load_procedure.ProcedureTests.test_recovery_requires_three_distinct_attributed_boots) (key='prior_boot_id', value=None) ... FAIL
+  test_recovery_requires_three_distinct_attributed_boots (test_frozen_first_load_procedure.ProcedureTests.test_recovery_requires_three_distinct_attributed_boots) (key='prior_boot_id', value='') ... FAIL
+  test_recovery_requires_three_distinct_attributed_boots (test_frozen_first_load_procedure.ProcedureTests.test_recovery_requires_three_distinct_attributed_boots) (key='experimental_boot_id', value=None) ... FAIL
+  test_recovery_requires_three_distinct_attributed_boots (test_frozen_first_load_procedure.ProcedureTests.test_recovery_requires_three_distinct_attributed_boots) (key='experimental_boot_id', value='') ... FAIL
+  test_recovery_requires_three_distinct_attributed_boots (test_frozen_first_load_procedure.ProcedureTests.test_recovery_requires_three_distinct_attributed_boots) (key='boot_id', value='stock-before') ... FAIL
+  test_recovery_requires_three_distinct_attributed_boots (test_frozen_first_load_procedure.ProcedureTests.test_recovery_requires_three_distinct_attributed_boots) (key='experimental_boot_id', value='stock-before') ... FAIL
+test_staged_record_needs_all_guards_and_readback (test_frozen_first_load_procedure.ProcedureTests.test_staged_record_needs_all_guards_and_readback) ... ok
+test_staged_stock_change_or_saved_experimental_selection_refused (test_frozen_first_load_procedure.ProcedureTests.test_staged_stock_change_or_saved_experimental_selection_refused) ... ok
+test_staged_symlink_hardlink_wrong_owner_mode_or_hash_rejected (test_frozen_first_load_procedure.ProcedureTests.test_staged_symlink_hardlink_wrong_owner_mode_or_hash_rejected) ... ok
+test_valid_plan_matches_pinned_inputs (test_frozen_first_load_procedure.ProcedureTests.test_valid_plan_matches_pinned_inputs) ... ok
+test_validator_cannot_execute_stage_boot_or_remote_actions (test_frozen_first_load_procedure.ProcedureTests.test_validator_cannot_execute_stage_boot_or_remote_actions) ... ok
+
+======================================================================
+FAIL: test_hook_extra_error_or_unexplained_line_refused (test_frozen_first_load_procedure.ProcedureTests.test_hook_extra_error_or_unexplained_line_refused) (extra='insmod: ERROR: insertion or probe error')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 91, in test_hook_extra_error_or_unexplained_line_refused
+    with self.assertRaises(ValueError):self.module.validate_first_owner(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_hook_extra_error_or_unexplained_line_refused (test_frozen_first_load_procedure.ProcedureTests.test_hook_extra_error_or_unexplained_line_refused) (extra='unexpected diagnostic')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 91, in test_hook_extra_error_or_unexplained_line_refused
+    with self.assertRaises(ValueError):self.module.validate_first_owner(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_first_owner', value=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 97, in test_live_and_recovery_require_valid_deadline_evidence
+    with self.assertRaises(ValueError):validator(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_first_owner', value=-1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 97, in test_live_and_recovery_require_valid_deadline_evidence
+    with self.assertRaises(ValueError):validator(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_first_owner', value=121)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 97, in test_live_and_recovery_require_valid_deadline_evidence
+    with self.assertRaises(ValueError):validator(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_first_owner', value=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 97, in test_live_and_recovery_require_valid_deadline_evidence
+    with self.assertRaises(ValueError):validator(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_first_owner', value='60')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 97, in test_live_and_recovery_require_valid_deadline_evidence
+    with self.assertRaises(ValueError):validator(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_first_owner', value=nan)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 97, in test_live_and_recovery_require_valid_deadline_evidence
+    with self.assertRaises(ValueError):validator(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_first_owner', value=inf)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 97, in test_live_and_recovery_require_valid_deadline_evidence
+    with self.assertRaises(ValueError):validator(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_recovery', value=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 97, in test_live_and_recovery_require_valid_deadline_evidence
+    with self.assertRaises(ValueError):validator(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_recovery', value=-1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 97, in test_live_and_recovery_require_valid_deadline_evidence
+    with self.assertRaises(ValueError):validator(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_recovery', value=121)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 97, in test_live_and_recovery_require_valid_deadline_evidence
+    with self.assertRaises(ValueError):validator(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_recovery', value=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 97, in test_live_and_recovery_require_valid_deadline_evidence
+    with self.assertRaises(ValueError):validator(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_recovery', value='60')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 97, in test_live_and_recovery_require_valid_deadline_evidence
+    with self.assertRaises(ValueError):validator(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_recovery', value=nan)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 97, in test_live_and_recovery_require_valid_deadline_evidence
+    with self.assertRaises(ValueError):validator(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_live_and_recovery_require_valid_deadline_evidence (test_frozen_first_load_procedure.ProcedureTests.test_live_and_recovery_require_valid_deadline_evidence) (validator='validate_recovery', value=inf)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 97, in test_live_and_recovery_require_valid_deadline_evidence
+    with self.assertRaises(ValueError):validator(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_live_requires_prior_boot_reference_and_services (test_frozen_first_load_procedure.ProcedureTests.test_live_requires_prior_boot_reference_and_services) (key='prior_boot_id', value=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 86, in test_live_requires_prior_boot_reference_and_services
+    with self.assertRaises(ValueError):self.module.validate_first_owner(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_live_requires_prior_boot_reference_and_services (test_frozen_first_load_procedure.ProcedureTests.test_live_requires_prior_boot_reference_and_services) (key='prior_boot_id', value='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 86, in test_live_requires_prior_boot_reference_and_services
+    with self.assertRaises(ValueError):self.module.validate_first_owner(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_live_requires_prior_boot_reference_and_services (test_frozen_first_load_procedure.ProcedureTests.test_live_requires_prior_boot_reference_and_services) (key='slimski_running', value=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 86, in test_live_requires_prior_boot_reference_and_services
+    with self.assertRaises(ValueError):self.module.validate_first_owner(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_live_requires_prior_boot_reference_and_services (test_frozen_first_load_procedure.ProcedureTests.test_live_requires_prior_boot_reference_and_services) (key='xorg_running', value=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 86, in test_live_requires_prior_boot_reference_and_services
+    with self.assertRaises(ValueError):self.module.validate_first_owner(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_recovery_requires_stock_selection_and_framebuffer (test_frozen_first_load_procedure.ProcedureTests.test_recovery_requires_stock_selection_and_framebuffer) (key='grub_env', value=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 108, in test_recovery_requires_stock_selection_and_framebuffer
+    with self.assertRaises(ValueError):self.module.validate_recovery(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_recovery_requires_stock_selection_and_framebuffer (test_frozen_first_load_procedure.ProcedureTests.test_recovery_requires_stock_selection_and_framebuffer) (key='grub_env', value={'saved_entry': 'sgx535-rev121-firstload-01'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 108, in test_recovery_requires_stock_selection_and_framebuffer
+    with self.assertRaises(ValueError):self.module.validate_recovery(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_recovery_requires_stock_selection_and_framebuffer (test_frozen_first_load_procedure.ProcedureTests.test_recovery_requires_stock_selection_and_framebuffer) (key='grub_env', value={'saved_entry': 'gnulinux-5.10.240-antix.1-486-smp-advanced-6da9b4a7-ede2-4e27-bbfc-b537f568eaf1', 'next_entry': 'sgx535-rev121-firstload-01'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 108, in test_recovery_requires_stock_selection_and_framebuffer
+    with self.assertRaises(ValueError):self.module.validate_recovery(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_recovery_requires_stock_selection_and_framebuffer (test_frozen_first_load_procedure.ProcedureTests.test_recovery_requires_stock_selection_and_framebuffer) (key='framebuffer_dimensions', value='640x480')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 108, in test_recovery_requires_stock_selection_and_framebuffer
+    with self.assertRaises(ValueError):self.module.validate_recovery(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_recovery_requires_three_distinct_attributed_boots (test_frozen_first_load_procedure.ProcedureTests.test_recovery_requires_three_distinct_attributed_boots) (key='prior_boot_id', value=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 103, in test_recovery_requires_three_distinct_attributed_boots
+    with self.assertRaises(ValueError):self.module.validate_recovery(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_recovery_requires_three_distinct_attributed_boots (test_frozen_first_load_procedure.ProcedureTests.test_recovery_requires_three_distinct_attributed_boots) (key='prior_boot_id', value='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 103, in test_recovery_requires_three_distinct_attributed_boots
+    with self.assertRaises(ValueError):self.module.validate_recovery(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_recovery_requires_three_distinct_attributed_boots (test_frozen_first_load_procedure.ProcedureTests.test_recovery_requires_three_distinct_attributed_boots) (key='experimental_boot_id', value=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 103, in test_recovery_requires_three_distinct_attributed_boots
+    with self.assertRaises(ValueError):self.module.validate_recovery(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_recovery_requires_three_distinct_attributed_boots (test_frozen_first_load_procedure.ProcedureTests.test_recovery_requires_three_distinct_attributed_boots) (key='experimental_boot_id', value='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 103, in test_recovery_requires_three_distinct_attributed_boots
+    with self.assertRaises(ValueError):self.module.validate_recovery(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_recovery_requires_three_distinct_attributed_boots (test_frozen_first_load_procedure.ProcedureTests.test_recovery_requires_three_distinct_attributed_boots) (key='boot_id', value='stock-before')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 103, in test_recovery_requires_three_distinct_attributed_boots
+    with self.assertRaises(ValueError):self.module.validate_recovery(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_recovery_requires_three_distinct_attributed_boots (test_frozen_first_load_procedure.ProcedureTests.test_recovery_requires_three_distinct_attributed_boots) (key='experimental_boot_id', value='stock-before')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure.py", line 103, in test_recovery_requires_three_distinct_attributed_boots
+    with self.assertRaises(ValueError):self.module.validate_recovery(self.plan,f)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.226s
+
+FAILED (failures=30)

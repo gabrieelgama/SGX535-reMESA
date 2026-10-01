@@ -1,0 +1,114 @@
+{
+  "classification": "PASS",
+  "checked_count": 27,
+  "links": [
+    {
+      "document": "docs/phase8/candidate-01-build-and-lifecycle-review.md",
+      "target": "candidate-01-offline-build-qualification.md"
+    },
+    {
+      "document": "docs/phase8/candidate-01-build-and-lifecycle-review.md",
+      "target": "artifacts/candidate-01-build-20260930/README.md"
+    },
+    {
+      "document": "docs/phase8/artifacts/candidate-01-build-20260930/README.md",
+      "target": "../../candidate-01-build-and-lifecycle-review.md"
+    },
+    {
+      "document": "docs/phase8/artifacts/candidate-01-build-20260930/README.md",
+      "target": "candidate-01/gma500_gfx.ko"
+    },
+    {
+      "document": "docs/phase8/artifacts/candidate-01-build-20260930/README.md",
+      "target": "candidate-02-lifecycle/gma500_gfx.ko"
+    },
+    {
+      "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "post-attempt03-checkpoint-audit.md"
+    },
+    {
+      "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "i386-gcc-offline-build-plan.md"
+    },
+    {
+      "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "i386-gcc-toolchain-qualification.md"
+    },
+    {
+      "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "antix-kbuild-preparation-equivalence.md"
+    },
+    {
+      "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "antix-kbuild-successor-equivalence.md"
+    },
+    {
+      "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "candidate-01-build-and-lifecycle-review.md"
+    },
+    {
+      "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md"
+    },
+    {
+      "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "../hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/RESULT.md"
+    },
+    {
+      "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "attempt03-module-version-followup.md"
+    },
+    {
+      "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/candidate-target-table-check.json"
+    },
+    {
+      "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md"
+    },
+    {
+      "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifact-manifest.json"
+    },
+    {
+      "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "artifacts/frozen-triangle-one-shot-i386.md"
+    },
+    {
+      "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "i386-gcc-toolchain-qualification.md"
+    },
+    {
+      "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "artifacts/i386-gcc-toolchain-20260930/README.md"
+    },
+    {
+      "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "antix-kbuild-preparation-equivalence.md"
+    },
+    {
+      "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "artifacts/antix-kbuild-preparation-20260930/README.md"
+    },
+    {
+      "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "antix-kbuild-successor-equivalence.md"
+    },
+    {
+      "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "artifacts/antix-kbuild-successor-20260930/README.md"
+    },
+    {
+      "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "i386-gcc-offline-build-plan.md"
+    },
+    {
+      "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "candidate-01-build-and-lifecycle-review.md"
+    },
+    {
+      "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "candidate-01-build-and-lifecycle-review.md"
+    }
+  ]
+}

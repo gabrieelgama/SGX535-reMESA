@@ -46,7 +46,6 @@
 0x00051a1f render-target transition caller
 0x00025451 render-target transition caller
 0x000473bd render-target transition caller
-0x000477b3 swap callback transition caller
 0x00047f51 render-target transition caller
 0x000483a3 render-target transition caller
 0x000483ef render-target transition caller
@@ -78,9 +77,6 @@
 0x00037534 submit cleanup helper
 0x00037b10 submit cleanup helper
 0x000276a5 scene DRM request helper
-0x0003b606 PDS input state emission
-0x0002fabd PDS eight-byte instruction reservation
-0x00030466 PDS helper used in bit emission
 0x000304d9 PDS helper used in bit emission
 0x0002f4e5 PDS helper used in bit emission
 0x00030549 PDS helper used in bit emission
@@ -234,7 +230,6 @@
 0x00211b37 selected output mapping
 0x002137bb selected primary-color input mapping
 0x00211ab9 selected source descriptor finalizer
-0x001be5bc selected MOV alternate-lowering guard
 0x001be0c0 scalar source legality check
 0x001be081 scalar source modifier legality check
 0x001c136a internal instruction initializer
@@ -252,9 +247,126 @@
 0x00235322 constant-pack operand index
 0x00250aeb assembler opcode 0x9a encoder
 0x00228269 iselect MOV operand check
-0x0024ba46 SSA virtual register allocation
-0x0024bae2 SSA source remap
-0x0024ba83 SSA per-instruction use remap
-0x00236ac5 iselect block tail
+0x0023bae2 SSA source remap
+0x0023ba83 SSA per-instruction use remap
+0x00226ac5 iselect block tail
+0x0022cc74 post-iselect global transform gate
+0x001d749d conditional post-iselect transform
+0x00227461 post-iselect block transform
+0x00226d79 post-iselect fixed-point transform
+0x0022771f post-iselect block transform
+0x0022d1d5 conditional global transform
+0x0022a4d9 block transform before final SSA
+0x001ef2ee block transform before final SSA
+0x00225761 conditional block transform
+0x0023adb5 block transform before predicate allocation
+0x002280a9 iselect MOV replacement feasibility and side effects
+0x00224d73 iselect reaching-definition scan for MOV source
+0x00235c52 primary-attribute map unused-entry update
+0x001daae9 primary-attribute use mask
+0x001da217 source-channel usage helper for attribute map
+0x001de047 liveness and DCE traversal for basic block
+0x001dce31 per-instruction dead-code elimination
+0x001c8980 final block linearization and END insertion
+0x001c6ec0 final phase instruction helper
+0x001c720a final label allocation helper
+0x001dcb28 final branch/label processing
 0x00249ccf assembler opcode normalization
 0x001c1789 USC internal instruction allocation/defaults
+0x001dc31b DCE live-mask lookup for selected MOV destinations
+0x001deb21 DCE live-out insertion
+0x001dbdc2 DCE function-state liveness setup
+0x001dbd82 DCE liveness set allocation
+0x001cb482 predicate allocator selected empty-block state
+0x001cb401 predicate allocator worklist step
+0x001cabd0 predicate allocator per-block liveness preparation
+0x001cb268 predicate allocator remove unused predicate node
+0x001f5be1 finalizer helper before phase count
+0x001f9561 finalizer helper before phase count
+0x001f74ab finalizer control-flow traversal helper
+0x001f3da3 finalizer empty-block helper
+0x001f3ef9 finalizer scratch helper
+0x001f3fb3 finalizer scratch release
+0x000264b7
+0x00025970
+0x00027f03
+0x00039ea0
+0x00026434
+0x00036f32
+0x000364ed
+0x00028301
+0x0003faa3
+0x0003773b
+0x00037621
+0x000443d1
+0x00043efe
+0x0003865f outbuf map and cursor setup for PDS hole audit
+0x000385ed outbuf prior mapping cleanup for PDS hole audit
+0x000382ce outbuf reservation release
+0x00043c89 BO wrapper destruction and reuse
+0x00043d8c BO wrapper construction
+0x00044c90 BO data replacement/reuse
+0x0003838b outbuf setup or teardown neighbor
+0x00038560 outbuf lifecycle neighbor
+0x000385af outbuf lifecycle neighbor
+0x00038a9b outbuf lifecycle neighbor
+0x00027a1e scene outbuf owner and pool setup
+0x00043052 PDS pool block allocation vtable
+0x00042e37 PDS pool block release vtable
+0x000430c3 PDS pool block CPU map vtable
+0x00042940 PDS pool block unmap vtable
+0x00042954 PDS pool block size vtable
+0x00042c57 PDS pool offset/query vtable
+0x00042f93 PDS pool remaining vtable
+0x00042ed3 PDS pool status/query vtable
+0x00042c98 PDS pool fenced-block scavenger
+0x00027735 scene/outbuf owner destruction
+0x00042c0e batch-pool validation-state marker
+0x00042d82 batch-pool destructor
+0x000276a0 scene owner pre-submit outbuf handling
+0x00027890 scene owner pre-submit handling
+0x00045124 BO unmap wrapper for PDS lifecycle
+0x0004296d batch-pool vtable method for PDS lifecycle
+0x00042f2d batch-pool vtable method for PDS lifecycle
+0x0004423a BO fence association for PDS lifecycle
+0x0004bd92 context creation entry for fresh-pool provenance
+0x0004c133 context pool prerequisite helper
+0x0001ed61 version acceptance rules for PDS pairing
+0x0002794b first-scene outbuf reset order
+0x000253f1 feedback state initialization
+0x000452c7 fence status ABI
+
+0x43d8c outbuf_pool_alloc
+0x44c90 outbuf_bo_prepare
+0x43ffe outbuf_bo_map
+
+0x0002ee34 background builder allocation-pool audit
+0x000391e0 event USE code0 helper
+0x00030422 event helper USE emitter
+0x0004b710 surface cpp format selector
+0x0004b8e8 new surface constructor
+0x00028691 scene shading state setter
+0x000286cd scene vertex format setter
+0x00028797 scene bounds-key setter
+
+# Target CPU channel/addressing constraints (frozen triangle burn-down)
+0x4b104
+0x4b195
+0x4b541
+0x4b710
+0x4d445
+0x4d5f5
+0x4d7a5
+0x4e638
+0x4e7ce
+0x4e9a4
+0x4eb7a
+0x4ec8f
+0x4eda0
+0x4eeb5
+0x4b5b2
+0x4b8e8
+0x4c1bc
+0x4c300
+0x497b0
+0x4effa

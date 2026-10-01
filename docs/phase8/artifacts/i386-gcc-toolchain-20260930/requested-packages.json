@@ -1,0 +1,10 @@
+[
+  "gcc-14-i686-linux-gnu:arm64=14.2.0-19cross1",
+  "cpp-14-i686-linux-gnu:arm64=14.2.0-19cross1",
+  "binutils-i686-linux-gnu:arm64=2.44-3",
+  "libc6-dev-i386-cross=2.41-11cross1",
+  "bison:arm64",
+  "flex:arm64",
+  "bc:arm64",
+  "libssl-dev:arm64"
+]

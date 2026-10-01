@@ -1,0 +1,19 @@
+{
+  "repository_tests": 304,
+  "skips": 0,
+  "boot_analysis": 14,
+  "ubsan_harnesses": 3,
+  "generator": "PASS",
+  "candidate_import_crc": "230/230 and232/232;zero missing/mismatch",
+  "cycle_capture_tests": 6,
+  "historical_capture_tests_preserved_revision": 6,
+  "dry_hash": "2e85beef0c1a7ec2f8ccc2656b49dd4fb054bf0f55424c226f5fda70e621720e",
+  "complete": "PARTIAL: L12, FT-AUX, FT-BO, FT-SERVICE",
+  "git_diff_check": "PASS",
+  "links": "PASS",
+  "historical_preservation": "PASS",
+  "gate_b": "BLOCKED",
+  "whitelist": [],
+  "no_new_candidate": true,
+  "sgx_fire": false
+}

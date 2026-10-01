@@ -1,0 +1,7 @@
+import json,os,stat
+paths=["/usr","/usr/local","/usr/local/libexec","/etc","/etc/sudoers.d"]
+out={}
+for path in paths:
+ s=os.lstat(path)
+ out[path]={"uid":s.st_uid,"gid":s.st_gid,"mode":oct(stat.S_IMODE(s.st_mode)),"directory":stat.S_ISDIR(s.st_mode),"group_or_other_writable":bool(s.st_mode & 0o022)}
+print(json.dumps(out,sort_keys=True))

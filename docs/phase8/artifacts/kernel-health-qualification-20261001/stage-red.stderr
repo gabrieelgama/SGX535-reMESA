@@ -1,0 +1,21 @@
+test_frozen_first_load_stage (unittest.loader._FailedTest.test_frozen_first_load_stage) ... ERROR
+
+======================================================================
+ERROR: test_frozen_first_load_stage (unittest.loader._FailedTest.test_frozen_first_load_stage)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_frozen_first_load_stage
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/unittest/loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/lib/python3.13/unittest/loader.py", line 339, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_stage.py", line 5, in <module>
+    import frozen_first_load_stage as stage
+ModuleNotFoundError: No module named 'frozen_first_load_stage'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

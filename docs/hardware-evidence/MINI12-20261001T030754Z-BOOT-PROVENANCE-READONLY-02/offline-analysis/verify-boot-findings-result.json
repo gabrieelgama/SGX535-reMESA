@@ -1,0 +1,7 @@
+{
+  "argv": [
+    "python3",
+    "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/verify_boot_findings.py"
+  ],
+  "exit_code": 0
+}

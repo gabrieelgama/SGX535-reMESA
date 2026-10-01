@@ -1,0 +1,26 @@
+{
+  "command_argv": [
+    "ssh",
+    "-T",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "ConnectTimeout=8",
+    "-o",
+    "StrictHostKeyChecking=accept-new",
+    "-o",
+    "UserKnownHostsFile=/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260927-H0/ssh_known_hosts",
+    "-p",
+    "22",
+    "gama@192.168.18.90",
+    "set -e; printf 'ARCH='; uname -m; printf 'VENDOR='; cat /sys/class/dmi/id/sys_vendor; printf 'PRODUCT='; cat /sys/class/dmi/id/product_name; printf 'BOARD='; cat /sys/class/dmi/id/board_name; printf 'BIOS='; cat /sys/class/dmi/id/bios_version; printf 'CPU='; grep -m1 '^model name' /proc/cpuinfo"
+  ],
+  "started_utc": "2026-09-27T22:42:07.448689+00:00",
+  "ended_utc": "2026-09-27T22:42:08.438419+00:00",
+  "exit_status": 255,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "8429b287e5ec995a8078fab3b37d839bba1cb92a3147a0642c3e5fb273eff8b4",
+  "stdout_bytes": 0,
+  "stderr_bytes": 143,
+  "transport_note": "First connection accepts a new SSH host key; machine identity must still be checked against DMI and CPU."
+}

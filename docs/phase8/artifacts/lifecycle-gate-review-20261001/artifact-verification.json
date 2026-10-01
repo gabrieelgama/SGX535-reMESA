@@ -1,0 +1,158 @@
+[
+  {
+    "label": "candidate-01",
+    "path": "/home/gama/sgx535-gfx/docs/phase8/artifacts/candidate-01-build-20260930/candidate-01/gma500_gfx.ko",
+    "sha256": "13591674ef9fa82f185f075185d1fa09d94606ccce7253ed231627f2649c600f",
+    "size": 242364,
+    "build_id": "d72f19c97c5fd1feffddad07634e12333562ae60",
+    "module_layout": "0xb84efb99",
+    "imports": 230,
+    "missing": 0,
+    "mismatched": 0,
+    "actual_undefined": 229,
+    "extra_imports_vs_original": [
+      "drm_clflush_pages",
+      "memcmp",
+      "module_put",
+      "request_resource",
+      "try_module_get",
+      "usleep_range",
+      "vmap",
+      "vunmap"
+    ],
+    "removed_imports": [],
+    "repeat_path": "/home/gama/sgx535-offline/candidate-01-build-20260930/build-3-candidate01-repeat/gma500_gfx.ko",
+    "repeat": "BIT IDENTICAL",
+    "commands": {
+      "readelf": {
+        "argv": [
+          "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-readelf",
+          "-hnSW",
+          "/home/gama/sgx535-gfx/docs/phase8/artifacts/candidate-01-build-20260930/candidate-01/gma500_gfx.ko"
+        ],
+        "exit_code": 0
+      },
+      "nm": {
+        "argv": [
+          "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-nm",
+          "-u",
+          "/home/gama/sgx535-gfx/docs/phase8/artifacts/candidate-01-build-20260930/candidate-01/gma500_gfx.ko"
+        ],
+        "exit_code": 0
+      },
+      "modinfo": {
+        "argv": [
+          "/usr/sbin/modinfo",
+          "/home/gama/sgx535-gfx/docs/phase8/artifacts/candidate-01-build-20260930/candidate-01/gma500_gfx.ko"
+        ],
+        "exit_code": 0
+      },
+      "vermagic": {
+        "argv": [
+          "/usr/sbin/modinfo",
+          "-F",
+          "vermagic",
+          "/home/gama/sgx535-gfx/docs/phase8/artifacts/candidate-01-build-20260930/candidate-01/gma500_gfx.ko"
+        ],
+        "exit_code": 0
+      },
+      "versions": {
+        "argv": [
+          "python3",
+          "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_module_versions.py",
+          "--check-symvers",
+          "/home/gama/sgx535-gfx/docs/phase8/artifacts/candidate-01-build-20260930/candidate-01/gma500_gfx.ko",
+          "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build_Module_symvers"
+        ],
+        "exit_code": 0
+      },
+      "objdump": {
+        "argv": [
+          "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-objdump",
+          "-dr",
+          "/home/gama/sgx535-gfx/docs/phase8/artifacts/candidate-01-build-20260930/candidate-01/gma500_gfx.ko"
+        ],
+        "exit_code": 0
+      }
+    }
+  },
+  {
+    "label": "candidate-02-lifecycle",
+    "path": "/home/gama/sgx535-gfx/docs/phase8/artifacts/candidate-01-build-20260930/candidate-02-lifecycle/gma500_gfx.ko",
+    "sha256": "91a6040e743d9c6222cb1307067db6e29fe92558576716a33d9fe0f4f5a87d74",
+    "size": 242724,
+    "build_id": "074c650d48ccb463e37e90428b486dccdb23eb80",
+    "module_layout": "0xb84efb99",
+    "imports": 232,
+    "missing": 0,
+    "mismatched": 0,
+    "actual_undefined": 231,
+    "extra_imports_vs_original": [
+      "drm_clflush_pages",
+      "drm_irq_uninstall",
+      "drm_kms_helper_poll_disable",
+      "memcmp",
+      "module_put",
+      "request_resource",
+      "try_module_get",
+      "usleep_range",
+      "vmap",
+      "vunmap"
+    ],
+    "removed_imports": [],
+    "repeat_path": "/home/gama/sgx535-offline/candidate-01-build-20260930/module/gma500_gfx.ko",
+    "repeat": "BIT IDENTICAL",
+    "commands": {
+      "readelf": {
+        "argv": [
+          "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-readelf",
+          "-hnSW",
+          "/home/gama/sgx535-gfx/docs/phase8/artifacts/candidate-01-build-20260930/candidate-02-lifecycle/gma500_gfx.ko"
+        ],
+        "exit_code": 0
+      },
+      "nm": {
+        "argv": [
+          "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-nm",
+          "-u",
+          "/home/gama/sgx535-gfx/docs/phase8/artifacts/candidate-01-build-20260930/candidate-02-lifecycle/gma500_gfx.ko"
+        ],
+        "exit_code": 0
+      },
+      "modinfo": {
+        "argv": [
+          "/usr/sbin/modinfo",
+          "/home/gama/sgx535-gfx/docs/phase8/artifacts/candidate-01-build-20260930/candidate-02-lifecycle/gma500_gfx.ko"
+        ],
+        "exit_code": 0
+      },
+      "vermagic": {
+        "argv": [
+          "/usr/sbin/modinfo",
+          "-F",
+          "vermagic",
+          "/home/gama/sgx535-gfx/docs/phase8/artifacts/candidate-01-build-20260930/candidate-02-lifecycle/gma500_gfx.ko"
+        ],
+        "exit_code": 0
+      },
+      "versions": {
+        "argv": [
+          "python3",
+          "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_module_versions.py",
+          "--check-symvers",
+          "/home/gama/sgx535-gfx/docs/phase8/artifacts/candidate-01-build-20260930/candidate-02-lifecycle/gma500_gfx.ko",
+          "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build_Module_symvers"
+        ],
+        "exit_code": 0
+      },
+      "objdump": {
+        "argv": [
+          "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-objdump",
+          "-dr",
+          "/home/gama/sgx535-gfx/docs/phase8/artifacts/candidate-01-build-20260930/candidate-02-lifecycle/gma500_gfx.ko"
+        ],
+        "exit_code": 0
+      }
+    }
+  }
+]

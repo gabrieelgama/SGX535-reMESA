@@ -1,0 +1,626 @@
+{
+  "candidate_import_count": 228,
+  "candidate_sha256": "934bd97164c803e52d96528b9ec464d587a6a68e2f671aa255407657cc5342cf",
+  "classification": "REJECT",
+  "mismatched_count": 150,
+  "mismatches": {
+    "__alloc_pages_nodemask": {
+      "candidate": "0x52e9067c",
+      "reference": "0xfb95539a"
+    },
+    "__free_pages": {
+      "candidate": "0x2895a056",
+      "reference": "0x91176bb3"
+    },
+    "__pci_register_driver": {
+      "candidate": "0xa1a6e8ab",
+      "reference": "0x4630e387"
+    },
+    "__pm_runtime_disable": {
+      "candidate": "0xc9138c21",
+      "reference": "0x7e434ac1"
+    },
+    "__pm_runtime_idle": {
+      "candidate": "0x58d7fa5d",
+      "reference": "0x41159394"
+    },
+    "__pm_runtime_resume": {
+      "candidate": "0x4f90a027",
+      "reference": "0xfa6551ed"
+    },
+    "__pm_runtime_set_status": {
+      "candidate": "0xd537b3f0",
+      "reference": "0xc4dac443"
+    },
+    "_dev_err": {
+      "candidate": "0x9be7888f",
+      "reference": "0x3b73b2f8"
+    },
+    "_dev_info": {
+      "candidate": "0xba69684f",
+      "reference": "0x59a2c442"
+    },
+    "_dev_warn": {
+      "candidate": "0xd47569d1",
+      "reference": "0xe0eef788"
+    },
+    "backlight_device_register": {
+      "candidate": "0x19022d0b",
+      "reference": "0x8996100d"
+    },
+    "backlight_device_unregister": {
+      "candidate": "0x889d791d",
+      "reference": "0xc0af53d9"
+    },
+    "current_task": {
+      "candidate": "0x923b481f",
+      "reference": "0xf69073fc"
+    },
+    "dev_printk": {
+      "candidate": "0x6690650b",
+      "reference": "0xcb147e11"
+    },
+    "drm_add_edid_modes": {
+      "candidate": "0x9d14529a",
+      "reference": "0x08749094"
+    },
+    "drm_connector_attach_encoder": {
+      "candidate": "0xff1c350f",
+      "reference": "0x2afd5eeb"
+    },
+    "drm_connector_cleanup": {
+      "candidate": "0x5bf0801c",
+      "reference": "0x858bdd00"
+    },
+    "drm_connector_init": {
+      "candidate": "0x8c3e6025",
+      "reference": "0x12b0a306"
+    },
+    "drm_connector_register": {
+      "candidate": "0x5f2f6153",
+      "reference": "0x7f70cea3"
+    },
+    "drm_connector_unregister": {
+      "candidate": "0xa9467613",
+      "reference": "0x6b387114"
+    },
+    "drm_connector_update_edid_property": {
+      "candidate": "0x0e1f2734",
+      "reference": "0x1b9a5879"
+    },
+    "drm_crtc_cleanup": {
+      "candidate": "0x5e7f6596",
+      "reference": "0xe8bd5d28"
+    },
+    "drm_crtc_from_index": {
+      "candidate": "0x07316d65",
+      "reference": "0x4368f3cc"
+    },
+    "drm_crtc_helper_set_config": {
+      "candidate": "0x3fd8d82b",
+      "reference": "0x4f9901a6"
+    },
+    "drm_crtc_helper_set_mode": {
+      "candidate": "0xb1b639cb",
+      "reference": "0x67461dec"
+    },
+    "drm_crtc_init": {
+      "candidate": "0x4ef1a388",
+      "reference": "0x2d6a8bc8"
+    },
+    "drm_crtc_send_vblank_event": {
+      "candidate": "0xe7e5616d",
+      "reference": "0xf2c3ddde"
+    },
+    "drm_crtc_vblank_get": {
+      "candidate": "0xad9584c4",
+      "reference": "0x07cdd1ec"
+    },
+    "drm_crtc_vblank_off": {
+      "candidate": "0x0525cb92",
+      "reference": "0xac68f77e"
+    },
+    "drm_crtc_vblank_on": {
+      "candidate": "0x19169def",
+      "reference": "0x9fc58800"
+    },
+    "drm_crtc_vblank_put": {
+      "candidate": "0x4a3f6744",
+      "reference": "0x687fcdb7"
+    },
+    "drm_dev_alloc": {
+      "candidate": "0xd864de8a",
+      "reference": "0xdf97e01a"
+    },
+    "drm_dev_put": {
+      "candidate": "0x9d661f7d",
+      "reference": "0xe5341f76"
+    },
+    "drm_dev_register": {
+      "candidate": "0xa30ad871",
+      "reference": "0xc18f35cf"
+    },
+    "drm_dev_unregister": {
+      "candidate": "0x119fb322",
+      "reference": "0xd740f14e"
+    },
+    "drm_encoder_cleanup": {
+      "candidate": "0xd11faacc",
+      "reference": "0xc16ba3da"
+    },
+    "drm_encoder_init": {
+      "candidate": "0x16d9c8a9",
+      "reference": "0x551ee7db"
+    },
+    "drm_fb_helper_alloc_fbi": {
+      "candidate": "0xb74cecb2",
+      "reference": "0xa39f1333"
+    },
+    "drm_fb_helper_blank": {
+      "candidate": "0x06233ac2",
+      "reference": "0x1fe37898"
+    },
+    "drm_fb_helper_cfb_copyarea": {
+      "candidate": "0x1bc71479",
+      "reference": "0x444d1216"
+    },
+    "drm_fb_helper_cfb_fillrect": {
+      "candidate": "0x45f77f59",
+      "reference": "0xd3d56752"
+    },
+    "drm_fb_helper_cfb_imageblit": {
+      "candidate": "0xc23c4dc3",
+      "reference": "0x9096c66f"
+    },
+    "drm_fb_helper_check_var": {
+      "candidate": "0x2b4c8b6d",
+      "reference": "0xe12afd06"
+    },
+    "drm_fb_helper_debug_enter": {
+      "candidate": "0x00515fa7",
+      "reference": "0x87e5108a"
+    },
+    "drm_fb_helper_debug_leave": {
+      "candidate": "0xa45783e8",
+      "reference": "0xd8b6e74b"
+    },
+    "drm_fb_helper_fill_info": {
+      "candidate": "0x5bdcd777",
+      "reference": "0xfedc87a9"
+    },
+    "drm_fb_helper_fini": {
+      "candidate": "0x572388be",
+      "reference": "0x75027430"
+    },
+    "drm_fb_helper_init": {
+      "candidate": "0x207f0ccd",
+      "reference": "0x465a409c"
+    },
+    "drm_fb_helper_initial_config": {
+      "candidate": "0x3959cfbc",
+      "reference": "0x92e27e4c"
+    },
+    "drm_fb_helper_ioctl": {
+      "candidate": "0x06929a4c",
+      "reference": "0x1d82eef7"
+    },
+    "drm_fb_helper_lastclose": {
+      "candidate": "0xccd29311",
+      "reference": "0xb117f672"
+    },
+    "drm_fb_helper_output_poll_changed": {
+      "candidate": "0x3ebbaaa5",
+      "reference": "0x14417647"
+    },
+    "drm_fb_helper_pan_display": {
+      "candidate": "0x2168c1d3",
+      "reference": "0x5f2a228d"
+    },
+    "drm_fb_helper_prepare": {
+      "candidate": "0x7d842329",
+      "reference": "0x60e4830d"
+    },
+    "drm_fb_helper_set_par": {
+      "candidate": "0x5a9a8007",
+      "reference": "0xcd87ff6d"
+    },
+    "drm_fb_helper_setcmap": {
+      "candidate": "0x5b6e1528",
+      "reference": "0x2c5831c7"
+    },
+    "drm_fb_helper_unregister_fbi": {
+      "candidate": "0x41e00b69",
+      "reference": "0xe38e77f5"
+    },
+    "drm_framebuffer_cleanup": {
+      "candidate": "0x0ebc5dbf",
+      "reference": "0x840a269a"
+    },
+    "drm_framebuffer_init": {
+      "candidate": "0x7fdbe23d",
+      "reference": "0x9db17175"
+    },
+    "drm_framebuffer_unregister_private": {
+      "candidate": "0x093e4421",
+      "reference": "0x836177c6"
+    },
+    "drm_gem_fb_create_handle": {
+      "candidate": "0x74e6f783",
+      "reference": "0x09bf6df8"
+    },
+    "drm_gem_fb_destroy": {
+      "candidate": "0x95c1efa3",
+      "reference": "0x77e0e5fd"
+    },
+    "drm_gem_free_mmap_offset": {
+      "candidate": "0xce5d02f2",
+      "reference": "0xc4ca3c10"
+    },
+    "drm_gem_get_pages": {
+      "candidate": "0x65af6d7b",
+      "reference": "0x9e66b37b"
+    },
+    "drm_gem_handle_create": {
+      "candidate": "0x6bf1c956",
+      "reference": "0xb0562a59"
+    },
+    "drm_gem_mmap": {
+      "candidate": "0x8f0ce75f",
+      "reference": "0x0e78caa7"
+    },
+    "drm_gem_object_init": {
+      "candidate": "0x07638789",
+      "reference": "0x78c90161"
+    },
+    "drm_gem_object_lookup": {
+      "candidate": "0x4204cb37",
+      "reference": "0xf2761d23"
+    },
+    "drm_gem_object_release": {
+      "candidate": "0x33722b7c",
+      "reference": "0x07d8bd61"
+    },
+    "drm_gem_private_object_init": {
+      "candidate": "0xf18fc6ec",
+      "reference": "0xa88f45a6"
+    },
+    "drm_gem_put_pages": {
+      "candidate": "0x9baba9f9",
+      "reference": "0x35c6d5d3"
+    },
+    "drm_gem_vm_close": {
+      "candidate": "0xe44582d5",
+      "reference": "0x1b36caf0"
+    },
+    "drm_gem_vm_open": {
+      "candidate": "0xf588287f",
+      "reference": "0xfbdb5e8b"
+    },
+    "drm_get_edid": {
+      "candidate": "0x6c4f81d0",
+      "reference": "0x45f25a3d"
+    },
+    "drm_handle_vblank": {
+      "candidate": "0xeac3eb89",
+      "reference": "0xb89ddae4"
+    },
+    "drm_helper_connector_dpms": {
+      "candidate": "0xa811f8d3",
+      "reference": "0x2d873b87"
+    },
+    "drm_helper_crtc_in_use": {
+      "candidate": "0xa8a4d969",
+      "reference": "0xe1d30b20"
+    },
+    "drm_helper_disable_unused_functions": {
+      "candidate": "0x36091ca9",
+      "reference": "0x4bce10a3"
+    },
+    "drm_helper_hpd_irq_event": {
+      "candidate": "0x432d36f2",
+      "reference": "0xd3beb144"
+    },
+    "drm_helper_mode_fill_fb_struct": {
+      "candidate": "0x5eef6ebe",
+      "reference": "0x5b74cea2"
+    },
+    "drm_helper_probe_single_connector_modes": {
+      "candidate": "0x15166d8a",
+      "reference": "0xd76161c0"
+    },
+    "drm_helper_resume_force_mode": {
+      "candidate": "0x650e93c6",
+      "reference": "0x09a18ac2"
+    },
+    "drm_ioctl": {
+      "candidate": "0xb048f72b",
+      "reference": "0xf181243d"
+    },
+    "drm_irq_install": {
+      "candidate": "0xb4051380",
+      "reference": "0xbc397fa0"
+    },
+    "drm_kms_helper_poll_fini": {
+      "candidate": "0x23f40368",
+      "reference": "0x6b48f7f4"
+    },
+    "drm_kms_helper_poll_init": {
+      "candidate": "0xaab4a23d",
+      "reference": "0x43cfd3f1"
+    },
+    "drm_mode_config_cleanup": {
+      "candidate": "0x3f5c7923",
+      "reference": "0x1fd3769c"
+    },
+    "drm_mode_config_reset": {
+      "candidate": "0xc75cf509",
+      "reference": "0xf06e404f"
+    },
+    "drm_mode_create_scaling_mode_property": {
+      "candidate": "0x42b79656",
+      "reference": "0xc0532d32"
+    },
+    "drm_mode_crtc_set_gamma_size": {
+      "candidate": "0x15e92c3c",
+      "reference": "0x91c87124"
+    },
+    "drm_mode_destroy": {
+      "candidate": "0x777f6e9c",
+      "reference": "0x6dbf006b"
+    },
+    "drm_mode_duplicate": {
+      "candidate": "0xcf6527d3",
+      "reference": "0x929ceebb"
+    },
+    "drm_mode_probed_add": {
+      "candidate": "0x9922852c",
+      "reference": "0xdfd5dfb2"
+    },
+    "drm_modeset_lock_all": {
+      "candidate": "0x82fe4832",
+      "reference": "0x406a67cc"
+    },
+    "drm_modeset_unlock_all": {
+      "candidate": "0x8982ff6d",
+      "reference": "0xce3da969"
+    },
+    "drm_object_attach_property": {
+      "candidate": "0x3df35055",
+      "reference": "0x43754b83"
+    },
+    "drm_object_property_get_value": {
+      "candidate": "0xcd22b266",
+      "reference": "0x6d43f07c"
+    },
+    "drm_object_property_set_value": {
+      "candidate": "0xbad19888",
+      "reference": "0xd12f0779"
+    },
+    "drm_open": {
+      "candidate": "0x1646f4ef",
+      "reference": "0x6a6db2ab"
+    },
+    "drm_poll": {
+      "candidate": "0x0589cf21",
+      "reference": "0xe34e0bb7"
+    },
+    "drm_property_add_enum": {
+      "candidate": "0x66e0a715",
+      "reference": "0x747c36b6"
+    },
+    "drm_property_create": {
+      "candidate": "0xf6fe3738",
+      "reference": "0x760e2a89"
+    },
+    "drm_property_create_range": {
+      "candidate": "0x9676c4e4",
+      "reference": "0x32cc6692"
+    },
+    "drm_read": {
+      "candidate": "0xc846f3d0",
+      "reference": "0x55ad16fa"
+    },
+    "drm_release": {
+      "candidate": "0x86c67358",
+      "reference": "0xc33876fd"
+    },
+    "drm_simple_encoder_init": {
+      "candidate": "0xdc2b476c",
+      "reference": "0xab201322"
+    },
+    "drm_vblank_init": {
+      "candidate": "0xf91fc96b",
+      "reference": "0x4af99876"
+    },
+    "drmm_mode_config_init": {
+      "candidate": "0xcc648ccd",
+      "reference": "0x7f5fa731"
+    },
+    "i2c_add_adapter": {
+      "candidate": "0x59707e1d",
+      "reference": "0x8c78730c"
+    },
+    "i2c_add_numbered_adapter": {
+      "candidate": "0x8ac8dbd5",
+      "reference": "0xffd0284f"
+    },
+    "i2c_bit_add_bus": {
+      "candidate": "0x045ab863",
+      "reference": "0xc50fcddf"
+    },
+    "i2c_del_adapter": {
+      "candidate": "0x795fa93f",
+      "reference": "0x28992518"
+    },
+    "i2c_get_adapter": {
+      "candidate": "0x38c80b63",
+      "reference": "0x4d895b02"
+    },
+    "i2c_transfer": {
+      "candidate": "0xafe6a091",
+      "reference": "0xf10874d6"
+    },
+    "kmalloc_caches": {
+      "candidate": "0x93f6c7d4",
+      "reference": "0x72208652"
+    },
+    "kmap_atomic_high_prot": {
+      "candidate": "0x28bd1d96",
+      "reference": "0x3d31df56"
+    },
+    "kmap_high": {
+      "candidate": "0x433f8e3a",
+      "reference": "0x47361169"
+    },
+    "kmem_cache_alloc_trace": {
+      "candidate": "0xcf5e5e47",
+      "reference": "0x0bed2f44"
+    },
+    "kunmap_high": {
+      "candidate": "0x3f1bc846",
+      "reference": "0x2c023f17"
+    },
+    "mem_section": {
+      "candidate": "0x218b72bf",
+      "reference": "0xe5357507"
+    },
+    "module_layout": {
+      "candidate": "0x995e9910",
+      "reference": "0xb84efb99"
+    },
+    "page_address": {
+      "candidate": "0x3fbb8862",
+      "reference": "0xb5696f27"
+    },
+    "pci_dev_put": {
+      "candidate": "0xf769a5a9",
+      "reference": "0x70c0ebae"
+    },
+    "pci_disable_device": {
+      "candidate": "0x8c97124e",
+      "reference": "0x84e4ba64"
+    },
+    "pci_enable_device": {
+      "candidate": "0x2190d48c",
+      "reference": "0x79482b20"
+    },
+    "pci_enable_msi": {
+      "candidate": "0x8d4301c0",
+      "reference": "0xabf6fe8a"
+    },
+    "pci_get_device": {
+      "candidate": "0x284714b8",
+      "reference": "0x4139df38"
+    },
+    "pci_get_domain_bus_and_slot": {
+      "candidate": "0x1c55f78c",
+      "reference": "0x752b3c0c"
+    },
+    "pci_map_rom": {
+      "candidate": "0x74bf5fa1",
+      "reference": "0xb7acac2f"
+    },
+    "pci_read_config_byte": {
+      "candidate": "0xba22a046",
+      "reference": "0x06c3e3bb"
+    },
+    "pci_read_config_dword": {
+      "candidate": "0xab5c00dc",
+      "reference": "0x293cd72b"
+    },
+    "pci_read_config_word": {
+      "candidate": "0xc2c35614",
+      "reference": "0x6052417c"
+    },
+    "pci_restore_state": {
+      "candidate": "0xae345c85",
+      "reference": "0x1c2be14b"
+    },
+    "pci_save_state": {
+      "candidate": "0x55a3f5f0",
+      "reference": "0xfbc6e7a2"
+    },
+    "pci_set_master": {
+      "candidate": "0x76e2f600",
+      "reference": "0xdcf50fed"
+    },
+    "pci_set_power_state": {
+      "candidate": "0x465a2dc3",
+      "reference": "0x2d0d9f74"
+    },
+    "pci_unmap_rom": {
+      "candidate": "0x92ec3ced",
+      "reference": "0x15cf16aa"
+    },
+    "pci_unregister_driver": {
+      "candidate": "0x5b4ad2be",
+      "reference": "0xc8b19419"
+    },
+    "pci_write_config_byte": {
+      "candidate": "0xf2874f90",
+      "reference": "0xfb69fc17"
+    },
+    "pci_write_config_dword": {
+      "candidate": "0x7a024d72",
+      "reference": "0x1ecc4509"
+    },
+    "pci_write_config_word": {
+      "candidate": "0x79d60cd8",
+      "reference": "0x52ff6b8c"
+    },
+    "pm_runtime_allow": {
+      "candidate": "0x2203fc0d",
+      "reference": "0x315aafc2"
+    },
+    "pm_runtime_forbid": {
+      "candidate": "0x2eaddf63",
+      "reference": "0x56ca8bb8"
+    },
+    "pv_ops": {
+      "candidate": "0x145a2937",
+      "reference": "0xb8053ad8"
+    },
+    "set_pages_array_wb": {
+      "candidate": "0x8671731e",
+      "reference": "0x7ab2b3a9"
+    },
+    "set_pages_array_wc": {
+      "candidate": "0xb4ec0709",
+      "reference": "0xdaa0b66c"
+    },
+    "set_pages_uc": {
+      "candidate": "0x39059813",
+      "reference": "0x05c0eb1f"
+    },
+    "set_pages_wb": {
+      "candidate": "0x749c2966",
+      "reference": "0x64f50708"
+    },
+    "vmf_insert_mixed": {
+      "candidate": "0xef8ba952",
+      "reference": "0x7be8e88e"
+    },
+    "vmf_insert_pfn": {
+      "candidate": "0xd003dbef",
+      "reference": "0x76655b7f"
+    }
+  },
+  "module_layout": {
+    "candidate": "0x995e9910",
+    "reference": "0xb84efb99"
+  },
+  "reference_import_count": 222,
+  "reference_sha256": "7b42a99d157ad00494c358a7663a2daf438ba9fc9a8f2ca5076d28ddeb6adafb",
+  "shared_count": 219,
+  "unverified_candidate_imports": [
+    "drm_clflush_pages",
+    "memcmp",
+    "memcpy",
+    "module_put",
+    "request_resource",
+    "try_module_get",
+    "usleep_range",
+    "vmap",
+    "vunmap"
+  ]
+}

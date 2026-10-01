@@ -1,0 +1,18 @@
+{
+  "STAGING": "PASS",
+  "STOCK_PRESERVATION": "PASS",
+  "EXPERIMENTAL_ENTRY": "PASS",
+  "RECOVERY_PRECONDITIONS": "PASS DESIGN AND OPERATOR CONFIRMATION; menu guards still mandatory",
+  "READY_FOR_ONE_EXPERIMENTAL_BOOT": "YES IF VISIBLE MENU/STOCK GUARDS PASS",
+  "checks": {
+    "full_pre_and_post_machine_guards": "PASS",
+    "same_original_boot_during_staging": "PASS",
+    "five_stock_paths_unchanged": "PASS",
+    "default_env_unchanged": "PASS",
+    "exact_embedded_health_implementation": "PASS",
+    "destination_readback": "PASS",
+    "live_first_owner": "UNKNOWN",
+    "live_recovery": "UNKNOWN",
+    "sgx_authorized": false
+  }
+}

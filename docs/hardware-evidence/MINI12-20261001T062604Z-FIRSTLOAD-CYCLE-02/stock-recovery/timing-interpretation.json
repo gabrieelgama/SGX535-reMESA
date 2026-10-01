@@ -1,0 +1,13 @@
+{
+  "operator_reported_pre_capture_seconds": 90,
+  "operator_reported_complete_within120": true,
+  "sv_status": "run: /etc/runit/runsvdir/default/slimski: (pid 1421) 174s\n",
+  "sv_duration_shown_seconds": 174,
+  "max_kernel_message_timestamp": 73.992169,
+  "kernel_message_max_does_not_establish_capture_completion_time": true,
+  "target_utc_start": "2026-10-01T06:39:44.634284+00:00",
+  "host_utc_start": "2026-10-01T06:49:39.316734+00:00",
+  "same_boot_monotonic_uptime_at_capture": "NOT CAPTURED",
+  "classification": "OPERATOR CONFIRMATION RETAINED; MACHINE-CORROBORATED DEADLINE UNKNOWN",
+  "reason": "Do not treat service-reported duration as proved monotonic elapsed; conflicting timing indications and unsynchronized target/host UTC cannot be normalized into PASS."
+}

@@ -1,0 +1,3 @@
+ok: run: /etc/runit/runsvdir/default/slimski: (pid 29327) 1s
+SERVICE run: /etc/runit/runsvdir/default/slimski: (pid 29327) 1s
+RESTORE_PASS service-running original-module

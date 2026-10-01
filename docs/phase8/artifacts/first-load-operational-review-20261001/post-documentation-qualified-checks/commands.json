@@ -1,0 +1,36 @@
+[
+  {
+    "name": "suite",
+    "argv": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools/psb-dri-re",
+      "-p",
+      "test_*.py"
+    ],
+    "cwd": "/home/gama/sgx535-gfx",
+    "exit_code": 0
+  },
+  {
+    "name": "procedure-plan",
+    "argv": [
+      "python3",
+      "tools/psb-dri-re/frozen_first_load_procedure.py"
+    ],
+    "cwd": "/home/gama/sgx535-gfx",
+    "exit_code": 0
+  },
+  {
+    "name": "diff-check",
+    "argv": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "cwd": "/home/gama/sgx535-gfx",
+    "exit_code": 0
+  }
+]

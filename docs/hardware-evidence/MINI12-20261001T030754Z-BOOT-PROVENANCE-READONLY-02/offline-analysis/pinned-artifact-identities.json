@@ -1,0 +1,12 @@
+[
+  {
+    "path": "docs/phase8/artifacts/candidate-01-build-20260930/candidate-01/gma500_gfx.ko",
+    "size": 242364,
+    "sha256": "13591674ef9fa82f185f075185d1fa09d94606ccce7253ed231627f2649c600f"
+  },
+  {
+    "path": "docs/phase8/artifacts/candidate-01-build-20260930/candidate-02-lifecycle/gma500_gfx.ko",
+    "size": 242724,
+    "sha256": "91a6040e743d9c6222cb1307067db6e29fe92558576716a33d9fe0f4f5a87d74"
+  }
+]

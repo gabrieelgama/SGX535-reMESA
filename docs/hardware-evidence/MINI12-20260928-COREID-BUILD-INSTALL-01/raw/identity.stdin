@@ -1,0 +1,20 @@
+from datetime import datetime, timezone
+from pathlib import Path
+import json, os
+pci=Path("/sys/bus/pci/devices/0000:00:02.0")
+def field(path): return Path(path).read_text().strip()
+result={
+ "target_utc":datetime.now(timezone.utc).isoformat(),
+ "arch":os.uname().machine,
+ "sys_vendor":field("/sys/class/dmi/id/sys_vendor"),
+ "product_name":field("/sys/class/dmi/id/product_name"),
+ "board_name":field("/sys/class/dmi/id/board_name"),
+ "bios_version":field("/sys/class/dmi/id/bios_version"),
+ "pci_bdf":pci.name,
+ "pci_vendor":field(pci/"vendor"),
+ "pci_device":field(pci/"device"),
+ "pci_subsystem_vendor":field(pci/"subsystem_vendor"),
+ "pci_subsystem_device":field(pci/"subsystem_device"),
+ "pci_revision":field(pci/"revision"),
+}
+print(json.dumps(result,sort_keys=True))

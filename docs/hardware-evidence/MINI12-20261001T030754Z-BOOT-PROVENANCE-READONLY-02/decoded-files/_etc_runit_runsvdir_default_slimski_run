@@ -1,0 +1,31 @@
+#!/usr/bin/env /lib/runit/invoke-run
+set -e
+
+NAME="slimski"
+DAEMON=/usr/bin/slimski
+
+DEFAULT_DISPLAY_MANAGER_FILE=/etc/X11/default-display-manager
+DEFAULT_DISPLAY_MANAGER=$(cat $DEFAULT_DISPLAY_MANAGER_FILE)
+
+# Exit service if DAEMON is not installed
+if [ ! -x $DAEMON ]; then
+    exit 161
+fi
+
+# start only if slimski is the default DM
+if [ "$DEFAULT_DISPLAY_MANAGER" != "$DAEMON" ]; then
+    exit 161
+fi
+
+# Start elogind first (optional) - Don't start
+# sv start elogind && sv check elogind || true
+
+# Load language code
+. /etc/default/locale
+export LANG=$LANG
+bl=$(awk -F= -v RS=" " '/^lang=/ {print $2}' /proc/cmdline)
+export BLANG=$bl
+
+exec 2>&1
+
+exec $DAEMON

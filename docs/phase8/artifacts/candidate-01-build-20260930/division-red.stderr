@@ -1,0 +1,14 @@
+.....F.
+======================================================================
+FAIL: test_freestanding_i386_object_needs_no_division_runtime (test_frozen_kernel_contract.FrozenKernelContractTests.test_freestanding_i386_object_needs_no_division_runtime)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_contract.py", line 38, in test_freestanding_i386_object_needs_no_division_runtime
+    self.assertNotIn('__umoddi3', undefined.stdout)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '__umoddi3' unexpectedly found in '         U _GLOBAL_OFFSET_TABLE_\n         U __umoddi3\n'
+
+----------------------------------------------------------------------
+Ran 7 tests in 5.439s
+
+FAILED (failures=1)

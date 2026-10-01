@@ -1,0 +1,16 @@
+{
+  "build_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+  "build_table_symbol_count": 23920,
+  "candidate_imports_verified": false,
+  "classification": "PASS",
+  "mismatched_count": 0,
+  "mismatches": {},
+  "missing_imports": [],
+  "module_layout": {
+    "build_table": "0xb84efb99",
+    "reference": "0xb84efb99"
+  },
+  "reference_import_count": 5,
+  "reference_sha256": "e9a32aa2e359917fc61d056d84c931d10504ff228fee50c10566697265e37402",
+  "scope": "REFERENCE_IMPORTS_ONLY"
+}

@@ -1,0 +1,9 @@
+{
+  "candidate_01_sha256": "13591674ef9fa82f185f075185d1fa09d94606ccce7253ed231627f2649c600f",
+  "candidate_02_lifecycle_sha256": "91a6040e743d9c6222cb1307067db6e29fe92558576716a33d9fe0f4f5a87d74",
+  "both_preserved_binary_hashes_match_identity": true,
+  "all_four_successful_kbuilds_exit_zero_no_stderr": true,
+  "all_final_guard_exit_codes_expected": true,
+  "signed_deployment_authorization": false,
+  "target_contact": "NONE"
+}

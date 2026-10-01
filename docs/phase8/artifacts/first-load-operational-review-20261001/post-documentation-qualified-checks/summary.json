@@ -1,0 +1,7 @@
+{
+  "tests": 266,
+  "skips": 0,
+  "toolchain_environment": "/home/gama/sgx535-offline/candidate-01-build-20260930/build-environment.json",
+  "qualified_sysroot": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root",
+  "guards": "PASS"
+}

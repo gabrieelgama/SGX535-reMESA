@@ -1,0 +1,1 @@
+The initial repository snapshot uses git ls-files --cached --others --exclude-standard. A final verifier initially enumerated ignored reference/source checkouts as well and rejected that incomparable scope. It made no changes. Final comparison below uses the original Git-visible file scope; ignored checkouts are not reported as newly created files.

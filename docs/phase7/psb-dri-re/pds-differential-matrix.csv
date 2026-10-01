@@ -1,0 +1,8 @@
+comparison,left,right,xor,changed_bits,builders,cpu_side_change,control_quality,gpu_read_inference
+45-primary-to-secondary,0x07000345,0x07042345,0x00042000,"13,18",DRI 0x25970/0x39ac4 to 0x287ff/0x29385,written triplet +00/+04/+20 to +08/+0c/+28,"cross-builder, not single-input control",UNKNOWN
+45-primary-to-event,0x07000345,0x070b0345,0x000b0000,"16,17,19",DRI 0x25970 to 0x392ab,"event block writes DS0[4,5]; residual bits 16,17 remain unassigned",mixed event block; not controlled,UNKNOWN
+vertex-pair,0x2f030343,0x2f070343,0x00040000,18,DRI 0x40355/0x4252d,"optional DS0[2,3] pair","same builder conditional, different word class",UNKNOWN
+63-primary-to-event,0x07000363,0x07042363,0x00042000,"13,18",Xpsb 0x7eb0 to DRI 0x392ab,event family; DS layout differs,"cross-ELF, not controlled",UNKNOWN
+45-to-e5,0x07000345,0x070003e5,0x000000a0,"5,7",DRI 0x25970 to 0x392ab,low-byte class bits differ,different purpose; no operand isolation,UNKNOWN
+A2-formula-holdout,0x070418a2,0x070418a2,0x00000000,none,DRI 0x25970 formula to 0x39c5c literal,DS1 index 1,exact CPU formula check,UNKNOWN
+64-formula-holdout,0x07042364,0x07042364,0x00000000,none,DRI 0x25970 formula to 0x39c5c literal,DS0/DS1 index 2,exact CPU formula check,UNKNOWN

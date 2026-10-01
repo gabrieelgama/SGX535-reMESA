@@ -1,0 +1,6 @@
+from pathlib import Path
+from datetime import datetime,timezone
+pci=Path('/sys/bus/pci/devices/0000:00:02.0')
+checks=[Path('/sys/class/dmi/id/sys_vendor').read_bytes()==b'Dell Inc.\n',Path('/sys/class/dmi/id/product_name').read_bytes()==b'Inspiron 1210   \n',Path('/sys/class/dmi/id/board_name').read_bytes()==b'0X605H\n',Path('/sys/class/dmi/id/bios_version').read_bytes()==b'A02\n',(pci/'vendor').read_bytes()==b'0x8086\n',(pci/'device').read_bytes()==b'0x8108\n',(pci/'resource').read_text().splitlines()[0].lower()=='0x00000000d8100000 0x00000000d817ffff 0x0000000000040200']
+print(datetime.now(timezone.utc).isoformat(), 'IDENTITY_BAR_PASS' if all(checks) else 'IDENTITY_BAR_FAIL')
+raise SystemExit(0 if all(checks) else 1)

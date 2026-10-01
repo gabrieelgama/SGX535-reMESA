@@ -1,0 +1,127 @@
+[
+  {
+    "file": "PLAN.md",
+    "sha256": "882393c24109c68d8a838ec9722d77ae2564140b0926be0d3dfa632ba9b07740",
+    "bytes": 2269
+  },
+  {
+    "file": "RESULT.md",
+    "sha256": "aff8ddc2fdfda297aac252a7e401f666dc7290270f4c7bac6226840c875415cc",
+    "bytes": 4713
+  },
+  {
+    "file": "artifact-manifest.json",
+    "sha256": "91df0528b2d4f9c495b4a5a9840814236109dc6ca1de24c8c5947fb84bf1256f",
+    "bytes": 3028
+  },
+  {
+    "file": "artifacts/boot-config",
+    "sha256": "93f4d7a779f4be65097b5f26db6c9b10431907c6d417109719eb2f16d6def3d9",
+    "bytes": 244485
+  },
+  {
+    "file": "artifacts/build_Makefile",
+    "sha256": "70b5c7688f9067bd13b8413a205dc73ba9f66676b3de34c4092d7ceb9c260493",
+    "bytes": 66407
+  },
+  {
+    "file": "artifacts/build_Module_symvers",
+    "sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+    "bytes": 1634895
+  },
+  {
+    "file": "artifacts/build__config",
+    "sha256": "93f4d7a779f4be65097b5f26db6c9b10431907c6d417109719eb2f16d6def3d9",
+    "bytes": 244485
+  },
+  {
+    "file": "artifacts/build_generated.tar",
+    "sha256": "f899bce235cc04a3aa3c74f569fe2ba793a0b606676144ff762a57be2aa1f45c",
+    "bytes": 378880
+  },
+  {
+    "file": "artifacts/build_include_config_auto_conf",
+    "sha256": "0dd6d0f66e345120a57e53db422e820aa08534d5b049549e3273b886716c8c7b",
+    "bytes": 175797
+  },
+  {
+    "file": "artifacts/build_include_config_auto_conf_cmd",
+    "sha256": "deb992d7ff2ca9f50c98f9fc89daf3d0887eedc288aa7fea8416521ceed48978",
+    "bytes": 43748
+  },
+  {
+    "file": "artifacts/build_include_config_kernel_release",
+    "sha256": "851a1b235a7413514ce18407feb2b7761dc5f733eeb5568613544653b60c4911",
+    "bytes": 25
+  },
+  {
+    "file": "artifacts/build_include_generated_autoconf_h",
+    "sha256": "df4c243870d720c7fbb9481f0572cfd1fced552a24652d7a90474a3eb420340b",
+    "bytes": 268820
+  },
+  {
+    "file": "artifacts/build_include_generated_compile_h",
+    "sha256": "bceac050fc0a65607e56f09b630b78609414850b0ca050244881aae3bc5657d9",
+    "bytes": 301
+  },
+  {
+    "file": "artifacts/build_include_generated_utsrelease_h",
+    "sha256": "829215a06900fa9d8cd030792507ba37742880744ff62c123de128c3fb936cf6",
+    "bytes": 47
+  },
+  {
+    "file": "build-input-check.json",
+    "sha256": "c0d105f6ca375f8f08f22a01eafb32cc3072d4c39bc4634a65dd4656ae1c7f3b",
+    "bytes": 1001
+  },
+  {
+    "file": "candidate-target-table-check.json",
+    "sha256": "b529973aa1c5e07b0cdc054995bee417cd75f3c2f8c9463fcb4051bbaed36bad",
+    "bytes": 17218
+  },
+  {
+    "file": "capture.json",
+    "sha256": "74c9b594a8ee5a50e74dfb545adc9888c0862c4ea75d070c5264f53926bae117",
+    "bytes": 1119
+  },
+  {
+    "file": "capture.sh",
+    "sha256": "0ac523679107da2bf3aebc7e1dc14b18431a10bd0f2fe6ed8dde70be184b1fb0",
+    "bytes": 7149
+  },
+  {
+    "file": "offline-toolchain.txt",
+    "sha256": "582dbbc97dddb45375de1b4ce18bae38a8b5600132ba543e3df096e10c2db329",
+    "bytes": 250
+  },
+  {
+    "file": "offline-verification.json",
+    "sha256": "781245e13facc063bd17f83326b6e621288fa4780139399f4f913932939cf73e",
+    "bytes": 621
+  },
+  {
+    "file": "reference-table-check.json",
+    "sha256": "b495eea79a631fd581e311c047b0cef007c28e6f1286bfa9fe12610f78378738",
+    "bytes": 518
+  },
+  {
+    "file": "run_capture.py",
+    "sha256": "698bd23e6ef525959c44f1d7f24d32488aeaddd696550de032661549f7273b96",
+    "bytes": 1985
+  },
+  {
+    "file": "stderr.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "file": "stdout.txt",
+    "sha256": "9a29e1b0f666f9acb02de5b947ed26f675ce4c59c717dbc0aeca4090e67aa7bb",
+    "bytes": 4085308
+  },
+  {
+    "file": "ubsan-verification.json",
+    "sha256": "792c186c10692924cebdbc684ad086a1c5aeb892fcd895553e7cc46bd6f40dfc",
+    "bytes": 1530
+  }
+]

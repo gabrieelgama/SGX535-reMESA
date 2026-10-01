@@ -1,0 +1,11 @@
+{
+  "scoped_tests": 249,
+  "skips": 0,
+  "final_git_diff_check": "PASS",
+  "added_text_whitespace_and_Python_parse": "PASS",
+  "documentation_links": "PASS",
+  "initial_file_preservation": "PASS",
+  "artifact_copy_hash": "PASS",
+  "gate_b": "BLOCKED",
+  "whitelist": []
+}

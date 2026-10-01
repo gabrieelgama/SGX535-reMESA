@@ -1,0 +1,11 @@
+{
+  "classification": "PASS WITH BOUNDED STOCK DIAGNOSTICS",
+  "faults": [],
+  "stock_diagnostics": {
+    "acpi_powerbutton_error": 2,
+    "acpi_powerbutton_warning": 2,
+    "powerbutton_probe": 1,
+    "tiny_powerbutton_probe": 1,
+    "backlight_zero_register": 1
+  }
+}

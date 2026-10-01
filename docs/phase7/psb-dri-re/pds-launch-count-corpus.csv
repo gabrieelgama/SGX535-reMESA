@@ -1,0 +1,13 @@
+case_id,kind,source,changed_cpu_input,a,t,b,dp,budget,q,q_encoded,m,middle,data_field,hardware_unit,notes,middle_xor_selected,middle_changed_bits,data_xor_selected
+selected,SELECTED_CPU_RESULT,DRI ELF 0x287ff,NONE,0,0,0,12,384,4,3,32,0x00030000,0x0c000000,UNKNOWN,frozen descriptors,0x00000000,NONE,0x00000000
+temp13,SERIALIZER_FORMULA_CASE,DRI ELF 0x287ff,T,0,13,0,12,384,3,2,21,0x2a020000,0x0c000000,UNKNOWN,same serializer data count; changed USE temp requirement,0x2a010000,16;25;27;29,0x00000000
+temp17,SERIALIZER_FORMULA_CASE,DRI ELF 0x287ff,T,0,17,0,12,384,2,1,13,0x1a010000,0x0c000000,UNKNOWN,same serializer data count,0x1a020000,17;25;27;28,0x00000000
+temp25,SERIALIZER_FORMULA_CASE,DRI ELF 0x287ff,T,0,25,0,12,384,1,0,5,0x0a000000,0x0c000000,UNKNOWN,same serializer data count,0x0a030000,16;17;25;27,0x00000000
+attr32,SERIALIZER_FORMULA_CASE,DRI ELF 0x287ff,A,32,0,0,12,384,3,2,3,0x06020020,0x0c000000,UNKNOWN,primary attribute demand changes; count fixed,0x06010020,5;16;25;26,0x00000000
+attr40,SERIALIZER_FORMULA_CASE,DRI ELF 0x287ff,A,40,0,0,12,384,2,1,2,0x04010028,0x0c000000,UNKNOWN,primary attribute demand changes; count fixed,0x04020028,3;5;17;26,0x00000000
+attr52,SERIALIZER_FORMULA_CASE,DRI ELF 0x287ff,A,52,0,0,12,384,1,0,1,0x02000034,0x0c000000,UNKNOWN,primary attribute demand changes; count fixed,0x02030034,2;4;5;16;17;25,0x00000000
+data0,SERIALIZER_FORMULA_CASE,DRI ELF 0x287ff,Dp,0,0,0,0,384,4,3,32,0x00030000,0x00000000,UNKNOWN,serializer input only; not selected program layout,0x00000000,NONE,0x0c000000
+data4,SERIALIZER_FORMULA_CASE,DRI ELF 0x287ff,Dp,0,0,0,4,384,4,3,32,0x00030000,0x04000000,UNKNOWN,serializer input only; not selected program layout,0x00000000,NONE,0x08000000
+data8,SERIALIZER_FORMULA_CASE,DRI ELF 0x287ff,Dp,0,0,0,8,384,4,3,32,0x00030000,0x08000000,UNKNOWN,serializer input only; not selected program layout,0x00000000,NONE,0x04000000
+data16,SERIALIZER_FORMULA_CASE,DRI ELF 0x287ff,Dp,0,0,0,16,384,4,3,32,0x00030000,0x10000000,UNKNOWN,serializer input only; not selected program layout,0x00000000,NONE,0x1c000000
+secondary32,SERIALIZER_FORMULA_CASE,DRI ELF 0x287ff,B,0,0,32,12,394,4,3,32,0x00078000,0x0c000000,UNKNOWN,secondary resource budget input changes; no inference of valid compiled shader,0x00048000,15;18,0x00000000

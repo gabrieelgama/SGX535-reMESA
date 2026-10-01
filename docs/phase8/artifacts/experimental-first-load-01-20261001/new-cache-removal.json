@@ -1,0 +1,8 @@
+[
+  {
+    "path": "tools/psb-dri-re/__pycache__/test_frozen_first_load_image.cpython-313.pyc",
+    "sha256": "934991770feeccf115be75a1a4e55480b9cec8e25d12344ce2dfc2a7a46c209d",
+    "preexisting": false,
+    "reason": "new disposable Python cache from this task; not evidence"
+  }
+]

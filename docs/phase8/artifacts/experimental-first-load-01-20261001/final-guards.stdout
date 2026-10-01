@@ -1,0 +1,7 @@
+...............................................................................
+----------------------------------------------------------------------
+Ran 249 tests in 25.873s
+
+OK
+
+Helper tests14, generator, three UBSan harnesses, both dry hashes and expected complete refusal PASS.

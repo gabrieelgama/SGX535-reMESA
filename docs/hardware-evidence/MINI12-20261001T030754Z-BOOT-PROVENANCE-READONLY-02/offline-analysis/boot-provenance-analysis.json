@@ -1,0 +1,133 @@
+{
+  "configured_bootloader": "GRUB2.12 grub-pc",
+  "effective_default": "saved_entry",
+  "saved_environment": {
+    "saved_entry": "gnulinux-5.10.240-antix.1-486-smp-advanced-6da9b4a7-ede2-4e27-bbfc-b537f568eaf1"
+  },
+  "kernel_cmdline_matches_saved_entry": true,
+  "runtime_menu_selection_record": "not captured; saved entry and cmdline agree",
+  "linux_entries": [
+    {
+      "title": "antiX-26 Stephen Kapos, 5.10.240-antix.1-486-smp",
+      "id": "gnulinux-5.10.240-antix.1-486-smp-advanced-6da9b4a7-ede2-4e27-bbfc-b537f568eaf1",
+      "linux": [
+        "/boot/vmlinuz-5.10.240-antix.1-486-smp",
+        "root=UUID=6da9b4a7-ede2-4e27-bbfc-b537f568eaf1",
+        "ro",
+        "quiet",
+        "selinux=0"
+      ],
+      "initrd": [
+        "/boot/initrd.img-5.10.240-antix.1-486-smp"
+      ],
+      "savedefault": true
+    },
+    {
+      "title": "antiX-26 Stephen Kapos, 5.10.240-antix.1-486-smp (sysvinit)",
+      "id": "gnulinux-5.10.240-antix.1-486-smp-init-sysvinit-6da9b4a7-ede2-4e27-bbfc-b537f568eaf1",
+      "linux": [
+        "/boot/vmlinuz-5.10.240-antix.1-486-smp",
+        "root=UUID=6da9b4a7-ede2-4e27-bbfc-b537f568eaf1",
+        "ro",
+        "quiet",
+        "selinux=0",
+        "init=/lib/sysvinit/init"
+      ],
+      "initrd": [
+        "/boot/initrd.img-5.10.240-antix.1-486-smp"
+      ],
+      "savedefault": true
+    },
+    {
+      "title": "antiX-26 Stephen Kapos, 5.10.240-antix.1-486-smp (s6-rc)",
+      "id": "gnulinux-5.10.240-antix.1-486-smp-init-s6-rc-6da9b4a7-ede2-4e27-bbfc-b537f568eaf1",
+      "linux": [
+        "/boot/vmlinuz-5.10.240-antix.1-486-smp",
+        "root=UUID=6da9b4a7-ede2-4e27-bbfc-b537f568eaf1",
+        "ro",
+        "quiet",
+        "selinux=0",
+        "init=/lib/s6-rc/s6-rc-init"
+      ],
+      "initrd": [
+        "/boot/initrd.img-5.10.240-antix.1-486-smp"
+      ],
+      "savedefault": true
+    },
+    {
+      "title": "antiX-26 Stephen Kapos, 5.10.240-antix.1-486-smp (s6-66)",
+      "id": "gnulinux-5.10.240-antix.1-486-smp-init-s6-66-6da9b4a7-ede2-4e27-bbfc-b537f568eaf1",
+      "linux": [
+        "/boot/vmlinuz-5.10.240-antix.1-486-smp",
+        "root=UUID=6da9b4a7-ede2-4e27-bbfc-b537f568eaf1",
+        "ro",
+        "quiet",
+        "selinux=0",
+        "init=/lib/s6-66/s6-66-init"
+      ],
+      "initrd": [
+        "/boot/initrd.img-5.10.240-antix.1-486-smp"
+      ],
+      "savedefault": true
+    },
+    {
+      "title": "antiX-26 Stephen Kapos, 5.10.240-antix.1-486-smp (dinit)",
+      "id": "gnulinux-5.10.240-antix.1-486-smp-init-dinit-6da9b4a7-ede2-4e27-bbfc-b537f568eaf1",
+      "linux": [
+        "/boot/vmlinuz-5.10.240-antix.1-486-smp",
+        "root=UUID=6da9b4a7-ede2-4e27-bbfc-b537f568eaf1",
+        "ro",
+        "quiet",
+        "selinux=0",
+        "init=/lib/dinit/dinit"
+      ],
+      "initrd": [
+        "/boot/initrd.img-5.10.240-antix.1-486-smp"
+      ],
+      "savedefault": true
+    },
+    {
+      "title": "antiX-26 Stephen Kapos, 5.10.240-antix.1-486-smp (recovery mode)",
+      "id": "gnulinux-5.10.240-antix.1-486-smp-recovery-6da9b4a7-ede2-4e27-bbfc-b537f568eaf1",
+      "linux": [
+        "/boot/vmlinuz-5.10.240-antix.1-486-smp",
+        "root=UUID=6da9b4a7-ede2-4e27-bbfc-b537f568eaf1",
+        "ro",
+        "single",
+        "dis_ucode_ldr"
+      ],
+      "initrd": [
+        "/boot/initrd.img-5.10.240-antix.1-486-smp"
+      ],
+      "savedefault": false
+    }
+  ],
+  "distinct_kernel_initrd_pairs": [
+    [
+      [
+        "/boot/vmlinuz-5.10.240-antix.1-486-smp"
+      ],
+      [
+        "/boot/initrd.img-5.10.240-antix.1-486-smp"
+      ]
+    ]
+  ],
+  "root_modalias_matches": [
+    {
+      "alias": "pci:v00008086d00008108sv*sd*bc*sc*i*",
+      "module": "gma500_gfx"
+    }
+  ],
+  "initramfs_modalias_matches": [],
+  "gma500_in_initramfs": false,
+  "initramfs_conf_modules_exists": false,
+  "root_archive_init_equal": true,
+  "init_archive_sha256": "0a9bb34973c78987922b57f010e99c36ddf102e8a5a2fd198385566539f5d6d5",
+  "root_init_sha256": "0a9bb34973c78987922b57f010e99c36ddf102e8a5a2fd198385566539f5d6d5",
+  "new_custom_entry_supported_by_existing_cfg": true,
+  "custom_cfg_in_observed_boot_inventory": false,
+  "original_loader": "INFERRED real-root eudev builtin kmod modalias coldplug; runtime caller PID not captured",
+  "first_load_execution": "BLOCKED pending separately scoped offline image and entry construction/qualification, new boot/recovery authorization and fresh experimental preflight",
+  "gate_b": "BLOCKED",
+  "whitelist": []
+}

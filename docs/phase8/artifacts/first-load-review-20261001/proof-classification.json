@@ -1,0 +1,72 @@
+[
+  {
+    "item": "gma500 modular",
+    "classification": "RETAINED TARGET FACT",
+    "result": "CONFIG_DRM_GMA500=m"
+  },
+  {
+    "item": "matching alias/static Poulsbo ops",
+    "classification": "OFFLINE-TESTED",
+    "result": "Both binaries match retained target modalias; actual PCI table selects psb_chip_ops"
+  },
+  {
+    "item": "unbound owner acquire/core error rollback",
+    "classification": "OFFLINE-TESTED",
+    "result": "Actual core functions pass controlled success and negative probe outcomes"
+  },
+  {
+    "item": "original not replaced if bound",
+    "classification": "OFFLINE-TESTED",
+    "result": "Actual core skips already owned device; removing guard is detected"
+  },
+  {
+    "item": "kernel-name blacklist differentiates original/replacement",
+    "classification": "OFFLINE-TESTED",
+    "result": "REJECTED: both internal names gma500_gfx are blocked"
+  },
+  {
+    "item": "full KMS/display derivative; active stock probe",
+    "classification": "SOURCE-PROVEN",
+    "result": "Stock KMS/fbdev and PCI/MMIO/IRQ initialization retained; fixed ioctl dormant"
+  },
+  {
+    "item": "no original object dependency",
+    "classification": "SOURCE-PROVEN",
+    "result": "Selected probe allocates new objects using PCI/BIOS/stolen state"
+  },
+  {
+    "item": "recorded early VGA/later gma500",
+    "classification": "RETAINED TARGET FACT",
+    "result": "Operator-provided H0 log with explicit provenance limits"
+  },
+  {
+    "item": "exact loader/initramfs original membership",
+    "classification": "UNKNOWN",
+    "result": "Not in retained selected boot material"
+  },
+  {
+    "item": "separate derivative-first initramfs route",
+    "classification": "INFERRED",
+    "result": "Feasible conditional design, not chosen or target-qualified"
+  },
+  {
+    "item": "experimental console/network availability",
+    "classification": "REQUIRES LIVE OBSERVATION",
+    "result": "Not proved by stock boot"
+  },
+  {
+    "item": "known-good selection/fallback boot chain",
+    "classification": "UNKNOWN",
+    "result": "Boot entry/default/initramfs policy absent"
+  },
+  {
+    "item": "first-load alternative/fallback",
+    "classification": "UNKNOWN",
+    "result": "BLOCKED pending selected boot chain inventory"
+  },
+  {
+    "item": "Gate B",
+    "classification": "SOURCE-PROVEN",
+    "result": "BLOCKED; current procedure has no executable qualified transition; whitelist []"
+  }
+]

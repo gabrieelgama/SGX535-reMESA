@@ -1,0 +1,112 @@
+[
+  {
+    "document": "docs/phase8/experimental-first-load-build-plan.md",
+    "target": "first-load-stock-boot-observation.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/experimental-first-load-image-qualification.md",
+    "target": "artifacts/experimental-first-load-01-20261001/README.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/experimental-first-load-image-qualification.md",
+    "target": "artifacts/experimental-first-load-01-20261001/build-03/initrd.img-sgx535-firstload-01",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/experimental-first-load-image-qualification.md",
+    "target": "artifacts/experimental-first-load-01-20261001/build-03/proposed-custom.cfg",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/experimental-first-load-image-qualification.md",
+    "target": "first-load-boot-qualification.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/first-load-stock-boot-observation.md",
+    "target": "experimental-first-load-image-qualification.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/first-load-stock-boot-observation.md",
+    "target": "artifacts/experimental-first-load-01-20261001/README.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "target": "experimental-first-load-image-qualification.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "target": "artifacts/experimental-first-load-01-20261001/README.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "target": "experimental-first-load-image-qualification.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "target": "artifacts/experimental-first-load-01-20261001/README.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/first-load-boot-qualification.md",
+    "target": "experimental-first-load-image-qualification.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/first-load-boot-qualification.md",
+    "target": "artifacts/experimental-first-load-01-20261001/README.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/active-gma500-transition-review.md",
+    "target": "experimental-first-load-image-qualification.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/active-gma500-transition-review.md",
+    "target": "artifacts/experimental-first-load-01-20261001/README.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "target": "experimental-first-load-image-qualification.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "target": "artifacts/experimental-first-load-01-20261001/README.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/artifacts/experimental-first-load-01-20261001/README.md",
+    "target": "../../experimental-first-load-image-qualification.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/artifacts/experimental-first-load-01-20261001/README.md",
+    "target": "build-03/initrd.img-sgx535-firstload-01",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/artifacts/experimental-first-load-01-20261001/README.md",
+    "target": "build-03/proposed-custom.cfg",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/artifacts/experimental-first-load-01-20261001/README.md",
+    "target": "build-03/sgx535-first-load.sh",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/artifacts/experimental-first-load-01-20261001/README.md",
+    "target": "build-03/modified-init",
+    "exists": true
+  }
+]

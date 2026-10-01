@@ -1,0 +1,70 @@
+FF.FF.F
+======================================================================
+FAIL: test_active_irq_quiesces_vblank_before_driver_resources_are_freed (test_frozen_irq_lifecycle.IRQLifecycleTests.test_active_irq_quiesces_vblank_before_driver_resources_are_freed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_irq_lifecycle.py", line 97, in test_active_irq_quiesces_vblank_before_driver_resources_are_freed
+    self.run_case(0)
+    ~~~~~~~~~~~~~^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_irq_lifecycle.py", line 94, in run_case
+    self.assertEqual(run.returncode, 0, run.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: -6 != 0 : lifecycle-test: /home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_irq_lifecycle.c:80: drm_irq_uninstall: Assertion `irq_mask_register == 0xffffffffU && irq_enable_register == 0' failed.
+
+
+======================================================================
+FAIL: test_actual_uninstall_masks_all_sources_before_irq_handler_release (test_frozen_irq_lifecycle.IRQLifecycleTests.test_actual_uninstall_masks_all_sources_before_irq_handler_release)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_irq_lifecycle.py", line 111, in test_actual_uninstall_masks_all_sources_before_irq_handler_release
+    self.run_case(8)
+    ~~~~~~~~~~~~~^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_irq_lifecycle.py", line 94, in run_case
+    self.assertEqual(run.returncode, 0, run.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: -6 != 0 : lifecycle-test: /home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_irq_lifecycle.c:134: main: Assertion `priv.vdc_irq_mask == (scenario == 9 ? preserved : 0)' failed.
+
+
+======================================================================
+FAIL: test_install_error_returns_before_modeset_and_uses_existing_cleanup (test_frozen_irq_lifecycle.IRQLifecycleTests.test_install_error_returns_before_modeset_and_uses_existing_cleanup)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_irq_lifecycle.py", line 108, in test_install_error_returns_before_modeset_and_uses_existing_cleanup
+    self.run_case(5)
+    ~~~~~~~~~~~~~^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_irq_lifecycle.py", line 94, in run_case
+    self.assertEqual(run.returncode, 0, run.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: -6 != 0 : lifecycle-test: /home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_irq_lifecycle.c:80: drm_irq_uninstall: Assertion `irq_mask_register == 0xffffffffU && irq_enable_register == 0' failed.
+
+
+======================================================================
+FAIL: test_late_probe_error_unwinds_registered_irq_and_private_state (test_frozen_irq_lifecycle.IRQLifecycleTests.test_late_probe_error_unwinds_registered_irq_and_private_state)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_irq_lifecycle.py", line 117, in test_late_probe_error_unwinds_registered_irq_and_private_state
+    self.run_case(6)
+    ~~~~~~~~~~~~~^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_irq_lifecycle.py", line 94, in run_case
+    self.assertEqual(run.returncode, 0, run.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: -6 != 0 : lifecycle-test: /home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_irq_lifecycle.c:80: drm_irq_uninstall: Assertion `irq_mask_register == 0xffffffffU && irq_enable_register == 0' failed.
+
+
+======================================================================
+FAIL: test_registered_irq_before_modeset_is_released_without_crtc_iteration (test_frozen_irq_lifecycle.IRQLifecycleTests.test_registered_irq_before_modeset_is_released_without_crtc_iteration)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_irq_lifecycle.py", line 104, in test_registered_irq_before_modeset_is_released_without_crtc_iteration
+    self.run_case(2)
+    ~~~~~~~~~~~~~^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_irq_lifecycle.py", line 94, in run_case
+    self.assertEqual(run.returncode, 0, run.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: -6 != 0 : lifecycle-test: /home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_irq_lifecycle.c:80: drm_irq_uninstall: Assertion `irq_mask_register == 0xffffffffU && irq_enable_register == 0' failed.
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.751s
+
+FAILED (failures=5)

@@ -1,0 +1,8 @@
+{
+  "exit_code": 0,
+  "diagnostic_size": 22421,
+  "diagnostic_sha256": "c4fcafae0822cf103d2822c0d842c6f8bb8f24b00bbb0633a3150ef36033d9fd",
+  "matches_captured_target": true,
+  "prepared_partial_unchanged_sha256": "24405cc6e6a1eee9eb958e88fad2ef63e16029d9066a8b863ba35aa2b63139e5",
+  "prepared_partial_size": 11385
+}

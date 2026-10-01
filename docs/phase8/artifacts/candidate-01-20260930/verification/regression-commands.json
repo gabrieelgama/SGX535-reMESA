@@ -1,0 +1,79 @@
+[
+  {
+    "name": "python-tests",
+    "argv": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools/psb-dri-re",
+      "-p",
+      "test_*.py"
+    ],
+    "exit_code": 0,
+    "seconds": 13.561
+  },
+  {
+    "name": "generator-check",
+    "argv": [
+      "python3",
+      "tools/psb-dri-re/generate_frozen_kernel_initial.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "seconds": 0.142
+  },
+  {
+    "name": "dry-run-1",
+    "argv": [
+      "python3",
+      "tools/psb-dri-re/frozen_triangle_dry_run.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.173
+  },
+  {
+    "name": "dry-run-2",
+    "argv": [
+      "python3",
+      "tools/psb-dri-re/frozen_triangle_dry_run.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.216
+  },
+  {
+    "name": "complete",
+    "argv": [
+      "python3",
+      "tools/psb-dri-re/frozen_triangle_image.py",
+      "--complete"
+    ],
+    "exit_code": 1,
+    "seconds": 0.142
+  },
+  {
+    "name": "original-target-check",
+    "argv": [
+      "python3",
+      "tools/psb-dri-re/frozen_module_versions.py",
+      "--check-symvers",
+      "docs/hardware-evidence/MINI12-20260927-H0/raw/installed-gma500_gfx.ko",
+      "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build_Module_symvers"
+    ],
+    "exit_code": 0,
+    "seconds": 0.151
+  },
+  {
+    "name": "old-candidate-target-check",
+    "argv": [
+      "python3",
+      "tools/psb-dri-re/frozen_module_versions.py",
+      "--check-symvers",
+      "/tmp/sgx535-antix-source-6/source/drivers/gpu/drm/gma500/gma500_gfx.ko",
+      "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build_Module_symvers"
+    ],
+    "exit_code": 1,
+    "seconds": 0.294
+  }
+]
