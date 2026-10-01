@@ -27,7 +27,10 @@
 ---
 
 ## Current phase
+
 **Phase 8 — SGX535 first-load qualification / frozen-triangle bring-up**
+
+*(blame the kernel for this phase existing)*
 
 Current status:
 
@@ -40,6 +43,7 @@ whitelist:                []
 SGX execution:            not attempted
 triangle:                 not attempted
 sanity:                   sudo -v
+```
 
 Unfortunately:
 
@@ -52,6 +56,33 @@ Unfortunately:
 The evidence policy wins again.
 
 damn.
+
+The first experimental boot reached normal userspace, but the privileged
+capture did not run. Experimental boot ID, loaded-module identity and
+hook trace therefore remain unestablished.
+
+Stock recovery completed successfully and the original graphics state
+was verified.
+
+The next step is one separately authorized non-SGX first-load / recovery
+cycle using the corrected capture procedure.
+
+No fixed ioctl, SGX execution or triangle submission is currently
+authorized.
+
+```text
+Experimental kernel:
+boots
+
+Evidence:
+where
+
+sudo:
+authentication required
+
+reMESA:
+you have got to be kidding me
+```
 
 ---
 
@@ -202,6 +233,7 @@ We have recovered a surprising amount of stuff.
 | USE / USSE | 🟡 |
 | PDS | 🟡 |
 | Command submission | 🟡 |
+| First-load qualification | 🔒 |
 | Shader ISA | ❓ |
 | Microkernel | ❓ |
 | Safe active bring-up | 🔒 |
@@ -321,11 +353,20 @@ Phase 3   ████████████████████   ✓
 Phase 4   ████████████████████   ✓
 Phase 5   ████████████████████   ✓
 Phase 6   ████████████████████   ✓
-Phase 7   ███████████████░░░░░   doing GPU archaeology
-Phase 8   ░░░░░░░░░░░░░░░░░░░░   Mesa 💀
+Phase 7   ████████████████████   ✓
+Phase 8   ███░░░░░░░░░░░░░░░░░   first-load qualification
+Phase 9   ░░░░░░░░░░░░░░░░░░░░   Mesa 💀
 ```
 
-Things Phase 7 has already produced:
+### Phase 8
+
+Also known as:
+
+```text
+the phase that exists because the kernel said no
+```
+
+Phase 7 already produced:
 
 - real hardware MMIO access
 - `CORE_ID`
@@ -333,29 +374,70 @@ Things Phase 7 has already produced:
 - physical rev121 confirmation
 - historical PDS reconstruction
 - reproducible PDS program words
+- launch-state evidence reconstruction
+- fixed one-shot bring-up tooling
 - considerably more knowledge about Poulsbo than was probably healthy
+
+Phase 8 has already produced:
+
+- an experimental first-load kernel
+- a successful experimental boot to normal userspace
+- a verified recovery to the original stock graphics state
+- a new appreciation for `sudo -v`
 
 Current blocker:
 
 ```text
-Can we account for the relevant launch state
-before telling a 2008 GPU to execute something?
+The experimental kernel reached userspace.
+
+Did we capture enough evidence from that boot
+to prove exactly what was loaded and what happened?
+
+no.
 ```
 
-Until the answer is sufficiently convincing:
+The missing experimental boot ID, loaded-module identity and hook trace
+cannot be reconstructed from the current stock boot.
+
+So:
+
+```text
+Experimental kernel:  boots
+Stock recovery:       works
+SGX execution:        none
+Triangle:             untouched
+sudo password:        final boss
+```
+
+The next step is another separately authorized non-SGX first-load /
+recovery cycle using the corrected capture procedure.
+
+Until that evidence exists:
 
 # no funny writes.
 
 The GPU:
 
 ```text
-bro just send it
+bro you literally booted it
 ```
 
 reMESA:
 
 ```text
-NO.
+DID WE CAPTURE THE TRACE?
+```
+
+The GPU:
+
+```text
+no
+```
+
+reMESA:
+
+```text
+THEN NO.
 ```
 
 ---
@@ -418,12 +500,18 @@ If you're looking for the triangle:
 - [x] Read `CORE_ID`
 - [x] Read `CORE_REVISION`
 - [x] Discover that yes, it really is rev121
-- [ ] Finish launch-state reconstruction
-- [ ] Controlled SGX bring-up
-- [ ] Command submission
+- [x] Reconstruct the historical launch-state evidence envelope
+- [x] Build fixed one-shot bring-up tooling
+- [x] Reach userspace with the experimental first-load kernel
+- [x] Recover cleanly to stock
+- [ ] Capture and qualify experimental first-load evidence
+- [ ] Clear Gate B
+- [ ] Controlled SGX execution
+- [ ] Fixed command submission
 - [ ] Make GPU do literally anything useful
 - [ ] 🔺 **TRIANGLE**
 - [ ] Stare at triangle for an unreasonable amount of time
+- [ ] Phase 9
 - [ ] Mesa/Gallium driver
 - [ ] OpenGL
 - [ ] Minecraft on GMA 500 because it would be funny
@@ -433,6 +521,58 @@ If you're looking for the triangle:
 - [ ] Say "hmm"
 - [ ] Make another terrible decision
 - [ ] Repeat until Series5 stops answering
+
+---
+
+# Phase 9
+
+Assuming Phase 8 eventually stops being held hostage by kernel bring-up:
+
+# Mesa.
+
+Yes.
+
+Actual Mesa.
+
+The thing in the repository name.
+
+```text
+Phase 1-7:
+reverse engineer GPU
+
+Phase 8:
+argue with kernel
+
+Phase 9:
+remember why project is called reMESA
+```
+
+The rough objective:
+
+```text
+SGX535
+   │
+   ▼
+kernel / DRM
+   │
+   ▼
+userspace driver
+   │
+   ▼
+Mesa / Gallium
+   │
+   ▼
+OpenGL
+   │
+   ▼
+Minecraft?
+```
+
+One problem at a time.
+
+First:
+
+# 🔺
 
 ---
 
@@ -1129,10 +1269,15 @@ Hardware:       2008
 Development:    2026
 Documentation:  missing
 Registers:      increasingly less mysterious
-PDS:            pain
-GPU:            alive
-Triangle:       escaped
+PDS:            considerably less mysterious
+Kernel:         boots
+First load:     evidence incomplete
+Stock recovery: passed
+Gate B:         BLOCKED
+SGX execution:  not attempted
+Triangle:       waiting impatiently
 Evidence:       mandatory
+sudo -v:        unexpectedly important
 Sponsors:       somehow real
 Budget:         triangle economy
 Other SGXs:     watching nervously
@@ -1154,6 +1299,7 @@ PowerVR Series5 reverse-engineering project
         ├── driver development
         ├── collaboration with other SGX developers
         ├── GitHub Sponsors
+        ├── kernel negotiations
         └── still no triangle
 ```
 
@@ -1174,6 +1320,14 @@ There was no plan.
 # 🔺
 
 *how hard could three vertices possibly be*
+
+---
+
+**Current technical obstacle:**
+
+# KERNEL
+
+*blame it.*
 
 ---
 
