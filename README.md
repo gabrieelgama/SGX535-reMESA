@@ -19,6 +19,8 @@
 > So we're figuring it out ourselves.
 >
 > yes, including the driver.
+>
+> apparently one SGX was not enough either.
 
 </div>
 
@@ -35,19 +37,36 @@ PDS program:     reproducible
 PDS data/state:  pain
 GPU:             alive
 triangle:        not yet
+sanity:          negotiable
 ```
 
 Current focus: **FG-02 — PDS backing-provider proof.**
 
-The historical PDS program can now be reproduced, but some launch-state details still need to be accounted for before doing anything funny on the real GPU.
+The historical PDS program can now be reproduced, but some launch-state
+details still need to be accounted for before doing anything funny on
+the real GPU.
+
+Unfortunately:
+
+```text
+"it probably works"
+        ≠
+"we proved it works"
+```
+
+The evidence policy wins again.
+
+damn.
 
 ---
 
 # What is this?
 
-**SGX535-reMESA** is a reverse-engineering and driver-development project for the **PowerVR SGX535**, initially focused on the version inside **Intel Poulsbo / GMA 500** systems.
+**SGX535-reMESA** is a reverse-engineering and driver-development project
+for the **PowerVR SGX535**, initially focused on the version inside
+**Intel Poulsbo / GMA 500** systems.
 
-The objective:
+The current objective:
 
 ```text
 SGX535
@@ -63,7 +82,9 @@ Yes.
 
 We're doing all of this for a triangle.
 
-The SGX535 documentation needed to write a modern open-source driver is not publicly available in enough detail, so the project is reconstructing it from:
+The SGX535 documentation needed to write a modern open-source driver is
+not publicly available in enough detail, so the project is reconstructing
+it from:
 
 - historical source code
 - old drivers
@@ -73,6 +94,16 @@ The SGX535 documentation needed to write a modern open-source driver is not publ
 - command/state analysis
 - real hardware
 - questionable amounts of `grep`
+- files from 2009 that somehow still exist
+- pure refusal to let this GPU die
+
+SGX535 / Poulsbo is the current target.
+
+**Current.**
+
+Because apparently there are more of these things.
+
+We'll get to that later.
 
 ---
 
@@ -107,7 +138,22 @@ yes.
 
 Several days of archaeology were defeated by two `readl()`s.
 
-> This confirms rev121 on the tested machine. It does not automatically mean every Poulsbo SGX535 ever manufactured is rev121.
+The GPU had the answer the entire time.
+
+It just wasn't asked.
+
+> This confirms rev121 on the tested machine. It does not automatically
+> mean every Poulsbo SGX535 ever manufactured is rev121.
+
+Because:
+
+```text
+one laptop
+   ≠
+every SGX535 produced on Earth
+```
+
+Evidence policy strikes again.
 
 ---
 
@@ -130,6 +176,18 @@ There is no modern open-source SGX535 3D driver.
 So that's what this project is trying to fix.
 
 Eventually™.
+
+```text
+2008:
+
+Intel:
+here is GMA 500
+
+2026:
+
+reMESA:
+fine, I'll do it myself
+```
 
 ---
 
@@ -168,6 +226,26 @@ Useful historical material includes:
 - Linux `gma500`
 - various ancient files that somehow survived until 2026
 
+The general research experience looks approximately like this:
+
+```text
+grep
+ ↓
+header
+ ↓
+another header
+ ↓
+dead link
+ ↓
+old tarball
+ ↓
+2009 source tree
+ ↓
+interesting dword
+ ↓
+why
+```
+
 ---
 
 # Evidence policy
@@ -200,7 +278,8 @@ Claims should ideally point to an exact:
 
 ### `UNKNOWN` is allowed.
 
-Making something up because it would make the documentation look more complete is not.
+Making something up because it would make the documentation look more
+complete is not.
 
 If an unexplained dword works, it remains:
 
@@ -209,6 +288,30 @@ mysterious_dword_that_works
 ```
 
 until we actually know what it does.
+
+This policy is very useful.
+
+It is also incredibly annoying when you really want the triangle.
+
+```text
+Researcher:
+It should work.
+
+Evidence policy:
+source?
+
+Researcher:
+trust me bro
+
+Evidence policy:
+DENIED
+```
+
+One rule survives every GPU:
+
+> **Evidence first. Guessing second.**
+>
+> *(This rule becomes extremely annoying when you really want the triangle.)*
 
 ---
 
@@ -246,7 +349,19 @@ before telling a 2008 GPU to execute something?
 
 Until the answer is sufficiently convincing:
 
-**no funny writes.**
+# no funny writes.
+
+The GPU:
+
+```text
+bro just send it
+```
+
+reMESA:
+
+```text
+NO.
+```
 
 ---
 
@@ -283,6 +398,14 @@ Actual technical documentation lives in [`docs/`](docs/).
 | [`sgx535-missing-files.md`](docs/sgx535-missing-files.md) | Things the internet ate |
 | [`unknowns.md`](docs/unknowns.md) | ??? |
 
+If you're looking for the serious research:
+
+**it's in there.**
+
+If you're looking for the triangle:
+
+**so are we.**
+
 ---
 
 # Roadmap
@@ -305,9 +428,16 @@ Actual technical documentation lives in [`docs/`](docs/).
 - [ ] Command submission
 - [ ] Make GPU do literally anything useful
 - [ ] 🔺 **TRIANGLE**
+- [ ] Stare at triangle for an unreasonable amount of time
 - [ ] Mesa/Gallium driver
 - [ ] OpenGL
 - [ ] Minecraft on GMA 500 because it would be funny
+- [ ] Declare victory
+- [ ] Rest
+- [ ] Notice another SGX exists
+- [ ] Say "hmm"
+- [ ] Make another terrible decision
+- [ ] Repeat until Series5 stops answering
 
 ---
 
@@ -322,6 +452,10 @@ reverse engineering
         =
      reMESA
 ```
+
+Years of branding expertise were involved.
+
+Approximately 14 seconds.
 
 The scientific objective is:
 
@@ -345,14 +479,69 @@ There will probably not even be a texture at first.
 
 There will be:
 
-**three vertices.**
+# three vertices.
 
 And we will be happy.
 
 ---
-## Working on another SGX?
 
-If you're researching another PowerVR SGX / Series5 GPU, you don't
+# Wait... there are MORE SGXs?
+
+Unfortunately.
+
+SGX535 / Poulsbo is the current target and remains the main focus.
+
+But the longer-term scope may expand to other **PowerVR Series5 GPUs
+and platforms**.
+
+Current situation:
+
+```text
+SGX535:     CURRENT VICTIM
+other SGXs: 👀
+```
+
+The important part is that some of the archaeology may be useful more
+than once.
+
+Research around:
+
+- PDS
+- USE / USSE
+- MMU / BIF
+- Services / DDK structures
+- command submission
+- firmware / microkernel interfaces
+- historical PowerVR userspace
+- Linux integration
+- reverse-engineering methodology
+
+may help investigations of related Series5 hardware.
+
+**May.**
+
+Related does not mean identical.
+
+Every GPU, revision, SoC, chipset, platform and sufficiently cursed
+binary still needs evidence of its own.
+
+We are not doing this:
+
+```text
+SGX535 does X
+      ↓
+therefore every PowerVR GPU since the dawn of time does X
+```
+
+No.
+
+That is how technical documentation becomes fan fiction.
+
+---
+
+# Working on another SGX?
+
+If you're researching another **PowerVR SGX / Series5 GPU**, you don't
 necessarily have to start completely alone.
 
 If our work overlaps, we can compare:
@@ -365,14 +554,17 @@ If our work overlaps, we can compare:
 - historical drivers
 - hardware observations
 - tooling and experiments
+- weird binaries
+- ancient PowerVR mysteries
 
-And if your project fits the scope, **you can also integrate it with
-SGX535-reMESA**.
+And if your project fits the scope:
+
+# **you can also integrate your project with SGX535-reMESA.**
 
 The goal is not to pretend every Series5 GPU is identical.
 
-The goal is to avoid reverse engineering the same ancient PowerVR
-machinery five separate times.
+The goal is to avoid five developers independently discovering the same
+terrible register definition in five different 2009 source trees.
 
 ```text
 your SGX project
@@ -389,26 +581,167 @@ your SGX project
         SGX535    another    another
           │         SGX       SGX
           └─────────┼─────────┘
+                    │
+                    ▼
+                  Linux
+                    │
                     ▼
                   Mesa?
+                    │
                     ▼
                    🔺
+```
 
-you're working on another SGX and want to collaborate:
-operatingsystemsdepression@gmail.com
-Developer: I have an SGX540 project.
+If you're working on another SGX and want to collaborate:
 
-reMESA:    interesting
+**operatingsystemsdepression@gmail.com**
 
-Developer: Can I integrate it?
+yes.
 
-reMESA:    show me the evidence
+that is the actual email.
 
-Developer: I have register dumps, DDK material and hardware.
+Example:
 
-reMESA:    COME IN
+```text
+Developer:
+I have an SGX540 project.
+
+reMESA:
+interesting
+
+Developer:
+Can I integrate it?
+
+reMESA:
+show me the evidence
+
+Developer:
+I have register dumps,
+DDK material,
+hardware observations,
+and the actual machine.
+
+reMESA:
+COME IN
+```
+
 One rule survives every GPU:
-Evidence first. Guessing second (This rule becomes extremely annoying when you really want the triangle.)
+
+> **Evidence first. Guessing second.**
+>
+> *(This rule becomes extremely annoying when you really want the triangle.)*
+
+---
+
+# Sponsor the triangle
+
+Yes.
+
+This project has **GitHub Sponsors**.
+
+We have somehow reached the point where an attempt to make three vertices
+appear on a PowerVR GPU from 2008 has a funding button.
+
+<div align="center">
+
+### ❤️ [Sponsor SGX535-reMESA](https://github.com/sponsors/gabrieelgama)
+
+**Fund old GPU archaeology.**
+
+**Fund unreasonable amounts of `grep`.**
+
+**Fund the triangle.**
+
+🔺
+
+</div>
+
+Sponsorship can help support things around the project such as:
+
+- acquiring old hardware for testing
+- replacement parts for old hardware that has discovered mortality
+- adapters and test equipment
+- shipping ancient computers across unreasonable distances
+- additional Series5 hardware
+- infrastructure and development costs
+- the continuing search for documentation the internet ate
+
+Most importantly:
+
+```text
+Sponsor:
+What does my support get?
+
+reMESA:
+More archaeology.
+
+Sponsor:
+And the triangle?
+
+reMESA:
+Eventually™
+```
+
+Please note that sponsoring the project does **not** bypass the evidence
+policy.
+
+```text
+Sponsor:
+I donated.
+
+Evidence policy:
+thank you
+
+Sponsor:
+Can we send the command now?
+
+Evidence policy:
+is the launch state proven?
+
+Sponsor:
+...
+
+Evidence policy:
+DENIED
+```
+
+Money cannot bribe `UNKNOWN` into becoming `CONFIRMED`.
+
+We checked.
+
+The triangle remains subject to peer review.
+
+```text
+GitHub Sponsors:
+$ ❤️
+
+SGX535:
+...
+
+reMESA:
+YOU HAVE A BUDGET NOW, DO SOMETHING
+```
+
+And yes:
+
+```text
+2008 GPU reverse-engineering project
+            ↓
+     GitHub Sponsors
+            ↓
+          money
+            ↓
+       old hardware
+            ↓
+          research
+            ↓
+           🔺
+```
+
+The triangle now has an economy.
+
+This has gotten out of hand.
+
 ---
 
 # Contributing
@@ -426,6 +759,9 @@ Useful things include:
 - `gma500`
 - old hardware
 - provenance checking
+- research on other PowerVR Series5 GPUs
+- register dumps with known provenance
+- weird Intel / PowerVR hardware that refuses to die
 - someone somehow having the SGX535 programming manual in a drawer since 2009
 
 Most important rule:
@@ -440,22 +776,119 @@ I have absolutely no idea what this register does
 
 that's useful information too.
 
-meanwhile
+Seriously.
+
+`UNKNOWN` is significantly better than confidently documenting nonsense.
+
+Meanwhile:
+
+```text
 Eurasia.3D Input Parameter Format.1.3.37a.SGX535 1.2.External.pdf
 
-2009: exists
-2026: lol no
+2009:
+exists
+
+2026:
+lol no
+```
+
+If you have this document:
+
+```text
+hello
+
+we should talk
+```
+
+Immediately.
+
+Please.
+
+---
+
+# Frequently asked questions
+
+### Does the driver work?
+
+Not yet.
+
+### Does the GPU work?
+
+Yes.
+
+### Does 3D acceleration work?
+
+We're working on that part.
+
+### Does it support OpenGL?
+
+That is quite literally why we're here.
+
+### Vulkan?
+
+bro.
+
+### OpenGL 4.6?
+
+BRO.
+
+### Ray tracing?
+
+Please observe the current objective:
+
+# 🔺
+
+### Can it run Crysis?
+
+We are currently negotiating with three vertices.
+
+### Can it run Minecraft?
+
+Eventually this question will become extremely funny.
+
+### Why not just use a modern GPU?
+
+Because the modern GPU already has a driver.
+
+Where is the fun in that?
+
+### Why SGX535?
+
+At this point it's personal.
+
+### Why other Series5 GPUs?
+
+At this point it's becoming a collection.
+
+### Can I sponsor the project?
+
+Apparently yes.
+
+### Will sponsoring make the triangle appear faster?
+
+```text
+Evidence:
+UNKNOWN
+```
+
 ---
 
 # Disclaimer
 
 This is an independent reverse-engineering and preservation project.
 
-It is not affiliated with or endorsed by Imagination Technologies, Intel, Texas Instruments, Mesa, or the Linux kernel project.
+It is not affiliated with or endorsed by Imagination Technologies, Intel,
+Texas Instruments, Mesa, or the Linux kernel project.
 
 Third-party material remains subject to its respective licenses.
 
 Please do not sue the triangle.
+
+It doesn't even exist yet.
+
+If it eventually exists:
+
+please still do not sue the triangle.
 
 ---
 
@@ -467,8 +900,12 @@ AI is used to help with:
 - searching large trees
 - comparing code
 - organizing findings
-- documentation (the AI keeps calling me an "operator" for some reason)
+- documentation
 - experimental scaffolding
+- asking why an unexplained dword exists for the 48th time
+- calling me an "operator" for some reason
+- staring at enormous source trees without blinking
+- discovering that the answer is sometimes still `UNKNOWN`
 
 But:
 
@@ -478,7 +915,8 @@ AI said it
 hardware documentation
 ```
 
-Important claims still need evidence from source material, analysis, or actual hardware.
+Important claims still need evidence from source material, analysis, or
+actual hardware.
 
 Sometimes the correct AI-assisted research result is still:
 
@@ -488,7 +926,58 @@ UNKNOWN
 
 good.
 
-# Thanks 
+Sometimes:
+
+```text
+AI:
+"This probably means..."
+
+Evidence policy:
+PROBABLY?
+```
+
+and we go look again.
+
+The AI:
+
+```text
+likely
+```
+
+reMESA:
+
+```text
+SOURCE
+```
+
+AI:
+
+```text
+inferred from...
+```
+
+reMESA:
+
+```text
+SOURCE
+```
+
+AI:
+
+```text
+UNKNOWN
+```
+
+reMESA:
+
+```text
+GOOD.
+```
+
+---
+
+# Thanks
+
 I need to thank **Simon Fenney** for one seemingly small tip that ended
 up moving this project forward a lot:
 
@@ -500,11 +989,50 @@ It was not.
 
 Thanks, Simon.
 
-Special thanks:
-0x07000345
+---
 
-for wasting everyone's time
-and give me deep dark circles under my eyes.
+## Special thanks: `0x07000345`
+
+For wasting everyone's time and giving me deep dark circles under my eyes.
+
+You were supposed to be a dword.
+
+Somehow you became a character.
+
+```text
+0x07000345:
+hello
+
+reMESA:
+not you again
+```
+
+Researchers:
+
+```text
+What is 0x07000345?
+```
+
+reMESA:
+
+```text
+excellent question
+```
+
+Researchers:
+
+```text
+And?
+```
+
+reMESA:
+
+```text
+excellent question
+```
+
+---
+
 <details>
 
 <summary><b>📱 Wait... you're developing a GPU driver WHERE?</b></summary>
@@ -515,7 +1043,8 @@ On this:
 
 **Samsung Galaxy Tab S7.**
 
-The main development environment is an ARM64 Linux userspace running through **PRoot on Android**.
+The main development environment is an ARM64 Linux userspace running
+through **PRoot on Android**.
 
 Meanwhile the target is:
 
@@ -577,7 +1106,67 @@ have nine dwords with no selected producer"
 
 bro.
 
+At some point an Android tablet became the development workstation
+for reverse engineering a PowerVR GPU inside an Intel Atom machine
+from 2008.
+
+Nobody planned this.
+
+```text
+Samsung:
+We made a tablet.
+
+reMESA:
+GPU DRIVER DEVELOPMENT WORKSTATION
+
+Samsung:
+what
+```
+
 </details>
+
+---
+
+# Project summary
+
+```text
+Hardware:       2008
+Development:    2026
+Documentation:  missing
+Registers:      increasingly less mysterious
+PDS:            pain
+GPU:            alive
+Triangle:       escaped
+Evidence:       mandatory
+Sponsors:       somehow real
+Budget:         triangle economy
+Other SGXs:     watching nervously
+```
+
+The project began as:
+
+```text
+maybe I can understand GMA 500
+```
+
+It is currently:
+
+```text
+PowerVR Series5 reverse-engineering project
+        │
+        ├── real hardware
+        ├── reconstructed documentation
+        ├── driver development
+        ├── collaboration with other SGX developers
+        ├── GitHub Sponsors
+        └── still no triangle
+```
+
+Excellent.
+
+Everything is going according to plan.
+
+There was no plan.
 
 ---
 
@@ -590,5 +1179,47 @@ bro.
 # 🔺
 
 *how hard could three vertices possibly be*
+
+---
+
+**Current financial objective:**
+
+# ❤️ → 🔺
+
+*fund the triangle*
+
+---
+
+**Possible future objective:**
+
+# 🔺 🔺 🔺
+
+*oh god there are more SGXs*
+
+---
+
+**PowerVR Series5 developers:**
+
+Bring evidence.
+
+Bring hardware.
+
+Bring ancient files.
+
+### COME IN.
+
+---
+
+**Want to support the archaeology?**
+
+### ❤️ [GitHub Sponsors](https://github.com/sponsors/gabrieelgama)
+
+*your contribution may be converted into suspiciously old computers*
+
+---
+
+# 🔺
+
+**THE TRIANGLE HAS A BUDGET NOW**
 
 </div>
