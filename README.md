@@ -2,7 +2,7 @@
 
 # SGX535-reMESA
 
-### Reverse engineering a PowerVR SGX535 because apparently nobody stopped me.
+### Reverse engineering a PowerVR SGX535 (and perhaps others) because apparently nobody stopped me.
 
 **Reverse engineering · Linux · Mesa · old GPU suffering**
 
