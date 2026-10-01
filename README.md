@@ -2,7 +2,7 @@
 
 # SGX535-reMESA
 
-### Reverse engineering a PowerVR SGX535 (and perhaps others) because apparently nobody stopped me.
+### Reverse engineering PowerVR Series5 GPUs because apparently nobody stopped me after the first one.
 
 **Reverse engineering · Linux · Mesa · old GPU suffering**
 
@@ -349,6 +349,66 @@ There will be:
 
 And we will be happy.
 
+---
+## Working on another SGX?
+
+If you're researching another PowerVR SGX / Series5 GPU, you don't
+necessarily have to start completely alone.
+
+If our work overlaps, we can compare:
+
+- register research
+- PDS / USE / USSE findings
+- MMU / BIF behavior
+- DDK structures
+- command streams
+- historical drivers
+- hardware observations
+- tooling and experiments
+
+And if your project fits the scope, **you can also integrate it with
+SGX535-reMESA**.
+
+The goal is not to pretend every Series5 GPU is identical.
+
+The goal is to avoid reverse engineering the same ancient PowerVR
+machinery five separate times.
+
+```text
+your SGX project
+       │
+       ├── independent project
+       │
+       └── integrate with reMESA
+                    │
+                    ▼
+          shared Series5 research
+                    │
+          ┌─────────┼─────────┐
+          ▼         ▼         ▼
+        SGX535    another    another
+          │         SGX       SGX
+          └─────────┼─────────┘
+                    ▼
+                  Mesa?
+                    ▼
+                   🔺
+
+you're working on another SGX and want to collaborate:
+operatingsystemsdepression@gmail.com
+Developer: I have an SGX540 project.
+
+reMESA:    interesting
+
+Developer: Can I integrate it?
+
+reMESA:    show me the evidence
+
+Developer: I have register dumps, DDK material and hardware.
+
+reMESA:    COME IN
+One rule survives every GPU:
+Evidence first. Guessing second (This rule becomes extremely annoying when you really want the triangle.)
 ---
 
 # Contributing
