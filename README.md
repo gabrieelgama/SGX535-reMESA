@@ -25,63 +25,128 @@
 </div>
 
 ---
-
 ## Current phase
 
-**Phase 8 — SGX535 first-load qualification / frozen-triangle bring-up**
+**Phase 8 — SGX535 frozen triangle bring-up**
 
 *(blame the kernel for this phase existing)*
 
 Current status:
 
 ```text
-experimental first boot:  userspace reached
-privileged capture:       not established
-stock recovery:           passed
-Gate B:                   BLOCKED
-whitelist:                []
-SGX execution:            not attempted
-triangle:                 not attempted
-sanity:                   sudo -v
+experimental boot:        passed
+privileged capture:       established
+first-owner evidence:     established
+old Gate B:               PASSED
+first fixed ioctl:        REACHED
+
+TA submission:            not reached
+rasterization:            not reached
+triangle:                 not yet
+
+first live blocker:       -EBUSY
+root cause:               GPU VA allocator
+root cause status:        identified
+allocator fix:            qualified offline
+
+corrected module:         ready
+corrected initramfs:      ready
+corrected Gate B:         BLOCKED — live qualification pending
+
+sanity:                   questionable
+```
+
+We finally reached the fixed ioctl.
+
+It returned:
+
+```text
+errno:    -EBUSY
+outcome:  1
+phase:    0
+events:   0x00000000
+```
+
+No TA or raster work was submitted.
+
+The failure was traced to the private GPU virtual-address allocator.
+
+GPU virtual resources were tagged with `IORESOURCE_MEM`, causing the x86
+resource allocator to apply CPU E820 reservations to addresses that are
+actually SGX virtual addresses.
+
+Result:
+
+```text
+PDS VA window:
+0x20000000 - 0x2fffffff
+
+CPU RAM:
+"nice address space you have there"
+```
+
+The allocator rejected the first PDS BO before the fixed SGX workload
+could begin.
+
+The minimal correction removes the physical-memory resource semantics
+from the private GPU VA allocator while preserving its bounds, alignment,
+overlap checks and GTT exclusion.
+
+Offline qualification now passes:
+
+```text
+PDS allocation:          0x20000000 - 0x2001ffff
+GTT overlap rejection:   PASS
+occupied-range rejection: PASS
+
+target ABI imports:      232 / 232
+CRC mismatches:          0
+module_layout:           0xb84efb99
+
+corrected module:        reproducible
+corrected initramfs:     reproducible
 ```
 
 Unfortunately:
 
 ```text
-"it probably works"
-        ≠
-"we proved it works"
+offline qualified
+       ≠
+live qualified
 ```
 
 The evidence policy wins again.
 
 damn.
 
-The first experimental boot reached normal userspace, but the privileged
-capture did not run. Experimental boot ID, loaded-module identity and
-hook trace therefore remain unestablished.
+The corrected candidate now needs one fresh first-load qualification
+before another SGX invocation can be attempted.
 
-Stock recovery completed successfully and the original graphics state
-was verified.
-
-The next step is one separately authorized non-SGX first-load / recovery
-cycle using the corrected capture procedure.
-
-No fixed ioctl, SGX execution or triangle submission is currently
-authorized.
+The shortest path left is:
 
 ```text
-Experimental kernel:
-boots
+STOCK
+  ↓
+stage corrected image
+  ↓
+one corrected EXPERIMENTAL boot
+  ↓
+first-owner capture
+  ↓
+Gate B
+  ↓
+MINI12-SGX535-REV121-FROZEN-32x32-SEQ1
+  ↓
+???
+  ↓
+△
+```
 
-Evidence:
-where
+The SGX535 is alive.
 
-sudo:
-authentication required
+The ioctl has been reached.
 
-reMESA:
-you have got to be kidding me
+**The triangle has nowhere left to hide.**
 ```
 
 ---
