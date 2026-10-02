@@ -147,7 +147,6 @@ The SGX535 is alive.
 The ioctl has been reached.
 
 **The triangle has nowhere left to hide.**
-```
 
 ---
 
