@@ -568,8 +568,8 @@ If you're looking for the triangle:
 - [x] Build fixed one-shot bring-up tooling
 - [x] Reach userspace with the experimental first-load kernel
 - [x] Recover cleanly to stock
-- [ ] Capture and qualify experimental first-load evidence
-- [ ] Clear Gate B
+- [x] Capture and qualify experimental first-load evidence
+- [x] Clear Gate B
 - [ ] Controlled SGX execution
 - [ ] Fixed command submission
 - [ ] Make GPU do literally anything useful
