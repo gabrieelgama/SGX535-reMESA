@@ -27,9 +27,7 @@
 ---
 ## Current phase
 
-**Phase 8 — SGX535 frozen triangle bring-up**
-
-*(blame the kernel for this phase existing)*
+**Phase 9 — MESA**
 
 Current status:
 
