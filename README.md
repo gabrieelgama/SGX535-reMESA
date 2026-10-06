@@ -6,11 +6,12 @@
 
 **Reverse engineering · Linux · Mesa · old GPU suffering**
 
-![Status](https://img.shields.io/badge/status-research%20%2F%20bring--up-orange)
+![Status](https://img.shields.io/badge/status-Phase%209%20%2F%20Mesa-purple)
 ![GPU](https://img.shields.io/badge/GPU-PowerVR%20SGX535-blue)
 ![Platform](https://img.shields.io/badge/platform-Intel%20Poulsbo-lightgrey)
 ![Linux](https://img.shields.io/badge/Linux-gma500-yellow)
-![Mesa](https://img.shields.io/badge/Mesa-eventually™-purple)
+![Triangle](https://img.shields.io/badge/triangle-ESTABLISHED-brightgreen)
+![Mesa](https://img.shields.io/badge/Mesa-now™-purple)
 
 > **We don't have the SGX535 programming manual.**
 >
@@ -25,9 +26,10 @@
 </div>
 
 ---
-## Current phase
 
-**Phase 9 — MESA**
+# Current phase
+
+## **Phase 9 — MESA**
 
 Current status:
 
@@ -40,111 +42,127 @@ first fixed ioctl:        REACHED
 
 TA submission:            YESSSSSSSSSSS
 rasterization:            YESSSSSSSSSSSSSSS
-triangle:                 FUCKING YESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS 2:51 AM BRT
+triangle:                 FUCKING YESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+                          2:51 AM BRT
+
+FIRE #3:                  exactly once
+client exit:              0
+ioctl return:             0
+operation errno:          0
+final phase:              RETIRED
+
+readback:                 32x32
+magenta pixels:           120
+zero pixels:              904
+triangle:                 ESTABLISHED
 
 first live blocker:       -EBUSY
 root cause:               GPU VA allocator
 root cause status:        identified
-allocator fix:            qualified offline
+allocator fix:            qualified
 
-corrected module:         ready
-corrected initramfs:      ready
-corrected Gate B:         PASS (forced pass by gamaTM hehe)
+corrected module:         qualified
+corrected initramfs:      qualified
+corrected Gate B:         PASS
+
+Phase 8:                  DONE
+Phase 9:                  MESA
 
 sanity:                   no more
 ```
 
-We finally reached the fixed ioctl.
+Yes.
 
-It returned:
+# THE TRIANGLE HAPPENED.
 
-```text
-errno:    -EBUSY
-outcome:  1
-phase:    0
-events:   0x00000000
-```
+At approximately **2:51 AM BRT**, FIRE #3 submitted the fixed diagnostic
+workload exactly once.
 
-No TA or raster work was submitted.
+The client returned successfully.
 
-The failure was traced to the private GPU virtual-address allocator.
+The operation reached retirement.
 
-GPU virtual resources were tagged with `IORESOURCE_MEM`, causing the x86
-resource allocator to apply CPU E820 reservations to addresses that are
-actually SGX virtual addresses.
-
-Result:
+The sealed 32×32 readback contained:
 
 ```text
-PDS VA window:
-0x20000000 - 0x2fffffff
+total pixels:     1024
+magenta:           120
+zero:              904
 
-CPU RAM:
-"nice address space you have there"
+unique values:
+
+0xffff00ff
+0x00000000
 ```
 
-The allocator rejected the first PDS BO before the fixed SGX workload
-could begin.
-
-The minimal correction removes the physical-memory resource semantics
-from the private GPU VA allocator while preserving its bounds, alignment,
-overlap checks and GTT exclusion.
-
-Offline qualification now passes:
+The 120 foreground pixels occupied:
 
 ```text
-PDS allocation:          0x20000000 - 0x2001ffff
-GTT overlap rejection:   PASS
-occupied-range rejection: PASS
+bounding box:
 
-target ABI imports:      232 / 232
-CRC mismatches:          0
-module_layout:           0xb84efb99
-
-corrected module:        reproducible
-corrected initramfs:     reproducible
+(8,8) -> (22,22)
 ```
 
-Unfortunately:
+with rows:
 
 ```text
-offline qualified
-       ≠
-live qualified
+███████████████
+██████████████
+█████████████
+████████████
+███████████
+██████████
+█████████
+████████
+███████
+██████
+█████
+████
+███
+██
+█
 ```
 
-The evidence policy wins again.
-
-damn.
-
-The corrected candidate now needs one fresh first-load qualification
-before another SGX invocation can be attempted.
-
-The shortest path left is:
+Exactly:
 
 ```text
-STOCK
-  ↓
-stage corrected image
-  ↓
-one corrected EXPERIMENTAL boot
-  ↓
-first-owner capture
-  ↓
-Gate B
-  ↓
-MINI12-SGX535-REV121-FROZEN-32x32-SEQ1
-  ↓
-???
-  ↓
-△
+15 + 14 + 13 + ... + 1 = 120
 ```
 
-The SGX535 is alive.
+The complete readback matched the expected filled triangle with
+**zero whole-image reference mismatches**.
 
-The ioctl has been reached.
+TA completion was observed.
 
-**The triangle has nowhere left to hide.**
+End-render was observed.
+
+3D-memory-free was observed.
+
+Retirement was observed.
+
+The response, closed evidence capsule and complete 4096-byte readback
+all agreed on the same attributable operation.
+
+So:
+
+```text
+Triangle:
+ESTABLISHED
+```
+
+No retry was required.
+
+No second FIRE #3 invocation occurred.
+
+The authorization was consumed after the single invocation.
+
+The diagnostic triangle does not need another execution to establish it.
+
+After approximately 22 days of reverse engineering:
+
+# 🔺
+
+there it is.
 
 ---
 
@@ -154,25 +172,45 @@ The ioctl has been reached.
 for the **PowerVR SGX535**, initially focused on the version inside
 **Intel Poulsbo / GMA 500** systems.
 
-The current objective:
+The original objective looked like this:
 
 ```text
 SGX535
    ↓
 Linux
    ↓
-Mesa
+???
    ↓
   🔺
 ```
 
+The triangle happened.
+
+So the objective has changed.
+
+Now:
+
+```text
+SGX535
+   ↓
+Linux
+   ↓
+Mesa / Gallium
+   ↓
+OpenGL
+   ↓
+???
+   ↓
+Minecraft?
+```
+
 Yes.
 
-We're doing all of this for a triangle.
+We actually have to write the driver now.
 
 The SGX535 documentation needed to write a modern open-source driver is
-not publicly available in enough detail, so the project is reconstructing
-it from:
+not publicly available in enough detail, so the project has been
+reconstructing it from:
 
 - historical source code
 - old drivers
@@ -181,11 +219,13 @@ it from:
 - Linux sources
 - command/state analysis
 - real hardware
+- controlled experiments
+- readback evidence
 - questionable amounts of `grep`
 - files from 2009 that somehow still exist
 - pure refusal to let this GPU die
 
-SGX535 / Poulsbo is the current target.
+SGX535 / Poulsbo is the current focus.
 
 **Current.**
 
@@ -245,13 +285,89 @@ Evidence policy strikes again.
 
 ---
 
+# THE GPU DREW SOMETHING
+
+Reading the identity registers was one thing.
+
+Making the GPU actually process reconstructed 3D state was another.
+
+A considerably more annoying thing.
+
+After controlled first-load qualification, evidence capture, Gate B
+review, fixed-scene construction and multiple diagnostic stages, the
+project reached a one-shot SGX invocation.
+
+The final diagnostic operation produced:
+
+```text
+TA submission:       confirmed
+end-render:          confirmed
+3D memory free:      confirmed
+retirement:          confirmed
+
+readback bytes:      4096
+pixels:              1024
+magenta pixels:      120
+background pixels:   904
+```
+
+And those pixels were not randomly scattered.
+
+They formed the expected triangle.
+
+```text
+               █
+              ██
+             ███
+            ████
+           █████
+          ██████
+         ███████
+        ████████
+       █████████
+      ██████████
+     ███████████
+    ████████████
+   █████████████
+  ██████████████
+ ███████████████
+```
+
+The spatial comparison reported zero mismatches against the expected
+whole-image reference.
+
+Classification:
+
+```text
+CONSTANT_FRAGMENT_HYPOTHESIS_SUPPORTED
+Triangle ESTABLISHED
+```
+
+The fragment result strongly supports the diagnostic hypothesis that led
+to FIRE #3.
+
+It does **not** magically turn every earlier hypothesis into confirmed
+architecture.
+
+Because even after finally getting the triangle:
+
+> **Evidence first. Guessing second.**
+
+Yes.
+
+The evidence policy survived the triangle.
+
+Unfortunately.
+
+---
+
 # Why?
 
 Poulsbo machines contain an actual **PowerVR SGX535**.
 
 Linux still supports the display side through `gma500`.
 
-3D acceleration, however:
+Historically, the 3D situation looked approximately like:
 
 ```text
 Linux:   display works 👍
@@ -263,7 +379,20 @@ There is no modern open-source SGX535 3D driver.
 
 So that's what this project is trying to fix.
 
-Eventually™.
+The first reconstructed diagnostic triangle means the project has now
+crossed an important boundary:
+
+```text
+"can we make this thing execute reconstructed 3D work?"
+
+YES.
+```
+
+That is not the same as having a Mesa driver.
+
+Not even close.
+
+But it means Phase 9 can finally begin for real.
 
 ```text
 2008:
@@ -295,11 +424,13 @@ We have recovered a surprising amount of stuff.
 | USE / USSE | 🟡 |
 | PDS | 🟡 |
 | Command submission | 🟡 |
-| First-load qualification | 🔒 |
+| First-load qualification | ✅ |
+| Controlled SGX execution | ✅ |
+| TA submission | ✅ |
+| Rasterization | ✅ |
+| Diagnostic triangle | 🔺 |
 | Shader ISA | ❓ |
 | Microkernel | ❓ |
-| Safe active bring-up | 🔒 |
-| Triangle | where |
 | Mesa driver | 💀 |
 
 Useful historical material includes:
@@ -313,6 +444,8 @@ Useful historical material includes:
 - host ↔ SGX structures
 - command-submission code
 - Linux `gma500`
+- historical PSB / Poulsbo userspace
+- EMGD-related material
 - various ancient files that somehow survived until 2026
 
 The general research experience looks approximately like this:
@@ -333,6 +466,10 @@ old tarball
 interesting dword
  ↓
 why
+ ↓
+three weeks later
+ ↓
+🔺
 ```
 
 ---
@@ -364,6 +501,8 @@ Claims should ideally point to an exact:
 - document
 - experiment
 - hardware observation
+- captured operation
+- sealed artifact
 
 ### `UNKNOWN` is allowed.
 
@@ -396,17 +535,151 @@ Evidence policy:
 DENIED
 ```
 
+Eventually:
+
+```text
+Researcher:
+I have the readback.
+
+Evidence policy:
+hashes?
+
+Researcher:
+yes
+
+Evidence policy:
+provenance?
+
+Researcher:
+yes
+
+Evidence policy:
+spatial comparison?
+
+Researcher:
+zero mismatches
+
+Evidence policy:
+operation attributable?
+
+Researcher:
+yes
+
+Evidence policy:
+fine.
+
+Triangle:
+🔺
+```
+
 One rule survives every GPU:
 
 > **Evidence first. Guessing second.**
->
-> *(This rule becomes extremely annoying when you really want the triangle.)*
+
+Apparently it works.
+
+---
+
+# The `-EBUSY` incident
+
+Before the successful triangle, the first live fixed ioctl reached the
+kernel and returned:
+
+```text
+errno:    -EBUSY
+outcome:  1
+phase:    0
+events:   0x00000000
+```
+
+No TA or raster work was submitted during that failed attempt.
+
+The failure was traced to the private GPU virtual-address allocator.
+
+GPU virtual resources were tagged with `IORESOURCE_MEM`, causing the x86
+resource allocator to apply CPU E820 reservations to addresses that were
+actually SGX virtual addresses.
+
+Result:
+
+```text
+PDS VA window:
+0x20000000 - 0x2fffffff
+
+CPU RAM:
+"nice address space you have there"
+```
+
+The allocator rejected the first PDS BO before the fixed SGX workload
+could begin.
+
+The minimal correction removed the physical-memory resource semantics
+from the private GPU VA allocator while preserving its bounds, alignment,
+overlap checks and GTT exclusion.
+
+Offline qualification reported:
+
+```text
+PDS allocation:           0x20000000 - 0x2001ffff
+GTT overlap rejection:    PASS
+occupied-range rejection: PASS
+
+target ABI imports:       232 / 232
+CRC mismatches:           0
+module_layout:            0xb84efb99
+
+corrected module:         reproducible
+corrected initramfs:      reproducible
+```
+
+At the time:
+
+```text
+offline qualified
+       ≠
+live qualified
+```
+
+The evidence policy won again.
+
+damn.
+
+That blocker was eventually cleared through the controlled qualification
+process.
+
+And then:
+
+```text
+-EBUSY
+   ↓
+allocator investigation
+   ↓
+fix
+   ↓
+qualification
+   ↓
+Gate B
+   ↓
+FIRE
+   ↓
+TA
+   ↓
+raster
+   ↓
+🔺
+```
+
+So `-EBUSY` is no longer the current blocker.
+
+It is now archaeology about the archaeology.
+
+Excellent.
 
 ---
 
 # Current status
 
-> **This is not a working Mesa driver yet. Do not install it expecting Minecraft.**
+> **This is still not a working Mesa driver. Do not install it expecting Minecraft.**
 
 ```text
 Phase 1   ████████████████████   ✓
@@ -416,8 +689,8 @@ Phase 4   ████████████████████   ✓
 Phase 5   ████████████████████   ✓
 Phase 6   ████████████████████   ✓
 Phase 7   ████████████████████   ✓
-Phase 8   ███░░░░░░░░░░░░░░░░░   first-load qualification
-Phase 9   ░░░░░░░░░░░░░░░░░░░░   Mesa 💀
+Phase 8   ████████████████████   ✓  🔺
+Phase 9   █░░░░░░░░░░░░░░░░░░░   Mesa
 ```
 
 ### Phase 8
@@ -425,82 +698,116 @@ Phase 9   ░░░░░░░░░░░░░░░░░░░░   Mesa �
 Also known as:
 
 ```text
-the phase that exists because the kernel said no
+the phase that existed because the kernel said no
 ```
 
-Phase 7 already produced:
-
-- real hardware MMIO access
-- `CORE_ID`
-- `CORE_REVISION`
-- physical rev121 confirmation
-- historical PDS reconstruction
-- reproducible PDS program words
-- launch-state evidence reconstruction
-- fixed one-shot bring-up tooling
-- considerably more knowledge about Poulsbo than was probably healthy
-
-Phase 8 has already produced:
+Phase 8 eventually produced:
 
 - an experimental first-load kernel
-- a successful experimental boot to normal userspace
-- a verified recovery to the original stock graphics state
-- a new appreciation for `sudo -v`
+- successful experimental boots
+- verified recovery to the original stock graphics state
+- privileged evidence capture
+- first-owner evidence
+- deterministic fixed-scene tooling
+- qualified module transitions
+- Gate B review
+- an actual non-empty whitelist
+- fixed SGX invocation
+- TA submission
+- rasterization
+- complete readback
+- a triangle
+- considerably less sanity
 
-Current blocker:
-
-```text
-The experimental kernel reached userspace.
-
-Did we capture enough evidence from that boot
-to prove exactly what was loaded and what happened?
-
-no.
-```
-
-The missing experimental boot ID, loaded-module identity and hook trace
-cannot be reconstructed from the current stock boot.
-
-So:
+The important transition was:
 
 ```text
-Experimental kernel:  boots
-Stock recovery:       works
-SGX execution:        none
-Triangle:             untouched
-sudo password:        final boss
+Gate B:
+BLOCKED
 ```
 
-The next step is another separately authorized non-SGX first-load /
-recovery cycle using the corrected capture procedure.
-
-Until that evidence exists:
-
-# no funny writes.
-
-The GPU:
+becoming:
 
 ```text
-bro you literally booted it
+Gate B:
+PASS
 ```
 
-reMESA:
+for a specifically reviewed operation.
+
+The corresponding one-shot authorization was then consumed exactly once.
+
+No retry occurred.
+
+The resulting diagnostic triangle was preserved and classified:
 
 ```text
-DID WE CAPTURE THE TRACE?
+Triangle: ESTABLISHED
 ```
 
-The GPU:
+So Phase 8 can finally stop holding the repository hostage.
+
+Thank you.
+
+Please leave.
+
+---
+
+# Phase 9
+
+# Mesa.
+
+Yes.
+
+Actual Mesa.
+
+The thing in the repository name.
 
 ```text
-no
+Phase 1-7:
+reverse engineer GPU
+
+Phase 8:
+argue with kernel until triangle
+
+Phase 9:
+remember why project is called reMESA
 ```
 
-reMESA:
+The rough objective is now:
 
 ```text
-THEN NO.
+SGX535
+   │
+   ▼
+kernel / DRM
+   │
+   ▼
+userspace driver
+   │
+   ▼
+Mesa / Gallium
+   │
+   ▼
+OpenGL
+   │
+   ▼
+Minecraft?
 ```
+
+The first triangle was never the final driver.
+
+It was the proof that this path can reach real SGX535 execution and
+produce a known raster result.
+
+Now the hard part becomes turning reconstructed low-level knowledge into
+something a normal graphics stack can actually use.
+
+You know.
+
+The driver.
+
+The thing we said we were making.
 
 ---
 
@@ -516,7 +823,7 @@ THEN NO.
 | CPU | Intel Atom Z5xx |
 | OS | Linux |
 | Age | ancient |
-| Will to live | unknown |
+| Will to live | apparently yes |
 
 ---
 
@@ -543,7 +850,7 @@ If you're looking for the serious research:
 
 If you're looking for the triangle:
 
-**so are we.**
+**WE FOUND IT.**
 
 ---
 
@@ -568,14 +875,15 @@ If you're looking for the triangle:
 - [x] Recover cleanly to stock
 - [x] Capture and qualify experimental first-load evidence
 - [x] Clear Gate B
-- [ ] Controlled SGX execution
-- [ ] Fixed command submission
-- [ ] Make GPU do literally anything useful
-- [ ] 🔺 **TRIANGLE**
-- [ ] Stare at triangle for an unreasonable amount of time
-- [ ] Phase 9
+- [x] Controlled SGX execution
+- [x] Fixed command submission
+- [x] Make GPU do literally anything useful
+- [x] 🔺 **TRIANGLE**
+- [x] Stare at triangle for an unreasonable amount of time
+- [x] Phase 9
 - [ ] Mesa/Gallium driver
 - [ ] OpenGL
+- [ ] Put the triangle through the real graphics stack
 - [ ] Minecraft on GMA 500 because it would be funny
 - [ ] Declare victory
 - [ ] Rest
@@ -583,58 +891,6 @@ If you're looking for the triangle:
 - [ ] Say "hmm"
 - [ ] Make another terrible decision
 - [ ] Repeat until Series5 stops answering
-
----
-
-# Phase 9
-
-Assuming Phase 8 eventually stops being held hostage by kernel bring-up:
-
-# Mesa.
-
-Yes.
-
-Actual Mesa.
-
-The thing in the repository name.
-
-```text
-Phase 1-7:
-reverse engineer GPU
-
-Phase 8:
-argue with kernel
-
-Phase 9:
-remember why project is called reMESA
-```
-
-The rough objective:
-
-```text
-SGX535
-   │
-   ▼
-kernel / DRM
-   │
-   ▼
-userspace driver
-   │
-   ▼
-Mesa / Gallium
-   │
-   ▼
-OpenGL
-   │
-   ▼
-Minecraft?
-```
-
-One problem at a time.
-
-First:
-
-# 🔺
 
 ---
 
@@ -654,7 +910,7 @@ Years of branding expertise were involved.
 
 Approximately 14 seconds.
 
-The scientific objective is:
+Originally, the scientific objective was:
 
 ```text
             SGX535
@@ -666,19 +922,41 @@ The scientific objective is:
               🔺
 ```
 
+Then we got impatient and made the triangle before Mesa.
+
+So now:
+
+```text
+            SGX535
+               │
+               ▼
+              🔺
+               │
+               ▼
+             Mesa
+               │
+               ▼
+         normal software
+               │
+               ▼
+              ???
+```
+
 ## THE TRIANGLE
 
-There will be no ray tracing.
+There was no ray tracing.
 
-There will be no path tracing.
+There was no path tracing.
 
-There will probably not even be a texture at first.
+There was not even a texture.
 
-There will be:
+There were:
 
 # three vertices.
 
-And we will be happy.
+And we were happy.
+
+At 2:51 AM.
 
 ---
 
@@ -686,7 +964,7 @@ And we will be happy.
 
 Unfortunately.
 
-SGX535 / Poulsbo is the current target and remains the main focus.
+SGX535 / Poulsbo is the current focus.
 
 But the longer-term scope may expand to other **PowerVR Series5 GPUs
 and platforms**.
@@ -694,7 +972,7 @@ and platforms**.
 Current situation:
 
 ```text
-SGX535:     CURRENT VICTIM
+SGX535:     TRIANGLE ACHIEVED 🔺
 other SGXs: 👀
 ```
 
@@ -825,8 +1103,10 @@ COME IN
 One rule survives every GPU:
 
 > **Evidence first. Guessing second.**
->
-> *(This rule becomes extremely annoying when you really want the triangle.)*
+
+Now we can add:
+
+> **Triangles are also acceptable evidence.**
 
 ---
 
@@ -836,8 +1116,10 @@ Yes.
 
 This project has **GitHub Sponsors**.
 
-We have somehow reached the point where an attempt to make three vertices
-appear on a PowerVR GPU from 2008 has a funding button.
+We somehow reached the point where an attempt to make three vertices
+appear on a PowerVR GPU from 2008 had a funding button.
+
+And then the triangle actually appeared.
 
 <div align="center">
 
@@ -847,7 +1129,7 @@ appear on a PowerVR GPU from 2008 has a funding button.
 
 **Fund unreasonable amounts of `grep`.**
 
-**Fund the triangle.**
+**Fund Mesa.**
 
 🔺
 
@@ -862,6 +1144,7 @@ Sponsorship can help support things around the project such as:
 - additional Series5 hardware
 - infrastructure and development costs
 - the continuing search for documentation the internet ate
+- turning one extremely important triangle into an actual driver
 
 Most importantly:
 
@@ -876,7 +1159,13 @@ Sponsor:
 And the triangle?
 
 reMESA:
-Eventually™
+we have one now
+
+Sponsor:
+wait what
+
+reMESA:
+🔺
 ```
 
 Please note that sponsoring the project does **not** bypass the evidence
@@ -890,10 +1179,10 @@ Evidence policy:
 thank you
 
 Sponsor:
-Can we send the command now?
+Can we call this register confirmed?
 
 Evidence policy:
-is the launch state proven?
+source?
 
 Sponsor:
 ...
@@ -906,17 +1195,17 @@ Money cannot bribe `UNKNOWN` into becoming `CONFIRMED`.
 
 We checked.
 
-The triangle remains subject to peer review.
+The triangle survived peer review.
 
 ```text
 GitHub Sponsors:
 $ ❤️
 
 SGX535:
-...
+🔺
 
 reMESA:
-YOU HAVE A BUDGET NOW, DO SOMETHING
+OH MY GOD IT ACTUALLY DID SOMETHING
 ```
 
 And yes:
@@ -933,9 +1222,11 @@ And yes:
           research
             ↓
            🔺
+            ↓
+          Mesa
 ```
 
-The triangle now has an economy.
+The triangle has an economy.
 
 This has gotten out of hand.
 
@@ -1001,25 +1292,46 @@ Immediately.
 
 Please.
 
+The triangle did not magically make the missing documentation come back.
+
 ---
 
 # Frequently asked questions
 
 ### Does the driver work?
 
-Not yet.
+Not as a Mesa driver yet.
 
 ### Does the GPU work?
 
-Yes.
+# YES.
 
-### Does 3D acceleration work?
+### Does reconstructed 3D execution work?
 
-We're working on that part.
+We have a controlled diagnostic operation with confirmed TA submission,
+rasterization, retirement and triangle readback.
+
+So:
+
+**yes, in that specifically established scope.**
+
+### Did it actually draw a triangle?
+
+# YESSSSSSSSSSSSSSSSS.
+
+120 magenta pixels.
+
+Zero reference mismatches.
+
+We checked.
+
+A lot.
 
 ### Does it support OpenGL?
 
-That is quite literally why we're here.
+Not yet.
+
+That is Phase 9.
 
 ### Vulkan?
 
@@ -1031,17 +1343,27 @@ BRO.
 
 ### Ray tracing?
 
-Please observe the current objective:
+We have exactly one very important triangle.
 
-# 🔺
+Please behave.
 
 ### Can it run Crysis?
 
-We are currently negotiating with three vertices.
+We only recently stopped negotiating with three vertices.
 
 ### Can it run Minecraft?
 
-Eventually this question will become extremely funny.
+This question has officially advanced from:
+
+```text
+lol
+```
+
+to:
+
+```text
+technically now we have to find out
+```
 
 ### Why not just use a modern GPU?
 
@@ -1061,7 +1383,7 @@ At this point it's becoming a collection.
 
 Apparently yes.
 
-### Will sponsoring make the triangle appear faster?
+### Will sponsoring make Mesa appear faster?
 
 ```text
 Evidence:
@@ -1081,11 +1403,11 @@ Third-party material remains subject to its respective licenses.
 
 Please do not sue the triangle.
 
-It doesn't even exist yet.
+It exists now.
 
-If it eventually exists:
+It is only 120 pixels.
 
-please still do not sue the triangle.
+It has suffered enough.
 
 ---
 
@@ -1103,6 +1425,8 @@ AI is used to help with:
 - calling me an "operator" for some reason
 - staring at enormous source trees without blinking
 - discovering that the answer is sometimes still `UNKNOWN`
+- spending an unreasonable amount of compute proving that 120 magenta
+  pixels are, in fact, a triangle
 
 But:
 
@@ -1171,6 +1495,16 @@ reMESA:
 GOOD.
 ```
 
+And eventually:
+
+```text
+AI:
+Triangle ESTABLISHED.
+
+reMESA:
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+```
+
 ---
 
 # Thanks
@@ -1185,6 +1519,8 @@ That sounded like a small lead.
 It was not.
 
 Thanks, Simon.
+
+The triangle exists now.
 
 ---
 
@@ -1227,6 +1563,10 @@ reMESA:
 ```text
 excellent question
 ```
+
+The triangle was eventually rendered anyway.
+
+Nice try.
 
 ---
 
@@ -1292,11 +1632,17 @@ $ neofetch
 
 > look guys ubuntu on my phone
 
-Now it's:
+Then it became:
 
 ```text
 "why does this 2008 PowerVR PDS allocation
 have nine dwords with no selected producer"
+```
+
+And eventually:
+
+```text
+Triangle ESTABLISHED
 ```
 
 **PRoot is a workstation now.**
@@ -1318,6 +1664,12 @@ GPU DRIVER DEVELOPMENT WORKSTATION
 
 Samsung:
 what
+
+SGX535:
+🔺
+
+Samsung:
+WHAT
 ```
 
 </details>
@@ -1333,16 +1685,23 @@ Documentation:  missing
 Registers:      increasingly less mysterious
 PDS:            considerably less mysterious
 Kernel:         boots
-First load:     evidence incomplete
+First load:     established
 Stock recovery: passed
-Gate B:         BLOCKED
-SGX execution:  not attempted
-Triangle:       waiting impatiently
+Gate B:         PASSED
+SGX execution:  YES
+TA submission:  YES
+Rasterization:  YES
+FIRE #3:        one invocation
+Readback:       sealed
+Magenta pixels: 120
+Triangle:       ESTABLISHED
+Phase 8:        DONE
+Phase 9:        MESA
 Evidence:       mandatory
-sudo -v:        unexpectedly important
 Sponsors:       somehow real
 Budget:         triangle economy
 Other SGXs:     watching nervously
+Sanity:         no more
 ```
 
 The project began as:
@@ -1351,7 +1710,7 @@ The project began as:
 maybe I can understand GMA 500
 ```
 
-It is currently:
+Then became:
 
 ```text
 PowerVR Series5 reverse-engineering project
@@ -1362,7 +1721,21 @@ PowerVR Series5 reverse-engineering project
         ├── collaboration with other SGX developers
         ├── GitHub Sponsors
         ├── kernel negotiations
-        └── still no triangle
+        └── where triangle
+```
+
+Then, at approximately 2:51 AM BRT:
+
+```text
+PowerVR Series5 reverse-engineering project
+        │
+        ├── real hardware
+        ├── reconstructed documentation
+        ├── driver development
+        ├── controlled SGX execution
+        ├── TA submission
+        ├── rasterization
+        └── 🔺
 ```
 
 Excellent.
@@ -1377,27 +1750,39 @@ There was no plan.
 
 ## SGX535-reMESA
 
-**Current objective:**
+**Previous objective:**
 
 # 🔺
 
-*how hard could three vertices possibly be*
+~~*how hard could three vertices possibly be*~~
+
+**Answer: approximately 22 days.**
 
 ---
 
-**Current technical obstacle:**
+**Result:**
 
-# KERNEL
+# 🔺
 
-*blame it.*
+**120 pixels.**
+
+**Triangle: ESTABLISHED.**
+
+---
+
+**Current technical objective:**
+
+# MESA
+
+*oh right, the actual driver*
 
 ---
 
 **Current financial objective:**
 
-# ❤️ → 🔺
+# ❤️ → Mesa
 
-*fund the triangle*
+*fund increasingly unreasonable old GPU archaeology*
 
 ---
 
@@ -1431,4 +1816,10 @@ Bring ancient files.
 
 # 🔺
 
-**THE TRIANGLE HAS A BUDGET NOW**
+## THE TRIANGLE EXISTS NOW
+
+### PHASE 9 — MESA
+
+*apparently we actually have to write the driver*
+
+</div>
