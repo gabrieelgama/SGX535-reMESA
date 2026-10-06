@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "record_id": "MINI12-PRE07-MINIMUM-PROPERTY-REVIEW-DISPOSITION-20261004-314e2f3b",
+  "record_kind": "PROCEDURAL REVIEW DISPOSITION; NO TECHNICAL CONFIRMATION OR DESIGN APPROVAL",
+  "recorded_timestamp_utc": "2026-10-04T21:34:44Z",
+  "recording_authority": {
+    "role": "Codex recording procedural disposition at project maintainer direction",
+    "scope": "Close the current permitted property-confirmation routes; no authority to manufacture technical evidence or grant design/live/execution permission."
+  },
+  "request": {
+    "path": "/home/gama/sgx535-gfx/docs/phase8/session-response-binding-minimum-property-review-request-20261004-314e2f3b.json",
+    "request_id": "MINI12-PRE07-MINIMUM-SESSION-RESPONSE-PROPERTY-REVIEW-20261004-314e2f3b"
+  },
+  "exact_context": {
+    "boot_id": "89fc7306-6dac-4ab9-af62-360b7152ef22",
+    "module_build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+    "action": "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1",
+    "freshness": "Boot and 70/70 first-owner facts are preserved historical observations, not fresh invocation guards."
+  },
+  "approved_response_client": {
+    "source": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot_response.c",
+      "size": 5514,
+      "sha256": "919c2611e048e4a660ecae3542264adf5a5367d9b0fbe7fbceff2f45f90adedf"
+    },
+    "binary": {
+      "path": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-build-01/frozen-triangle-one-shot-response-i386",
+      "size": 775264,
+      "sha256": "2f84917f96db2859678797a327d40d9638325e5c5efb6e0dfccef44d756b4835"
+    },
+    "uapi": {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_uapi.h",
+      "size": 760,
+      "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420"
+    }
+  },
+  "unchanged_context_bindings": {
+    "kernel": "5.10.240-antix.1-486-smp",
+    "architecture": "i686",
+    "module": {
+      "path": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/module/gma500_gfx.ko",
+      "size_bytes": 244960,
+      "sha256": "4141a07c1f2d2ffc9ab2770b7b4cf654f68c396275dad15f0ddc68192529d8e6",
+      "build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+      "loaded_note_sha256": "edb1e3e59cfd70c48d400bec89f2a30c1a436b05bf115bc1a05581abc153bdc9",
+      "identity_evidence": [
+        "module_identity",
+        "qualification",
+        "first_owner_records"
+      ]
+    },
+    "diagnostic_image": {
+      "source_path": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/image/build-01/initrd.img-sgx535-firstload-diagnostic-01",
+      "staged_path": "/boot/initrd.img-5.10.240-antix.1-486-smp-sgx535-firstload-314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+      "size_bytes": 50805231,
+      "sha256": "fe64b3dcfe74b78a6d96edcd4fd7c118c3901fcff8631afec6c14647da292e3c",
+      "embedded_module_sha256": "4141a07c1f2d2ffc9ab2770b7b4cf654f68c396275dad15f0ddc68192529d8e6",
+      "identity_evidence": [
+        "image_identity",
+        "image_qualification",
+        "poststage_records",
+        "first_owner_records",
+        "menu_receipt"
+      ]
+    }
+  },
+  "technical_property": {
+    "G01_prime": {
+      "property": "Accepted completion state relied upon as authoritative derives from the fresh active hardware session of the current operation, directly or through a faithful snapshot, without substituted transition lineage.",
+      "technical_finding": "UNRESOLVED",
+      "property_confirmation_route": "EXHAUSTED",
+      "currently_available_legitimate_decision_source": null,
+      "authority_classification": "D. THE PROPERTY CANNOT LEGITIMATELY BE CONFIRMED FROM CURRENT AVAILABLE AUTHORITY",
+      "reason": "Established conditional internal-lineage theorem does not establish actual current-operation lineage for the exact ioctl. Exhausted permitted evidence contains no exact-artifact semantic guarantee or identified currently available authorized reviewer capable of confirming or denying this fact.",
+      "property_disproven": false
+    },
+    "G02_prime": {
+      "property": "An authoritative successful returned object faithfully represents the terminal state/results and retirement-gated color capture of that same current operation, including a faithful snapshot retained before release.",
+      "technical_finding": "UNRESOLVED",
+      "property_confirmation_route": "EXHAUSTED",
+      "currently_available_legitimate_decision_source": null,
+      "authority_classification": "D. THE PROPERTY CANNOT LEGITIMATELY BE CONFIRMED FROM CURRENT AVAILABLE AUTHORITY",
+      "reason": "Exhausted permitted evidence contains no qualified common-current-operation response postcondition or identified currently available authorized reviewer capable of confirming or denying projection. Layout, exporter fidelity and component consistency do not establish common origin.",
+      "property_disproven": false
+    }
+  },
+  "route_disposition": "PROPERTY CONFIRMATION CANNOT BE OBTAINED THROUGH CURRENT PERMITTED ROUTE",
+  "exhaustion_scope": "Current available permitted evidence and authority identified in the request, existing scoped maintainer records, and completed semantic review. Not a claim that no future legitimate technical review could become available.",
+  "authority_assessment": {
+    "classification": "D. THE PROPERTY CANNOT LEGITIMATELY BE CONFIRMED FROM CURRENT AVAILABLE AUTHORITY",
+    "maintainer_authority_alone_can_certify_technical_fact": false,
+    "readiness_scope": {
+      "record": "/home/gama/sgx535-gfx/docs/phase8/gate-b-maintainer-readiness-20261004-314e2f3b.json",
+      "limit": "Accepts documented readiness predicates; does not establish physical postconditions or certify unavailable invocation procedure."
+    },
+    "client_approval_scope": {
+      "record": "/home/gama/sgx535-gfx/docs/phase8/response-export-client-substitution-maintainer-20261004-314e2f3b.json",
+      "limit": "Accepts exact offline qualification and client forward binding; does not certify kernel response lineage."
+    },
+    "existing_design_scope": {
+      "record": "/home/gama/sgx535-gfx/docs/phase8/pre07-clean-room-design-scope-maintainer-20261004-314e2f3b.json",
+      "limit": "Offline observation/preservation design only; accepts no future correlation proof and grants no restricted-source or implementation access."
+    },
+    "minimum_request_limit": {
+      "record": "/home/gama/sgx535-gfx/docs/phase8/session-response-binding-minimum-property-review-request-20261004-314e2f3b.json",
+      "fields": [
+        "confirmation_mechanism_available",
+        "qualification_limit",
+        "requested_review_result.limit",
+        "per_clause_confirmation"
+      ],
+      "finding": "No confirmation mechanism or per-clause confirmation is supplied; neither technical finding nor maintainer assertion creates live provenance."
+    },
+    "independent_external_actor_mandatory": "NOT ESTABLISHED; no unidentified external actor is introduced as a requirement."
+  },
+  "evidence_basis": {
+    "minimum_request": "/home/gama/sgx535-gfx/docs/phase8/session-response-binding-minimum-property-review-request-20261004-314e2f3b.json",
+    "completed_semantic_review": "/home/gama/sgx535-gfx/docs/phase8/session-response-lineage-projection-semantic-review-20261004.md",
+    "maintainer_readiness": "/home/gama/sgx535-gfx/docs/phase8/gate-b-maintainer-readiness-20261004-314e2f3b.json",
+    "exact_client_approval": "/home/gama/sgx535-gfx/docs/phase8/response-export-client-substitution-maintainer-20261004-314e2f3b.json",
+    "existing_observation_design_approval": "/home/gama/sgx535-gfx/docs/phase8/pre07-clean-room-design-scope-maintainer-20261004-314e2f3b.json",
+    "original_fallback": "/home/gama/sgx535-gfx/docs/phase8/session-response-binding-independent-design-review-request-20261004-314e2f3b.json"
+  },
+  "remaining_transaction_evidence_obligation": "Independently establish that one preserved authoritative result R faithfully represents the accepted terminal events, terminal phase/results and retirement-gated color capture genuinely generated by one fresh current hardware operation T: R belongs to T.",
+  "fallback_disposition": {
+    "original_request": "/home/gama/sgx535-gfx/docs/phase8/session-response-binding-independent-design-review-request-20261004-314e2f3b.json",
+    "original_record_unchanged": true,
+    "relevant_for_next_scope_review": true,
+    "old_scope_approved": false,
+    "refinement_required": true,
+    "reason": "Old fallback uses fresh same-owner/service/backend and pre-release projection formulations stronger than the minimum semantic evidence obligation. Replace for future consideration with representation-independent current-operation result provenance; faithful snapshots remain permitted.",
+    "refined_request": "/home/gama/sgx535-gfx/docs/phase8/current-operation-result-provenance-design-scope-review-request-20261004-314e2f3b.json",
+    "refined_request_approved": false,
+    "automatic_design_authorization": false
+  },
+  "maintainer_design_decision": null,
+  "maintainer_design_decision_status": "NO NEW DESIGN-SCOPE DECISION RECORDED; prepare the refined request, do not infer approval of it.",
+  "historical_records_unchanged": true,
+  "no_defect_or_patch_necessity_established": true,
+  "procedural_effect": "Closes this existing property request for the current permitted route. Does not erase its original pending record or reopen the same semantic question under another property-request filename.",
+  "reconsideration": "Only genuinely new permitted technical evidence or an actually available authorized technical review can reopen confirmation; no speculative reviewer is left as a current dependency.",
+  "gate_b": "PASS FOR EXACT OFFSCREEN READINESS",
+  "whitelist": [
+    "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1"
+  ],
+  "design_status": "PARTIAL",
+  "pre07_live_readiness": "BLOCKED",
+  "ready_for_implementation_review": false,
+  "ready_for_execution_authorization": false,
+  "implementation_authorized": false,
+  "staging_authorized": false,
+  "hardware_contact_authorized": false,
+  "fresh_guard_collection_authorized": false,
+  "live_use_authorized": false,
+  "sgx_execution_authorized": false,
+  "sgx_invocations": 0,
+  "hardware_interactions_this_task": 0,
+  "triangle": "NOT ATTEMPTED"
+}

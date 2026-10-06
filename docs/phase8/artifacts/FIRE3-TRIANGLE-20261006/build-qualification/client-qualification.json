@@ -1,0 +1,58 @@
+{
+  "classification": "PASS OFFLINE RESPONSE-EXPORT CLIENT TECHNICAL QUALIFICATION ONLY; NOT SELECTED OR EXECUTION-AUTHORIZED",
+  "inputs": {
+    "source": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot_response.c",
+      "size": 5514,
+      "sha256": "919c2611e048e4a660ecae3542264adf5a5367d9b0fbe7fbceff2f45f90adedf"
+    },
+    "uapi": {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_uapi.h",
+      "size": 760,
+      "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420"
+    }
+  },
+  "binaries": [
+    {
+      "path": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-build-01/frozen-triangle-one-shot-response-i386",
+      "size": 775264,
+      "sha256": "2f84917f96db2859678797a327d40d9638325e5c5efb6e0dfccef44d756b4835"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-build-02/frozen-triangle-one-shot-response-i386",
+      "size": 775264,
+      "sha256": "2f84917f96db2859678797a327d40d9638325e5c5efb6e0dfccef44d756b4835"
+    }
+  ],
+  "repeat_byte_identical": true,
+  "elf": {
+    "class": "ELF32",
+    "endianness": "little",
+    "machine": "Intel 80386",
+    "PT_DYNAMIC": false,
+    "PT_INTERP": false,
+    "build_id": null
+  },
+  "abi": {
+    "sizeof": 4268,
+    "request_prefix": 16,
+    "operation_errno_offset": 16,
+    "row_counts_offset": 44,
+    "color_bytes_offset": 172,
+    "ioctl": "0xd0ac6440",
+    "actual_stdout": "sizeof=4268 request_bytes=16 result_offset=16 row_offset=44 color_offset=172 ioctl=0xd0ac6440\n"
+  },
+  "abi_reuse_basis": "Unchanged exact UAPI identity; prior i386 ABI evidence retained; new client size assertion compiled in both i386 builds",
+  "refusal": {
+    "default_exit": 2,
+    "wrong_flag_exit": 2,
+    "trace_open_ioctl_calls": 0,
+    "output_created": false
+  },
+  "limitations": [
+    "Offline only; no target execution",
+    "New native CPU-mock response tests and UBSan recorded separately in this directory; all device operations mocked",
+    "Not selected, promoted, staged or authorized for invocation",
+    "The permitted historical qualification note did not retain full exact build argv; this run records argv using its retained normal compiler/sysroot/runtime material"
+  ]
+}

@@ -1,0 +1,11 @@
+test_bad_end_receipt_rejected (test_capture_controller.ControllerTests.test_bad_end_receipt_rejected) ... ok
+test_privileged_refusal_preserved_without_credential_input_or_retry (test_capture_controller.ControllerTests.test_privileged_refusal_preserved_without_credential_input_or_retry) ... ok
+test_stock_capture_remains_possible_if_deadline_prevented_experimental_capture (test_capture_controller.ControllerTests.test_stock_capture_remains_possible_if_deadline_prevented_experimental_capture) ... ok
+test_stock_capture_still_runs_after_failed_experimental_sudo (test_capture_controller.ControllerTests.test_stock_capture_still_runs_after_failed_experimental_sudo) ... ok
+test_successful_capture_has_same_boot_and_complete_timing_receipts (test_capture_controller.ControllerTests.test_successful_capture_has_same_boot_and_complete_timing_receipts) ... ok
+test_timeout_retains_partial_output (test_capture_controller.ControllerTests.test_timeout_retains_partial_output) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.303s
+
+OK

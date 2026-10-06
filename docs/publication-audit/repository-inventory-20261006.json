@@ -1,0 +1,18 @@
+{
+  "tracked_files": 2779,
+  "working_files_at_scan": 4587,
+  "working_bytes": 448088291,
+  "classification_counts": {
+    "CURRENT_OR_REPRODUCTION_DOCUMENTATION": 272,
+    "OTHER_RETAINED_MATERIAL": 70,
+    "HISTORICAL_RESEARCH": 305,
+    "AUTHORITATIVE_EVIDENCE": 3763,
+    "CURRENT_SOURCE": 177
+  },
+  "classification_is_by_role_not_independent_evidence_authentication": true,
+  "deleted_files": [],
+  "archived_navigation": [
+    "docs/history/PHASE8-INDEX-BEFORE-CLEANUP-20261006.md"
+  ],
+  "retained_unknowns": "See historical source/link and privacy reviews; age alone was not a deletion criterion."
+}

@@ -1,0 +1,199 @@
+{
+  "scope": "actual remote originals exclusively copied before interpretation; metadata receipts preserved",
+  "boot_id": "f1ab6606-0561-445f-a397-28a028516cd7",
+  "retrieval_boot_id": "f1ab6606-0561-445f-a397-28a028516cd7",
+  "directory_receipt": {
+    "path": "/root/sgx535-frozen-seq1-85ec06b428c99fac7f9127919b7a488d204f4a77-3d9eb6ba/evidence-f1ab6606-0561-445f-a397-28a028516cd7",
+    "dev": 2049,
+    "ino": 524752,
+    "uid": 0,
+    "gid": 0,
+    "mode": "0o700"
+  },
+  "files": {
+    "capsule.before.original.bin": {
+      "bytes": 4152,
+      "sha256": "0d24c306b7e1fcd4eee1d2dc77637fe1eafa91816e849fd5c134e683bf3f3504",
+      "dev": 2049,
+      "ino": 524758,
+      "uid": 0,
+      "gid": 0,
+      "mode": 256,
+      "nlink": 1
+    },
+    "capsule.original.bin": {
+      "bytes": 4152,
+      "sha256": "fef2c62cbba7d847345e8f73278b407e97e46d58e9286864308e889ece941135",
+      "dev": 2049,
+      "ino": 524767,
+      "uid": 0,
+      "gid": 0,
+      "mode": 256,
+      "nlink": 1
+    },
+    "capsule.preparation.bin": {
+      "bytes": 4152,
+      "sha256": "0d24c306b7e1fcd4eee1d2dc77637fe1eafa91816e849fd5c134e683bf3f3504",
+      "dev": 2049,
+      "ino": 524754,
+      "uid": 0,
+      "gid": 0,
+      "mode": 256,
+      "nlink": 1
+    },
+    "client.stderr.original.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dev": 2049,
+      "ino": 524763,
+      "uid": 0,
+      "gid": 0,
+      "mode": 384,
+      "nlink": 1
+    },
+    "client.stdout.original.txt": {
+      "bytes": 406,
+      "sha256": "44ebba065e9b502e6d211c068c9f1a9cc01b0d1cc8d070682e770c2d2db1a338",
+      "dev": 2049,
+      "ino": 524762,
+      "uid": 0,
+      "gid": 0,
+      "mode": 384,
+      "nlink": 1
+    },
+    "color.original.bin": {
+      "bytes": 4096,
+      "sha256": "52b2aeb7316820f955d1b9a46cb55a888efb8f74de916acd7ec7ddff6d99ebb5",
+      "dev": 2049,
+      "ino": 524766,
+      "uid": 0,
+      "gid": 0,
+      "mode": 384,
+      "nlink": 1
+    },
+    "context.preparation.json": {
+      "bytes": 789,
+      "sha256": "92743b803780dab8df2db107f6a97eced11c3399a24ead28828f04e522aadb3f",
+      "dev": 2049,
+      "ino": 524753,
+      "uid": 0,
+      "gid": 0,
+      "mode": 256,
+      "nlink": 1
+    },
+    "execution-card.original.json": {
+      "bytes": 8837,
+      "sha256": "768a2099639e412c40a84f2a5e64c9bec3fd8344787f6422d72f738b996a7faa",
+      "dev": 2049,
+      "ino": 524760,
+      "uid": 0,
+      "gid": 0,
+      "mode": 256,
+      "nlink": 1
+    },
+    "execution.receipt.original.json": {
+      "bytes": 12884,
+      "sha256": "dc0424171efee5b2f45e556978610ad06b50c08928619b70d45aeabea602678c",
+      "dev": 2049,
+      "ino": 524770,
+      "uid": 0,
+      "gid": 0,
+      "mode": 256,
+      "nlink": 1
+    },
+    "fire-authorization.original.json": {
+      "bytes": 271,
+      "sha256": "6bd73156b0972cc8e37b5ff9cd475efa497594b9603fae3396ad720a87044635",
+      "dev": 2049,
+      "ino": 524761,
+      "uid": 0,
+      "gid": 0,
+      "mode": 256,
+      "nlink": 1
+    },
+    "invocation.intent.original.json": {
+      "bytes": 723,
+      "sha256": "e1c7757a9fb47692fcd8e710a4394a0431de1896ef0ddc14de7abba6f76ebcdb",
+      "dev": 2049,
+      "ino": 524764,
+      "uid": 0,
+      "gid": 0,
+      "mode": 256,
+      "nlink": 1
+    },
+    "kernel.after.original.txt": {
+      "bytes": 45131,
+      "sha256": "2c13e499a8d9b837c3e5b8a367e73966fc7f874fc553eb01b32aee4f164aeaf8",
+      "dev": 2049,
+      "ino": 524769,
+      "uid": 0,
+      "gid": 0,
+      "mode": 256,
+      "nlink": 1
+    },
+    "kernel.before.original.txt": {
+      "bytes": 45131,
+      "sha256": "2c13e499a8d9b837c3e5b8a367e73966fc7f874fc553eb01b32aee4f164aeaf8",
+      "dev": 2049,
+      "ino": 524759,
+      "uid": 0,
+      "gid": 0,
+      "mode": 256,
+      "nlink": 1
+    },
+    "kernel.preparation.original.txt": {
+      "bytes": 45131,
+      "sha256": "2c13e499a8d9b837c3e5b8a367e73966fc7f874fc553eb01b32aee4f164aeaf8",
+      "dev": 2049,
+      "ino": 524755,
+      "uid": 0,
+      "gid": 0,
+      "mode": 256,
+      "nlink": 1
+    },
+    "response.original.bin": {
+      "bytes": 4268,
+      "sha256": "2939959fbc6ca20744eb00986e076dd4a0854cbbd9116e6b15a1fd4a6a5b2a69",
+      "dev": 2049,
+      "ino": 524765,
+      "uid": 0,
+      "gid": 0,
+      "mode": 384,
+      "nlink": 1
+    },
+    "source.post.original.txt": {
+      "bytes": 243,
+      "sha256": "4219fe8dd303374b0aedbc9219a32e328a1fe6432346559c148fdb33ff0db91c",
+      "dev": 2049,
+      "ino": 524768,
+      "uid": 0,
+      "gid": 0,
+      "mode": 256,
+      "nlink": 1
+    },
+    "source.pre.original.txt": {
+      "bytes": 243,
+      "sha256": "2967348bcf2f2e85ff1bbd56848283df9a187839acf43a5c4a48c6fb4b76f555",
+      "dev": 2049,
+      "ino": 524757,
+      "uid": 0,
+      "gid": 0,
+      "mode": 256,
+      "nlink": 1
+    },
+    "source.preparation.original.txt": {
+      "bytes": 243,
+      "sha256": "2967348bcf2f2e85ff1bbd56848283df9a187839acf43a5c4a48c6fb4b76f555",
+      "dev": 2049,
+      "ino": 524756,
+      "uid": 0,
+      "gid": 0,
+      "mode": 256,
+      "nlink": 1
+    }
+  },
+  "retrieval_errors": [],
+  "invocations": 1,
+  "authorization_consumed": true,
+  "further_sgx_execution_authorized": false
+}

@@ -1,0 +1,17 @@
+{
+  "image_path": "/tmp/sgx535-fixed-image-overlay-wwmguww9/image-build/initrd.img-sgx535-firstload-01",
+  "image_bytes": 50804478,
+  "image_sha256": "55e7a8be6f62c9a1d59f1c532b8790399c21a2706884747e504edfffb45bf52d",
+  "derivative_in_image_sha256": "2eaffd22637eef6b7b101f046d6fd9756b48c934818a7353f9aa705616014c1e",
+  "hook_in_image_sha256": "975c35d6534af16f9e4931478e3f81afda3a24e8e211fe8ca6722ebef0d6b7cd",
+  "early_prefix_sha256": "45070075f32565213d862468ba99e9f7b05ca95ba76e57d37331ad032a12a929",
+  "native_cpio_sha256": "4cd0ab6a3d30b873e26f58aab44017a4d3c96b7c064ec18d435f62554bd2047f",
+  "native_cpio_version": "cpio (GNU cpio) 2.15",
+  "independent_parser_path": "/tmp/sgx535-fixed-image-overlay-wwmguww9/repo/docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/read_initramfs.py",
+  "independent_parser_sha256": "937e11716add8fdcc3d79668baa0fb7431dc94634db07d7e746cd3ddca7c9f51",
+  "result": "PASS OFFLINE",
+  "live_first_owner": "UNKNOWN",
+  "live_display_ssh_recovery": "UNKNOWN",
+  "gate_b": "BLOCKED",
+  "whitelist": []
+}

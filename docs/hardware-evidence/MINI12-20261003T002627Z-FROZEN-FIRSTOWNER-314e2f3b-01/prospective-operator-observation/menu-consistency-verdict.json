@@ -1,0 +1,10 @@
+{
+  "classification": "CONSISTENT SUPPLIED PROSPECTIVE MENU RECEIPT",
+  "procedure_id": "MINI12-FROZEN-FIRSTOWNER-OPERATOR-OBSERVATION-01",
+  "evidence_kind": "direct_operator_report",
+  "photograph_supplied": false,
+  "legacy_v2_satisfied": false,
+  "boot_authorized": false,
+  "sgx_authorized": false,
+  "live_provenance": "INDEPENDENT VERIFICATION REQUIRED"
+}

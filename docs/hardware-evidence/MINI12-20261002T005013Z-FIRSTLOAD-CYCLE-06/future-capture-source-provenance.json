@@ -1,0 +1,6 @@
+{
+  "experimental_root_sha256": "666e4d3f7236ff74388bd2f4d92eacdc468ec24268a882bc79e38f8190ae34da",
+  "stock_template_sha256": "706f0b535b88c3916261270cc9a6ae8708a1c4ed889e2b645272171d0c90969a",
+  "only_experimental_reference_change": "fresh prior STOCK boot ID",
+  "fresh_stock_boot_id": "8c89c9c9-d8c5-48b8-bfad-a4afa0442257"
+}

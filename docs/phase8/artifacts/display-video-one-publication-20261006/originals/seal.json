@@ -1,0 +1,42 @@
+{
+  "files": {
+    "source.original.bin": {
+      "bytes": 4096,
+      "sha256": "52b2aeb7316820f955d1b9a46cb55a888efb8f74de916acd7ec7ddff6d99ebb5"
+    },
+    "published.original.bin": {
+      "bytes": 102400,
+      "sha256": "099d15f6ce89b422bf2132cea3d2d71ef241923e38788d54edcb204546557b4c"
+    },
+    "display-consumed.json": {
+      "bytes": 67,
+      "sha256": "65a61174d2ee1d9f8beee0432a986a7b4136da8f2d75e64a8524300f3927901f"
+    },
+    "result.json": {
+      "bytes": 130,
+      "sha256": "e5a0bc9aadcb181984fba060b670d09e22f698763daddf0346e3540707aed8ab"
+    },
+    "screen-before.original.bin": {
+      "bytes": 102400,
+      "sha256": "9bfdacd16e6a8daa967d062bf144c24f2e90a94d486d8c8d7dd53e4520ed4e19"
+    },
+    "authorization.original.json": {
+      "bytes": 304,
+      "sha256": "a7c62bcbe1bd4643e569c61992e410ef96164724b6a6f98ce63f1064ac4fc110"
+    },
+    "restored.original.bin": {
+      "bytes": 102400,
+      "sha256": "9bfdacd16e6a8daa967d062bf144c24f2e90a94d486d8c8d7dd53e4520ed4e19"
+    },
+    "card.original.json": {
+      "bytes": 11812,
+      "sha256": "4219b42b3b0eed7d002a2da74b365bf5dc38c6fc5b0a17ba3d950a3f126d523f"
+    },
+    "screen-before.json": {
+      "bytes": 1146,
+      "sha256": "402fc8fda34488397dd6444f08201674c6b486075cefdf81a2d30d450da36dd9"
+    }
+  },
+  "no_retry": true,
+  "sgx_execution_authorized": false
+}

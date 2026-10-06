@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<string>", line 25, in <module>
+    assert all(x['pass'] and x['uid']==0 and x['gid']==0 and x['mode']=='0o644' for x in r['destinations'].values())
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

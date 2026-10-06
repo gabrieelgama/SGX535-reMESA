@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-02T00:11:26.694304+00:00",
+  "preflight_and_stock_raw_receipts": "PASS; actual files/commands checked",
+  "root_source_hashes": "PASS",
+  "final_v2_source_pins": "UNCHANGED",
+  "historical_files": "2918 unchanged; three existing checkpoint documents exempted for notices",
+  "candidate_image_and_cycle03_artifacts": "UNCHANGED",
+  "full_pre_cycle_suite": 329,
+  "full_pre_cycle_skips": 0,
+  "post_cycle_v2_tests": 22,
+  "result": "PASS",
+  "new_candidate_build": false,
+  "sgx_actions": 0
+}

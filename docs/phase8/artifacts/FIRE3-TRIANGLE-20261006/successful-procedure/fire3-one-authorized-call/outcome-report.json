@@ -1,0 +1,134 @@
+{
+  "timestamp_utc": "2026-10-06T05:54:52.725546+00:00",
+  "classification": "CONSTANT_FRAGMENT_HYPOTHESIS_SUPPORTED",
+  "boot_id": "f1ab6606-0561-445f-a397-28a028516cd7",
+  "driver_build_id": "85ec06b428c99fac7f9127919b7a488d204f4a77",
+  "observer_build_id": "f11d3abb072caa4e1d32836ef92ce201e9c9d126",
+  "image_sha256": "3d9eb6baa3d821b4ff98e60ea83f1a94022b5fb2881038d2ad91b95cdfb7448e",
+  "controller_fix": {
+    "root_cause": "Global value-match uniqueness test counted fresh CONTEXT and the source predicate as different witnesses; they are legitimate structural references to one same-provenance witness. Same-hash case omitted by original synthetic fixture.",
+    "correction": "Unique source-predicate AST binding plus role/provenance validation; reject unexpected duplicates/conflicts/stale/malformed/missing references. All live guard predicates retained.",
+    "tests": "28/28 PASS: 14 structural regression/guard tests + 14 existing controller/wrapper tests"
+  },
+  "existing_boot_reused": true,
+  "fresh_continuity": "47/47 PASS",
+  "PRE07": "PRE07 LIVE PASS",
+  "PRE07_READY_FOR_FIRE3": "YES before the single invocation",
+  "passive_guard_results": {
+    "first_owner": "82/82 preserved PASS",
+    "protected_preparation": "56/56 PASS",
+    "independent_final": "204/204 PASS",
+    "immediate_precheck": "42/42 PASS"
+  },
+  "FIRE3_invocations": 1,
+  "ioctl_attempts": 1,
+  "client_launches": 1,
+  "historical_authorized_invocations_total": 3,
+  "authorization_consumed": true,
+  "client_exit_status": 0,
+  "ioctl_return": 0,
+  "ioctl_errno": 0,
+  "operation_errno": 0,
+  "outcome": 2,
+  "phase": {
+    "number": 9,
+    "name": "RETIRED"
+  },
+  "accepted_ledger": "0x7",
+  "capsule_final": {
+    "state": 4,
+    "name": "CLOSED",
+    "invalid": 0,
+    "issued": 1,
+    "terminal": 1,
+    "color_present": 1
+  },
+  "source_final": {
+    "state": 3,
+    "name": "CLOSED",
+    "reasons": 0,
+    "producers_active": 0,
+    "delayed_exclusion": "STARTUP_LIFECYCLE"
+  },
+  "evidence_findings": {
+    "TA_submission_and_command_acceptance": {
+      "level": "INFERRED",
+      "meaning": "Current-operation hardware TA completion supports issued TA work; no separate command-write/acceptance trace was captured. Capsule issued=1 alone remains possible issuance only."
+    },
+    "TA_completion": {
+      "level": "CONFIRMED",
+      "basis": "accepted bit 1 under valid same-operation source/capsule provenance"
+    },
+    "end_render": {
+      "level": "CONFIRMED",
+      "basis": "accepted bit 2"
+    },
+    "3D_memory_free": {
+      "level": "CONFIRMED",
+      "basis": "accepted bit 4"
+    },
+    "retirement": {
+      "level": "CONFIRMED",
+      "basis": "complete valid CLOSED terminal phase9 capsule and response"
+    },
+    "selected_triangle_survival_and_raster_coverage": {
+      "level": "CONFIRMED FOR FIRE3 FINAL RESULT",
+      "basis": "same-operation attributable raw color exactly matches the known selected triangle whole-image footprint",
+      "limit": "TA-output record bytes remain unobserved; FIRE2 coverage remains UNKNOWN"
+    },
+    "fragment_execution_and_export": {
+      "level": "INFERRED AT INTERNAL-STAGE LEVEL",
+      "basis": "single-variable fragment replacement produced exact diagnostic nonzero triangle pixels; no instruction-level trace or export counter captured"
+    },
+    "PBE_store": {
+      "level": "INFERRED AT INTERNAL-TRANSACTION LEVEL",
+      "basis": "expected diagnostic pixels reached the attributable color surface; no separate PBE bus transaction trace captured"
+    },
+    "final_color_result_and_CPU_readback": {
+      "level": "CONFIRMED",
+      "basis": "full4096 raw image equals response color and immutable capsule color; FNV/nonzero/row summaries match"
+    }
+  },
+  "response_capsule_readback_agreement": "CONFIRMED with separately verified live boot/producer/source interval bindings",
+  "preservation": {
+    "result": "COMPLETE",
+    "original_files": 18,
+    "root_destination": "/root/sgx535-frozen-seq1-85ec06b428c99fac7f9127919b7a488d204f4a77-3d9eb6ba/evidence-f1ab6606-0561-445f-a397-28a028516cd7",
+    "local_originals": "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/live-fire3-structural-binding-20261006T054114Z/fire3-one-authorized-call/originals",
+    "originals_manifest": "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/live-fire3-structural-binding-20261006T054114Z/fire3-one-authorized-call/originals-manifest.json",
+    "originals_seal": "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/live-fire3-structural-binding-20261006T054114Z/fire3-one-authorized-call/originals-seal.json",
+    "before_interpretation": true,
+    "retrieval_errors": []
+  },
+  "readback": {
+    "bytes": 4096,
+    "all_zero": false,
+    "nonzero_pixels": 120,
+    "expected_magenta_pixels": 120,
+    "zero_pixels": 904,
+    "unique_values": {
+      "0x00000000": 904,
+      "0xffff00ff": 120
+    },
+    "bbox": {
+      "min_x": 8,
+      "min_y": 8,
+      "max_x": 22,
+      "max_y": 22
+    },
+    "all_foreground_coordinates": "for y=8..22, x=8..(30-y), inclusive",
+    "spatial_analysis": "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/live-fire3-structural-binding-20261006T054114Z/fire3-one-authorized-call/spatial-analysis.json",
+    "shape": "filled right triangle; exact whole-image pixel-center reference with hypotenuse ties excluded",
+    "reference_mismatches": 0
+  },
+  "hypothesis": {
+    "classification": "CONSTANT_FRAGMENT_HYPOTHESIS_SUPPORTED",
+    "strength": "single changed fragment variable produced expected attributable diagnostic triangle; strong support for original suffix-only program as explanation of zero color",
+    "not_proven": "does not retrospectively establish FIRE2 TA/primitive coverage or all internal instruction/export/store details"
+  },
+  "triangle": "ESTABLISHED IN FIRE3 (diagnostic opaque-magenta frozen triangle)",
+  "further_SGX_execution_authorized": false,
+  "sgx_execution_authorized": false,
+  "retry_performed": false,
+  "next_action": "STOP. No further hardware action is necessary to establish this diagnostic triangle. Any future SGX operation requires new explicit authorization."
+}

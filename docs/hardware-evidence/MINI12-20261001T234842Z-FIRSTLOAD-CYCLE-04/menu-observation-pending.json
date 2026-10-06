@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-01T23:52:43.753080+00:00",
+  "operator_reply": "Photo attached. I am stopped at the GRUB menu. STOCK is still selected/default. I have not selected or booted EXPERIMENTAL. Waiting for the next instruction.",
+  "photo_available_to_agent": false,
+  "photo_guard": "NOT ESTABLISHED",
+  "experimental_selection_directed": false,
+  "next_action": "request separate actual image attachment; remain at menu"
+}

@@ -1,0 +1,6 @@
+{
+  "classification": "STOP",
+  "reason": "capture kernel drift",
+  "retry": false,
+  "sgx_authorized": false
+}

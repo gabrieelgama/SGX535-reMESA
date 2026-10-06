@@ -1,0 +1,37 @@
+{
+  "classification": "PASS CPU-ONLY CARD ADAPTER; NO LIVE DISPATCH",
+  "passed": 7,
+  "total": 7,
+  "tests": [
+    {
+      "name": "explicit alias resolves one authoritative current witness",
+      "pass": true
+    },
+    {
+      "name": "conflicting witness",
+      "pass": true
+    },
+    {
+      "name": "wrong boot provenance",
+      "pass": true
+    },
+    {
+      "name": "unexpected second witness object",
+      "pass": true
+    },
+    {
+      "name": "malformed alias",
+      "pass": true
+    },
+    {
+      "name": "missing witness",
+      "pass": true
+    },
+    {
+      "name": "stale observer",
+      "pass": true
+    }
+  ],
+  "root_cause": "Derived next-3D source_witness and legacy launch witness encoded the same object twice; historical validator properly rejected an unrecognized duplicate location",
+  "correction": "Explicit source_witness alias points to one unique authoritative witness dictionary; full boot/module/image provenance retained; unexpected objects and stale/conflicting fields still rejected"
+}

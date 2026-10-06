@@ -1,0 +1,190 @@
+{
+  "record": "fire02-normal-ta-root-grammar-20261006",
+  "recorded_utc": "2026-10-06T01:45:04.523613+00:00",
+  "report": "docs/phase8/fire02-normal-ta-root-grammar-20261006.md",
+  "audit_root": "/home/gama/sgx535-offline/phase8-normal-root-grammar-20261006T013334Z",
+  "evidence_class": "SGX535 REV121 HISTORICAL EVIDENCE",
+  "common_raster_abi": "B \u2014 COMMON_RASTER_ABI_STRONGLY_SUPPORTED_BUT_INCOMPLETE",
+  "decoder_format": "DECODER_FORMAT_PARTIAL",
+  "selected_triangle_recognition_sufficient": false,
+  "root": {
+    "object": "scene->hw_data GPU VA S, separate from host cookie, DPM P, parameter Q",
+    "object_identity_confidence": "CONFIRMED software",
+    "current_allocation_bytes": 8192,
+    "current_alignment_bytes": 4096,
+    "historical_requested_bytes": 5152,
+    "calculated_offset": 4096,
+    "calculated_reservation_bytes": 768,
+    "allocation_unit_bytes": 12,
+    "allocation_unit_count": 64,
+    "physical_header_stride": "UNKNOWN; allocation arithmetic alone is insufficient",
+    "ta_register": "0x21c",
+    "raster_register": "0x408",
+    "initial_address_formula": "S+cookie[7]",
+    "exceptional_address_formula": "S+cookie[7]+(cookie[15]&15)*cookie[1]*12 when selected branch applies",
+    "normal_software_mask_or_shift": "NONE at root addition/store",
+    "hardware_type": "INFERRED region-associated raster reservation; exact structure UNKNOWN"
+  },
+  "scene_cookie": {
+    "stored_in": "host metadata, not S payload",
+    "words_0_14": [
+      0,
+      16,
+      16793604,
+      16793604,
+      16,
+      4097,
+      127007,
+      4096,
+      0,
+      4864,
+      4944,
+      5088,
+      0,
+      0,
+      0
+    ],
+    "word15": "not written by historical scene_info; clean-room contract supplies zero"
+  },
+  "allocation_envelope": [
+    {
+      "range": [
+        0,
+        4096
+      ],
+      "explicit_historical_clear": true,
+      "selected_register": "0x220",
+      "payload_meaning": "UNKNOWN"
+    },
+    {
+      "range": [
+        4096,
+        4864
+      ],
+      "explicit_historical_clear": false,
+      "selected_registers": [
+        "0x21c",
+        "0x408"
+      ],
+      "payload_meaning": "UNKNOWN"
+    },
+    {
+      "range": [
+        4864,
+        4944
+      ],
+      "selected_register": "0x234",
+      "payload_meaning": "UNKNOWN"
+    },
+    {
+      "range": [
+        4944,
+        5088
+      ],
+      "selected_register": "0x62c",
+      "payload_meaning": "UNKNOWN"
+    },
+    {
+      "range": [
+        5088,
+        5152
+      ],
+      "selected_register": "0x634",
+      "payload_meaning": "UNKNOWN"
+    }
+  ],
+  "region": {
+    "software_coordinate_unit": 16,
+    "selected_unpadded_counts": [
+      2,
+      2
+    ],
+    "padded_allocation_axes": [
+      4,
+      4
+    ],
+    "doubled_allocation_axes": [
+      8,
+      8
+    ],
+    "physical_tile_dimensions": "UNKNOWN",
+    "root_indexing": "UNKNOWN",
+    "empty_representation": "UNKNOWN"
+  },
+  "reference_list": {
+    "entry_width": "UNKNOWN",
+    "pointer_encoding": "UNKNOWN",
+    "termination": "UNKNOWN",
+    "chaining": "UNKNOWN"
+  },
+  "negative_results": [
+    "64-byte host cookie is not scene BO root payload",
+    "host calloc is not BO header initialization",
+    "historical explicit clear excludes root reservation",
+    "clean-room all-page zero policy does not prove empty-region encoding",
+    "eight-byte exceptional host loop reads separate 0x88-byte communication BO, not S or Q",
+    "eight-byte OOM command loop emits MMIO offset/value pairs, not primitive references",
+    "CPU flat-list terminator and TA input terminator do not establish normal TA-output terminator",
+    "matching root register is insufficient to prove common primitive grammar"
+  ],
+  "primitive_convergence": "UNKNOWN despite shared software raster consumer; CPU format is a conditional lead",
+  "smallest_missing_format_fact": "Under normal rev121 raster controls, the typed interpretation of the unit beginning at S+0x1000: empty/populated/continuation discrimination and the next raster-reference address transformation.",
+  "downstream_caveat": "The first successor rule is the current minimal proof cut, not a claim that proving it automatically proves downstream primitive equivalence.",
+  "publication": {
+    "status": "UNRESOLVED \u2014 SEPARATE FUTURE BOUNDARY",
+    "investigated": false,
+    "incidental_facts": [
+      "scene-reuse BO waits",
+      "DPM load/init waits"
+    ],
+    "payload_visibility_proved": false
+  },
+  "fire2": {
+    "files": 68,
+    "sealed_originals_modified": false,
+    "ta_output_retained": false,
+    "coverage_retrospectively_resolvable": false,
+    "accepted_ledger": 7,
+    "phase": "RETIRED",
+    "color_bytes": 4096,
+    "color_all_zero": true,
+    "completion_and_provenance": "CONFIRMED \u2014 unchanged"
+  },
+  "implementation": {
+    "decoder": false,
+    "capture": false,
+    "rendering_change": false,
+    "build": false,
+    "new_candidate": false
+  },
+  "verification": {
+    "cpu_source_layout_checks": 33,
+    "cpu_source_layout_checks_failed": 0,
+    "qualification_scope": "CPU formula/source consistency only, not hardware/TA-decoder qualification",
+    "native_ubsan_i386_decoder_tests": "NOT RUN \u2014 format gate unmet",
+    "final_receipt": "/home/gama/sgx535-offline/phase8-normal-root-grammar-20261006T013334Z/final-consistency.json"
+  },
+  "identities_unchanged": {
+    "driver_build_id": "9d0b5b2fdb7d9881f2828f43fb89253176c38817",
+    "observer_build_id": "f11d3abb072caa4e1d32836ef92ce201e9c9d126",
+    "image_sha256": "ef7e01cb546c59b6f9bce96c3397feb4b9cd1d9ebdac2faa885ed71fa5ed014d"
+  },
+  "next_action": "Obtain permitted rev121 normal-mode root-unit successor semantics, then compare reached primitives with the CPU encoder; publication remains separate.",
+  "live_capture_justified": false,
+  "authority": {
+    "fire3_authorized": false,
+    "sgx_execution_authorized": false,
+    "task_sgx_invocations": 0,
+    "task_hardware_interactions": 0,
+    "triangle": "NOT ESTABLISHED"
+  },
+  "repository_scope": {
+    "existing_dirty_work_preserved": true,
+    "index_empty": true,
+    "files_changed": [
+      "docs/phase8/fire02-normal-ta-root-grammar-20261006.md",
+      "docs/phase8/fire02-normal-ta-root-grammar-20261006.json",
+      "docs/phase8/CODEX-HANDOFF-20261005.md"
+    ]
+  }
+}

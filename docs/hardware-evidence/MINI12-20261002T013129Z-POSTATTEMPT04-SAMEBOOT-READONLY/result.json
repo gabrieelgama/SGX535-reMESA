@@ -1,0 +1,35 @@
+{
+  "classification": "PASS READ-ONLY SAMEBOOT",
+  "guards": 60,
+  "boot_id": "29e27f75-7c84-4537-9ab8-8138bc3eac1d",
+  "loaded_note_sha256": "96eb5049d143a3c7a6e7d672aed1651fa51db069ea9efd3484388b3401f29eaf",
+  "client": {
+    "path": "/root/sgx535-frozen-seq1-29e27f75/frozen-triangle-one-shot-i386",
+    "sha256": "758076e2f7e20d0eff2df565d4440c8b3fd3f846922427e770f55ebc472edccf",
+    "bytes": 771320,
+    "uid": 0,
+    "mode": 448,
+    "nlink": 1,
+    "dev": 2049,
+    "ino": 432208
+  },
+  "canonical_device": "/sys/devices/pci0000:00/0000:00:02.0",
+  "kernel_health": {
+    "classification": "PASS WITH BOUNDED STOCK DIAGNOSTICS",
+    "faults": [],
+    "stock_diagnostics": {
+      "unsigned_drm_loader_notice": 1,
+      "backlight_zero_register": 1,
+      "acpi_powerbutton_error": 2,
+      "acpi_powerbutton_warning": 2,
+      "powerbutton_probe": 1,
+      "tiny_powerbutton_probe": 1
+    }
+  },
+  "prior_invocation_marker_or_color": "ABSENT",
+  "no_sgx": true,
+  "uptime": [
+    1889.67,
+    1893.02
+  ]
+}

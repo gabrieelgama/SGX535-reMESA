@@ -1,0 +1,22 @@
+[
+  {
+    "path": "docs/phase8/frozen-first-owner-operator-observation-20261003.md",
+    "size": 3869,
+    "sha256": "5efc75de27b9d72447c86f557196eb1486788646e66a65b4b5bd3c6d2c311773"
+  },
+  {
+    "path": "tools/psb-dri-re/frozen_first_owner_operator_receipt.py",
+    "size": 12102,
+    "sha256": "c22922e10f5c2166e41f3121721bfca069ed9a8d1b65e8e07c56cc8a12eafffb"
+  },
+  {
+    "path": "tools/psb-dri-re/frozen_first_owner_session.py",
+    "size": 10730,
+    "sha256": "b92c2f2ae07caddc93fef5a9cd51616b79554043045db840c41fd7d79e2518bf"
+  },
+  {
+    "path": "tools/psb-dri-re/test_frozen_first_owner_operator_receipt.py",
+    "size": 8082,
+    "sha256": "796df308f6170f99c2447fe0ae872fb2664c20e9aefc69e90e42d73f4bc02d57"
+  }
+]

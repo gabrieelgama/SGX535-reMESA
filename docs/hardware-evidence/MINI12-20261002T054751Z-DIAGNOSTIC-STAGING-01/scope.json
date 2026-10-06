@@ -1,0 +1,5 @@
+{
+  "scope": "diagnostic first-load staging only; fresh STOCK preflight, exclusive image and backup, atomic GRUB entry publication, poststage readback; no boot or SGX",
+  "operator_ready": true,
+  "prestage_script_sha256": "e7016084d9b76115f62ffca7fcedc414455fbd9401f02f94b751ab335ddf265d"
+}

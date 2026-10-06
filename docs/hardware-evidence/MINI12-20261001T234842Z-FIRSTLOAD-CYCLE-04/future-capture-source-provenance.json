@@ -1,0 +1,9 @@
+{
+  "experimental_reference": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/experimental-source-before.py",
+  "reference_sha256": "d0dd6a1d82c554008305ffa971677b45feb253d322678ee13fbcca08bfa58382",
+  "only_experimental_change": "prior stock boot ID replaced by fresh Cycle04 preflight ID",
+  "fresh_stock_boot_id": "0103242d-9a46-4d66-8a61-42b0c44e00c6",
+  "experimental_root_sha256": "322c1e46a8d0840f44ad7d154915050861deb16fbb2fafea7162267c3754010c",
+  "stock_template_sha256": "ca6bc59a0b265084a78ca975ea5d69138d2af12459f2409bc0dda12966b49f3f",
+  "no_implementation_change": true
+}

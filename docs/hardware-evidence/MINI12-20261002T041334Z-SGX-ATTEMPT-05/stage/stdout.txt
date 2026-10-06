@@ -1,0 +1,1 @@
+{"classification": "PASS EXCLUSIVE CLIENT STAGING", "base": "/root/sgx535-frozen-seq1-203a5b9b", "path": "/root/sgx535-frozen-seq1-203a5b9b/frozen-triangle-one-shot-i386", "bytes": 771320, "sha256": "758076e2f7e20d0eff2df565d4440c8b3fd3f846922427e770f55ebc472edccf", "uid": 0, "mode": 448, "nlink": 1, "dev": 2049, "ino": 432215, "fsync": "file and directories", "no_sgx_yet": true}

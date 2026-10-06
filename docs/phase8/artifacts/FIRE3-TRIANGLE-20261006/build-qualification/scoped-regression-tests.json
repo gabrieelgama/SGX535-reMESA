@@ -1,0 +1,90 @@
+{
+  "contract-native": {
+    "argv": [
+      "gcc",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-DSGX535_EXPERIMENTAL_CONSTANT_FRAGMENT=1",
+      "-I",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_contract.c",
+      "-o",
+      "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/tests/contract-native-experiment"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "capsule-service-native": {
+    "argv": [
+      "gcc",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-DSGX535_EXPERIMENTAL_CONSTANT_FRAGMENT=1",
+      "-I",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_fixed_service.c",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_capsule.c",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_capsule_service.c",
+      "-o",
+      "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/tests/capsule-service-native-experiment"
+    ],
+    "returncode": 0,
+    "stdout": "7 service/observer differential cases PASS; synthetic CPU only\n",
+    "stderr": ""
+  },
+  "contract-ubsan": {
+    "argv": [
+      "gcc",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-DSGX535_EXPERIMENTAL_CONSTANT_FRAGMENT=1",
+      "-I",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re",
+      "-fsanitize=undefined",
+      "-fno-sanitize-recover=all",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_contract.c",
+      "-o",
+      "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/tests/contract-ubsan-experiment"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "capsule-service-ubsan": {
+    "argv": [
+      "gcc",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-DSGX535_EXPERIMENTAL_CONSTANT_FRAGMENT=1",
+      "-I",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re",
+      "-fsanitize=undefined",
+      "-fno-sanitize-recover=all",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_fixed_service.c",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_capsule.c",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_capsule_service.c",
+      "-o",
+      "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/tests/capsule-service-ubsan-experiment"
+    ],
+    "returncode": 0,
+    "stdout": "7 service/observer differential cases PASS; synthetic CPU only\n",
+    "stderr": ""
+  }
+}

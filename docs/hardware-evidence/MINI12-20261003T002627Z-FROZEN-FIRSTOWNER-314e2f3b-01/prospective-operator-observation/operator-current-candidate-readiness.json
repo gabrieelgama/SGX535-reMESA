@@ -1,0 +1,14 @@
+{
+  "recorded_utc": "2026-10-03T01:08:56.175130+00:00",
+  "source": "operator reply",
+  "reply": "All four statements are true",
+  "local_sudo_succeeded": true,
+  "experimental_selected_once": true,
+  "userspace_seen_before_boot_watch": true,
+  "normal_userspace": true,
+  "physical_display_normal": true,
+  "sgx_actions": 0,
+  "hot_module_actions": 0,
+  "photograph_supplied": false,
+  "operator_recovery_confirmed": "previous explicit availability confirmation, operator remains present"
+}

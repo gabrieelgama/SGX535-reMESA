@@ -198,7 +198,7 @@ Stock VGA → gma KMS/fbdev takeover is observed. The derivative retains full
 stock KMS/fbdev, but early timing/resource/firmware conditions and usable LCD
 in a changed boot are **UNKNOWN**. The experiment remains off-screen.
 
-Current SSH works on wlan0 192.168.18.90; eth0 is down. Captured ssh service
+Current SSH works on wlan0 <private-target-address>; eth0 is down. Captured ssh service
 startup has no graphics dependency. Network driver initialization precedes
 stock gma registration. **INFERRED:** root/network need not depend on gma.
 **UNKNOWN:** future SSH availability if early derivative probe fails or hangs

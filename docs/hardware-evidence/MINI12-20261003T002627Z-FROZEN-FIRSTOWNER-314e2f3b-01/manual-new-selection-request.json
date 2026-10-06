@@ -1,0 +1,11 @@
+{
+  "requested_utc": "2026-10-03T00:30:50.638000+00:00",
+  "prior_stock_boot_id": "149fd195-9392-4aa6-a62a-efae01e7177e",
+  "entry_id": "sgx535-rev121-frozen-314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+  "title": "EXPERIMENTAL SGX535 rev121 FROZEN 314e2f3b37195dc56df7c57dd938d78377a5ea8e FIRST-LOAD ONLY (no SGX)",
+  "manual_selection_bound": 1,
+  "boot_watch_seconds": 600,
+  "capture_max_boot_seconds": 1200,
+  "observed_selection": null,
+  "sgx_invocations_this_session": 0
+}

@@ -1,0 +1,198 @@
+{
+  "scope": "SYNTHETIC CPU/COMPILED-DATA VALIDATION ONLY; no GPU execution or ISA emulation",
+  "modes": {
+    "native": {
+      "cases": [
+        {
+          "case": 0,
+          "addresses": {
+            "pds": 536870912,
+            "use": 537395200,
+            "vertex_ta": 1073741824,
+            "background": 805306368,
+            "control": 0,
+            "color": 1073745920,
+            "scene_hw": 1073750016,
+            "ta_page_table": 1107296256,
+            "ta_parameter": 822083584,
+            "xhw_comm": 0
+          },
+          "complete_backings_compared": 6,
+          "byte_count": 180224,
+          "critical_geometry_and_color_address_checks": "PASS"
+        },
+        {
+          "case": 1,
+          "addresses": {
+            "pds": 536870912,
+            "use": 537001984,
+            "vertex_ta": 1073741824,
+            "background": 805306368,
+            "control": 0,
+            "color": 1073745920,
+            "scene_hw": 1073750016,
+            "ta_page_table": 1107296256,
+            "ta_parameter": 822083584,
+            "xhw_comm": 0
+          },
+          "complete_backings_compared": 6,
+          "byte_count": 180224,
+          "critical_geometry_and_color_address_checks": "PASS"
+        },
+        {
+          "case": 2,
+          "addresses": {
+            "pds": 536870912,
+            "use": 537100288,
+            "vertex_ta": 1073741824,
+            "background": 805306368,
+            "control": 0,
+            "color": 1073745920,
+            "scene_hw": 1073750016,
+            "ta_page_table": 1107296256,
+            "ta_parameter": 822083584,
+            "xhw_comm": 0
+          },
+          "complete_backings_compared": 6,
+          "byte_count": 180224,
+          "critical_geometry_and_color_address_checks": "PASS"
+        },
+        {
+          "case": 3,
+          "addresses": {
+            "pds": 536870912,
+            "use": 537362432,
+            "vertex_ta": 1073741824,
+            "background": 805306368,
+            "control": 0,
+            "color": 1073745920,
+            "scene_hw": 1073750016,
+            "ta_page_table": 1107296256,
+            "ta_parameter": 822083584,
+            "xhw_comm": 0
+          },
+          "complete_backings_compared": 6,
+          "byte_count": 180224,
+          "critical_geometry_and_color_address_checks": "PASS"
+        },
+        {
+          "case": 4,
+          "addresses": {
+            "pds": 537919488,
+            "use": 538050560,
+            "vertex_ta": 1074790400,
+            "background": 806354944,
+            "control": 0,
+            "color": 1074794496,
+            "scene_hw": 1074798592,
+            "ta_page_table": 1108344832,
+            "ta_parameter": 823132160,
+            "xhw_comm": 0
+          },
+          "complete_backings_compared": 6,
+          "byte_count": 180224,
+          "critical_geometry_and_color_address_checks": "PASS"
+        }
+      ],
+      "result": "PASS",
+      "compiler_stderr": ""
+    },
+    "ubsan": {
+      "cases": [
+        {
+          "case": 0,
+          "addresses": {
+            "pds": 536870912,
+            "use": 537395200,
+            "vertex_ta": 1073741824,
+            "background": 805306368,
+            "control": 0,
+            "color": 1073745920,
+            "scene_hw": 1073750016,
+            "ta_page_table": 1107296256,
+            "ta_parameter": 822083584,
+            "xhw_comm": 0
+          },
+          "complete_backings_compared": 6,
+          "byte_count": 180224,
+          "critical_geometry_and_color_address_checks": "PASS"
+        },
+        {
+          "case": 1,
+          "addresses": {
+            "pds": 536870912,
+            "use": 537001984,
+            "vertex_ta": 1073741824,
+            "background": 805306368,
+            "control": 0,
+            "color": 1073745920,
+            "scene_hw": 1073750016,
+            "ta_page_table": 1107296256,
+            "ta_parameter": 822083584,
+            "xhw_comm": 0
+          },
+          "complete_backings_compared": 6,
+          "byte_count": 180224,
+          "critical_geometry_and_color_address_checks": "PASS"
+        },
+        {
+          "case": 2,
+          "addresses": {
+            "pds": 536870912,
+            "use": 537100288,
+            "vertex_ta": 1073741824,
+            "background": 805306368,
+            "control": 0,
+            "color": 1073745920,
+            "scene_hw": 1073750016,
+            "ta_page_table": 1107296256,
+            "ta_parameter": 822083584,
+            "xhw_comm": 0
+          },
+          "complete_backings_compared": 6,
+          "byte_count": 180224,
+          "critical_geometry_and_color_address_checks": "PASS"
+        },
+        {
+          "case": 3,
+          "addresses": {
+            "pds": 536870912,
+            "use": 537362432,
+            "vertex_ta": 1073741824,
+            "background": 805306368,
+            "control": 0,
+            "color": 1073745920,
+            "scene_hw": 1073750016,
+            "ta_page_table": 1107296256,
+            "ta_parameter": 822083584,
+            "xhw_comm": 0
+          },
+          "complete_backings_compared": 6,
+          "byte_count": 180224,
+          "critical_geometry_and_color_address_checks": "PASS"
+        },
+        {
+          "case": 4,
+          "addresses": {
+            "pds": 537919488,
+            "use": 538050560,
+            "vertex_ta": 1074790400,
+            "background": 806354944,
+            "control": 0,
+            "color": 1074794496,
+            "scene_hw": 1074798592,
+            "ta_page_table": 1108344832,
+            "ta_parameter": 823132160,
+            "xhw_comm": 0
+          },
+          "complete_backings_compared": 6,
+          "byte_count": 180224,
+          "critical_geometry_and_color_address_checks": "PASS"
+        }
+      ],
+      "result": "PASS",
+      "compiler_stderr": ""
+    }
+  },
+  "hardware_proof": false
+}

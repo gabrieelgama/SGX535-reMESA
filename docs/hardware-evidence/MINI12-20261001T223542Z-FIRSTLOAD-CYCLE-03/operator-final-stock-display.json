@@ -1,0 +1,9 @@
+{
+  "received_utc": "2026-10-01T23:11:59.620901+00:00",
+  "answer": "Confirmed: the Mini 12 is now at STOCK userspace with a normal physical display.",
+  "classification": "OPERATOR-REPORTED; no passive recovery capture",
+  "stock_userspace": true,
+  "physical_display_normal": true,
+  "stock_kernel_module_boot_identity": "UNKNOWN for current boot",
+  "full_live_recovery": "NOT ESTABLISHED"
+}

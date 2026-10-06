@@ -1,0 +1,13 @@
+{
+  "state": "STAGED_MANUAL_FIRSTLOAD_PENDING",
+  "stock_preflight": "80/80 PASS",
+  "poststage": "82/82 PASS",
+  "stock_boot": "4b6515d2-9e04-47e9-8e2f-5de7f3b38624",
+  "image_bytes": 50816648,
+  "image_sha256": "0e45ad4c9ec3eaa891253ea319348286c869644a3ba6c9dba54de39d92bd1e7d",
+  "transfer_seconds": 25.573539469973184,
+  "previous_stop_seal": "18/18 unchanged",
+  "sgx_invocations": 0,
+  "authorization_consumed": false,
+  "physical_display_publication_authorized": false
+}

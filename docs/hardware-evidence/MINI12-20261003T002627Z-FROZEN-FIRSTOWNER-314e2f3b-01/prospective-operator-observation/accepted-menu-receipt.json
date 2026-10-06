@@ -1,0 +1,17 @@
+{
+  "procedure_id": "MINI12-FROZEN-FIRSTOWNER-OPERATOR-OBSERVATION-01",
+  "evidence_kind": "direct_operator_report",
+  "reported_entry_text": "EXPERIMENTAL SGX535 rev121 FROZEN 314e2f3b37195dc56df7c57dd938d78377a5ea8e FIRST-LOAD ONLY (no SGX)",
+  "candidate_build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+  "candidate_visibly_present": true,
+  "stock_visibly_present": true,
+  "stock_initially_default_operator_report": true,
+  "photograph_supplied": false,
+  "staged_image_path": "/boot/initrd.img-5.10.240-antix.1-486-smp-sgx535-firstload-314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+  "staged_image_sha256": "fe64b3dcfe74b78a6d96edcd4fd7c118c3901fcff8631afec6c14647da292e3c",
+  "staged_image_size": 50805231,
+  "staging_boot_id": "149fd195-9392-4aa6-a62a-efae01e7177e",
+  "preselection_stock_boot_id": "f684ce25-dfdc-40bd-8426-c657f24c43ce",
+  "candidate_boots_before_selection": 0,
+  "operator_report_reference": "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20261003T002627Z-FROZEN-FIRSTOWNER-314e2f3b-01/prospective-operator-observation/operator-current-menu-report.json"
+}

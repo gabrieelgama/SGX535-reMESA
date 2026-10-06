@@ -1,0 +1,17 @@
+{
+  "initial_status": "initial-git-status.txt",
+  "final_status": "final-git-status.txt",
+  "changed_existing_files_this_cycle": [
+    "tools/psb-dri-re/frozen_kernel_health.py",
+    "tools/psb-dri-re/test_frozen_kernel_health.py",
+    "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "docs/phase8/post-attempt03-checkpoint-audit.md"
+  ],
+  "new_evidence_directory": "docs/hardware-evidence/MINI12-20261002T001828Z-FIRSTLOAD-CYCLE-05",
+  "preexisting_unrelated_files": "PRESERVED",
+  "index": "EMPTY",
+  "staged": false,
+  "committed": false,
+  "pushed": false
+}

@@ -1,0 +1,92 @@
+{
+  "schema": 1,
+  "date_utc": "2026-10-05",
+  "scope": "OFFLINE pixel-production investigation of sealed FIRE #2; no device access",
+  "evidence_root": "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/live-preparation/fire-one-authorized-call",
+  "analysis_root": "/home/gama/sgx535-offline/phase8-zero-readback-20261005T233046Z",
+  "finding": "NO CONCRETE CAUSAL DEFECT ESTABLISHED",
+  "earliest_unobserved_edge": "Published vertex/state/TA inputs -> actual hardware-produced triangle coverage in the scene consumed by raster",
+  "remaining_ambiguity": "No/culled geometry versus no intended fragment-color export versus absent/wrong PBE store or device-to-host visibility. An unchanged zero buffer and a buffer written with zeros are indistinguishable in the retained records.",
+  "preserved_result": {
+    "ioctl": 0,
+    "client_exit": 0,
+    "operation_errno": 0,
+    "phase": 9,
+    "accepted_ledger": 7,
+    "readback_bytes": 4096,
+    "readback_all_zero": true,
+    "provenance": "CONFIRMED; unchanged",
+    "triangle": "NOT ESTABLISHED"
+  },
+  "checks": {
+    "qualified_permitted_sources": "7/7 byte-identical to build inputs",
+    "compiled_initial_table": "232 entries / 2784 bytes match source",
+    "compiled_relocations": "49 records / 1960 bytes match source",
+    "originals": "18/18 manifest identities verified",
+    "address_matrices_native": "5/5 PASS; 6 entire backings per matrix",
+    "address_matrices_ubsan": "5/5 PASS; 6 entire backings per matrix",
+    "hardware_semantics_validated_by_synthetic_tests": false
+  },
+  "ranked_hypotheses_by_specific_existing_evidence": [
+    {
+      "rank": 1,
+      "hypothesis": "The selected fragment path fails to export intended primary color",
+      "confirmed_facts": "Four virtual primary-color MOVs were eliminated in the retained compiler trace. Compiled attribute count is 0; linked fragment contains only 00000000 f8040140; middle launch word is 00030000. Actual module contains those exact bytes.",
+      "unproved": "Suffix instruction semantics, implicit color forwarding and actual hardware fragment export. It is NOT established that the suffix is a no-op or that no fragment color write can occur.",
+      "minimum_distinguishing_fact": "SGX535-applicable semantics of this linked program and its attribute/output mapping, or an attributable fragment-output observation."
+    },
+    {
+      "rank": 2,
+      "hypothesis": "TA/state upload/ISP produces no surviving triangle coverage",
+      "confirmed_facts": "The 68-byte stream, 96-byte vertices, index packet, 11/14/2-word state uploads, widths and references match the retained CPU encoders. Completions do not report primitive/fragment coverage.",
+      "unproved": "Actual produced region/primitive data and coverage; no such checkpoint is in FIRE #2.",
+      "minimum_distinguishing_fact": "Attributable post-TA pre-raster scene/region coverage, interpreted under a validated format. Raw changed scene bytes alone do not prove a triangle."
+    },
+    {
+      "rank": 3,
+      "hypothesis": "Target/event/PBE path writes zero, writes elsewhere, or leaves data invisible to CPU",
+      "confirmed_facts": "Both target and background descriptors address the same color BO; full 4096 bytes, stride128; event launch points at the emitted event PDS. Target/raster literals match references; host flush/readback uses the same owned page.",
+      "unproved": "Actual PBE store/address/value and device cache visibility. Completion bits do not include these data.",
+      "minimum_distinguishing_fact": "Attributable color-store destination/value or independently established PBE write/visibility postcondition; a host-only cache flush is not a hardware proof."
+    }
+  ],
+  "excluded_explanations": [
+    "A row flip or channel/tiling permutation alone cannot turn every zero byte into intended opaque white.",
+    "Short/truncated image or incorrect response/capsule copy is contradicted by the sealed 4096-byte agreement.",
+    "Mistyped primitive record or demonstrable host relocation drift was not found; changing those fields is unjustified."
+  ],
+  "next_discriminating_observation": {
+    "boundary": "After accepted TA_FINISHED, before ISP reset/raster scheduling and before DPM retirement/free destroys produced scene evidence",
+    "required_fact": "Whether T produced relevant triangle region/primitive coverage. Retain that fact from the current owner; preserve published inputs/address bindings alongside it.",
+    "limitations": "Requires a validated scene-output interpretation; raw nonzero bytes are insufficient. If coverage is present, resolve the fragment-export/PBE branch next. No completion clearing, reset, submission or client invocation is authorized by this analysis."
+  },
+  "changes": {
+    "implementation": false,
+    "module": false,
+    "observer": false,
+    "image": false,
+    "client": false,
+    "uapi": false,
+    "new_candidate": false
+  },
+  "candidate_unchanged": {
+    "driver_build_id": "9d0b5b2fdb7d9881f2828f43fb89253176c38817",
+    "observer_build_id": "f11d3abb072caa4e1d32836ef92ce201e9c9d126",
+    "image_sha256": "ef7e01cb546c59b6f9bce96c3397feb4b9cd1d9ebdac2faa885ed71fa5ed014d"
+  },
+  "live_qualification": "Justified only after a concrete fix or qualified discriminating observation candidate; unchanged blind retry is not justified",
+  "sgx_execution_authorized": false,
+  "sgx_invocations_this_task": 0,
+  "hardware_interactions_this_task": 0,
+  "historical_authorized_client_invocations": 2,
+  "retry_authorized": false,
+  "evidence": [
+    "compiled-data-verification.json",
+    "qualified-source-equality.json",
+    "pixel-payload-qualification.json",
+    "audit-pixel-payload.py",
+    "fire2-before.json",
+    "git-before.txt"
+  ],
+  "additional_reference_crosscheck": "Retained helper ELF2648d\u201326493 also emits 00000000/f8040140 for an 8-byte helper allocation. This establishes repeated CPU emission, not NOP semantics or absence of implicit pixel output."
+}

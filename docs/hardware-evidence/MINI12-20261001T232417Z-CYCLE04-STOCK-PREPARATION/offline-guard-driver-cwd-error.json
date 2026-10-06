@@ -1,0 +1,6 @@
+{
+  "scope": "OFFLINE verification driver only",
+  "cause": "Unscoped307->326 test-count text replacement also changed retained030754Z directory name to032654Z; missing cwd detected before tests ran",
+  "correction": "Preserve failing driver/output directory; use exact count-literal replacement and new verification-successor-01 directory",
+  "target_actions": 0
+}

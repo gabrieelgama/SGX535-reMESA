@@ -1,0 +1,19 @@
+{
+  "boot_id": "83ee4ff8-a7f1-4468-b348-d10627f38d17",
+  "operator_reply": "ready; all normal",
+  "local_sudo_succeeded": true,
+  "normal_userspace": true,
+  "physical_display_normal": true,
+  "local_keyboard_grub_power_controls_normal": true,
+  "client_not_run": true,
+  "time_source": "user report; precise elapsed not supplied",
+  "machine_capture_timing": {
+    "phase": "unprivileged-boot-identity",
+    "mode": "experimental",
+    "boot_id": "83ee4ff8-a7f1-4468-b348-d10627f38d17",
+    "kernel": "5.10.240-antix.1-486-smp",
+    "architecture": "i686",
+    "uptime_start": 151.17,
+    "utc_start": "2026-10-06T08:31:46.695907+00:00"
+  }
+}

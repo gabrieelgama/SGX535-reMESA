@@ -1,0 +1,61 @@
+[
+  {
+    "transfer_event": {
+      "phase": "created",
+      "name": "initrd.img-sgx535-firstload-diagnostic-01",
+      "dev": 2049,
+      "ino": 1049245
+    }
+  },
+  {
+    "transfer_event": {
+      "dev": 2049,
+      "ino": 1049245,
+      "size": 50816648,
+      "sha256": "0e45ad4c9ec3eaa891253ea319348286c869644a3ba6c9dba54de39d92bd1e7d",
+      "uid": 1000,
+      "gid": 1000,
+      "mode": 256,
+      "nlink": 1,
+      "regular": true,
+      "phase": "verified",
+      "name": "initrd.img-sgx535-firstload-diagnostic-01"
+    }
+  },
+  {
+    "scope": "one exclusive exact-payload incoming transfer; no SGX",
+    "operations": [
+      {
+        "phase": "created",
+        "name": "initrd.img-sgx535-firstload-diagnostic-01",
+        "dev": 2049,
+        "ino": 1049245
+      },
+      {
+        "dev": 2049,
+        "ino": 1049245,
+        "size": 50816648,
+        "sha256": "0e45ad4c9ec3eaa891253ea319348286c869644a3ba6c9dba54de39d92bd1e7d",
+        "uid": 1000,
+        "gid": 1000,
+        "mode": 256,
+        "nlink": 1,
+        "regular": true,
+        "phase": "verified",
+        "name": "initrd.img-sgx535-firstload-diagnostic-01"
+      }
+    ],
+    "file": {
+      "dev": 2049,
+      "ino": 1049245,
+      "size": 50816648,
+      "sha256": "0e45ad4c9ec3eaa891253ea319348286c869644a3ba6c9dba54de39d92bd1e7d",
+      "uid": 1000,
+      "gid": 1000,
+      "mode": 256,
+      "nlink": 1,
+      "regular": true
+    },
+    "classification": "PASS EXACT EXCLUSIVE TRANSFER"
+  }
+]

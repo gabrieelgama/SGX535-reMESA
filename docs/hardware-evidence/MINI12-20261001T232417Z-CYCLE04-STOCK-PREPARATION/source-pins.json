@@ -1,0 +1,13 @@
+{
+  "old_root_source": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/stock-existing-preflight.py",
+  "old_root_sha256": "502fee8be35b84b9f2241d41681d743a2bbb95e0a840ed45c61ed158ede9c47d",
+  "new_root_sha256": "ca6bc59a0b265084a78ca975ea5d69138d2af12459f2409bc0dda12966b49f3f",
+  "wrapper_sha256": "dac02203f60024cafcff610b424d9d48ce656d5cbf6bf296a3ea27d46ac5a4dd",
+  "v2_sha256": "61061eaa77296cdc78ca915d801ca92c0c36be4007a8e4ef7adb8c985e4ea63c",
+  "mode": "stock_preparation",
+  "root_guards": "Original stock guards unchanged; adds process timing read/PID check only",
+  "max_connection_seconds": 40,
+  "max_child_seconds": 35,
+  "boot_age_limit": null,
+  "cycle_qualification": false
+}

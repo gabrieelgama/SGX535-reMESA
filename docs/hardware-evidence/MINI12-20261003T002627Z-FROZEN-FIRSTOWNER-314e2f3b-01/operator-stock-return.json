@@ -1,0 +1,13 @@
+{
+  "recorded_utc": "2026-10-03T00:38:55.351898+00:00",
+  "source": "operator reply after instructed normal STOCK selection",
+  "operator_report": "normal desktop and display here (fast boot too no way lol)",
+  "display": "normal, operator reported",
+  "new_frozen_entry_selected": false,
+  "new_candidate_experimental_boots": 0,
+  "sgx_invocations_this_session": 0,
+  "current_boot_id": "NOT FRESHLY CAPTURED",
+  "first_owner_new_candidate": "NOT ESTABLISHED",
+  "staged_candidate_preserved": true,
+  "photograph_available": false
+}

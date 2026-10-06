@@ -1,0 +1,7 @@
+{
+  "same_path_clean_repeat_identical": true,
+  "build03_sha256": "2eaffd22637eef6b7b101f046d6fd9756b48c934818a7353f9aa705616014c1e",
+  "different_path_build01_sha256": "3a5c6a2a1cf18d141702e5569e0dc4b3649d0606a6938756cd79cd7f82fcf642",
+  "different_path_build01_identical": false,
+  "note": "build-01 and build-03 differ only by path-dependent symbol/string metadata plus the resulting Build ID; clean repeat in build-03 path is the reproducibility check"
+}

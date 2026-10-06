@@ -1,0 +1,137 @@
+{
+  "schema": "SGX535_DEMONSTRABLE_3D_CONTINUATION_V1",
+  "date": "2026-10-06",
+  "DEMONSTRABLE_3D_ESTABLISHED": false,
+  "target": "recognizable rotating perspective cube on physical Mini12 LVDS",
+  "lighting_optional_for_first_public_3D": true,
+  "prior_sealed_plan": "docs/phase8/FIRST-REAL-3D-ROADMAP.md",
+  "prior_seal": "docs/phase8/first-3d-offline-seal-20261006.json",
+  "protected_document_hashes": {
+    "docs/phase8/first-3d-offline-seal-20261006.json": "a35601da374c83aa92aa95d063b66e8741372db87bfee6509381c748cb7e598e",
+    "docs/phase8/next-3d-execution-card-20261006.json": "33739509458424f3e717084078f45240965736a35d3817e52a178065a6660dae",
+    "docs/phase8/two-triangle-experimental-candidate-20261006.json": "5d0a75098002e0785770c5fc0452538a4e4cfb271bf3ee9ab862a6e73e615f30",
+    "docs/phase8/FIRE3-TRIANGLE-REPRODUCTION.json": "dd3e8f340d54dcd40320a017c507068c5481333cc120231a265994679b23621d",
+    "docs/phase8/VISIBLE-TRIANGLE-REPRODUCTION.json": "49734ad319540ce9483eb91daffe003bdbf28b9cef81751d063652b510bf6fd1"
+  },
+  "existing_next_experiment": {
+    "name": "TWO_TRIANGLE_FOREGROUND_QUAD",
+    "card": "docs/phase8/next-3d-execution-card-20261006.json",
+    "card_sha256": "33739509458424f3e717084078f45240965736a35d3817e52a178065a6660dae",
+    "maximum_invocations": 1,
+    "sgx_execution_authorized": false,
+    "card_unchanged": true,
+    "qualification_not_repeated": true
+  },
+  "after_square_success": {
+    "first": "preserve exact readback/lifecycle/identities; record MULTI_TRIANGLE_ESTABLISHED",
+    "next_minimum_contract": "per-draw constant fragment selection",
+    "suggested_probe": "TWO_COLOR_TWO_DRAW_QUAD",
+    "candidate_created": false,
+    "GPU_encoding_scope": "known constant constructor and known state-cache serialization only; no new ISA invention",
+    "symbolic_plan": "docs/phase8/artifacts/demonstrable-3d-CPU-reference-20261006/symbolic-face-constant-plan.json"
+  },
+  "static_cube": {
+    "geometry": "8 mathematical corners,6 faces,12 triangles; CPU backface selection leaves3 visible faces/6 triangles in first reference frame",
+    "face_distinction": "constant fragment colors per face; not lighting",
+    "model": "Ry(30deg+angle)*Rx(20deg)",
+    "view": "camera (0,0,6),look toward origin",
+    "projection": "right-handed,column vectors,FOV45deg,aspect1,near1,far12",
+    "CPU_clip": "homogeneous six-plane clip before division",
+    "first_no_depth_GPU_position_policy": "CPU projected x/y;retain demonstrated z=.5,w=1;true clip/view depth in metadata and CPU painter order",
+    "reference_vertex_bytes": "CPU screen reference only,not a deployment payload",
+    "depth_test_established": false,
+    "GPU_vertex_transform_established": false,
+    "GPU_perspective_program_established": false,
+    "GPU_cube_established": false,
+    "CPU_reference_qualified": true
+  },
+  "bounded_rotation": {
+    "angles_degrees": [
+      0,
+      15,
+      30,
+      45,
+      60
+    ],
+    "SGX_frames_authorized": 0,
+    "requires": "authoritative frameN+1 rearm,then one bounded separate execution card",
+    "each_frame": [
+      "fresh operation context",
+      "exact transform",
+      "successful lifecycle/accepted events",
+      "retirement",
+      "complete attributable response/readback",
+      "expected geometric change",
+      "safe source/DPM/event/memory/ownership transition"
+    ],
+    "redisplayed_old_image_is_new_render": false
+  },
+  "presentation": {
+    "route": "SGX RENDER + CPU/XORG PRESENTATION",
+    "rectangle": "bounded;choose exact destination in future card",
+    "backup_restore": "save once;short serialized owner-managed copies;restore/check at exit while owner valid",
+    "historical15second_grab_repeated": false,
+    "FPS": "measure completed/presented frames per monotonic wall interval;record render/publish latency and drops",
+    "direct_scanout_established": false,
+    "display_authorized": false
+  },
+  "public_milestone_acceptance": [
+    "recognizable genuine3D geometry with perspective and distinct faces",
+    "multiple distinct attributable SGX-rendered frames with deterministic changing transforms",
+    "valid completion,retirement and transition for every frame",
+    "verified physical LVDS publication and visual observation",
+    "exact originals/hashes/reproduction records;measured timing/limitations"
+  ],
+  "lighting": {
+    "target": "fixed directional light with rotating normals",
+    "CPU_oracle": "I=max(0,normalize(n_world) dot normalize(1,2,3))",
+    "diagnostic_reference_colors_are_lighting": false,
+    "CPU_lighting_route_label": "CPU DIRECTIONAL LIGHTING + SGX FLAT-FACE RASTERIZATION",
+    "GPU_lighting_arithmetic_claim_requires": "qualified shader arithmetic and independent actual output correlation",
+    "FIRST_LIT_3D": false,
+    "FIRST_LIT_ANIMATED_3D": false
+  },
+  "gears": {
+    "after": "demonstrable cube/repeatability and sufficient shading",
+    "custom_label": "SGX535-reMESA custom gears demo",
+    "FIRST_GEARS": false,
+    "actual_glxgears_claim_requires": "real OpenGL/GLX binary through developing stack"
+  },
+  "milestone_preservation": [
+    "triangle",
+    "square",
+    "first static cube",
+    "first repeated cube frames",
+    "first animated cube",
+    "first lit object",
+    "first lit animated cube",
+    "first gears"
+  ],
+  "future_first3D_reproduction_paths": [
+    "docs/phase8/FIRST-3D-REPRODUCTION.md",
+    "docs/phase8/FIRST-3D-REPRODUCTION.json"
+  ],
+  "future_reproduction_status": "create only from actual successful records;Phase9 currently remains Mesa integration",
+  "public_summary_maintainer_facts": {
+    "project_start": "2026-09-16",
+    "first_established_triangle": "2026-10-06",
+    "elapsed_days": 20,
+    "physical_first_triangle": "2026-10-06 04:11 BRT (UTC-3)",
+    "confirmed_publication": "centered160x160 at560,320",
+    "earlier64_64_was_observed": false,
+    "world_first_claim_supported": false
+  },
+  "current_claims": {
+    "TRIANGLE_ESTABLISHED": true,
+    "DISPLAY_PUBLICATION_ESTABLISHED": true,
+    "GPU_RENDER_CPU_PUBLICATION_ESTABLISHED": true,
+    "DIRECT_SGX_SCANOUT_ESTABLISHED": false,
+    "MULTI_TRIANGLE_ESTABLISHED": false,
+    "FIRST_3D_OBJECT_ESTABLISHED": false,
+    "REPEATABLE_3D_PIPELINE": false,
+    "FIRST_ANIMATED_3D": false
+  },
+  "new_module_or_image_identities": null,
+  "task_SGX_invocations": 0,
+  "task_hardware_interactions": 0
+}

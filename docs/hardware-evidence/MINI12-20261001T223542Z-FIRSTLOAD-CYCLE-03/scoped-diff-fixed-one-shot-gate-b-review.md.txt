@@ -1,0 +1,34 @@
+diff --git a/docs/phase8/fixed-one-shot-gate-b-review.md b/docs/phase8/fixed-one-shot-gate-b-review.md
+index 36224c3..7d8b5a8 100644
+--- a/docs/phase8/fixed-one-shot-gate-b-review.md
++++ b/docs/phase8/fixed-one-shot-gate-b-review.md
+@@ -1,5 +1,29 @@
+ # Fixed 32×32 triangle: exact-action Gate B review (updated 2026-09-30)
+ 
++## Latest result: first-load cycle03 (2026-10-01)
++
++[Cycle03](first-load-cycle-03-result.md) passed a fresh 53-guard STOCK preflight
++and existing staged-file receipt checks. The operator reported experimental
++userspace/display at approximately 120 seconds. No experimental connection was
++made because no remaining capture budget was established. The menu photo was
++not captured; the operator's correction is preserved. Experimental boot identity,
++loaded note, hook trace and ownership evidence are missing.
++
++Stock recovery capture did not run because readiness/deadline facts were not
++established. The operator confirmed current STOCK userspace and a normal physical
++display; that is an operator observation, not fresh module/ownership/kernel-health
++proof. LIVE FIRST LOAD, FIRST OWNER and full LIVE RECOVERY remain NOT ESTABLISHED.
++The cycle is spent. No restaging, hot transition, fixed ioctl or SGX fire occurred.
++
++Gate B remains BLOCKED; SGX whitelist `[]`; FIRST TRIANGLE NOT ATTEMPTED.
++307 repository tests, 14 boot-analysis tests, three UBSan harnesses and existing
++CRC/generator/dry guards passed. The pinned image/candidates remain unchanged.
++The [timing redesign](first-load-capture-timing-redesign.md) is a draft for review;
++current 120-second guards are unchanged. The next step is OFFLINE design review,
++then separately scoped implementation/qualification and live authorization.
++Earlier current-state and next-step notices below are historical.
++
++
+ ## Current result: cycle02 (2026-10-01)
+ 
+ [Cycle02 evidence](first-load-cycle-02-result.md) records a corrected and tested health guard, a fresh 49-guard

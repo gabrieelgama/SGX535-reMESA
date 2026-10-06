@@ -1,0 +1,16 @@
+{
+  "all_18_FIRE3_originals_unchanged": true,
+  "originals_sealed_before_interpretation": true,
+  "previous_81_file_STOP_unchanged": true,
+  "late_operator_report_unchanged": true,
+  "older_STOP_and_failed_transfer_inspection_seals_unchanged": true,
+  "all_68_FIRE2_files_unchanged": true,
+  "qualified_driver_observer_image_client_UAPI_hashes_unchanged": true,
+  "no_implementation_or_rendering_source_modification": true,
+  "repository_status_identical_to_start": true,
+  "index_empty": true,
+  "FIRE3_invocations": 1,
+  "authorization_consumed": true,
+  "further_SGX_execution_authorized": false,
+  "triangle": "ESTABLISHED IN FIRE3 (opaque-magenta diagnostic frozen triangle)"
+}

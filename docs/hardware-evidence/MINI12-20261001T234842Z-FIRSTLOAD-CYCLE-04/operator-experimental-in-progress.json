@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-02T00:01:00.230695+00:00",
+  "experimental_selected_exactly_once": true,
+  "boot_watch_running": true,
+  "current_console": "VMX (outside TXT) disabled by BIOS",
+  "userspace_reached": "NOT YET REPORTED",
+  "source": "operator reply",
+  "retry": false,
+  "sgx_actions": 0
+}

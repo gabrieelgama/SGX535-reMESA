@@ -1,0 +1,13 @@
+{
+  "url": "https://www.x.org/releases/individual/xserver/xorg-server-21.1.16.tar.xz",
+  "upstream_version": "21.1.16",
+  "target_debian_build": "2:21.1.16-1.3.0nosystemd1",
+  "sha256": "b14a116d2d805debc5b5b2aac505a279e69b217dae2fae2dfcb62400471a9970",
+  "files": {
+    "hw/xfree86/drivers/modesetting/driver.c": "731028a997f8b13b12868801ad374d90ed7f3e880670ed1e0920ab9daf17b37c",
+    "hw/xfree86/drivers/modesetting/drmmode_display.c": "7099f1cd58e6deeb5f73cb9d19e0d9281e48ff190e65d0d71b90eca5b63275b2",
+    "fb/fbimage.c": "ece4e68d5e772d1807587252d3a21597119e6f7d15cf2972b51e9b9b2772e759",
+    "fb/fbblt.c": "7b287defd70b5c4fc76e375e40e284bfe0c974536002a6f96b75c5739c9bdd2e",
+    "dix/dispatch.c": "5d9b74a772bff2e7a65a00a4e35dcff1f58d1e2c62393c0e244c250a1486c2a4"
+  }
+}

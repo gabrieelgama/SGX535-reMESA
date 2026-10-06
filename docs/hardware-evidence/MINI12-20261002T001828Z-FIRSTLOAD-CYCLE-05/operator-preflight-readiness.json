@@ -1,0 +1,11 @@
+{
+  "local_sudo_succeeded": true,
+  "normal_userspace": true,
+  "physical_display_normal": true,
+  "physically_present": true,
+  "grub_controls_available": true,
+  "manual_power_controls_available": true,
+  "source": "ready reply to combined current STOCK/physical/sudo question",
+  "literal_operator_reply": "ready sudo v conceded",
+  "utc": "2026-10-02T00:20:16.774710+00:00"
+}

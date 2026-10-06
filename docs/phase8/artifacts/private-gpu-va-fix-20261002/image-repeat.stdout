@@ -1,0 +1,16 @@
+{
+  "stock_sha256": "f02cde6c7e712fa0620f99438ef5dc81c131b481a84dc9dbc4f7b854c364e341",
+  "image_bytes": 50804478,
+  "image_sha256": "55e7a8be6f62c9a1d59f1c532b8790399c21a2706884747e504edfffb45bf52d",
+  "early_prefix_bytes": 15006720,
+  "early_prefix_sha256": "45070075f32565213d862468ba99e9f7b05ca95ba76e57d37331ad032a12a929",
+  "derivative_sha256": "2eaffd22637eef6b7b101f046d6fd9756b48c934818a7353f9aa705616014c1e",
+  "hook_sha256": "975c35d6534af16f9e4931478e3f81afda3a24e8e211fe8ca6722ebef0d6b7cd",
+  "loaded_note_sha256": "b78dc1ffde5cc661d076941e27e10b06edf62ad1da37651f3c38a98e622890c2",
+  "build_id": "66876e327e20a00adf3da6d6702fb846c4d93102",
+  "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+  "new_members": 2141,
+  "compression": "gzip level9 mtime0; unchanged raw early archive/padding; stock main records preserved except init",
+  "gate_b": "BLOCKED",
+  "whitelist": []
+}

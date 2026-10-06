@@ -1,0 +1,11 @@
+{
+  "requested_utc": "2026-10-03T00:57:12.465979+00:00",
+  "procedure_id": "MINI12-FROZEN-FIRSTOWNER-OPERATOR-OBSERVATION-01",
+  "prior_stock_boot_id": "f684ce25-dfdc-40bd-8426-c657f24c43ce",
+  "candidate_selection_bound": 1,
+  "boot_watch_seconds": 600,
+  "capture_completion_max_boot_seconds": 1200,
+  "operator_selection_observed": null,
+  "photograph_supplied": false,
+  "sgx_invocations_this_session": 0
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "source_path": "docs/hardware-evidence/MINI12-20261001T234842Z-FIRSTLOAD-CYCLE-04/menu-photo.jpg",
+    "source_sha256": "f36b603b3f5cdc6622a4ef24d3207dadde29eef009c237b82af5dfe9ab0a58ea",
+    "derivative_path": "docs/publication-audit/sanitized-media/boot-menu-1.jpg",
+    "derivative_sha256": "7005b0080a7ecb0ef9f35b6f2e3c988d8799f411df314eb9a9df63fb69cf304a",
+    "removed_markers": [
+      225
+    ],
+    "compressed_pixel_stream_unchanged": true,
+    "original_unchanged": true
+  },
+  {
+    "source_path": "docs/hardware-evidence/MINI12-20261002T001828Z-FIRSTLOAD-CYCLE-05/menu-photo.jpg",
+    "source_sha256": "c78e28a1849c9cf6fe7bdeea7d79a08eb1841706986a4c2fe281b6d5946ac5e2",
+    "derivative_path": "docs/publication-audit/sanitized-media/boot-menu-2.jpg",
+    "derivative_sha256": "67416fee456677d2c9ef0ac8f94fd5acfa20d0c8366081773fbf35493fb3756e",
+    "removed_markers": [
+      225
+    ],
+    "compressed_pixel_stream_unchanged": true,
+    "original_unchanged": true
+  }
+]

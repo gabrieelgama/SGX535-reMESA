@@ -1,0 +1,16 @@
+{
+  "source": "/home/gama/sgx535-gfx/references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/drivers/Xpsb.so",
+  "sha256": "da531587b1ec59fe433fa20ddd2e691b2f8b7fb35bb82525d4db99259c5e571f",
+  "applicability": "SGX535 REV121 HISTORICAL EVIDENCE as established Xpsb selector/normal branch",
+  "source_table_elf": "0xd740",
+  "index": 0,
+  "relative_shader_offset": "0x30",
+  "source_pair_elf": "0xd110",
+  "words": [
+    "0x0",
+    "0xfca40001"
+  ],
+  "consumer": "XpsbCompositeShader at a660: reads table then XpsbShaderCode and copies pair; compositor launch/raster chain independently traced",
+  "cross_correlation": "exact DRI immediate constructor zero-ARGB words including default control/END; nonzero immediate field placement remains independently from DRI constructor",
+  "proves": "independent applicable historical corroboration of fixed instruction variant, not FIRE2 cause or actual hardware output"
+}

@@ -1,0 +1,10 @@
+{
+  "source_flags": {
+    "ROOT_FLAGS": "IORESOURCE_MEM",
+    "EXCLUSION_FLAGS": "IORESOURCE_MEM",
+    "BO_FLAGS": "IORESOURCE_MEM"
+  },
+  "exit_code": 1,
+  "stdout": "PDS rc=-16 start=0x0 end=0x0\n",
+  "stderr": ""
+}

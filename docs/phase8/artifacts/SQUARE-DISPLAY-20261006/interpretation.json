@@ -1,0 +1,54 @@
+{
+  "classification": "SQUARE_DISPLAY_PUBLICATION_ESTABLISHED",
+  "architecture": "SGX_RENDERED_PRESERVED_SQUARE + CPU/XORG_PUBLICATION; NOT DIRECT SGX SCANOUT",
+  "source_sha256": "6e9af8e8b6576b979aa78816d44bd3b0ffd31b70e169a982e83736d63ab91729",
+  "boot_id": "83ee4ff8-a7f1-4468-b348-d10627f38d17",
+  "source_pixels": 1024,
+  "source_magenta_pixels": 256,
+  "source_zero_pixels": 768,
+  "presentation_scale": 10,
+  "affected_rectangle": {
+    "x": 480,
+    "y": 240,
+    "width": 320,
+    "height": 320
+  },
+  "hold_seconds": 15,
+  "publication_rgb_match": true,
+  "restoration_exact_all409600bytes": true,
+  "published_magenta_pixels": 25600,
+  "published_zero_pixels": 76800,
+  "unique_rgb_values": [
+    "0x0",
+    "0xff00ff"
+  ],
+  "magenta_bbox_inclusive": [
+    560,
+    320,
+    719,
+    479
+  ],
+  "coordinates": "all integer(x,y) with560<=x<=719 and320<=y<=479",
+  "display_attempts": 1,
+  "sgx_invocations_this_display_task": 0,
+  "authorization_consumed": true,
+  "further_display_authorized": false,
+  "further_sgx_authorized": false,
+  "remote_original_seal_verified": true,
+  "originals_preserved_before_interpretation": true,
+  "operator_observation": {
+    "source": "maintainer reply to this single square display attempt",
+    "answer": "i see it, insane, i recorded",
+    "physical_square_seen": true,
+    "video_recorded_operator_reported": true,
+    "video_file_inspected_or_archived": false,
+    "physical_restoration_operator_reported": "NOT EXPLICITLY STATED; exact restoration independently machine verified",
+    "recorded_utc": "2026-10-06T09:06:07.903454+00:00"
+  },
+  "source_originals": "/home/gama/sgx535-offline/phase8-square-display-one-publication-20261006T090214Z/originals",
+  "card": "/home/gama/sgx535-offline/phase8-square-display-one-publication-20261006T090214Z/card.json",
+  "DISPLAY_PUBLICATION_ESTABLISHED": true,
+  "GPU_RENDER_CPU_PUBLICATION_ESTABLISHED": true,
+  "DIRECT_SGX_SCANOUT_ESTABLISHED": false,
+  "controller_duration_seconds": 18.94050410797354
+}

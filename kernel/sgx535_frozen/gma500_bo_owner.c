@@ -18,6 +18,7 @@
 #include "power.h"
 #include "mmu.h"
 #include "gma500_bo_owner.h"
+#include "gma500_capsule_observer.h"
 
 /* The private VA tree is valid only while a single frozen scene owns it. */
 static DEFINE_MUTEX(frozen_owner_lock);
@@ -81,7 +82,7 @@ static int owner_exclude_gtt(struct sgx535_gma500_owner *owner)
     owner->gtt_exclusion.name = "gma500 existing GTT/SGX VA";
     owner->gtt_exclusion.start = max_t(u64, start, owner->va_root.start);
     owner->gtt_exclusion.end = min_t(u64, end - 1, owner->va_root.end);
-    owner->gtt_exclusion.flags = IORESOURCE_MEM;
+    owner->gtt_exclusion.flags = 0;
     if (request_resource(&owner->va_root, &owner->gtt_exclusion))
         return -EBUSY;
     owner->gtt_excluded = true;
@@ -112,6 +113,7 @@ int sgx535_gma500_owner_release(struct sgx535_gma500_owner *owner)
                 return -ENODEV;
         }
     }
+    sgx535_provenance_release(owner);
     for (role = SGX535_BO_COUNT - 1; role >= 0; role--) {
         struct sgx535_gma500_bo *bo = &owner->objects[role];
         if (bo->mapped_pages) {
@@ -225,8 +227,10 @@ int sgx535_gma500_owner_capture_color(
     if (!bytes)
         return -ENOMEM;
     ret = sgx535_frozen_summarize_color(bytes, PAGE_SIZE, summary);
-    if (!ret)
+    if (!ret) {
         memcpy(raw_bytes, bytes, PAGE_SIZE);
+        sgx535_provenance_color(owner, bytes);
+    }
     kunmap(bo->pages[0]);
     return ret ? -EIO : 0;
 }
@@ -275,7 +279,8 @@ int sgx535_gma500_owner_construct(struct drm_device *dev,
     owner->va_root.name = "sgx535 frozen VA reservations";
     owner->va_root.start = 0x20000000;
     owner->va_root.end = mmu_end - 1;
-    owner->va_root.flags = IORESOURCE_MEM;
+    /* GPU VAs are not CPU iomem; exclude GTT here, not x86 E820 RAM. */
+    owner->va_root.flags = 0;
     ret = owner_exclude_gtt(owner);
     if (ret)
         goto fail;
@@ -332,7 +337,7 @@ int sgx535_gma500_owner_construct(struct drm_device *dev,
         if (ret)
             goto fail;
         bo->va.name = "sgx535 frozen BO";
-        bo->va.flags = IORESOURCE_MEM;
+        bo->va.flags = 0;
         ret = allocate_resource(&owner->va_root, &bo->va,
                                 requirement.size, first, last,
                                 requirement.alignment, NULL, NULL);

@@ -1,0 +1,108 @@
+[
+  {
+    "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/build-03/initrd.img-sgx535-firstload-01",
+    "sha256": "4ac6bd1bed7dbf53b3653037f3e6e757160672560176b1938a63488636efaa71",
+    "bytes": 50804481,
+    "verified": "UNCHANGED"
+  },
+  {
+    "path": "docs/phase8/artifacts/experimental-first-load-01-20261001/build-03/proposed-custom.cfg",
+    "sha256": "181d33aa42cc9a73d35a50b5e7b1636121edb7a607c2949540fa04a4d0d32612",
+    "bytes": 974,
+    "verified": "UNCHANGED"
+  },
+  {
+    "path": "docs/phase8/artifacts/candidate-01-build-20260930/candidate-02-lifecycle/gma500_gfx.ko",
+    "sha256": "91a6040e743d9c6222cb1307067db6e29fe92558576716a33d9fe0f4f5a87d74",
+    "bytes": 242724,
+    "verified": "UNCHANGED"
+  },
+  {
+    "path": "docs/hardware-evidence/MINI12-20260927-H0/ssh_known_hosts",
+    "sha256": "404cdf9a05765cc49df856dd52387b6f8da71aa7f9c9170391ef1f3f3816e056",
+    "bytes": 142,
+    "verified": "UNCHANGED"
+  },
+  {
+    "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/poststage-passive.py",
+    "sha256": "502fee8be35b84b9f2241d41681d743a2bbb95e0a840ed45c61ed158ede9c47d",
+    "bytes": 11689,
+    "verified": "UNCHANGED"
+  },
+  {
+    "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/experimental-observation.py",
+    "sha256": "d0dd6a1d82c554008305ffa971677b45feb253d322678ee13fbcca08bfa58382",
+    "bytes": 12001,
+    "verified": "UNCHANGED"
+  },
+  {
+    "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/staging/decoded-records.json",
+    "sha256": "6c017aaa2f4f06643d2100cb869ebac139360d38f629161a92585005e2000319",
+    "bytes": 240418,
+    "verified": "UNCHANGED"
+  },
+  {
+    "path": "tools/psb-dri-re/frozen_first_load_capture.py",
+    "sha256": "74664f64679a11da73b7dfc97673fa592bbfd4a335095caf2db04f40163ba9a1",
+    "bytes": 3006,
+    "verified": "UNCHANGED"
+  },
+  {
+    "path": "tools/psb-dri-re/frozen_first_load_procedure.py",
+    "sha256": "f319f31e85bc44b2c08637494382608986d46e9afabba61d9ab0fd905c1e77dc",
+    "bytes": 10528,
+    "verified": "UNCHANGED"
+  },
+  {
+    "path": "docs/phase8/visible-triangle-readiness.md",
+    "sha256": "54d2889800192ea4a7e9d216911b5dfc7be80b28c048d1474a90f557d41c4eb6",
+    "bytes": 9966,
+    "verified": "UNCHANGED"
+  },
+  {
+    "path": "docs/phase8/artifacts/candidate-01-build-20260930/candidate-01/gma500_gfx.ko",
+    "sha256": "13591674ef9fa82f185f075185d1fa09d94606ccce7253ed231627f2649c600f",
+    "bytes": 242364,
+    "verified": "UNCHANGED"
+  },
+  {
+    "source": "docs/phase8/first-load-cycle-03-result.md",
+    "link": "../hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/RESULT.md",
+    "verified": true
+  },
+  {
+    "source": "docs/phase8/first-load-cycle-03-result.md",
+    "link": "first-load-capture-timing-redesign.md",
+    "verified": true
+  },
+  {
+    "source": "docs/phase8/first-load-capture-timing-redesign.md",
+    "link": "first-load-cycle-03-result.md",
+    "verified": true
+  },
+  {
+    "source": "docs/phase8/first-load-capture-timing-redesign.md",
+    "link": "first-load-cycle-02-result.md#stock-recovery-current-machine-verified",
+    "verified": true
+  },
+  {
+    "source": "docs/phase8/first-load-capture-timing-redesign.md",
+    "link": "../hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/source-reference-uptime.c",
+    "verified": true
+  },
+  {
+    "source": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/README.md",
+    "link": "RESULT.md",
+    "verified": true
+  },
+  {
+    "source": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/RESULT.md",
+    "link": "../../phase8/first-load-cycle-03-result.md",
+    "verified": true
+  },
+  {
+    "source": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/RESULT.md",
+    "link": "../../phase8/first-load-capture-timing-redesign.md",
+    "verified": true
+  }
+]

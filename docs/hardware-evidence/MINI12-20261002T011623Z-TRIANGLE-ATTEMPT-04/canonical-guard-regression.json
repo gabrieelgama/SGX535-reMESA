@@ -1,0 +1,8 @@
+{
+  "source": "exact executed wrapper assertion; corrected assertion tested offline",
+  "retained_canonical_target": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/stdout.txt:53",
+  "old_valid_device": "REJECT (reproduced bug)",
+  "corrected_valid_device": "PASS",
+  "corrected_wrong_device": "REJECT",
+  "corrected_remote_execution": "NOT PERFORMED"
+}

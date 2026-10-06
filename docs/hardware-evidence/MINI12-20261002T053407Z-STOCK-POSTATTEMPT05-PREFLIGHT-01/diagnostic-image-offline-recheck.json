@@ -1,0 +1,53 @@
+{
+  "classification": "OFFLINE DIAGNOSTIC IMAGE RECHECK PASS; LIVE STAGING NOT STARTED",
+  "diagnostic_module": {
+    "build_id": "594030ac153ce3c6c7dec748025142c92d90dd0c",
+    "bytes": 245000,
+    "crc_mismatches": 0,
+    "elf": "ELF32 little-endian Intel 80386",
+    "imports": 232,
+    "missing": 0,
+    "module_layout": "0xb84efb99",
+    "path": "/home/gama/sgx535-offline/private-gpu-va-diagnostic-20261002/build-02/gma500_gfx.ko",
+    "sha256": "5e106cf2511acf3c5aa7f54cf6bd42b3ca368ab91dbdf45af547e1fa676ef2a0",
+    "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+    "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486"
+  },
+  "gate_b": "BLOCKED",
+  "grub_proposal": {
+    "entry_id": "sgx535-rev121-firstload-diagnostic-01",
+    "initrd_path": "/boot/initrd.img-5.10.240-antix.1-486-smp-sgx535-firstload-diagnostic-01",
+    "merged_custom_cfg_path": "/home/gama/sgx535-offline/private-gpu-va-diagnostic-20261002/diagnostic-image-01/proposed-custom.cfg.merged",
+    "merged_custom_cfg_sha256": "a2d2b6bd33868deefe64e5e1cb2cd9ecedbfd1fe0e78370af983a92a2ec655c5",
+    "merged_custom_cfg_size": 3042,
+    "path": "/home/gama/sgx535-offline/private-gpu-va-diagnostic-20261002/diagnostic-image-01/build-03/proposed-custom.cfg",
+    "preserves_current_custom_cfg_exact_prefix": true,
+    "sha256": "892fbbff2c8126bd6d330b59a3bab7bd3884eb53b82d1a2c6fd672522654deaa",
+    "size": 1002,
+    "title": "EXPERIMENTAL SGX535 rev121 DIAGNOSTIC FIRST-LOAD ONLY (no SGX)"
+  },
+  "image": {
+    "fresh_verification_path": "/home/gama/sgx535-offline/private-gpu-va-diagnostic-20261002/qualification-recheck-01/proof/qualification.json",
+    "independent_verifier": "PASS OFFLINE",
+    "path": "/home/gama/sgx535-offline/private-gpu-va-diagnostic-20261002/diagnostic-image-01/build-03/initrd.img-sgx535-firstload-diagnostic-01",
+    "repeat_byte_identical": true,
+    "repeat_path": "/home/gama/sgx535-offline/private-gpu-va-diagnostic-20261002/diagnostic-image-01/build-04/initrd.img-sgx535-firstload-diagnostic-01",
+    "repeat_sha256": "376da01e11c3fd7079f348c0b10c1ea4d09c58dd917fb8be4dda52a7d805abae",
+    "sha256": "376da01e11c3fd7079f348c0b10c1ea4d09c58dd917fb8be4dda52a7d805abae",
+    "size": 50805273
+  },
+  "live_boundary": {
+    "diagnostic_image_staged": false,
+    "grub_entry_installed": false,
+    "next_required_operator_action": "When physically present at the Mini 12, confirm normal STOCK display/userspace and GRUB/manual power controls are available, then run sudo -v locally. No reboot or experimental selection until staging read-back passes.",
+    "reason": "The reviewed procedure requires operator physical presence and confirmed manual recovery controls before live staging; operator reported being unavailable/resting."
+  },
+  "sgx_execution": "NOT PERFORMED",
+  "stock_preflight": {
+    "active_original_module_build_id": "d8dcb4d38b774ad64799d5e13aaedede069371f3",
+    "boot_id": "d78d349e-daac-43aa-b7f9-156485506ca5",
+    "classification": "PASS",
+    "guards": "36/36"
+  },
+  "whitelist": []
+}

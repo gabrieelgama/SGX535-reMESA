@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "status": "REQUEST_ONLY",
+  "request_id": "MINI12-PROSPECTIVE-CLIENT-SUBSTITUTION-REVIEW-20261004",
+  "requested_decision": {
+    "question": "Approve or reject substitution of the exact prospective client below for the selected client in the applicable exact-action review for this boot/build/action.",
+    "allowed_responses": [
+      "APPROVE_EXACT_CLIENT_SUBSTITUTION",
+      "REJECT_EXACT_CLIENT_SUBSTITUTION"
+    ],
+    "decision": null,
+    "required_record_binding": [
+      "reviewer authority and decision provenance",
+      "exact successor source and binary path/size/SHA-256",
+      "exact unchanged UAPI path/size/SHA-256",
+      "boot_id",
+      "module_build_id",
+      "action",
+      "decision scope and any conditions"
+    ],
+    "scope_limit": "Client substitution review only. An affirmative record must not be treated as the independent Gate B opening decision or permission to stage or invoke."
+  },
+  "exact_context": {
+    "boot_id": "89fc7306-6dac-4ab9-af62-360b7152ef22",
+    "module_build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+    "action": "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1",
+    "freshness": "Boot and 70/70 first-owner facts are preserved historical observations, not fresh invocation guards."
+  },
+  "selected_client_to_preserve": {
+    "source": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot.c",
+      "size": 2032,
+      "sha256": "4271a62846a0f02694e574161658920987ee89ad69e3bf5b2be79fc83f5634d2"
+    },
+    "binary": {
+      "path": "/home/gama/sgx535-gfx/docs/phase8/artifacts/frozen-triangle-one-shot-i386",
+      "size": 771320,
+      "sha256": "758076e2f7e20d0eff2df565d4440c8b3fd3f846922427e770f55ebc472edccf"
+    },
+    "identity_provenance": "Permitted selected artifact note and existing differential metadata; no rehash in this request.",
+    "selected_and_forward_pins_changed": false
+  },
+  "proposed_successor": {
+    "source": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot_prospective.c",
+      "size": 3711,
+      "sha256": "8b277dcb8c4e00a4eea78774b2bf8529c9396bfbbf05597be05b75cff2bd2b49"
+    },
+    "binary": {
+      "path": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/client-build-01/frozen-triangle-one-shot-prospective-i386",
+      "size": 774336,
+      "sha256": "a854d4f719b92cfe31a9ad33adc15d0f881d397c163ad6c34b5518d4a21da2e9"
+    },
+    "uapi": {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_uapi.h",
+      "size": 760,
+      "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420"
+    },
+    "technical_qualification": "PASS OFFLINE ONLY; substitution review not established",
+    "elf": {
+      "class": "ELF32",
+      "endianness": "little",
+      "machine": "Intel 80386",
+      "PT_DYNAMIC": false,
+      "PT_INTERP": false,
+      "build_id": null
+    },
+    "repeat_build_byte_identical": true
+  },
+  "unchanged_invocation_evidence": {
+    "request_size_bytes": 4268,
+    "request_prefix_bytes": 16,
+    "request": "Little-endian {1,1,0,0}; remaining 4252 bytes zero before ioctl.",
+    "whole_request_sha256_from_existing_differential": "e45267b255ea079d91dcfd38da61c038b77151fd419573268e7de8310750a7a3",
+    "paired_cases": 9,
+    "paired_ioctl_reaching_cases": 6,
+    "ioctl": "0xd0ac6440",
+    "device_node": "/dev/dri/card0",
+    "device_open_flags": "O_RDWR | O_CLOEXEC",
+    "ioctl_count_per_reaching_case": 1,
+    "ioctl_retries": 0,
+    "ordering": "Device open, whole-request capture at mock ioctl entry, mock return, device close; preservation/reporting changes follow the call.",
+    "abi_offsets": {
+      "operation_errno": 16,
+      "color_row_nonzero": 44,
+      "color_bytes": 172
+    },
+    "scope": "Whole-request comparison is native CPU/mock evidence. Separate recorded static i386 build/ABI/refusal checks establish offline technical qualification; neither establishes GPU execution."
+  },
+  "hardening_and_existing_regressions": {
+    "changes": [
+      "Complete positive short file writes and retry file-write EINTR; zero/hard errors fail closed and retain partial files.",
+      "Require successful file fsync and close; file-sync EINTR retries only file I/O.",
+      "Failed ioctl saves syscall errno, preserves all raw userspace request bytes as unauthoritative, labels execution UNKNOWN/DO NOT RETRY, and stops after one call."
+    ],
+    "preservation_tests": {
+      "red_test_methods": 10,
+      "red_failures": 7,
+      "green_test_methods": 10,
+      "green_result": "PASS"
+    },
+    "failure_semantics_tests": {
+      "red_test_methods": 5,
+      "red_failures": 3,
+      "green_test_methods": 5,
+      "green_result": "PASS"
+    },
+    "output_creation_flags_unchanged": "O_WRONLY | O_CREAT | O_EXCL | O_CLOEXEC; mode 0600",
+    "limits": [
+      "File fsync does not establish parent-directory transaction durability.",
+      "Diagnostic streams remain best effort.",
+      "Raw bytes after a failed syscall are not an authenticated service response.",
+      "Pixel-reference compatibility, exit status and completion bookkeeping do not establish a hardware triangle."
+    ]
+  },
+  "dependency_and_checkpoint_reuse": {
+    "dependency_rows": 15,
+    "affected_rows": 4,
+    "detail_record": "dependency_impact_15_rows",
+    "module": {
+      "size": 244960,
+      "sha256": "4141a07c1f2d2ffc9ab2770b7b4cf654f68c396275dad15f0ddc68192529d8e6",
+      "build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+      "changed": false
+    },
+    "diagnostic_image": {
+      "size": 50805231,
+      "sha256": "fe64b3dcfe74b78a6d96edcd4fd7c118c3901fcff8631afec6c14647da292e3c",
+      "changed": false
+    },
+    "first_owner": "70/70 PASS retained for recorded boot only; raw evidence unchanged.",
+    "new_boot_required_by_client_only_change": false,
+    "module_image_rebuild_or_restaging_required_by_client_only_change": false,
+    "historical_selected_client_and_hardware_pins": "Preserve; successor qualification does not replace historical identities."
+  },
+  "unresolved_boundaries": {
+    "applicable_client_substitution_review": "REQUESTED; no approval claimed",
+    "independent_gate_b_opening_decision": "Distinct and unavailable; not investigated or supplied by this request.",
+    "known_future_transaction_prefix": "After affirmative applicable review, bind exact successor source/binary/UAPI and boot/build/action; update only forward client selector path/hash together while preserving old artifact pins and raw 70/70 module/image evidence.",
+    "target_client_and_output_destinations": null,
+    "target_invocation_copy_correlation_procedure": "Unavailable in permitted records; must be supplied through the existing legitimate reviewed procedure, never invented here.",
+    "stop_before_target_staging": "STOP until the existing reviewed target procedure supplies client/output paths, actual ownership/link/identity readback guards, pre-ioctl rollback receipts and invocation/copy/correlation executor. Available preparation states requirements but does not implement or approve that client transaction.",
+    "readiness_limit": "Complete for review-request scope; not execution readiness.",
+    "future_requirements": "Any legitimate later selection/staging must bind successor path/hash/size and reviewed destinations; invocation separately needs an applicable independent opening decision and fresh immediate prerequisites."
+  },
+  "no_permissions_or_state_transition": {
+    "gate_b": "BLOCKED",
+    "whitelist": [],
+    "client_selected": false,
+    "client_staging_authorized": false,
+    "sgx_invocation_authorized": false,
+    "boot_authorized": false,
+    "target_contact_performed": false,
+    "sgx_invocations_performed": 0,
+    "triangle_established": false
+  },
+  "evidence": {
+    "authoritative_checkpoint": "/home/gama/sgx535-gfx/docs/phase8/CODEX-HANDOFF-20261002.md",
+    "selected_artifact_identity_note": "/home/gama/sgx535-gfx/docs/phase8/artifacts/frozen-triangle-one-shot-i386.md",
+    "preservation_red_green_commands_results": "/home/gama/sgx535-offline/phase8-evidence-round2-20261004T040431Z/preservation-regression-commands.json",
+    "preservation_red_stderr": "/home/gama/sgx535-offline/phase8-evidence-round2-20261004T040431Z/preservation-red.stderr",
+    "preservation_green_stderr": "/home/gama/sgx535-offline/phase8-evidence-round2-20261004T040431Z/preservation-green.stderr",
+    "failure_red_commands_results": "/home/gama/sgx535-offline/phase8-evidence-round2-20261004T040431Z/failure-prospective-red-command.json",
+    "failure_red_stderr": "/home/gama/sgx535-offline/phase8-evidence-round2-20261004T040431Z/failure-prospective-red.stderr.txt",
+    "failure_green_commands_results": "/home/gama/sgx535-offline/phase8-evidence-round2-20261004T040431Z/failure-prospective-green-command.json",
+    "failure_green_stderr": "/home/gama/sgx535-offline/phase8-evidence-round2-20261004T040431Z/failure-prospective-green.stderr.txt",
+    "new_client_technical_qualification": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/client-qualification.json",
+    "new_client_exact_commands_and_raw_stream_index": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/client-commands.json",
+    "retained_normal_build_workflow": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/client-normal-workflow.json",
+    "i386_elf_raw_output": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/client-readelf.stdout.txt",
+    "i386_abi_raw_output": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/client-abi-run.stdout.txt",
+    "i386_default_refusal_trace": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/client-refuse-default.stderr.txt",
+    "i386_wrong_flag_refusal_trace": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/client-refuse-wrong-flag.stderr.txt",
+    "source_diff": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/differential-source.diff",
+    "paired_whole_request_differential": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/differential-results.json",
+    "differential_commands_and_raw_stream_index": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/differential-commands.json",
+    "differential_selected_complete_request_before_ioctl": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/differential-selected-complete.before.bin",
+    "differential_successor_complete_request_before_ioctl": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/differential-prospective-complete.before.bin",
+    "dependency_impact_15_rows": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/dependency-impact.json",
+    "prior_promotion_boundary_assessment": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/adversarial-promotion-review.json",
+    "prior_promotion_decision_record": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/promotion-decision.json",
+    "preserved_first_owner_verdict": "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20261003T002627Z-FROZEN-FIRSTOWNER-314e2f3b-01/candidate-first-owner/verdict.json",
+    "preserved_first_owner_raw_stdout": "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20261003T002627Z-FROZEN-FIRSTOWNER-314e2f3b-01/candidate-first-owner/stdout.txt",
+    "preserved_first_owner_command_timing": "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20261003T002627Z-FROZEN-FIRSTOWNER-314e2f3b-01/candidate-first-owner/command.json",
+    "first_round_offline_actual_receipt_consistency": "/home/gama/sgx535-offline/phase8-focused-review-20261004T034224Z/receipt-actual-record-check.json"
+  },
+  "request_construction": "Existing records reused; no build, test, hash qualification, target contact, review-mechanism search or restricted-material reconstruction."
+}

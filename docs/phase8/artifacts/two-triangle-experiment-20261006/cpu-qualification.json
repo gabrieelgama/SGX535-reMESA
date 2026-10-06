@@ -1,0 +1,51 @@
+{
+  "classification": "PASS",
+  "scope": "CPU construction/policy only; no GPU proof",
+  "cases": {
+    "python_regressions": 32,
+    "native_initial": {
+      "bytes": 180224,
+      "sha256": "f2fea04e9a3b56d8e18958745d7da27e15d5be0789ed5eef404c7b80976c926a",
+      "PASS": true
+    },
+    "native_relocated": {
+      "bytes": 180224,
+      "sha256": "d7db9fa2f6cd7c07f7f5d8370f2afe6499fc36ac9f8cc5944936beb9303460f7",
+      "PASS": true
+    },
+    "fragment_native": {
+      "immediate_roundtrips": 1032,
+      "PASS": true
+    },
+    "ubsan_initial": {
+      "bytes": 180224,
+      "sha256": "f2fea04e9a3b56d8e18958745d7da27e15d5be0789ed5eef404c7b80976c926a",
+      "PASS": true
+    },
+    "ubsan_relocated": {
+      "bytes": 180224,
+      "sha256": "d7db9fa2f6cd7c07f7f5d8370f2afe6499fc36ac9f8cc5944936beb9303460f7",
+      "PASS": true
+    },
+    "fragment_ubsan": {
+      "immediate_roundtrips": 1032,
+      "PASS": true
+    },
+    "i386_initial": {
+      "bytes": 180224,
+      "sha256": "f2fea04e9a3b56d8e18958745d7da27e15d5be0789ed5eef404c7b80976c926a",
+      "PASS": true
+    },
+    "i386_relocated": {
+      "bytes": 180224,
+      "sha256": "d7db9fa2f6cd7c07f7f5d8370f2afe6499fc36ac9f8cc5944936beb9303460f7",
+      "PASS": true
+    },
+    "fragment_i386": {
+      "immediate_roundtrips": 1032,
+      "PASS": true
+    }
+  },
+  "SGX_invocations": 0,
+  "hardware_interactions": 0
+}

@@ -1,0 +1,19 @@
+{
+  "raw_capture_classification": "STOP; NOT REWRITTEN",
+  "updated_health_source_sha256": "5abe09ed15609cc2ad409d909d4785953275656690632700c869fc5a48d3b7ee",
+  "offline_health_reclassification": {
+    "classification": "PASS WITH BOUNDED STOCK DIAGNOSTICS",
+    "faults": [],
+    "stock_diagnostics": {
+      "unsigned_drm_loader_notice": 1,
+      "backlight_zero_register": 1,
+      "acpi_powerbutton_error": 2,
+      "acpi_powerbutton_warning": 2,
+      "powerbutton_probe": 1,
+      "tiny_powerbutton_probe": 1
+    }
+  },
+  "experimental_identity_and_ownership_guards_passed": 23,
+  "hook_trace": "NOT READ",
+  "same_boot_end_receipt": "NOT PRODUCED"
+}

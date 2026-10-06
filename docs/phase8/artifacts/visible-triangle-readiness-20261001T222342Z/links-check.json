@@ -1,0 +1,102 @@
+[
+  {
+    "source": "docs/phase8/visible-triangle-readiness.md",
+    "target": "first-load-cycle-02-result.md",
+    "exists": true
+  },
+  {
+    "source": "docs/phase8/visible-triangle-readiness.md",
+    "target": "../../kernel/sgx535_frozen/gma500_fixed_entry.c",
+    "exists": true
+  },
+  {
+    "source": "docs/phase8/visible-triangle-readiness.md",
+    "target": "../../tools/psb-dri-re/frozen_triangle_one_shot.c",
+    "exists": true
+  },
+  {
+    "source": "docs/phase8/visible-triangle-readiness.md",
+    "target": "artifacts/first-load-operational-review-20261001/hook-log-handoff-evidence.json",
+    "exists": true
+  },
+  {
+    "source": "docs/phase8/visible-triangle-readiness.md",
+    "target": "../../tools/psb-dri-re/test_frozen_first_load_trace_handoff.py",
+    "exists": true
+  },
+  {
+    "source": "docs/phase8/visible-triangle-readiness.md",
+    "target": "first-load-staging-boot-recovery-procedure.md",
+    "exists": true
+  },
+  {
+    "source": "docs/phase8/visible-triangle-readiness.md",
+    "target": "artifacts/visible-triangle-readiness-20261001T222342Z/README.md",
+    "exists": true
+  },
+  {
+    "source": "docs/phase8/artifacts/visible-triangle-readiness-20261001T222342Z/README.md",
+    "target": "../../visible-triangle-readiness.md",
+    "exists": true
+  },
+  {
+    "source": "docs/phase8/artifacts/visible-triangle-readiness-20261001T222342Z/README.md",
+    "target": "initial-head.txt",
+    "exists": true
+  },
+  {
+    "source": "docs/phase8/artifacts/visible-triangle-readiness-20261001T222342Z/README.md",
+    "target": "initial-git-status.txt",
+    "exists": true
+  },
+  {
+    "source": "docs/phase8/artifacts/visible-triangle-readiness-20261001T222342Z/README.md",
+    "target": "pinned-identities.json",
+    "exists": true
+  },
+  {
+    "source": "docs/phase8/artifacts/visible-triangle-readiness-20261001T222342Z/README.md",
+    "target": "image-inspection/qualification.json",
+    "exists": true
+  },
+  {
+    "source": "docs/phase8/artifacts/visible-triangle-readiness-20261001T222342Z/README.md",
+    "target": "image-inspection/stock-versus-experimental-delta.json",
+    "exists": true
+  },
+  {
+    "source": "docs/phase8/artifacts/visible-triangle-readiness-20261001T222342Z/README.md",
+    "target": "image-inspection/inspection-commands.json",
+    "exists": true
+  },
+  {
+    "source": "docs/phase8/artifacts/visible-triangle-readiness-20261001T222342Z/README.md",
+    "target": "trace-source-correction.json",
+    "exists": true
+  },
+  {
+    "source": "docs/phase8/artifacts/visible-triangle-readiness-20261001T222342Z/README.md",
+    "target": "cycle02-receipt-tests.stderr",
+    "exists": true
+  },
+  {
+    "source": "docs/phase8/artifacts/visible-triangle-readiness-20261001T222342Z/README.md",
+    "target": "cycle02-receipt-command.json",
+    "exists": true
+  },
+  {
+    "source": "docs/phase8/artifacts/visible-triangle-readiness-20261001T222342Z/README.md",
+    "target": "checks-successor/summary.json",
+    "exists": true
+  },
+  {
+    "source": "docs/phase8/artifacts/visible-triangle-readiness-20261001T222342Z/README.md",
+    "target": "checks-successor/checks.json",
+    "exists": true
+  },
+  {
+    "source": "docs/phase8/artifacts/visible-triangle-readiness-20261001T222342Z/README.md",
+    "target": "source-inputs.json",
+    "exists": true
+  }
+]

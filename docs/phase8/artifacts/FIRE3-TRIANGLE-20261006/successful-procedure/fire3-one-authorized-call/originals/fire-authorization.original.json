@@ -1,0 +1,1 @@
+{"authority": "project maintainer/operator explicit FIRE", "boot_id": "f1ab6606-0561-445f-a397-28a028516cd7", "card_sha256": "768a2099639e412c40a84f2a5e64c9bec3fd8344787f6422d72f738b996a7faa", "maximum_invocations": 1, "no_retry": true, "sgx_execution_authorized": true}

@@ -1,0 +1,9 @@
+[
+  {
+    "scope": "ONE whitelisted frozen ioctl; no retry, hot operation or reset",
+    "start_utc": "2026-10-02T01:10:50.786470+00:00",
+    "client_invocation_started": false,
+    "classification": "STOP BEFORE IOCTL",
+    "error": "AssertionError()"
+  }
+]

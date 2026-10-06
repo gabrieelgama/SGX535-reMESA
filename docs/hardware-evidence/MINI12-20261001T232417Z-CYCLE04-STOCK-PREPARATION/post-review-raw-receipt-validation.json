@@ -1,0 +1,9 @@
+{
+  "classification": "PASS RAW CAPTURE ONLY",
+  "boot_id": "0103242d-9a46-4d66-8a61-42b0c44e00c6",
+  "mode": "stock_preparation",
+  "sgx_authorized": false,
+  "boot_authorized": false,
+  "first_owner": "NOT QUALIFIED BY TIMING ALONE",
+  "full_recovery": "NOT QUALIFIED BY TIMING ALONE"
+}

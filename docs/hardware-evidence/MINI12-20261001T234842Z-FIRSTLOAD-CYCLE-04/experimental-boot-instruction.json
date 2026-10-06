@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-01T23:59:09.741873+00:00",
+  "selection_directed": "EXPERIMENTAL SGX535 rev121 FIRST-LOAD ONLY (no triangle)",
+  "maximum_experimental_selections": 1,
+  "boot_watch_seconds": 600,
+  "capture_max_kernel_boot_seconds": 1200,
+  "operator_clock_origin": "kernel handoff; userspace-before-watch-limit witness required",
+  "automatic_capture_clocks": "target uptime plus target and host monotonic duration",
+  "sgx_authorized": false,
+  "retry": false
+}

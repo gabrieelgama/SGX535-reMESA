@@ -1,0 +1,14 @@
+{
+  "received_utc": "2026-10-01T23:09:55.286415+00:00",
+  "answer": "The 120-second window is too tight for me to reliably complete the manual boot, userspace check, local sudo -v, context switch, and report without rushing. Do not weaken or bypass the current evidence requirements. If this cycle expires, record it as expired and do not retry. For the next separately authorized cycle, redesign the procedure to minimize time-critical manual steps and use automatic timestamps or a longer justified capture window where possible.",
+  "decision": "STOCK CAPTURE NOT RUN: required readiness/deadline not established; no late capture or retry",
+  "observed_stock_elapsed_seconds": null,
+  "stock_boot_id": null,
+  "stock_capture_connections": 0,
+  "experimental_capture_connections": 0,
+  "live_first_owner": "NOT ESTABLISHED",
+  "full_live_recovery": "NOT ESTABLISHED",
+  "target_state": "operator said ready stock; current physical state awaiting explicit confirmation",
+  "next_work": "OFFLINE timing/procedure redesign proposal only; current120-second guards unchanged",
+  "sgx_actions": 0
+}

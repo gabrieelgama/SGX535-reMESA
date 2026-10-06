@@ -1,0 +1,1 @@
+A first local builder compile rejected an unterminated byte-string literal before any active-connection claim or remote execution. The builder literal was corrected locally; its source compiled before the sole execution connection. This did not invoke the client or consume a kernel submission. The remote STOP is retained separately.

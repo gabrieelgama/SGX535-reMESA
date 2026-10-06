@@ -1,0 +1,623 @@
+{
+  "timestamp_utc": "2026-10-05T23:01:45.075829+00:00",
+  "result": "PASS FOR SCOPED OFFLINE CONSTRUCTION/CORRECTION; FRESH LIVE QUALIFICATION REQUIRED",
+  "root_cause": "Observed STATUS2=8 rejected at service STATUS_PROCESS; four DPM load kicks but old load poll/ACK mask7 omits DHOST completion bit8",
+  "fix": "mask15 observe -> selected ACK15 -> verify clear15; bootstrap15/backend receipt15; strict nonzero prefire STATUS2 rejection; failure diagnostic stage21",
+  "checker_fix": "producer CLOSED4, prior checker incorrectly expected6; original closed source now consistent, failure outcome remains failure",
+  "sources": {
+    "kernel/sgx535_frozen/gma500_fixed_backend.c": {
+      "bytes": 18654,
+      "sha256": "dd12a1316cdb3d79539294a333f0f0e319d5e12bdc9398b82330f05996d9785c"
+    },
+    "tools/psb-dri-re/frozen_kernel_contract.c": {
+      "bytes": 41701,
+      "sha256": "0ec2b8640acac9d6ee672b1aa81d0b7504cc3432f1165df9460c846ec71fea6b"
+    },
+    "tools/psb-dri-re/frozen_fixed_service.c": {
+      "bytes": 16979,
+      "sha256": "ac4acc665ccd46b27dbf61fc1ccf07ba56fba2153dc0ce3820f0e2361880dd2e"
+    },
+    "tools/psb-dri-re/frozen_source_guard_evidence.py": {
+      "bytes": 2744,
+      "sha256": "5bab7b108eb27a6c6dab2484a3f7da56a0ad69f778d1ed84482389069268cd3a"
+    },
+    "tools/psb-dri-re/test_frozen_kernel_contract.c": {
+      "bytes": 30495,
+      "sha256": "0f0c04c62fd9378e3757735e15cf1445953c34b58d4e963467ef903cfd76cf91"
+    },
+    "tools/psb-dri-re/test_frozen_fixed_service.c": {
+      "bytes": 18300,
+      "sha256": "b54644d598ffeee4ceaea57c67b85fb15578d24deee7be66db53254ec4c6ee62"
+    },
+    "tools/psb-dri-re/test_frozen_scene_owner.c": {
+      "bytes": 12869,
+      "sha256": "4ed256d8fe79a897743f218b1f55139c16f21e26d25a710a2bb476e81cdcbb6c"
+    },
+    "tools/psb-dri-re/test_frozen_source_guard_evidence.py": {
+      "bytes": 4103,
+      "sha256": "19f510ceeba8533db54f0884b1ff81d86a05bc2b65f2184c6e4b6dde0cb1f1c0"
+    },
+    "tools/psb-dri-re/test_frozen_dhost_load.c": {
+      "bytes": 3887,
+      "sha256": "7db6ce73318fafdaeed5ac9b14927352b03b19647be5cecee6cc31a7182bd68c"
+    }
+  },
+  "tests": {
+    "dhost-native-compile": {
+      "argv": [
+        "gcc",
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_fixed_io.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_dhost_load.c",
+        "-o",
+        "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/tests/dhost-native"
+      ],
+      "returncode": 0,
+      "result": "PASS",
+      "output": ""
+    },
+    "dhost-native": {
+      "argv": [
+        "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/tests/dhost-native"
+      ],
+      "returncode": 0,
+      "result": "PASS",
+      "output": "8 DHOST load/executor regression cases PASS; SYNTHETIC ONLY\n"
+    },
+    "contract-native-compile": {
+      "argv": [
+        "gcc",
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_contract.c",
+        "-o",
+        "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/tests/contract-native"
+      ],
+      "returncode": 0,
+      "result": "PASS",
+      "output": ""
+    },
+    "contract-native": {
+      "argv": [
+        "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/tests/contract-native"
+      ],
+      "returncode": 0,
+      "result": "PASS",
+      "output": ""
+    },
+    "service-native-compile": {
+      "argv": [
+        "gcc",
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_fixed_service.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_fixed_service.c",
+        "-o",
+        "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/tests/service-native"
+      ],
+      "returncode": 0,
+      "result": "PASS",
+      "output": ""
+    },
+    "service-native": {
+      "argv": [
+        "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/tests/service-native"
+      ],
+      "returncode": 0,
+      "result": "PASS",
+      "output": ""
+    },
+    "capsule-service-native-compile": {
+      "argv": [
+        "gcc",
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_fixed_service.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_capsule.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_capsule_service.c",
+        "-o",
+        "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/tests/capsule-service-native"
+      ],
+      "returncode": 0,
+      "result": "PASS",
+      "output": ""
+    },
+    "capsule-service-native": {
+      "argv": [
+        "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/tests/capsule-service-native"
+      ],
+      "returncode": 0,
+      "result": "PASS",
+      "output": "7 service/observer differential cases PASS; synthetic CPU only\n"
+    },
+    "owner-native-compile": {
+      "argv": [
+        "gcc",
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_scene_owner.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_scene_owner.c",
+        "-o",
+        "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/tests/owner-native"
+      ],
+      "returncode": 1,
+      "result": "FAIL",
+      "output": "/usr/bin/ld: /tmp/cciNdlgW.o: in function `pool_reserve':\ntest_frozen_scene_owner.c:(.text+0x5c8): undefined reference to `sgx535_frozen_va_reserve'\n/usr/bin/ld: /tmp/cciNdlgW.o: in function `pool_release_va':\ntest_frozen_scene_owner.c:(.text+0x6fc): undefined reference to `sgx535_frozen_va_release'\n/usr/bin/ld: /tmp/cciNdlgW.o: in function `main':\ntest_frozen_scene_owner.c:(.text+0xd58): undefined reference to `sgx535_frozen_va_pool_init'\n/usr/bin/ld: test_frozen_scene_owner.c:(.text+0xdac): undefined reference to `sgx535_frozen_va_claim_external'\ncollect2: error: ld returned 1 exit status\n"
+    },
+    "owner-native-compile-corrected-command": {
+      "argv": [
+        "gcc",
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_scene_owner.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_va_pool.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_scene_owner.c",
+        "-o",
+        "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/tests/owner-native"
+      ],
+      "returncode": 0,
+      "result": "PASS",
+      "output": ""
+    },
+    "owner-native": {
+      "argv": [
+        "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/tests/owner-native"
+      ],
+      "returncode": 0,
+      "result": "PASS",
+      "output": ""
+    },
+    "dhost-ubsan-compile": {
+      "argv": [
+        "gcc",
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re",
+        "-fsanitize=undefined",
+        "-fno-sanitize-recover=undefined",
+        "-g",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_fixed_io.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_dhost_load.c",
+        "-o",
+        "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/tests/dhost-ubsan"
+      ],
+      "returncode": 0,
+      "result": "PASS",
+      "output": ""
+    },
+    "dhost-ubsan": {
+      "argv": [
+        "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/tests/dhost-ubsan"
+      ],
+      "returncode": 0,
+      "result": "PASS",
+      "output": "8 DHOST load/executor regression cases PASS; SYNTHETIC ONLY\n"
+    },
+    "contract-ubsan-compile": {
+      "argv": [
+        "gcc",
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re",
+        "-fsanitize=undefined",
+        "-fno-sanitize-recover=undefined",
+        "-g",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_contract.c",
+        "-o",
+        "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/tests/contract-ubsan"
+      ],
+      "returncode": 0,
+      "result": "PASS",
+      "output": ""
+    },
+    "contract-ubsan": {
+      "argv": [
+        "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/tests/contract-ubsan"
+      ],
+      "returncode": 0,
+      "result": "PASS",
+      "output": ""
+    },
+    "service-ubsan-compile": {
+      "argv": [
+        "gcc",
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re",
+        "-fsanitize=undefined",
+        "-fno-sanitize-recover=undefined",
+        "-g",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_fixed_service.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_fixed_service.c",
+        "-o",
+        "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/tests/service-ubsan"
+      ],
+      "returncode": 0,
+      "result": "PASS",
+      "output": ""
+    },
+    "service-ubsan": {
+      "argv": [
+        "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/tests/service-ubsan"
+      ],
+      "returncode": 0,
+      "result": "PASS",
+      "output": ""
+    },
+    "capsule-service-ubsan-compile": {
+      "argv": [
+        "gcc",
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re",
+        "-fsanitize=undefined",
+        "-fno-sanitize-recover=undefined",
+        "-g",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_fixed_service.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_capsule.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_capsule_service.c",
+        "-o",
+        "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/tests/capsule-service-ubsan"
+      ],
+      "returncode": 0,
+      "result": "PASS",
+      "output": ""
+    },
+    "capsule-service-ubsan": {
+      "argv": [
+        "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/tests/capsule-service-ubsan"
+      ],
+      "returncode": 0,
+      "result": "PASS",
+      "output": "7 service/observer differential cases PASS; synthetic CPU only\n"
+    },
+    "owner-ubsan-compile": {
+      "argv": [
+        "gcc",
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re",
+        "-fsanitize=undefined",
+        "-fno-sanitize-recover=undefined",
+        "-g",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_scene_owner.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_va_pool.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_scene_owner.c",
+        "-o",
+        "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/tests/owner-ubsan"
+      ],
+      "returncode": 0,
+      "result": "PASS",
+      "output": ""
+    },
+    "owner-ubsan": {
+      "argv": [
+        "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/tests/owner-ubsan"
+      ],
+      "returncode": 0,
+      "result": "PASS",
+      "output": ""
+    },
+    "test_frozen_source_guard_evidence.py": {
+      "argv": [
+        "python3",
+        "-B",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_source_guard_evidence.py"
+      ],
+      "returncode": 0,
+      "result": "PASS",
+      "output": "test_closed_record_requires_both_intervals_closed (__main__.SourceEvidenceTests.test_closed_record_requires_both_intervals_closed) ... ok\ntest_closed_value_matches_actual_compiled_producer_enum (__main__.SourceEvidenceTests.test_closed_value_matches_actual_compiled_producer_enum) ... ok\ntest_each_proof_field_is_required (__main__.SourceEvidenceTests.test_each_proof_field_is_required) ... ok\ntest_mixed_stale_pending_lost_or_unprepared_records_fail (__main__.SourceEvidenceTests.test_mixed_stale_pending_lost_or_unprepared_records_fail) ... ok\ntest_prepared_synthetic_record_never_establishes_hardware_or_triangle (__main__.SourceEvidenceTests.test_prepared_synthetic_record_never_establishes_hardware_or_triangle) ... ok\ntest_truncated_duplicate_extra_and_malformed_records_fail (__main__.SourceEvidenceTests.test_truncated_duplicate_extra_and_malformed_records_fail) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.291s\n\nOK\n"
+    },
+    "test_frozen_capsule_evidence.py": {
+      "argv": [
+        "python3",
+        "-B",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_capsule_evidence.py"
+      ],
+      "returncode": 0,
+      "result": "PASS",
+      "output": ".............\n----------------------------------------------------------------------\nRan 13 tests in 0.509s\n\nOK\n"
+    },
+    "dhost-i386-compile": {
+      "argv": [
+        "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+        "--sysroot=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root",
+        "-std=c11",
+        "-static",
+        "-march=i486",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_fixed_io.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_dhost_load.c",
+        "-o",
+        "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/tests/dhost-i386"
+      ],
+      "returncode": 1,
+      "result": "FAIL",
+      "output": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/../../../../i686-linux-gnu/bin/as: error while loading shared libraries: libbfd-2.44-i386.so: cannot open shared object file: No such file or directory\n/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/../../../../i686-linux-gnu/bin/as: error while loading shared libraries: libbfd-2.44-i386.so: cannot open shared object file: No such file or directory\n/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/../lib/gcc-cross/i686-linux-gnu/14/../../../../i686-linux-gnu/bin/as: error while loading shared libraries: libbfd-2.44-i386.so: cannot open shared object file: No such file or directory\n"
+    },
+    "dhost-i386-compile-corrected-command": {
+      "argv": [
+        "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+        "--sysroot=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root",
+        "-std=c11",
+        "-static",
+        "-march=i486",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_fixed_io.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_dhost_load.c",
+        "-o",
+        "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/tests/dhost-i386"
+      ],
+      "returncode": 0,
+      "result": "PASS",
+      "output": ""
+    },
+    "dhost-i386-run": {
+      "result": "NOT PERFORMED",
+      "reason": "Previously qualified temporary qemu binary no longer available; native/UBSan synthetic execution and target i386 compilation remain separate evidence"
+    },
+    "service-i386-compile": {
+      "argv": [
+        "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+        "--sysroot=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root",
+        "-std=c11",
+        "-static",
+        "-march=i486",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_fixed_service.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_fixed_service.c",
+        "-o",
+        "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/tests/service-i386"
+      ],
+      "returncode": 0,
+      "result": "PASS",
+      "output": ""
+    },
+    "service-i386-run": {
+      "result": "NOT PERFORMED",
+      "reason": "Previously qualified temporary qemu binary no longer available; native/UBSan synthetic execution and target i386 compilation remain separate evidence"
+    },
+    "capsule-service-i386-compile": {
+      "argv": [
+        "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+        "--sysroot=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root",
+        "-std=c11",
+        "-static",
+        "-march=i486",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_fixed_service.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_capsule.c",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_capsule_service.c",
+        "-o",
+        "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/tests/capsule-service-i386"
+      ],
+      "returncode": 0,
+      "result": "PASS",
+      "output": ""
+    },
+    "capsule-service-i386-run": {
+      "result": "NOT PERFORMED",
+      "reason": "Previously qualified temporary qemu binary no longer available; native/UBSan synthetic execution and target i386 compilation remain separate evidence"
+    }
+  },
+  "module": {
+    "observer": {
+      "path": "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/build/observer/sgx535_provenance.ko",
+      "bytes": 26284,
+      "sha256": "2e35e863d51dbc1d407feef08f08bb2edc6390af621a0f173a9b1a73ec76158a",
+      "build_id": "f11d3abb072caa4e1d32836ef92ce201e9c9d126",
+      "loaded_note_sha256": "6afbac1cf48a211135e2a4b4ffc30f96ace64f6d397071595bbc328966bb8af0",
+      "abi": "ELF32/i386",
+      "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 ",
+      "dependencies": "",
+      "versioned_imports": 38,
+      "missing_imports": [],
+      "crc_mismatches": {},
+      "unversioned_undefined": [],
+      "module_layout": "0xb84efb99",
+      "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+      "qualification": "PASS"
+    },
+    "driver": {
+      "path": "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/build/module/gma500_gfx.ko",
+      "bytes": 250720,
+      "sha256": "ddb4fe1fc121945d0a0ab137d310328fc10d41f5bdcfaa39baf86a3783255071",
+      "build_id": "9d0b5b2fdb7d9881f2828f43fb89253176c38817",
+      "loaded_note_sha256": "f91c232ec42c521dd961c33ea1f985cb3fc921714768052199d5129671e0e13d",
+      "abi": "ELF32/i386",
+      "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 ",
+      "dependencies": "drm,drm_kms_helper,sgx535_provenance,video,i2c-algo-bit",
+      "versioned_imports": 253,
+      "missing_imports": [],
+      "crc_mismatches": {},
+      "unversioned_undefined": [],
+      "module_layout": "0xb84efb99",
+      "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+      "qualification": "PASS"
+    }
+  },
+  "module_reproducibility": {
+    "returncode": 0,
+    "byte_identical": true,
+    "sha256": "ddb4fe1fc121945d0a0ab137d310328fc10d41f5bdcfaa39baf86a3783255071",
+    "scope": "second changed-component compilation/link at same isolated qualified build directory; unchanged opaque entry input"
+  },
+  "image": {
+    "path": "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/image-build-01/initrd.img-sgx535-provenance-9d0b5b2fdb7d9881f2828f43fb89253176c38817",
+    "bytes": 50816610,
+    "sha256": "ef7e01cb546c59b6f9bce96c3397feb4b9cd1d9ebdac2faa885ed71fa5ed014d",
+    "early_prefix_bytes": 15006720,
+    "early_prefix_sha256": "45070075f32565213d862468ba99e9f7b05ca95ba76e57d37331ad032a12a929",
+    "base_image_sha256": "fe64b3dcfe74b78a6d96edcd4fd7c118c3901fcff8631afec6c14647da292e3c",
+    "driver": {
+      "path": "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/build/module/gma500_gfx.ko",
+      "bytes": 250720,
+      "sha256": "ddb4fe1fc121945d0a0ab137d310328fc10d41f5bdcfaa39baf86a3783255071",
+      "build_id": "9d0b5b2fdb7d9881f2828f43fb89253176c38817",
+      "loaded_note_sha256": "f91c232ec42c521dd961c33ea1f985cb3fc921714768052199d5129671e0e13d",
+      "abi": "ELF32/i386",
+      "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 ",
+      "dependencies": "drm,drm_kms_helper,sgx535_provenance,video,i2c-algo-bit",
+      "versioned_imports": 253,
+      "missing_imports": [],
+      "crc_mismatches": {},
+      "unversioned_undefined": [],
+      "module_layout": "0xb84efb99",
+      "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+      "qualification": "PASS"
+    },
+    "observer": {
+      "path": "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/build/observer/sgx535_provenance.ko",
+      "bytes": 26284,
+      "sha256": "2e35e863d51dbc1d407feef08f08bb2edc6390af621a0f173a9b1a73ec76158a",
+      "build_id": "f11d3abb072caa4e1d32836ef92ce201e9c9d126",
+      "loaded_note_sha256": "6afbac1cf48a211135e2a4b4ffc30f96ace64f6d397071595bbc328966bb8af0",
+      "abi": "ELF32/i386",
+      "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 ",
+      "dependencies": "",
+      "versioned_imports": 38,
+      "missing_imports": [],
+      "crc_mismatches": {},
+      "unversioned_undefined": [],
+      "module_layout": "0xb84efb99",
+      "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+      "qualification": "PASS"
+    },
+    "changed_members": [
+      "init",
+      "usr/lib/sgx535-first-load/gma500_gfx.ko",
+      "scripts/sgx535-first-load"
+    ],
+    "packaged_hook_sha256": "e1db991145db6438580d092dd97f0d67660008f3b2496dd8a5226ba6fed0fcfc",
+    "init_sha256": "940a7d936f3033cec8618bafd116d46eb733b6684cd8e32f7ad67f13d940416c",
+    "init_hook_binding": "PASS FROM FINISHED IMAGE",
+    "added_members": [
+      "usr/lib/sgx535-first-load/sgx535_provenance.ko"
+    ],
+    "all_other_member_raw_bytes_unchanged": true,
+    "driver_after_observer": true,
+    "hook_shell_syntax": "PASS",
+    "loaded_on_target": false,
+    "boot_id": null,
+    "sgx_execution_authorized": false
+  },
+  "image_reproducibility": {
+    "byte_identical": true,
+    "sha256": "ef7e01cb546c59b6f9bce96c3397feb4b9cd1d9ebdac2faa885ed71fa5ed014d",
+    "scope": "offline image construction/unpack/order/syntax only; not live first-owner validation"
+  },
+  "preserved_attempt": "/home/gama/sgx535-offline/phase8-source-lifecycle-live-preparation-20261005T221026Z-f243e1b4/fire-one-authorized-call",
+  "preserved_source_reanalysis": "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/preserved-source-reanalysis.json",
+  "qualification_reuse": {
+    "REUSABLE": [
+      "approved client",
+      "fixed UAPI and request",
+      "workload",
+      "scene acceptance semantics",
+      "retirement/readback",
+      "capsule/observer",
+      "source lifecycle/taps",
+      "archive/preservation"
+    ],
+    "REQUIRES REBINDING": [
+      "FIRSTLOAD",
+      "live loaded producer/image",
+      "fresh PRE07 guards",
+      "future one-shot card"
+    ],
+    "INVALIDATED BY CHANGED BYTES": [
+      "old driver/image identities for new candidate"
+    ],
+    "SCOPED REQUALIFIED": [
+      "load/bootstrap semantics",
+      "prefire baseline",
+      "status failure diagnostic",
+      "source decoder"
+    ]
+  },
+  "ready_for_live_qualification": true,
+  "pre07": "BLOCKED pending fresh candidate boot/passive guards",
+  "ready_for_execution_authorization": false,
+  "sgx_execution_authorized": false,
+  "new_client_invocations": 0,
+  "historical_client_invocations": 1,
+  "retry_performed": false,
+  "triangle": "ATTEMPTED ONCE; NOT ESTABLISHED",
+  "evidence_root": "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z",
+  "test_harness_corrections": {
+    "owner-native-compile": "first command omitted frozen_va_pool.c; corrected command PASS",
+    "dhost-i386-compile": "qualified binutils shared library environment omitted; corrected command PASS"
+  },
+  "test_acceptance": "Every required native/UBSan execution and final compile passed; earlier harness setup failures retained, not evidence of an accepted implementation failure"
+}

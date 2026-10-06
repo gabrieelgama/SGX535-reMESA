@@ -1,0 +1,53 @@
+import os,stat,json,re,subprocess,hashlib,sys
+exec('"""Operational kernel-log guard; known diagnostics remain visible, never generic fault exemptions.\n\nThe bounded diagnostics derive from preserved captures and the exact kernel\nloader source, not an arbitrary caller-provided whitelist. Fault-bearing/repeated/changed variants\nfail closed. This is an operational predicate, not architectural health proof.\n"""\nimport re\nfrom collections import Counter\n\n# Strip only dmesg transport prefixes; retain the message and all diagnostic fields.\nPREFIX = re.compile(r"^(?:<\\d+>)?\\s*(?:\\[\\s*\\d+(?:\\.\\d+)?\\]\\s*)?(?:kernel:\\s*)?", re.I)\nFATAL = re.compile(r"^(?:BUG:)|\\bkernel BUG at\\b|\\bOops:|\\bKernel panic\\b|\\bgeneral protection(?: fault|:)"\n                   r"|\\bCall Trace:|\\b(?:soft|hard)\\s+LOCKUP\\b|\\bblocked for more than\\b"\n                   r"|\\brcu[^\\n]*\\b(?:stall|stalls)\\b", re.I)\nWARNING = re.compile(r"\\bWARNING:|\\bWARN_ON\\b|\\bBUG:", re.I)\nGRAPHICS = re.compile(r"\\b(?:gma500|drm|psb|sgx|pvr)\\b|0000:00:02\\.0", re.I)\nGRAPHICS_ERROR = re.compile(r"\\b(?:BUG:|fault|error|failed|failure|fatal|timeout|timed out|hang|hung|WARN|warning)\\b", re.I)\nACPI_DIAGNOSTICS = {\n \'ACPI Warning: Could not enable fixed event - PowerButton (2) (20200925/evxface-618)\': (\'acpi_powerbutton_warning\', 2),\n \'ACPI Error: Could not enable PowerButton event (20200925/evxfevnt-182)\': (\'acpi_powerbutton_error\', 2),\n \'button: probe of LNXPWRBN:00 failed with error -22\': (\'powerbutton_probe\', 1),\n \'tiny-power-button: probe of LNXPWRBN:00 failed with error -22\': (\'tiny_powerbutton_probe\', 1),\n}\n# kernel/module.c emits this exact notice once when permissive signature\n# checking admits an unverified module. Cycle05 loads captured stock drm first.\n# Module provenance/taint/ownership remain separate mandatory checks.\nUNSIGNED_DRM_NOTICE = (\'drm: module verification failed: signature and/or required key missing - tainting kernel\')\nBACKLIGHT = re.compile(r"gma500 0000:00:02\\.0: BL bug: Reg ([0-9a-fA-F]{8}) save ([0-9a-fA-F]{8})")\n\ndef classify_kernel_log(log):\n """Return visible classification receipt; reject on any selected adverse signal."""\n if not isinstance(log, str) or not log.strip():\n  return {\'classification\': \'REJECT\', \'faults\': [{\'reason\': \'missing kernel log\'}], \'stock_diagnostics\': {}}\n counts = Counter(); faults = []\n for number, raw in enumerate(log.splitlines(), 1):\n  message = PREFIX.sub(\'\', raw, count=1)\n  reason = None\n  # Fatal reports are rejected even alongside a previously seen diagnostic.\n  if FATAL.search(message): reason = \'kernel fault/lockup\'\n  else:\n   known = ACPI_DIAGNOSTICS.get(message)\n   if message == UNSIGNED_DRM_NOTICE: known = (\'unsigned_drm_loader_notice\', 1)\n   backlight = BACKLIGHT.fullmatch(message)\n   if backlight:\n    if any(int(value, 16) != 0 for value in backlight.groups()): reason = \'changed backlight diagnostic fields\'\n    else: known = (\'backlight_zero_register\', 1)\n   if known:\n    label, limit = known; counts[label] += 1\n    if counts[label] > limit: reason = \'repeated stock diagnostic: \' + label\n   elif WARNING.search(message): reason = \'kernel warning\'\n   elif re.search(r\'\\bACPI (?:Error|Warning):\', message, re.I): reason = \'unexpected ACPI diagnostic\'\n   elif GRAPHICS.search(message) and GRAPHICS_ERROR.search(message): reason = \'graphics fault/error\'\n  if reason: faults.append({\'line\': number, \'message\': message, \'reason\': reason})\n return {\'classification\': \'REJECT\' if faults else \'PASS WITH BOUNDED STOCK DIAGNOSTICS\',\n         \'faults\': faults, \'stock_diagnostics\': dict(counts)}\n')
+EXPECTED={'candidate_image': {'path': '/boot/initrd.img-5.10.240-antix.1-486-smp-sgx535-firstload-314e2f3b37195dc56df7c57dd938d78377a5ea8e', 'size': 50805231, 'dev': 2049, 'ino': 2616674, 'uid': 0, 'gid': 0, 'mode': '0o644', 'nlink': 1, 'regular': True, 'symlink': False}, 'custom_cfg': {'path': '/boot/grub/custom.cfg', 'size': 4132, 'dev': 2049, 'ino': 2616678, 'uid': 0, 'gid': 0, 'mode': '0o644', 'nlink': 1, 'regular': True, 'symlink': False}}
+PRIOR_BOOT='149fd195-9392-4aa6-a62a-efae01e7177e'
+result={'scope':'read-only prospective preboot continuity; no image reads/staging/DRM open/SGX/boot operations','guards':[],'commands':[],'files_metadata':{},'reused_staging_image_sha256':'fe64b3dcfe74b78a6d96edcd4fd7c118c3901fcff8631afec6c14647da292e3c'}
+def check(ok,name):
+ result['guards'].append({'name':name,'pass':bool(ok)})
+ if not ok:raise RuntimeError(name)
+def read(path):
+ fd=os.open(path,os.O_RDONLY|os.O_NOFOLLOW|os.O_NONBLOCK)
+ try:
+  with os.fdopen(fd,'rb',closefd=False) as f:return f.read()
+ finally:os.close(fd)
+def text(path):return read(path).decode().strip()
+def run(argv):
+ cp=subprocess.run(argv,stdin=subprocess.DEVNULL,capture_output=True,timeout=10)
+ row={'argv':argv,'exit_code':cp.returncode,'stdout':cp.stdout.decode(errors='replace'),'stderr':cp.stderr.decode(errors='replace')};result['commands'].append(row)
+ check(cp.returncode==0 and not cp.stderr,'passive command '+repr(argv));return row['stdout']
+try:
+ result['euid']=os.geteuid();check(result['euid']==0,'root capture')
+ u=os.uname();result.update(kernel=u.release,architecture=u.machine)
+ check(u.release=='5.10.240-antix.1-486-smp' and u.machine=='i686','kernel/architecture')
+ result['machine']=text('/sys/class/dmi/id/product_name');check(result['machine']=='Inspiron 1210','machine')
+ result['boot_id']=text('/proc/sys/kernel/random/boot_id');check(result['boot_id']!=PRIOR_BOOT,'expected new STOCK boot after manual return')
+ result['cmdline']=text('/proc/cmdline');check(result['cmdline']=='BOOT_IMAGE=/boot/vmlinuz-5.10.240-antix.1-486-smp root=UUID=6da9b4a7-ede2-4e27-bbfc-b537f568eaf1 ro quiet selinux=0','STOCK command line')
+ result['module_state']=text('/sys/module/gma500_gfx/initstate');check(result['module_state']=='live','original module Live')
+ result['loaded_note_sha256']=hashlib.sha256(read('/sys/module/gma500_gfx/notes/.note.gnu.build-id')).hexdigest();check(result['loaded_note_sha256']=='484f90964d0c36b50256e42b1bc1cd8fb905fad8476b5a1bf5e549dc178792d7','loaded original note')
+ result['modules']=text('/proc/modules');check(re.search(r'^gma500_gfx .* Live ',result['modules'],re.M) is not None,'module list Live')
+ b='/sys/bus/pci/devices/0000:00:02.0';result['pci']={k:text(b+'/'+k) for k in ['vendor','device','subsystem_vendor','subsystem_device','irq']}
+ check(result['pci']=={'vendor':'0x8086','device':'0x8108','subsystem_vendor':'0x1028','subsystem_device':'0x02b1','irq':'16'},'PCI identity/IRQ')
+ result['pci_driver']=os.path.realpath(b+'/driver');result['driver_module']=os.path.realpath(b+'/driver/module');check(result['pci_driver']=='/sys/bus/pci/drivers/gma500' and result['driver_module']=='/sys/module/gma500_gfx','PCI owner')
+ result['drm_device']=os.path.realpath('/sys/class/drm/card0/device');check(result['drm_device']=='/sys/devices/pci0000:00/0000:00:02.0','DRM owner')
+ check(stat.S_ISCHR(os.lstat('/dev/dri/card0').st_mode),'DRM metadata only')
+ result['framebuffer']=text('/sys/class/graphics/fb0/name');result['framebuffer_dimensions']=text('/sys/class/graphics/fb0/virtual_size');check(result['framebuffer']=='gma500drmfb' and result['framebuffer_dimensions']=='1280,800','framebuffer')
+ result['vtcon0']=int(text('/sys/class/vtconsole/vtcon0/bind'));result['vtcon1']=int(text('/sys/class/vtconsole/vtcon1/bind'));check(result['vtcon0']==0 and result['vtcon1']==1,'VT ownership')
+ result['interrupts']=text('/proc/interrupts');check(re.search(r'^\s*16:.*[\s,]gma500(?:[,\s]|$)',result['interrupts'],re.M) is not None,'IRQ16 handler')
+ result['taint']=int(text('/proc/sys/kernel/tainted'));check(result['taint']==12289,'STOCK taint')
+ result['slimski_status']=run(['sv','status','/etc/runit/runsvdir/default/slimski']);check(result['slimski_status'].startswith('run:'),'slimski')
+ result['xorg_processes']=run(['pgrep','-a','Xorg']);check(bool(result['xorg_processes'].strip()),'Xorg')
+ result['kernel_log']=run(['dmesg']);result['kernel_health']=classify_kernel_log(result['kernel_log']);check(result['kernel_health']['classification']!='REJECT','kernel health')
+ check(not os.path.lexists('/run/initramfs/sgx535-first-load.log'),'no experimental hook on STOCK')
+ for parent in ['/','/boot','/boot/grub']:
+  st=os.lstat(parent);check(stat.S_ISDIR(st.st_mode) and st.st_uid==0 and not stat.S_IMODE(st.st_mode)&0o022,'trusted boot parent '+parent)
+ for key,pin in EXPECTED.items():
+  st=os.lstat(pin['path']);row={'path':pin['path'],'size':st.st_size,'dev':st.st_dev,'ino':st.st_ino,'uid':st.st_uid,'gid':st.st_gid,'mode':oct(stat.S_IMODE(st.st_mode)),'nlink':st.st_nlink,'regular':stat.S_ISREG(st.st_mode),'symlink':stat.S_ISLNK(st.st_mode)}
+  result['files_metadata'][key]=row;check(row==pin,'staged inode/metadata '+key)
+ cfg=read('/boot/grub/custom.cfg');result['current_config_sha256']=hashlib.sha256(cfg).hexdigest();check(len(cfg)==4132 and result['current_config_sha256']=='77b0d25966a7a2634f13a8dbfeeac771d2ad461fb789d4f840d6b5662dfd54af','small configuration hash')
+ check(cfg.count(b'menuentry ')==4 and cfg.count('sgx535-rev121-frozen-314e2f3b37195dc56df7c57dd938d78377a5ea8e'.encode())==1 and b'savedefault' not in cfg and b'save_env' not in cfg,'four manual entries')
+ result['grub_env']=run(['grub-editenv','/boot/grub/grubenv','list']);check(result['grub_env']=='saved_entry='+'gnulinux-5.10.240-antix.1-486-smp-advanced-6da9b4a7-ede2-4e27-bbfc-b537f568eaf1'+'\n','STOCK saved default')
+ check(text('/proc/sys/kernel/random/boot_id')==result['boot_id'],'same boot throughout capture')
+ result['classification']='PASS READ-ONLY PREBOOT CONTINUITY';print(json.dumps(result,indent=2))
+except Exception as e:
+ result['classification']='HOLD: PREBOOT CONTINUITY FAILED';result['failure']=str(e);print(json.dumps(result,indent=2));sys.exit(1)

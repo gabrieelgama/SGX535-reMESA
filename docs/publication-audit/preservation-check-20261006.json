@@ -1,0 +1,16 @@
+{
+  "FIRE2_preexisting_baseline_files": 68,
+  "FIRE2_byte_identical": true,
+  "repository_artifact_capture_source_files": 3940,
+  "repository_byte_identical": true,
+  "FIRE3_archive_entries": 223,
+  "FIRE3_verified": true,
+  "MULTI_TRIANGLE_archive_entries": 139,
+  "MULTI_TRIANGLE_verified": true,
+  "SQUARE_DISPLAY_archive_entries": 78,
+  "SQUARE_DISPLAY_verified": true,
+  "first_centered_triangle_archive_entries": 39,
+  "first_centered_triangle_verified": true,
+  "SGX_invocations": 0,
+  "hardware_interactions": 0
+}

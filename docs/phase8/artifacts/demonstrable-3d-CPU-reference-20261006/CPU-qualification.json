@@ -1,0 +1,39 @@
+{
+  "scope": "CPU math/clipping/packing/reference only; not SGX qualification",
+  "new_python_tests": 20,
+  "projection_and_packing": {
+    "native": {
+      "float32_vertices": 40,
+      "bytes": 1280,
+      "sha256": "17d570816dda30dd5b8e6a335353dbda15459d210d2e28bad7d8cbe674c375df",
+      "negative_cases": 3,
+      "result": "PASS"
+    },
+    "UBSan": {
+      "float32_vertices": 40,
+      "bytes": 1280,
+      "sha256": "17d570816dda30dd5b8e6a335353dbda15459d210d2e28bad7d8cbe674c375df",
+      "negative_cases": 3,
+      "result": "PASS"
+    },
+    "i386": {
+      "float32_vertices": 40,
+      "bytes": 1280,
+      "sha256": "17d570816dda30dd5b8e6a335353dbda15459d210d2e28bad7d8cbe674c375df",
+      "negative_cases": 3,
+      "result": "PASS"
+    }
+  },
+  "reference_frames": 5,
+  "reference_frame_hashes": [
+    "86e1247d1f44cbdf603a68a7e91a53289b9d7ebb8b32648ee8b8d243c66c2b31",
+    "0de7c1db7143cac137e9bb560f91ac8096a320d2eaaa7aba00a391f8499ade40",
+    "f8b7f08a4f9139b5cb606f482426afe61f9977349502ea6064e680aee019e8c0",
+    "f7d91133097dad4cd776569c219569ca909984411d8bc86d55287a998dbb2428",
+    "3d34828d703cc33d42de1d7afb736793f95dae74507e7a4aff07ff0ba4952d6c"
+  ],
+  "GPU_candidate_produced": false,
+  "SGX_invocations": 0,
+  "hardware_interactions": 0,
+  "completed_square_qualification_repeated": false
+}

@@ -1,0 +1,61 @@
+[
+  {
+    "path": "/usr/lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/gpu/drm/drm.ko",
+    "sha256": "d1d7bf85268e40bc0fe30ac98f5083cd06ba16f0d10fc38ff810f974f22229c3",
+    "name": "drm",
+    "source_member": "usr/lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/gpu/drm/drm.ko"
+  },
+  {
+    "path": "/usr/lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/video/fbdev/core/syscopyarea.ko",
+    "sha256": "073ef524e5d71941b894c62e567672a2912059bccdf6b7bc4f84e550876d4a00",
+    "name": "syscopyarea",
+    "source_member": "usr/lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/video/fbdev/core/syscopyarea.ko"
+  },
+  {
+    "path": "/usr/lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/video/fbdev/core/sysfillrect.ko",
+    "sha256": "2ba264e98a234ee5eb51fd34fa60bcb9ef56a85db4b640422da9aa229c3747ed",
+    "name": "sysfillrect",
+    "source_member": "usr/lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/video/fbdev/core/sysfillrect.ko"
+  },
+  {
+    "path": "/usr/lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/video/fbdev/core/sysimgblt.ko",
+    "sha256": "c39c1a63a5f072333050cae22f9699c37f89358d956c81cab6bb1765ec1d0a39",
+    "name": "sysimgblt",
+    "source_member": "usr/lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/video/fbdev/core/sysimgblt.ko"
+  },
+  {
+    "path": "/usr/lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/video/fbdev/core/fb_sys_fops.ko",
+    "sha256": "e9a32aa2e359917fc61d056d84c931d10504ff228fee50c10566697265e37402",
+    "name": "fb_sys_fops",
+    "source_member": "usr/lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/video/fbdev/core/fb_sys_fops.ko"
+  },
+  {
+    "path": "/usr/lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/media/cec/core/cec.ko",
+    "sha256": "33c9184040ca309997146c1cb2545026029f399f85cd011dbc6aed1b6e09d9e8",
+    "name": "cec",
+    "source_member": "usr/lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/media/cec/core/cec.ko"
+  },
+  {
+    "path": "/usr/lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/gpu/drm/drm_kms_helper.ko",
+    "sha256": "9757eb58238b9166485ed78f48a4004e6a31ab1e116aa6aa2eec9df7ade21076",
+    "name": "drm_kms_helper",
+    "source_member": "usr/lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/gpu/drm/drm_kms_helper.ko"
+  },
+  {
+    "path": "/usr/lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/acpi/video.ko",
+    "sha256": "83d359cb34190ff9833ddf101d99c02a443677dce37c7e526243be0ecd0e6f8e",
+    "name": "video",
+    "source_member": "usr/lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/acpi/video.ko"
+  },
+  {
+    "path": "/usr/lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/i2c/algos/i2c-algo-bit.ko",
+    "sha256": "3179bdd4f98d3ea876531257f75db850608e2e983e7cb1626406e89df04de1b7",
+    "name": "i2c_algo_bit",
+    "source_member": "usr/lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/i2c/algos/i2c-algo-bit.ko"
+  },
+  {
+    "path": "/usr/lib/sgx535-first-load/gma500_gfx.ko",
+    "sha256": "2eaffd22637eef6b7b101f046d6fd9756b48c934818a7353f9aa705616014c1e",
+    "name": "gma500_gfx"
+  }
+]

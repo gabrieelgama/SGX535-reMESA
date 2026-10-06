@@ -1,0 +1,5 @@
+# Cycle04 passive capture scope
+
+Use the preserved reviewed root programs and v2 controller. Read-only uname, id, sv-status, pgrep, dmesg and grub-editenv-list; reads of /proc, /sys identity/ownership/note/VT bind values, stock/staged files and filesystem metadata. Stat DRM node only; never open it. No display/module/PCI/VT controls, target writes, ioctl, SGX or MMIO. Experimental source adds ordered /run/initramfs hook-log read and derivative-note comparison, with fresh prior boot ID. Recovery adds distinct-boot check. Credentials never enter stdin; sudo-n only. Exact root/wrapper source and command are preserved before each connection. Each connection claimed once by exclusive evidence directory; failure terminates it without retry.
+
+Expected fresh stock preflight: all 54 guards, original loaded note, preserved file hashes/default and existing creation receipts. Any unexpected state/status/stderr/identity/clock/receipt is STOP before experimental selection. Future experimental/recovery captures also require unchanged selected staged bytes, expected ownership, health, services and separate operator evidence. Timing PASS alone is not first-owner/recovery PASS.

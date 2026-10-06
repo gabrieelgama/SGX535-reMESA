@@ -1,0 +1,9 @@
+{
+  "authorization": "one corrected-candidate first-load qualification cycle; no SGX",
+  "operator_report": "Corrected EXPERIMENTAL reached normal userspace. Boot was very fast. Display/userspace normal. sudo -v succeeded.",
+  "prior_stock_boot_id": "10d6abfa-e7a8-4311-97ae-213f503cee20",
+  "corrected_image_sha256": "55e7a8be6f62c9a1d59f1c532b8790399c21a2706884747e504edfffb45bf52d",
+  "corrected_module_sha256": "2eaffd22637eef6b7b101f046d6fd9756b48c934818a7353f9aa705616014c1e",
+  "manual_selection_count": 1,
+  "no_retry_or_sgx_reported": true
+}

@@ -71,7 +71,7 @@ whitelist `[]`; R1/R2/R3 and static closure remain unchanged. If target access
 arrives, run only the passive probe first, preserve raw output/status/time/hash,
 then capture the audited read-only baseline. Do not run conditional experiments
 or complete-image submission while the gate blocks them.
-Follow-up: `gama@192.168.18.90:22` was supplied, but the first identity-only
+Follow-up: `<operator>@<private-target-address>:22` was supplied, but the first identity-only
 SSH attempt failed authentication before remote execution. Raw stdout/stderr,
 command, UTC times, status and hashes are under the H0 record. A dedicated
 local ED25519 key was generated outside the repository; its public key was

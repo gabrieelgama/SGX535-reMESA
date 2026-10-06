@@ -1,0 +1,11 @@
+{
+  "classification": "PASS",
+  "stock_boot_id": "0103242d-9a46-4d66-8a61-42b0c44e00c6",
+  "guards_passed": 54,
+  "existing_creation_receipts": {
+    "classification": "PASS PROVIDED EXISTING FILE RECEIPTS ONLY",
+    "sgx_authorized": false,
+    "boot_authorized": false
+  },
+  "sgx_authorized": false
+}

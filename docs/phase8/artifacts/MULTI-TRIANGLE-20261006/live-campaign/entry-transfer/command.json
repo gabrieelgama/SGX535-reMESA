@@ -1,0 +1,32 @@
+{
+  "argv": [
+    "ssh",
+    "-T",
+    "-p",
+    "22",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "ConnectTimeout=8",
+    "-o",
+    "ConnectionAttempts=1",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "UserKnownHostsFile=/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260927-H0/ssh_known_hosts",
+    "-o",
+    "IdentitiesOnly=yes",
+    "-o",
+    "PasswordAuthentication=no",
+    "-o",
+    "KbdInteractiveAuthentication=no",
+    "-i",
+    "/home/gama/.ssh/id_ed25519_sgx535_h0",
+    "gama@192.168.18.90",
+    "python3 -I -B -S -c 'import sys,json\nK={'\"'\"'boot'\"'\"': '\"'\"'4b6515d2-9e04-47e9-8e2f-5de7f3b38624'\"'\"', '\"'\"'note'\"'\"': '\"'\"'484f90964d0c36b50256e42b1bc1cd8fb905fad8476b5a1bf5e549dc178792d7'\"'\"', '\"'\"'dest'\"'\"': '\"'\"'/home/gama/sgx535-square-incoming-8be2777b2a79eaa6651b89d19faf4d68cdcdc460-0e45ad4c-20261006T083635Z'\"'\"', '\"'\"'name'\"'\"': '\"'\"'diagnostic-entry.proposed'\"'\"', '\"'\"'bytes'\"'\"': 1132, '\"'\"'sha256'\"'\"': '\"'\"'fe8d9ebbe80eba9149b5b4b1c64f5605ecd5b2f048930a3c4bd3d91d0662c520'\"'\"', '\"'\"'dir'\"'\"': {'\"'\"'path'\"'\"': '\"'\"'/home/gama/sgx535-square-incoming-8be2777b2a79eaa6651b89d19faf4d68cdcdc460-0e45ad4c-20261006T083635Z'\"'\"', '\"'\"'dev'\"'\"': 2049, '\"'\"'ino'\"'\"': 1049045, '\"'\"'uid'\"'\"': 1000, '\"'\"'gid'\"'\"': 1000, '\"'\"'mode'\"'\"': 448, '\"'\"'phase'\"'\"': '\"'\"'created'\"'\"'}}\n\"\"\"Reviewed exclusive-copy primitive; no transport, boot or graphics operations.\n\nCallers supply fixed qualified files and already-verified directory descriptors.\nCreation receipts are emitted before copying. Any failure retains created files\nfor diagnosis; this function never deletes, overwrites or retries an operation.\n\"\"\"\nimport hashlib\nimport os\nimport stat\n\ndef snapshot_fd(fd):\n st=os.fstat(fd);os.lseek(fd,0,os.SEEK_SET);digest=hashlib.sha256();size=0\n while True:\n  chunk=os.read(fd,1048576)\n  if not chunk:break\n  digest.update(chunk);size+=len(chunk)\n return {'\"'\"'dev'\"'\"':st.st_dev,'\"'\"'ino'\"'\"':st.st_ino,'\"'\"'size'\"'\"':size,'\"'\"'sha256'\"'\"':digest.hexdigest(),\n         '\"'\"'uid'\"'\"':st.st_uid,'\"'\"'gid'\"'\"':st.st_gid,'\"'\"'mode'\"'\"':stat.S_IMODE(st.st_mode),\n         '\"'\"'nlink'\"'\"':st.st_nlink,'\"'\"'regular'\"'\"':stat.S_ISREG(st.st_mode)}\n\ndef copy_exclusive(parent,name,source,size,digest,uid,gid,mode,event):\n if not name or name in ('\"'\"'.'\"'\"','\"'\"'..'\"'\"') or '\"'\"'/'\"'\"' in name or type(size) is not int or size<=0:\n  raise ValueError('\"'\"'fixed basename/size required'\"'\"')\n fd=os.open(name,os.O_CREAT|os.O_EXCL|os.O_NOFOLLOW|os.O_RDWR,0o600,dir_fd=parent)\n created=os.fstat(fd)\n try:\n  event({'\"'\"'phase'\"'\"':'\"'\"'created'\"'\"','\"'\"'name'\"'\"':name,'\"'\"'dev'\"'\"':created.st_dev,'\"'\"'ino'\"'\"':created.st_ino})\n  remaining=size;hasher=hashlib.sha256()\n  while remaining:\n   chunk=source.read(min(remaining,1048576))\n   if not chunk:raise ValueError('\"'\"'short payload'\"'\"')\n   if len(chunk)>remaining:raise ValueError('\"'\"'oversize payload'\"'\"')\n   remaining-=len(chunk);hasher.update(chunk);view=memoryview(chunk)\n   while view:\n    count=os.write(fd,view)\n    if count<=0:raise OSError('\"'\"'short/zero write'\"'\"')\n    view=view[count:]\n  if hasher.hexdigest()!=digest:raise ValueError('\"'\"'payload hash mismatch'\"'\"')\n  os.fchown(fd,uid,gid);os.fchmod(fd,mode);os.fsync(fd);os.fsync(parent)\n  os.close(fd);fd=-1\n  fd=os.open(name,os.O_RDONLY|os.O_NOFOLLOW,dir_fd=parent)\n  row=snapshot_fd(fd)\n  if (row['\"'\"'dev'\"'\"'],row['\"'\"'ino'\"'\"'])!=(created.st_dev,created.st_ino) or not row['\"'\"'regular'\"'\"'] or row['\"'\"'nlink'\"'\"']!=1:\n   raise ValueError('\"'\"'inode identity/link mismatch'\"'\"')\n  if (row['\"'\"'uid'\"'\"'],row['\"'\"'gid'\"'\"'],row['\"'\"'mode'\"'\"'])!=(uid,gid,mode):raise ValueError('\"'\"'inode ownership/mode mismatch'\"'\"')\n  if row['\"'\"'size'\"'\"']!=size or row['\"'\"'sha256'\"'\"']!=digest:raise ValueError('\"'\"'destination readback mismatch'\"'\"')\n  event(dict(row,phase='\"'\"'verified'\"'\"',name=name));return row\n except BaseException as exc:\n  failure={'\"'\"'phase'\"'\"':'\"'\"'failed'\"'\"','\"'\"'name'\"'\"':name,'\"'\"'created_dev'\"'\"':created.st_dev,'\"'\"'created_ino'\"'\"':created.st_ino,'\"'\"'error'\"'\"':str(exc)}\n  if fd>=0:\n   try:failure.update(snapshot_fd(fd))\n   except OSError as read_error:failure['\"'\"'partial_read_error'\"'\"']=str(read_error)\n  event(failure);raise\n finally:\n  if fd>=0:os.close(fd)\n\nr={'\"'\"'scope'\"'\"':'\"'\"'one exclusive exact-payload incoming transfer; no SGX'\"'\"','\"'\"'operations'\"'\"':[]}\ndef need(v,n):\n if not v:raise ValueError(n)\ndef event(x):r['\"'\"'operations'\"'\"'].append(x);print(json.dumps({'\"'\"'transfer_event'\"'\"':x}),flush=True)\ntry:\n need(os.geteuid()==1000,'\"'\"'normal approved incoming owner'\"'\"')\n need(open('\"'\"'/proc/sys/kernel/random/boot_id'\"'\"').read().strip()==K['\"'\"'boot'\"'\"'],'\"'\"'same verified STOCK boot'\"'\"')\n need(hashlib.sha256(open('\"'\"'/sys/module/gma500_gfx/notes/.note.gnu.build-id'\"'\"','\"'\"'rb'\"'\"').read()).hexdigest()==K['\"'\"'note'\"'\"'],'\"'\"'same STOCK loaded driver'\"'\"')\n fd=os.open(K['\"'\"'dest'\"'\"'],os.O_RDONLY|os.O_DIRECTORY|os.O_NOFOLLOW)\n s=os.fstat(fd);pin=K['\"'\"'dir'\"'\"']\n need(stat.S_ISDIR(s.st_mode) and (s.st_dev,s.st_ino)==(pin['\"'\"'dev'\"'\"'],pin['\"'\"'ino'\"'\"']) and s.st_uid==1000 and s.st_gid==1000 and stat.S_IMODE(s.st_mode)==0o700,'\"'\"'same exclusive incoming directory'\"'\"')\n r['\"'\"'file'\"'\"']=copy_exclusive(fd,K['\"'\"'name'\"'\"'],sys.stdin.buffer,K['\"'\"'bytes'\"'\"'],K['\"'\"'sha256'\"'\"'],1000,1000,0o400,event)\n need(sys.stdin.buffer.read(1)==b'\"'\"''\"'\"','\"'\"'exact payload length'\"'\"')\n need(open('\"'\"'/proc/sys/kernel/random/boot_id'\"'\"').read().strip()==K['\"'\"'boot'\"'\"'],'\"'\"'same STOCK boot after copy'\"'\"')\n os.close(fd);r['\"'\"'classification'\"'\"']='\"'\"'PASS EXACT EXCLUSIVE TRANSFER'\"'\"'\nexcept Exception as e:r['\"'\"'classification'\"'\"']='\"'\"'STOP TRANSFER; PARTIAL RETAINED'\"'\"';r['\"'\"'error'\"'\"']=repr(e)\nprint(json.dumps(r,indent=2),flush=True)\nif r['\"'\"'classification'\"'\"'].startswith('\"'\"'STOP'\"'\"'):raise SystemExit(1)\n'"
+  ],
+  "source_sha256": "45ce5fb02030918b4ca6f9acbe8612c423a36668ef1d51d4db85938806435014",
+  "start_utc": "2026-10-06T08:44:18.713400+00:00",
+  "automatic_retry": false,
+  "stdin": "PAYLOAD ONLY"
+}

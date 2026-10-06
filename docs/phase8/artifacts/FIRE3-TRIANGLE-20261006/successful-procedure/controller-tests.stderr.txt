@@ -1,0 +1,33 @@
+test_01_same_hash_two_expected_roles_pass (test_structural_binding.TestStructural.test_01_same_hash_two_expected_roles_pass) ... ok
+test_02_conflicting_hashes_fail (test_structural_binding.TestStructural.test_02_conflicting_hashes_fail) ... ok
+test_03_unexpected_duplicate_fail (test_structural_binding.TestStructural.test_03_unexpected_duplicate_fail) ... ok
+test_04_stale_reference_fail (test_structural_binding.TestStructural.test_04_stale_reference_fail) ... ok
+test_05_missing_witness_fail (test_structural_binding.TestStructural.test_05_missing_witness_fail) ... ok
+test_06_malformed_hash_or_reference_fail (test_structural_binding.TestStructural.test_06_malformed_hash_or_reference_fail) ... ok
+test_07_correct_hash_wrong_provenance_fail (test_structural_binding.TestStructural.test_07_correct_hash_wrong_provenance_fail) ... ok
+test_08_duplicate_context_object_fail (test_structural_binding.TestStructural.test_08_duplicate_context_object_fail) ... ok
+test_09_duplicate_predicate_fail (test_structural_binding.TestStructural.test_09_duplicate_predicate_fail) ... ok
+test_10_every_late_phase_real_same_hash_pass (test_structural_binding.TestStructural.test_10_every_late_phase_real_same_hash_pass) ... ok
+test_11_unexpected_observation_duplicate_fail (test_structural_binding.TestStructural.test_11_unexpected_observation_duplicate_fail) ... ok
+test_12_conflicting_persisted_hash_fail (test_structural_binding.TestStructural.test_12_conflicting_persisted_hash_fail) ... ok
+test_13_stale_protected_receipt_fail (test_structural_binding.TestStructural.test_13_stale_protected_receipt_fail) ... ok
+test_14_live_guard_predicates_retained (test_structural_binding.TestStructural.test_14_live_guard_predicates_retained) ... ok
+test_all_forced_argv_removed (test_controller.TestController.test_all_forced_argv_removed) ... ok
+test_alternate_explicit_parser_values_not_overridden (test_controller.TestController.test_alternate_explicit_parser_values_not_overridden) ... ok
+test_environment_cannot_rebind (test_controller.TestController.test_environment_cannot_rebind) ... ok
+test_guard_checks_not_removed (test_controller.TestController.test_guard_checks_not_removed) ... ok
+test_late_phases_fresh_and_no_stale_defaults (test_controller.TestController.test_late_phases_fresh_and_no_stale_defaults) ... ok
+test_missing_future_boot_refused (test_controller.TestController.test_missing_future_boot_refused) ... ok
+test_no_client_invocation_in_preparation_sources (test_controller.TestController.test_no_client_invocation_in_preparation_sources) ... ok
+test_positional_duplicate_missing_and_historical_refused (test_controller.TestController.test_positional_duplicate_missing_and_historical_refused) ... ok
+test_poststage_exact_phase_bindings_and_history_retained (test_controller.TestController.test_poststage_exact_phase_bindings_and_history_retained) ... ok
+test_supplied_args_survive (test_controller.TestController.test_supplied_args_survive) ... ok
+test_transfer_inputs_exact_no_boot_override (test_controller.TestController.test_transfer_inputs_exact_no_boot_override) ... ok
+test_wrong_current_receipts_and_card_refused (test_controller.TestController.test_wrong_current_receipts_and_card_refused) ... ok
+test_first_owner_actual_child_args_and_guard_preservation (test_wrapper_binding.TestWrapper.test_first_owner_actual_child_args_and_guard_preservation) ... ok
+test_no_child_argument_fallback (test_wrapper_binding.TestWrapper.test_no_child_argument_fallback) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 1.357s
+
+OK

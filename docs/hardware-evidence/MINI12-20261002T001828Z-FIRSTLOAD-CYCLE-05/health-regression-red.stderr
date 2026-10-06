@@ -1,0 +1,38 @@
+test_actual_bug_case_variants_still_reject (test_frozen_kernel_health.KernelHealthTests.test_actual_bug_case_variants_still_reject) ... ok
+test_changed_or_repeated_baseline_diagnostics_reject (test_frozen_kernel_health.KernelHealthTests.test_changed_or_repeated_baseline_diagnostics_reject) ... ok
+test_cycle05_unsigned_drm_loader_notice_is_visible_bounded_and_not_a_gpu_fault (test_frozen_kernel_health.KernelHealthTests.test_cycle05_unsigned_drm_loader_notice_is_visible_bounded_and_not_a_gpu_fault) ... 
+  test_cycle05_unsigned_drm_loader_notice_is_visible_bounded_and_not_a_gpu_fault (test_frozen_kernel_health.KernelHealthTests.test_cycle05_unsigned_drm_loader_notice_is_visible_bounded_and_not_a_gpu_fault) (value='ule verification failed: signature and/or required key missing - tainting kernel') ... FAIL
+  test_cycle05_unsigned_drm_loader_notice_is_visible_bounded_and_not_a_gpu_fault (test_frozen_kernel_health.KernelHealthTests.test_cycle05_unsigned_drm_loader_notice_is_visible_bounded_and_not_a_gpu_fault) (value='2] Not activating Mandatory Access Control as /sbin/tomoyo-init does not exist.\n') ... FAIL
+test_debug_suffix_is_not_kernel_bug (test_frozen_kernel_health.KernelHealthTests.test_debug_suffix_is_not_kernel_bug) ... ok
+test_empty_capture_does_not_pass (test_frozen_kernel_health.KernelHealthTests.test_empty_capture_does_not_pass) ... ok
+test_exact_retained_stock_baseline_passes (test_frozen_kernel_health.KernelHealthTests.test_exact_retained_stock_baseline_passes) ... ok
+test_genuine_oops_panic_fault_trace_controls_reject (test_frozen_kernel_health.KernelHealthTests.test_genuine_oops_panic_fault_trace_controls_reject) ... ok
+test_lockup_and_hung_task_controls_reject (test_frozen_kernel_health.KernelHealthTests.test_lockup_and_hung_task_controls_reject) ... ok
+test_mutated_fault_bearing_baselines_reject (test_frozen_kernel_health.KernelHealthTests.test_mutated_fault_bearing_baselines_reject) ... ok
+test_new_gma_drm_and_sgx_faults_are_not_hidden (test_frozen_kernel_health.KernelHealthTests.test_new_gma_drm_and_sgx_faults_are_not_hidden) ... ok
+test_real_warning_variants_reject (test_frozen_kernel_health.KernelHealthTests.test_real_warning_variants_reject) ... ok
+test_retained_acpi_diagnostics_are_bounded_and_explicit (test_frozen_kernel_health.KernelHealthTests.test_retained_acpi_diagnostics_are_bounded_and_explicit) ... ok
+test_stock_bl_diagnostic_is_not_generic_kernel_bug (test_frozen_kernel_health.KernelHealthTests.test_stock_bl_diagnostic_is_not_generic_kernel_bug) ... ok
+
+======================================================================
+FAIL: test_cycle05_unsigned_drm_loader_notice_is_visible_bounded_and_not_a_gpu_fault (test_frozen_kernel_health.KernelHealthTests.test_cycle05_unsigned_drm_loader_notice_is_visible_bounded_and_not_a_gpu_fault) (value='ule verification failed: signature and/or required key missing - tainting kernel')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 51, in test_cycle05_unsigned_drm_loader_notice_is_visible_bounded_and_not_a_gpu_fault
+    self.assertNotEqual(receipt['classification'],'REJECT')
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'REJECT' == 'REJECT'
+
+======================================================================
+FAIL: test_cycle05_unsigned_drm_loader_notice_is_visible_bounded_and_not_a_gpu_fault (test_frozen_kernel_health.KernelHealthTests.test_cycle05_unsigned_drm_loader_notice_is_visible_bounded_and_not_a_gpu_fault) (value='2] Not activating Mandatory Access Control as /sbin/tomoyo-init does not exist.\n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_kernel_health.py", line 51, in test_cycle05_unsigned_drm_loader_notice_is_visible_bounded_and_not_a_gpu_fault
+    self.assertNotEqual(receipt['classification'],'REJECT')
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'REJECT' == 'REJECT'
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.208s
+
+FAILED (failures=2)

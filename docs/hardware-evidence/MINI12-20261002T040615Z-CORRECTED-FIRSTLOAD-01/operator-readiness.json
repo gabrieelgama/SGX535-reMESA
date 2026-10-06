@@ -1,0 +1,10 @@
+{
+  "local_sudo_succeeded": true,
+  "normal_userspace": true,
+  "physical_display_normal": true,
+  "operator_report": "Corrected EXPERIMENTAL reached normal userspace. Boot was very fast. Display/userspace normal. sudo -v succeeded.",
+  "numeric_handoff_elapsed_seconds": "UNKNOWN; operator described boot as very fast",
+  "menu_photo": "NOT PROVIDED",
+  "selection_note": "Operator reports corrected EXPERIMENTAL reached normal userspace after the single manual-boot instruction; no retry was reported.",
+  "saved_default": "Stock saved entry was verified before/after staging; the corrected entry has no savedefault/save_env."
+}

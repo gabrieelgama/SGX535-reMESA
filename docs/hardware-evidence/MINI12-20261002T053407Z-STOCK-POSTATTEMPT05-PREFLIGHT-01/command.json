@@ -1,0 +1,32 @@
+{
+  "start_utc": "2026-10-02T05:36:13.396646+00:00",
+  "argv": [
+    "ssh",
+    "-p",
+    "22",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "ConnectTimeout=8",
+    "-o",
+    "ConnectionAttempts=1",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "UserKnownHostsFile=/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260927-H0/ssh_known_hosts",
+    "-o",
+    "IdentitiesOnly=yes",
+    "-o",
+    "PasswordAuthentication=no",
+    "-o",
+    "KbdInteractiveAuthentication=no",
+    "-i",
+    "/home/gama/.ssh/id_ed25519_sgx535_h0",
+    "gama@192.168.18.90",
+    "sudo -n -p '' python3 -I -B -S -"
+  ],
+  "source_sha256": "e7016084d9b76115f62ffca7fcedc414455fbd9401f02f94b751ab335ddf265d",
+  "source_bytes": 13245,
+  "target_action": "one pinned SSH invocation; sudo read-only capture only",
+  "timeout_seconds": 180
+}

@@ -1,0 +1,12 @@
+{
+  "initial_files": 2921,
+  "changed": [
+    "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "docs/phase8/post-attempt03-checkpoint-audit.md"
+  ],
+  "other_files_unchanged": 2918,
+  "documentation_before_snapshots": "exact task-start bytes",
+  "cycle03_unchanged": true,
+  "historical_artifacts_unchanged": true
+}

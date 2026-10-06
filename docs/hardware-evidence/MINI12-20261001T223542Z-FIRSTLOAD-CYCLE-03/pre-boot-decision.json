@@ -1,0 +1,14 @@
+{
+  "time_utc": "2026-10-01T22:42:30.013430+00:00",
+  "fresh_stock_preflight": "PASS",
+  "stock_preservation": "PASS",
+  "existing_staged_identity_and_creation_receipts": "PASS",
+  "source_artifacts": "PASS",
+  "stock_grub_default": "PASS",
+  "recovery_operator_preconditions": "PASS OPERATOR CONFIRMATION; visible menu guards still required",
+  "ready_for_one_experimental_boot": true,
+  "experimental_selections_used": 0,
+  "sgx_authorized": false,
+  "gate_b": "BLOCKED",
+  "whitelist": []
+}

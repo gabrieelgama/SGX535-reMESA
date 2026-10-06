@@ -1,0 +1,25 @@
+{
+  "classification": "PASS OBSERVED STOCK RECOVERY AND THREE DISTINCT BOOT IDENTITIES",
+  "boot_ids": {
+    "stock_before": "22aae08e-fea5-492f-957b-5cffea6f33f4",
+    "experimental_from_failed_capture_prefix": "5f99efa2-21ac-481d-819d-5bf3499bfbd6",
+    "stock_recovery": "8c89c9c9-d8c5-48b8-bfad-a4afa0442257"
+  },
+  "experimental_root_matches_prefix": true,
+  "recovery_receipt": {
+    "classification": "PASS RAW CAPTURE ONLY",
+    "boot_id": "8c89c9c9-d8c5-48b8-bfad-a4afa0442257",
+    "mode": "stock_recovery",
+    "sgx_authorized": false,
+    "boot_authorized": false,
+    "first_owner": "NOT QUALIFIED BY TIMING ALONE",
+    "full_recovery": "NOT QUALIFIED BY TIMING ALONE"
+  },
+  "stock_guards": 55,
+  "stock_state_compared_to_preflight": "PASS",
+  "stock_files_and_staged_creation_receipts": "PASS",
+  "operator_report_file": "operator-stock-recovery-readiness.json",
+  "experimental_full_capture": "STOP; unchanged",
+  "first_owner": "NOT ESTABLISHED; hook trace missing",
+  "note": "Controller looked only for successful decoded-records.json; its null experimental ID remains unchanged. This review uses the actual failed-capture prefix and root identity."
+}

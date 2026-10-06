@@ -1,0 +1,281 @@
+{
+  "date": "2026-10-06",
+  "outcome": "TA_OUTPUT_WITNESS_OFFLINE_EXHAUSTED",
+  "exhaustion_scope": "Identified available permitted evidence graph; no global/private/future-source absence claim",
+  "route_ledger": "/home/gama/sgx535-offline/phase8-ta-witness-final-20261006T031833Z/route-ledger.json",
+  "evidence_routes": [
+    {
+      "id": "R01",
+      "route": "Prior normal-root/source/CPU-encoder/Vita investigations",
+      "status": "REUSED_EXHAUSTED",
+      "attempt": "Audit prior inventories and exclusions; no repeat broad Xpsb/communication-BO analysis.",
+      "evidence": "/home/gama/sgx535-gfx/docs/phase8/fire02-independent-root-evidence-20261006.json",
+      "result": "First-root predicate/width/successor still absent; family and CPU flat encodings do not supply it.",
+      "closed_to_repetition": true
+    },
+    {
+      "id": "R02",
+      "route": "TA_FINISHED event dispatch and selected TA-to-raster sequence",
+      "status": "USEFUL_EXHAUSTED",
+      "attempt": "Follow scheduler handler, psb_ta_done, schedule_raster, scene_bind_fire; compare current service/plan.",
+      "evidence": "/home/gama/sgx535-gfx/docs/phase8/fire02-scene-root-publication-20261006.md",
+      "result": "Event handoff plus explicit consumer cache invalidations; no root external-commit postcondition.",
+      "closed_to_repetition": true
+    },
+    {
+      "id": "R03",
+      "route": "Applicable Xpsb binary multi-anchor neighborhoods",
+      "status": "USEFUL_EXHAUSTED",
+      "attempt": "Selected scene-switch 4030/4550 and render kick 5040; numeric and string parser-code locator.",
+      "evidence": "/home/gama/sgx535-offline/phase8-ta-witness-final-20261006T031833Z/binary-neighborhood-results.json",
+      "result": "Root address and consumer-preparation ordering confirmed; no normal-root payload dereference or parser rule.",
+      "closed_to_repetition": true
+    },
+    {
+      "id": "R04",
+      "route": "Historical PSB version difference",
+      "status": "USEFUL_EXHAUSTED",
+      "attempt": "Reacquire exact previously recorded 4.41.1 source RPM, compare seven licensed relevant files.",
+      "evidence": "/home/gama/sgx535-offline/phase8-ta-witness-final-20261006T031833Z/psb-version-comparison.json",
+      "result": "Six relevant C/register files byte-identical; drv header only date/version differences.",
+      "closed_to_repetition": true
+    },
+    {
+      "id": "R05",
+      "route": "Historical Xpsb packaging/version difference",
+      "status": "USEFUL_EXHAUSTED",
+      "attempt": "Acquire indexed 0.18-5 source RPM, compare upstream tar and both relevant ELF members.",
+      "evidence": "/home/gama/sgx535-offline/phase8-ta-witness-final-20261006T031833Z/xpsb-version-comparison.json",
+      "result": "Upstream and Xpsb/DRI ELF bytes identical; no new implementation.",
+      "closed_to_repetition": true
+    },
+    {
+      "id": "R06",
+      "route": "TI all-ref metadata and targeted event/cache history",
+      "status": "USEFUL_EXHAUSTED",
+      "attempt": "Reuse 816 permitted-blob prior format search; targeted event terms in applicable source/header families across all refs; 71 parser/header metadata candidates.",
+      "evidence": "/home/gama/sgx535-offline/phase8-ta-witness-final-20261006T031833Z/ti-targeted-event-history.json",
+      "result": "14 matching licensed blobs; available dictionary and reset/debug paths, no emitting TA_FINISHED/root parser implementation.",
+      "closed_to_repetition": true
+    },
+    {
+      "id": "R07",
+      "route": "TI trace-code callers and version differences",
+      "status": "USEFUL_EXHAUSTED",
+      "attempt": "Three status dictionaries; SGXUKernelStatusString and trace-buffer reader; bound RENDERHALT namespace.",
+      "evidence": "/home/gama/sgx535-offline/phase8-ta-witness-final-20261006T031833Z/ti-status-version-comparison.json",
+      "result": "Shared target codes agree; callers stringify/read trace buffers, not scene-root predicates. Actual emitter unavailable.",
+      "closed_to_repetition": true
+    },
+    {
+      "id": "R08",
+      "route": "Independent Samsung/OMAP public variants",
+      "status": "USEFUL_EXHAUSTED",
+      "attempt": "20 GPL sources plus two SGX directory trees; init/reset/utils/kick/PB/MMU/power/transfer/bridge.",
+      "evidence": "/home/gama/sgx535-offline/phase8-ta-witness-final-20261006T031833Z/public-primary-final-hits.json",
+      "result": "No root parser/encoder; BIF wait is directory invalidate/outstanding reads; region resources are handle plumbing.",
+      "closed_to_repetition": true
+    },
+    {
+      "id": "R09",
+      "route": "SGX535 register neighborhoods",
+      "status": "USEFUL_EXHAUSTED",
+      "attempt": "Cross-correlate TI/EMGD/Samsung535 headers with historical MMIO anchors.",
+      "evidence": "/home/gama/sgx535-offline/phase8-ta-witness-final-20261006T031833Z/binary-neighborhood-results.json",
+      "result": "PDS and MADD event names corroborated; target 0x200/0x400 programming range lacks authoritative field definitions.",
+      "closed_to_repetition": true
+    },
+    {
+      "id": "R10",
+      "route": "Three-dword and consumer/same-mode-encoder hypotheses",
+      "status": "EXHAUSTED_UNSUPPORTED",
+      "attempt": "Combine prior 816-blob scan with independent variants and version identity.",
+      "evidence": "/home/gama/sgx535-gfx/docs/phase8/fire02-root-successor-rule-20261006.json",
+      "result": "No independent stride, empty tag, consumed width or transform. Unsupported, not disproven.",
+      "closed_to_repetition": true
+    },
+    {
+      "id": "R11",
+      "route": "Host ownership/cache/BO readback/synchronization",
+      "status": "REUSED_EXHAUSTED",
+      "attempt": "Reuse completed publication source/hardware-tier analysis; cross-correlate new BIF cache wait.",
+      "evidence": "/home/gama/sgx535-gfx/docs/phase8/fire02-scene-root-publication-20261006.json",
+      "result": "CPU pinning/maintenance and execution waits do not prove target-root external commit/stability.",
+      "closed_to_repetition": true
+    },
+    {
+      "id": "R12",
+      "route": "Targeted public primary-source discovery",
+      "status": "EXHAUSTED_NO_NEW_CONTRACT",
+      "attempt": "Five bounded query batches plus known primary directory/file leads; retain discovery scope.",
+      "evidence": "/home/gama/sgx535-offline/phase8-ta-witness-final-20261006T031833Z/public-search-scope.json",
+      "result": "Only known trace dictionary or no target contract; unrelated/non-primary results rejected.",
+      "closed_to_repetition": true
+    },
+    {
+      "id": "R13",
+      "route": "Unavailable or excluded implementations",
+      "status": "BLOCKED_BY_UNAVAILABLE_EVIDENCE",
+      "attempt": "Account for absent vendor root/event specification, absent permitted microkernel emitter/parser, excluded confidential branch/current entry and unproven target of OMAP UM material.",
+      "evidence": "/home/gama/sgx535-gfx/docs/phase8/fire02-independent-root-evidence-20261006.md",
+      "result": "No alternate route used to recover excluded material; unavailability is not a negative hardware fact.",
+      "closed_to_repetition": true
+    },
+    {
+      "id": "R14",
+      "route": "Raster independent-consumer/FIRE2 cross-proof",
+      "status": "USEFUL_EXHAUSTED",
+      "attempt": "Compare observed lifecycle with the selected same-VA producer/consumer handoff and prep operations.",
+      "evidence": "/home/gama/sgx535-offline/phase8-ta-witness-final-20261006T031833Z/binary-neighborhood-results.json",
+      "result": "Intended TA-to-raster ordering inferred; completed lifecycle confirmed; neither selected geometry nor root CPU visibility follows.",
+      "closed_to_repetition": true
+    }
+  ],
+  "ta_finished": {
+    "symbolic_mask": "0x2000",
+    "bit": 13,
+    "mask_level": "CONFIRMED",
+    "mask_tier": "SGX535_EVIDENCE_REVISION_UNPROVED",
+    "software_use": "CONFIRMED: marks scene complete/dirty, eligible for raster handoff",
+    "software_tier": "POULSBO_DRIVER_BEHAVIOR",
+    "root_external_write_postcondition": "UNKNOWN",
+    "logical_completion_only_as_complete_physical_semantics": "NOT ESTABLISHED"
+  },
+  "sequence": [
+    "TA_FINISHED accepted for active sequence",
+    "Historical task raster-queue / TA fence / current TA cleared",
+    "Raster eligibility, scene ISP-reset bracket, raster register-list submission",
+    "XHW scene bind / selected fresh flags15 cookie14=0 context; 0x630=3; 0x65c=0,0x63c=3,0x658=0; 0x408=S+0x1000",
+    "PDS_INV1=1, wait status2 0x44 / acknowledge / verify clear",
+    "PDS_INV_CSC=1, wait status2 1 / acknowledge / verify clear",
+    "0x804=context|0x10000000, wait MADD_CACHE_INVALCOMPLETE status1 0x04000000 / acknowledge / verify clear",
+    "0x43c=1;0xa08=1;0x428=1; readback 0x428"
+  ],
+  "sequence_scope": "Historical behavior plus current qualified component plans, not instructions executed during this task; current service omits XHW transport and directly executes its qualified plans.",
+  "visibility": {
+    "ta_to_raster": {
+      "level": "INFERRED",
+      "fact": "Intended common-SGX-domain ordered producer/consumer handoff strongly supported; same VA and consumer-cache prep sequencing CONFIRMED",
+      "hardware_postcondition": "not explicitly specified"
+    },
+    "ta_to_external_backing": {
+      "level": "UNKNOWN",
+      "fact": "no target-root external commit/drain postcondition"
+    },
+    "ta_to_cpu": {
+      "level": "UNKNOWN",
+      "fact": "CPU maintenance and ownership do not supply missing GPU guarantee"
+    }
+  },
+  "publication_preparation": "EXPLICIT consumer cache invalidations exist; COMPLETION_EVENT_IMPLICITLY_USED_AS readiness for TA-to-raster; root GPU_CPU PUBLICATION_NOT_ESTABLISHED",
+  "parser": {
+    "dictionary_group": "CONFIRMED: RENDERHALT..RENDERHALT_END",
+    "tier": "SERIES5_COMPARATIVE_EVIDENCE",
+    "available_callers": "stringifier and separate EDM trace-buffer reader",
+    "implementing_emitter": "UNAVAILABLE in permitted inspected source set",
+    "normal_rev121_payload_applicability": "UNKNOWN"
+  },
+  "version_findings": {
+    "psb_4_41_1": "six relevant files byte-identical; drv.h date/version metadata only",
+    "xpsb_0_18_5": "same upstream tar and same Xpsb/DRI ELF bytes",
+    "ti_status_dictionaries": "three blobs, shared target codes agree",
+    "independent_public_variants": "twenty permitted GPL sources, two SGX directory trees; no target root rule or write-drain contract"
+  },
+  "register_neighborhood": {
+    "0x21c": "CONFIRMED historical TA address handoff; authoritative field identity UNKNOWN",
+    "0x408": "CONFIRMED historical raster address handoff; authoritative memory-consumer grammar UNKNOWN",
+    "gpu_cache_names": "PDS_INV1/PDS_INV_CSC/MADD invalidation completion corroborated by SGX535 headers; root external-write semantics absent",
+    "bif_wait": "directory-cache invalidation waits outstanding READS; not a proved TA payload write drain"
+  },
+  "format": {
+    "successor_rule": "SUCCESSOR_RULE_UNRESOLVED",
+    "decoder": "DECODER_FORMAT_PARTIAL",
+    "common_abi": "B \u2014 COMMON_RASTER_ABI_STRONGLY_SUPPORTED_BUT_INCOMPLETE",
+    "three_dword_stride": "UNSUPPORTED, not disproven; allocation arithmetic only",
+    "empty_predicate": null,
+    "populated_predicate": null,
+    "consumed_width": null,
+    "successor_derivation": null,
+    "continuation": null,
+    "primitive_convergence": "UNKNOWN"
+  },
+  "decoder": {
+    "implemented": false,
+    "qualification": {
+      "native": "NOT RUN: prerequisite absent",
+      "ubsan": "NOT RUN: prerequisite absent",
+      "i386": "NOT RUN: prerequisite absent"
+    }
+  },
+  "publication": {
+    "classification": "C \u2014 GPU_CPU_PUBLICATION_UNRESOLVED",
+    "contract": null,
+    "earliest_safe_point": null,
+    "latest_safe_point": null,
+    "open_close_window": null,
+    "gpu_visibility_operation": "UNKNOWN",
+    "earliest_theoretical_checkpoint": "accepted TA before raster inside status implementation; existing after tap is after raster fire",
+    "host_upper_bound": "before loss of owner protection, invalidation/remap/reuse/free; does not constrain internal DPM reclamation",
+    "cpu_mechanism": "CLFLUSH with barriers, valid retained mapping, no dirty CPU writer; conditional on missing GPU external commit/stability"
+  },
+  "fire2_constraints": {
+    "confirmed": "accepted configured lifecycle completed; attributable full color copy all zero",
+    "inferred": "intended common SGX-visible handoff",
+    "unknown": "selected primitive survival, complete root validity, TA payload external/CPU publication",
+    "retrospective_coverage": "NOT RESOLVABLE: no TA-output bytes retained; no independent retained geometry artifact established"
+  },
+  "remaining_propositions": {
+    "F": "Under selected normal rev121 raster controls, identify EMPTY/successor predicate, consumed width at S+0x1000 and first successor-address derivation. Downstream primitive equivalence must then be checked, not assumed.",
+    "P": "At a specified rev121 checkpoint before destructive DPM action/reuse, TA root bytes in owned S+0x1000..S+0x1300 backing are externally committed and receive no later relevant writes through bounded CPUcopy, with required GPU visibility operation specified."
+  },
+  "new_evidence_required": {
+    "F": "Permitted applicable rev121 normal-mode consumer or independently proven same-mode encoder contract; actual diagnostic emitter useful only with authorized core/mode/payload provenance.",
+    "P": "Permitted applicable rev121 event/memory postcondition or authoritative implementation contract establishing root external commit, required visibility operation and cessation of writes through copy before reclamation."
+  },
+  "implementation_gate": "CASE4 BOTH OPEN",
+  "implementation_justified": false,
+  "implementation_changes": [],
+  "new_candidate": false,
+  "live_capture_justified": false,
+  "candidate_unchanged": [
+    {
+      "artifact": "driver",
+      "path": "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/build/module/gma500_gfx.ko",
+      "bytes": 250720,
+      "sha256": "ddb4fe1fc121945d0a0ab137d310328fc10d41f5bdcfaa39baf86a3783255071",
+      "identity_matches": true,
+      "build_id": "9d0b5b2fdb7d9881f2828f43fb89253176c38817",
+      "build_id_matches": true
+    },
+    {
+      "artifact": "observer",
+      "path": "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/build/observer/sgx535_provenance.ko",
+      "bytes": 26284,
+      "sha256": "2e35e863d51dbc1d407feef08f08bb2edc6390af621a0f173a9b1a73ec76158a",
+      "identity_matches": true,
+      "build_id": "f11d3abb072caa4e1d32836ef92ce201e9c9d126",
+      "build_id_matches": true
+    },
+    {
+      "artifact": "image",
+      "path": "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/image-build-01/initrd.img-sgx535-provenance-9d0b5b2fdb7d9881f2828f43fb89253176c38817",
+      "bytes": 50816610,
+      "sha256": "ef7e01cb546c59b6f9bce96c3397feb4b9cd1d9ebdac2faa885ed71fa5ed014d",
+      "identity_matches": true
+    }
+  ],
+  "smallest_next_action": "Obtain the specified genuinely new permitted primary contracts; do not repeat this evidence graph or implement unqualified capture.",
+  "report": "docs/phase8/fire02-ta-output-witness-final-convergence-20261006.md",
+  "audit_root": "/home/gama/sgx535-offline/phase8-ta-witness-final-20261006T031833Z",
+  "verification": {
+    "source_checks": "/home/gama/sgx535-offline/phase8-ta-witness-final-20261006T031833Z/source-consistency.json",
+    "preservation": "/home/gama/sgx535-offline/phase8-ta-witness-final-20261006T031833Z/final-consistency.json",
+    "gpu_qualification": false
+  },
+  "fire3_authorized": false,
+  "sgx_execution_authorized": false,
+  "task_client_invocations": 0,
+  "task_sgx_invocations": 0,
+  "task_hardware_interactions": 0,
+  "triangle": "NOT ESTABLISHED"
+}

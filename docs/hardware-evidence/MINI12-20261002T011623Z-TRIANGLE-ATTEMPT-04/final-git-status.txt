@@ -1,0 +1,23 @@
+ M docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md
+ M docs/phase8/fixed-one-shot-gate-b-review.md
+ M docs/phase8/post-attempt03-checkpoint-audit.md
+ M tools/psb-dri-re/frozen_kernel_health.py
+ M tools/psb-dri-re/test_frozen_kernel_health.py
+?? docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/
+?? docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/
+?? docs/hardware-evidence/MINI12-20261001T234842Z-FIRSTLOAD-CYCLE-04/
+?? docs/hardware-evidence/MINI12-20261002T001828Z-FIRSTLOAD-CYCLE-05/
+?? docs/hardware-evidence/MINI12-20261002T005013Z-FIRSTLOAD-CYCLE-06/
+?? docs/hardware-evidence/MINI12-20261002T011623Z-TRIANGLE-ATTEMPT-04/
+?? docs/phase8/artifacts/visible-triangle-readiness-20261001T222342Z/
+?? docs/phase8/cycle04-first-load-procedure.json
+?? docs/phase8/cycle04-preparation.md
+?? docs/phase8/first-load-capture-timing-redesign.md
+?? docs/phase8/first-load-cycle-03-result.md
+?? docs/phase8/first-load-cycle-04-result.md
+?? docs/phase8/visible-triangle-readiness.md
+?? tools/psb-dri-re/frozen_first_load_capture_v2.py
+?? tools/psb-dri-re/frozen_first_load_procedure_v2.py
+?? tools/psb-dri-re/test_frozen_first_load_capture_v2.py
+?? tools/psb-dri-re/test_frozen_first_load_procedure_v2.py
+?? tools/psb-dri-re/test_frozen_first_load_trace_handoff.py

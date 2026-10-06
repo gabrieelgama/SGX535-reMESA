@@ -1,0 +1,6 @@
+{
+  "source": "maintainer response to single-attempt physical observation question",
+  "answer": "Triangle not seen; display normal",
+  "physical_triangle_seen": false,
+  "display_reported_normal": true
+}

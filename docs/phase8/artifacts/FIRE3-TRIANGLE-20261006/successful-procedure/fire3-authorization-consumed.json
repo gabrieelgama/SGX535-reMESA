@@ -1,0 +1,9 @@
+{
+  "FIRE3_authorization_consumed": true,
+  "actual_client_launches": 1,
+  "ioctl_attempts": 1,
+  "boot_id": "f1ab6606-0561-445f-a397-28a028516cd7",
+  "further_SGX_execution_authorized": false,
+  "no_retry": true,
+  "basis": "one qualified ordinary call + saved execution receipt + invocation count1 in complete preserved response"
+}

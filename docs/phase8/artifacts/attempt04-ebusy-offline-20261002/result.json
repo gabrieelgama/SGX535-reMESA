@@ -1,0 +1,10 @@
+{
+  "target_contact": false,
+  "compile_status": 0,
+  "probe_status": 0,
+  "stdout": "retained IORESOURCE_MEM: PDS allocation rc=-16\nprivate untyped GPU VA: PDS allocation rc=0 start=0x20000000 end=0x2001ffff\n",
+  "selected_kernel_functions_sha256": "e7d86aa3ad02b20cb115f9e7e9c06a39ec7e9ed186c2f4f80e2e0da44eb850b1",
+  "arch_resource_source_sha256": "0137c74d1f778c11bc70a8317d2e9edd170f798181f9bc10ab180cf57388b07f",
+  "bo_owner_sha256": "81721337bbfcf7ccf7eb2c9e863141173fe1b7f1e735c99983741d01587cc8e5",
+  "scope": "Offline selected exact kernel allocator bodies; RAM entry sufficient to exhaust PDS domain; negative control removes physical-resource type only"
+}

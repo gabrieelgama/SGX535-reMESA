@@ -1,0 +1,13 @@
+{
+  "initial_tracked_files": 2779,
+  "changed_existing": [],
+  "missing_existing": [],
+  "initial_head": "f8565115977bda8a529401a7ac5cba822d1a0d36",
+  "final_head": "f8565115977bda8a529401a7ac5cba822d1a0d36",
+  "target_contact": false,
+  "target_mutation": false,
+  "new_candidate": false,
+  "sgx_execution": false,
+  "gate_b": "BLOCKED",
+  "whitelist": []
+}

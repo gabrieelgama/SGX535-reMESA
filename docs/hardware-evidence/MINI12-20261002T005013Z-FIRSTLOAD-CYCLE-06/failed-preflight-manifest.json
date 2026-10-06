@@ -1,0 +1,32 @@
+[
+  {
+    "path": "command.json",
+    "bytes": 24008,
+    "sha256": "19165d2f9c0f6caab8070360176a1286afe944846afdf610daadff430873d98c"
+  },
+  {
+    "path": "root-source.py",
+    "bytes": 13847,
+    "sha256": "706f0b535b88c3916261270cc9a6ae8708a1c4ed889e2b645272171d0c90969a"
+  },
+  {
+    "path": "stderr.txt",
+    "bytes": 29,
+    "sha256": "9b3a3b7a78f239c4473bb193476b1a860c91f1c2b4fab9c7639eceea414a60fb"
+  },
+  {
+    "path": "stdout.txt",
+    "bytes": 256,
+    "sha256": "3f22e50662ad46571359af42d6ecec9109bc31e0a5b69e8eb798483c953683a6"
+  },
+  {
+    "path": "verdict.json",
+    "bytes": 127,
+    "sha256": "710d3317e873b24b3954d3b597c70be190c9c698f0e1f37ab32f5d6b5f4a0f1b"
+  },
+  {
+    "path": "wrapper-source.py",
+    "bytes": 17206,
+    "sha256": "caef4b2273dbd1a44f76c5429ef40f069ac7929870d3cfc5e7f5b4553925d60e"
+  }
+]

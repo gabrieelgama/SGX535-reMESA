@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-02T00:35:32.693815+00:00",
+  "stock_manually_selected": true,
+  "normal_userspace": true,
+  "physical_display_normal": true,
+  "local_sudo_succeeded": true,
+  "userspace_seen_before_boot_watch": true,
+  "source": "affirmative operator reply to combined STOCK selection/display/userspace/sudo/watch confirmation question",
+  "literal_operator_reply": "conceded",
+  "sgx_actions": 0,
+  "retry": false
+}

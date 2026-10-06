@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "contract_id": "MINI12-CURRENT-OPERATION-RESULT-PROVENANCE-DESIGN-CONTRACT-20261005-314e2f3b",
+  "prepared_timestamp_utc": "2026-10-05T00:34:42Z",
+  "authority_record": "/home/gama/sgx535-gfx/docs/phase8/current-operation-result-provenance-design-scope-maintainer-20261005-314e2f3b.json",
+  "approved_scope_request": "/home/gama/sgx535-gfx/docs/phase8/current-operation-result-provenance-design-scope-review-request-20261004-314e2f3b.json",
+  "specification": "/home/gama/sgx535-gfx/docs/phase8/current-operation-result-provenance-design-20261005.md",
+  "technical_disposition_unchanged": {
+    "G01_prime": "UNRESOLVED / current property route EXHAUSTED",
+    "G02_prime": "UNRESOLVED / current property route EXHAUSTED",
+    "actual_candidate_defect_established": false
+  },
+  "selected_architecture": "B — single-use operation-owned immutable terminal evidence capsule with independent public-call/lifecycle observation and read-only materialization",
+  "architecture_is_new_specification": true,
+  "current_implementation_certified": false,
+  "transaction_definition": "T is the one fresh eligible backend operation admitted in the actual separately authorized approved client/public ioctl lifetime within the qualified one-use observer context.",
+  "result_definition": "R is the preserved bundle anchored by a new producer-originated immutable capsule, plus exact approved-client response/image, streams/outcomes and context/observation receipts. The capsule, not legacy response lineage, supplies provenance.",
+  "provenance_relation": {
+    "events": "R.capsule.accepted_events = E(T)",
+    "state": "R.capsule.terminal_state = S(T)",
+    "color": "R.capsule.color = C(T)",
+    "common_origin": "All capsule projections originate in the same admitted T; no substituted lineage.",
+    "client_corroboration": "For complete successful bundle, relevant exported response fields/summaries and all color bytes agree with capsule. This does not prove excluded reporter implementation."
+  },
+  "semantic_properties": {
+    "P1": "Actual current approved call/context and fresh non-reusable observation instance; old operation/boot records cannot qualify.",
+    "P2": "Accepted-event contributions must have real qualified hardware-sample origin for the admitted operation; no arbitrary supplied transition lineage.",
+    "P3": "Capture actual terminal qualified service result and phase of that operation.",
+    "P4": "Capture full color bytes from that same operation storage while retirement/readback conditions hold.",
+    "P5": "Private operation-owned construction structurally couples accepted state, terminal result and color; no mixed-origin writers.",
+    "P6": "Immutable capsule survives owner release/client exit until trusted complete protected materialization; RAM retention is not disk durability.",
+    "P7": "Missing/incomplete/unprovable reporting remains UNKNOWN; no success by tuple alone.",
+    "P8": "Possible ambiguous issuance consumes the attempt; STOP/no retry.",
+    "P9": "Independent permitted-source structural review and offline fault/separation qualification before any separately approved live use."
+  },
+  "construction_invariants": {
+    "I1": "Qualified observer establishes actual approved public call lifetime and exactly one eligible admitted backend operation T, with continuous context. Uncertainty is invalidity.",
+    "I2": "Only that admission can create its private bounded evidence capsule; it is not an arbitrary response formatter.",
+    "I3": "Only source-matched qualified hardware-origin acceptance transitions for T can populate authoritative accepted evidence. Software claims/equal numeric sequences alone cannot.",
+    "I4": "Terminal writer observes actual service result/phase of T from permitted interfaces, not legacy response scalars.",
+    "I5": "Color writer reads T storage while retired/readback-valid and freezes all 4096 bytes before invalidation.",
+    "I6": "No other lifetime can write/rebind this capsule; faithful snapshots remain permitted.",
+    "I7": "Closure requires complete observation/no second admission; immutable retention and trusted fresh-instance materialization preserve payload origin.",
+    "I8": "Protected archive independently rereads actual preserved bytes; hashes alone cannot supply producer provenance."
+  },
+  "minimum_discriminator": "One actual boot/context + one qualified non-reusable observation/call/operation lifetime; no globally unique identifier or exported operation number required.",
+  "admission_rule": "Permitted backend lifetime begins in independently observed active public ioctl lifetime of approved process. Use actual OS-managed lifetimes; PID equality alone is insufficient. Private operation lease couples source/acceptance/capture. Unconnected async lineage is UNKNOWN and excluded from minimum design.",
+  "observer_lifecycle": [
+    "UNUSED",
+    "READY",
+    "ACTIVE(T)",
+    "TERMINAL_CAPTURED",
+    "CLOSED",
+    "PRESERVED"
+  ],
+  "invalidity_rule": "Ambiguity, lost observation, second admission, source mismatch, context break or missing payload prevents valid publication. Retain terminal payload unchanged plus invalidity/partial records; never rearm after possible issuance.",
+  "capsule_contents": [
+    "Actual continuous context and fresh-instance provenance",
+    "Accepted terminal ledger under qualified semantics",
+    "Actual terminal phase/service result",
+    "Full immutable 4096-byte retirement-gated color capture when available",
+    "Presence/completeness/failure facts",
+    "Closed-interval validity or explicit invalidity"
+  ],
+  "capsule_constructor_rule": "Private producer-owned construction from the admitted permitted hardware/acceptance/terminal/readback observations. Do not accept arbitrary old images, unrelated sessions or public response scalars as authoritative input.",
+  "snapshot_rule": "Capture during valid source lifetime, freeze before release, retain independent ownership. A later owner allocation cannot alter/rebind snapshot. Partial capsule never valid.",
+  "materialization_contract": "Independently reviewable read-only evidence channel must establish fresh-instance/current loaded-producer origin, complete loss-aware delivery, and reread verification. No specific transport/path/ABI chosen or assumed already available.",
+  "preservation_requirements": [
+    "Retain complete original response and client image unchanged",
+    "Preserve capsule independently of process lifetime",
+    "Preserve stdout/stderr/process outcome and complete applicable observation receipts",
+    "Exclusive protected destinations and file/type/ownership/link checks",
+    "Checked write/sync/close/readback before sealing",
+    "Originals durable before validation copies",
+    "Partial evidence retained without a false seal",
+    "Actual saved-byte verification; manifests do not authenticate kernel origin"
+  ],
+  "result_classes": {
+    "SUCCESS_ATTRIBUTABLE_TERMINAL_RESULT": "Closed qualified capsule bound to current T, all required accepted completion classes, actual terminal state and retired color, complete agreeing exported response/image and preserved evidence. This does not establish triangle geometry/visibility.",
+    "EXECUTION_OBSERVED_RESULT_INCOMPLETE": "Only independently attributable observed facts may be claimed; missing result/color/response/retention remains UNKNOWN.",
+    "READBACK_PRESENT_EXECUTION_ATTRIBUTION_INCOMPLETE": "Retained pixels alone; no completion or triangle claim.",
+    "FAILURE_HOLD_ATTRIBUTABLE": "T-linked failure/HOLD evidence retained; no invented completion; STOP/no retry/reviewed recovery only.",
+    "ISSUANCE_POSSIBLE_ATTRIBUTION_LOST": "May have reached device, association/report incomplete; STOP/no retry; not NOT ATTEMPTED.",
+    "UNKNOWN": "No stronger supported facts; retain partial evidence."
+  },
+  "negative_ioctl_rule": "Local failed-call bytes stay UNAUTHORITATIVE. Independently valid capsule can establish narrower execution/failure facts, not successful returned response.",
+  "failure_survival_limit": "Kernel retention may survive owner/client release, not guaranteed kernel failure or power loss. Only actually durable complete evidence supports durable claims.",
+  "freshness_requirements": [
+    "Current actual boot/build/action/client and continuous public call lifetime",
+    "Unused observer/current one-shot history",
+    "Fresh session and hardware/software pending source state",
+    "Prior delayed-event quiescence or UNKNOWN",
+    "Continuous eligible-producer isolation",
+    "Complete admission/source/capture observation"
+  ],
+  "qualification_obligations": [
+    "Review public call-to-backend causal observation and eligible admission coverage without excluded caller assumptions; async/unmatched activity yields UNKNOWN.",
+    "Fresh initial state, pending software/hardware state and delayed prior-event exclusion or UNKNOWN; old boot/operation replay rejection.",
+    "One eligible operation only: duplicate/concurrent/restarted admission invalidates evidence, never drives another operation.",
+    "Reject all cross-operation accepted-state/phase/result/color mixtures; accept faithful snapshots made while source valid after release.",
+    "Arbitrary synthetic/software event words cannot create authoritative hardware-origin evidence; preserve qualified acceptance/order semantics.",
+    "Complete response/image and summary agreement, declared producer mismatch and wrong length/truncation rejection.",
+    "Fault injection across process crash, producer failure, HOLD, copy-out and write/sync/close/readback; no retry, false success or false NOT ATTEMPTED.",
+    "Immutable payload, append-only invalidity, independent lifetime, fresh-channel provenance, exclusive protected files and originals-before-copy.",
+    "B non-rearmable lifetime proof; generation wrap/reuse tests only if C/D is later chosen.",
+    "Reproducible changed-artifact qualification and exact pin impact where required; unchanged components reused within scope.",
+    "Review that observation adds no command/request changes and does not materially perturb execution beyond reviewed diagnostic overhead; mocks do not prove live hardware/timing/visibility."
+  ],
+  "adversarial_obligations": [
+    "prior operation/boot capsule replay",
+    "events T1/color T2",
+    "stale ledger",
+    "stale image",
+    "copied or substituted session",
+    "observer rearm or generation reuse",
+    "delayed prior hardware event",
+    "unrelated competing producer",
+    "crash after issuance",
+    "crash after terminal before preservation",
+    "partial userspace response",
+    "failed copy-out",
+    "owner release before valid capture"
+  ],
+  "change_impact": {
+    "module": "YES for the selected proposed kernel-side observer/capsule instrumentation; current module unchanged and no defect claimed.",
+    "diagnostic_image": "CONDITIONAL on embedding a future changed module; current image unchanged.",
+    "fixed_triangle_uapi_expansion": "NO required; retain request/response layout where possible.",
+    "uapi_overall": "CONDITIONAL: supplemental evidence export access/representation requires its own interface review; no concrete ABI selected.",
+    "approved_client": "NO required; separate evidence reader/checker is new work, not an executor.",
+    "new_transaction_discriminator": "NO required beyond structural nonreuse; no UUID/sequence export selected.",
+    "raw_status_retention": "NO required for selected design; accepted ledger with qualified provenance suffices."
+  },
+  "reusable_qualification": [
+    "Geometry/workload if unchanged",
+    "Exact pre-call request/device semantics",
+    "Approved client one-call/raw-image-export qualification",
+    "Existing triangle ABI/layout if unchanged",
+    "Qualified acceptance and retirement/readback semantics",
+    "Existing archive/checker/file primitives",
+    "Guard predicates within scope",
+    "Current readiness/client approvals only for their bound current identities; historical 70/70 remains historical"
+  ],
+  "future_requalification": [
+    "New observer/producer/export and reader/checker implementation and integration",
+    "Changed module reproducibility/architecture/import/ABI identity qualification where dependency requires",
+    "Image construction and identity if embedded module changes",
+    "Build-specific first-owner/authority bindings for future changed identity where existing procedure requires; no automatic old PASS carryover"
+  ],
+  "forbidden_claims": [
+    "Existing G01_prime/G02_prime confirmed",
+    "New machinery already available/reviewed/deployed",
+    "Live guards currently passed",
+    "Synthetic capsule establishes physical hardware execution",
+    "Matching image/ledger/checksum proves origin",
+    "Design completion means PRE07 live PASS",
+    "Design approval authorizes implementation or SGX"
+  ],
+  "contamination_stop_rule": "If a design branch requires excluded/UNKNOWN material, reconstruction, derivation, indirect recovery, historical-wrapper recreation or equivalent indirect substitution for a blocked operation, STOP that branch and return its dependency to review. Do not infer hidden behavior or obtain material through another route.",
+  "excluded_inputs_and_actions": [
+    "Excluded ioctl-entry/reporting or historical wrapper contents, control flow, integration tests revealing those contents, or reconstruction hints.",
+    "Alternate representations, disassembly, indirect recovery, inferred hidden behavior or derivation from restricted material.",
+    "Equivalent indirect substitution for the blocked operation or recreation of restricted entry/reporting/wrapper implementation.",
+    "Hardware contact, live guards/logs, staging, installation, boot, recovery, client/ioctl/SGX execution or retry.",
+    "Kernel/module/UAPI/client changes, patches, builds, implementation or deployment."
+  ],
+  "implementation_review_request": "/home/gama/sgx535-gfx/docs/phase8/current-operation-result-provenance-implementation-review-request-20261005-314e2f3b.json",
+  "exact_context": {
+    "boot_id": "89fc7306-6dac-4ab9-af62-360b7152ef22",
+    "module_build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+    "action": "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1",
+    "freshness": "Boot and 70/70 first-owner facts are preserved historical observations, not fresh invocation guards."
+  },
+  "approved_response_client": {
+    "source": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot_response.c",
+      "size": 5514,
+      "sha256": "919c2611e048e4a660ecae3542264adf5a5367d9b0fbe7fbceff2f45f90adedf"
+    },
+    "binary": {
+      "path": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-build-01/frozen-triangle-one-shot-response-i386",
+      "size": 775264,
+      "sha256": "2f84917f96db2859678797a327d40d9638325e5c5efb6e0dfccef44d756b4835"
+    },
+    "uapi": {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_uapi.h",
+      "size": 760,
+      "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420"
+    }
+  },
+  "unchanged_context_bindings": {
+    "kernel": "5.10.240-antix.1-486-smp",
+    "architecture": "i686",
+    "module": {
+      "path": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/module/gma500_gfx.ko",
+      "size_bytes": 244960,
+      "sha256": "4141a07c1f2d2ffc9ab2770b7b4cf654f68c396275dad15f0ddc68192529d8e6",
+      "build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+      "loaded_note_sha256": "edb1e3e59cfd70c48d400bec89f2a30c1a436b05bf115bc1a05581abc153bdc9",
+      "identity_evidence": [
+        "module_identity",
+        "qualification",
+        "first_owner_records"
+      ]
+    },
+    "diagnostic_image": {
+      "source_path": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/image/build-01/initrd.img-sgx535-firstload-diagnostic-01",
+      "staged_path": "/boot/initrd.img-5.10.240-antix.1-486-smp-sgx535-firstload-314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+      "size_bytes": 50805231,
+      "sha256": "fe64b3dcfe74b78a6d96edcd4fd7c118c3901fcff8631afec6c14647da292e3c",
+      "embedded_module_sha256": "4141a07c1f2d2ffc9ab2770b7b4cf654f68c396275dad15f0ddc68192529d8e6",
+      "identity_evidence": [
+        "image_identity",
+        "image_qualification",
+        "poststage_records",
+        "first_owner_records",
+        "menu_receipt"
+      ]
+    }
+  },
+  "gate_b": "PASS FOR EXACT OFFSCREEN READINESS",
+  "whitelist": [
+    "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1"
+  ],
+  "design_status": "COMPLETE",
+  "design_status_scope": "Sufficient constructive specification, not implemented/qualified/available live machinery or confirmation of legacy G01_prime/G02_prime.",
+  "ready_for_implementation_review": true,
+  "implementation_authorized": false,
+  "source_modification_authorized": false,
+  "building_authorized": false,
+  "staging_authorized": false,
+  "hardware_contact_authorized": false,
+  "fresh_guard_collection_authorized": false,
+  "live_use_authorized": false,
+  "ioctl_execution_authorized": false,
+  "sgx_execution_authorized": false,
+  "retry_authorized": false,
+  "pre07_live_readiness": "BLOCKED",
+  "ready_for_execution_authorization": false,
+  "sgx_invocations": 0,
+  "hardware_interactions_this_task": 0,
+  "triangle": "NOT ATTEMPTED"
+}

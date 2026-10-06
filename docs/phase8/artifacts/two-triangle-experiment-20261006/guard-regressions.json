@@ -1,0 +1,6 @@
+{
+  "source-guard-native": "183 source-guard checks; 0 failures; SYNTHETIC ONLY",
+  "capsule-service-native": "7 service/observer differential cases PASS; synthetic CPU only",
+  "source-guard-ubsan": "183 source-guard checks; 0 failures; SYNTHETIC ONLY",
+  "capsule-service-ubsan": "7 service/observer differential cases PASS; synthetic CPU only"
+}

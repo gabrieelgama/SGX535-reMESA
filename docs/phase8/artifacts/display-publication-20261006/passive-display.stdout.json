@@ -1,0 +1,119 @@
+{
+  "boot_id": "f1ab6606-0561-445f-a397-28a028516cd7\n",
+  "kernel": "5.10.240-antix.1-486-smp",
+  "machine": "Inspiron 1210   \n",
+  "fb": "0 gma500drmfb\n",
+  "active_vt": "tty7\n",
+  "graphics": {
+    "fb0": {
+      "name": "gma500drmfb\n",
+      "virtual_size": "1280,800\n",
+      "bits_per_pixel": "32\n",
+      "stride": "8192\n",
+      "modes": "U:1280x800p-0\n",
+      "mode": "",
+      "blank": "",
+      "state": "0\n",
+      "device": "/sys/devices/pci0000:00/0000:00:02.0"
+    },
+    "fbcon": {
+      "name": {
+        "unavailable": "[Errno 2] No such file or directory: '/sys/class/graphics/fbcon/name'"
+      },
+      "virtual_size": {
+        "unavailable": "[Errno 2] No such file or directory: '/sys/class/graphics/fbcon/virtual_size'"
+      },
+      "bits_per_pixel": {
+        "unavailable": "[Errno 2] No such file or directory: '/sys/class/graphics/fbcon/bits_per_pixel'"
+      },
+      "stride": {
+        "unavailable": "[Errno 2] No such file or directory: '/sys/class/graphics/fbcon/stride'"
+      },
+      "modes": {
+        "unavailable": "[Errno 2] No such file or directory: '/sys/class/graphics/fbcon/modes'"
+      },
+      "mode": {
+        "unavailable": "[Errno 2] No such file or directory: '/sys/class/graphics/fbcon/mode'"
+      },
+      "blank": {
+        "unavailable": "[Errno 2] No such file or directory: '/sys/class/graphics/fbcon/blank'"
+      },
+      "state": {
+        "unavailable": "[Errno 2] No such file or directory: '/sys/class/graphics/fbcon/state'"
+      },
+      "device": "/sys/devices/virtual/graphics/fbcon/device"
+    }
+  },
+  "drm": {
+    "card0-LVDS-1": {
+      "status": "connected\n",
+      "enabled": "enabled\n",
+      "modes": "1280x800\n"
+    },
+    "card0-SVIDEO-1": {
+      "status": "disconnected\n",
+      "enabled": "disabled\n",
+      "modes": ""
+    },
+    "card0-VGA-1": {
+      "status": "disconnected\n",
+      "enabled": "disabled\n",
+      "modes": ""
+    },
+    "card0-SVIDEO-2": {
+      "status": "disconnected\n",
+      "enabled": "disabled\n",
+      "modes": ""
+    }
+  },
+  "fb_var_raw_hex": "00050000200300000005000020030000000000000000000020000000000000001000000008000000000000000800000008000000000000000000000008000000000000000000000000000000000000000000000000000000a00000000401000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "fb_fix_raw_hex": "676d6135303064726d666200000000000000000000006400000000000000000002000000010001000000000000200000000010d800000800000000000000000000000000",
+  "fb_var_dwords": [
+    1280,
+    800,
+    1280,
+    800,
+    0,
+    0,
+    32,
+    0,
+    16,
+    8,
+    0,
+    8,
+    8,
+    0,
+    0,
+    8,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    160,
+    260,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "native_ulong_bytes": 4,
+  "fb_device_stat": {
+    "st_dev": 5,
+    "st_ino": 137,
+    "st_rdev": 7424
+  }
+}

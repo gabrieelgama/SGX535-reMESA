@@ -1,0 +1,9 @@
+[
+  {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "sgx_invocations": 0,
+    "maximum_publications": 1
+  }
+]

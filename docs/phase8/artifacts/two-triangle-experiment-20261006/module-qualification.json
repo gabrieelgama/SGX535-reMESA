@@ -1,0 +1,54 @@
+{
+  "ABI": {
+    "classification": "PASS",
+    "reference_sha256": "c925caedebcc0699aef53227d29e64b47bf2833efd9d2e611cba276dd3a08ab3",
+    "candidate_sha256": "c21c26c567fc7676e28f4f732cb8cd3c7af1a7360560b58a310789523dc9454d",
+    "reference_import_count": 253,
+    "candidate_import_count": 253,
+    "shared_count": 253,
+    "mismatched_count": 0,
+    "mismatches": {},
+    "unverified_candidate_imports": [],
+    "module_layout": {
+      "reference": "0xb84efb99",
+      "candidate": "0xb84efb99"
+    }
+  },
+  "undefined_symbols_versioned": true,
+  "modinfo_byte_identical": true,
+  "driver_repeat_byte_identical": true,
+  "driver": {
+    "path": "/home/gama/sgx535-offline/phase8-first-3d-offline-20261006T072942Z/build/module/gma500_gfx.ko",
+    "bytes": 250864,
+    "sha256": "c21c26c567fc7676e28f4f732cb8cd3c7af1a7360560b58a310789523dc9454d",
+    "build_id": "8be2777b2a79eaa6651b89d19faf4d68cdcdc460",
+    "loaded_note_sha256": "35ec9f4e576a83a3990ebda4f8aee5869c0e4ea32e1e35969fa48abffa7dc832",
+    "abi": "ELF32/i386",
+    "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 ",
+    "dependencies": "drm,drm_kms_helper,sgx535_provenance,video,i2c-algo-bit",
+    "versioned_imports": 253,
+    "missing_imports": [],
+    "crc_mismatches": {},
+    "unversioned_undefined": [],
+    "module_layout": "0xb84efb99",
+    "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+    "qualification": "PASS"
+  },
+  "observer": {
+    "path": "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/build/observer/sgx535_provenance.ko",
+    "bytes": 26284,
+    "sha256": "2e35e863d51dbc1d407feef08f08bb2edc6390af621a0f173a9b1a73ec76158a",
+    "build_id": "f11d3abb072caa4e1d32836ef92ce201e9c9d126",
+    "loaded_note_sha256": "6afbac1cf48a211135e2a4b4ffc30f96ace64f6d397071595bbc328966bb8af0",
+    "abi": "ELF32/i386",
+    "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 ",
+    "dependencies": "",
+    "versioned_imports": 38,
+    "missing_imports": [],
+    "crc_mismatches": {},
+    "unversioned_undefined": [],
+    "module_layout": "0xb84efb99",
+    "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+    "qualification": "PASS"
+  }
+}

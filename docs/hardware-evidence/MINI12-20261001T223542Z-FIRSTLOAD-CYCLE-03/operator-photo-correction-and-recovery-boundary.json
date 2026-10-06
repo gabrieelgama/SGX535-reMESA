@@ -1,0 +1,10 @@
+{
+  "received_utc": "2026-10-01T23:03:21.340673+00:00",
+  "answer": "The menu photo was NOT captured. Treat that evidence as missing. The 120-second experimental capture window expired and no experimental connection was made. I will not retry EXPERIMENTAL. I am proceeding only through the reviewed operator machine boundary and will manually select STOCK once.",
+  "menu_photo_captured": false,
+  "menu_photo_supplied": false,
+  "earlier_photo_witness": "SUPERSEDED by explicit operator correction; original answer preserved",
+  "experimental_connection": "NOT MADE",
+  "experimental_retry_authorized": false,
+  "stock_recovery": "Awaiting manual stock selection and current-boot readiness"
+}

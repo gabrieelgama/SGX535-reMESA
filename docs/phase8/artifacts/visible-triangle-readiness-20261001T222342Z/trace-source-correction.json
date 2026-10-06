@@ -1,0 +1,9 @@
+{
+  "classification": "SOURCE-PROVEN; live trace retrieval remains UNKNOWN",
+  "stock_init_sha256": "0a9bb34973c78987922b57f010e99c36ddf102e8a5a2fd198385566539f5d6d5",
+  "selected_source_byte_exact": true,
+  "run_mount_line": 281,
+  "previous_incomplete_analysis": "docs/phase8/artifacts/first-load-operational-review-20261001/hook-log-handoff-evidence.json",
+  "historical_record_rewritten": false,
+  "source_and_image_modified": false
+}

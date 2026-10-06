@@ -1,0 +1,61 @@
+[
+  {
+    "transfer_event": {
+      "phase": "created",
+      "name": "diagnostic-entry.proposed",
+      "dev": 2049,
+      "ino": 1049060
+    }
+  },
+  {
+    "transfer_event": {
+      "dev": 2049,
+      "ino": 1049060,
+      "size": 1134,
+      "sha256": "eedb2a774dd11e33c0c7257a403c6b614923010de8c9489344a4d462629c1643",
+      "uid": 1000,
+      "gid": 1000,
+      "mode": 256,
+      "nlink": 1,
+      "regular": true,
+      "phase": "verified",
+      "name": "diagnostic-entry.proposed"
+    }
+  },
+  {
+    "scope": "one exclusive exact-payload incoming transfer; no SGX",
+    "operations": [
+      {
+        "phase": "created",
+        "name": "diagnostic-entry.proposed",
+        "dev": 2049,
+        "ino": 1049060
+      },
+      {
+        "dev": 2049,
+        "ino": 1049060,
+        "size": 1134,
+        "sha256": "eedb2a774dd11e33c0c7257a403c6b614923010de8c9489344a4d462629c1643",
+        "uid": 1000,
+        "gid": 1000,
+        "mode": 256,
+        "nlink": 1,
+        "regular": true,
+        "phase": "verified",
+        "name": "diagnostic-entry.proposed"
+      }
+    ],
+    "file": {
+      "dev": 2049,
+      "ino": 1049060,
+      "size": 1134,
+      "sha256": "eedb2a774dd11e33c0c7257a403c6b614923010de8c9489344a4d462629c1643",
+      "uid": 1000,
+      "gid": 1000,
+      "mode": 256,
+      "nlink": 1,
+      "regular": true
+    },
+    "classification": "PASS EXACT EXCLUSIVE TRANSFER"
+  }
+]

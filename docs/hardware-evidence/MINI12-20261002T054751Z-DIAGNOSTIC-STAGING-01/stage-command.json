@@ -1,0 +1,31 @@
+{
+  "argv": [
+    "ssh",
+    "-T",
+    "-p",
+    "22",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "ConnectTimeout=8",
+    "-o",
+    "ConnectionAttempts=1",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "UserKnownHostsFile=/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260927-H0/ssh_known_hosts",
+    "-o",
+    "IdentitiesOnly=yes",
+    "-o",
+    "PasswordAuthentication=no",
+    "-o",
+    "KbdInteractiveAuthentication=no",
+    "-i",
+    "/home/gama/.ssh/id_ed25519_sgx535_h0",
+    "gama@192.168.18.90",
+    "sudo -n -p '' python3 -I -B -S -"
+  ],
+  "source_sha256": "f54e701f32dda4694221912f3f43f97c4ad9a0c0d0904395a83e26e3a7eef049",
+  "start_utc": "2026-10-02T05:59:32.356855+00:00",
+  "scope": "Publish exact diagnostic initramfs and three-entry custom.cfg with distinct backup and pending path; no boot or SGX"
+}

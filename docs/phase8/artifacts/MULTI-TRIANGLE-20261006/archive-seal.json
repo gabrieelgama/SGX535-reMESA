@@ -1,0 +1,701 @@
+{
+  "files": [
+    {
+      "path": "live-campaign/authoritative-bindings.json",
+      "bytes": 8408,
+      "sha256": "61117d120b471bcba2bb488a63a1392cdd0c1fd53fbf933abdf052e6b97381b3"
+    },
+    {
+      "path": "live-campaign/authorized-square-call.corrected.OFFLINE-ONLY.py",
+      "bytes": 44082,
+      "sha256": "f4a7788865e607a560c3188bd51075886d50cfbfbf8a90bfe87c48304ef8ed7e"
+    },
+    {
+      "path": "live-campaign/candidate-context.json",
+      "bytes": 771,
+      "sha256": "a9d98cef980aeb0450070b3d1f4d0948f5660969a7b45764f4f780cc854e0907"
+    },
+    {
+      "path": "live-campaign/candidate-entry.proposed",
+      "bytes": 1132,
+      "sha256": "fe8d9ebbe80eba9149b5b4b1c64f5605ecd5b2f048930a3c4bd3d91d0662c520"
+    },
+    {
+      "path": "live-campaign/card-adapter-offline-checks.json",
+      "bytes": 1032,
+      "sha256": "9082536902cc4ff4a86953a249ffb13dae67ad777f423d32b1c24880d54b9f7a"
+    },
+    {
+      "path": "live-campaign/controller-audit-PASS.json",
+      "bytes": 677,
+      "sha256": "1675a54911a9dda182adc6c0d16b277a41dd29c5d3e91c96fce2ee63b1ace534"
+    },
+    {
+      "path": "live-campaign/controller.py",
+      "bytes": 19701,
+      "sha256": "3ff450f1ebae8ac7855492ea5215acb55aae8fe241015671e639815c832f237f"
+    },
+    {
+      "path": "live-campaign/custom.cfg.proposed",
+      "bytes": 10881,
+      "sha256": "28a854b173b5aae73a8be88267bfb5575622e809c2c3301632e012446dbb4fdb"
+    },
+    {
+      "path": "live-campaign/entry-transfer/command.json",
+      "bytes": 6518,
+      "sha256": "b3736d73e99d858484eeec5c883c5c797d9c3f75c5bffa0058f19db614881ee8"
+    },
+    {
+      "path": "live-campaign/entry-transfer/decoded.json",
+      "bytes": 1409,
+      "sha256": "fc3adaeaf18e6df33f4449202520dc18b876405ec084d8a00204fb48f82cef80"
+    },
+    {
+      "path": "live-campaign/entry-transfer/receipt.json",
+      "bytes": 6798,
+      "sha256": "d3161edaa945ad04ac346f46f1a15e260076911365b4fc29df7ace07ad582e47"
+    },
+    {
+      "path": "live-campaign/entry-transfer/source.py",
+      "bytes": 4519,
+      "sha256": "45ce5fb02030918b4ca6f9acbe8612c423a36668ef1d51d4db85938806435014"
+    },
+    {
+      "path": "live-campaign/entry-transfer/stderr.original.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "live-campaign/entry-transfer/stdout.original.txt",
+      "bytes": 1209,
+      "sha256": "5cd8dca3f981e8084d77908d732f22f4a45116a56ea702c90381e7cc092009a4"
+    },
+    {
+      "path": "live-campaign/final.audited.py",
+      "bytes": 28808,
+      "sha256": "75a58d00cd9474f2271228bebcb732a3686dc914c160b6299ad6a2cac074f6ce"
+    },
+    {
+      "path": "live-campaign/first-owner/command.json",
+      "bytes": 35184,
+      "sha256": "f081b2513199cbcd91f35a2a00580ae7aa9bed9861e0c7f103c8a0253089021a"
+    },
+    {
+      "path": "live-campaign/first-owner/decoded.json",
+      "bytes": 135542,
+      "sha256": "f78ecceaf3e57e3506fcf385d34f10cec034cc19206c6e38c1f03e2e6a426879"
+    },
+    {
+      "path": "live-campaign/first-owner/receipt.json",
+      "bytes": 35463,
+      "sha256": "036272755da2ba3b5c4eb2f6af5b37e87df92153e41dc78693ea306970b276af"
+    },
+    {
+      "path": "live-campaign/first-owner/result.json",
+      "bytes": 133423,
+      "sha256": "e83d4b8e3baa0dc81d2e3ec36e4a1e58bfe10e573dc7e03b154a2b6727a63f0a"
+    },
+    {
+      "path": "live-campaign/first-owner/source.py",
+      "bytes": 26784,
+      "sha256": "fa5fd6ebf1016529b76a8d2b166aa00eb3fa564f740536d53a8ca5ecffb2da5b"
+    },
+    {
+      "path": "live-campaign/first-owner/stderr.original.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "live-campaign/first-owner/stdout.original.txt",
+      "bytes": 133922,
+      "sha256": "feea381d8011e33e14c0568d3aab8ab066a1792fcc238485a223e887f40eecfa"
+    },
+    {
+      "path": "live-campaign/first-owner/timing-validation.json",
+      "bytes": 283,
+      "sha256": "7eb0a460e8e44c080bc51b439a425550a91deafaf98765ce0672e959d96c8f29"
+    },
+    {
+      "path": "live-campaign/first-owner.audited.py",
+      "bytes": 23022,
+      "sha256": "99a53926aaf470b277c0431a99f7135f37adc5d6d937fc0cf7e7b9a1a7612531"
+    },
+    {
+      "path": "live-campaign/immediate-precheck.audited.py",
+      "bytes": 25913,
+      "sha256": "6ecf3c93cd017d2f797592737021d65690767b2ddfba125d45c9f5382613b8dc"
+    },
+    {
+      "path": "live-campaign/immediate-square-precheck/command.json",
+      "bytes": 34769,
+      "sha256": "47c389d2cd9efb0a9975c84c7a1c9a77672dc413befb00182c1293ccb9da1a3a"
+    },
+    {
+      "path": "live-campaign/immediate-square-precheck/decoded.json",
+      "bytes": 59747,
+      "sha256": "41a5484d9cac6f1493a5163208269eef0808021bd7a238533cd07f0808501cb8"
+    },
+    {
+      "path": "live-campaign/immediate-square-precheck/receipt.json",
+      "bytes": 35049,
+      "sha256": "ac34ee90f341d6c359303b54cadf2946a86152ce6758e0826372bb3655d563ab"
+    },
+    {
+      "path": "live-campaign/immediate-square-precheck/result.json",
+      "bytes": 59300,
+      "sha256": "77189bf6f9bf4350e5f36ba4b469fbd050d7e542740a1f28e44ad822f1e627ff"
+    },
+    {
+      "path": "live-campaign/immediate-square-precheck/source.py",
+      "bytes": 25913,
+      "sha256": "6ecf3c93cd017d2f797592737021d65690767b2ddfba125d45c9f5382613b8dc"
+    },
+    {
+      "path": "live-campaign/immediate-square-precheck/stderr.original.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "live-campaign/immediate-square-precheck/stdout.original.txt",
+      "bytes": 59301,
+      "sha256": "e338b766a7f4c46599fd91a4698e19d86cd792267aec84ebc8d90d5fb92c176e"
+    },
+    {
+      "path": "live-campaign/incoming-creation.json",
+      "bytes": 216,
+      "sha256": "9c498425e05d1b4e17c1dd8a1815de2ba7e5e721e18a3d3b858fca0e607a5e6b"
+    },
+    {
+      "path": "live-campaign/incoming-prepare/command.json",
+      "bytes": 4105,
+      "sha256": "47e35e062e643393605ddd029584bdfdbb23b82eacd197b4e70755b7c89b0539"
+    },
+    {
+      "path": "live-campaign/incoming-prepare/decoded.json",
+      "bytes": 472,
+      "sha256": "0ace185d7127314ae7806d5da14052fe9757438d1ddb637c3f1251c5e3cd549a"
+    },
+    {
+      "path": "live-campaign/incoming-prepare/receipt.json",
+      "bytes": 4385,
+      "sha256": "0364ed12bf1ccb2f3e22d30d8ad7eca347807c016f915aeba9bd55a5ad6bfc33"
+    },
+    {
+      "path": "live-campaign/incoming-prepare/source.py",
+      "bytes": 2593,
+      "sha256": "267957f0242890b5650af01cc5939e744ba72a7a9ad349af9ab36debaf79d77c"
+    },
+    {
+      "path": "live-campaign/incoming-prepare/stderr.original.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "live-campaign/incoming-prepare/stdout.original.txt",
+      "bytes": 432,
+      "sha256": "9517062ce9e70844ad88d06566da11e1c1ef67d903608c6b2be2cb10be5b7227"
+    },
+    {
+      "path": "live-campaign/incoming.audited.py",
+      "bytes": 2593,
+      "sha256": "267957f0242890b5650af01cc5939e744ba72a7a9ad349af9ab36debaf79d77c"
+    },
+    {
+      "path": "live-campaign/independent-final-guards/command.json",
+      "bytes": 38487,
+      "sha256": "966e24e55ee45530f41d822efe4343366bd3b6519fc200ffa1b50a2188cd2390"
+    },
+    {
+      "path": "live-campaign/independent-final-guards/decoded.json",
+      "bytes": 77706,
+      "sha256": "39192f44a0957c5925fa8c473e00751ed4f13e0b63c33a137f83679167b68f7a"
+    },
+    {
+      "path": "live-campaign/independent-final-guards/receipt.json",
+      "bytes": 38767,
+      "sha256": "1a068d720b00eba9e9e14e40e21909b7d7838683c10ed31bcda3dca256431f75"
+    },
+    {
+      "path": "live-campaign/independent-final-guards/result.json",
+      "bytes": 75873,
+      "sha256": "53df62700b98cb03e66c05457d6faa8a72d2557a9b37c9baa2aa2b559df7a875"
+    },
+    {
+      "path": "live-campaign/independent-final-guards/source.py",
+      "bytes": 28808,
+      "sha256": "75a58d00cd9474f2271228bebcb732a3686dc914c160b6299ad6a2cac074f6ce"
+    },
+    {
+      "path": "live-campaign/independent-final-guards/stderr.original.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "live-campaign/independent-final-guards/stdout.original.txt",
+      "bytes": 75874,
+      "sha256": "e74e2ee232724be7964a2cfecc753751ec31403e7b76c7d0f5f29f0fe223bcdc"
+    },
+    {
+      "path": "live-campaign/independent-poststage/command.json",
+      "bytes": 37630,
+      "sha256": "5dd78626f68dd0050bcf18d3f1e99c6cbfbe0239c55998cea228d1bc9cb00a14"
+    },
+    {
+      "path": "live-campaign/independent-poststage/decoded.json",
+      "bytes": 122678,
+      "sha256": "43630bb89d2cd1244dea0a79941601ba8f6acc1c6aec7c58ac5d53b473ebfc41"
+    },
+    {
+      "path": "live-campaign/independent-poststage/receipt.json",
+      "bytes": 37909,
+      "sha256": "7d8fadae26473e650095fc294a0fcc9285c54cc104d4aa276d5e24d24b0f334b"
+    },
+    {
+      "path": "live-campaign/independent-poststage/result.json",
+      "bytes": 121043,
+      "sha256": "81e7b1647467de0c2e962e27422371f02cc9bad36d7e1ec0dabfbc1ebc88e603"
+    },
+    {
+      "path": "live-campaign/independent-poststage/source.py",
+      "bytes": 27766,
+      "sha256": "16b35690dd16d0915ebbce3abd1fad072f400854891bb9626ac6e925292a4551"
+    },
+    {
+      "path": "live-campaign/independent-poststage/stderr.original.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "live-campaign/independent-poststage/stdout.original.txt",
+      "bytes": 121044,
+      "sha256": "aa181624319cc7f23705a3dfc1b86b7010469ef67f279ccb1f199d5a4d0c59f1"
+    },
+    {
+      "path": "live-campaign/independent-transfer-verification/command.json",
+      "bytes": 10748,
+      "sha256": "f6e719aa7bbfb19cc210f011c65231f8b255c61646abeb5aa6e08af994164c42"
+    },
+    {
+      "path": "live-campaign/independent-transfer-verification/decoded.json",
+      "bytes": 7241,
+      "sha256": "33dee458a26fde634572fbc06979fb2bde5f01545f54864b688954d4a419db75"
+    },
+    {
+      "path": "live-campaign/independent-transfer-verification/receipt.json",
+      "bytes": 11027,
+      "sha256": "70edc7d0f59c14374679f5e87d8fcb5720497f44ff54634c34709202c36838c0"
+    },
+    {
+      "path": "live-campaign/independent-transfer-verification/source.py",
+      "bytes": 7284,
+      "sha256": "ee2a187d626d220f5aec3baafc53cc3d4c71a826908db1be0305af0a48065d62"
+    },
+    {
+      "path": "live-campaign/independent-transfer-verification/stderr.original.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "live-campaign/independent-transfer-verification/stdout.original.txt",
+      "bytes": 5299,
+      "sha256": "cff1b74e5ab8a8be889bb54c47f808c94e4404e0a654a236de5a1d6c7160d673"
+    },
+    {
+      "path": "live-campaign/one-authorized-image-transfer/command.json",
+      "bytes": 6538,
+      "sha256": "21da3b90b25a1c54d336788cdc5cddf1a4105bef4d994118d635b27266df96e0"
+    },
+    {
+      "path": "live-campaign/one-authorized-image-transfer/decoded.json",
+      "bytes": 1485,
+      "sha256": "276bf6017d80d028cec7c4991af62f707b7bd0ef5e4fb308d7c05238760eb023"
+    },
+    {
+      "path": "live-campaign/one-authorized-image-transfer/receipt.json",
+      "bytes": 6818,
+      "sha256": "3ccf5a564864ade134a22937c9e739fdf72fdd26b8cf480ab7b6ab26cf588e86"
+    },
+    {
+      "path": "live-campaign/one-authorized-image-transfer/source.py",
+      "bytes": 4539,
+      "sha256": "66db631fba8a484f4c39a72891b78a4ace2c7670f56e125c12340ffde15a3d5e"
+    },
+    {
+      "path": "live-campaign/one-authorized-image-transfer/stderr.original.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "live-campaign/one-authorized-image-transfer/stdout.original.txt",
+      "bytes": 1285,
+      "sha256": "84863554584f5211af3668268f6d6f79b4e50a9a05f5e4161c077c2c2a6e1c9a"
+    },
+    {
+      "path": "live-campaign/one-authorized-square-call/command.json",
+      "bytes": 60677,
+      "sha256": "a1f4599e033693b02e6c237abb84fe4ecc4b1593266f3b4e722690c9b5dd9845"
+    },
+    {
+      "path": "live-campaign/one-authorized-square-call/decoded.json",
+      "bytes": 14348,
+      "sha256": "998f9d8c50936bb6ccabafdfb6fc6807a1df9351dfacbbf6c157335afb8335e3"
+    },
+    {
+      "path": "live-campaign/one-authorized-square-call/originals/capsule.before.original.bin",
+      "bytes": 4152,
+      "sha256": "0d24c306b7e1fcd4eee1d2dc77637fe1eafa91816e849fd5c134e683bf3f3504"
+    },
+    {
+      "path": "live-campaign/one-authorized-square-call/originals/capsule.original.bin",
+      "bytes": 4152,
+      "sha256": "597176281722ee2cc333f3f16ae4658df46cd2aa748f46ba6fb99fae49a40f0b"
+    },
+    {
+      "path": "live-campaign/one-authorized-square-call/originals/capsule.preparation.bin",
+      "bytes": 4152,
+      "sha256": "0d24c306b7e1fcd4eee1d2dc77637fe1eafa91816e849fd5c134e683bf3f3504"
+    },
+    {
+      "path": "live-campaign/one-authorized-square-call/originals/client.stderr.original.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "live-campaign/one-authorized-square-call/originals/client.stdout.original.txt",
+      "bytes": 416,
+      "sha256": "dd04d2234d8840fc49fea46084feafd0105010616f80bad9d8a0e071c1471b5a"
+    },
+    {
+      "path": "live-campaign/one-authorized-square-call/originals/color.original.bin",
+      "bytes": 4096,
+      "sha256": "6e9af8e8b6576b979aa78816d44bd3b0ffd31b70e169a982e83736d63ab91729"
+    },
+    {
+      "path": "live-campaign/one-authorized-square-call/originals/context.preparation.json",
+      "bytes": 771,
+      "sha256": "36667a98ec473ef7793451c7bae1ac52593929bbfa149e0fc2554a47a2252e5d"
+    },
+    {
+      "path": "live-campaign/one-authorized-square-call/originals/execution-card.original.json",
+      "bytes": 17411,
+      "sha256": "1cc193984a39a8c161fff55c2c9002da28740ebaddf367c623696b585125eae7"
+    },
+    {
+      "path": "live-campaign/one-authorized-square-call/originals/execution.receipt.original.json",
+      "bytes": 12886,
+      "sha256": "d362c0c24456df1e3510984e1e1f3fa4d08a57e0eb9cafa8110f53c96b678d3f"
+    },
+    {
+      "path": "live-campaign/one-authorized-square-call/originals/fire-authorization.original.json",
+      "bytes": 271,
+      "sha256": "40fc686c936296f7ee5838b42e8867d9a389a08d370d00af08eee24190803380"
+    },
+    {
+      "path": "live-campaign/one-authorized-square-call/originals/invocation.intent.original.json",
+      "bytes": 723,
+      "sha256": "ddaaa35b57b79767cfb712a14567b7148938904bdad556ecb4fbd080a1e4bd82"
+    },
+    {
+      "path": "live-campaign/one-authorized-square-call/originals/kernel.after.original.txt",
+      "bytes": 46735,
+      "sha256": "d77b0d676c1a2b54c580791c969a8c854ffd97b2e92b5bede7db226bd7e741cf"
+    },
+    {
+      "path": "live-campaign/one-authorized-square-call/originals/kernel.before.original.txt",
+      "bytes": 46735,
+      "sha256": "d77b0d676c1a2b54c580791c969a8c854ffd97b2e92b5bede7db226bd7e741cf"
+    },
+    {
+      "path": "live-campaign/one-authorized-square-call/originals/kernel.preparation.original.txt",
+      "bytes": 46735,
+      "sha256": "d77b0d676c1a2b54c580791c969a8c854ffd97b2e92b5bede7db226bd7e741cf"
+    },
+    {
+      "path": "live-campaign/one-authorized-square-call/originals/originals.seal.json",
+      "bytes": 4217,
+      "sha256": "141673c248ac4485bf794bad68589fa87d1061239c116fcbffb3df8a053f596e"
+    },
+    {
+      "path": "live-campaign/one-authorized-square-call/originals/response.original.bin",
+      "bytes": 4268,
+      "sha256": "3475715ca27582f82c392d92ee88e1fdb71383646ab480018fa8edc0c82a657f"
+    },
+    {
+      "path": "live-campaign/one-authorized-square-call/originals/source.post.original.txt",
+      "bytes": 243,
+      "sha256": "4219fe8dd303374b0aedbc9219a32e328a1fe6432346559c148fdb33ff0db91c"
+    },
+    {
+      "path": "live-campaign/one-authorized-square-call/originals/source.pre.original.txt",
+      "bytes": 243,
+      "sha256": "2967348bcf2f2e85ff1bbd56848283df9a187839acf43a5c4a48c6fb4b76f555"
+    },
+    {
+      "path": "live-campaign/one-authorized-square-call/originals/source.preparation.original.txt",
+      "bytes": 243,
+      "sha256": "2967348bcf2f2e85ff1bbd56848283df9a187839acf43a5c4a48c6fb4b76f555"
+    },
+    {
+      "path": "live-campaign/one-authorized-square-call/receipt.json",
+      "bytes": 60956,
+      "sha256": "b8dba4bcdd66976243db7d251962aa5d0e41864a77661adcd5d8ad5c676545b1"
+    },
+    {
+      "path": "live-campaign/one-authorized-square-call/result.json",
+      "bytes": 13337,
+      "sha256": "11549c4124c9303e5c6d6f20ebcf8bedaf37e3c37863ba44895f2b05a9214a33"
+    },
+    {
+      "path": "live-campaign/one-authorized-square-call/source.py",
+      "bytes": 44082,
+      "sha256": "f4a7788865e607a560c3188bd51075886d50cfbfbf8a90bfe87c48304ef8ed7e"
+    },
+    {
+      "path": "live-campaign/one-authorized-square-call/stderr.original.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "live-campaign/one-authorized-square-call/stdout.original.txt",
+      "bytes": 13338,
+      "sha256": "fa65b7ac1e85881553763def42683d91cc4f5ba24e4d9ca32722dccc1df199fc"
+    },
+    {
+      "path": "live-campaign/one-shot-execution-card.corrected.OFFLINE-ONLY.json",
+      "bytes": 17411,
+      "sha256": "1cc193984a39a8c161fff55c2c9002da28740ebaddf367c623696b585125eae7"
+    },
+    {
+      "path": "live-campaign/one-shot-execution-card.json",
+      "bytes": 17666,
+      "sha256": "4f6a2d59bd754e747c59c0ed3585e681a647756806a2ce446a30ef72346277d2"
+    },
+    {
+      "path": "live-campaign/operator-readiness.json",
+      "bytes": 643,
+      "sha256": "6698a3396cbe09cdde3958f3210b284b7487212fa34243c6320f3aec74edfbb2"
+    },
+    {
+      "path": "live-campaign/origins.json",
+      "bytes": 454,
+      "sha256": "cbc4710f0bbc9c7ec6231636e0cdbaa2dd9db4d26495ebc2adf4226e93bcb3d8"
+    },
+    {
+      "path": "live-campaign/poststage.audited.py",
+      "bytes": 27766,
+      "sha256": "16b35690dd16d0915ebbce3abd1fad072f400854891bb9626ac6e925292a4551"
+    },
+    {
+      "path": "live-campaign/pre07-launch-controller-stop.json",
+      "bytes": 873,
+      "sha256": "3f4e682501ccfedbe3bf1c6306ea2f45b7c3d6a9da97f0510802cba5bc4bd4fd"
+    },
+    {
+      "path": "live-campaign/pre07-live-evaluation.json",
+      "bytes": 1312,
+      "sha256": "ea949e926c0ed6947c2f3b16d28ee0c4d85777ea4348f52a646e28750e2cdb8f"
+    },
+    {
+      "path": "live-campaign/pre07-stop-seal.json",
+      "bytes": 15909,
+      "sha256": "d903701627bfa9e2eb02818efa121544717d64fbb6a3781f554becbea843cf54"
+    },
+    {
+      "path": "live-campaign/preserve-originals-readonly-retrieval/command.json",
+      "bytes": 3027,
+      "sha256": "5977a737931df6a5b08f06c1cf558110b8bbef5bcd17d41e5a13cefd93d53a3f"
+    },
+    {
+      "path": "live-campaign/preserve-originals-readonly-retrieval/decoded.json",
+      "bytes": 264697,
+      "sha256": "06c875153068d2c23068cc87dd3179ec98dc0211aad0ee040ba92ee2694c4dcb"
+    },
+    {
+      "path": "live-campaign/preserve-originals-readonly-retrieval/receipt.json",
+      "bytes": 3307,
+      "sha256": "dddd46841f436e2c4ff020c9c0db8088114f0faceb0283ff7ba0669516655c3d"
+    },
+    {
+      "path": "live-campaign/preserve-originals-readonly-retrieval/source.py",
+      "bytes": 1880,
+      "sha256": "8e043718a5642d580004d6540fc7ae3729151be23db9b0787105c09153315c28"
+    },
+    {
+      "path": "live-campaign/preserve-originals-readonly-retrieval/stderr.original.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "live-campaign/preserve-originals-readonly-retrieval/stdout.original.txt",
+      "bytes": 264283,
+      "sha256": "3f69555ed383f475aade3f146bf6a4052f7e623607b181315676474a1a223c78"
+    },
+    {
+      "path": "live-campaign/prior-custom.cfg",
+      "bytes": 9749,
+      "sha256": "ac60694d5e31263d080dd6900ae3ff55feeef3f9e6b9e87c8c3330990d200f59"
+    },
+    {
+      "path": "live-campaign/protected-preparation/command.json",
+      "bytes": 22134,
+      "sha256": "40b55744915f3b58b9e8f6f69d88967d151af3db9dd4ce24cdf84d9d97dc66d6"
+    },
+    {
+      "path": "live-campaign/protected-preparation/decoded.json",
+      "bytes": 12178,
+      "sha256": "9629f68712223b69150ae53e2fc13d22912a167480d855152424c6ec4845b2d9"
+    },
+    {
+      "path": "live-campaign/protected-preparation/receipt.json",
+      "bytes": 22414,
+      "sha256": "1f8fd8a2aa8f14018fee803003336a483efa4ce61b220c38d6f09ad9bbfcdbfa"
+    },
+    {
+      "path": "live-campaign/protected-preparation/result.json",
+      "bytes": 11315,
+      "sha256": "a18088d8c4b2d02196fef9ffbbed32881c37d7c2ab1118e3e27605fec63cd5fa"
+    },
+    {
+      "path": "live-campaign/protected-preparation/source.py",
+      "bytes": 17727,
+      "sha256": "b863bd2cac42366fb3c3d3088d695192f018478efd8bb34bd4a6b4c84622cc65"
+    },
+    {
+      "path": "live-campaign/protected-preparation/stderr.original.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "live-campaign/protected-preparation/stdout.original.txt",
+      "bytes": 11316,
+      "sha256": "01f5e3ddb6c24be0467d497d703354a53dd5e5166fa2a09bc2d092acae7f3dd4"
+    },
+    {
+      "path": "live-campaign/protected.audited.py",
+      "bytes": 17727,
+      "sha256": "b863bd2cac42366fb3c3d3088d695192f018478efd8bb34bd4a6b4c84622cc65"
+    },
+    {
+      "path": "live-campaign/renewed-authorization.json",
+      "bytes": 366,
+      "sha256": "e4cfb7b54be405935e0f2fa5394099b2e24069bb0e0ba58cffae87b4693beb75"
+    },
+    {
+      "path": "live-campaign/renewed-immediate-square-precheck/command.json",
+      "bytes": 34769,
+      "sha256": "d517d559a081863dd7a2f986f362d9c42046d8d0c3c0e85d564f7d74c1da525d"
+    },
+    {
+      "path": "live-campaign/renewed-immediate-square-precheck/decoded.json",
+      "bytes": 59747,
+      "sha256": "41a5484d9cac6f1493a5163208269eef0808021bd7a238533cd07f0808501cb8"
+    },
+    {
+      "path": "live-campaign/renewed-immediate-square-precheck/receipt.json",
+      "bytes": 35049,
+      "sha256": "264bec4a34f5b16dbe750db05a2da9e942a0eb66b1a3c21d662a8c205069c0ad"
+    },
+    {
+      "path": "live-campaign/renewed-immediate-square-precheck/result.json",
+      "bytes": 59300,
+      "sha256": "77189bf6f9bf4350e5f36ba4b469fbd050d7e542740a1f28e44ad822f1e627ff"
+    },
+    {
+      "path": "live-campaign/renewed-immediate-square-precheck/source.py",
+      "bytes": 25913,
+      "sha256": "6ecf3c93cd017d2f797592737021d65690767b2ddfba125d45c9f5382613b8dc"
+    },
+    {
+      "path": "live-campaign/renewed-immediate-square-precheck/stderr.original.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "live-campaign/renewed-immediate-square-precheck/stdout.original.txt",
+      "bytes": 59301,
+      "sha256": "e338b766a7f4c46599fd91a4698e19d86cd792267aec84ebc8d90d5fb92c176e"
+    },
+    {
+      "path": "live-campaign/square-dispatch-intent.json",
+      "bytes": 194,
+      "sha256": "e3a0ab50cec9527cffa9a261bd969495ae8e1fa9bc2101e891eccc01807d7eba"
+    },
+    {
+      "path": "live-campaign/square-live-result.json",
+      "bytes": 16287,
+      "sha256": "a145f025053ce5fe632d591dff68514a16eb6d2ca376bf1bf5cddcad24b0f8d8"
+    },
+    {
+      "path": "live-campaign/stage/command.json",
+      "bytes": 53283,
+      "sha256": "e47c6eb5da79afb551d6665da307df7b6264fd9de1b34046d5fe0e68801a0dd0"
+    },
+    {
+      "path": "live-campaign/stage/decoded.json",
+      "bytes": 127365,
+      "sha256": "10f303ebab359e03eed71206d6b74caa7d05a0a3a9c8b1d611dc5fdd82ce2791"
+    },
+    {
+      "path": "live-campaign/stage/receipt.json",
+      "bytes": 53562,
+      "sha256": "361a18dd84dcfbf339037f4d76f73c5487ccb9b6992fdec0ab90fe635d353b3b"
+    },
+    {
+      "path": "live-campaign/stage/result.json",
+      "bytes": 125542,
+      "sha256": "b330656fe5fa430ee01509509fd27bb7b43a7303958294f68cf99ffbad5e40b7"
+    },
+    {
+      "path": "live-campaign/stage/source.py",
+      "bytes": 40172,
+      "sha256": "22a9cc1b05ef041e17d6b146ee8a38461cb209de77c2a07dff3881a04aa2e536"
+    },
+    {
+      "path": "live-campaign/stage/stderr.original.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "live-campaign/stage/stdout.original.txt",
+      "bytes": 125543,
+      "sha256": "a06116edfc5498cecf9760b1ae78b8309a59d6036deb0258ca8c908ec982a098"
+    },
+    {
+      "path": "live-campaign/stage.audited.py",
+      "bytes": 40172,
+      "sha256": "22a9cc1b05ef041e17d6b146ee8a38461cb209de77c2a07dff3881a04aa2e536"
+    },
+    {
+      "path": "live-campaign/staged-firstload-pending.json",
+      "bytes": 478,
+      "sha256": "363bcc731ec2524cf026876428da517df8e6b994c8084fd6f2e7f1099ab11b7d"
+    },
+    {
+      "path": "live-campaign/staging-seal.json",
+      "bytes": 8851,
+      "sha256": "1d9e32204491a1b3e92b5f3ea2cef3c3f5783f975bd487161d9ef2d6b0438f41"
+    },
+    {
+      "path": "live-campaign/stock-preflight.py",
+      "bytes": 25687,
+      "sha256": "749544fb921e20d642cebb837bda120ee126ffc2b097fb47ef6ae944e26bf21a"
+    },
+    {
+      "path": "live-campaign/transfer-complete-verified.json",
+      "bytes": 3621,
+      "sha256": "c38cb6056b40d30d50347c418cd07328a6e24e659e8636654f820ba633294e44"
+    },
+    {
+      "path": "live-campaign/witness-authority.json",
+      "bytes": 363,
+      "sha256": "5749d1064c8c9e0d747aa2991cc41feaf6e6b0e52c8b26b3d0be3f0f1f399dd3"
+    },
+    {
+      "path": "square-readback-derived-5x.png",
+      "bytes": 467,
+      "sha256": "11aac15f612ff1d6d54cb021fac0cd197e24ac2b382d5878f7367a1c730b546d"
+    }
+  ],
+  "count": 139,
+  "created_utc": "2026-10-06T08:58:10.302889+00:00"
+}

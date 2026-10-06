@@ -1,0 +1,50 @@
+{
+  "usr/bin/sh": {
+    "payload_member": "usr/sbin/watchdog",
+    "sha256": "397c63c0c5a1b4e8c6c187b741e03ff6dc96921513bb3b6a651030a907475b34",
+    "inode": 666426,
+    "elf": "ELF32 little-endian i386"
+  },
+  "usr/bin/sha256sum": {
+    "payload_member": "usr/sbin/watchdog",
+    "sha256": "397c63c0c5a1b4e8c6c187b741e03ff6dc96921513bb3b6a651030a907475b34",
+    "inode": 666426,
+    "elf": "ELF32 little-endian i386"
+  },
+  "usr/bin/uname": {
+    "payload_member": "usr/sbin/watchdog",
+    "sha256": "397c63c0c5a1b4e8c6c187b741e03ff6dc96921513bb3b6a651030a907475b34",
+    "inode": 666426,
+    "elf": "ELF32 little-endian i386"
+  },
+  "usr/bin/readlink": {
+    "payload_member": "usr/sbin/watchdog",
+    "sha256": "397c63c0c5a1b4e8c6c187b741e03ff6dc96921513bb3b6a651030a907475b34",
+    "inode": 666426,
+    "elf": "ELF32 little-endian i386"
+  },
+  "usr/bin/grep": {
+    "payload_member": "usr/sbin/watchdog",
+    "sha256": "397c63c0c5a1b4e8c6c187b741e03ff6dc96921513bb3b6a651030a907475b34",
+    "inode": 666426,
+    "elf": "ELF32 little-endian i386"
+  },
+  "usr/bin/cat": {
+    "payload_member": "usr/sbin/watchdog",
+    "sha256": "397c63c0c5a1b4e8c6c187b741e03ff6dc96921513bb3b6a651030a907475b34",
+    "inode": 666426,
+    "elf": "ELF32 little-endian i386"
+  },
+  "usr/bin/sleep": {
+    "payload_member": "usr/sbin/watchdog",
+    "sha256": "397c63c0c5a1b4e8c6c187b741e03ff6dc96921513bb3b6a651030a907475b34",
+    "inode": 666426,
+    "elf": "ELF32 little-endian i386"
+  },
+  "usr/sbin/insmod": {
+    "payload_member": "usr/sbin/watchdog",
+    "sha256": "397c63c0c5a1b4e8c6c187b741e03ff6dc96921513bb3b6a651030a907475b34",
+    "inode": 666426,
+    "elf": "ELF32 little-endian i386"
+  }
+}

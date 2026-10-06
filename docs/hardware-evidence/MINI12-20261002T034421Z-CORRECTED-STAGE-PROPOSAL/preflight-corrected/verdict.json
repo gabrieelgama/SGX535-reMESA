@@ -1,0 +1,11 @@
+{
+  "classification": "PASS RAW CAPTURE ONLY",
+  "boot_id": "10d6abfa-e7a8-4311-97ae-213f503cee20",
+  "mode": "stock_preparation",
+  "sgx_authorized": false,
+  "boot_authorized": false,
+  "first_owner": "NOT QUALIFIED BY TIMING ALONE",
+  "full_recovery": "NOT QUALIFIED BY TIMING ALONE",
+  "guards_passed": 57,
+  "guard_count": 57
+}

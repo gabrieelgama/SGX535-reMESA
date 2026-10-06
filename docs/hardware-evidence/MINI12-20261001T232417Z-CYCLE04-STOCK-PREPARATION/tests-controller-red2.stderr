@@ -1,0 +1,23 @@
+..FF...........
+======================================================================
+FAIL: test_capture_controller_claims_attempt_before_connection_and_never_retries (test_frozen_first_load_capture_v2.CaptureV2Tests.test_capture_controller_claims_attempt_before_connection_and_never_retries)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 58, in test_capture_controller_claims_attempt_before_connection_and_never_retries
+    self.assertIsNotNone(v2);self.assertTrue(callable(getattr(v2,'capture_once',None)),'single-attempt controller missing')
+                             ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : single-attempt controller missing
+
+======================================================================
+FAIL: test_controller_preserves_partial_timeout_evidence (test_frozen_first_load_capture_v2.CaptureV2Tests.test_controller_preserves_partial_timeout_evidence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 65, in test_controller_preserves_partial_timeout_evidence
+    self.assertIsNotNone(v2);self.assertTrue(callable(getattr(v2,'capture_once',None)),'single-attempt controller missing')
+                             ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : single-attempt controller missing
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.033s
+
+FAILED (failures=2)

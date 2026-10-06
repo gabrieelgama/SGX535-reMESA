@@ -1,0 +1,6 @@
+{
+  "prior1": "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/live-fire3-preparation-20261006T043349Z",
+  "prior2": "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/live-fire3-fresh-transfer-20261006T052417Z/profiles",
+  "old": "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/live-preparation",
+  "base": "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z"
+}

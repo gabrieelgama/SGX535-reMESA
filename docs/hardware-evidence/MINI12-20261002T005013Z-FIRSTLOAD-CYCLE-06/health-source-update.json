@@ -1,0 +1,7 @@
+{
+  "reference_cycle": "docs/hardware-evidence/MINI12-20261002T001828Z-FIRSTLOAD-CYCLE-05",
+  "health_source_sha256": "5abe09ed15609cc2ad409d909d4785953275656690632700c869fc5a48d3b7ee",
+  "only_template_change": "embedded tested health classifier and its source hash; rest of AST exact",
+  "fresh_prior_boot_id": "MUST BE SET FROM NEW PREFLIGHT",
+  "archived_capture_sources": "UNCHANGED"
+}

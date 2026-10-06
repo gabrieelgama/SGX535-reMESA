@@ -1,0 +1,23 @@
+..........FF.....
+======================================================================
+FAIL: test_receipt_rejects_target_duration_outside_host_interval (test_frozen_first_load_capture_v2.CaptureV2Tests.test_receipt_rejects_target_duration_outside_host_interval) (host_duration=0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 60, in test_receipt_rejects_target_duration_outside_host_interval
+    with self.subTest(host_duration=host_duration),self.assertRaises(ValueError):
+                                                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_receipt_rejects_target_duration_outside_host_interval (test_frozen_first_load_capture_v2.CaptureV2Tests.test_receipt_rejects_target_duration_outside_host_interval) (host_duration=0.99)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 60, in test_receipt_rejects_target_duration_outside_host_interval
+    with self.subTest(host_duration=host_duration),self.assertRaises(ValueError):
+                                                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.055s
+
+FAILED (failures=2)

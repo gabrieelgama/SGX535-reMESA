@@ -1,0 +1,20 @@
+{
+  "classification": "PASS RAW CAPTURE ONLY",
+  "boot_id": "0103242d-9a46-4d66-8a61-42b0c44e00c6",
+  "mode": "stock_preparation",
+  "sgx_authorized": false,
+  "boot_authorized": false,
+  "first_owner": "NOT QUALIFIED BY TIMING ALONE",
+  "full_recovery": "NOT QUALIFIED BY TIMING ALONE",
+  "existing_stage_receipts": {
+    "classification": "PASS PROVIDED EXISTING FILE RECEIPTS ONLY",
+    "sgx_authorized": false,
+    "boot_authorized": false
+  },
+  "guards_passed": 54,
+  "stock_boot_age_seconds": 1430.18,
+  "capture_uptime_end": 1436.84,
+  "host_duration_seconds": 9.756501402007416,
+  "target_duration_seconds": 6.660610613000017,
+  "historical_cycle03_repaired": false
+}

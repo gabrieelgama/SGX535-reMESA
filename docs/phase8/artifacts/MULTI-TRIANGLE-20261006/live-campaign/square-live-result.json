@@ -1,0 +1,1201 @@
+{
+  "classification": "MULTI_TRIANGLE_ESTABLISHED",
+  "timestamp_utc": "2026-10-06T08:56:45.412589+00:00",
+  "boot_id": "83ee4ff8-a7f1-4468-b348-d10627f38d17",
+  "driver": {
+    "path": "/home/gama/sgx535-offline/phase8-first-3d-offline-20261006T072942Z/build/module/gma500_gfx.ko",
+    "bytes": 250864,
+    "sha256": "c21c26c567fc7676e28f4f732cb8cd3c7af1a7360560b58a310789523dc9454d",
+    "build_id": "8be2777b2a79eaa6651b89d19faf4d68cdcdc460",
+    "loaded_note_sha256": "35ec9f4e576a83a3990ebda4f8aee5869c0e4ea32e1e35969fa48abffa7dc832",
+    "abi": "ELF32/i386",
+    "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 ",
+    "dependencies": "drm,drm_kms_helper,sgx535_provenance,video,i2c-algo-bit",
+    "versioned_imports": 253,
+    "missing_imports": [],
+    "crc_mismatches": {},
+    "unversioned_undefined": [],
+    "module_layout": "0xb84efb99",
+    "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+    "qualification": "PASS"
+  },
+  "observer": {
+    "path": "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/build/observer/sgx535_provenance.ko",
+    "bytes": 26284,
+    "sha256": "2e35e863d51dbc1d407feef08f08bb2edc6390af621a0f173a9b1a73ec76158a",
+    "build_id": "f11d3abb072caa4e1d32836ef92ce201e9c9d126",
+    "loaded_note_sha256": "6afbac1cf48a211135e2a4b4ffc30f96ace64f6d397071595bbc328966bb8af0",
+    "abi": "ELF32/i386",
+    "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 ",
+    "dependencies": "",
+    "versioned_imports": 38,
+    "missing_imports": [],
+    "crc_mismatches": {},
+    "unversioned_undefined": [],
+    "module_layout": "0xb84efb99",
+    "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+    "qualification": "PASS"
+  },
+  "image": {
+    "path": "/boot/initrd.img-5.10.240-antix.1-486-smp-sgx535-firstload-8be2777b2a79eaa6651b89d19faf4d68cdcdc460-0e45ad4c",
+    "bytes": 50816648,
+    "sha256": "0e45ad4c9ec3eaa891253ea319348286c869644a3ba6c9dba54de39d92bd1e7d"
+  },
+  "invocations": 1,
+  "client_launches": 1,
+  "ioctl_attempts": 1,
+  "client_exit_status": 0,
+  "ioctl_result": 0,
+  "operation_errno": 0,
+  "outcome": 2,
+  "phase": 9,
+  "accepted_ledger": 7,
+  "TA_completion": "CONFIRMED",
+  "end_render": "CONFIRMED",
+  "3D_memory_free": "CONFIRMED",
+  "retirement": "CONFIRMED",
+  "same_operation_attribution": "CONFIRMED",
+  "origin_checks": {
+    "same_boot": true,
+    "same_driver": true,
+    "same_observer": true,
+    "same_image": true,
+    "loaded_module_notes_unchanged": true,
+    "launch_exactly_one": true,
+    "client_exit_zero": true,
+    "no_preservation_errors": true,
+    "source_prepared": true,
+    "source_closed": true,
+    "source_pre_matches_prepared": true,
+    "capsule_before_unused": true,
+    "saved_byte_agreement": true,
+    "kernel_health": true,
+    "seal_complete": true,
+    "exact_square_oracle": true
+  },
+  "capsule_agreement": {
+    "agreement": "CONFIRMED",
+    "reasons": [],
+    "capsule_terminal_complete": true,
+    "observed_events": 7,
+    "phase": 9,
+    "service_result": 0,
+    "syscall_result": 0,
+    "instruction": "STOP / NO RETRY",
+    "producer_origin": "NOT ESTABLISHED BY SAVED BYTES ALONE",
+    "hardware_attribution": "UNKNOWN",
+    "triangle_established": false,
+    "sgx_execution_authorized": false
+  },
+  "source_pre": {
+    "supplied_record_consistency": "CONFIRMED",
+    "interval": "PREPARED, MUST REMAIN CONTINUOUS",
+    "hardware_attribution": "UNKNOWN WITHOUT VERIFIED LIVE BOOT/PRODUCER PROVENANCE",
+    "triangle": "NOT ESTABLISHED BY SOURCE WITNESS",
+    "errors": [],
+    "values": {
+      "state": 0,
+      "reasons": 0,
+      "producers_active": 0,
+      "driver_attached": 1,
+      "capsule_state": 0,
+      "boot": 3,
+      "prepared": 1,
+      "asserted_reset": 127,
+      "released_reset": 0,
+      "startup_pending": 0,
+      "startup_reads": 0,
+      "startup_fault": 0,
+      "startup_autonomous": 0,
+      "delayed_exclusion": "STARTUP_LIFECYCLE"
+    }
+  },
+  "source_post": {
+    "supplied_record_consistency": "CONFIRMED",
+    "interval": "CLOSED",
+    "hardware_attribution": "UNKNOWN WITHOUT VERIFIED LIVE BOOT/PRODUCER PROVENANCE",
+    "triangle": "NOT ESTABLISHED BY SOURCE WITNESS",
+    "errors": [],
+    "values": {
+      "state": 3,
+      "reasons": 0,
+      "producers_active": 0,
+      "driver_attached": 1,
+      "capsule_state": 4,
+      "boot": 3,
+      "prepared": 1,
+      "asserted_reset": 127,
+      "released_reset": 0,
+      "startup_pending": 0,
+      "startup_reads": 0,
+      "startup_fault": 0,
+      "startup_autonomous": 0,
+      "delayed_exclusion": "STARTUP_LIFECYCLE"
+    }
+  },
+  "kernel_health": {
+    "classification": "PASS WITH BOUNDED STOCK DIAGNOSTICS",
+    "faults": [],
+    "stock_diagnostics": {
+      "unsigned_drm_loader_notice": 1,
+      "backlight_zero_register": 1,
+      "acpi_powerbutton_error": 2,
+      "acpi_powerbutton_warning": 2,
+      "powerbutton_probe": 1,
+      "tiny_powerbutton_probe": 1
+    }
+  },
+  "readback": {
+    "classification": "EXACT_CPU_QUAD_ORACLE",
+    "nonzero_pixels": 256,
+    "magenta_pixels": 256,
+    "bbox_inclusive": [
+      8,
+      8,
+      23,
+      23
+    ],
+    "unique_values": [
+      "0x00000000",
+      "0xffff00ff"
+    ],
+    "nonzero_coordinates": [
+      [
+        8,
+        8
+      ],
+      [
+        9,
+        8
+      ],
+      [
+        10,
+        8
+      ],
+      [
+        11,
+        8
+      ],
+      [
+        12,
+        8
+      ],
+      [
+        13,
+        8
+      ],
+      [
+        14,
+        8
+      ],
+      [
+        15,
+        8
+      ],
+      [
+        16,
+        8
+      ],
+      [
+        17,
+        8
+      ],
+      [
+        18,
+        8
+      ],
+      [
+        19,
+        8
+      ],
+      [
+        20,
+        8
+      ],
+      [
+        21,
+        8
+      ],
+      [
+        22,
+        8
+      ],
+      [
+        23,
+        8
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        9
+      ],
+      [
+        10,
+        9
+      ],
+      [
+        11,
+        9
+      ],
+      [
+        12,
+        9
+      ],
+      [
+        13,
+        9
+      ],
+      [
+        14,
+        9
+      ],
+      [
+        15,
+        9
+      ],
+      [
+        16,
+        9
+      ],
+      [
+        17,
+        9
+      ],
+      [
+        18,
+        9
+      ],
+      [
+        19,
+        9
+      ],
+      [
+        20,
+        9
+      ],
+      [
+        21,
+        9
+      ],
+      [
+        22,
+        9
+      ],
+      [
+        23,
+        9
+      ],
+      [
+        8,
+        10
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        11,
+        10
+      ],
+      [
+        12,
+        10
+      ],
+      [
+        13,
+        10
+      ],
+      [
+        14,
+        10
+      ],
+      [
+        15,
+        10
+      ],
+      [
+        16,
+        10
+      ],
+      [
+        17,
+        10
+      ],
+      [
+        18,
+        10
+      ],
+      [
+        19,
+        10
+      ],
+      [
+        20,
+        10
+      ],
+      [
+        21,
+        10
+      ],
+      [
+        22,
+        10
+      ],
+      [
+        23,
+        10
+      ],
+      [
+        8,
+        11
+      ],
+      [
+        9,
+        11
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        11,
+        11
+      ],
+      [
+        12,
+        11
+      ],
+      [
+        13,
+        11
+      ],
+      [
+        14,
+        11
+      ],
+      [
+        15,
+        11
+      ],
+      [
+        16,
+        11
+      ],
+      [
+        17,
+        11
+      ],
+      [
+        18,
+        11
+      ],
+      [
+        19,
+        11
+      ],
+      [
+        20,
+        11
+      ],
+      [
+        21,
+        11
+      ],
+      [
+        22,
+        11
+      ],
+      [
+        23,
+        11
+      ],
+      [
+        8,
+        12
+      ],
+      [
+        9,
+        12
+      ],
+      [
+        10,
+        12
+      ],
+      [
+        11,
+        12
+      ],
+      [
+        12,
+        12
+      ],
+      [
+        13,
+        12
+      ],
+      [
+        14,
+        12
+      ],
+      [
+        15,
+        12
+      ],
+      [
+        16,
+        12
+      ],
+      [
+        17,
+        12
+      ],
+      [
+        18,
+        12
+      ],
+      [
+        19,
+        12
+      ],
+      [
+        20,
+        12
+      ],
+      [
+        21,
+        12
+      ],
+      [
+        22,
+        12
+      ],
+      [
+        23,
+        12
+      ],
+      [
+        8,
+        13
+      ],
+      [
+        9,
+        13
+      ],
+      [
+        10,
+        13
+      ],
+      [
+        11,
+        13
+      ],
+      [
+        12,
+        13
+      ],
+      [
+        13,
+        13
+      ],
+      [
+        14,
+        13
+      ],
+      [
+        15,
+        13
+      ],
+      [
+        16,
+        13
+      ],
+      [
+        17,
+        13
+      ],
+      [
+        18,
+        13
+      ],
+      [
+        19,
+        13
+      ],
+      [
+        20,
+        13
+      ],
+      [
+        21,
+        13
+      ],
+      [
+        22,
+        13
+      ],
+      [
+        23,
+        13
+      ],
+      [
+        8,
+        14
+      ],
+      [
+        9,
+        14
+      ],
+      [
+        10,
+        14
+      ],
+      [
+        11,
+        14
+      ],
+      [
+        12,
+        14
+      ],
+      [
+        13,
+        14
+      ],
+      [
+        14,
+        14
+      ],
+      [
+        15,
+        14
+      ],
+      [
+        16,
+        14
+      ],
+      [
+        17,
+        14
+      ],
+      [
+        18,
+        14
+      ],
+      [
+        19,
+        14
+      ],
+      [
+        20,
+        14
+      ],
+      [
+        21,
+        14
+      ],
+      [
+        22,
+        14
+      ],
+      [
+        23,
+        14
+      ],
+      [
+        8,
+        15
+      ],
+      [
+        9,
+        15
+      ],
+      [
+        10,
+        15
+      ],
+      [
+        11,
+        15
+      ],
+      [
+        12,
+        15
+      ],
+      [
+        13,
+        15
+      ],
+      [
+        14,
+        15
+      ],
+      [
+        15,
+        15
+      ],
+      [
+        16,
+        15
+      ],
+      [
+        17,
+        15
+      ],
+      [
+        18,
+        15
+      ],
+      [
+        19,
+        15
+      ],
+      [
+        20,
+        15
+      ],
+      [
+        21,
+        15
+      ],
+      [
+        22,
+        15
+      ],
+      [
+        23,
+        15
+      ],
+      [
+        8,
+        16
+      ],
+      [
+        9,
+        16
+      ],
+      [
+        10,
+        16
+      ],
+      [
+        11,
+        16
+      ],
+      [
+        12,
+        16
+      ],
+      [
+        13,
+        16
+      ],
+      [
+        14,
+        16
+      ],
+      [
+        15,
+        16
+      ],
+      [
+        16,
+        16
+      ],
+      [
+        17,
+        16
+      ],
+      [
+        18,
+        16
+      ],
+      [
+        19,
+        16
+      ],
+      [
+        20,
+        16
+      ],
+      [
+        21,
+        16
+      ],
+      [
+        22,
+        16
+      ],
+      [
+        23,
+        16
+      ],
+      [
+        8,
+        17
+      ],
+      [
+        9,
+        17
+      ],
+      [
+        10,
+        17
+      ],
+      [
+        11,
+        17
+      ],
+      [
+        12,
+        17
+      ],
+      [
+        13,
+        17
+      ],
+      [
+        14,
+        17
+      ],
+      [
+        15,
+        17
+      ],
+      [
+        16,
+        17
+      ],
+      [
+        17,
+        17
+      ],
+      [
+        18,
+        17
+      ],
+      [
+        19,
+        17
+      ],
+      [
+        20,
+        17
+      ],
+      [
+        21,
+        17
+      ],
+      [
+        22,
+        17
+      ],
+      [
+        23,
+        17
+      ],
+      [
+        8,
+        18
+      ],
+      [
+        9,
+        18
+      ],
+      [
+        10,
+        18
+      ],
+      [
+        11,
+        18
+      ],
+      [
+        12,
+        18
+      ],
+      [
+        13,
+        18
+      ],
+      [
+        14,
+        18
+      ],
+      [
+        15,
+        18
+      ],
+      [
+        16,
+        18
+      ],
+      [
+        17,
+        18
+      ],
+      [
+        18,
+        18
+      ],
+      [
+        19,
+        18
+      ],
+      [
+        20,
+        18
+      ],
+      [
+        21,
+        18
+      ],
+      [
+        22,
+        18
+      ],
+      [
+        23,
+        18
+      ],
+      [
+        8,
+        19
+      ],
+      [
+        9,
+        19
+      ],
+      [
+        10,
+        19
+      ],
+      [
+        11,
+        19
+      ],
+      [
+        12,
+        19
+      ],
+      [
+        13,
+        19
+      ],
+      [
+        14,
+        19
+      ],
+      [
+        15,
+        19
+      ],
+      [
+        16,
+        19
+      ],
+      [
+        17,
+        19
+      ],
+      [
+        18,
+        19
+      ],
+      [
+        19,
+        19
+      ],
+      [
+        20,
+        19
+      ],
+      [
+        21,
+        19
+      ],
+      [
+        22,
+        19
+      ],
+      [
+        23,
+        19
+      ],
+      [
+        8,
+        20
+      ],
+      [
+        9,
+        20
+      ],
+      [
+        10,
+        20
+      ],
+      [
+        11,
+        20
+      ],
+      [
+        12,
+        20
+      ],
+      [
+        13,
+        20
+      ],
+      [
+        14,
+        20
+      ],
+      [
+        15,
+        20
+      ],
+      [
+        16,
+        20
+      ],
+      [
+        17,
+        20
+      ],
+      [
+        18,
+        20
+      ],
+      [
+        19,
+        20
+      ],
+      [
+        20,
+        20
+      ],
+      [
+        21,
+        20
+      ],
+      [
+        22,
+        20
+      ],
+      [
+        23,
+        20
+      ],
+      [
+        8,
+        21
+      ],
+      [
+        9,
+        21
+      ],
+      [
+        10,
+        21
+      ],
+      [
+        11,
+        21
+      ],
+      [
+        12,
+        21
+      ],
+      [
+        13,
+        21
+      ],
+      [
+        14,
+        21
+      ],
+      [
+        15,
+        21
+      ],
+      [
+        16,
+        21
+      ],
+      [
+        17,
+        21
+      ],
+      [
+        18,
+        21
+      ],
+      [
+        19,
+        21
+      ],
+      [
+        20,
+        21
+      ],
+      [
+        21,
+        21
+      ],
+      [
+        22,
+        21
+      ],
+      [
+        23,
+        21
+      ],
+      [
+        8,
+        22
+      ],
+      [
+        9,
+        22
+      ],
+      [
+        10,
+        22
+      ],
+      [
+        11,
+        22
+      ],
+      [
+        12,
+        22
+      ],
+      [
+        13,
+        22
+      ],
+      [
+        14,
+        22
+      ],
+      [
+        15,
+        22
+      ],
+      [
+        16,
+        22
+      ],
+      [
+        17,
+        22
+      ],
+      [
+        18,
+        22
+      ],
+      [
+        19,
+        22
+      ],
+      [
+        20,
+        22
+      ],
+      [
+        21,
+        22
+      ],
+      [
+        22,
+        22
+      ],
+      [
+        23,
+        22
+      ],
+      [
+        8,
+        23
+      ],
+      [
+        9,
+        23
+      ],
+      [
+        10,
+        23
+      ],
+      [
+        11,
+        23
+      ],
+      [
+        12,
+        23
+      ],
+      [
+        13,
+        23
+      ],
+      [
+        14,
+        23
+      ],
+      [
+        15,
+        23
+      ],
+      [
+        16,
+        23
+      ],
+      [
+        17,
+        23
+      ],
+      [
+        18,
+        23
+      ],
+      [
+        19,
+        23
+      ],
+      [
+        20,
+        23
+      ],
+      [
+        21,
+        23
+      ],
+      [
+        22,
+        23
+      ],
+      [
+        23,
+        23
+      ]
+    ],
+    "provenance": "NOT ESTABLISHED BY THIS CPU ANALYSIS"
+  },
+  "readback_sha256": "6e9af8e8b6576b979aa78816d44bd3b0ffd31b70e169a982e83736d63ab91729",
+  "readback_bytes": 4096,
+  "exact_pixel_oracle": true,
+  "source_originals": "/home/gama/sgx535-offline/phase8-square-continuation-20261006T084340Z/one-authorized-square-call/originals",
+  "original_seal": "/home/gama/sgx535-offline/phase8-square-continuation-20261006T084340Z/one-authorized-square-call/originals/originals.seal.json",
+  "authorization_consumed": true,
+  "further_sgx_execution_authorized": false,
+  "display_publication_performed": false,
+  "historical_FIRE3_triangle": "ESTABLISHED; unchanged",
+  "physical_triangle_display": "ESTABLISHED; unchanged",
+  "depth_interpolation_repeatability": "NOT ESTABLISHED by this experiment"
+}

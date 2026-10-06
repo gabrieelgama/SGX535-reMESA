@@ -1,0 +1,33 @@
+{
+  "argv": [
+    "ssh",
+    "-T",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "ConnectTimeout=8",
+    "-o",
+    "ConnectionAttempts=1",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "IdentitiesOnly=yes",
+    "-o",
+    "PasswordAuthentication=no",
+    "-o",
+    "KbdInteractiveAuthentication=no",
+    "-o",
+    "UserKnownHostsFile=/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260927-H0/ssh_known_hosts",
+    "-i",
+    "/home/gama/.ssh/id_ed25519_sgx535_h0",
+    "-p",
+    "22",
+    "gama@192.168.18.90",
+    "python3 -I -B -S -c 'import os,stat,json\np='\"'\"'/home/gama/sgx535-firstload-corrected-incoming-01'\"'\"'\nos.mkdir(p,0o700)\ns=os.lstat(p)\nassert stat.S_ISDIR(s.st_mode) and s.st_uid==os.getuid() and stat.S_IMODE(s.st_mode)==0o700\nprint(json.dumps({'\"'\"'path'\"'\"':p,'\"'\"'uid'\"'\"':s.st_uid,'\"'\"'mode'\"'\"':oct(stat.S_IMODE(s.st_mode)),'\"'\"'created'\"'\"':True}))'"
+  ],
+  "stdin": "DEVNULL",
+  "exit_code": 0,
+  "stdout": "{\"path\": \"/home/gama/sgx535-firstload-corrected-incoming-01\", \"uid\": 1000, \"mode\": \"0o700\", \"created\": true}\n",
+  "stderr": "",
+  "utc": "2026-10-02T03:52:09.138144+00:00"
+}

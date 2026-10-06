@@ -1,0 +1,5846 @@
+[
+  {
+    "name": "drm",
+    "sha256": "d1d7bf85268e40bc0fe30ac98f5083cd06ba16f0d10fc38ff810f974f22229c3",
+    "versioned_imports": 358,
+    "undefined_symbols": 357,
+    "missing": 0,
+    "crc_mismatches": 0,
+    "module_layout": "0xb84efb99",
+    "modinfo": {
+      "license": [
+        "GPL and additional rights",
+        "GPL and additional rights",
+        "GPL and additional rights"
+      ],
+      "description": [
+        "DRM shared core routines",
+        "DRM bridge infrastructure",
+        "DRM panel infrastructure"
+      ],
+      "author": [
+        "Gareth Hughes, Leif Delgass, Jos\u00e9 Fonseca, Jon Smirl",
+        "Ajay Kumar <ajaykumar.rs@samsung.com>",
+        "Thierry Reding <treding@nvidia.com>"
+      ],
+      "parm": [
+        "edid_fixup:Minimum number of valid EDID header bytes (0-8, default 6)",
+        "debug:Enable debug output, where each bit enables a debug category.\n\t\tBit 0 (0x01)  will enable CORE messages (drm core code)\n\t\tBit 1 (0x02)  will enable DRIVER messages (drm controller code)\n\t\tBit 2 (0x04)  will enable KMS messages (modesetting code)\n\t\tBit 3 (0x08)  will enable PRIME messages (prime code)\n\t\tBit 4 (0x10)  will enable ATOMIC messages (atomic code)\n\t\tBit 5 (0x20)  will enable VBL messages (vblank code)\n\t\tBit 7 (0x80)  will enable LEASE messages (leasing code)\n\t\tBit 8 (0x100) will enable DP messages (displayport code)",
+        "timestamp_precision_usec:Max. error on timestamps [usecs]",
+        "vblankoffdelay:Delay until vblank irq auto-disable [msecs] (0: never disable, <0: disable immediately)",
+        "edid_firmware:Do not probe monitor, use specified EDID blob from built-in data or /lib/firmware instead. "
+      ],
+      "parmtype": [
+        "edid_fixup:int",
+        "debug:int",
+        "timestamp_precision_usec:int",
+        "vblankoffdelay:int",
+        "edid_firmware:string"
+      ],
+      "depends": [
+        ""
+      ],
+      "retpoline": [
+        "Y"
+      ],
+      "intree": [
+        "Y"
+      ],
+      "name": [
+        "drm"
+      ],
+      "vermagic": [
+        "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 "
+      ]
+    },
+    "imports": {
+      "__check_object_size": {
+        "crc": "0x88db9f48",
+        "target_crc": "0x88db9f48",
+        "undefined": true
+      },
+      "__class_create": {
+        "crc": "0x4ef1eab6",
+        "target_crc": "0x4ef1eab6",
+        "undefined": true
+      },
+      "__cpu_online_mask": {
+        "crc": "0x16624d6e",
+        "target_crc": "0x16624d6e",
+        "undefined": true
+      },
+      "__default_kernel_pte_mask": {
+        "crc": "0xd38cd261",
+        "target_crc": "0xd38cd261",
+        "undefined": true
+      },
+      "__fdget": {
+        "crc": "0xc1d8cfaf",
+        "target_crc": "0xc1d8cfaf",
+        "undefined": true
+      },
+      "__get_user_4": {
+        "crc": "0x6729d3df",
+        "target_crc": "0x6729d3df",
+        "undefined": true
+      },
+      "__init_waitqueue_head": {
+        "crc": "0xd9a5ea54",
+        "target_crc": "0xd9a5ea54",
+        "undefined": true
+      },
+      "__kmalloc": {
+        "crc": "0x2d6fcc06",
+        "target_crc": "0x2d6fcc06",
+        "undefined": true
+      },
+      "__kmalloc_track_caller": {
+        "crc": "0xb9a613c6",
+        "target_crc": "0xb9a613c6",
+        "undefined": true
+      },
+      "__mutex_init": {
+        "crc": "0x0affbb4f",
+        "target_crc": "0x0affbb4f",
+        "undefined": true
+      },
+      "__pagevec_release": {
+        "crc": "0xab205c42",
+        "target_crc": "0xab205c42",
+        "undefined": true
+      },
+      "__preempt_count": {
+        "crc": "0x4629334c",
+        "target_crc": "0x4629334c",
+        "undefined": true
+      },
+      "__put_user_4": {
+        "crc": "0xb2fd5ceb",
+        "target_crc": "0xb2fd5ceb",
+        "undefined": true
+      },
+      "__put_user_8": {
+        "crc": "0xb8e7ce2c",
+        "target_crc": "0xb8e7ce2c",
+        "undefined": true
+      },
+      "__rb_erase_color": {
+        "crc": "0x551bd071",
+        "target_crc": "0x551bd071",
+        "undefined": true
+      },
+      "__rb_insert_augmented": {
+        "crc": "0x120b336a",
+        "target_crc": "0x120b336a",
+        "undefined": true
+      },
+      "__register_chrdev": {
+        "crc": "0xfe576338",
+        "target_crc": "0xfe576338",
+        "undefined": true
+      },
+      "__request_module": {
+        "crc": "0xa24f23d8",
+        "target_crc": "0xa24f23d8",
+        "undefined": true
+      },
+      "__sg_alloc_table_from_pages": {
+        "crc": "0x7f7b25ee",
+        "target_crc": "0x7f7b25ee",
+        "undefined": true
+      },
+      "__sg_page_iter_dma_next": {
+        "crc": "0xcc3b2cc9",
+        "target_crc": "0xcc3b2cc9",
+        "undefined": true
+      },
+      "__sg_page_iter_next": {
+        "crc": "0x7a79b9f3",
+        "target_crc": "0x7a79b9f3",
+        "undefined": true
+      },
+      "__sg_page_iter_start": {
+        "crc": "0x5855b740",
+        "target_crc": "0x5855b740",
+        "undefined": true
+      },
+      "__srcu_read_lock": {
+        "crc": "0x9c7ec08b",
+        "target_crc": "0x9c7ec08b",
+        "undefined": true
+      },
+      "__srcu_read_unlock": {
+        "crc": "0x4bd21404",
+        "target_crc": "0x4bd21404",
+        "undefined": true
+      },
+      "__stack_chk_fail": {
+        "crc": "0x60c9d98f",
+        "target_crc": "0x60c9d98f",
+        "undefined": true
+      },
+      "__stack_chk_guard": {
+        "crc": "0x7240a66f",
+        "target_crc": "0x7240a66f",
+        "undefined": true
+      },
+      "__sw_hweight32": {
+        "crc": "0x74c134b9",
+        "target_crc": "0x74c134b9",
+        "undefined": true
+      },
+      "__task_pid_nr_ns": {
+        "crc": "0x50107c84",
+        "target_crc": "0x50107c84",
+        "undefined": true
+      },
+      "__unregister_chrdev": {
+        "crc": "0x6bc3fbc0",
+        "target_crc": "0x6bc3fbc0",
+        "undefined": true
+      },
+      "__wake_up": {
+        "crc": "0x3eeb2322",
+        "target_crc": "0x3eeb2322",
+        "undefined": true
+      },
+      "__warn_printk": {
+        "crc": "0x56470118",
+        "target_crc": "0x56470118",
+        "undefined": true
+      },
+      "__x86_indirect_thunk_ebx": {
+        "crc": "0xaac0a1e8",
+        "target_crc": "0xaac0a1e8",
+        "undefined": true
+      },
+      "__x86_indirect_thunk_ecx": {
+        "crc": "0xab02cbdf",
+        "target_crc": "0xab02cbdf",
+        "undefined": true
+      },
+      "__x86_indirect_thunk_edi": {
+        "crc": "0xfd94fe4a",
+        "target_crc": "0xfd94fe4a",
+        "undefined": true
+      },
+      "__x86_indirect_thunk_edx": {
+        "crc": "0xae4ddd5a",
+        "target_crc": "0xae4ddd5a",
+        "undefined": true
+      },
+      "__x86_indirect_thunk_esi": {
+        "crc": "0xe4fd4bbf",
+        "target_crc": "0xe4fd4bbf",
+        "undefined": true
+      },
+      "__xa_alloc": {
+        "crc": "0xf40e7a73",
+        "target_crc": "0xf40e7a73",
+        "undefined": true
+      },
+      "_cond_resched": {
+        "crc": "0xa1c76e0a",
+        "target_crc": "0xa1c76e0a",
+        "undefined": true
+      },
+      "_copy_from_user": {
+        "crc": "0x362ef408",
+        "target_crc": "0x362ef408",
+        "undefined": true
+      },
+      "_copy_to_user": {
+        "crc": "0xb44ad4b3",
+        "target_crc": "0xb44ad4b3",
+        "undefined": true
+      },
+      "_ctype": {
+        "crc": "0x11089ac7",
+        "target_crc": "0x11089ac7",
+        "undefined": true
+      },
+      "_dev_err": {
+        "crc": "0x3b73b2f8",
+        "target_crc": "0x3b73b2f8",
+        "undefined": true
+      },
+      "_dev_info": {
+        "crc": "0x59a2c442",
+        "target_crc": "0x59a2c442",
+        "undefined": true
+      },
+      "_dev_warn": {
+        "crc": "0xe0eef788",
+        "target_crc": "0xe0eef788",
+        "undefined": true
+      },
+      "_raw_read_lock": {
+        "crc": "0xfe8c61f0",
+        "target_crc": "0xfe8c61f0",
+        "undefined": true
+      },
+      "_raw_spin_lock": {
+        "crc": "0xba8fbd64",
+        "target_crc": "0xba8fbd64",
+        "undefined": true
+      },
+      "_raw_spin_lock_bh": {
+        "crc": "0x0c3690fc",
+        "target_crc": "0x0c3690fc",
+        "undefined": true
+      },
+      "_raw_spin_lock_irq": {
+        "crc": "0x8427cc7b",
+        "target_crc": "0x8427cc7b",
+        "undefined": true
+      },
+      "_raw_spin_lock_irqsave": {
+        "crc": "0x34db050b",
+        "target_crc": "0x34db050b",
+        "undefined": true
+      },
+      "_raw_spin_unlock_bh": {
+        "crc": "0xe46021ca",
+        "target_crc": "0xe46021ca",
+        "undefined": true
+      },
+      "_raw_spin_unlock_irqrestore": {
+        "crc": "0xd35cce70",
+        "target_crc": "0xd35cce70",
+        "undefined": true
+      },
+      "_raw_write_lock": {
+        "crc": "0xe68efe41",
+        "target_crc": "0xe68efe41",
+        "undefined": true
+      },
+      "add_wait_queue": {
+        "crc": "0x4afb2238",
+        "target_crc": "0x4afb2238",
+        "undefined": true
+      },
+      "agp_allocate_memory": {
+        "crc": "0xdb956e90",
+        "target_crc": "0xdb956e90",
+        "undefined": true
+      },
+      "agp_backend_acquire": {
+        "crc": "0xb53eb9e2",
+        "target_crc": "0xb53eb9e2",
+        "undefined": true
+      },
+      "agp_backend_release": {
+        "crc": "0xc44b1a50",
+        "target_crc": "0xc44b1a50",
+        "undefined": true
+      },
+      "agp_bind_memory": {
+        "crc": "0xd03334bb",
+        "target_crc": "0xd03334bb",
+        "undefined": true
+      },
+      "agp_copy_info": {
+        "crc": "0xff8d13f4",
+        "target_crc": "0xff8d13f4",
+        "undefined": true
+      },
+      "agp_enable": {
+        "crc": "0xa3e36590",
+        "target_crc": "0xa3e36590",
+        "undefined": true
+      },
+      "agp_find_bridge": {
+        "crc": "0x8f018a94",
+        "target_crc": "0x8f018a94",
+        "undefined": true
+      },
+      "agp_free_memory": {
+        "crc": "0x7394b271",
+        "target_crc": "0x7394b271",
+        "undefined": true
+      },
+      "agp_unbind_memory": {
+        "crc": "0x5e905e4b",
+        "target_crc": "0x5e905e4b",
+        "undefined": true
+      },
+      "alloc_anon_inode": {
+        "crc": "0x360712d0",
+        "target_crc": "0x360712d0",
+        "undefined": true
+      },
+      "anon_inode_getfile": {
+        "crc": "0x4c62899a",
+        "target_crc": "0x4c62899a",
+        "undefined": true
+      },
+      "arch_phys_wc_add": {
+        "crc": "0xa9a8e17f",
+        "target_crc": "0xa9a8e17f",
+        "undefined": true
+      },
+      "arch_phys_wc_del": {
+        "crc": "0x50d68377",
+        "target_crc": "0x50d68377",
+        "undefined": true
+      },
+      "arch_phys_wc_index": {
+        "crc": "0x8c9d1661",
+        "target_crc": "0x8c9d1661",
+        "undefined": true
+      },
+      "atomic64_add_386": {
+        "crc": "0xb7d38a66",
+        "target_crc": "0xb7d38a66",
+        "undefined": true
+      },
+      "atomic64_add_return_cx8": {
+        "crc": "0xc84531eb",
+        "target_crc": "0xc84531eb",
+        "undefined": true
+      },
+      "atomic64_read_386": {
+        "crc": "0xaba4ee50",
+        "target_crc": "0xaba4ee50",
+        "undefined": true
+      },
+      "atomic64_read_cx8": {
+        "crc": "0xc92f5b96",
+        "target_crc": "0xc92f5b96",
+        "undefined": true
+      },
+      "atomic_dec_and_mutex_lock": {
+        "crc": "0x6b8266bb",
+        "target_crc": "0x6b8266bb",
+        "undefined": true
+      },
+      "boot_cpu_data": {
+        "crc": "0x163ca9c9",
+        "target_crc": "0x163ca9c9",
+        "undefined": true
+      },
+      "cachemode2protval": {
+        "crc": "0x46cf10eb",
+        "target_crc": "0x46cf10eb",
+        "undefined": true
+      },
+      "capable": {
+        "crc": "0xc6cbbc89",
+        "target_crc": "0xc6cbbc89",
+        "undefined": true
+      },
+      "check_move_unevictable_pages": {
+        "crc": "0x2a5a0c84",
+        "target_crc": "0x2a5a0c84",
+        "undefined": true
+      },
+      "class_create_file_ns": {
+        "crc": "0x49068465",
+        "target_crc": "0x49068465",
+        "undefined": true
+      },
+      "class_destroy": {
+        "crc": "0xb6d12f55",
+        "target_crc": "0xb6d12f55",
+        "undefined": true
+      },
+      "class_remove_file_ns": {
+        "crc": "0xd394fa85",
+        "target_crc": "0xd394fa85",
+        "undefined": true
+      },
+      "clear_user": {
+        "crc": "0x7aec9089",
+        "target_crc": "0x7aec9089",
+        "undefined": true
+      },
+      "complete_all": {
+        "crc": "0x93d6dd8c",
+        "target_crc": "0x93d6dd8c",
+        "undefined": true
+      },
+      "component_master_add_with_match": {
+        "crc": "0xdedd7b3a",
+        "target_crc": "0xdedd7b3a",
+        "undefined": true
+      },
+      "component_match_add_release": {
+        "crc": "0x1fa3a0d2",
+        "target_crc": "0x1fa3a0d2",
+        "undefined": true
+      },
+      "cpu_number": {
+        "crc": "0x7a2af7b4",
+        "target_crc": "0x7a2af7b4",
+        "undefined": true
+      },
+      "current_task": {
+        "crc": "0xf69073fc",
+        "target_crc": "0xf69073fc",
+        "undefined": true
+      },
+      "debugfs_create_dir": {
+        "crc": "0xbfbc7eee",
+        "target_crc": "0xbfbc7eee",
+        "undefined": true
+      },
+      "debugfs_create_file": {
+        "crc": "0x4b26e01c",
+        "target_crc": "0x4b26e01c",
+        "undefined": true
+      },
+      "debugfs_remove": {
+        "crc": "0xaf0adbbd",
+        "target_crc": "0xaf0adbbd",
+        "undefined": true
+      },
+      "default_wake_function": {
+        "crc": "0xaad8c7d6",
+        "target_crc": "0xaad8c7d6",
+        "undefined": true
+      },
+      "dentry_open": {
+        "crc": "0xff34331b",
+        "target_crc": "0xff34331b",
+        "undefined": true
+      },
+      "dev_driver_string": {
+        "crc": "0xeb20b3df",
+        "target_crc": "0xeb20b3df",
+        "undefined": true
+      },
+      "dev_printk": {
+        "crc": "0xcb147e11",
+        "target_crc": "0xcb147e11",
+        "undefined": true
+      },
+      "dev_set_name": {
+        "crc": "0x22fa8656",
+        "target_crc": "0x22fa8656",
+        "undefined": true
+      },
+      "device_add": {
+        "crc": "0xfa15720f",
+        "target_crc": "0xfa15720f",
+        "undefined": true
+      },
+      "device_del": {
+        "crc": "0x9c69866b",
+        "target_crc": "0x9c69866b",
+        "undefined": true
+      },
+      "device_initialize": {
+        "crc": "0x5dec6b36",
+        "target_crc": "0x5dec6b36",
+        "undefined": true
+      },
+      "device_register": {
+        "crc": "0xea0ad4e3",
+        "target_crc": "0xea0ad4e3",
+        "undefined": true
+      },
+      "device_unregister": {
+        "crc": "0xd1b90749",
+        "target_crc": "0xd1b90749",
+        "undefined": true
+      },
+      "devm_add_action": {
+        "crc": "0x130aac2e",
+        "target_crc": "0x130aac2e",
+        "undefined": true
+      },
+      "devm_of_find_backlight": {
+        "crc": "0x64723368",
+        "target_crc": "0x64723368",
+        "undefined": true
+      },
+      "div64_u64_rem": {
+        "crc": "0xd63fafc2",
+        "target_crc": "0xd63fafc2",
+        "undefined": true
+      },
+      "div_s64_rem": {
+        "crc": "0xa6a7a2ad",
+        "target_crc": "0xa6a7a2ad",
+        "undefined": true
+      },
+      "dma_alloc_attrs": {
+        "crc": "0xa60e75ee",
+        "target_crc": "0xa60e75ee",
+        "undefined": true
+      },
+      "dma_buf_attach": {
+        "crc": "0x64459756",
+        "target_crc": "0x64459756",
+        "undefined": true
+      },
+      "dma_buf_detach": {
+        "crc": "0x3f380552",
+        "target_crc": "0x3f380552",
+        "undefined": true
+      },
+      "dma_buf_export": {
+        "crc": "0x4c723f75",
+        "target_crc": "0x4c723f75",
+        "undefined": true
+      },
+      "dma_buf_fd": {
+        "crc": "0xd5947641",
+        "target_crc": "0xd5947641",
+        "undefined": true
+      },
+      "dma_buf_get": {
+        "crc": "0x1b441ea6",
+        "target_crc": "0x1b441ea6",
+        "undefined": true
+      },
+      "dma_buf_map_attachment": {
+        "crc": "0xa4983241",
+        "target_crc": "0xa4983241",
+        "undefined": true
+      },
+      "dma_buf_mmap": {
+        "crc": "0x41bcf85d",
+        "target_crc": "0x41bcf85d",
+        "undefined": true
+      },
+      "dma_buf_put": {
+        "crc": "0xf3b627ff",
+        "target_crc": "0xf3b627ff",
+        "undefined": true
+      },
+      "dma_buf_unmap_attachment": {
+        "crc": "0x771e5ad5",
+        "target_crc": "0x771e5ad5",
+        "undefined": true
+      },
+      "dma_buf_vmap": {
+        "crc": "0x516b297a",
+        "target_crc": "0x516b297a",
+        "undefined": true
+      },
+      "dma_buf_vunmap": {
+        "crc": "0x4d5657df",
+        "target_crc": "0x4d5657df",
+        "undefined": true
+      },
+      "dma_fence_add_callback": {
+        "crc": "0x8e21c9a1",
+        "target_crc": "0x8e21c9a1",
+        "undefined": true
+      },
+      "dma_fence_chain_find_seqno": {
+        "crc": "0x4e4f0f16",
+        "target_crc": "0x4e4f0f16",
+        "undefined": true
+      },
+      "dma_fence_chain_init": {
+        "crc": "0x896a9c4a",
+        "target_crc": "0x896a9c4a",
+        "undefined": true
+      },
+      "dma_fence_chain_ops": {
+        "crc": "0x02293ac3",
+        "target_crc": "0x02293ac3",
+        "undefined": true
+      },
+      "dma_fence_chain_walk": {
+        "crc": "0x0b290ada",
+        "target_crc": "0x0b290ada",
+        "undefined": true
+      },
+      "dma_fence_context_alloc": {
+        "crc": "0x14605535",
+        "target_crc": "0x14605535",
+        "undefined": true
+      },
+      "dma_fence_get_stub": {
+        "crc": "0x013f26ae",
+        "target_crc": "0x013f26ae",
+        "undefined": true
+      },
+      "dma_fence_init": {
+        "crc": "0x16dee44d",
+        "target_crc": "0x16dee44d",
+        "undefined": true
+      },
+      "dma_fence_release": {
+        "crc": "0xe123f3d9",
+        "target_crc": "0xe123f3d9",
+        "undefined": true
+      },
+      "dma_fence_remove_callback": {
+        "crc": "0x3b20fb95",
+        "target_crc": "0x3b20fb95",
+        "undefined": true
+      },
+      "dma_fence_signal": {
+        "crc": "0x731c4a9c",
+        "target_crc": "0x731c4a9c",
+        "undefined": true
+      },
+      "dma_free_attrs": {
+        "crc": "0x443a520b",
+        "target_crc": "0x443a520b",
+        "undefined": true
+      },
+      "dma_get_sgtable_attrs": {
+        "crc": "0x510b00be",
+        "target_crc": "0x510b00be",
+        "undefined": true
+      },
+      "dma_map_sg_attrs": {
+        "crc": "0xd8de1c69",
+        "target_crc": "0xd8de1c69",
+        "undefined": true
+      },
+      "dma_max_mapping_size": {
+        "crc": "0xf58bfa72",
+        "target_crc": "0xf58bfa72",
+        "undefined": true
+      },
+      "dma_mmap_attrs": {
+        "crc": "0xb584285c",
+        "target_crc": "0xb584285c",
+        "undefined": true
+      },
+      "dma_resv_fini": {
+        "crc": "0xe0565096",
+        "target_crc": "0xe0565096",
+        "undefined": true
+      },
+      "dma_resv_get_fences_rcu": {
+        "crc": "0x30a88fdd",
+        "target_crc": "0x30a88fdd",
+        "undefined": true
+      },
+      "dma_resv_init": {
+        "crc": "0x5a25aeae",
+        "target_crc": "0x5a25aeae",
+        "undefined": true
+      },
+      "dma_resv_wait_timeout_rcu": {
+        "crc": "0xd9bd92a3",
+        "target_crc": "0xd9bd92a3",
+        "undefined": true
+      },
+      "dma_unmap_sg_attrs": {
+        "crc": "0x23b2415a",
+        "target_crc": "0x23b2415a",
+        "undefined": true
+      },
+      "drm_get_panel_orientation_quirk": {
+        "crc": "0x2e439142",
+        "target_crc": "0x2e439142",
+        "undefined": true
+      },
+      "event_triggers_call": {
+        "crc": "0x31966023",
+        "target_crc": "0x31966023",
+        "undefined": true
+      },
+      "fb_get_options": {
+        "crc": "0xab781570",
+        "target_crc": "0xab781570",
+        "undefined": true
+      },
+      "fd_install": {
+        "crc": "0xe1ebb213",
+        "target_crc": "0xe1ebb213",
+        "undefined": true
+      },
+      "find_first_bit": {
+        "crc": "0xb352177e",
+        "target_crc": "0xb352177e",
+        "undefined": true
+      },
+      "find_next_bit": {
+        "crc": "0xc0a3d105",
+        "target_crc": "0xc0a3d105",
+        "undefined": true
+      },
+      "finish_wait": {
+        "crc": "0x92540fbf",
+        "target_crc": "0x92540fbf",
+        "undefined": true
+      },
+      "flush_work": {
+        "crc": "0x92b57248",
+        "target_crc": "0x92b57248",
+        "undefined": true
+      },
+      "fortify_panic": {
+        "crc": "0xcbd4898c",
+        "target_crc": "0xcbd4898c",
+        "undefined": true
+      },
+      "fput": {
+        "crc": "0xc32dd77b",
+        "target_crc": "0xc32dd77b",
+        "undefined": true
+      },
+      "free_irq": {
+        "crc": "0xc1514a3b",
+        "target_crc": "0xc1514a3b",
+        "undefined": true
+      },
+      "from_kuid_munged": {
+        "crc": "0xb6c93396",
+        "target_crc": "0xb6c93396",
+        "undefined": true
+      },
+      "fwnode_handle_put": {
+        "crc": "0x4a14d12d",
+        "target_crc": "0x4a14d12d",
+        "undefined": true
+      },
+      "get_device": {
+        "crc": "0x3df03767",
+        "target_crc": "0x3df03767",
+        "undefined": true
+      },
+      "get_unused_fd_flags": {
+        "crc": "0xa843805a",
+        "target_crc": "0xa843805a",
+        "undefined": true
+      },
+      "hdmi_avi_infoframe_init": {
+        "crc": "0x25e58a09",
+        "target_crc": "0x25e58a09",
+        "undefined": true
+      },
+      "hdmi_drm_infoframe_init": {
+        "crc": "0xc096e23d",
+        "target_crc": "0xc096e23d",
+        "undefined": true
+      },
+      "hdmi_vendor_infoframe_init": {
+        "crc": "0x6749d53f",
+        "target_crc": "0x6749d53f",
+        "undefined": true
+      },
+      "high_memory": {
+        "crc": "0x8a7d1c31",
+        "target_crc": "0x8a7d1c31",
+        "undefined": true
+      },
+      "i2c_new_client_device": {
+        "crc": "0x9f5e6d91",
+        "target_crc": "0x9f5e6d91",
+        "undefined": true
+      },
+      "i2c_transfer": {
+        "crc": "0xf10874d6",
+        "target_crc": "0xf10874d6",
+        "undefined": true
+      },
+      "i2c_unregister_device": {
+        "crc": "0x36acdb66",
+        "target_crc": "0x36acdb66",
+        "undefined": true
+      },
+      "ida_alloc_range": {
+        "crc": "0xe7a02573",
+        "target_crc": "0xe7a02573",
+        "undefined": true
+      },
+      "ida_destroy": {
+        "crc": "0xa7d5f92e",
+        "target_crc": "0xa7d5f92e",
+        "undefined": true
+      },
+      "ida_free": {
+        "crc": "0xffb7c514",
+        "target_crc": "0xffb7c514",
+        "undefined": true
+      },
+      "idr_alloc": {
+        "crc": "0xb8f11603",
+        "target_crc": "0xb8f11603",
+        "undefined": true
+      },
+      "idr_destroy": {
+        "crc": "0x8e17b3ae",
+        "target_crc": "0x8e17b3ae",
+        "undefined": true
+      },
+      "idr_find": {
+        "crc": "0x20978fb9",
+        "target_crc": "0x20978fb9",
+        "undefined": true
+      },
+      "idr_for_each": {
+        "crc": "0x1d40b6f3",
+        "target_crc": "0x1d40b6f3",
+        "undefined": true
+      },
+      "idr_get_next": {
+        "crc": "0xc57c48a3",
+        "target_crc": "0xc57c48a3",
+        "undefined": true
+      },
+      "idr_preload": {
+        "crc": "0x954f099c",
+        "target_crc": "0x954f099c",
+        "undefined": true
+      },
+      "idr_remove": {
+        "crc": "0x7665a95b",
+        "target_crc": "0x7665a95b",
+        "undefined": true
+      },
+      "idr_replace": {
+        "crc": "0x7b82b9a1",
+        "target_crc": "0x7b82b9a1",
+        "undefined": true
+      },
+      "init_pseudo": {
+        "crc": "0x41b9ca63",
+        "target_crc": "0x41b9ca63",
+        "undefined": true
+      },
+      "init_timer_key": {
+        "crc": "0xc6f46339",
+        "target_crc": "0xc6f46339",
+        "undefined": true
+      },
+      "init_wait_entry": {
+        "crc": "0xfe487975",
+        "target_crc": "0xfe487975",
+        "undefined": true
+      },
+      "invalidate_mapping_pages": {
+        "crc": "0x79e7f7a3",
+        "target_crc": "0x79e7f7a3",
+        "undefined": true
+      },
+      "iomem_resource": {
+        "crc": "0xc94d8e3b",
+        "target_crc": "0xc94d8e3b",
+        "undefined": true
+      },
+      "ioremap": {
+        "crc": "0x81f65b7d",
+        "target_crc": "0x81f65b7d",
+        "undefined": true
+      },
+      "ioremap_wc": {
+        "crc": "0x6f9c0a14",
+        "target_crc": "0x6f9c0a14",
+        "undefined": true
+      },
+      "iounmap": {
+        "crc": "0xedc03953",
+        "target_crc": "0xedc03953",
+        "undefined": true
+      },
+      "iput": {
+        "crc": "0xcfef7281",
+        "target_crc": "0xcfef7281",
+        "undefined": true
+      },
+      "is_acpi_device_node": {
+        "crc": "0xad2c2f71",
+        "target_crc": "0xad2c2f71",
+        "undefined": true
+      },
+      "jiffies": {
+        "crc": "0x15ba50a6",
+        "target_crc": "0x15ba50a6",
+        "undefined": true
+      },
+      "kasprintf": {
+        "crc": "0xfb384d37",
+        "target_crc": "0xfb384d37",
+        "undefined": true
+      },
+      "kfree": {
+        "crc": "0x037a0cba",
+        "target_crc": "0x037a0cba",
+        "undefined": true
+      },
+      "kfree_const": {
+        "crc": "0xf474fdcb",
+        "target_crc": "0xf474fdcb",
+        "undefined": true
+      },
+      "kill_anon_super": {
+        "crc": "0xe6f5c8fa",
+        "target_crc": "0xe6f5c8fa",
+        "undefined": true
+      },
+      "kmalloc_caches": {
+        "crc": "0x72208652",
+        "target_crc": "0x72208652",
+        "undefined": true
+      },
+      "kmap_atomic_high_prot": {
+        "crc": "0x3d31df56",
+        "target_crc": "0x3d31df56",
+        "undefined": true
+      },
+      "kmem_cache_alloc_trace": {
+        "crc": "0x0bed2f44",
+        "target_crc": "0x0bed2f44",
+        "undefined": true
+      },
+      "kmemdup": {
+        "crc": "0x0b1b939e",
+        "target_crc": "0x0b1b939e",
+        "undefined": true
+      },
+      "kobject_uevent_env": {
+        "crc": "0xfc9a5ec7",
+        "target_crc": "0xfc9a5ec7",
+        "undefined": true
+      },
+      "krealloc": {
+        "crc": "0xbaa7c8c5",
+        "target_crc": "0xbaa7c8c5",
+        "undefined": true
+      },
+      "ksize": {
+        "crc": "0x9b6eb137",
+        "target_crc": "0x9b6eb137",
+        "undefined": true
+      },
+      "kstrdup": {
+        "crc": "0x2d39b0a7",
+        "target_crc": "0x2d39b0a7",
+        "undefined": true
+      },
+      "kstrdup_const": {
+        "crc": "0x365e7911",
+        "target_crc": "0x365e7911",
+        "undefined": true
+      },
+      "kthread_cancel_work_sync": {
+        "crc": "0x3511ebf7",
+        "target_crc": "0x3511ebf7",
+        "undefined": true
+      },
+      "kthread_create_worker": {
+        "crc": "0xb77316f4",
+        "target_crc": "0xb77316f4",
+        "undefined": true
+      },
+      "kthread_destroy_worker": {
+        "crc": "0xa2f73d67",
+        "target_crc": "0xa2f73d67",
+        "undefined": true
+      },
+      "kthread_flush_work": {
+        "crc": "0x08767f0c",
+        "target_crc": "0x08767f0c",
+        "undefined": true
+      },
+      "kthread_flush_worker": {
+        "crc": "0xb982207d",
+        "target_crc": "0xb982207d",
+        "undefined": true
+      },
+      "kthread_queue_work": {
+        "crc": "0xa47e190f",
+        "target_crc": "0xa47e190f",
+        "undefined": true
+      },
+      "ktime_get": {
+        "crc": "0xb43f9365",
+        "target_crc": "0xb43f9365",
+        "undefined": true
+      },
+      "kunmap_atomic_high": {
+        "crc": "0xeb3848ff",
+        "target_crc": "0xeb3848ff",
+        "undefined": true
+      },
+      "kvasprintf": {
+        "crc": "0x1cb2c6d8",
+        "target_crc": "0x1cb2c6d8",
+        "undefined": true
+      },
+      "kvfree": {
+        "crc": "0x7aa1756e",
+        "target_crc": "0x7aa1756e",
+        "undefined": true
+      },
+      "kvmalloc_node": {
+        "crc": "0x8dfefc0d",
+        "target_crc": "0x8dfefc0d",
+        "undefined": true
+      },
+      "list_sort": {
+        "crc": "0xe091c977",
+        "target_crc": "0xe091c977",
+        "undefined": true
+      },
+      "llist_add_batch": {
+        "crc": "0xc7a1840e",
+        "target_crc": "0xc7a1840e",
+        "undefined": true
+      },
+      "mark_page_accessed": {
+        "crc": "0x185e2e6b",
+        "target_crc": "0x185e2e6b",
+        "undefined": true
+      },
+      "match_string": {
+        "crc": "0xd35f75a1",
+        "target_crc": "0xd35f75a1",
+        "undefined": true
+      },
+      "mem_section": {
+        "crc": "0xe5357507",
+        "target_crc": "0xe5357507",
+        "undefined": true
+      },
+      "memchr_inv": {
+        "crc": "0x7505bdef",
+        "target_crc": "0x7505bdef",
+        "undefined": true
+      },
+      "memcmp": {
+        "crc": "0x5152e605",
+        "target_crc": "0x5152e605",
+        "undefined": true
+      },
+      "memcpy": {
+        "crc": "0x2e60bace",
+        "target_crc": "0x2e60bace",
+        "undefined": true
+      },
+      "memdup_user": {
+        "crc": "0xe2e8065e",
+        "target_crc": "0xe2e8065e",
+        "undefined": true
+      },
+      "memdup_user_nul": {
+        "crc": "0x97106714",
+        "target_crc": "0x97106714",
+        "undefined": true
+      },
+      "memset": {
+        "crc": "0x2bc95bd4",
+        "target_crc": "0x2bc95bd4",
+        "undefined": true
+      },
+      "mod_timer": {
+        "crc": "0xc38c83b8",
+        "target_crc": "0xc38c83b8",
+        "undefined": true
+      },
+      "module_layout": {
+        "crc": "0xb84efb99",
+        "target_crc": "0xb84efb99",
+        "undefined": false
+      },
+      "module_put": {
+        "crc": "0x59ab9688",
+        "target_crc": "0x59ab9688",
+        "undefined": true
+      },
+      "mutex_is_locked": {
+        "crc": "0xc86f15a9",
+        "target_crc": "0xc86f15a9",
+        "undefined": true
+      },
+      "mutex_lock": {
+        "crc": "0x1b58e04c",
+        "target_crc": "0x1b58e04c",
+        "undefined": true
+      },
+      "mutex_lock_interruptible": {
+        "crc": "0x23817c68",
+        "target_crc": "0x23817c68",
+        "undefined": true
+      },
+      "mutex_trylock": {
+        "crc": "0x4042315a",
+        "target_crc": "0x4042315a",
+        "undefined": true
+      },
+      "mutex_unlock": {
+        "crc": "0x99b76c81",
+        "target_crc": "0x99b76c81",
+        "undefined": true
+      },
+      "noop_llseek": {
+        "crc": "0xe4fc08a5",
+        "target_crc": "0xe4fc08a5",
+        "undefined": true
+      },
+      "ns_to_timespec64": {
+        "crc": "0x1e1e140e",
+        "target_crc": "0x1e1e140e",
+        "undefined": true
+      },
+      "nsecs_to_jiffies64": {
+        "crc": "0x75d0deb9",
+        "target_crc": "0x75d0deb9",
+        "undefined": true
+      },
+      "of_device_is_available": {
+        "crc": "0x5bdfeb4a",
+        "target_crc": "0x5bdfeb4a",
+        "undefined": true
+      },
+      "of_find_property": {
+        "crc": "0xeb9846f1",
+        "target_crc": "0xeb9846f1",
+        "undefined": true
+      },
+      "of_get_next_child": {
+        "crc": "0xef30b5ae",
+        "target_crc": "0xef30b5ae",
+        "undefined": true
+      },
+      "of_get_videomode": {
+        "crc": "0x1c995f59",
+        "target_crc": "0x1c995f59",
+        "undefined": true
+      },
+      "of_graph_get_next_endpoint": {
+        "crc": "0x7a79e6ae",
+        "target_crc": "0x7a79e6ae",
+        "undefined": true
+      },
+      "of_graph_get_remote_node": {
+        "crc": "0x281ff8d4",
+        "target_crc": "0x281ff8d4",
+        "undefined": true
+      },
+      "of_graph_get_remote_port": {
+        "crc": "0x9abdd72e",
+        "target_crc": "0x9abdd72e",
+        "undefined": true
+      },
+      "of_graph_get_remote_port_parent": {
+        "crc": "0x10d75e11",
+        "target_crc": "0x10d75e11",
+        "undefined": true
+      },
+      "of_graph_is_present": {
+        "crc": "0x51e0b3c6",
+        "target_crc": "0x51e0b3c6",
+        "undefined": true
+      },
+      "of_graph_parse_endpoint": {
+        "crc": "0x683d5fcb",
+        "target_crc": "0x683d5fcb",
+        "undefined": true
+      },
+      "of_node_name_eq": {
+        "crc": "0xf788c0a9",
+        "target_crc": "0xf788c0a9",
+        "undefined": true
+      },
+      "of_parse_phandle": {
+        "crc": "0x91bc2dbd",
+        "target_crc": "0x91bc2dbd",
+        "undefined": true
+      },
+      "of_property_read_variable_u32_array": {
+        "crc": "0xf8bb814a",
+        "target_crc": "0xf8bb814a",
+        "undefined": true
+      },
+      "oops_in_progress": {
+        "crc": "0xb1c3a01a",
+        "target_crc": "0xb1c3a01a",
+        "undefined": true
+      },
+      "overflowuid": {
+        "crc": "0x8b618d08",
+        "target_crc": "0x8b618d08",
+        "undefined": true
+      },
+      "page_address": {
+        "crc": "0xb5696f27",
+        "target_crc": "0xb5696f27",
+        "undefined": true
+      },
+      "param_ops_int": {
+        "crc": "0x6903a7d6",
+        "target_crc": "0x6903a7d6",
+        "undefined": true
+      },
+      "param_ops_string": {
+        "crc": "0x552ed085",
+        "target_crc": "0x552ed085",
+        "undefined": true
+      },
+      "pci_bus_type": {
+        "crc": "0xb88af742",
+        "target_crc": "0xb88af742",
+        "undefined": true
+      },
+      "pci_dev_get": {
+        "crc": "0xc74857b0",
+        "target_crc": "0xc74857b0",
+        "undefined": true
+      },
+      "pci_disable_device": {
+        "crc": "0x84e4ba64",
+        "target_crc": "0x84e4ba64",
+        "undefined": true
+      },
+      "pci_enable_device": {
+        "crc": "0x79482b20",
+        "target_crc": "0x79482b20",
+        "undefined": true
+      },
+      "pci_find_capability": {
+        "crc": "0xf01f8119",
+        "target_crc": "0xf01f8119",
+        "undefined": true
+      },
+      "pci_get_subsys": {
+        "crc": "0xf335beab",
+        "target_crc": "0xf335beab",
+        "undefined": true
+      },
+      "perf_trace_buf_alloc": {
+        "crc": "0xad94517a",
+        "target_crc": "0xad94517a",
+        "undefined": true
+      },
+      "perf_trace_run_bpf_submit": {
+        "crc": "0x177719f4",
+        "target_crc": "0x177719f4",
+        "undefined": true
+      },
+      "pgprot_writecombine": {
+        "crc": "0x50d1f870",
+        "target_crc": "0x50d1f870",
+        "undefined": true
+      },
+      "pid_task": {
+        "crc": "0xdb8f380b",
+        "target_crc": "0xdb8f380b",
+        "undefined": true
+      },
+      "pid_vnr": {
+        "crc": "0x89618e7e",
+        "target_crc": "0x89618e7e",
+        "undefined": true
+      },
+      "platform_device_register_full": {
+        "crc": "0x35160d0a",
+        "target_crc": "0x35160d0a",
+        "undefined": true
+      },
+      "platform_device_unregister": {
+        "crc": "0xf24f720e",
+        "target_crc": "0xf24f720e",
+        "undefined": true
+      },
+      "prepare_to_wait_event": {
+        "crc": "0x8c26d495",
+        "target_crc": "0x8c26d495",
+        "undefined": true
+      },
+      "print_hex_dump": {
+        "crc": "0x4059792f",
+        "target_crc": "0x4059792f",
+        "undefined": true
+      },
+      "printk": {
+        "crc": "0xecc9cdd8",
+        "target_crc": "0xecc9cdd8",
+        "undefined": true
+      },
+      "put_device": {
+        "crc": "0x4c792038",
+        "target_crc": "0x4c792038",
+        "undefined": true
+      },
+      "put_pid": {
+        "crc": "0xb25c6486",
+        "target_crc": "0xb25c6486",
+        "undefined": true
+      },
+      "put_unused_fd": {
+        "crc": "0x3f4547a7",
+        "target_crc": "0x3f4547a7",
+        "undefined": true
+      },
+      "pv_ops": {
+        "crc": "0xb8053ad8",
+        "target_crc": "0xb8053ad8",
+        "undefined": true
+      },
+      "queue_work_on": {
+        "crc": "0xb2d48a2e",
+        "target_crc": "0xb2d48a2e",
+        "undefined": true
+      },
+      "radix_tree_preloads": {
+        "crc": "0x72cecc6e",
+        "target_crc": "0x72cecc6e",
+        "undefined": true
+      },
+      "radix_tree_tagged": {
+        "crc": "0x6d5f5b91",
+        "target_crc": "0x6d5f5b91",
+        "undefined": true
+      },
+      "rb_erase": {
+        "crc": "0x4d9b652b",
+        "target_crc": "0x4d9b652b",
+        "undefined": true
+      },
+      "rb_insert_color": {
+        "crc": "0xa5526619",
+        "target_crc": "0xa5526619",
+        "undefined": true
+      },
+      "rb_next": {
+        "crc": "0xca9360b5",
+        "target_crc": "0xca9360b5",
+        "undefined": true
+      },
+      "rb_prev": {
+        "crc": "0xf82ec573",
+        "target_crc": "0xf82ec573",
+        "undefined": true
+      },
+      "rb_replace_node": {
+        "crc": "0x7fe32873",
+        "target_crc": "0x7fe32873",
+        "undefined": true
+      },
+      "rcu_read_unlock_strict": {
+        "crc": "0x2d5f69b3",
+        "target_crc": "0x2d5f69b3",
+        "undefined": true
+      },
+      "refcount_warn_saturate": {
+        "crc": "0x0296695f",
+        "target_crc": "0x0296695f",
+        "undefined": true
+      },
+      "register_acpi_bus_type": {
+        "crc": "0x320b6954",
+        "target_crc": "0x320b6954",
+        "undefined": true
+      },
+      "release_firmware": {
+        "crc": "0xd0e9fb09",
+        "target_crc": "0xd0e9fb09",
+        "undefined": true
+      },
+      "remap_pfn_range": {
+        "crc": "0x3cce04bb",
+        "target_crc": "0x3cce04bb",
+        "undefined": true
+      },
+      "remove_wait_queue": {
+        "crc": "0x37110088",
+        "target_crc": "0x37110088",
+        "undefined": true
+      },
+      "request_firmware": {
+        "crc": "0xa16a1b05",
+        "target_crc": "0xa16a1b05",
+        "undefined": true
+      },
+      "request_firmware_direct": {
+        "crc": "0x8d6e7dcf",
+        "target_crc": "0x8d6e7dcf",
+        "undefined": true
+      },
+      "request_threaded_irq": {
+        "crc": "0x2072ee9b",
+        "target_crc": "0x2072ee9b",
+        "undefined": true
+      },
+      "reservation_ww_class": {
+        "crc": "0x9d5cd559",
+        "target_crc": "0x9d5cd559",
+        "undefined": true
+      },
+      "sched_set_fifo": {
+        "crc": "0x4caa39b3",
+        "target_crc": "0x4caa39b3",
+        "undefined": true
+      },
+      "schedule": {
+        "crc": "0x4292364c",
+        "target_crc": "0x4292364c",
+        "undefined": true
+      },
+      "schedule_timeout": {
+        "crc": "0x8ddd8aad",
+        "target_crc": "0x8ddd8aad",
+        "undefined": true
+      },
+      "scnprintf": {
+        "crc": "0x314b20c8",
+        "target_crc": "0x314b20c8",
+        "undefined": true
+      },
+      "send_sig": {
+        "crc": "0xa4b0963f",
+        "target_crc": "0xa4b0963f",
+        "undefined": true
+      },
+      "seq_lseek": {
+        "crc": "0x242dc0e8",
+        "target_crc": "0x242dc0e8",
+        "undefined": true
+      },
+      "seq_printf": {
+        "crc": "0xa5372268",
+        "target_crc": "0xa5372268",
+        "undefined": true
+      },
+      "seq_puts": {
+        "crc": "0xdb0aacd6",
+        "target_crc": "0xdb0aacd6",
+        "undefined": true
+      },
+      "seq_read": {
+        "crc": "0x1cfc6b85",
+        "target_crc": "0x1cfc6b85",
+        "undefined": true
+      },
+      "seq_write": {
+        "crc": "0x0054fdf7",
+        "target_crc": "0x0054fdf7",
+        "undefined": true
+      },
+      "set_page_dirty": {
+        "crc": "0x60bf201f",
+        "target_crc": "0x60bf201f",
+        "undefined": true
+      },
+      "sg_free_table": {
+        "crc": "0x8441c8cb",
+        "target_crc": "0x8441c8cb",
+        "undefined": true
+      },
+      "sg_next": {
+        "crc": "0xe06699b2",
+        "target_crc": "0xe06699b2",
+        "undefined": true
+      },
+      "shmem_file_setup": {
+        "crc": "0xbe9bfef9",
+        "target_crc": "0xbe9bfef9",
+        "undefined": true
+      },
+      "shmem_read_mapping_page_gfp": {
+        "crc": "0xf2a792b1",
+        "target_crc": "0xf2a792b1",
+        "undefined": true
+      },
+      "shmem_truncate_range": {
+        "crc": "0xa138e61c",
+        "target_crc": "0xa138e61c",
+        "undefined": true
+      },
+      "show_class_attr_string": {
+        "crc": "0xf7a7d76b",
+        "target_crc": "0xf7a7d76b",
+        "undefined": true
+      },
+      "simple_pin_fs": {
+        "crc": "0x4dab55ec",
+        "target_crc": "0x4dab55ec",
+        "undefined": true
+      },
+      "simple_release_fs": {
+        "crc": "0xd3d520c9",
+        "target_crc": "0xd3d520c9",
+        "undefined": true
+      },
+      "simple_strtol": {
+        "crc": "0x0b742fd7",
+        "target_crc": "0x0b742fd7",
+        "undefined": true
+      },
+      "single_open": {
+        "crc": "0x4c137deb",
+        "target_crc": "0x4c137deb",
+        "undefined": true
+      },
+      "single_release": {
+        "crc": "0x67b3feec",
+        "target_crc": "0x67b3feec",
+        "undefined": true
+      },
+      "snprintf": {
+        "crc": "0xc358aaf8",
+        "target_crc": "0xc358aaf8",
+        "undefined": true
+      },
+      "sort": {
+        "crc": "0xaacc9e27",
+        "target_crc": "0xaacc9e27",
+        "undefined": true
+      },
+      "sprintf": {
+        "crc": "0x3c3ff9fd",
+        "target_crc": "0x3c3ff9fd",
+        "undefined": true
+      },
+      "strchr": {
+        "crc": "0x349cba85",
+        "target_crc": "0x349cba85",
+        "undefined": true
+      },
+      "strcmp": {
+        "crc": "0xe2d5255a",
+        "target_crc": "0xe2d5255a",
+        "undefined": true
+      },
+      "strcpy": {
+        "crc": "0xe914e41e",
+        "target_crc": "0xe914e41e",
+        "undefined": true
+      },
+      "strlen": {
+        "crc": "0xd0d8621b",
+        "target_crc": "0xd0d8621b",
+        "undefined": true
+      },
+      "strncmp": {
+        "crc": "0x6c2e3320",
+        "target_crc": "0x6c2e3320",
+        "undefined": true
+      },
+      "strncpy": {
+        "crc": "0xb6ed1e53",
+        "target_crc": "0xb6ed1e53",
+        "undefined": true
+      },
+      "strnlen": {
+        "crc": "0x738803e6",
+        "target_crc": "0x738803e6",
+        "undefined": true
+      },
+      "strscpy": {
+        "crc": "0x0eea0399",
+        "target_crc": "0x0eea0399",
+        "undefined": true
+      },
+      "strsep": {
+        "crc": "0x85df9b6c",
+        "target_crc": "0x85df9b6c",
+        "undefined": true
+      },
+      "sync_file_create": {
+        "crc": "0x26e4c4dc",
+        "target_crc": "0x26e4c4dc",
+        "undefined": true
+      },
+      "sync_file_get_fence": {
+        "crc": "0x4dca08ee",
+        "target_crc": "0x4dca08ee",
+        "undefined": true
+      },
+      "synchronize_srcu": {
+        "crc": "0xd4ae6a9f",
+        "target_crc": "0xd4ae6a9f",
+        "undefined": true
+      },
+      "sysfs_create_link": {
+        "crc": "0xaa7ad4bb",
+        "target_crc": "0xaa7ad4bb",
+        "undefined": true
+      },
+      "sysfs_remove_link": {
+        "crc": "0x9ac5e543",
+        "target_crc": "0x9ac5e543",
+        "undefined": true
+      },
+      "sysfs_streq": {
+        "crc": "0x222e7ce2",
+        "target_crc": "0x222e7ce2",
+        "undefined": true
+      },
+      "system_long_wq": {
+        "crc": "0x131db64a",
+        "target_crc": "0x131db64a",
+        "undefined": true
+      },
+      "system_wq": {
+        "crc": "0x2d3385d3",
+        "target_crc": "0x2d3385d3",
+        "undefined": true
+      },
+      "this_cpu_off": {
+        "crc": "0x53569707",
+        "target_crc": "0x53569707",
+        "undefined": true
+      },
+      "timer_delete_sync": {
+        "crc": "0x82ee90dc",
+        "target_crc": "0x82ee90dc",
+        "undefined": true
+      },
+      "trace_event_buffer_commit": {
+        "crc": "0x1be3ace6",
+        "target_crc": "0x1be3ace6",
+        "undefined": true
+      },
+      "trace_event_buffer_reserve": {
+        "crc": "0xbba8aebf",
+        "target_crc": "0xbba8aebf",
+        "undefined": true
+      },
+      "trace_event_ignore_this_pid": {
+        "crc": "0xe5ad2f76",
+        "target_crc": "0xe5ad2f76",
+        "undefined": true
+      },
+      "trace_event_printf": {
+        "crc": "0xd763a184",
+        "target_crc": "0xd763a184",
+        "undefined": true
+      },
+      "trace_event_raw_init": {
+        "crc": "0xf4306fc9",
+        "target_crc": "0xf4306fc9",
+        "undefined": true
+      },
+      "trace_event_reg": {
+        "crc": "0xb9fc8ecc",
+        "target_crc": "0xb9fc8ecc",
+        "undefined": true
+      },
+      "trace_handle_return": {
+        "crc": "0x04ae4635",
+        "target_crc": "0x04ae4635",
+        "undefined": true
+      },
+      "trace_raw_output_prep": {
+        "crc": "0x909a797f",
+        "target_crc": "0x909a797f",
+        "undefined": true
+      },
+      "try_module_get": {
+        "crc": "0x502b702c",
+        "target_crc": "0x502b702c",
+        "undefined": true
+      },
+      "unmap_mapping_range": {
+        "crc": "0x255b79d1",
+        "target_crc": "0x255b79d1",
+        "undefined": true
+      },
+      "unregister_acpi_bus_type": {
+        "crc": "0x03d0037f",
+        "target_crc": "0x03d0037f",
+        "undefined": true
+      },
+      "vfree": {
+        "crc": "0x999e8297",
+        "target_crc": "0x999e8297",
+        "undefined": true
+      },
+      "vga_client_register": {
+        "crc": "0x0d6b8f9c",
+        "target_crc": "0x0d6b8f9c",
+        "undefined": true
+      },
+      "vga_switcheroo_lock_ddc": {
+        "crc": "0x5e3adccd",
+        "target_crc": "0x5e3adccd",
+        "undefined": true
+      },
+      "vga_switcheroo_unlock_ddc": {
+        "crc": "0xffc0cf5c",
+        "target_crc": "0xffc0cf5c",
+        "undefined": true
+      },
+      "vm_get_page_prot": {
+        "crc": "0x494e3393",
+        "target_crc": "0x494e3393",
+        "undefined": true
+      },
+      "vm_insert_page": {
+        "crc": "0x9d3ba781",
+        "target_crc": "0x9d3ba781",
+        "undefined": true
+      },
+      "vm_mmap": {
+        "crc": "0xd7c71963",
+        "target_crc": "0xd7c71963",
+        "undefined": true
+      },
+      "vmalloc": {
+        "crc": "0xd6ee688f",
+        "target_crc": "0xd6ee688f",
+        "undefined": true
+      },
+      "vmalloc_32": {
+        "crc": "0xa0b04675",
+        "target_crc": "0xa0b04675",
+        "undefined": true
+      },
+      "vmalloc_to_page": {
+        "crc": "0x4db04af4",
+        "target_crc": "0x4db04af4",
+        "undefined": true
+      },
+      "vmalloc_user": {
+        "crc": "0x5635a60a",
+        "target_crc": "0x5635a60a",
+        "undefined": true
+      },
+      "vmap": {
+        "crc": "0x75f5ea6d",
+        "target_crc": "0x75f5ea6d",
+        "undefined": true
+      },
+      "vunmap": {
+        "crc": "0x94961283",
+        "target_crc": "0x94961283",
+        "undefined": true
+      },
+      "vzalloc": {
+        "crc": "0x40a9b349",
+        "target_crc": "0x40a9b349",
+        "undefined": true
+      },
+      "wake_up_process": {
+        "crc": "0x9ed306fb",
+        "target_crc": "0x9ed306fb",
+        "undefined": true
+      },
+      "wbinvd_on_all_cpus": {
+        "crc": "0x8f2703b7",
+        "target_crc": "0x8f2703b7",
+        "undefined": true
+      },
+      "ww_mutex_lock": {
+        "crc": "0xecc7e538",
+        "target_crc": "0xecc7e538",
+        "undefined": true
+      },
+      "ww_mutex_lock_interruptible": {
+        "crc": "0x9400af17",
+        "target_crc": "0x9400af17",
+        "undefined": true
+      },
+      "ww_mutex_unlock": {
+        "crc": "0xe9565757",
+        "target_crc": "0xe9565757",
+        "undefined": true
+      },
+      "xa_find": {
+        "crc": "0x8fa25c24",
+        "target_crc": "0x8fa25c24",
+        "undefined": true
+      },
+      "xa_find_after": {
+        "crc": "0xdf36914b",
+        "target_crc": "0xdf36914b",
+        "undefined": true
+      },
+      "xa_store": {
+        "crc": "0x5b3e282f",
+        "target_crc": "0x5b3e282f",
+        "undefined": true
+      }
+    }
+  },
+  {
+    "name": "syscopyarea",
+    "sha256": "073ef524e5d71941b894c62e567672a2912059bccdf6b7bc4f84e550876d4a00",
+    "versioned_imports": 2,
+    "undefined_symbols": 1,
+    "missing": 0,
+    "crc_mismatches": 0,
+    "module_layout": "0xb84efb99",
+    "modinfo": {
+      "license": [
+        "GPL"
+      ],
+      "description": [
+        "Generic copyarea (sys-to-sys)"
+      ],
+      "author": [
+        "Antonino Daplas <adaplas@pol.net>"
+      ],
+      "depends": [
+        ""
+      ],
+      "retpoline": [
+        "Y"
+      ],
+      "intree": [
+        "Y"
+      ],
+      "name": [
+        "syscopyarea"
+      ],
+      "vermagic": [
+        "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 "
+      ]
+    },
+    "imports": {
+      "__x86_indirect_thunk_edx": {
+        "crc": "0xae4ddd5a",
+        "target_crc": "0xae4ddd5a",
+        "undefined": true
+      },
+      "module_layout": {
+        "crc": "0xb84efb99",
+        "target_crc": "0xb84efb99",
+        "undefined": false
+      }
+    }
+  },
+  {
+    "name": "sysfillrect",
+    "sha256": "2ba264e98a234ee5eb51fd34fa60bcb9ef56a85db4b640422da9aa229c3747ed",
+    "versioned_imports": 6,
+    "undefined_symbols": 5,
+    "missing": 0,
+    "crc_mismatches": 0,
+    "module_layout": "0xb84efb99",
+    "modinfo": {
+      "license": [
+        "GPL"
+      ],
+      "description": [
+        "Generic fill rectangle (sys-to-sys)"
+      ],
+      "author": [
+        "Antonino Daplas <adaplas@pol.net>"
+      ],
+      "depends": [
+        ""
+      ],
+      "retpoline": [
+        "Y"
+      ],
+      "intree": [
+        "Y"
+      ],
+      "name": [
+        "sysfillrect"
+      ],
+      "vermagic": [
+        "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 "
+      ]
+    },
+    "imports": {
+      "__warn_printk": {
+        "crc": "0x56470118",
+        "target_crc": "0x56470118",
+        "undefined": true
+      },
+      "__x86_indirect_thunk_ebx": {
+        "crc": "0xaac0a1e8",
+        "target_crc": "0xaac0a1e8",
+        "undefined": true
+      },
+      "__x86_indirect_thunk_edx": {
+        "crc": "0xae4ddd5a",
+        "target_crc": "0xae4ddd5a",
+        "undefined": true
+      },
+      "__x86_indirect_thunk_esi": {
+        "crc": "0xe4fd4bbf",
+        "target_crc": "0xe4fd4bbf",
+        "undefined": true
+      },
+      "module_layout": {
+        "crc": "0xb84efb99",
+        "target_crc": "0xb84efb99",
+        "undefined": false
+      },
+      "printk": {
+        "crc": "0xecc9cdd8",
+        "target_crc": "0xecc9cdd8",
+        "undefined": true
+      }
+    }
+  },
+  {
+    "name": "sysimgblt",
+    "sha256": "c39c1a63a5f072333050cae22f9699c37f89358d956c81cab6bb1765ec1d0a39",
+    "versioned_imports": 4,
+    "undefined_symbols": 3,
+    "missing": 0,
+    "crc_mismatches": 0,
+    "module_layout": "0xb84efb99",
+    "modinfo": {
+      "license": [
+        "GPL"
+      ],
+      "description": [
+        "1-bit/8-bit to 1-32 bit color expansion (sys-to-sys)"
+      ],
+      "author": [
+        "Antonino Daplas <adaplas@pol.net>"
+      ],
+      "depends": [
+        ""
+      ],
+      "retpoline": [
+        "Y"
+      ],
+      "intree": [
+        "Y"
+      ],
+      "name": [
+        "sysimgblt"
+      ],
+      "vermagic": [
+        "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 "
+      ]
+    },
+    "imports": {
+      "__stack_chk_fail": {
+        "crc": "0x60c9d98f",
+        "target_crc": "0x60c9d98f",
+        "undefined": true
+      },
+      "__stack_chk_guard": {
+        "crc": "0x7240a66f",
+        "target_crc": "0x7240a66f",
+        "undefined": true
+      },
+      "__x86_indirect_thunk_edx": {
+        "crc": "0xae4ddd5a",
+        "target_crc": "0xae4ddd5a",
+        "undefined": true
+      },
+      "module_layout": {
+        "crc": "0xb84efb99",
+        "target_crc": "0xb84efb99",
+        "undefined": false
+      }
+    }
+  },
+  {
+    "name": "fb_sys_fops",
+    "sha256": "e9a32aa2e359917fc61d056d84c931d10504ff228fee50c10566697265e37402",
+    "versioned_imports": 5,
+    "undefined_symbols": 4,
+    "missing": 0,
+    "crc_mismatches": 0,
+    "module_layout": "0xb84efb99",
+    "modinfo": {
+      "license": [
+        "GPL"
+      ],
+      "description": [
+        "Generic file read (fb in system RAM)"
+      ],
+      "author": [
+        "Antonino Daplas <adaplas@pol.net>"
+      ],
+      "depends": [
+        ""
+      ],
+      "retpoline": [
+        "Y"
+      ],
+      "intree": [
+        "Y"
+      ],
+      "name": [
+        "fb_sys_fops"
+      ],
+      "vermagic": [
+        "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 "
+      ]
+    },
+    "imports": {
+      "__check_object_size": {
+        "crc": "0x88db9f48",
+        "target_crc": "0x88db9f48",
+        "undefined": true
+      },
+      "__x86_indirect_thunk_edx": {
+        "crc": "0xae4ddd5a",
+        "target_crc": "0xae4ddd5a",
+        "undefined": true
+      },
+      "_copy_from_user": {
+        "crc": "0x362ef408",
+        "target_crc": "0x362ef408",
+        "undefined": true
+      },
+      "_copy_to_user": {
+        "crc": "0xb44ad4b3",
+        "target_crc": "0xb44ad4b3",
+        "undefined": true
+      },
+      "module_layout": {
+        "crc": "0xb84efb99",
+        "target_crc": "0xb84efb99",
+        "undefined": false
+      }
+    }
+  },
+  {
+    "name": "cec",
+    "sha256": "33c9184040ca309997146c1cb2545026029f399f85cd011dbc6aed1b6e09d9e8",
+    "versioned_imports": 81,
+    "undefined_symbols": 80,
+    "missing": 0,
+    "crc_mismatches": 0,
+    "module_layout": "0xb84efb99",
+    "modinfo": {
+      "license": [
+        "GPL"
+      ],
+      "description": [
+        "Device node registration for cec drivers"
+      ],
+      "author": [
+        "Hans Verkuil <hans.verkuil@cisco.com>"
+      ],
+      "parm": [
+        "debug_phys_addr:add CEC_CAP_PHYS_ADDR if set",
+        "debug:debug level (0-2)"
+      ],
+      "parmtype": [
+        "debug_phys_addr:bool",
+        "debug:int"
+      ],
+      "depends": [
+        ""
+      ],
+      "retpoline": [
+        "Y"
+      ],
+      "intree": [
+        "Y"
+      ],
+      "name": [
+        "cec"
+      ],
+      "vermagic": [
+        "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 "
+      ]
+    },
+    "imports": {
+      "__init_swait_queue_head": {
+        "crc": "0x608741b5",
+        "target_crc": "0x608741b5",
+        "undefined": true
+      },
+      "__init_waitqueue_head": {
+        "crc": "0xd9a5ea54",
+        "target_crc": "0xd9a5ea54",
+        "undefined": true
+      },
+      "__msecs_to_jiffies": {
+        "crc": "0x7f02188f",
+        "target_crc": "0x7f02188f",
+        "undefined": true
+      },
+      "__mutex_init": {
+        "crc": "0x0affbb4f",
+        "target_crc": "0x0affbb4f",
+        "undefined": true
+      },
+      "__stack_chk_fail": {
+        "crc": "0x60c9d98f",
+        "target_crc": "0x60c9d98f",
+        "undefined": true
+      },
+      "__stack_chk_guard": {
+        "crc": "0x7240a66f",
+        "target_crc": "0x7240a66f",
+        "undefined": true
+      },
+      "__wake_up": {
+        "crc": "0x3eeb2322",
+        "target_crc": "0x3eeb2322",
+        "undefined": true
+      },
+      "__warn_printk": {
+        "crc": "0x56470118",
+        "target_crc": "0x56470118",
+        "undefined": true
+      },
+      "__x86_indirect_thunk_ebx": {
+        "crc": "0xaac0a1e8",
+        "target_crc": "0xaac0a1e8",
+        "undefined": true
+      },
+      "__x86_indirect_thunk_ecx": {
+        "crc": "0xab02cbdf",
+        "target_crc": "0xab02cbdf",
+        "undefined": true
+      },
+      "__x86_indirect_thunk_edi": {
+        "crc": "0xfd94fe4a",
+        "target_crc": "0xfd94fe4a",
+        "undefined": true
+      },
+      "__x86_indirect_thunk_edx": {
+        "crc": "0xae4ddd5a",
+        "target_crc": "0xae4ddd5a",
+        "undefined": true
+      },
+      "__x86_indirect_thunk_esi": {
+        "crc": "0xe4fd4bbf",
+        "target_crc": "0xe4fd4bbf",
+        "undefined": true
+      },
+      "_cond_resched": {
+        "crc": "0xa1c76e0a",
+        "target_crc": "0xa1c76e0a",
+        "undefined": true
+      },
+      "_copy_from_user": {
+        "crc": "0x362ef408",
+        "target_crc": "0x362ef408",
+        "undefined": true
+      },
+      "_copy_to_user": {
+        "crc": "0xb44ad4b3",
+        "target_crc": "0xb44ad4b3",
+        "undefined": true
+      },
+      "_dev_err": {
+        "crc": "0x3b73b2f8",
+        "target_crc": "0x3b73b2f8",
+        "undefined": true
+      },
+      "alloc_chrdev_region": {
+        "crc": "0xe3ec2f2b",
+        "target_crc": "0xe3ec2f2b",
+        "undefined": true
+      },
+      "bus_register": {
+        "crc": "0xe276268a",
+        "target_crc": "0xe276268a",
+        "undefined": true
+      },
+      "bus_unregister": {
+        "crc": "0x29a22b59",
+        "target_crc": "0x29a22b59",
+        "undefined": true
+      },
+      "cancel_delayed_work": {
+        "crc": "0xa15d0131",
+        "target_crc": "0xa15d0131",
+        "undefined": true
+      },
+      "cancel_delayed_work_sync": {
+        "crc": "0x29d9f26e",
+        "target_crc": "0x29d9f26e",
+        "undefined": true
+      },
+      "capable": {
+        "crc": "0xc6cbbc89",
+        "target_crc": "0xc6cbbc89",
+        "undefined": true
+      },
+      "cdev_device_add": {
+        "crc": "0xdea9da8a",
+        "target_crc": "0xdea9da8a",
+        "undefined": true
+      },
+      "cdev_device_del": {
+        "crc": "0x7c8717ec",
+        "target_crc": "0x7c8717ec",
+        "undefined": true
+      },
+      "cdev_init": {
+        "crc": "0xc956fe4e",
+        "target_crc": "0xc956fe4e",
+        "undefined": true
+      },
+      "complete": {
+        "crc": "0xa6257a2f",
+        "target_crc": "0xa6257a2f",
+        "undefined": true
+      },
+      "debugfs_create_devm_seqfile": {
+        "crc": "0xf517567e",
+        "target_crc": "0xf517567e",
+        "undefined": true
+      },
+      "debugfs_create_dir": {
+        "crc": "0xbfbc7eee",
+        "target_crc": "0xbfbc7eee",
+        "undefined": true
+      },
+      "debugfs_create_file": {
+        "crc": "0x4b26e01c",
+        "target_crc": "0x4b26e01c",
+        "undefined": true
+      },
+      "debugfs_remove": {
+        "crc": "0xaf0adbbd",
+        "target_crc": "0xaf0adbbd",
+        "undefined": true
+      },
+      "delayed_work_timer_fn": {
+        "crc": "0xffeedf6a",
+        "target_crc": "0xffeedf6a",
+        "undefined": true
+      },
+      "dev_set_name": {
+        "crc": "0x22fa8656",
+        "target_crc": "0x22fa8656",
+        "undefined": true
+      },
+      "device_initialize": {
+        "crc": "0x5dec6b36",
+        "target_crc": "0x5dec6b36",
+        "undefined": true
+      },
+      "find_next_zero_bit": {
+        "crc": "0x479c3c86",
+        "target_crc": "0x479c3c86",
+        "undefined": true
+      },
+      "finish_wait": {
+        "crc": "0x92540fbf",
+        "target_crc": "0x92540fbf",
+        "undefined": true
+      },
+      "get_device": {
+        "crc": "0x3df03767",
+        "target_crc": "0x3df03767",
+        "undefined": true
+      },
+      "init_timer_key": {
+        "crc": "0xc6f46339",
+        "target_crc": "0xc6f46339",
+        "undefined": true
+      },
+      "init_wait_entry": {
+        "crc": "0xfe487975",
+        "target_crc": "0xfe487975",
+        "undefined": true
+      },
+      "kfree": {
+        "crc": "0x037a0cba",
+        "target_crc": "0x037a0cba",
+        "undefined": true
+      },
+      "kmalloc_caches": {
+        "crc": "0x72208652",
+        "target_crc": "0x72208652",
+        "undefined": true
+      },
+      "kmem_cache_alloc_trace": {
+        "crc": "0x0bed2f44",
+        "target_crc": "0x0bed2f44",
+        "undefined": true
+      },
+      "kobject_set_name": {
+        "crc": "0x109b0007",
+        "target_crc": "0x109b0007",
+        "undefined": true
+      },
+      "kstrdup": {
+        "crc": "0x2d39b0a7",
+        "target_crc": "0x2d39b0a7",
+        "undefined": true
+      },
+      "kthread_create_on_node": {
+        "crc": "0xc001d902",
+        "target_crc": "0xc001d902",
+        "undefined": true
+      },
+      "kthread_should_stop": {
+        "crc": "0xb3f7646e",
+        "target_crc": "0xb3f7646e",
+        "undefined": true
+      },
+      "kthread_stop": {
+        "crc": "0x171de63d",
+        "target_crc": "0x171de63d",
+        "undefined": true
+      },
+      "ktime_get": {
+        "crc": "0xb43f9365",
+        "target_crc": "0xb43f9365",
+        "undefined": true
+      },
+      "memcpy": {
+        "crc": "0x2e60bace",
+        "target_crc": "0x2e60bace",
+        "undefined": true
+      },
+      "memdup_user_nul": {
+        "crc": "0x97106714",
+        "target_crc": "0x97106714",
+        "undefined": true
+      },
+      "module_layout": {
+        "crc": "0xb84efb99",
+        "target_crc": "0xb84efb99",
+        "undefined": false
+      },
+      "mutex_lock": {
+        "crc": "0x1b58e04c",
+        "target_crc": "0x1b58e04c",
+        "undefined": true
+      },
+      "mutex_unlock": {
+        "crc": "0x99b76c81",
+        "target_crc": "0x99b76c81",
+        "undefined": true
+      },
+      "no_llseek": {
+        "crc": "0x54a37399",
+        "target_crc": "0x54a37399",
+        "undefined": true
+      },
+      "of_find_device_by_node": {
+        "crc": "0x6bb3a42e",
+        "target_crc": "0x6bb3a42e",
+        "undefined": true
+      },
+      "of_parse_phandle": {
+        "crc": "0x91bc2dbd",
+        "target_crc": "0x91bc2dbd",
+        "undefined": true
+      },
+      "param_ops_bool": {
+        "crc": "0x0566a1ef",
+        "target_crc": "0x0566a1ef",
+        "undefined": true
+      },
+      "param_ops_int": {
+        "crc": "0x6903a7d6",
+        "target_crc": "0x6903a7d6",
+        "undefined": true
+      },
+      "prepare_to_wait_event": {
+        "crc": "0x8c26d495",
+        "target_crc": "0x8c26d495",
+        "undefined": true
+      },
+      "printk": {
+        "crc": "0xecc9cdd8",
+        "target_crc": "0xecc9cdd8",
+        "undefined": true
+      },
+      "put_device": {
+        "crc": "0x4c792038",
+        "target_crc": "0x4c792038",
+        "undefined": true
+      },
+      "queue_delayed_work_on": {
+        "crc": "0xcf86cdac",
+        "target_crc": "0xcf86cdac",
+        "undefined": true
+      },
+      "refcount_warn_saturate": {
+        "crc": "0x0296695f",
+        "target_crc": "0x0296695f",
+        "undefined": true
+      },
+      "schedule": {
+        "crc": "0x4292364c",
+        "target_crc": "0x4292364c",
+        "undefined": true
+      },
+      "schedule_timeout": {
+        "crc": "0x8ddd8aad",
+        "target_crc": "0x8ddd8aad",
+        "undefined": true
+      },
+      "seq_lseek": {
+        "crc": "0x242dc0e8",
+        "target_crc": "0x242dc0e8",
+        "undefined": true
+      },
+      "seq_printf": {
+        "crc": "0xa5372268",
+        "target_crc": "0xa5372268",
+        "undefined": true
+      },
+      "seq_puts": {
+        "crc": "0xdb0aacd6",
+        "target_crc": "0xdb0aacd6",
+        "undefined": true
+      },
+      "seq_read": {
+        "crc": "0x1cfc6b85",
+        "target_crc": "0x1cfc6b85",
+        "undefined": true
+      },
+      "single_open": {
+        "crc": "0x4c137deb",
+        "target_crc": "0x4c137deb",
+        "undefined": true
+      },
+      "single_release": {
+        "crc": "0x67b3feec",
+        "target_crc": "0x67b3feec",
+        "undefined": true
+      },
+      "skip_spaces": {
+        "crc": "0xd0a91bab",
+        "target_crc": "0xd0a91bab",
+        "undefined": true
+      },
+      "strcmp": {
+        "crc": "0xe2d5255a",
+        "target_crc": "0xe2d5255a",
+        "undefined": true
+      },
+      "strlen": {
+        "crc": "0xd0d8621b",
+        "target_crc": "0xd0d8621b",
+        "undefined": true
+      },
+      "strscpy": {
+        "crc": "0x0eea0399",
+        "target_crc": "0x0eea0399",
+        "undefined": true
+      },
+      "strsep": {
+        "crc": "0x85df9b6c",
+        "target_crc": "0x85df9b6c",
+        "undefined": true
+      },
+      "system_wq": {
+        "crc": "0x2d3385d3",
+        "target_crc": "0x2d3385d3",
+        "undefined": true
+      },
+      "unregister_chrdev_region": {
+        "crc": "0x6091b333",
+        "target_crc": "0x6091b333",
+        "undefined": true
+      },
+      "wait_for_completion": {
+        "crc": "0x25974000",
+        "target_crc": "0x25974000",
+        "undefined": true
+      },
+      "wait_for_completion_killable": {
+        "crc": "0x20463df4",
+        "target_crc": "0x20463df4",
+        "undefined": true
+      },
+      "wake_up_process": {
+        "crc": "0x9ed306fb",
+        "target_crc": "0x9ed306fb",
+        "undefined": true
+      }
+    }
+  },
+  {
+    "name": "drm_kms_helper",
+    "sha256": "9757eb58238b9166485ed78f48a4004e6a31ab1e116aa6aa2eec9df7ade21076",
+    "versioned_imports": 306,
+    "undefined_symbols": 305,
+    "missing": 0,
+    "crc_mismatches": 0,
+    "module_layout": "0xb84efb99",
+    "modinfo": {
+      "parm": [
+        "dp_aux_i2c_transfer_size:Number of bytes to transfer in a single I2C over DP AUX CH message, (1-16, default 16)",
+        "dp_aux_i2c_speed_khz:Assumed speed of the i2c bus in kHz, (1-400, default 10)",
+        "edid_firmware:DEPRECATED. Use drm.edid_firmware module parameter instead.",
+        "drm_fbdev_overalloc:Overallocation of the fbdev buffer (%) [default=100]",
+        "fbdev_emulation:Enable legacy fbdev emulation [default=true]",
+        "drm_dp_cec_unregister_delay:CEC unregister delay in seconds, 0: no delay, >= 1000: never unregister"
+      ],
+      "parmtype": [
+        "dp_aux_i2c_transfer_size:int",
+        "dp_aux_i2c_speed_khz:int",
+        "poll:bool",
+        "edid_firmware:charp",
+        "drm_fbdev_overalloc:int",
+        "fbdev_emulation:bool",
+        "drm_dp_cec_unregister_delay:uint"
+      ],
+      "license": [
+        "GPL and additional rights",
+        "GPL"
+      ],
+      "description": [
+        "DRM KMS helper"
+      ],
+      "author": [
+        "David Airlie, Jesse Barnes"
+      ],
+      "depends": [
+        "drm,cec,fb_sys_fops,syscopyarea,sysfillrect,sysimgblt"
+      ],
+      "retpoline": [
+        "Y"
+      ],
+      "intree": [
+        "Y"
+      ],
+      "name": [
+        "drm_kms_helper"
+      ],
+      "vermagic": [
+        "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 "
+      ]
+    },
+    "imports": {
+      "___ratelimit": {
+        "crc": "0x1d24c881",
+        "target_crc": "0x1d24c881",
+        "undefined": true
+      },
+      "__check_object_size": {
+        "crc": "0x88db9f48",
+        "target_crc": "0x88db9f48",
+        "undefined": true
+      },
+      "__class_create": {
+        "crc": "0x4ef1eab6",
+        "target_crc": "0x4ef1eab6",
+        "undefined": true
+      },
+      "__drm_atomic_helper_disable_plane": {
+        "crc": "0xa901948d",
+        "target_crc": "0xa901948d",
+        "undefined": true
+      },
+      "__drm_atomic_helper_set_config": {
+        "crc": "0x38afc285",
+        "target_crc": "0x38afc285",
+        "undefined": true
+      },
+      "__drm_atomic_state_free": {
+        "crc": "0xb9cad492",
+        "target_crc": "0xb9cad492",
+        "undefined": true
+      },
+      "__drm_crtc_commit_free": {
+        "crc": "0xae277372",
+        "target_crc": "0xae277372",
+        "undefined": true
+      },
+      "__drm_dbg": {
+        "crc": "0xec12af74",
+        "target_crc": "0xec12af74",
+        "undefined": true
+      },
+      "__drm_debug": {
+        "crc": "0x4f18a150",
+        "target_crc": "0x4f18a150",
+        "undefined": true
+      },
+      "__drm_err": {
+        "crc": "0xb11ac7a7",
+        "target_crc": "0xb11ac7a7",
+        "undefined": true
+      },
+      "__drm_get_edid_firmware_path": {
+        "crc": "0x380b5fbb",
+        "target_crc": "0x380b5fbb",
+        "undefined": true
+      },
+      "__drm_printfn_debug": {
+        "crc": "0x10c62b61",
+        "target_crc": "0x10c62b61",
+        "undefined": true
+      },
+      "__drm_set_edid_firmware_path": {
+        "crc": "0x31b8a5e3",
+        "target_crc": "0x31b8a5e3",
+        "undefined": true
+      },
+      "__init_swait_queue_head": {
+        "crc": "0x608741b5",
+        "target_crc": "0x608741b5",
+        "undefined": true
+      },
+      "__init_waitqueue_head": {
+        "crc": "0xd9a5ea54",
+        "target_crc": "0xd9a5ea54",
+        "undefined": true
+      },
+      "__kmalloc": {
+        "crc": "0x2d6fcc06",
+        "target_crc": "0x2d6fcc06",
+        "undefined": true
+      },
+      "__msecs_to_jiffies": {
+        "crc": "0x7f02188f",
+        "target_crc": "0x7f02188f",
+        "undefined": true
+      },
+      "__mutex_init": {
+        "crc": "0x0affbb4f",
+        "target_crc": "0x0affbb4f",
+        "undefined": true
+      },
+      "__register_chrdev": {
+        "crc": "0xfe576338",
+        "target_crc": "0xfe576338",
+        "undefined": true
+      },
+      "__stack_chk_fail": {
+        "crc": "0x60c9d98f",
+        "target_crc": "0x60c9d98f",
+        "undefined": true
+      },
+      "__stack_chk_guard": {
+        "crc": "0x7240a66f",
+        "target_crc": "0x7240a66f",
+        "undefined": true
+      },
+      "__sw_hweight32": {
+        "crc": "0x74c134b9",
+        "target_crc": "0x74c134b9",
+        "undefined": true
+      },
+      "__unregister_chrdev": {
+        "crc": "0x6bc3fbc0",
+        "target_crc": "0x6bc3fbc0",
+        "undefined": true
+      },
+      "__var_waitqueue": {
+        "crc": "0x5e332b52",
+        "target_crc": "0x5e332b52",
+        "undefined": true
+      },
+      "__wake_up": {
+        "crc": "0x3eeb2322",
+        "target_crc": "0x3eeb2322",
+        "undefined": true
+      },
+      "__warn_printk": {
+        "crc": "0x56470118",
+        "target_crc": "0x56470118",
+        "undefined": true
+      },
+      "__x86_indirect_thunk_ebx": {
+        "crc": "0xaac0a1e8",
+        "target_crc": "0xaac0a1e8",
+        "undefined": true
+      },
+      "__x86_indirect_thunk_ecx": {
+        "crc": "0xab02cbdf",
+        "target_crc": "0xab02cbdf",
+        "undefined": true
+      },
+      "__x86_indirect_thunk_edi": {
+        "crc": "0xfd94fe4a",
+        "target_crc": "0xfd94fe4a",
+        "undefined": true
+      },
+      "__x86_indirect_thunk_edx": {
+        "crc": "0xae4ddd5a",
+        "target_crc": "0xae4ddd5a",
+        "undefined": true
+      },
+      "__x86_indirect_thunk_esi": {
+        "crc": "0xe4fd4bbf",
+        "target_crc": "0xe4fd4bbf",
+        "undefined": true
+      },
+      "_cond_resched": {
+        "crc": "0xa1c76e0a",
+        "target_crc": "0xa1c76e0a",
+        "undefined": true
+      },
+      "_copy_from_iter_full": {
+        "crc": "0x4e95c763",
+        "target_crc": "0x4e95c763",
+        "undefined": true
+      },
+      "_copy_to_iter": {
+        "crc": "0xf7e0ab31",
+        "target_crc": "0xf7e0ab31",
+        "undefined": true
+      },
+      "_dev_err": {
+        "crc": "0x3b73b2f8",
+        "target_crc": "0x3b73b2f8",
+        "undefined": true
+      },
+      "_dev_info": {
+        "crc": "0x59a2c442",
+        "target_crc": "0x59a2c442",
+        "undefined": true
+      },
+      "_raw_spin_lock": {
+        "crc": "0xba8fbd64",
+        "target_crc": "0xba8fbd64",
+        "undefined": true
+      },
+      "_raw_spin_lock_irq": {
+        "crc": "0x8427cc7b",
+        "target_crc": "0x8427cc7b",
+        "undefined": true
+      },
+      "_raw_spin_lock_irqsave": {
+        "crc": "0x34db050b",
+        "target_crc": "0x34db050b",
+        "undefined": true
+      },
+      "_raw_spin_unlock_irqrestore": {
+        "crc": "0xd35cce70",
+        "target_crc": "0xd35cce70",
+        "undefined": true
+      },
+      "alloc_workqueue": {
+        "crc": "0xdf9208c0",
+        "target_crc": "0xdf9208c0",
+        "undefined": true
+      },
+      "cancel_delayed_work_sync": {
+        "crc": "0x29d9f26e",
+        "target_crc": "0x29d9f26e",
+        "undefined": true
+      },
+      "cancel_work_sync": {
+        "crc": "0x4205ad24",
+        "target_crc": "0x4205ad24",
+        "undefined": true
+      },
+      "cec_allocate_adapter": {
+        "crc": "0x02b07f3b",
+        "target_crc": "0x02b07f3b",
+        "undefined": true
+      },
+      "cec_delete_adapter": {
+        "crc": "0x8d2ad3ad",
+        "target_crc": "0x8d2ad3ad",
+        "undefined": true
+      },
+      "cec_fill_conn_info_from_drm": {
+        "crc": "0x9b3a179c",
+        "target_crc": "0x9b3a179c",
+        "undefined": true
+      },
+      "cec_received_msg_ts": {
+        "crc": "0x1b4326f1",
+        "target_crc": "0x1b4326f1",
+        "undefined": true
+      },
+      "cec_register_adapter": {
+        "crc": "0x250dd705",
+        "target_crc": "0x250dd705",
+        "undefined": true
+      },
+      "cec_s_conn_info": {
+        "crc": "0x18f1d0eb",
+        "target_crc": "0x18f1d0eb",
+        "undefined": true
+      },
+      "cec_s_phys_addr": {
+        "crc": "0xcae778ee",
+        "target_crc": "0xcae778ee",
+        "undefined": true
+      },
+      "cec_s_phys_addr_from_edid": {
+        "crc": "0x8c23bcf6",
+        "target_crc": "0x8c23bcf6",
+        "undefined": true
+      },
+      "cec_transmit_attempt_done_ts": {
+        "crc": "0x6cb162a4",
+        "target_crc": "0x6cb162a4",
+        "undefined": true
+      },
+      "cec_unregister_adapter": {
+        "crc": "0x6d31d7f9",
+        "target_crc": "0x6d31d7f9",
+        "undefined": true
+      },
+      "cfb_copyarea": {
+        "crc": "0x41a211e9",
+        "target_crc": "0x41a211e9",
+        "undefined": true
+      },
+      "cfb_fillrect": {
+        "crc": "0x97b35cd0",
+        "target_crc": "0x97b35cd0",
+        "undefined": true
+      },
+      "cfb_imageblit": {
+        "crc": "0xd75ac3d8",
+        "target_crc": "0xd75ac3d8",
+        "undefined": true
+      },
+      "class_destroy": {
+        "crc": "0xb6d12f55",
+        "target_crc": "0xb6d12f55",
+        "undefined": true
+      },
+      "complete_all": {
+        "crc": "0x93d6dd8c",
+        "target_crc": "0x93d6dd8c",
+        "undefined": true
+      },
+      "console_lock": {
+        "crc": "0xfbaaf01e",
+        "target_crc": "0xfbaaf01e",
+        "undefined": true
+      },
+      "console_trylock": {
+        "crc": "0x40d04664",
+        "target_crc": "0x40d04664",
+        "undefined": true
+      },
+      "console_unlock": {
+        "crc": "0xc631580a",
+        "target_crc": "0xc631580a",
+        "undefined": true
+      },
+      "current_task": {
+        "crc": "0xf69073fc",
+        "target_crc": "0xf69073fc",
+        "undefined": true
+      },
+      "current_work": {
+        "crc": "0x9709dbc5",
+        "target_crc": "0x9709dbc5",
+        "undefined": true
+      },
+      "delayed_work_timer_fn": {
+        "crc": "0xffeedf6a",
+        "target_crc": "0xffeedf6a",
+        "undefined": true
+      },
+      "destroy_workqueue": {
+        "crc": "0x8c03d20c",
+        "target_crc": "0x8c03d20c",
+        "undefined": true
+      },
+      "dev_driver_string": {
+        "crc": "0xeb20b3df",
+        "target_crc": "0xeb20b3df",
+        "undefined": true
+      },
+      "dev_printk": {
+        "crc": "0xcb147e11",
+        "target_crc": "0xcb147e11",
+        "undefined": true
+      },
+      "device_create": {
+        "crc": "0xb5466a85",
+        "target_crc": "0xb5466a85",
+        "undefined": true
+      },
+      "device_destroy": {
+        "crc": "0x44837543",
+        "target_crc": "0x44837543",
+        "undefined": true
+      },
+      "devm_kfree": {
+        "crc": "0x3991213b",
+        "target_crc": "0x3991213b",
+        "undefined": true
+      },
+      "devm_kmalloc": {
+        "crc": "0x4a98778b",
+        "target_crc": "0x4a98778b",
+        "undefined": true
+      },
+      "devres_add": {
+        "crc": "0xaef0d684",
+        "target_crc": "0xaef0d684",
+        "undefined": true
+      },
+      "devres_alloc_node": {
+        "crc": "0x2d672712",
+        "target_crc": "0x2d672712",
+        "undefined": true
+      },
+      "devres_free": {
+        "crc": "0xe93e49c3",
+        "target_crc": "0xe93e49c3",
+        "undefined": true
+      },
+      "dma_fence_release": {
+        "crc": "0xe123f3d9",
+        "target_crc": "0xe123f3d9",
+        "undefined": true
+      },
+      "dma_fence_wait_timeout": {
+        "crc": "0x98c039dc",
+        "target_crc": "0x98c039dc",
+        "undefined": true
+      },
+      "drm_add_edid_modes": {
+        "crc": "0x08749094",
+        "target_crc": "0x08749094",
+        "undefined": true
+      },
+      "drm_add_modes_noedid": {
+        "crc": "0x8ad5eae2",
+        "target_crc": "0x8ad5eae2",
+        "undefined": true
+      },
+      "drm_add_override_edid_modes": {
+        "crc": "0x65a11f6c",
+        "target_crc": "0x65a11f6c",
+        "undefined": true
+      },
+      "drm_atomic_add_affected_connectors": {
+        "crc": "0xe4cdddaa",
+        "target_crc": "0xe4cdddaa",
+        "undefined": true
+      },
+      "drm_atomic_add_affected_planes": {
+        "crc": "0xcb7dc380",
+        "target_crc": "0xcb7dc380",
+        "undefined": true
+      },
+      "drm_atomic_add_encoder_bridges": {
+        "crc": "0xfb65f5b6",
+        "target_crc": "0xfb65f5b6",
+        "undefined": true
+      },
+      "drm_atomic_bridge_chain_check": {
+        "crc": "0x5987bbc9",
+        "target_crc": "0x5987bbc9",
+        "undefined": true
+      },
+      "drm_atomic_bridge_chain_disable": {
+        "crc": "0xe2475130",
+        "target_crc": "0xe2475130",
+        "undefined": true
+      },
+      "drm_atomic_bridge_chain_enable": {
+        "crc": "0x74777555",
+        "target_crc": "0x74777555",
+        "undefined": true
+      },
+      "drm_atomic_bridge_chain_post_disable": {
+        "crc": "0x42476c71",
+        "target_crc": "0x42476c71",
+        "undefined": true
+      },
+      "drm_atomic_bridge_chain_pre_enable": {
+        "crc": "0xc7ff33f5",
+        "target_crc": "0xc7ff33f5",
+        "undefined": true
+      },
+      "drm_atomic_commit": {
+        "crc": "0x3e23aa63",
+        "target_crc": "0x3e23aa63",
+        "undefined": true
+      },
+      "drm_atomic_get_connector_state": {
+        "crc": "0x3daf7171",
+        "target_crc": "0x3daf7171",
+        "undefined": true
+      },
+      "drm_atomic_get_crtc_state": {
+        "crc": "0xd0df7642",
+        "target_crc": "0xd0df7642",
+        "undefined": true
+      },
+      "drm_atomic_get_plane_state": {
+        "crc": "0xd05b2f26",
+        "target_crc": "0xd05b2f26",
+        "undefined": true
+      },
+      "drm_atomic_get_private_obj_state": {
+        "crc": "0xf6e16393",
+        "target_crc": "0xf6e16393",
+        "undefined": true
+      },
+      "drm_atomic_nonblocking_commit": {
+        "crc": "0xc167c901",
+        "target_crc": "0xc167c901",
+        "undefined": true
+      },
+      "drm_atomic_normalize_zpos": {
+        "crc": "0xba6be433",
+        "target_crc": "0xba6be433",
+        "undefined": true
+      },
+      "drm_atomic_private_obj_fini": {
+        "crc": "0xe95b5453",
+        "target_crc": "0xe95b5453",
+        "undefined": true
+      },
+      "drm_atomic_private_obj_init": {
+        "crc": "0x4d82dafb",
+        "target_crc": "0x4d82dafb",
+        "undefined": true
+      },
+      "drm_atomic_set_crtc_for_connector": {
+        "crc": "0x2a8c822f",
+        "target_crc": "0x2a8c822f",
+        "undefined": true
+      },
+      "drm_atomic_set_crtc_for_plane": {
+        "crc": "0x271f55f4",
+        "target_crc": "0x271f55f4",
+        "undefined": true
+      },
+      "drm_atomic_set_fb_for_plane": {
+        "crc": "0x62ff8cb6",
+        "target_crc": "0x62ff8cb6",
+        "undefined": true
+      },
+      "drm_atomic_set_fence_for_plane": {
+        "crc": "0xea2d41f4",
+        "target_crc": "0xea2d41f4",
+        "undefined": true
+      },
+      "drm_atomic_set_mode_prop_for_crtc": {
+        "crc": "0xb6467e3a",
+        "target_crc": "0xb6467e3a",
+        "undefined": true
+      },
+      "drm_atomic_state_alloc": {
+        "crc": "0xacdf49e4",
+        "target_crc": "0xacdf49e4",
+        "undefined": true
+      },
+      "drm_atomic_state_clear": {
+        "crc": "0xb9cf876d",
+        "target_crc": "0xb9cf876d",
+        "undefined": true
+      },
+      "drm_bridge_add": {
+        "crc": "0xaf0ae5d2",
+        "target_crc": "0xaf0ae5d2",
+        "undefined": true
+      },
+      "drm_bridge_attach": {
+        "crc": "0xa679a34c",
+        "target_crc": "0xa679a34c",
+        "undefined": true
+      },
+      "drm_bridge_chain_mode_set": {
+        "crc": "0x1158f0dd",
+        "target_crc": "0x1158f0dd",
+        "undefined": true
+      },
+      "drm_bridge_chain_mode_valid": {
+        "crc": "0x3522be3c",
+        "target_crc": "0x3522be3c",
+        "undefined": true
+      },
+      "drm_bridge_hpd_disable": {
+        "crc": "0x0b57e3c1",
+        "target_crc": "0x0b57e3c1",
+        "undefined": true
+      },
+      "drm_bridge_hpd_enable": {
+        "crc": "0xceed2ff8",
+        "target_crc": "0xceed2ff8",
+        "undefined": true
+      },
+      "drm_bridge_remove": {
+        "crc": "0x15fada68",
+        "target_crc": "0x15fada68",
+        "undefined": true
+      },
+      "drm_calc_timestamping_constants": {
+        "crc": "0xc1911227",
+        "target_crc": "0xc1911227",
+        "undefined": true
+      },
+      "drm_client_buffer_vmap": {
+        "crc": "0x42fbe026",
+        "target_crc": "0x42fbe026",
+        "undefined": true
+      },
+      "drm_client_buffer_vunmap": {
+        "crc": "0x1423af38",
+        "target_crc": "0x1423af38",
+        "undefined": true
+      },
+      "drm_client_dev_hotplug": {
+        "crc": "0x57456290",
+        "target_crc": "0x57456290",
+        "undefined": true
+      },
+      "drm_client_framebuffer_create": {
+        "crc": "0x005486ba",
+        "target_crc": "0x005486ba",
+        "undefined": true
+      },
+      "drm_client_framebuffer_delete": {
+        "crc": "0x95339c6d",
+        "target_crc": "0x95339c6d",
+        "undefined": true
+      },
+      "drm_client_init": {
+        "crc": "0x8fc5014c",
+        "target_crc": "0x8fc5014c",
+        "undefined": true
+      },
+      "drm_client_modeset_commit": {
+        "crc": "0xce972b5b",
+        "target_crc": "0xce972b5b",
+        "undefined": true
+      },
+      "drm_client_modeset_commit_locked": {
+        "crc": "0x54ced36d",
+        "target_crc": "0x54ced36d",
+        "undefined": true
+      },
+      "drm_client_modeset_dpms": {
+        "crc": "0xfa49c891",
+        "target_crc": "0xfa49c891",
+        "undefined": true
+      },
+      "drm_client_modeset_probe": {
+        "crc": "0x79e5fab6",
+        "target_crc": "0x79e5fab6",
+        "undefined": true
+      },
+      "drm_client_register": {
+        "crc": "0xd7eb7853",
+        "target_crc": "0xd7eb7853",
+        "undefined": true
+      },
+      "drm_client_release": {
+        "crc": "0x8a37801f",
+        "target_crc": "0x8a37801f",
+        "undefined": true
+      },
+      "drm_client_rotation": {
+        "crc": "0x6c2aadab",
+        "target_crc": "0x6c2aadab",
+        "undefined": true
+      },
+      "drm_connector_attach_encoder": {
+        "crc": "0x2afd5eeb",
+        "target_crc": "0x2afd5eeb",
+        "undefined": true
+      },
+      "drm_connector_cleanup": {
+        "crc": "0x858bdd00",
+        "target_crc": "0x858bdd00",
+        "undefined": true
+      },
+      "drm_connector_init": {
+        "crc": "0x12b0a306",
+        "target_crc": "0x12b0a306",
+        "undefined": true
+      },
+      "drm_connector_init_with_ddc": {
+        "crc": "0x47c68afc",
+        "target_crc": "0x47c68afc",
+        "undefined": true
+      },
+      "drm_connector_list_iter_begin": {
+        "crc": "0xea5ba6a9",
+        "target_crc": "0xea5ba6a9",
+        "undefined": true
+      },
+      "drm_connector_list_iter_end": {
+        "crc": "0xfe94815b",
+        "target_crc": "0xfe94815b",
+        "undefined": true
+      },
+      "drm_connector_list_iter_next": {
+        "crc": "0x40da6ed8",
+        "target_crc": "0x40da6ed8",
+        "undefined": true
+      },
+      "drm_connector_list_update": {
+        "crc": "0xb2b6a5e3",
+        "target_crc": "0xb2b6a5e3",
+        "undefined": true
+      },
+      "drm_connector_register": {
+        "crc": "0x7f70cea3",
+        "target_crc": "0x7f70cea3",
+        "undefined": true
+      },
+      "drm_connector_set_tile_property": {
+        "crc": "0xde7280cf",
+        "target_crc": "0xde7280cf",
+        "undefined": true
+      },
+      "drm_connector_unregister": {
+        "crc": "0x6b387114",
+        "target_crc": "0x6b387114",
+        "undefined": true
+      },
+      "drm_connector_update_edid_property": {
+        "crc": "0x1b9a5879",
+        "target_crc": "0x1b9a5879",
+        "undefined": true
+      },
+      "drm_crtc_add_crc_entry": {
+        "crc": "0x45e725a5",
+        "target_crc": "0x45e725a5",
+        "undefined": true
+      },
+      "drm_crtc_cleanup": {
+        "crc": "0xe8bd5d28",
+        "target_crc": "0xe8bd5d28",
+        "undefined": true
+      },
+      "drm_crtc_init_with_planes": {
+        "crc": "0xc7045190",
+        "target_crc": "0xc7045190",
+        "undefined": true
+      },
+      "drm_crtc_send_vblank_event": {
+        "crc": "0xf2c3ddde",
+        "target_crc": "0xf2c3ddde",
+        "undefined": true
+      },
+      "drm_crtc_vblank_count": {
+        "crc": "0xa55040f0",
+        "target_crc": "0xa55040f0",
+        "undefined": true
+      },
+      "drm_crtc_vblank_get": {
+        "crc": "0x07cdd1ec",
+        "target_crc": "0x07cdd1ec",
+        "undefined": true
+      },
+      "drm_crtc_vblank_put": {
+        "crc": "0x687fcdb7",
+        "target_crc": "0x687fcdb7",
+        "undefined": true
+      },
+      "drm_crtc_vblank_reset": {
+        "crc": "0x9345861a",
+        "target_crc": "0x9345861a",
+        "undefined": true
+      },
+      "drm_crtc_wait_one_vblank": {
+        "crc": "0x99fe86cd",
+        "target_crc": "0x99fe86cd",
+        "undefined": true
+      },
+      "drm_detect_monitor_audio": {
+        "crc": "0x60373db5",
+        "target_crc": "0x60373db5",
+        "undefined": true
+      },
+      "drm_dev_dbg": {
+        "crc": "0xddc432cb",
+        "target_crc": "0xddc432cb",
+        "undefined": true
+      },
+      "drm_dev_has_vblank": {
+        "crc": "0xfd4c749e",
+        "target_crc": "0xfd4c749e",
+        "undefined": true
+      },
+      "drm_display_mode_from_cea_vic": {
+        "crc": "0x98fd11c4",
+        "target_crc": "0x98fd11c4",
+        "undefined": true
+      },
+      "drm_edid_duplicate": {
+        "crc": "0x392f1424",
+        "target_crc": "0x392f1424",
+        "undefined": true
+      },
+      "drm_edid_get_monitor_name": {
+        "crc": "0x95a9a186",
+        "target_crc": "0x95a9a186",
+        "undefined": true
+      },
+      "drm_edid_is_valid": {
+        "crc": "0xf440cfed",
+        "target_crc": "0xf440cfed",
+        "undefined": true
+      },
+      "drm_encoder_cleanup": {
+        "crc": "0xc16ba3da",
+        "target_crc": "0xc16ba3da",
+        "undefined": true
+      },
+      "drm_encoder_init": {
+        "crc": "0x551ee7db",
+        "target_crc": "0x551ee7db",
+        "undefined": true
+      },
+      "drm_format_info": {
+        "crc": "0xf826786c",
+        "target_crc": "0xf826786c",
+        "undefined": true
+      },
+      "drm_format_info_block_height": {
+        "crc": "0xeef14d8c",
+        "target_crc": "0xeef14d8c",
+        "undefined": true
+      },
+      "drm_format_info_block_width": {
+        "crc": "0xb9f56e22",
+        "target_crc": "0xb9f56e22",
+        "undefined": true
+      },
+      "drm_format_info_min_pitch": {
+        "crc": "0xc7f0f027",
+        "target_crc": "0xc7f0f027",
+        "undefined": true
+      },
+      "drm_framebuffer_cleanup": {
+        "crc": "0x840a269a",
+        "target_crc": "0x840a269a",
+        "undefined": true
+      },
+      "drm_framebuffer_init": {
+        "crc": "0x9db17175",
+        "target_crc": "0x9db17175",
+        "undefined": true
+      },
+      "drm_gem_handle_create": {
+        "crc": "0xb0562a59",
+        "target_crc": "0xb0562a59",
+        "undefined": true
+      },
+      "drm_gem_object_free": {
+        "crc": "0xd680a377",
+        "target_crc": "0xd680a377",
+        "undefined": true
+      },
+      "drm_gem_object_lookup": {
+        "crc": "0xf2761d23",
+        "target_crc": "0xf2761d23",
+        "undefined": true
+      },
+      "drm_get_connector_status_name": {
+        "crc": "0x0fd60df2",
+        "target_crc": "0x0fd60df2",
+        "undefined": true
+      },
+      "drm_get_edid": {
+        "crc": "0x45f25a3d",
+        "target_crc": "0x45f25a3d",
+        "undefined": true
+      },
+      "drm_get_format_info": {
+        "crc": "0xd7bcea0e",
+        "target_crc": "0xd7bcea0e",
+        "undefined": true
+      },
+      "drm_master_internal_acquire": {
+        "crc": "0x204b22ce",
+        "target_crc": "0x204b22ce",
+        "undefined": true
+      },
+      "drm_master_internal_release": {
+        "crc": "0x473aa361",
+        "target_crc": "0x473aa361",
+        "undefined": true
+      },
+      "drm_mode_config_reset": {
+        "crc": "0xf06e404f",
+        "target_crc": "0xf06e404f",
+        "undefined": true
+      },
+      "drm_mode_copy": {
+        "crc": "0x9ce050be",
+        "target_crc": "0x9ce050be",
+        "undefined": true
+      },
+      "drm_mode_create_from_cmdline_mode": {
+        "crc": "0xb7fe4305",
+        "target_crc": "0xb7fe4305",
+        "undefined": true
+      },
+      "drm_mode_debug_printmodeline": {
+        "crc": "0x2ed3c600",
+        "target_crc": "0x2ed3c600",
+        "undefined": true
+      },
+      "drm_mode_destroy": {
+        "crc": "0x6dbf006b",
+        "target_crc": "0x6dbf006b",
+        "undefined": true
+      },
+      "drm_mode_duplicate": {
+        "crc": "0x929ceebb",
+        "target_crc": "0x929ceebb",
+        "undefined": true
+      },
+      "drm_mode_equal": {
+        "crc": "0x0d9b4753",
+        "target_crc": "0x0d9b4753",
+        "undefined": true
+      },
+      "drm_mode_get_hv_timing": {
+        "crc": "0x4403a9c3",
+        "target_crc": "0x4403a9c3",
+        "undefined": true
+      },
+      "drm_mode_legacy_fb_format": {
+        "crc": "0x29f078d1",
+        "target_crc": "0x29f078d1",
+        "undefined": true
+      },
+      "drm_mode_object_get": {
+        "crc": "0x17f63458",
+        "target_crc": "0x17f63458",
+        "undefined": true
+      },
+      "drm_mode_object_put": {
+        "crc": "0xefd80dba",
+        "target_crc": "0xefd80dba",
+        "undefined": true
+      },
+      "drm_mode_probed_add": {
+        "crc": "0xdfd5dfb2",
+        "target_crc": "0xdfd5dfb2",
+        "undefined": true
+      },
+      "drm_mode_prune_invalid": {
+        "crc": "0xe02d8ca9",
+        "target_crc": "0xe02d8ca9",
+        "undefined": true
+      },
+      "drm_mode_set_config_internal": {
+        "crc": "0x2c9573f9",
+        "target_crc": "0x2c9573f9",
+        "undefined": true
+      },
+      "drm_mode_set_crtcinfo": {
+        "crc": "0x4575a0ca",
+        "target_crc": "0x4575a0ca",
+        "undefined": true
+      },
+      "drm_mode_sort": {
+        "crc": "0xf1421d13",
+        "target_crc": "0xf1421d13",
+        "undefined": true
+      },
+      "drm_mode_validate_driver": {
+        "crc": "0xa6a7c621",
+        "target_crc": "0xa6a7c621",
+        "undefined": true
+      },
+      "drm_mode_validate_size": {
+        "crc": "0xd7a9cf42",
+        "target_crc": "0xd7a9cf42",
+        "undefined": true
+      },
+      "drm_mode_validate_ycbcr420": {
+        "crc": "0xc744567d",
+        "target_crc": "0xc744567d",
+        "undefined": true
+      },
+      "drm_mode_vrefresh": {
+        "crc": "0xf1b5340a",
+        "target_crc": "0xf1b5340a",
+        "undefined": true
+      },
+      "drm_modeset_acquire_fini": {
+        "crc": "0xd72cf74c",
+        "target_crc": "0xd72cf74c",
+        "undefined": true
+      },
+      "drm_modeset_acquire_init": {
+        "crc": "0x0d8b329b",
+        "target_crc": "0x0d8b329b",
+        "undefined": true
+      },
+      "drm_modeset_backoff": {
+        "crc": "0x3d4e9737",
+        "target_crc": "0x3d4e9737",
+        "undefined": true
+      },
+      "drm_modeset_drop_locks": {
+        "crc": "0x835d8d92",
+        "target_crc": "0x835d8d92",
+        "undefined": true
+      },
+      "drm_modeset_lock": {
+        "crc": "0x5729c7ec",
+        "target_crc": "0x5729c7ec",
+        "undefined": true
+      },
+      "drm_modeset_lock_all": {
+        "crc": "0x406a67cc",
+        "target_crc": "0x406a67cc",
+        "undefined": true
+      },
+      "drm_modeset_lock_all_ctx": {
+        "crc": "0xedfdf71f",
+        "target_crc": "0xedfdf71f",
+        "undefined": true
+      },
+      "drm_modeset_unlock": {
+        "crc": "0x222ac7bb",
+        "target_crc": "0x222ac7bb",
+        "undefined": true
+      },
+      "drm_modeset_unlock_all": {
+        "crc": "0xce3da969",
+        "target_crc": "0xce3da969",
+        "undefined": true
+      },
+      "drm_object_attach_property": {
+        "crc": "0x43754b83",
+        "target_crc": "0x43754b83",
+        "undefined": true
+      },
+      "drm_object_property_set_value": {
+        "crc": "0xd12f0779",
+        "target_crc": "0xd12f0779",
+        "undefined": true
+      },
+      "drm_panel_disable": {
+        "crc": "0xd08c42e0",
+        "target_crc": "0xd08c42e0",
+        "undefined": true
+      },
+      "drm_panel_enable": {
+        "crc": "0x48812ed1",
+        "target_crc": "0x48812ed1",
+        "undefined": true
+      },
+      "drm_panel_get_modes": {
+        "crc": "0xca428cb9",
+        "target_crc": "0xca428cb9",
+        "undefined": true
+      },
+      "drm_panel_prepare": {
+        "crc": "0x3aaada9d",
+        "target_crc": "0x3aaada9d",
+        "undefined": true
+      },
+      "drm_panel_unprepare": {
+        "crc": "0x93d30bfc",
+        "target_crc": "0x93d30bfc",
+        "undefined": true
+      },
+      "drm_plane_cleanup": {
+        "crc": "0x2227d11a",
+        "target_crc": "0x2227d11a",
+        "undefined": true
+      },
+      "drm_printf": {
+        "crc": "0x16ac2597",
+        "target_crc": "0x16ac2597",
+        "undefined": true
+      },
+      "drm_property_blob_get": {
+        "crc": "0x71448df8",
+        "target_crc": "0x71448df8",
+        "undefined": true
+      },
+      "drm_property_blob_put": {
+        "crc": "0x6f317c82",
+        "target_crc": "0x6f317c82",
+        "undefined": true
+      },
+      "drm_property_create_blob": {
+        "crc": "0x219e1a7c",
+        "target_crc": "0x219e1a7c",
+        "undefined": true
+      },
+      "drm_property_replace_blob": {
+        "crc": "0xa08424d0",
+        "target_crc": "0xa08424d0",
+        "undefined": true
+      },
+      "drm_rect_calc_hscale": {
+        "crc": "0x2d50570f",
+        "target_crc": "0x2d50570f",
+        "undefined": true
+      },
+      "drm_rect_calc_vscale": {
+        "crc": "0x91fec1cc",
+        "target_crc": "0x91fec1cc",
+        "undefined": true
+      },
+      "drm_rect_clip_scaled": {
+        "crc": "0x99fd20aa",
+        "target_crc": "0x99fd20aa",
+        "undefined": true
+      },
+      "drm_rect_debug_print": {
+        "crc": "0xcb2340b8",
+        "target_crc": "0xcb2340b8",
+        "undefined": true
+      },
+      "drm_rect_intersect": {
+        "crc": "0x871ab41a",
+        "target_crc": "0x871ab41a",
+        "undefined": true
+      },
+      "drm_rect_rotate": {
+        "crc": "0xb053adda",
+        "target_crc": "0xb053adda",
+        "undefined": true
+      },
+      "drm_rect_rotate_inv": {
+        "crc": "0x6e30ba8e",
+        "target_crc": "0x6e30ba8e",
+        "undefined": true
+      },
+      "drm_sysfs_hotplug_event": {
+        "crc": "0xe98e578d",
+        "target_crc": "0xe98e578d",
+        "undefined": true
+      },
+      "drm_universal_plane_init": {
+        "crc": "0xfc97c305",
+        "target_crc": "0xfc97c305",
+        "undefined": true
+      },
+      "drm_warn_on_modeset_not_all_locked": {
+        "crc": "0xf9dc74f8",
+        "target_crc": "0xf9dc74f8",
+        "undefined": true
+      },
+      "drm_writeback_cleanup_job": {
+        "crc": "0x71991d51",
+        "target_crc": "0x71991d51",
+        "undefined": true
+      },
+      "drm_writeback_prepare_job": {
+        "crc": "0x7f47693e",
+        "target_crc": "0x7f47693e",
+        "undefined": true
+      },
+      "fb_alloc_cmap": {
+        "crc": "0x07a890c8",
+        "target_crc": "0x07a890c8",
+        "undefined": true
+      },
+      "fb_dealloc_cmap": {
+        "crc": "0x098b71c6",
+        "target_crc": "0x098b71c6",
+        "undefined": true
+      },
+      "fb_deferred_io_cleanup": {
+        "crc": "0x25553a13",
+        "target_crc": "0x25553a13",
+        "undefined": true
+      },
+      "fb_deferred_io_init": {
+        "crc": "0xf2cdfddc",
+        "target_crc": "0xf2cdfddc",
+        "undefined": true
+      },
+      "fb_set_suspend": {
+        "crc": "0xaa992c8b",
+        "target_crc": "0xaa992c8b",
+        "undefined": true
+      },
+      "fb_sys_read": {
+        "crc": "0xf5b1be6d",
+        "target_crc": "0xf5b1be6d",
+        "undefined": true
+      },
+      "fb_sys_write": {
+        "crc": "0xa4a33cf8",
+        "target_crc": "0xa4a33cf8",
+        "undefined": true
+      },
+      "find_first_zero_bit": {
+        "crc": "0xf11543ff",
+        "target_crc": "0xf11543ff",
+        "undefined": true
+      },
+      "finish_wait": {
+        "crc": "0x92540fbf",
+        "target_crc": "0x92540fbf",
+        "undefined": true
+      },
+      "fixed_size_llseek": {
+        "crc": "0x7d9d3f09",
+        "target_crc": "0x7d9d3f09",
+        "undefined": true
+      },
+      "flush_work": {
+        "crc": "0x92b57248",
+        "target_crc": "0x92b57248",
+        "undefined": true
+      },
+      "fortify_panic": {
+        "crc": "0xcbd4898c",
+        "target_crc": "0xcbd4898c",
+        "undefined": true
+      },
+      "framebuffer_alloc": {
+        "crc": "0x02c6b63a",
+        "target_crc": "0x02c6b63a",
+        "undefined": true
+      },
+      "framebuffer_release": {
+        "crc": "0x24972dbe",
+        "target_crc": "0x24972dbe",
+        "undefined": true
+      },
+      "get_jiffies_64": {
+        "crc": "0xa68613dd",
+        "target_crc": "0xa68613dd",
+        "undefined": true
+      },
+      "get_random_bytes": {
+        "crc": "0x3e82f3e9",
+        "target_crc": "0x3e82f3e9",
+        "undefined": true
+      },
+      "i2c_add_adapter": {
+        "crc": "0x8c78730c",
+        "target_crc": "0x8c78730c",
+        "undefined": true
+      },
+      "i2c_del_adapter": {
+        "crc": "0x28992518",
+        "target_crc": "0x28992518",
+        "undefined": true
+      },
+      "i2c_transfer": {
+        "crc": "0xf10874d6",
+        "target_crc": "0xf10874d6",
+        "undefined": true
+      },
+      "idr_alloc": {
+        "crc": "0xb8f11603",
+        "target_crc": "0xb8f11603",
+        "undefined": true
+      },
+      "idr_find": {
+        "crc": "0x20978fb9",
+        "target_crc": "0x20978fb9",
+        "undefined": true
+      },
+      "idr_get_next": {
+        "crc": "0xc57c48a3",
+        "target_crc": "0xc57c48a3",
+        "undefined": true
+      },
+      "idr_remove": {
+        "crc": "0x7665a95b",
+        "target_crc": "0x7665a95b",
+        "undefined": true
+      },
+      "init_timer_key": {
+        "crc": "0xc6f46339",
+        "target_crc": "0xc6f46339",
+        "undefined": true
+      },
+      "init_wait_entry": {
+        "crc": "0xfe487975",
+        "target_crc": "0xfe487975",
+        "undefined": true
+      },
+      "init_wait_var_entry": {
+        "crc": "0x5d49aabc",
+        "target_crc": "0x5d49aabc",
+        "undefined": true
+      },
+      "jiffies": {
+        "crc": "0x15ba50a6",
+        "target_crc": "0x15ba50a6",
+        "undefined": true
+      },
+      "kfree": {
+        "crc": "0x037a0cba",
+        "target_crc": "0x037a0cba",
+        "undefined": true
+      },
+      "kmalloc_caches": {
+        "crc": "0x72208652",
+        "target_crc": "0x72208652",
+        "undefined": true
+      },
+      "kmem_cache_alloc_trace": {
+        "crc": "0x0bed2f44",
+        "target_crc": "0x0bed2f44",
+        "undefined": true
+      },
+      "kmemdup": {
+        "crc": "0x0b1b939e",
+        "target_crc": "0x0b1b939e",
+        "undefined": true
+      },
+      "ktime_get": {
+        "crc": "0xb43f9365",
+        "target_crc": "0xb43f9365",
+        "undefined": true
+      },
+      "memchr_inv": {
+        "crc": "0x7505bdef",
+        "target_crc": "0x7505bdef",
+        "undefined": true
+      },
+      "memcpy": {
+        "crc": "0x2e60bace",
+        "target_crc": "0x2e60bace",
+        "undefined": true
+      },
+      "memcpy_toio": {
+        "crc": "0x7cd1b50e",
+        "target_crc": "0x7cd1b50e",
+        "undefined": true
+      },
+      "memset": {
+        "crc": "0x2bc95bd4",
+        "target_crc": "0x2bc95bd4",
+        "undefined": true
+      },
+      "mod_delayed_work_on": {
+        "crc": "0xea4a09cb",
+        "target_crc": "0xea4a09cb",
+        "undefined": true
+      },
+      "module_layout": {
+        "crc": "0xb84efb99",
+        "target_crc": "0xb84efb99",
+        "undefined": false
+      },
+      "module_put": {
+        "crc": "0x59ab9688",
+        "target_crc": "0x59ab9688",
+        "undefined": true
+      },
+      "msleep": {
+        "crc": "0xf9a482f9",
+        "target_crc": "0xf9a482f9",
+        "undefined": true
+      },
+      "mutex_is_locked": {
+        "crc": "0xc86f15a9",
+        "target_crc": "0xc86f15a9",
+        "undefined": true
+      },
+      "mutex_lock": {
+        "crc": "0x1b58e04c",
+        "target_crc": "0x1b58e04c",
+        "undefined": true
+      },
+      "mutex_trylock": {
+        "crc": "0x4042315a",
+        "target_crc": "0x4042315a",
+        "undefined": true
+      },
+      "mutex_unlock": {
+        "crc": "0x99b76c81",
+        "target_crc": "0x99b76c81",
+        "undefined": true
+      },
+      "oops_in_progress": {
+        "crc": "0xb1c3a01a",
+        "target_crc": "0xb1c3a01a",
+        "undefined": true
+      },
+      "param_ops_bool": {
+        "crc": "0x0566a1ef",
+        "target_crc": "0x0566a1ef",
+        "undefined": true
+      },
+      "param_ops_int": {
+        "crc": "0x6903a7d6",
+        "target_crc": "0x6903a7d6",
+        "undefined": true
+      },
+      "param_ops_uint": {
+        "crc": "0x711447cf",
+        "target_crc": "0x711447cf",
+        "undefined": true
+      },
+      "prepare_to_wait_event": {
+        "crc": "0x8c26d495",
+        "target_crc": "0x8c26d495",
+        "undefined": true
+      },
+      "print_hex_dump": {
+        "crc": "0x4059792f",
+        "target_crc": "0x4059792f",
+        "undefined": true
+      },
+      "printk": {
+        "crc": "0xecc9cdd8",
+        "target_crc": "0xecc9cdd8",
+        "undefined": true
+      },
+      "pv_ops": {
+        "crc": "0xb8053ad8",
+        "target_crc": "0xb8053ad8",
+        "undefined": true
+      },
+      "queue_delayed_work_on": {
+        "crc": "0xcf86cdac",
+        "target_crc": "0xcf86cdac",
+        "undefined": true
+      },
+      "queue_work_on": {
+        "crc": "0xb2d48a2e",
+        "target_crc": "0xb2d48a2e",
+        "undefined": true
+      },
+      "rcu_read_unlock_strict": {
+        "crc": "0x2d5f69b3",
+        "target_crc": "0x2d5f69b3",
+        "undefined": true
+      },
+      "refcount_warn_saturate": {
+        "crc": "0x0296695f",
+        "target_crc": "0x0296695f",
+        "undefined": true
+      },
+      "register_framebuffer": {
+        "crc": "0x32fd1618",
+        "target_crc": "0x32fd1618",
+        "undefined": true
+      },
+      "register_sysrq_key": {
+        "crc": "0xb868ac5c",
+        "target_crc": "0xb868ac5c",
+        "undefined": true
+      },
+      "schedule": {
+        "crc": "0x4292364c",
+        "target_crc": "0x4292364c",
+        "undefined": true
+      },
+      "schedule_timeout": {
+        "crc": "0x8ddd8aad",
+        "target_crc": "0x8ddd8aad",
+        "undefined": true
+      },
+      "seq_printf": {
+        "crc": "0xa5372268",
+        "target_crc": "0xa5372268",
+        "undefined": true
+      },
+      "seq_puts": {
+        "crc": "0xdb0aacd6",
+        "target_crc": "0xdb0aacd6",
+        "undefined": true
+      },
+      "snprintf": {
+        "crc": "0xc358aaf8",
+        "target_crc": "0xc358aaf8",
+        "undefined": true
+      },
+      "sprintf": {
+        "crc": "0x3c3ff9fd",
+        "target_crc": "0x3c3ff9fd",
+        "undefined": true
+      },
+      "strlcat": {
+        "crc": "0xdd0a2ba2",
+        "target_crc": "0xdd0a2ba2",
+        "undefined": true
+      },
+      "strlcpy": {
+        "crc": "0x73e20c1c",
+        "target_crc": "0x73e20c1c",
+        "undefined": true
+      },
+      "strnlen": {
+        "crc": "0x738803e6",
+        "target_crc": "0x738803e6",
+        "undefined": true
+      },
+      "sys_copyarea": {
+        "crc": "0xc15600af",
+        "target_crc": "0xc15600af",
+        "undefined": true
+      },
+      "sys_fillrect": {
+        "crc": "0x17474d96",
+        "target_crc": "0x17474d96",
+        "undefined": true
+      },
+      "sys_imageblit": {
+        "crc": "0xc5bbc196",
+        "target_crc": "0xc5bbc196",
+        "undefined": true
+      },
+      "system_long_wq": {
+        "crc": "0x131db64a",
+        "target_crc": "0x131db64a",
+        "undefined": true
+      },
+      "system_unbound_wq": {
+        "crc": "0xd4c14632",
+        "target_crc": "0xd4c14632",
+        "undefined": true
+      },
+      "system_wq": {
+        "crc": "0x2d3385d3",
+        "target_crc": "0x2d3385d3",
+        "undefined": true
+      },
+      "try_module_get": {
+        "crc": "0x502b702c",
+        "target_crc": "0x502b702c",
+        "undefined": true
+      },
+      "try_wait_for_completion": {
+        "crc": "0x21ef374c",
+        "target_crc": "0x21ef374c",
+        "undefined": true
+      },
+      "unregister_framebuffer": {
+        "crc": "0x44ff2711",
+        "target_crc": "0x44ff2711",
+        "undefined": true
+      },
+      "unregister_sysrq_key": {
+        "crc": "0x9d2e7707",
+        "target_crc": "0x9d2e7707",
+        "undefined": true
+      },
+      "usleep_range": {
+        "crc": "0x12a38747",
+        "target_crc": "0x12a38747",
+        "undefined": true
+      },
+      "vfree": {
+        "crc": "0x999e8297",
+        "target_crc": "0x999e8297",
+        "undefined": true
+      },
+      "vzalloc": {
+        "crc": "0x40a9b349",
+        "target_crc": "0x40a9b349",
+        "undefined": true
+      },
+      "wait_for_completion_interruptible": {
+        "crc": "0x2e3bcce2",
+        "target_crc": "0x2e3bcce2",
+        "undefined": true
+      },
+      "wait_for_completion_interruptible_timeout": {
+        "crc": "0xf02aa937",
+        "target_crc": "0xf02aa937",
+        "undefined": true
+      },
+      "wait_for_completion_timeout": {
+        "crc": "0x4a3ad70e",
+        "target_crc": "0x4a3ad70e",
+        "undefined": true
+      },
+      "wake_up_var": {
+        "crc": "0xf8f61ebc",
+        "target_crc": "0xf8f61ebc",
+        "undefined": true
+      }
+    }
+  },
+  {
+    "name": "video",
+    "sha256": "83d359cb34190ff9833ddf101d99c02a443677dce37c7e526243be0ecd0e6f8e",
+    "versioned_imports": 70,
+    "undefined_symbols": 69,
+    "missing": 0,
+    "crc_mismatches": 0,
+    "module_layout": "0xb84efb99",
+    "modinfo": {
+      "parmtype": [
+        "only_lcd:int",
+        "device_id_scheme:bool",
+        "hw_changes_brightness:int",
+        "report_key_events:int",
+        "disable_backlight_sysfs_if:int",
+        "allow_duplicates:bool",
+        "brightness_switch_enabled:bool"
+      ],
+      "parm": [
+        "hw_changes_brightness:Set this to 1 on buggy hw which changes the brightness itself when a hotkey is pressed: -1: auto, 0: normal 1: hw-changes-brightness",
+        "report_key_events:0: none, 1: output changes, 2: brightness changes, 3: all"
+      ],
+      "license": [
+        "GPL"
+      ],
+      "description": [
+        "ACPI Video Driver"
+      ],
+      "author": [
+        "Bruno Ducrot"
+      ],
+      "alias": [
+        "acpi*:LNXVIDEO:*"
+      ],
+      "depends": [
+        ""
+      ],
+      "retpoline": [
+        "Y"
+      ],
+      "intree": [
+        "Y"
+      ],
+      "name": [
+        "video"
+      ],
+      "vermagic": [
+        "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 "
+      ]
+    },
+    "imports": {
+      "__kmalloc": {
+        "crc": "0x2d6fcc06",
+        "target_crc": "0x2d6fcc06",
+        "undefined": true
+      },
+      "__mutex_init": {
+        "crc": "0x0affbb4f",
+        "target_crc": "0x0affbb4f",
+        "undefined": true
+      },
+      "__stack_chk_fail": {
+        "crc": "0x60c9d98f",
+        "target_crc": "0x60c9d98f",
+        "undefined": true
+      },
+      "__stack_chk_guard": {
+        "crc": "0x7240a66f",
+        "target_crc": "0x7240a66f",
+        "undefined": true
+      },
+      "_dev_err": {
+        "crc": "0x3b73b2f8",
+        "target_crc": "0x3b73b2f8",
+        "undefined": true
+      },
+      "_dev_info": {
+        "crc": "0x59a2c442",
+        "target_crc": "0x59a2c442",
+        "undefined": true
+      },
+      "_kstrtoul": {
+        "crc": "0x54a9db5f",
+        "target_crc": "0x54a9db5f",
+        "undefined": true
+      },
+      "acpi_bus_get_device": {
+        "crc": "0x59f9bc84",
+        "target_crc": "0x59f9bc84",
+        "undefined": true
+      },
+      "acpi_bus_register_driver": {
+        "crc": "0x9c5b00f5",
+        "target_crc": "0x9c5b00f5",
+        "undefined": true
+      },
+      "acpi_bus_unregister_driver": {
+        "crc": "0x98c43100",
+        "target_crc": "0x98c43100",
+        "undefined": true
+      },
+      "acpi_device_hid": {
+        "crc": "0xab2c3edb",
+        "target_crc": "0xab2c3edb",
+        "undefined": true
+      },
+      "acpi_disabled": {
+        "crc": "0x1a45cb6c",
+        "target_crc": "0x1a45cb6c",
+        "undefined": true
+      },
+      "acpi_error": {
+        "crc": "0x377d8004",
+        "target_crc": "0x377d8004",
+        "undefined": true
+      },
+      "acpi_evaluate_integer": {
+        "crc": "0x735e6a81",
+        "target_crc": "0x735e6a81",
+        "undefined": true
+      },
+      "acpi_evaluate_object": {
+        "crc": "0x6580f998",
+        "target_crc": "0x6580f998",
+        "undefined": true
+      },
+      "acpi_exception": {
+        "crc": "0xcad1aca8",
+        "target_crc": "0xcad1aca8",
+        "undefined": true
+      },
+      "acpi_execute_simple_method": {
+        "crc": "0xb4043948",
+        "target_crc": "0xb4043948",
+        "undefined": true
+      },
+      "acpi_get_parent": {
+        "crc": "0x7d12d76d",
+        "target_crc": "0x7d12d76d",
+        "undefined": true
+      },
+      "acpi_get_pci_dev": {
+        "crc": "0xe11b68a1",
+        "target_crc": "0xe11b68a1",
+        "undefined": true
+      },
+      "acpi_has_method": {
+        "crc": "0x509b64ea",
+        "target_crc": "0x509b64ea",
+        "undefined": true
+      },
+      "acpi_install_notify_handler": {
+        "crc": "0x170ddf79",
+        "target_crc": "0x170ddf79",
+        "undefined": true
+      },
+      "acpi_is_video_device": {
+        "crc": "0x2f384db3",
+        "target_crc": "0x2f384db3",
+        "undefined": true
+      },
+      "acpi_match_device_ids": {
+        "crc": "0x7cf96231",
+        "target_crc": "0x7cf96231",
+        "undefined": true
+      },
+      "acpi_notifier_call_chain": {
+        "crc": "0xf29c0d3f",
+        "target_crc": "0xf29c0d3f",
+        "undefined": true
+      },
+      "acpi_osi_is_win8": {
+        "crc": "0xfe9ebbbb",
+        "target_crc": "0xfe9ebbbb",
+        "undefined": true
+      },
+      "acpi_remove_notify_handler": {
+        "crc": "0x1c58427f",
+        "target_crc": "0x1c58427f",
+        "undefined": true
+      },
+      "acpi_video_backlight_string": {
+        "crc": "0x32e6f1a0",
+        "target_crc": "0x32e6f1a0",
+        "undefined": true
+      },
+      "acpi_walk_namespace": {
+        "crc": "0xec2b8a42",
+        "target_crc": "0xec2b8a42",
+        "undefined": true
+      },
+      "acpi_warning": {
+        "crc": "0xefcea2e7",
+        "target_crc": "0xefcea2e7",
+        "undefined": true
+      },
+      "backlight_device_get_by_type": {
+        "crc": "0x4c8342fa",
+        "target_crc": "0x4c8342fa",
+        "undefined": true
+      },
+      "backlight_device_register": {
+        "crc": "0x8996100d",
+        "target_crc": "0x8996100d",
+        "undefined": true
+      },
+      "backlight_device_unregister": {
+        "crc": "0xc0af53d9",
+        "target_crc": "0xc0af53d9",
+        "undefined": true
+      },
+      "backlight_force_update": {
+        "crc": "0x66f95ae3",
+        "target_crc": "0x66f95ae3",
+        "undefined": true
+      },
+      "backlight_register_notifier": {
+        "crc": "0xdc512134",
+        "target_crc": "0xdc512134",
+        "undefined": true
+      },
+      "backlight_unregister_notifier": {
+        "crc": "0x9939eba0",
+        "target_crc": "0x9939eba0",
+        "undefined": true
+      },
+      "cancel_delayed_work": {
+        "crc": "0xa15d0131",
+        "target_crc": "0xa15d0131",
+        "undefined": true
+      },
+      "delayed_work_timer_fn": {
+        "crc": "0xffeedf6a",
+        "target_crc": "0xffeedf6a",
+        "undefined": true
+      },
+      "dmi_check_system": {
+        "crc": "0xd4835ef8",
+        "target_crc": "0xd4835ef8",
+        "undefined": true
+      },
+      "dmi_get_system_info": {
+        "crc": "0x81e6b37f",
+        "target_crc": "0x81e6b37f",
+        "undefined": true
+      },
+      "init_timer_key": {
+        "crc": "0xc6f46339",
+        "target_crc": "0xc6f46339",
+        "undefined": true
+      },
+      "input_allocate_device": {
+        "crc": "0x7f4b0ced",
+        "target_crc": "0x7f4b0ced",
+        "undefined": true
+      },
+      "input_event": {
+        "crc": "0xf0656f44",
+        "target_crc": "0xf0656f44",
+        "undefined": true
+      },
+      "input_free_device": {
+        "crc": "0x3b0970f2",
+        "target_crc": "0x3b0970f2",
+        "undefined": true
+      },
+      "input_register_device": {
+        "crc": "0x4d7890a9",
+        "target_crc": "0x4d7890a9",
+        "undefined": true
+      },
+      "input_unregister_device": {
+        "crc": "0x1fe78b98",
+        "target_crc": "0x1fe78b98",
+        "undefined": true
+      },
+      "kasprintf": {
+        "crc": "0xfb384d37",
+        "target_crc": "0xfb384d37",
+        "undefined": true
+      },
+      "kfree": {
+        "crc": "0x037a0cba",
+        "target_crc": "0x037a0cba",
+        "undefined": true
+      },
+      "kmalloc_caches": {
+        "crc": "0x72208652",
+        "target_crc": "0x72208652",
+        "undefined": true
+      },
+      "kmem_cache_alloc_trace": {
+        "crc": "0x0bed2f44",
+        "target_crc": "0x0bed2f44",
+        "undefined": true
+      },
+      "module_layout": {
+        "crc": "0xb84efb99",
+        "target_crc": "0xb84efb99",
+        "undefined": false
+      },
+      "mutex_lock": {
+        "crc": "0x1b58e04c",
+        "target_crc": "0x1b58e04c",
+        "undefined": true
+      },
+      "mutex_unlock": {
+        "crc": "0x99b76c81",
+        "target_crc": "0x99b76c81",
+        "undefined": true
+      },
+      "param_ops_bool": {
+        "crc": "0x0566a1ef",
+        "target_crc": "0x0566a1ef",
+        "undefined": true
+      },
+      "param_ops_int": {
+        "crc": "0x6903a7d6",
+        "target_crc": "0x6903a7d6",
+        "undefined": true
+      },
+      "pci_dev_put": {
+        "crc": "0x70c0ebae",
+        "target_crc": "0x70c0ebae",
+        "undefined": true
+      },
+      "pci_get_device": {
+        "crc": "0x4139df38",
+        "target_crc": "0x4139df38",
+        "undefined": true
+      },
+      "pci_read_config_dword": {
+        "crc": "0x293cd72b",
+        "target_crc": "0x293cd72b",
+        "undefined": true
+      },
+      "printk": {
+        "crc": "0xecc9cdd8",
+        "target_crc": "0xecc9cdd8",
+        "undefined": true
+      },
+      "queue_delayed_work_on": {
+        "crc": "0xcf86cdac",
+        "target_crc": "0xcf86cdac",
+        "undefined": true
+      },
+      "queue_work_on": {
+        "crc": "0xb2d48a2e",
+        "target_crc": "0xb2d48a2e",
+        "undefined": true
+      },
+      "register_pm_notifier": {
+        "crc": "0x9cc4f70a",
+        "target_crc": "0x9cc4f70a",
+        "undefined": true
+      },
+      "snprintf": {
+        "crc": "0xc358aaf8",
+        "target_crc": "0xc358aaf8",
+        "undefined": true
+      },
+      "sort": {
+        "crc": "0xaacc9e27",
+        "target_crc": "0xaacc9e27",
+        "undefined": true
+      },
+      "strcmp": {
+        "crc": "0xe2d5255a",
+        "target_crc": "0xe2d5255a",
+        "undefined": true
+      },
+      "sysfs_create_link": {
+        "crc": "0xaa7ad4bb",
+        "target_crc": "0xaa7ad4bb",
+        "undefined": true
+      },
+      "sysfs_remove_link": {
+        "crc": "0x9ac5e543",
+        "target_crc": "0x9ac5e543",
+        "undefined": true
+      },
+      "system_wq": {
+        "crc": "0x2d3385d3",
+        "target_crc": "0x2d3385d3",
+        "undefined": true
+      },
+      "thermal_cooling_device_register": {
+        "crc": "0x1d2e17d8",
+        "target_crc": "0x1d2e17d8",
+        "undefined": true
+      },
+      "thermal_cooling_device_unregister": {
+        "crc": "0x78e6314d",
+        "target_crc": "0x78e6314d",
+        "undefined": true
+      },
+      "unregister_pm_notifier": {
+        "crc": "0x7681946c",
+        "target_crc": "0x7681946c",
+        "undefined": true
+      }
+    }
+  },
+  {
+    "name": "i2c_algo_bit",
+    "sha256": "3179bdd4f98d3ea876531257f75db850608e2e983e7cb1626406e89df04de1b7",
+    "versioned_imports": 12,
+    "undefined_symbols": 11,
+    "missing": 0,
+    "crc_mismatches": 0,
+    "module_layout": "0xb84efb99",
+    "modinfo": {
+      "license": [
+        "GPL"
+      ],
+      "description": [
+        "I2C-Bus bit-banging algorithm"
+      ],
+      "author": [
+        "Simon G. Vogl <simon@tk.uni-linz.ac.at>"
+      ],
+      "parm": [
+        "bit_test:lines testing - 0 off; 1 report; 2 fail if stuck"
+      ],
+      "parmtype": [
+        "bit_test:int"
+      ],
+      "depends": [
+        ""
+      ],
+      "retpoline": [
+        "Y"
+      ],
+      "intree": [
+        "Y"
+      ],
+      "name": [
+        "i2c_algo_bit"
+      ],
+      "vermagic": [
+        "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 "
+      ]
+    },
+    "imports": {
+      "__udelay": {
+        "crc": "0x9e7d6bd0",
+        "target_crc": "0x9e7d6bd0",
+        "undefined": true
+      },
+      "__x86_indirect_thunk_ecx": {
+        "crc": "0xab02cbdf",
+        "target_crc": "0xab02cbdf",
+        "undefined": true
+      },
+      "__x86_indirect_thunk_edx": {
+        "crc": "0xae4ddd5a",
+        "target_crc": "0xae4ddd5a",
+        "undefined": true
+      },
+      "_dev_err": {
+        "crc": "0x3b73b2f8",
+        "target_crc": "0x3b73b2f8",
+        "undefined": true
+      },
+      "_dev_warn": {
+        "crc": "0xe0eef788",
+        "target_crc": "0xe0eef788",
+        "undefined": true
+      },
+      "i2c_add_adapter": {
+        "crc": "0x8c78730c",
+        "target_crc": "0x8c78730c",
+        "undefined": true
+      },
+      "i2c_add_numbered_adapter": {
+        "crc": "0xffd0284f",
+        "target_crc": "0xffd0284f",
+        "undefined": true
+      },
+      "jiffies": {
+        "crc": "0x15ba50a6",
+        "target_crc": "0x15ba50a6",
+        "undefined": true
+      },
+      "module_layout": {
+        "crc": "0xb84efb99",
+        "target_crc": "0xb84efb99",
+        "undefined": false
+      },
+      "param_ops_int": {
+        "crc": "0x6903a7d6",
+        "target_crc": "0x6903a7d6",
+        "undefined": true
+      },
+      "printk": {
+        "crc": "0xecc9cdd8",
+        "target_crc": "0xecc9cdd8",
+        "undefined": true
+      },
+      "yield": {
+        "crc": "0x760a0f4f",
+        "target_crc": "0x760a0f4f",
+        "undefined": true
+      }
+    }
+  },
+  {
+    "name": "gma500_gfx",
+    "sha256": "2eaffd22637eef6b7b101f046d6fd9756b48c934818a7353f9aa705616014c1e",
+    "versioned_imports": 232,
+    "undefined_symbols": 231,
+    "missing": 0,
+    "crc_mismatches": 0,
+    "module_layout": "0xb84efb99",
+    "modinfo": {
+      "license": [
+        "GPL"
+      ],
+      "description": [
+        "DRM driver for the Intel GMA500, GMA600, GMA3600, GMA3650"
+      ],
+      "author": [
+        "Alan Cox <alan@linux.intel.com> and others"
+      ],
+      "alias": [
+        "pci:v00008086d00000BEFsv*sd*bc*sc*i*",
+        "pci:v00008086d00000BEEsv*sd*bc*sc*i*",
+        "pci:v00008086d00000BEDsv*sd*bc*sc*i*",
+        "pci:v00008086d00000BECsv*sd*bc*sc*i*",
+        "pci:v00008086d00000BEBsv*sd*bc*sc*i*",
+        "pci:v00008086d00000BEAsv*sd*bc*sc*i*",
+        "pci:v00008086d00000BE9sv*sd*bc*sc*i*",
+        "pci:v00008086d00000BE8sv*sd*bc*sc*i*",
+        "pci:v00008086d00000BE7sv*sd*bc*sc*i*",
+        "pci:v00008086d00000BE6sv*sd*bc*sc*i*",
+        "pci:v00008086d00000BE5sv*sd*bc*sc*i*",
+        "pci:v00008086d00000BE4sv*sd*bc*sc*i*",
+        "pci:v00008086d00000BE3sv*sd*bc*sc*i*",
+        "pci:v00008086d00000BE2sv*sd*bc*sc*i*",
+        "pci:v00008086d00000BE1sv*sd*bc*sc*i*",
+        "pci:v00008086d00000BE0sv*sd*bc*sc*i*",
+        "pci:v00008086d00004108sv*sd*bc*sc*i*",
+        "pci:v00008086d00004107sv*sd*bc*sc*i*",
+        "pci:v00008086d00004106sv*sd*bc*sc*i*",
+        "pci:v00008086d00004105sv*sd*bc*sc*i*",
+        "pci:v00008086d00004104sv*sd*bc*sc*i*",
+        "pci:v00008086d00004103sv*sd*bc*sc*i*",
+        "pci:v00008086d00004102sv*sd*bc*sc*i*",
+        "pci:v00008086d00004101sv*sd*bc*sc*i*",
+        "pci:v00008086d00004100sv*sd*bc*sc*i*",
+        "pci:v00008086d00008109sv*sd*bc*sc*i*",
+        "pci:v00008086d00008108sv*sd*bc*sc*i*"
+      ],
+      "depends": [
+        "drm,drm_kms_helper,video,i2c-algo-bit"
+      ],
+      "retpoline": [
+        "Y"
+      ],
+      "name": [
+        "gma500_gfx"
+      ],
+      "vermagic": [
+        "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 "
+      ]
+    },
+    "imports": {
+      "__alloc_pages_nodemask": {
+        "crc": "0xfb95539a",
+        "target_crc": "0xfb95539a",
+        "undefined": true
+      },
+      "__const_udelay": {
+        "crc": "0xeae3dfd6",
+        "target_crc": "0xeae3dfd6",
+        "undefined": true
+      },
+      "__default_kernel_pte_mask": {
+        "crc": "0xd38cd261",
+        "target_crc": "0xd38cd261",
+        "undefined": true
+      },
+      "__drm_dbg": {
+        "crc": "0xec12af74",
+        "target_crc": "0xec12af74",
+        "undefined": true
+      },
+      "__drm_err": {
+        "crc": "0xb11ac7a7",
+        "target_crc": "0xb11ac7a7",
+        "undefined": true
+      },
+      "__free_pages": {
+        "crc": "0x91176bb3",
+        "target_crc": "0x91176bb3",
+        "undefined": true
+      },
+      "__init_rwsem": {
+        "crc": "0xc75375a4",
+        "target_crc": "0xc75375a4",
+        "undefined": true
+      },
+      "__init_swait_queue_head": {
+        "crc": "0x608741b5",
+        "target_crc": "0x608741b5",
+        "undefined": true
+      },
+      "__kmalloc": {
+        "crc": "0x2d6fcc06",
+        "target_crc": "0x2d6fcc06",
+        "undefined": true
+      },
+      "__mutex_init": {
+        "crc": "0x0affbb4f",
+        "target_crc": "0x0affbb4f",
+        "undefined": true
+      },
+      "__pci_register_driver": {
+        "crc": "0x4630e387",
+        "target_crc": "0x4630e387",
+        "undefined": true
+      },
+      "__pm_runtime_disable": {
+        "crc": "0x7e434ac1",
+        "target_crc": "0x7e434ac1",
+        "undefined": true
+      },
+      "__pm_runtime_idle": {
+        "crc": "0x41159394",
+        "target_crc": "0x41159394",
+        "undefined": true
+      },
+      "__pm_runtime_resume": {
+        "crc": "0xfa6551ed",
+        "target_crc": "0xfa6551ed",
+        "undefined": true
+      },
+      "__pm_runtime_set_status": {
+        "crc": "0xc4dac443",
+        "target_crc": "0xc4dac443",
+        "undefined": true
+      },
+      "__preempt_count": {
+        "crc": "0x4629334c",
+        "target_crc": "0x4629334c",
+        "undefined": true
+      },
+      "__stack_chk_fail": {
+        "crc": "0x60c9d98f",
+        "target_crc": "0x60c9d98f",
+        "undefined": true
+      },
+      "__stack_chk_guard": {
+        "crc": "0x7240a66f",
+        "target_crc": "0x7240a66f",
+        "undefined": true
+      },
+      "__x86_indirect_thunk_ebx": {
+        "crc": "0xaac0a1e8",
+        "target_crc": "0xaac0a1e8",
+        "undefined": true
+      },
+      "__x86_indirect_thunk_ecx": {
+        "crc": "0xab02cbdf",
+        "target_crc": "0xab02cbdf",
+        "undefined": true
+      },
+      "__x86_indirect_thunk_edi": {
+        "crc": "0xfd94fe4a",
+        "target_crc": "0xfd94fe4a",
+        "undefined": true
+      },
+      "__x86_indirect_thunk_edx": {
+        "crc": "0xae4ddd5a",
+        "target_crc": "0xae4ddd5a",
+        "undefined": true
+      },
+      "__x86_indirect_thunk_esi": {
+        "crc": "0xe4fd4bbf",
+        "target_crc": "0xe4fd4bbf",
+        "undefined": true
+      },
+      "_cond_resched": {
+        "crc": "0xa1c76e0a",
+        "target_crc": "0xa1c76e0a",
+        "undefined": true
+      },
+      "_dev_err": {
+        "crc": "0x3b73b2f8",
+        "target_crc": "0x3b73b2f8",
+        "undefined": true
+      },
+      "_dev_info": {
+        "crc": "0x59a2c442",
+        "target_crc": "0x59a2c442",
+        "undefined": true
+      },
+      "_dev_warn": {
+        "crc": "0xe0eef788",
+        "target_crc": "0xe0eef788",
+        "undefined": true
+      },
+      "_raw_spin_lock": {
+        "crc": "0xba8fbd64",
+        "target_crc": "0xba8fbd64",
+        "undefined": true
+      },
+      "_raw_spin_lock_irqsave": {
+        "crc": "0x34db050b",
+        "target_crc": "0x34db050b",
+        "undefined": true
+      },
+      "_raw_spin_unlock_irqrestore": {
+        "crc": "0xd35cce70",
+        "target_crc": "0xd35cce70",
+        "undefined": true
+      },
+      "acpi_video_register": {
+        "crc": "0x8826c13b",
+        "target_crc": "0x8826c13b",
+        "undefined": true
+      },
+      "add_timer": {
+        "crc": "0x24d273d1",
+        "target_crc": "0x24d273d1",
+        "undefined": true
+      },
+      "allocate_resource": {
+        "crc": "0x0f06957f",
+        "target_crc": "0x0f06957f",
+        "undefined": true
+      },
+      "backlight_device_register": {
+        "crc": "0x8996100d",
+        "target_crc": "0x8996100d",
+        "undefined": true
+      },
+      "backlight_device_unregister": {
+        "crc": "0xc0af53d9",
+        "target_crc": "0xc0af53d9",
+        "undefined": true
+      },
+      "boot_cpu_data": {
+        "crc": "0x163ca9c9",
+        "target_crc": "0x163ca9c9",
+        "undefined": true
+      },
+      "cachemode2protval": {
+        "crc": "0x46cf10eb",
+        "target_crc": "0x46cf10eb",
+        "undefined": true
+      },
+      "cancel_work_sync": {
+        "crc": "0x4205ad24",
+        "target_crc": "0x4205ad24",
+        "undefined": true
+      },
+      "complete": {
+        "crc": "0xa6257a2f",
+        "target_crc": "0xa6257a2f",
+        "undefined": true
+      },
+      "current_task": {
+        "crc": "0xf69073fc",
+        "target_crc": "0xf69073fc",
+        "undefined": true
+      },
+      "dev_printk": {
+        "crc": "0xcb147e11",
+        "target_crc": "0xcb147e11",
+        "undefined": true
+      },
+      "down_read": {
+        "crc": "0xc9bba4b6",
+        "target_crc": "0xc9bba4b6",
+        "undefined": true
+      },
+      "down_write": {
+        "crc": "0x5af8e078",
+        "target_crc": "0x5af8e078",
+        "undefined": true
+      },
+      "drm_add_edid_modes": {
+        "crc": "0x08749094",
+        "target_crc": "0x08749094",
+        "undefined": true
+      },
+      "drm_clflush_pages": {
+        "crc": "0xceb9549d",
+        "target_crc": "0xceb9549d",
+        "undefined": true
+      },
+      "drm_connector_attach_encoder": {
+        "crc": "0x2afd5eeb",
+        "target_crc": "0x2afd5eeb",
+        "undefined": true
+      },
+      "drm_connector_cleanup": {
+        "crc": "0x858bdd00",
+        "target_crc": "0x858bdd00",
+        "undefined": true
+      },
+      "drm_connector_init": {
+        "crc": "0x12b0a306",
+        "target_crc": "0x12b0a306",
+        "undefined": true
+      },
+      "drm_connector_register": {
+        "crc": "0x7f70cea3",
+        "target_crc": "0x7f70cea3",
+        "undefined": true
+      },
+      "drm_connector_unregister": {
+        "crc": "0x6b387114",
+        "target_crc": "0x6b387114",
+        "undefined": true
+      },
+      "drm_connector_update_edid_property": {
+        "crc": "0x1b9a5879",
+        "target_crc": "0x1b9a5879",
+        "undefined": true
+      },
+      "drm_crtc_cleanup": {
+        "crc": "0xe8bd5d28",
+        "target_crc": "0xe8bd5d28",
+        "undefined": true
+      },
+      "drm_crtc_from_index": {
+        "crc": "0x4368f3cc",
+        "target_crc": "0x4368f3cc",
+        "undefined": true
+      },
+      "drm_crtc_helper_set_config": {
+        "crc": "0x4f9901a6",
+        "target_crc": "0x4f9901a6",
+        "undefined": true
+      },
+      "drm_crtc_helper_set_mode": {
+        "crc": "0x67461dec",
+        "target_crc": "0x67461dec",
+        "undefined": true
+      },
+      "drm_crtc_init": {
+        "crc": "0x2d6a8bc8",
+        "target_crc": "0x2d6a8bc8",
+        "undefined": true
+      },
+      "drm_crtc_send_vblank_event": {
+        "crc": "0xf2c3ddde",
+        "target_crc": "0xf2c3ddde",
+        "undefined": true
+      },
+      "drm_crtc_vblank_get": {
+        "crc": "0x07cdd1ec",
+        "target_crc": "0x07cdd1ec",
+        "undefined": true
+      },
+      "drm_crtc_vblank_off": {
+        "crc": "0xac68f77e",
+        "target_crc": "0xac68f77e",
+        "undefined": true
+      },
+      "drm_crtc_vblank_on": {
+        "crc": "0x9fc58800",
+        "target_crc": "0x9fc58800",
+        "undefined": true
+      },
+      "drm_crtc_vblank_put": {
+        "crc": "0x687fcdb7",
+        "target_crc": "0x687fcdb7",
+        "undefined": true
+      },
+      "drm_detect_hdmi_monitor": {
+        "crc": "0x76182e4b",
+        "target_crc": "0x76182e4b",
+        "undefined": true
+      },
+      "drm_detect_monitor_audio": {
+        "crc": "0x60373db5",
+        "target_crc": "0x60373db5",
+        "undefined": true
+      },
+      "drm_dev_alloc": {
+        "crc": "0xdf97e01a",
+        "target_crc": "0xdf97e01a",
+        "undefined": true
+      },
+      "drm_dev_put": {
+        "crc": "0xe5341f76",
+        "target_crc": "0xe5341f76",
+        "undefined": true
+      },
+      "drm_dev_register": {
+        "crc": "0xc18f35cf",
+        "target_crc": "0xc18f35cf",
+        "undefined": true
+      },
+      "drm_dev_unregister": {
+        "crc": "0xd740f14e",
+        "target_crc": "0xd740f14e",
+        "undefined": true
+      },
+      "drm_encoder_cleanup": {
+        "crc": "0xc16ba3da",
+        "target_crc": "0xc16ba3da",
+        "undefined": true
+      },
+      "drm_encoder_init": {
+        "crc": "0x551ee7db",
+        "target_crc": "0x551ee7db",
+        "undefined": true
+      },
+      "drm_fb_helper_alloc_fbi": {
+        "crc": "0xa39f1333",
+        "target_crc": "0xa39f1333",
+        "undefined": true
+      },
+      "drm_fb_helper_blank": {
+        "crc": "0x1fe37898",
+        "target_crc": "0x1fe37898",
+        "undefined": true
+      },
+      "drm_fb_helper_cfb_copyarea": {
+        "crc": "0x444d1216",
+        "target_crc": "0x444d1216",
+        "undefined": true
+      },
+      "drm_fb_helper_cfb_fillrect": {
+        "crc": "0xd3d56752",
+        "target_crc": "0xd3d56752",
+        "undefined": true
+      },
+      "drm_fb_helper_cfb_imageblit": {
+        "crc": "0x9096c66f",
+        "target_crc": "0x9096c66f",
+        "undefined": true
+      },
+      "drm_fb_helper_check_var": {
+        "crc": "0xe12afd06",
+        "target_crc": "0xe12afd06",
+        "undefined": true
+      },
+      "drm_fb_helper_debug_enter": {
+        "crc": "0x87e5108a",
+        "target_crc": "0x87e5108a",
+        "undefined": true
+      },
+      "drm_fb_helper_debug_leave": {
+        "crc": "0xd8b6e74b",
+        "target_crc": "0xd8b6e74b",
+        "undefined": true
+      },
+      "drm_fb_helper_fill_info": {
+        "crc": "0xfedc87a9",
+        "target_crc": "0xfedc87a9",
+        "undefined": true
+      },
+      "drm_fb_helper_fini": {
+        "crc": "0x75027430",
+        "target_crc": "0x75027430",
+        "undefined": true
+      },
+      "drm_fb_helper_init": {
+        "crc": "0x465a409c",
+        "target_crc": "0x465a409c",
+        "undefined": true
+      },
+      "drm_fb_helper_initial_config": {
+        "crc": "0x92e27e4c",
+        "target_crc": "0x92e27e4c",
+        "undefined": true
+      },
+      "drm_fb_helper_ioctl": {
+        "crc": "0x1d82eef7",
+        "target_crc": "0x1d82eef7",
+        "undefined": true
+      },
+      "drm_fb_helper_lastclose": {
+        "crc": "0xb117f672",
+        "target_crc": "0xb117f672",
+        "undefined": true
+      },
+      "drm_fb_helper_output_poll_changed": {
+        "crc": "0x14417647",
+        "target_crc": "0x14417647",
+        "undefined": true
+      },
+      "drm_fb_helper_pan_display": {
+        "crc": "0x5f2a228d",
+        "target_crc": "0x5f2a228d",
+        "undefined": true
+      },
+      "drm_fb_helper_prepare": {
+        "crc": "0x60e4830d",
+        "target_crc": "0x60e4830d",
+        "undefined": true
+      },
+      "drm_fb_helper_set_par": {
+        "crc": "0xcd87ff6d",
+        "target_crc": "0xcd87ff6d",
+        "undefined": true
+      },
+      "drm_fb_helper_setcmap": {
+        "crc": "0x2c5831c7",
+        "target_crc": "0x2c5831c7",
+        "undefined": true
+      },
+      "drm_fb_helper_unregister_fbi": {
+        "crc": "0xe38e77f5",
+        "target_crc": "0xe38e77f5",
+        "undefined": true
+      },
+      "drm_framebuffer_cleanup": {
+        "crc": "0x840a269a",
+        "target_crc": "0x840a269a",
+        "undefined": true
+      },
+      "drm_framebuffer_init": {
+        "crc": "0x9db17175",
+        "target_crc": "0x9db17175",
+        "undefined": true
+      },
+      "drm_framebuffer_unregister_private": {
+        "crc": "0x836177c6",
+        "target_crc": "0x836177c6",
+        "undefined": true
+      },
+      "drm_gem_fb_create_handle": {
+        "crc": "0x09bf6df8",
+        "target_crc": "0x09bf6df8",
+        "undefined": true
+      },
+      "drm_gem_fb_destroy": {
+        "crc": "0x77e0e5fd",
+        "target_crc": "0x77e0e5fd",
+        "undefined": true
+      },
+      "drm_gem_free_mmap_offset": {
+        "crc": "0xc4ca3c10",
+        "target_crc": "0xc4ca3c10",
+        "undefined": true
+      },
+      "drm_gem_get_pages": {
+        "crc": "0x9e66b37b",
+        "target_crc": "0x9e66b37b",
+        "undefined": true
+      },
+      "drm_gem_handle_create": {
+        "crc": "0xb0562a59",
+        "target_crc": "0xb0562a59",
+        "undefined": true
+      },
+      "drm_gem_mmap": {
+        "crc": "0x0e78caa7",
+        "target_crc": "0x0e78caa7",
+        "undefined": true
+      },
+      "drm_gem_object_free": {
+        "crc": "0xd680a377",
+        "target_crc": "0xd680a377",
+        "undefined": true
+      },
+      "drm_gem_object_init": {
+        "crc": "0x78c90161",
+        "target_crc": "0x78c90161",
+        "undefined": true
+      },
+      "drm_gem_object_lookup": {
+        "crc": "0xf2761d23",
+        "target_crc": "0xf2761d23",
+        "undefined": true
+      },
+      "drm_gem_object_release": {
+        "crc": "0x07d8bd61",
+        "target_crc": "0x07d8bd61",
+        "undefined": true
+      },
+      "drm_gem_private_object_init": {
+        "crc": "0xa88f45a6",
+        "target_crc": "0xa88f45a6",
+        "undefined": true
+      },
+      "drm_gem_put_pages": {
+        "crc": "0x35c6d5d3",
+        "target_crc": "0x35c6d5d3",
+        "undefined": true
+      },
+      "drm_gem_vm_close": {
+        "crc": "0x1b36caf0",
+        "target_crc": "0x1b36caf0",
+        "undefined": true
+      },
+      "drm_gem_vm_open": {
+        "crc": "0xfbdb5e8b",
+        "target_crc": "0xfbdb5e8b",
+        "undefined": true
+      },
+      "drm_get_edid": {
+        "crc": "0x45f25a3d",
+        "target_crc": "0x45f25a3d",
+        "undefined": true
+      },
+      "drm_get_format_info": {
+        "crc": "0xd7bcea0e",
+        "target_crc": "0xd7bcea0e",
+        "undefined": true
+      },
+      "drm_handle_vblank": {
+        "crc": "0xb89ddae4",
+        "target_crc": "0xb89ddae4",
+        "undefined": true
+      },
+      "drm_helper_connector_dpms": {
+        "crc": "0x2d873b87",
+        "target_crc": "0x2d873b87",
+        "undefined": true
+      },
+      "drm_helper_crtc_in_use": {
+        "crc": "0xe1d30b20",
+        "target_crc": "0xe1d30b20",
+        "undefined": true
+      },
+      "drm_helper_disable_unused_functions": {
+        "crc": "0x4bce10a3",
+        "target_crc": "0x4bce10a3",
+        "undefined": true
+      },
+      "drm_helper_hpd_irq_event": {
+        "crc": "0xd3beb144",
+        "target_crc": "0xd3beb144",
+        "undefined": true
+      },
+      "drm_helper_mode_fill_fb_struct": {
+        "crc": "0x5b74cea2",
+        "target_crc": "0x5b74cea2",
+        "undefined": true
+      },
+      "drm_helper_probe_single_connector_modes": {
+        "crc": "0xd76161c0",
+        "target_crc": "0xd76161c0",
+        "undefined": true
+      },
+      "drm_helper_resume_force_mode": {
+        "crc": "0x09a18ac2",
+        "target_crc": "0x09a18ac2",
+        "undefined": true
+      },
+      "drm_ioctl": {
+        "crc": "0xf181243d",
+        "target_crc": "0xf181243d",
+        "undefined": true
+      },
+      "drm_irq_install": {
+        "crc": "0xbc397fa0",
+        "target_crc": "0xbc397fa0",
+        "undefined": true
+      },
+      "drm_irq_uninstall": {
+        "crc": "0xd25f6b43",
+        "target_crc": "0xd25f6b43",
+        "undefined": true
+      },
+      "drm_kms_helper_poll_disable": {
+        "crc": "0x5ab253f4",
+        "target_crc": "0x5ab253f4",
+        "undefined": true
+      },
+      "drm_kms_helper_poll_fini": {
+        "crc": "0x6b48f7f4",
+        "target_crc": "0x6b48f7f4",
+        "undefined": true
+      },
+      "drm_kms_helper_poll_init": {
+        "crc": "0x43cfd3f1",
+        "target_crc": "0x43cfd3f1",
+        "undefined": true
+      },
+      "drm_mode_config_cleanup": {
+        "crc": "0x1fd3769c",
+        "target_crc": "0x1fd3769c",
+        "undefined": true
+      },
+      "drm_mode_config_reset": {
+        "crc": "0xf06e404f",
+        "target_crc": "0xf06e404f",
+        "undefined": true
+      },
+      "drm_mode_create_scaling_mode_property": {
+        "crc": "0xc0532d32",
+        "target_crc": "0xc0532d32",
+        "undefined": true
+      },
+      "drm_mode_crtc_set_gamma_size": {
+        "crc": "0x91c87124",
+        "target_crc": "0x91c87124",
+        "undefined": true
+      },
+      "drm_mode_debug_printmodeline": {
+        "crc": "0x2ed3c600",
+        "target_crc": "0x2ed3c600",
+        "undefined": true
+      },
+      "drm_mode_destroy": {
+        "crc": "0x6dbf006b",
+        "target_crc": "0x6dbf006b",
+        "undefined": true
+      },
+      "drm_mode_duplicate": {
+        "crc": "0x929ceebb",
+        "target_crc": "0x929ceebb",
+        "undefined": true
+      },
+      "drm_mode_legacy_fb_format": {
+        "crc": "0x29f078d1",
+        "target_crc": "0x29f078d1",
+        "undefined": true
+      },
+      "drm_mode_probed_add": {
+        "crc": "0xdfd5dfb2",
+        "target_crc": "0xdfd5dfb2",
+        "undefined": true
+      },
+      "drm_mode_set_crtcinfo": {
+        "crc": "0x4575a0ca",
+        "target_crc": "0x4575a0ca",
+        "undefined": true
+      },
+      "drm_mode_set_name": {
+        "crc": "0x4a35d30d",
+        "target_crc": "0x4a35d30d",
+        "undefined": true
+      },
+      "drm_modeset_lock_all": {
+        "crc": "0x406a67cc",
+        "target_crc": "0x406a67cc",
+        "undefined": true
+      },
+      "drm_modeset_unlock_all": {
+        "crc": "0xce3da969",
+        "target_crc": "0xce3da969",
+        "undefined": true
+      },
+      "drm_object_attach_property": {
+        "crc": "0x43754b83",
+        "target_crc": "0x43754b83",
+        "undefined": true
+      },
+      "drm_object_property_get_value": {
+        "crc": "0x6d43f07c",
+        "target_crc": "0x6d43f07c",
+        "undefined": true
+      },
+      "drm_object_property_set_value": {
+        "crc": "0xd12f0779",
+        "target_crc": "0xd12f0779",
+        "undefined": true
+      },
+      "drm_open": {
+        "crc": "0x6a6db2ab",
+        "target_crc": "0x6a6db2ab",
+        "undefined": true
+      },
+      "drm_poll": {
+        "crc": "0xe34e0bb7",
+        "target_crc": "0xe34e0bb7",
+        "undefined": true
+      },
+      "drm_property_add_enum": {
+        "crc": "0x747c36b6",
+        "target_crc": "0x747c36b6",
+        "undefined": true
+      },
+      "drm_property_create": {
+        "crc": "0x760e2a89",
+        "target_crc": "0x760e2a89",
+        "undefined": true
+      },
+      "drm_property_create_range": {
+        "crc": "0x32cc6692",
+        "target_crc": "0x32cc6692",
+        "undefined": true
+      },
+      "drm_read": {
+        "crc": "0x55ad16fa",
+        "target_crc": "0x55ad16fa",
+        "undefined": true
+      },
+      "drm_release": {
+        "crc": "0xc33876fd",
+        "target_crc": "0xc33876fd",
+        "undefined": true
+      },
+      "drm_simple_encoder_init": {
+        "crc": "0xab201322",
+        "target_crc": "0xab201322",
+        "undefined": true
+      },
+      "drm_vblank_init": {
+        "crc": "0x4af99876",
+        "target_crc": "0x4af99876",
+        "undefined": true
+      },
+      "drmm_mode_config_init": {
+        "crc": "0x7f5fa731",
+        "target_crc": "0x7f5fa731",
+        "undefined": true
+      },
+      "free_irq": {
+        "crc": "0xc1514a3b",
+        "target_crc": "0xc1514a3b",
+        "undefined": true
+      },
+      "i2c_add_adapter": {
+        "crc": "0x8c78730c",
+        "target_crc": "0x8c78730c",
+        "undefined": true
+      },
+      "i2c_add_numbered_adapter": {
+        "crc": "0xffd0284f",
+        "target_crc": "0xffd0284f",
+        "undefined": true
+      },
+      "i2c_bit_add_bus": {
+        "crc": "0xc50fcddf",
+        "target_crc": "0xc50fcddf",
+        "undefined": true
+      },
+      "i2c_del_adapter": {
+        "crc": "0x28992518",
+        "target_crc": "0x28992518",
+        "undefined": true
+      },
+      "i2c_get_adapter": {
+        "crc": "0x4d895b02",
+        "target_crc": "0x4d895b02",
+        "undefined": true
+      },
+      "i2c_transfer": {
+        "crc": "0xf10874d6",
+        "target_crc": "0xf10874d6",
+        "undefined": true
+      },
+      "init_timer_key": {
+        "crc": "0xc6f46339",
+        "target_crc": "0xc6f46339",
+        "undefined": true
+      },
+      "ioread32": {
+        "crc": "0xa78af5f3",
+        "target_crc": "0xa78af5f3",
+        "undefined": true
+      },
+      "ioremap": {
+        "crc": "0x81f65b7d",
+        "target_crc": "0x81f65b7d",
+        "undefined": true
+      },
+      "ioremap_cache": {
+        "crc": "0xce0fe228",
+        "target_crc": "0xce0fe228",
+        "undefined": true
+      },
+      "ioremap_wc": {
+        "crc": "0x6f9c0a14",
+        "target_crc": "0x6f9c0a14",
+        "undefined": true
+      },
+      "iounmap": {
+        "crc": "0xedc03953",
+        "target_crc": "0xedc03953",
+        "undefined": true
+      },
+      "iowrite32": {
+        "crc": "0x4a453f53",
+        "target_crc": "0x4a453f53",
+        "undefined": true
+      },
+      "jiffies": {
+        "crc": "0x15ba50a6",
+        "target_crc": "0x15ba50a6",
+        "undefined": true
+      },
+      "jiffies_to_usecs": {
+        "crc": "0x7f24de73",
+        "target_crc": "0x7f24de73",
+        "undefined": true
+      },
+      "kfree": {
+        "crc": "0x037a0cba",
+        "target_crc": "0x037a0cba",
+        "undefined": true
+      },
+      "kmalloc_caches": {
+        "crc": "0x72208652",
+        "target_crc": "0x72208652",
+        "undefined": true
+      },
+      "kmap_atomic_high_prot": {
+        "crc": "0x3d31df56",
+        "target_crc": "0x3d31df56",
+        "undefined": true
+      },
+      "kmap_high": {
+        "crc": "0x47361169",
+        "target_crc": "0x47361169",
+        "undefined": true
+      },
+      "kmem_cache_alloc_trace": {
+        "crc": "0x0bed2f44",
+        "target_crc": "0x0bed2f44",
+        "undefined": true
+      },
+      "kmemdup": {
+        "crc": "0x0b1b939e",
+        "target_crc": "0x0b1b939e",
+        "undefined": true
+      },
+      "kunmap_atomic_high": {
+        "crc": "0xeb3848ff",
+        "target_crc": "0xeb3848ff",
+        "undefined": true
+      },
+      "kunmap_high": {
+        "crc": "0x2c023f17",
+        "target_crc": "0x2c023f17",
+        "undefined": true
+      },
+      "mem_section": {
+        "crc": "0xe5357507",
+        "target_crc": "0xe5357507",
+        "undefined": true
+      },
+      "memcmp": {
+        "crc": "0x5152e605",
+        "target_crc": "0x5152e605",
+        "undefined": true
+      },
+      "memcpy_fromio": {
+        "crc": "0xb9704631",
+        "target_crc": "0xb9704631",
+        "undefined": true
+      },
+      "memset": {
+        "crc": "0x2bc95bd4",
+        "target_crc": "0x2bc95bd4",
+        "undefined": true
+      },
+      "module_layout": {
+        "crc": "0xb84efb99",
+        "target_crc": "0xb84efb99",
+        "undefined": false
+      },
+      "module_put": {
+        "crc": "0x59ab9688",
+        "target_crc": "0x59ab9688",
+        "undefined": true
+      },
+      "msleep": {
+        "crc": "0xf9a482f9",
+        "target_crc": "0xf9a482f9",
+        "undefined": true
+      },
+      "mutex_lock": {
+        "crc": "0x1b58e04c",
+        "target_crc": "0x1b58e04c",
+        "undefined": true
+      },
+      "mutex_unlock": {
+        "crc": "0x99b76c81",
+        "target_crc": "0x99b76c81",
+        "undefined": true
+      },
+      "page_address": {
+        "crc": "0xb5696f27",
+        "target_crc": "0xb5696f27",
+        "undefined": true
+      },
+      "pci_dev_put": {
+        "crc": "0x70c0ebae",
+        "target_crc": "0x70c0ebae",
+        "undefined": true
+      },
+      "pci_disable_device": {
+        "crc": "0x84e4ba64",
+        "target_crc": "0x84e4ba64",
+        "undefined": true
+      },
+      "pci_enable_device": {
+        "crc": "0x79482b20",
+        "target_crc": "0x79482b20",
+        "undefined": true
+      },
+      "pci_enable_msi": {
+        "crc": "0xabf6fe8a",
+        "target_crc": "0xabf6fe8a",
+        "undefined": true
+      },
+      "pci_get_device": {
+        "crc": "0x4139df38",
+        "target_crc": "0x4139df38",
+        "undefined": true
+      },
+      "pci_get_domain_bus_and_slot": {
+        "crc": "0x752b3c0c",
+        "target_crc": "0x752b3c0c",
+        "undefined": true
+      },
+      "pci_map_rom": {
+        "crc": "0xb7acac2f",
+        "target_crc": "0xb7acac2f",
+        "undefined": true
+      },
+      "pci_read_config_byte": {
+        "crc": "0x06c3e3bb",
+        "target_crc": "0x06c3e3bb",
+        "undefined": true
+      },
+      "pci_read_config_dword": {
+        "crc": "0x293cd72b",
+        "target_crc": "0x293cd72b",
+        "undefined": true
+      },
+      "pci_read_config_word": {
+        "crc": "0x6052417c",
+        "target_crc": "0x6052417c",
+        "undefined": true
+      },
+      "pci_restore_state": {
+        "crc": "0x1c2be14b",
+        "target_crc": "0x1c2be14b",
+        "undefined": true
+      },
+      "pci_save_state": {
+        "crc": "0xfbc6e7a2",
+        "target_crc": "0xfbc6e7a2",
+        "undefined": true
+      },
+      "pci_set_master": {
+        "crc": "0xdcf50fed",
+        "target_crc": "0xdcf50fed",
+        "undefined": true
+      },
+      "pci_set_power_state": {
+        "crc": "0x2d0d9f74",
+        "target_crc": "0x2d0d9f74",
+        "undefined": true
+      },
+      "pci_unmap_rom": {
+        "crc": "0x15cf16aa",
+        "target_crc": "0x15cf16aa",
+        "undefined": true
+      },
+      "pci_unregister_driver": {
+        "crc": "0xc8b19419",
+        "target_crc": "0xc8b19419",
+        "undefined": true
+      },
+      "pci_write_config_byte": {
+        "crc": "0xfb69fc17",
+        "target_crc": "0xfb69fc17",
+        "undefined": true
+      },
+      "pci_write_config_dword": {
+        "crc": "0x1ecc4509",
+        "target_crc": "0x1ecc4509",
+        "undefined": true
+      },
+      "pci_write_config_word": {
+        "crc": "0x52ff6b8c",
+        "target_crc": "0x52ff6b8c",
+        "undefined": true
+      },
+      "pm_runtime_allow": {
+        "crc": "0x315aafc2",
+        "target_crc": "0x315aafc2",
+        "undefined": true
+      },
+      "pm_runtime_forbid": {
+        "crc": "0x56ca8bb8",
+        "target_crc": "0x56ca8bb8",
+        "undefined": true
+      },
+      "printk": {
+        "crc": "0xecc9cdd8",
+        "target_crc": "0xecc9cdd8",
+        "undefined": true
+      },
+      "pv_ops": {
+        "crc": "0xb8053ad8",
+        "target_crc": "0xb8053ad8",
+        "undefined": true
+      },
+      "queue_work_on": {
+        "crc": "0xb2d48a2e",
+        "target_crc": "0xb2d48a2e",
+        "undefined": true
+      },
+      "refcount_warn_saturate": {
+        "crc": "0x0296695f",
+        "target_crc": "0x0296695f",
+        "undefined": true
+      },
+      "register_acpi_notifier": {
+        "crc": "0x973fa82e",
+        "target_crc": "0x973fa82e",
+        "undefined": true
+      },
+      "release_resource": {
+        "crc": "0x352c05d9",
+        "target_crc": "0x352c05d9",
+        "undefined": true
+      },
+      "request_resource": {
+        "crc": "0xe0a6b585",
+        "target_crc": "0xe0a6b585",
+        "undefined": true
+      },
+      "request_threaded_irq": {
+        "crc": "0x2072ee9b",
+        "target_crc": "0x2072ee9b",
+        "undefined": true
+      },
+      "set_pages_array_wb": {
+        "crc": "0x7ab2b3a9",
+        "target_crc": "0x7ab2b3a9",
+        "undefined": true
+      },
+      "set_pages_array_wc": {
+        "crc": "0xdaa0b66c",
+        "target_crc": "0xdaa0b66c",
+        "undefined": true
+      },
+      "set_pages_uc": {
+        "crc": "0x05c0eb1f",
+        "target_crc": "0x05c0eb1f",
+        "undefined": true
+      },
+      "set_pages_wb": {
+        "crc": "0x64f50708",
+        "target_crc": "0x64f50708",
+        "undefined": true
+      },
+      "snprintf": {
+        "crc": "0xc358aaf8",
+        "target_crc": "0xc358aaf8",
+        "undefined": true
+      },
+      "strcmp": {
+        "crc": "0xe2d5255a",
+        "target_crc": "0xe2d5255a",
+        "undefined": true
+      },
+      "strncpy": {
+        "crc": "0xb6ed1e53",
+        "target_crc": "0xb6ed1e53",
+        "undefined": true
+      },
+      "system_wq": {
+        "crc": "0x2d3385d3",
+        "target_crc": "0x2d3385d3",
+        "undefined": true
+      },
+      "timer_delete_sync": {
+        "crc": "0x82ee90dc",
+        "target_crc": "0x82ee90dc",
+        "undefined": true
+      },
+      "try_module_get": {
+        "crc": "0x502b702c",
+        "target_crc": "0x502b702c",
+        "undefined": true
+      },
+      "unregister_acpi_notifier": {
+        "crc": "0x7023bea8",
+        "target_crc": "0x7023bea8",
+        "undefined": true
+      },
+      "up_read": {
+        "crc": "0x29f3a126",
+        "target_crc": "0x29f3a126",
+        "undefined": true
+      },
+      "up_write": {
+        "crc": "0xaa173b39",
+        "target_crc": "0xaa173b39",
+        "undefined": true
+      },
+      "usleep_range": {
+        "crc": "0x12a38747",
+        "target_crc": "0x12a38747",
+        "undefined": true
+      },
+      "vfree": {
+        "crc": "0x999e8297",
+        "target_crc": "0x999e8297",
+        "undefined": true
+      },
+      "vmalloc_user": {
+        "crc": "0x5635a60a",
+        "target_crc": "0x5635a60a",
+        "undefined": true
+      },
+      "vmap": {
+        "crc": "0x75f5ea6d",
+        "target_crc": "0x75f5ea6d",
+        "undefined": true
+      },
+      "vmf_insert_mixed": {
+        "crc": "0x7be8e88e",
+        "target_crc": "0x7be8e88e",
+        "undefined": true
+      },
+      "vmf_insert_pfn": {
+        "crc": "0x76655b7f",
+        "target_crc": "0x76655b7f",
+        "undefined": true
+      },
+      "vunmap": {
+        "crc": "0x94961283",
+        "target_crc": "0x94961283",
+        "undefined": true
+      },
+      "wait_for_completion_interruptible_timeout": {
+        "crc": "0xf02aa937",
+        "target_crc": "0xf02aa937",
+        "undefined": true
+      }
+    }
+  }
+]

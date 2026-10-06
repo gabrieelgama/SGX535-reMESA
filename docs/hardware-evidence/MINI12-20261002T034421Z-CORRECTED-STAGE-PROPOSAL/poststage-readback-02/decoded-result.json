@@ -1,0 +1,108 @@
+{
+  "boot_id": "10d6abfa-e7a8-4311-97ae-213f503cee20",
+  "kernel": "5.10.240-antix.1-486-smp",
+  "arch": "i686",
+  "cmdline": "BOOT_IMAGE=/boot/vmlinuz-5.10.240-antix.1-486-smp root=UUID=6da9b4a7-ede2-4e27-bbfc-b537f568eaf1 ro quiet selinux=0",
+  "taint": "12289",
+  "loaded_module_note_sha256": "484f90964d0c36b50256e42b1bc1cd8fb905fad8476b5a1bf5e549dc178792d7",
+  "module_state": "live",
+  "pci_driver": "/sys/bus/pci/drivers/gma500",
+  "drm_device": "/sys/devices/pci0000:00/0000:00:02.0",
+  "framebuffer": "gma500drmfb",
+  "destinations": {
+    "kernel": {
+      "size": 5984416,
+      "sha256": "cda6e6c7f61cae83793c974f745af888211bb3543d411283b9bcf79ce5304438",
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o644",
+      "nlink": 1,
+      "pass": true
+    },
+    "stock_initrd": {
+      "size": 50863580,
+      "sha256": "f02cde6c7e712fa0620f99438ef5dc81c131b481a84dc9dbc4f7b854c364e341",
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o644",
+      "nlink": 1,
+      "pass": true
+    },
+    "cycle06_image": {
+      "size": 50804481,
+      "sha256": "4ac6bd1bed7dbf53b3653037f3e6e757160672560176b1938a63488636efaa71",
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o644",
+      "nlink": 1,
+      "pass": true
+    },
+    "corrected_image": {
+      "size": 50804478,
+      "sha256": "55e7a8be6f62c9a1d59f1c532b8790399c21a2706884747e504edfffb45bf52d",
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o644",
+      "nlink": 1,
+      "pass": true
+    },
+    "grub_cfg": {
+      "size": 10438,
+      "sha256": "396ac7dff0bdea48393fd0a25a5fc633d40e2368caf14872b855eba03e96089f",
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o600",
+      "nlink": 1,
+      "pass": true
+    },
+    "grubenv": {
+      "size": 1024,
+      "sha256": "72c291233d508c8ed06305f0bf9d33130ea206bfaf67873dbe77413f77d19927",
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o644",
+      "nlink": 1,
+      "pass": true
+    },
+    "cycle06_custom_backup": {
+      "size": 974,
+      "sha256": "181d33aa42cc9a73d35a50b5e7b1636121edb7a607c2949540fa04a4d0d32612",
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o644",
+      "nlink": 1,
+      "pass": true
+    },
+    "custom_cfg": {
+      "size": 2040,
+      "sha256": "269cce045b81da002318f9b478e07f05d235a773c3c82fd6557d8d50da7f38c8",
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o644",
+      "nlink": 1,
+      "pass": true
+    }
+  },
+  "custom_cfg_structure": {
+    "old_exact_prefix": true,
+    "entries": 2,
+    "cycle06_entry": true,
+    "corrected_entry": true,
+    "savedefault": false,
+    "save_env": false,
+    "saved_stock_default": true,
+    "pending_temp_absent": true
+  },
+  "kernel_health": {
+    "classification": "PASS WITH BOUNDED STOCK DIAGNOSTICS",
+    "faults": [],
+    "stock_diagnostics": {
+      "acpi_powerbutton_error": 2,
+      "acpi_powerbutton_warning": 2,
+      "powerbutton_probe": 1,
+      "tiny_powerbutton_probe": 1,
+      "backlight_zero_register": 1
+    }
+  },
+  "classification": "PASS"
+}

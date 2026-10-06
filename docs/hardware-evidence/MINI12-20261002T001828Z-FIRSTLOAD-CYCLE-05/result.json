@@ -1,0 +1,14 @@
+{
+  "stock_preflight": "PASS 54 guards",
+  "experimental_capture": "STOP; source-proven health false positive",
+  "derivative_loaded": "CONFIRMED",
+  "first_owner": "INFERRED; NOT ESTABLISHED under current trace contract",
+  "experimental_hook_trace": "NOT READ",
+  "stock_recovery": "PASS OBSERVED RESTORATION AND THREE DISTINCT BOOT IDENTITIES",
+  "gate_b": "BLOCKED",
+  "whitelist": [],
+  "sgx_execution": false,
+  "first_triangle": "NOT ATTEMPTED",
+  "single_smallest_next_step": "Separately authorize one unchanged experimental boot and bounded passive hook/ownership capture; no SGX, restaging, hot replacement or retry",
+  "next_step_class": "TARGET-STATE-CHANGING"
+}

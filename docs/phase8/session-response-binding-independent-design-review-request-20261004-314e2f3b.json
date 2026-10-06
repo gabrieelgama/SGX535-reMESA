@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "prepared_timestamp_utc": "2026-10-04T20:43:14Z",
+  "decision": null,
+  "decision_authority": null,
+  "decision_timestamp_utc": null,
+  "approved": false,
+  "exact_context": {
+    "boot_id": "89fc7306-6dac-4ab9-af62-360b7152ef22",
+    "module_build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+    "action": "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1",
+    "freshness": "Boot and 70/70 first-owner facts are preserved historical observations, not fresh invocation guards."
+  },
+  "approved_response_client": {
+    "source": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot_response.c",
+      "size": 5514,
+      "sha256": "919c2611e048e4a660ecae3542264adf5a5367d9b0fbe7fbceff2f45f90adedf"
+    },
+    "binary": {
+      "path": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-build-01/frozen-triangle-one-shot-response-i386",
+      "size": 775264,
+      "sha256": "2f84917f96db2859678797a327d40d9638325e5c5efb6e0dfccef44d756b4835"
+    },
+    "uapi": {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_uapi.h",
+      "size": 760,
+      "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420"
+    }
+  },
+  "unchanged_context_bindings": {
+    "kernel": "5.10.240-antix.1-486-smp",
+    "architecture": "i686",
+    "module": {
+      "path": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/module/gma500_gfx.ko",
+      "size_bytes": 244960,
+      "sha256": "4141a07c1f2d2ffc9ab2770b7b4cf654f68c396275dad15f0ddc68192529d8e6",
+      "build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+      "loaded_note_sha256": "edb1e3e59cfd70c48d400bec89f2a30c1a436b05bf115bc1a05581abc153bdc9",
+      "identity_evidence": [
+        "module_identity",
+        "qualification",
+        "first_owner_records"
+      ]
+    },
+    "diagnostic_image": {
+      "source_path": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/image/build-01/initrd.img-sgx535-firstload-diagnostic-01",
+      "staged_path": "/boot/initrd.img-5.10.240-antix.1-486-smp-sgx535-firstload-314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+      "size_bytes": 50805231,
+      "sha256": "fe64b3dcfe74b78a6d96edcd4fd7c118c3901fcff8631afec6c14647da292e3c",
+      "embedded_module_sha256": "4141a07c1f2d2ffc9ab2770b7b4cf654f68c396275dad15f0ddc68192529d8e6",
+      "identity_evidence": [
+        "image_identity",
+        "image_qualification",
+        "poststage_records",
+        "first_owner_records",
+        "menu_receipt"
+      ]
+    }
+  },
+  "analysis_finding": "PROPERTY NOT ESTABLISHED FROM PERMITTED EVIDENCE",
+  "same_owner_transaction_property": "For invocation I and returned object R, one freshly initialized owner lifetime O is used with its embedded session/service and matching hardware backend; R faithfully reports that lifetime's terminal ledger/phase/result and same-owner color readback.",
+  "unproved_clauses": [
+    {
+      "id": "G01",
+      "property": "I uses V=&O.fixed_service, V.session=&O.session and B.owner=O after fresh initialization, under a valid uninterrupted owner/backend lifetime. The service and callback context passed to the operation belong to the same O."
+    },
+    {
+      "id": "G02",
+      "property": "R.observed_events and R.phase faithfully report O.session; outcome/operation_errno reflect that same operation's actual results; R.color_bytes and summaries originate from capture_color(O), before release/reinitialization invalidates the association."
+    }
+  ],
+  "evidence": {
+    "original_bounded_question": "/home/gama/sgx535-gfx/docs/phase8/accepted-outcome-export-property-review-request-20261004-314e2f3b.json",
+    "compositional_finding": "/home/gama/sgx535-gfx/docs/phase8/session-response-binding-property-finding-20261004.md",
+    "exact_client_approval": "/home/gama/sgx535-gfx/docs/phase8/response-export-client-substitution-maintainer-20261004-314e2f3b.json",
+    "clean_room_scope": "/home/gama/sgx535-gfx/docs/phase8/pre07-clean-room-review-scope-20261004.md",
+    "qualified_client_metadata": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-qualification.json",
+    "synthetic_differential_metadata": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/SYNTHETIC-paired-evidence/results.json",
+    "source_manifest": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/source-manifest.json"
+  },
+  "allowed_inputs": [
+    "Permitted owner/session/service/backend API signatures, embedding, acceptance/reset/retirement/readback invariants.",
+    "Public UAPI and exact approved response exporter source/behavior.",
+    "Existing unrestricted qualification metadata and CPU mock tests, within their established limits.",
+    "Unrestricted evidence requirements and approved clean-room scope.",
+    "Independently permitted property-level guarantees attributable to this exact qualified artifact, if available."
+  ],
+  "forbidden_inputs_and_actions": [
+    "Excluded ioctl-entry/reporting or historical wrapper contents, control flow, integration tests revealing those contents, or reconstruction hints.",
+    "Alternate representations, disassembly, indirect recovery, inferred hidden behavior or derivation from restricted material.",
+    "Equivalent indirect substitution for the blocked operation or recreation of restricted entry/reporting/wrapper implementation.",
+    "Hardware contact, live guards/logs, staging, installation, boot, recovery, client/ioctl/SGX execution or retry.",
+    "Kernel/module/UAPI/client changes, patches, builds, implementation or deployment."
+  ],
+  "contamination_stop_rule": "If a branch requires restricted/UNKNOWN inputs or would derive/recover excluded material, STOP that branch. Do not infer that missing access proves an implementation defect.",
+  "representation_policy": {
+    "raw_status_journal_required": false,
+    "new_token_uuid_required": false,
+    "uapi_change_required": false,
+    "module_change_necessary": "NOT YET DEMONSTRATED"
+  },
+  "gate_b": "PASS FOR EXACT OFFSCREEN READINESS",
+  "whitelist": [
+    "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1"
+  ],
+  "pre07": "BLOCKED",
+  "design_status": "PARTIAL",
+  "ready_for_implementation_review": false,
+  "ready_for_execution_authorization": false,
+  "implementation_authorized": false,
+  "staging_authorized": false,
+  "hardware_contact_authorized": false,
+  "fresh_guard_collection_authorized": false,
+  "sgx_execution_authorized": false,
+  "sgx_invocations": 0,
+  "hardware_interactions": 0,
+  "triangle": "NOT ATTEMPTED",
+  "preservation": "New pending untracked review-only record. No prior decision/request/handoff/evidence or qualified artifact is edited. No stage/commit.",
+  "request_id": "MINI12-PRE07-INDEPENDENT-SESSION-RESPONSE-BINDING-DESIGN-REVIEW-20261004-314e2f3b",
+  "record_kind": "PENDING CONTINGENT CLEAN-ROOM DESIGN-SCOPE REVIEW; NO APPROVAL",
+  "requested_decision": "PERMISSION TO DESIGN AN INDEPENDENT SESSION-TO-RESPONSE BINDING MECHANISM",
+  "scope": "OFFLINE DESIGN ONLY of the minimum same-owner evidence postcondition and whether independently permitted interfaces can realize it. No implementation placement, executor, replacement entry/reporting layer, ABI or source change is selected.",
+  "design_authorized": false,
+  "contingency": {
+    "basis": "The present compositional review exhausted available permitted proof sources without establishing G01/G02.",
+    "trigger": "Only if no legitimate permitted property confirmation can resolve the reduced request, seek a separate maintainer design-scope decision.",
+    "property_request": "/home/gama/sgx535-gfx/docs/phase8/session-response-binding-property-review-request-20261004-314e2f3b.json",
+    "automatic_escalation": false,
+    "patch_necessity_proven": false,
+    "not_additional_mandatory_gate": "This is a prepared fallback, not a new prerequisite for proving the existing qualified property."
+  },
+  "design_subject": [
+    "Independently derived fresh same-owner/service/backend association requirement G01.",
+    "Faithful terminal ledger/phase/result and same-owner readback projection requirement G02.",
+    "Preservation lifetime and conservative failure/unknown evidence semantics.",
+    "Feasibility solely through permitted interfaces; stop any branch requiring excluded caller/reporting implementation."
+  ],
+  "explicit_exclusions": [
+    "No request for implementation, kernel/module modification, client modification, UAPI changes or a new token.",
+    "No selection or design of a substitute restricted ioctl/reporting/executor/wrapper implementation.",
+    "No live authority, contact, deployment, staging, guards, invocation, retry or success claim.",
+    "Prior clean-room design approval remains unchanged; it is not silently expanded by this pending request."
+  ],
+  "minimum_correction_status": "Not justified for implementation. The unproved property is not evidence that actual qualified code violates it. Any future design must preserve qualified acceptance semantics rather than invent hardware meanings."
+}

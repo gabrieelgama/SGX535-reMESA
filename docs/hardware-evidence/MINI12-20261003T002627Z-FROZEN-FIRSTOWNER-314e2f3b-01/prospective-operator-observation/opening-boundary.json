@@ -1,0 +1,17 @@
+{
+  "recorded_utc": "2026-10-03T01:13:05.277797+00:00",
+  "build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+  "boot_id": "89fc7306-6dac-4ab9-af62-360b7152ef22",
+  "action": "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1",
+  "first_owner_live_evidence": "PASS under prospective operator-observation procedure, based on actual pinned-transport capture and operator receipts",
+  "applicable_opening_decision": "MISSING",
+  "available_applicable_opening_tools": [],
+  "preserved_unavailable_review_source": "docs/phase8/CODEX-HANDOFF-20261002.md:225",
+  "restricted_review_reopened": false,
+  "gate_b": "BLOCKED",
+  "whitelist": [],
+  "sgx_invocations_this_session": 0,
+  "triangle_status": "BLOCKED BEFORE EXECUTION",
+  "current_boot": "DIAGNOSTIC, last freshly observed normal/Live",
+  "next_action": "Legitimately obtain the independent opening decision for this exact boot/build/action; preserve boot and evidence; no SGX/client staging or additional target probes at this boundary"
+}

@@ -1,0 +1,1 @@
+{"phase": "unprivileged-boot-identity", "mode": "stock_preparation", "boot_id": "8c89c9c9-d8c5-48b8-bfad-a4afa0442257", "kernel": "5.10.240-antix.1-486-smp", "architecture": "i686", "uptime_start": 1183.77, "utc_start": "2026-10-02T00:41:34.997649+00:00"}

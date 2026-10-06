@@ -1,0 +1,7 @@
+{
+  "argv": [
+    "/home/gama/sgx535-offline/phase8-demonstrable-3d-plan-20261006T080902Z/CPU-tests/projection-UBSan"
+  ],
+  "returncode": 2,
+  "success_expected": false
+}

@@ -1,0 +1,25 @@
+..E...
+======================================================================
+ERROR: test_stock_capture_remains_possible_if_deadline_prevented_experimental_capture (__main__.ControllerTests.test_stock_capture_remains_possible_if_deadline_prevented_experimental_capture)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-offline/firstload-cycle03-20261001T223542Z/test_capture_controller.py", line 42, in test_stock_capture_remains_possible_if_deadline_prevented_experimental_capture
+    with patch.object(m,'capture',return_value=self.result()) as run:m.main('stock-recovery')
+                                                                     ~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-offline/firstload-cycle03-20261001T223542Z/capture_once.py", line 64, in main
+    raw=(E/'experimental/stdout.txt').read_text();expid=None
+  File "/usr/lib/python3.13/pathlib/_local.py", line 548, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/pathlib/_local.py", line 539, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/tmpr9hp9ozi/experimental/stdout.txt'
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.233s
+
+FAILED (errors=1)

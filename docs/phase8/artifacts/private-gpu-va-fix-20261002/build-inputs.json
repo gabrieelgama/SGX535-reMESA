@@ -1,0 +1,133 @@
+{
+  "authoritative_inputs": {
+    "/tmp/sgx535-antix-source-6/linux-5.10.240-antix.1-486-smp_5.10.240-antix.1-486-smp.orig.tar.gz": "e5c5d7c6bdcc7a845589e5956cbf50a8d6198232df017f0398a2902371042e1d",
+    "/home/gama/sgx535-gfx/docs/phase4-2-data/linux-5.10.240-antix.1-486-smp_5.10.240-antix.1-486-smp-6.diff.gz": "5c41ae456d77d9e0af181fe3153c4f80e89bacdd2b541ba15fbac0b297d69b03",
+    "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build__config": "93f4d7a779f4be65097b5f26db6c9b10431907c6d417109719eb2f16d6def3d9",
+    "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build_Module_symvers": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+    "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build_generated.tar": "f899bce235cc04a3aa3c74f569fe2ba793a0b606676144ff762a57be2aa1f45c",
+    "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build_Makefile": "70b5c7688f9067bd13b8413a205dc73ba9f66676b3de34c4092d7ceb9c260493"
+  },
+  "source_output_argv": [
+    "make",
+    "-C",
+    "/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp",
+    "O=/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output",
+    "ARCH=x86",
+    "CC=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14 --sysroot=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root",
+    "CROSS_COMPILE=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-",
+    "LD=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-ld.bfd",
+    "AS=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-as",
+    "HOSTCC=/usr/bin/gcc-14",
+    "HOSTCFLAGS=-I/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/include -I/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/include/aarch64-linux-gnu",
+    "HOSTLDFLAGS=-L/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/lib/aarch64-linux-gnu",
+    "LOCALVERSION=-486-smp",
+    "M=/home/gama/sgx535-offline/candidate-01-build-20260930/module",
+    "V=1",
+    "modules"
+  ],
+  "environment": {
+    "PATH": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin:/usr/bin:/bin",
+    "LD_LIBRARY_PATH": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/lib/aarch64-linux-gnu",
+    "BISON_PKGDATADIR": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/share/bison",
+    "M4": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/m4",
+    "LC_ALL": "C",
+    "HOSTCC": "/usr/bin/gcc-14",
+    "CC": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14 --sysroot=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root",
+    "CROSS_COMPILE": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-",
+    "LD": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-ld.bfd",
+    "AS": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-as",
+    "HOSTCFLAGS": "-I/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/include -I/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/include/aarch64-linux-gnu",
+    "HOSTLDFLAGS": "-L/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/lib/aarch64-linux-gnu",
+    "CONFIG_SHELL": "/bin/sh",
+    "KBUILD_BUILD_TIMESTAMP": "2026-09-30 23:17:22 UTC",
+    "KBUILD_BUILD_USER": "gama",
+    "KBUILD_BUILD_HOST": "localhost",
+    "KBUILD_BUILD_VERSION": "1",
+    "SOURCE_DATE_EPOCH": "1790810242"
+  },
+  "generated_files_verified": 7426,
+  "old_module_sha256": "91a6040e743d9c6222cb1307067db6e29fe92558576716a33d9fe0f4f5a87d74",
+  "changed_source_sha256": "0f9f06afcba71d966aa1368dbf9d15ab0dfe82f7a0366701a9f8460c866f033d",
+  "tool_identities": [
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+      "sha256": "230e1e46df3d07477cbc1b0be63507738abbf22836e221affbc89167995a3d0a"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-cpp-14",
+      "sha256": "c3260ddd3836854dcf4bfd2620ca510f15c4706bed1c0566ffd84ba0368c6ba9"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-as",
+      "sha256": "e4e2e048401b9c6bbfab363465297fd3c427d0946bb6e6bdd98ddb32838b0ba2"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-ld.bfd",
+      "sha256": "a10a5fbd0ab26c27336634b47287d4c4ce52577c1e924e818d51ae832465bcca"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-ar",
+      "sha256": "e4566632f15d92d1599010d128a3d7ccc36689e8c558726b9ce2aea16bc8cca0"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-nm",
+      "sha256": "586f89fded862529f947238ff5d914d32c4d1ea583d0061ab2ad8c6329edb23b"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-objcopy",
+      "sha256": "24a5b155b76201ac9b7c885e8b2e0d16155d3a9b13cf3e22f12d316e73a0c034"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-objdump",
+      "sha256": "976e09f09995240271375a3ab73bd012c236eae4db509bc09041b8efc3ae6208"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-ranlib",
+      "sha256": "59e7bd690ca0a7c227ec06f2d0edac4108f77209c3d532d513fca879f2f551b6"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-readelf",
+      "sha256": "c0b7cb94c225b2ac723788ce94ab01539985edc52dab08c66999851e34c8d2e1"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-strip",
+      "sha256": "10c39de3dadc0bdf85ef9ca81dd523d239361f338ed5e762b9682e7c7c7f344b"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/bison",
+      "sha256": "1b69eccf2120221423eec30dc039ea71ec81d230af3b5992596054d248b01bbb"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/flex",
+      "sha256": "2e5222b919e9ec50c4e4e5995202cb51ebd2cdd59196f0af9782a3c69643a718"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/bc",
+      "sha256": "cf072a005041160fe3c3e4142bb18789ad3ce08d8e74bae410b8d3620d1ec175"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/m4",
+      "sha256": "d64fc0f8671e6fe33c783df4490ffae67b2ec9148f352fd624c6b08ea7bbd390"
+    },
+    {
+      "path": "/usr/bin/aarch64-linux-gnu-gcc-14",
+      "sha256": "fb051a6c58961fb6aec758acf50d7d0375eecff740d0706388092829e3fb7a41"
+    },
+    {
+      "path": "/usr/bin/make",
+      "sha256": "442d0d9908e6e1968a2e1f9a82aad5231ff6b02deb3071ce38750e2e2f7a2a45"
+    },
+    {
+      "path": "/usr/bin/aarch64-linux-gnu-as",
+      "sha256": "6d47317c37bd8596c9dcf0e3dd03185065dc6dd58cdc61e861fda7b9150e720a"
+    },
+    {
+      "path": "/usr/bin/aarch64-linux-gnu-ld.bfd",
+      "sha256": "5a284e435cdf41bc05d93f0683da12b8a42608b93c79e187e7d03fab6a22ddf4"
+    },
+    {
+      "path": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/libexec/gcc-cross/i686-linux-gnu/14/cc1",
+      "sha256": "21590a66c5b3b39e7b89bfb806952e1bf803f11f2a0617b2fda603b0045530af"
+    }
+  ]
+}

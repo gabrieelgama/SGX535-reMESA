@@ -1,0 +1,209 @@
+FFFFFFFFFFFFFFFFFF.
+======================================================================
+FAIL: test_actual_process_stat_parser_handles_parentheses_and_never_calls_start_readiness (test_frozen_first_load_capture_v2.CaptureV2Tests.test_actual_process_stat_parser_handles_parentheses_and_never_calls_start_readiness)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 59, in test_actual_process_stat_parser_handles_parentheses_and_never_calls_start_readiness
+    self.assertIsNotNone(v2);fields=['S']+['0']*18+['12345']+['0']*5
+    ~~~~~~~~~~~~~~~~~~~~^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_cached_sudo_child_is_direct_noninteractive_python (test_frozen_first_load_capture_v2.CaptureV2Tests.test_cached_sudo_child_is_direct_noninteractive_python)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 35, in test_cached_sudo_child_is_direct_noninteractive_python
+    _,_,_,call=self.execute();self.assertEqual(call.call_args.args[0],['sudo','-n','-p','','python3','-I','-B','-S','-c','print(1)']);self.assertLessEqual(call.call_args.kwargs['timeout'],35)
+               ~~~~~~~~~~~~^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 10, in execute
+    self.assertIsNotNone(v2,'v2 capture implementation missing')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : v2 capture implementation missing
+
+======================================================================
+FAIL: test_cycle_capture_accepts_readiness_after120 (test_frozen_first_load_capture_v2.CaptureV2Tests.test_cycle_capture_accepts_readiness_after120)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 23, in test_cycle_capture_accepts_readiness_after120
+    status,rows,_,call=self.execute('experimental',uptimes=(500,501));self.assertEqual(status,0);self.assertEqual(rows[-1]['duration_seconds'],1)
+                       ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 10, in execute
+    self.assertIsNotNone(v2,'v2 capture implementation missing')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : v2 capture implementation missing
+
+======================================================================
+FAIL: test_cycle_deadline_refuses_before_privilege (test_frozen_first_load_capture_v2.CaptureV2Tests.test_cycle_deadline_refuses_before_privilege) (age=1200)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 27, in test_cycle_deadline_refuses_before_privilege
+    status,rows,_,call=self.execute('experimental',uptimes=(age,));self.assertNotEqual(status,0);call.assert_not_called()
+                       ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 10, in execute
+    self.assertIsNotNone(v2,'v2 capture implementation missing')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : v2 capture implementation missing
+
+======================================================================
+FAIL: test_cycle_deadline_refuses_before_privilege (test_frozen_first_load_capture_v2.CaptureV2Tests.test_cycle_deadline_refuses_before_privilege) (age=1201)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 27, in test_cycle_deadline_refuses_before_privilege
+    status,rows,_,call=self.execute('experimental',uptimes=(age,));self.assertNotEqual(status,0);call.assert_not_called()
+                       ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 10, in execute
+    self.assertIsNotNone(v2,'v2 capture implementation missing')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : v2 capture implementation missing
+
+======================================================================
+FAIL: test_cycle_deadline_refuses_before_privilege (test_frozen_first_load_capture_v2.CaptureV2Tests.test_cycle_deadline_refuses_before_privilege) (age=nan)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 27, in test_cycle_deadline_refuses_before_privilege
+    status,rows,_,call=self.execute('experimental',uptimes=(age,));self.assertNotEqual(status,0);call.assert_not_called()
+                       ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 10, in execute
+    self.assertIsNotNone(v2,'v2 capture implementation missing')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : v2 capture implementation missing
+
+======================================================================
+FAIL: test_cycle_deadline_refuses_before_privilege (test_frozen_first_load_capture_v2.CaptureV2Tests.test_cycle_deadline_refuses_before_privilege) (age=inf)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 27, in test_cycle_deadline_refuses_before_privilege
+    status,rows,_,call=self.execute('experimental',uptimes=(age,));self.assertNotEqual(status,0);call.assert_not_called()
+                       ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 10, in execute
+    self.assertIsNotNone(v2,'v2 capture implementation missing')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : v2 capture implementation missing
+
+======================================================================
+FAIL: test_cycle_deadline_refuses_before_privilege (test_frozen_first_load_capture_v2.CaptureV2Tests.test_cycle_deadline_refuses_before_privilege) (age=-1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 27, in test_cycle_deadline_refuses_before_privilege
+    status,rows,_,call=self.execute('experimental',uptimes=(age,));self.assertNotEqual(status,0);call.assert_not_called()
+                       ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 10, in execute
+    self.assertIsNotNone(v2,'v2 capture implementation missing')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : v2 capture implementation missing
+
+======================================================================
+FAIL: test_late_completion_changed_boot_clock_regression_rejected (test_frozen_first_load_capture_v2.CaptureV2Tests.test_late_completion_changed_boot_clock_regression_rejected) (kw={'uptimes': (1199, 1201)})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 31, in test_late_completion_changed_boot_clock_regression_rejected
+    status,rows,_,_=self.execute('experimental',**kw);self.assertNotEqual(status,0)
+                    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 10, in execute
+    self.assertIsNotNone(v2,'v2 capture implementation missing')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : v2 capture implementation missing
+
+======================================================================
+FAIL: test_late_completion_changed_boot_clock_regression_rejected (test_frozen_first_load_capture_v2.CaptureV2Tests.test_late_completion_changed_boot_clock_regression_rejected) (kw={'ids': ('b', 'c')})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 31, in test_late_completion_changed_boot_clock_regression_rejected
+    status,rows,_,_=self.execute('experimental',**kw);self.assertNotEqual(status,0)
+                    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 10, in execute
+    self.assertIsNotNone(v2,'v2 capture implementation missing')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : v2 capture implementation missing
+
+======================================================================
+FAIL: test_late_completion_changed_boot_clock_regression_rejected (test_frozen_first_load_capture_v2.CaptureV2Tests.test_late_completion_changed_boot_clock_regression_rejected) (kw={'uptimes': (500, 499)})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 31, in test_late_completion_changed_boot_clock_regression_rejected
+    status,rows,_,_=self.execute('experimental',**kw);self.assertNotEqual(status,0)
+                    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 10, in execute
+    self.assertIsNotNone(v2,'v2 capture implementation missing')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : v2 capture implementation missing
+
+======================================================================
+FAIL: test_late_completion_changed_boot_clock_regression_rejected (test_frozen_first_load_capture_v2.CaptureV2Tests.test_late_completion_changed_boot_clock_regression_rejected) (kw={'times': (10, 51)})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 31, in test_late_completion_changed_boot_clock_regression_rejected
+    status,rows,_,_=self.execute('experimental',**kw);self.assertNotEqual(status,0)
+                    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 10, in execute
+    self.assertIsNotNone(v2,'v2 capture implementation missing')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : v2 capture implementation missing
+
+======================================================================
+FAIL: test_late_completion_changed_boot_clock_regression_rejected (test_frozen_first_load_capture_v2.CaptureV2Tests.test_late_completion_changed_boot_clock_regression_rejected) (kw={'times': (10, 9)})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 31, in test_late_completion_changed_boot_clock_regression_rejected
+    status,rows,_,_=self.execute('experimental',**kw);self.assertNotEqual(status,0)
+                    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 10, in execute
+    self.assertIsNotNone(v2,'v2 capture implementation missing')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : v2 capture implementation missing
+
+======================================================================
+FAIL: test_old_stock_boot_age_does_not_prevent_bounded_preparation (test_frozen_first_load_capture_v2.CaptureV2Tests.test_old_stock_boot_age_does_not_prevent_bounded_preparation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 21, in test_old_stock_boot_age_does_not_prevent_bounded_preparation
+    status,rows,err,call=self.execute();self.assertEqual(status,0);self.assertTrue(rows[-1]['same_boot_timing_pass']);self.assertEqual(rows[-1]['uptime_end'],2001)
+                         ~~~~~~~~~~~~^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 10, in execute
+    self.assertIsNotNone(v2,'v2 capture implementation missing')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : v2 capture implementation missing
+
+======================================================================
+FAIL: test_readiness_requires_current_boot_sudo_userspace_and_display (test_frozen_first_load_capture_v2.CaptureV2Tests.test_readiness_requires_current_boot_sudo_userspace_and_display)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 44, in test_readiness_requires_current_boot_sudo_userspace_and_display
+    self.assertIsNotNone(v2)
+    ~~~~~~~~~~~~~~~~~~~~^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_receipt_requires_complete_same_boot_nonfault_root (test_frozen_first_load_capture_v2.CaptureV2Tests.test_receipt_requires_complete_same_boot_nonfault_root)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 53, in test_receipt_requires_complete_same_boot_nonfault_root
+    self.assertIsNotNone(v2);_,rows,_,_=self.execute();self.assertEqual(v2.validate_receipt(rows,0,b'',1,'stock_preparation')['boot_id'],'b')
+    ~~~~~~~~~~~~~~~~~~~~^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_timeout_preserves_partial_evidence_without_retry (test_frozen_first_load_capture_v2.CaptureV2Tests.test_timeout_preserves_partial_evidence_without_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 39, in test_timeout_preserves_partial_evidence_without_retry
+    self.assertIsNotNone(v2);out=io.StringIO();err=io.StringIO()
+    ~~~~~~~~~~~~~~~~~~~~^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_uncached_sudo_retains_prefix_and_never_sends_credentials (test_frozen_first_load_capture_v2.CaptureV2Tests.test_uncached_sudo_retains_prefix_and_never_sends_credentials)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 33, in test_uncached_sudo_retains_prefix_and_never_sends_credentials
+    status,rows,err,call=self.execute(child=subprocess.CompletedProcess([],1,'','sudo: a password is required\n'));self.assertEqual(status,1);self.assertEqual(rows[0]['boot_id'],'b');self.assertIn('password is required',err);self.assertEqual(call.call_args.kwargs['stdin'],subprocess.DEVNULL);self.assertNotIn('input',call.call_args.kwargs);self.assertEqual(call.call_count,1)
+                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 10, in execute
+    self.assertIsNotNone(v2,'v2 capture implementation missing')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : v2 capture implementation missing
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.022s
+
+FAILED (failures=18)

@@ -18,6 +18,15 @@ struct sgx535_gma500_fixed_result {
     u32 phase;
     u32 observed_events;
     u32 color_observed;
+    u32 diagnostic_stage_reached;
+    u32 diagnostic_failure_stage;
+    u32 diagnostic_observation_stage;
+    u32 diagnostic_failure_source;
+    s32 diagnostic_raw_result;
+    u32 diagnostic_load_flags;
+    u32 diagnostic_status1;
+    u32 diagnostic_status2;
+    u32 diagnostic_initend;
     struct sgx535_frozen_color_summary color;
     u8 color_bytes[4096];
 };

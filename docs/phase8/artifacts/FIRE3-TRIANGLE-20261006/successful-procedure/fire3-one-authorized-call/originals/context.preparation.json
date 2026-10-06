@@ -1,0 +1,20 @@
+{
+  "action": "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1",
+  "boot_id": "f1ab6606-0561-445f-a397-28a028516cd7",
+  "capsule": "UNUSED",
+  "diagnostic_argb": "ffff00ff",
+  "experimental_words": [
+    "001f00ff",
+    "fca7f1f1"
+  ],
+  "first_owner_guards": "82/82 PASS",
+  "historical_client_invocations": 2,
+  "hypothesis": "EXPERIMENTAL_HYPOTHESIS \u2014 NOT ESTABLISHED",
+  "image_sha256": "3d9eb6baa3d821b4ff98e60ea83f1a94022b5fb2881038d2ad91b95cdfb7448e",
+  "module_build_id": "85ec06b428c99fac7f9127919b7a488d204f4a77",
+  "observer_build_id": "f11d3abb072caa4e1d32836ef92ce201e9c9d126",
+  "sgx_execution_authorized": false,
+  "sgx_invocations_this_boot": 0,
+  "source_boundary": "2967348bcf2f2e85ff1bbd56848283df9a187839acf43a5c4a48c6fb4b76f555",
+  "triangle_this_boot": "NOT ATTEMPTED"
+}

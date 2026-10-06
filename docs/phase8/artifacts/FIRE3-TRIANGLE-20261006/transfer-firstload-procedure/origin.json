@@ -1,0 +1,7 @@
+{
+  "prior_audit": "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/live-fire3-controller-audit-20261006T045337Z",
+  "prior_inspection": "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/passive-incoming-inspection-20261006T051110Z",
+  "newroot": "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/live-fire3-fresh-transfer-20261006T052417Z",
+  "incoming_only_path_rebound": true,
+  "candidate_rendering_changed": false
+}

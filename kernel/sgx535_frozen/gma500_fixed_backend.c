@@ -13,6 +13,8 @@
 #include "power.h"
 #include "mmu.h"
 #include "gma500_fixed_backend.h"
+#include "gma500_capsule_observer.h"
+#include "gma500_source_snapshot.h"
 #include "frozen_fixed_io.h"
 
 #define SGX535_FIXED_POLL_READS 300000U
@@ -43,6 +45,8 @@ void sgx535_gma500_fixed_irq_capture_locked(struct drm_device *dev,
 {
     struct sgx535_gma500_fixed_backend *backend = fixed_irq_owner;
 
+    sgx535_provenance_source_pending(dev, status1, status2);
+
     if (backend && backend->active && backend->fire_possible &&
         backend->owner->dev == dev) {
         backend->pending_status1 |= status1 & ~fixed_benign_status1;
@@ -53,6 +57,19 @@ void sgx535_gma500_fixed_irq_capture_locked(struct drm_device *dev,
 void sgx535_gma500_fixed_irq_unlock(unsigned long flags)
 {
     spin_unlock_irqrestore(&fixed_irq_lock, flags);
+}
+
+static void source_snapshot_locked(struct drm_device *dev,
+    struct sgx535_source_facts *facts)
+{
+    sgx535_gma500_source_snapshot(dev->dev_private, facts);
+}
+
+void sgx535_gma500_source_observe_passive(struct drm_device *dev)
+{
+    unsigned long flags = sgx535_gma500_fixed_irq_lock();
+    sgx535_provenance_source_observe(dev, source_snapshot_locked);
+    sgx535_gma500_fixed_irq_unlock(flags);
 }
 
 static int fixed_sample_and_ack(void *context, sgx535_u32 sequence,
@@ -93,6 +110,7 @@ static int fixed_sample_and_ack(void *context, sgx535_u32 sequence,
     backend->pending_status2 = 0;
     sgx535_gma500_fixed_irq_unlock(flags);
     *exclusive_owned = 1;
+    sgx535_provenance_sample(backend, sequence, *status1, *status2, 1);
     if (!*status1 && !*status2) {
         if (time_after_eq(jiffies, backend->deadline))
             return -ETIMEDOUT;
@@ -116,6 +134,8 @@ static int fixed_write(void *context, sgx535_u32 offset, sgx535_u32 value)
     if (backend->fire_possible &&
         time_after_eq(jiffies, backend->deadline))
         return -ETIMEDOUT;
+    if (!sgx535_provenance_source_write(backend))
+        return -EAGAIN;
     PSB_WSGX32(value, offset);
     return 0;
 }
@@ -251,7 +271,8 @@ static int fixed_run(void *context, enum sgx535_fixed_stage stage,
         ret = fixed_actions(backend, payload, expected, 29);
         if (!ret) {
             observation->load_flags = 0x1fU;
-            observation->status2 = 7U;
+            /* Successful actions observed and consumed all four load bits. */
+            observation->status2 = 15U;
             observation->initend = 0x400000U;
         }
         break;
@@ -326,6 +347,7 @@ static int fixed_run(void *context, enum sgx535_fixed_stage stage,
             backend->fire_possible = true;
             backend->deadline = jiffies + owner->session.timeout_ticks;
             sgx535_gma500_fixed_irq_unlock(flags);
+            sgx535_provenance_issued(backend);
         }
         ret = fixed_actions(backend, fire->actions, expected,
                             fire->action_count);
@@ -380,11 +402,40 @@ const struct sgx535_fixed_ops sgx535_gma500_fixed_backend_ops = {
     fixed_run
 };
 
+static void capsule_service_begin(void *context, struct sgx535_fixed_service *s,
+    const struct sgx535_fixed_ops *ops,
+    const struct sgx535_fixed_status_source *source, void *operation_context)
+{
+    sgx535_provenance_service(context, s,
+        ops == &sgx535_gma500_fixed_backend_ops &&
+        source == &sgx535_gma500_fixed_backend_status_source &&
+        operation_context == context);
+}
+static void capsule_service_before(void *b, struct sgx535_fixed_service *s,
+    sgx535_u32 sequence, sgx535_u32 a, sgx535_u32 d, int exclusive)
+{
+    sgx535_provenance_before(b, s, sequence, a, d, exclusive);
+}
+static void capsule_service_after(void *b, struct sgx535_fixed_service *s)
+{
+    sgx535_provenance_after(b, s);
+}
+static void capsule_service_terminal(void *b, struct sgx535_fixed_service *s, int result)
+{
+    sgx535_provenance_terminal(b, s, result);
+}
+static const struct sgx535_fixed_service_observer capsule_service_observer = {
+    capsule_service_begin, capsule_service_before, capsule_service_after,
+    capsule_service_terminal
+};
+
 int sgx535_gma500_fixed_backend_begin(
     struct sgx535_gma500_fixed_backend *backend,
     struct sgx535_gma500_owner *owner)
 {
     unsigned long flags;
+    struct drm_psb_private *priv;
+    struct sgx535_source_facts facts = {0};
 
     if (!backend || backend->active || !owner || !owner->initialized ||
         !owner->device_claimed || !owner->power_held ||
@@ -392,6 +443,26 @@ int sgx535_gma500_fixed_backend_begin(
         owner->fixed_service.session != &owner->session ||
         !gma_power_is_on(owner->dev))
         return -ENODEV;
+    /* Observe before publishing this backend as the active IRQ owner. Never
+     * wake, submit, acknowledge, reset or wait for a lucky clean sample here.
+     * A power reference is already held by the owner. This is NOT a drain. */
+    flags = sgx535_gma500_fixed_irq_lock();
+    if (fixed_irq_owner || !sgx535_provenance_source_begin(backend, owner->dev)) {
+        sgx535_gma500_fixed_irq_unlock(flags);
+        return -EBUSY;
+    }
+    priv = owner->dev->dev_private;
+    sgx535_gma500_source_snapshot(priv, &facts);
+    facts.pending |= backend->pending_status1 | backend->pending_status2;
+    facts.busy |= backend->fire_possible;
+    /* Read-only corroboration of the retained initialization reset/no-prior-
+     * operation lifetime, not a drain and not a status-only certificate. */
+    facts.coverage_complete = 0; /* Adapter checks matching driver attachment. */
+    if (!sgx535_provenance_source_boundary(backend, &facts)) {
+        sgx535_gma500_fixed_irq_unlock(flags);
+        return -EAGAIN;
+    }
+    sgx535_gma500_fixed_irq_unlock(flags);
     backend->owner = owner;
     backend->active = true;
     backend->power_held = true;
@@ -406,6 +477,9 @@ int sgx535_gma500_fixed_backend_begin(
     }
     fixed_irq_owner = backend;
     sgx535_gma500_fixed_irq_unlock(flags);
+    sgx535_provenance_admit(backend);
+    owner->fixed_service.observer = &capsule_service_observer;
+    owner->fixed_service.observer_context = backend;
     return 0;
 }
 

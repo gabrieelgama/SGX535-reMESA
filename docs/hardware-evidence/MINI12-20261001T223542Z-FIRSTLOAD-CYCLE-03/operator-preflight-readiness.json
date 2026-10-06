@@ -1,0 +1,12 @@
+{
+  "received_utc": "2026-10-01T22:40:17.128351+00:00",
+  "question": "Confirm physical presence, normal STOCK display, GRUB/manual power controls, data-loss risk and successful local sudo-v before preflight. No credentials or graphics commands.",
+  "answer": "ready",
+  "classification": "OPERATOR CONFIRMATION; target guards still required",
+  "physically_present": true,
+  "stock_display_normal": true,
+  "grub_controls_available": true,
+  "manual_power_controls_available": true,
+  "data_loss_risk_understood": true,
+  "local_sudo_succeeded": true
+}

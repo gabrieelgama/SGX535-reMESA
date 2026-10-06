@@ -1,0 +1,25 @@
+{
+  "new_cycle_evidence": "docs/hardware-evidence/MINI12-20261001T234842Z-FIRSTLOAD-CYCLE-04",
+  "new_public_result": "docs/phase8/first-load-cycle-04-result.md",
+  "updated_current_notices": [
+    "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "docs/phase8/post-attempt03-checkpoint-audit.md"
+  ],
+  "preparation_files_added": [
+    "docs/phase8/cycle04-preparation.md",
+    "docs/phase8/cycle04-first-load-procedure.json",
+    "tools/psb-dri-re/frozen_first_load_capture_v2.py",
+    "tools/psb-dri-re/frozen_first_load_procedure_v2.py",
+    "tools/psb-dri-re/test_frozen_first_load_capture_v2.py",
+    "tools/psb-dri-re/test_frozen_first_load_procedure_v2.py"
+  ],
+  "production_driver_changes": false,
+  "new_module_or_image_build": false,
+  "historical_artifacts_unchanged": true,
+  "git_diff_check": "PASS",
+  "local_document_links": 106,
+  "index": "EMPTY",
+  "commit": false,
+  "push": false
+}

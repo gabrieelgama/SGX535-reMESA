@@ -1,0 +1,107 @@
+{
+  "scope": "symbolic CPU construction plan; NO candidate or executable stream",
+  "preferred_face_distinction": "per-face constants before interpolation/lighting",
+  "palette": {
+    "magenta": {
+      "ARGB": "0xffff00ff",
+      "USE_words": [
+        "0x001f00ff",
+        "0xfca7f1f1"
+      ],
+      "raw_LE_hex": "ff001f00f1f1a7fc",
+      "alignment": 32,
+      "GPU_output": "ESTABLISHED for magenta only"
+    },
+    "green": {
+      "ARGB": "0xff00ff00",
+      "USE_words": [
+        "0x0000ff00",
+        "0xfca7f181"
+      ],
+      "raw_LE_hex": "00ff000081f1a7fc",
+      "alignment": 32,
+      "GPU_output": "NOT YET OBSERVED"
+    },
+    "yellow": {
+      "ARGB": "0xffffff00",
+      "USE_words": [
+        "0x001fff00",
+        "0xfca7f1f1"
+      ],
+      "raw_LE_hex": "00ff1f00f1f1a7fc",
+      "alignment": 32,
+      "GPU_output": "NOT YET OBSERVED"
+    }
+  },
+  "first_probe_after_square": "TWO_COLOR_TWO_DRAW_QUAD",
+  "geometry_unchanged_from_square": true,
+  "indices_by_draw": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      1,
+      3,
+      2
+    ]
+  ],
+  "constant_programs": "distinct immutable USE objects; clone known primary PDS template with corresponding USE relocations",
+  "state_switch": {
+    "mask": 64,
+    "words": [
+      64,
+      "R(secondary_pds)",
+      196608,
+      "R(primary_pds_green)|0x0c000000"
+    ],
+    "copy_dwords": 4,
+    "state_USE_words": [
+      2684354560,
+      681652225,
+      2686452224,
+      4213653504
+    ],
+    "new_contract": "per-draw fragment primary-PDS selection; not established on hardware"
+  },
+  "target_unchanged": {
+    "width": 32,
+    "height": 32,
+    "stride": 128,
+    "format": "ARGB8888"
+  },
+  "expected_oracle": {
+    "upper_magenta": 120,
+    "lower_green": 136,
+    "zero": 768,
+    "upper_predicate": "8<=x,y<=23 and x+y<=30",
+    "lower_predicate": "8<=x,y<=23 and x+y>=31",
+    "condition": "only after square live fill result matches its oracle"
+  },
+  "unchanged": [
+    "geometry",
+    "vertex PDS/USE",
+    "ISP tests",
+    "PBE",
+    "surface",
+    "UAPI/client",
+    "source/capsule/lifecycle guards"
+  ],
+  "required_before_candidate": [
+    "square evidence preserved",
+    "exact independent object placement/relocations and TA stream built/bounds-checked",
+    "compiled relocation whitelist updated without weakening validation",
+    "finished candidate identities and focused qualification"
+  ],
+  "claims": {
+    "per_draw_binding_ESTABLISHED": false,
+    "interpolation_ESTABLISHED": false,
+    "lighting_ESTABLISHED": false
+  },
+  "provenance": [
+    "tools/psb-dri-re/experimental_fragment_constant.h: historical0x39ac4\u21920x30ffd\u21920x30d15\u21920x30fb7",
+    "tools/psb-dri-re/frozen_triangle_image.py: triangle_state,diff_state,pack_state,state_use,ref",
+    "docs/phase8/FIRE3-TRIANGLE-REPRODUCTION.json: magenta output only confirmed"
+  ]
+}

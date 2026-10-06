@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "/home/gama/sgx535-gfx/tools/sgx535_demo",
+    "-p",
+    "test_cube_reference.py",
+    "-v"
+  ],
+  "returncode": 0,
+  "success_expected": true
+}

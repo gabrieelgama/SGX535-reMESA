@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tools/psb-dri-re",
+    "-p",
+    "test_frozen_kernel_health.py",
+    "-v"
+  ],
+  "red_exit_status": 1,
+  "green_exit_status": 0,
+  "tests": 13,
+  "red_failures": 2,
+  "green_failures": 0,
+  "full_suite_tests": 330,
+  "scope": "existing kernel-health classifier and one regression; no new capture protocol"
+}

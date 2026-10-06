@@ -1,0 +1,11 @@
+test_baseline_diagnostics_are_visible_bounded (test_capture.CaptureTests.test_baseline_diagnostics_are_visible_bounded) ... ok
+test_both_boot_files_exact_reopened_and_synced (test_capture.CaptureTests.test_both_boot_files_exact_reopened_and_synced) ... ok
+test_final_receipt_contains_no_sgx_or_hot_action (test_capture.CaptureTests.test_final_receipt_contains_no_sgx_or_hot_action) ... ok
+test_preflight_all_49_guards_pass (test_capture.CaptureTests.test_preflight_all_49_guards_pass) ... ok
+test_raw_transport_receipts (test_capture.CaptureTests.test_raw_transport_receipts) ... ok
+test_stock_identities_and_boot_preserved (test_capture.CaptureTests.test_stock_identities_and_boot_preserved) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.025s
+
+OK

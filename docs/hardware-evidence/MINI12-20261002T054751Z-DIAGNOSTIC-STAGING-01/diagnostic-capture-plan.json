@@ -1,0 +1,11 @@
+{
+  "mode": "experimental",
+  "root_source_sha256": "ec3e75f0d4d6dd516a0aea9a082157ff079d79f63f10c977d2e5c1da57eccdf3",
+  "wrapper_sha256": "5c58cc04205066d0f80099ea678d8b73c02d549237e2a604a9b77961f0ecd349",
+  "capture_directory": "docs/hardware-evidence/MINI12-20261002T054751Z-DIAGNOSTIC-STAGING-01/diagnostic-experimental",
+  "boot_watch_seconds": 600,
+  "capture_ceiling_seconds": 1200,
+  "connection_seconds": 40,
+  "child_seconds": 35,
+  "action": "read-only passive evidence; no DRM open/ioctl/SGX"
+}

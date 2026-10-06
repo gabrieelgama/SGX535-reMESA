@@ -1,0 +1,7 @@
+{
+  "source": "/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp/fs/proc/uptime.c",
+  "captured_copy": "source-reference-uptime.c",
+  "sha256": "cf0eeb3efd8af08ff8f46dcc5f9f28755d2ecc475d2163f50c231cc5a111addc",
+  "source_archive_sha256": "e5c5d7c6bdcc7a845589e5956cbf50a8d6198232df017f0398a2902371042e1d",
+  "classification": "RETAINED SOURCE; not current target timing observation"
+}

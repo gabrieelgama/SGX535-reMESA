@@ -1,0 +1,155 @@
+{
+  "schema": 1,
+  "date_utc": "2026-10-06",
+  "task": "OFFLINE_XPSB_VISTEST_LIFECYCLE_REVIEW",
+  "finding": "INSUFFICIENT_TO_QUALIFY_UNCHANGED_SCENE_PASSIVE_TRIANGLE_COVERAGE",
+  "finding_is_rendering_defect": false,
+  "existing_fire2": {
+    "accepted_ta_completion": "CONFIRMED",
+    "end_render": "CONFIRMED",
+    "3d_memory_free": "CONFIRMED",
+    "retirement": "CONFIRMED",
+    "response_capsule_color_provenance": "CONFIRMED",
+    "color_bytes": 4096,
+    "color_all_zero": true,
+    "post_ta_triangle_coverage": "UNKNOWN",
+    "triangle": "NOT ESTABLISHED"
+  },
+  "new_confirmed_software_facts": [
+    "Historical DRI installs private query callbacks; generic Mesa defaults do not exhaust driver query behavior.",
+    "Mesa Begin/End dispatch maps to private callbacks through context driver table+0xf0.",
+    "A scene-associated feedback packet provides eight allocated query slots, indices0..7.",
+    "CPU feedback BO initialization zeroes1024 bytes; this does not prove hardware counter reset.",
+    "Enabled/index fields are packed as (enabled&1)<<3|(index&7) in the second ISP state word.",
+    "XHW operation7 reads eight32-bit MMIO words at0x498+4*i into matching feedback slots.",
+    "Kernel accumulates matching feedback words with software32-bit saturation and reports a feedback fence.",
+    "Private query getter selects component slot and sums values into a64-bit result.",
+    "Frozen serialization selects no-query form; no enabled selected-triangle query is established."
+  ],
+  "words": [
+    {
+      "offset": "0x498",
+      "index": 0,
+      "cpu_association": "CONFIRMED",
+      "cpu_meaning": "feedback[0] -> vt[0] -> selected query component slot0",
+      "hardware_identity": "INFERRED indexed visibility/occlusion result",
+      "exact_hardware_name_unit_predicate": "UNKNOWN"
+    },
+    {
+      "offset": "0x49c",
+      "index": 1,
+      "cpu_association": "CONFIRMED",
+      "cpu_meaning": "feedback[1] -> vt[1] -> selected query component slot1",
+      "hardware_identity": "INFERRED indexed visibility/occlusion result",
+      "exact_hardware_name_unit_predicate": "UNKNOWN"
+    },
+    {
+      "offset": "0x4a0",
+      "index": 2,
+      "cpu_association": "CONFIRMED",
+      "cpu_meaning": "feedback[2] -> vt[2] -> selected query component slot2",
+      "hardware_identity": "INFERRED indexed visibility/occlusion result",
+      "exact_hardware_name_unit_predicate": "UNKNOWN"
+    },
+    {
+      "offset": "0x4a4",
+      "index": 3,
+      "cpu_association": "CONFIRMED",
+      "cpu_meaning": "feedback[3] -> vt[3] -> selected query component slot3",
+      "hardware_identity": "INFERRED indexed visibility/occlusion result",
+      "exact_hardware_name_unit_predicate": "UNKNOWN"
+    },
+    {
+      "offset": "0x4a8",
+      "index": 4,
+      "cpu_association": "CONFIRMED",
+      "cpu_meaning": "feedback[4] -> vt[4] -> selected query component slot4",
+      "hardware_identity": "INFERRED indexed visibility/occlusion result",
+      "exact_hardware_name_unit_predicate": "UNKNOWN"
+    },
+    {
+      "offset": "0x4ac",
+      "index": 5,
+      "cpu_association": "CONFIRMED",
+      "cpu_meaning": "feedback[5] -> vt[5] -> selected query component slot5",
+      "hardware_identity": "INFERRED indexed visibility/occlusion result",
+      "exact_hardware_name_unit_predicate": "UNKNOWN"
+    },
+    {
+      "offset": "0x4b0",
+      "index": 6,
+      "cpu_association": "CONFIRMED",
+      "cpu_meaning": "feedback[6] -> vt[6] -> selected query component slot6",
+      "hardware_identity": "INFERRED indexed visibility/occlusion result",
+      "exact_hardware_name_unit_predicate": "UNKNOWN"
+    },
+    {
+      "offset": "0x4b4",
+      "index": 7,
+      "cpu_association": "CONFIRMED",
+      "cpu_meaning": "feedback[7] -> vt[7] -> selected query component slot7",
+      "hardware_identity": "INFERRED indexed visibility/occlusion result",
+      "exact_hardware_name_unit_predicate": "UNKNOWN"
+    }
+  ],
+  "hardware_semantics": {
+    "writing_stage": "INFERRED ISP/raster visibility path; exact point UNKNOWN",
+    "reset": "ISP bracket CONFIRMED; counter-reset effect UNKNOWN",
+    "read_side_effects": "UNKNOWN; CPU loop has no explicit MMIO write",
+    "saturation": "software accumulation CONFIRMED; hardware saturation UNKNOWN",
+    "revision121_applicability": "UNKNOWN; historical Poulsbo use CONFIRMED",
+    "scene_lifetime": "CPU packet/slot/fence association CONFIRMED; complete hardware freshness/isolation UNKNOWN"
+  },
+  "vistest_required_missing_semantics": [
+    "rev121 selected-primitive counting predicate independent of suspect fragment/store behavior",
+    "enabled/index mapping for the selected triangle; frozen CPU no-query selection prevents unchanged-scene qualification",
+    "reset/latch/read-side-effect and freshness contract",
+    "same-operation isolated readout before another render/reset invalidates it"
+  ],
+  "zero_counter_is_negative_coverage_proof": false,
+  "positive_counter_is_already_qualified_triangle_proof": false,
+  "alternative": {
+    "minimum_capability": "bounded rev121 typed selected-triangle TA-output decoder plus pre-raster GPU-to-CPU publication contract",
+    "known_checkpoint": "fixed_service_status_impl after accepted TA observation and before session_begin_raster/ISP bracket",
+    "missing_format": "current-scene roots, primitive/region link encoding and validity, selected-triangle identity and complete traversal",
+    "missing_publication": "relevant accepted-TA output has reached host-readable pinned pages before raster, followed by appropriate CPU coherency",
+    "opaque_dump_rejected": true
+  },
+  "implementation": {
+    "observer_added": false,
+    "shader_geometry_render_state_changed": false,
+    "modules_rebuilt": false,
+    "image_rebuilt": false,
+    "new_candidate": false,
+    "identities": "UNCHANGED"
+  },
+  "qualification": {
+    "cpu_reference_checks_pass": 21,
+    "cpu_reference_checks_total": 21,
+    "reference_checks_are_gpu_qualification": false,
+    "new_native_ubsan_i386_mechanism_tests": "NOT RUN; no mechanism justified",
+    "ddk_distinct_local_ref_tips": 30,
+    "header_instances": 149,
+    "distinct_header_contents": 8,
+    "sgx535_distinct_header_contents": 1,
+    "direct_definitions_for_eight_offsets": 0
+  },
+  "boundary_hygiene": "Incidental excluded-entry matches from a broad glob were discarded. No finding or mechanism derives from them.",
+  "next_step": "Independently permitted rev121 output-format and CPU-publication contract sufficient for a typed selected-triangle post-TA witness; no opaque-dump candidate or FIRE.",
+  "input_inventory": "/home/gama/sgx535-offline/phase8-vistest-lifecycle-20261006T000531Z/input-inventory.json",
+  "audit": "/home/gama/sgx535-offline/phase8-vistest-lifecycle-20261006T000531Z",
+  "sgx_execution_authorized": false,
+  "sgx_invocations_this_task": 0,
+  "hardware_interactions_this_task": 0,
+  "git_at_start": {
+    "modified_tracked": 19,
+    "untracked_entries": 116,
+    "index": "EMPTY"
+  },
+  "fire2_preservation_snapshot": "/home/gama/sgx535-offline/phase8-vistest-lifecycle-20261006T000531Z/fire2-baseline.json",
+  "files_changed": [
+    "docs/phase8/CODEX-HANDOFF-20261005.md",
+    "docs/phase8/fire02-vistest-lifecycle-20261006.md",
+    "docs/phase8/fire02-vistest-lifecycle-20261006.json"
+  ]
+}

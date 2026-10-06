@@ -1,0 +1,1141 @@
+{
+  "schema": "SGX535_TWO_TRIANGLE_EXPERIMENT_V1",
+  "date": "2026-10-06",
+  "state": "NEXT_3D_EXPERIMENT_READY",
+  "scope": "Offline candidate construction qualified; fresh live PRE07 and explicit execution authorization required",
+  "experiment": "TWO_TRIANGLE_FOREGROUND_QUAD",
+  "known_good_baseline": "docs/phase8/FIRE3-TRIANGLE-REPRODUCTION.json",
+  "baseline_candidate": {
+    "driver": {
+      "path": "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/build/module/gma500_gfx.ko",
+      "bytes": 250788,
+      "sha256": "c925caedebcc0699aef53227d29e64b47bf2833efd9d2e611cba276dd3a08ab3",
+      "build_id": "85ec06b428c99fac7f9127919b7a488d204f4a77",
+      "loaded_note_sha256": "4499399a9f06a35b924c770ec5f04b8e5a5170c4f744359c675d13ca89223644",
+      "abi": "ELF32/i386",
+      "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 ",
+      "dependencies": "drm,drm_kms_helper,sgx535_provenance,video,i2c-algo-bit",
+      "versioned_imports": 253,
+      "missing_imports": [],
+      "crc_mismatches": {},
+      "unversioned_undefined": [],
+      "module_layout": "0xb84efb99",
+      "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+      "qualification": "PASS"
+    },
+    "observer": {
+      "path": "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/build/observer/sgx535_provenance.ko",
+      "bytes": 26284,
+      "sha256": "2e35e863d51dbc1d407feef08f08bb2edc6390af621a0f173a9b1a73ec76158a",
+      "build_id": "f11d3abb072caa4e1d32836ef92ce201e9c9d126",
+      "loaded_note_sha256": "6afbac1cf48a211135e2a4b4ffc30f96ace64f6d397071595bbc328966bb8af0",
+      "abi": "ELF32/i386",
+      "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 ",
+      "dependencies": "",
+      "versioned_imports": 38,
+      "missing_imports": [],
+      "crc_mismatches": {},
+      "unversioned_undefined": [],
+      "module_layout": "0xb84efb99",
+      "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+      "qualification": "PASS"
+    },
+    "image": {
+      "path": "/boot/initrd.img-5.10.240-antix.1-486-smp-sgx535-firstload-85ec06b428c99fac7f9127919b7a488d204f4a77-3d9eb6ba",
+      "bytes": 50816631,
+      "sha256": "3d9eb6baa3d821b4ff98e60ea83f1a94022b5fb2881038d2ad91b95cdfb7448e"
+    },
+    "client": {
+      "protected_path": "/root/sgx535-frozen-seq1-85ec06b428c99fac7f9127919b7a488d204f4a77-3d9eb6ba/frozen-triangle-one-shot-response-i386",
+      "size": 775264,
+      "sha256": "2f84917f96db2859678797a327d40d9638325e5c5efb6e0dfccef44d756b4835",
+      "source_sha256": "919c2611e048e4a660ecae3542264adf5a5367d9b0fbe7fbceff2f45f90adedf",
+      "inode_receipt": {
+        "dev": 2049,
+        "ino": 524751,
+        "size": 775264,
+        "sha256": "2f84917f96db2859678797a327d40d9638325e5c5efb6e0dfccef44d756b4835",
+        "uid": 0,
+        "gid": 0,
+        "mode": 320,
+        "nlink": 1,
+        "regular": true
+      },
+      "executed": false
+    },
+    "uapi": {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_uapi.h",
+      "size": 760,
+      "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420"
+    }
+  },
+  "driver": {
+    "path": "/home/gama/sgx535-offline/phase8-first-3d-offline-20261006T072942Z/build/module/gma500_gfx.ko",
+    "bytes": 250864,
+    "sha256": "c21c26c567fc7676e28f4f732cb8cd3c7af1a7360560b58a310789523dc9454d",
+    "build_id": "8be2777b2a79eaa6651b89d19faf4d68cdcdc460",
+    "loaded_note_sha256": "35ec9f4e576a83a3990ebda4f8aee5869c0e4ea32e1e35969fa48abffa7dc832",
+    "abi": "ELF32/i386",
+    "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 ",
+    "dependencies": "drm,drm_kms_helper,sgx535_provenance,video,i2c-algo-bit",
+    "versioned_imports": 253,
+    "missing_imports": [],
+    "crc_mismatches": {},
+    "unversioned_undefined": [],
+    "module_layout": "0xb84efb99",
+    "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+    "qualification": "PASS"
+  },
+  "observer": {
+    "path": "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/build/observer/sgx535_provenance.ko",
+    "bytes": 26284,
+    "sha256": "2e35e863d51dbc1d407feef08f08bb2edc6390af621a0f173a9b1a73ec76158a",
+    "build_id": "f11d3abb072caa4e1d32836ef92ce201e9c9d126",
+    "loaded_note_sha256": "6afbac1cf48a211135e2a4b4ffc30f96ace64f6d397071595bbc328966bb8af0",
+    "abi": "ELF32/i386",
+    "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 ",
+    "dependencies": "",
+    "versioned_imports": 38,
+    "missing_imports": [],
+    "crc_mismatches": {},
+    "unversioned_undefined": [],
+    "module_layout": "0xb84efb99",
+    "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+    "qualification": "PASS"
+  },
+  "image": {
+    "path": "docs/phase8/artifacts/two-triangle-experiment-20261006/candidate.initrd",
+    "bytes": 50816648,
+    "sha256": "0e45ad4c9ec3eaa891253ea319348286c869644a3ba6c9dba54de39d92bd1e7d"
+  },
+  "client": {
+    "path": "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/known-good-artifacts/frozen-triangle-one-shot-response-i386",
+    "sha256": "2f84917f96db2859678797a327d40d9638325e5c5efb6e0dfccef44d756b4835",
+    "bytes": 775264
+  },
+  "uapi": {
+    "path": "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/known-good-artifacts/gma500_fixed_uapi.h",
+    "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420",
+    "bytes": 760
+  },
+  "delta": {
+    "experiment": "TWO_TRIANGLE_FOREGROUND_QUAD",
+    "GPU_result": "NOT YET OBSERVED",
+    "sgx_execution_authorized": false,
+    "maximum_future_invocations": 1,
+    "geometry": {
+      "before_vertices": 3,
+      "after_vertices": 4,
+      "positions": [
+        [
+          8.0,
+          8.0,
+          0.5,
+          1.0
+        ],
+        [
+          24.0,
+          8.0,
+          0.5,
+          1.0
+        ],
+        [
+          8.0,
+          24.0,
+          0.5,
+          1.0
+        ],
+        [
+          24.0,
+          24.0,
+          0.5,
+          1.0
+        ]
+      ],
+      "indices_before": [
+        0,
+        1,
+        2
+      ],
+      "indices_after": [
+        0,
+        1,
+        2,
+        1,
+        3,
+        2
+      ]
+    },
+    "packet_count": {
+      "before": "0x81400003",
+      "after": "0x81400006"
+    },
+    "layout": {
+      "TA_stream_before": 96,
+      "TA_stream_after": 128,
+      "TA_bytes": 68,
+      "vertex_stride": 32,
+      "indices_offset": 512,
+      "indices_capacity": 16384
+    },
+    "relocation_changes": [
+      {
+        "index": 41,
+        "before": {
+          "site": "ta_stream+00",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 24,
+          "buffer": 0,
+          "pre_add": 17280,
+          "dst_buffer": 2,
+          "target_alignment": 16,
+          "op": 0,
+          "mask": 268435455,
+          "shift": 262144,
+          "background": 1073741824,
+          "arg0": 0,
+          "arg1": 0
+        },
+        "after": {
+          "site": "ta_stream+00",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 32,
+          "buffer": 0,
+          "pre_add": 17280,
+          "dst_buffer": 2,
+          "target_alignment": 16,
+          "op": 0,
+          "mask": 268435455,
+          "shift": 262144,
+          "background": 1073741824,
+          "arg0": 0,
+          "arg1": 0
+        }
+      },
+      {
+        "index": 42,
+        "before": {
+          "site": "ta_stream+0c",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 27,
+          "buffer": 0,
+          "pre_add": 17220,
+          "dst_buffer": 2,
+          "target_alignment": 4,
+          "op": 0,
+          "mask": 4294967295,
+          "shift": 0,
+          "background": 0,
+          "arg0": 0,
+          "arg1": 0
+        },
+        "after": {
+          "site": "ta_stream+0c",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 35,
+          "buffer": 0,
+          "pre_add": 17220,
+          "dst_buffer": 2,
+          "target_alignment": 4,
+          "op": 0,
+          "mask": 4294967295,
+          "shift": 0,
+          "background": 0,
+          "arg0": 0,
+          "arg1": 0
+        }
+      },
+      {
+        "index": 43,
+        "before": {
+          "site": "ta_stream+14",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 29,
+          "buffer": 0,
+          "pre_add": 17024,
+          "dst_buffer": 2,
+          "target_alignment": 16,
+          "op": 0,
+          "mask": 268435455,
+          "shift": 262144,
+          "background": 0,
+          "arg0": 0,
+          "arg1": 0
+        },
+        "after": {
+          "site": "ta_stream+14",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 37,
+          "buffer": 0,
+          "pre_add": 17024,
+          "dst_buffer": 2,
+          "target_alignment": 16,
+          "op": 0,
+          "mask": 268435455,
+          "shift": 262144,
+          "background": 0,
+          "arg0": 0,
+          "arg1": 0
+        }
+      },
+      {
+        "index": 44,
+        "before": {
+          "site": "ta_stream+1c",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 31,
+          "buffer": 0,
+          "pre_add": 17408,
+          "dst_buffer": 2,
+          "target_alignment": 16,
+          "op": 0,
+          "mask": 268435455,
+          "shift": 262144,
+          "background": 1073741824,
+          "arg0": 0,
+          "arg1": 0
+        },
+        "after": {
+          "site": "ta_stream+1c",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 39,
+          "buffer": 0,
+          "pre_add": 17408,
+          "dst_buffer": 2,
+          "target_alignment": 16,
+          "op": 0,
+          "mask": 268435455,
+          "shift": 262144,
+          "background": 1073741824,
+          "arg0": 0,
+          "arg1": 0
+        }
+      },
+      {
+        "index": 45,
+        "before": {
+          "site": "ta_stream+28",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 34,
+          "buffer": 0,
+          "pre_add": 512,
+          "dst_buffer": 2,
+          "target_alignment": 4,
+          "op": 0,
+          "mask": 4294967295,
+          "shift": 0,
+          "background": 0,
+          "arg0": 0,
+          "arg1": 0
+        },
+        "after": {
+          "site": "ta_stream+28",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 42,
+          "buffer": 0,
+          "pre_add": 512,
+          "dst_buffer": 2,
+          "target_alignment": 4,
+          "op": 0,
+          "mask": 4294967295,
+          "shift": 0,
+          "background": 0,
+          "arg0": 0,
+          "arg1": 0
+        }
+      },
+      {
+        "index": 46,
+        "before": {
+          "site": "ta_stream+30",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 36,
+          "buffer": 0,
+          "pre_add": 16928,
+          "dst_buffer": 2,
+          "target_alignment": 16,
+          "op": 0,
+          "mask": 268435455,
+          "shift": 262144,
+          "background": 0,
+          "arg0": 0,
+          "arg1": 0
+        },
+        "after": {
+          "site": "ta_stream+30",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 44,
+          "buffer": 0,
+          "pre_add": 16928,
+          "dst_buffer": 2,
+          "target_alignment": 16,
+          "op": 0,
+          "mask": 268435455,
+          "shift": 262144,
+          "background": 0,
+          "arg0": 0,
+          "arg1": 0
+        }
+      },
+      {
+        "index": 47,
+        "before": {
+          "site": "ta_stream+38",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 38,
+          "buffer": 0,
+          "pre_add": 17504,
+          "dst_buffer": 2,
+          "target_alignment": 16,
+          "op": 0,
+          "mask": 268435455,
+          "shift": 262144,
+          "background": 1610612736,
+          "arg0": 0,
+          "arg1": 0
+        },
+        "after": {
+          "site": "ta_stream+38",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 46,
+          "buffer": 0,
+          "pre_add": 17504,
+          "dst_buffer": 2,
+          "target_alignment": 16,
+          "op": 0,
+          "mask": 268435455,
+          "shift": 262144,
+          "background": 1610612736,
+          "arg0": 0,
+          "arg1": 0
+        }
+      },
+      {
+        "index": 48,
+        "before": {
+          "site": "ta_registers+34",
+          "owner_bo": "control",
+          "target_bo": "vertex_ta",
+          "where": 65,
+          "buffer": 2,
+          "pre_add": 96,
+          "dst_buffer": 4,
+          "target_alignment": 4,
+          "op": 0,
+          "mask": 4294967295,
+          "shift": 0,
+          "background": 0,
+          "arg0": 0,
+          "arg1": 0
+        },
+        "after": {
+          "site": "ta_registers+34",
+          "owner_bo": "control",
+          "target_bo": "vertex_ta",
+          "where": 65,
+          "buffer": 2,
+          "pre_add": 128,
+          "dst_buffer": 4,
+          "target_alignment": 4,
+          "op": 0,
+          "mask": 4294967295,
+          "shift": 0,
+          "background": 0,
+          "arg0": 0,
+          "arg1": 0
+        }
+      }
+    ],
+    "shader_words_unchanged": [
+      "001f00ff",
+      "fca7f1f1"
+    ],
+    "source_overlay_files": [
+      "frozen_kernel_initial.inc",
+      "frozen_kernel_relocations.inc"
+    ],
+    "unchanged": [
+      "fragment/PDS/USE programs",
+      "triangle ISP state",
+      "TA/raster register values except stream address",
+      "PBE/surface/target",
+      "BO sizes/domains",
+      "UAPI/client",
+      "observer",
+      "lifecycle/source/capsule guards"
+    ],
+    "expected_pixels": {
+      "magenta": 256,
+      "zero": 768,
+      "bbox_inclusive": [
+        8,
+        8,
+        23,
+        23
+      ],
+      "scope": "predeclared CPU oracle, not an observed SGX fill contract"
+    },
+    "files": {
+      "frozen_kernel_initial.inc": {
+        "bytes": 7314,
+        "sha256": "f6096e7fded3bc7a20117672c71a45180d0e70373f8c1bd2e014b167567e1087"
+      },
+      "frozen_kernel_relocations.inc": {
+        "bytes": 3907,
+        "sha256": "0951c181b473527953336e65d63d11522e2a027d15c233ba3ce57c9799fc6e58"
+      },
+      "pds.expected.bin": {
+        "bytes": 131072,
+        "sha256": "3ac17a72dd212361691fccffea40843ad746db4710db76d1ea636e92cc43fe72"
+      },
+      "use.expected.bin": {
+        "bytes": 32768,
+        "sha256": "ca53ab9efb4465bc2722322769f74d46953560a2285e29637550f92fc5f4a3dc"
+      },
+      "vertex_ta.expected.bin": {
+        "bytes": 4096,
+        "sha256": "d3aaa4dfee233d70e8647ba42a140ffd7a3b89214c024a52155f9b9ede122875"
+      },
+      "background.expected.bin": {
+        "bytes": 4096,
+        "sha256": "b365c45568ab5e9c314640cb4604bed6bd3ec93af4b70cb3eca78298be3d1421"
+      },
+      "control.expected.bin": {
+        "bytes": 4096,
+        "sha256": "0a82b3c5bd9ce37da72837a8afb46fa9e6459f7444f57d6967999ac7b9fc0328"
+      },
+      "color.expected.bin": {
+        "bytes": 4096,
+        "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+      },
+      "expected-color.bin": {
+        "bytes": 4096,
+        "sha256": "6e9af8e8b6576b979aa78816d44bd3b0ffd31b70e169a982e83736d63ab91729"
+      },
+      "scene.json": {
+        "bytes": 167241,
+        "sha256": "cc68a14b9581e309bd16b7edf579139de6cdf04d4698cf542bcc7d48e132f2ad"
+      },
+      "address-plan.json": {
+        "bytes": 32529,
+        "sha256": "6b70fbe9dc3418a41e892274c9087f7040de343dca6d5f5f44fb112ee898c593"
+      }
+    }
+  },
+  "semantic_delta_proof": {
+    "source_files_compared": 94,
+    "changed": [
+      "frozen_kernel_initial.inc",
+      "frozen_kernel_relocations.inc"
+    ],
+    "opaque_input_sha256": "ca07d61986983414067536575fb2950ddf64adbb63129f66b560d7b741be18b5",
+    "opaque_bytes_unchanged": true,
+    "opaque_contents_not_inspected": true
+  },
+  "qualification": {
+    "classification": "PASS",
+    "scope": "CPU construction/policy only; no GPU proof",
+    "cases": {
+      "python_regressions": 32,
+      "native_initial": {
+        "bytes": 180224,
+        "sha256": "f2fea04e9a3b56d8e18958745d7da27e15d5be0789ed5eef404c7b80976c926a",
+        "PASS": true
+      },
+      "native_relocated": {
+        "bytes": 180224,
+        "sha256": "d7db9fa2f6cd7c07f7f5d8370f2afe6499fc36ac9f8cc5944936beb9303460f7",
+        "PASS": true
+      },
+      "fragment_native": {
+        "immediate_roundtrips": 1032,
+        "PASS": true
+      },
+      "ubsan_initial": {
+        "bytes": 180224,
+        "sha256": "f2fea04e9a3b56d8e18958745d7da27e15d5be0789ed5eef404c7b80976c926a",
+        "PASS": true
+      },
+      "ubsan_relocated": {
+        "bytes": 180224,
+        "sha256": "d7db9fa2f6cd7c07f7f5d8370f2afe6499fc36ac9f8cc5944936beb9303460f7",
+        "PASS": true
+      },
+      "fragment_ubsan": {
+        "immediate_roundtrips": 1032,
+        "PASS": true
+      },
+      "i386_initial": {
+        "bytes": 180224,
+        "sha256": "f2fea04e9a3b56d8e18958745d7da27e15d5be0789ed5eef404c7b80976c926a",
+        "PASS": true
+      },
+      "i386_relocated": {
+        "bytes": 180224,
+        "sha256": "d7db9fa2f6cd7c07f7f5d8370f2afe6499fc36ac9f8cc5944936beb9303460f7",
+        "PASS": true
+      },
+      "fragment_i386": {
+        "immediate_roundtrips": 1032,
+        "PASS": true
+      }
+    },
+    "SGX_invocations": 0,
+    "hardware_interactions": 0
+  },
+  "module_qualification": {
+    "ABI": {
+      "classification": "PASS",
+      "reference_sha256": "c925caedebcc0699aef53227d29e64b47bf2833efd9d2e611cba276dd3a08ab3",
+      "candidate_sha256": "c21c26c567fc7676e28f4f732cb8cd3c7af1a7360560b58a310789523dc9454d",
+      "reference_import_count": 253,
+      "candidate_import_count": 253,
+      "shared_count": 253,
+      "mismatched_count": 0,
+      "mismatches": {},
+      "unverified_candidate_imports": [],
+      "module_layout": {
+        "reference": "0xb84efb99",
+        "candidate": "0xb84efb99"
+      }
+    },
+    "undefined_symbols_versioned": true,
+    "modinfo_byte_identical": true,
+    "driver_repeat_byte_identical": true,
+    "driver": {
+      "path": "/home/gama/sgx535-offline/phase8-first-3d-offline-20261006T072942Z/build/module/gma500_gfx.ko",
+      "bytes": 250864,
+      "sha256": "c21c26c567fc7676e28f4f732cb8cd3c7af1a7360560b58a310789523dc9454d",
+      "build_id": "8be2777b2a79eaa6651b89d19faf4d68cdcdc460",
+      "loaded_note_sha256": "35ec9f4e576a83a3990ebda4f8aee5869c0e4ea32e1e35969fa48abffa7dc832",
+      "abi": "ELF32/i386",
+      "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 ",
+      "dependencies": "drm,drm_kms_helper,sgx535_provenance,video,i2c-algo-bit",
+      "versioned_imports": 253,
+      "missing_imports": [],
+      "crc_mismatches": {},
+      "unversioned_undefined": [],
+      "module_layout": "0xb84efb99",
+      "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+      "qualification": "PASS"
+    },
+    "observer": {
+      "path": "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/build/observer/sgx535_provenance.ko",
+      "bytes": 26284,
+      "sha256": "2e35e863d51dbc1d407feef08f08bb2edc6390af621a0f173a9b1a73ec76158a",
+      "build_id": "f11d3abb072caa4e1d32836ef92ce201e9c9d126",
+      "loaded_note_sha256": "6afbac1cf48a211135e2a4b4ffc30f96ace64f6d397071595bbc328966bb8af0",
+      "abi": "ELF32/i386",
+      "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 ",
+      "dependencies": "",
+      "versioned_imports": 38,
+      "missing_imports": [],
+      "crc_mismatches": {},
+      "unversioned_undefined": [],
+      "module_layout": "0xb84efb99",
+      "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+      "qualification": "PASS"
+    }
+  },
+  "image_qualification": {
+    "finished_image_init_hook_binding": "PASS FROM FINISHED IMAGE",
+    "all_other_base_members_unchanged": true,
+    "driver_after_observer": true,
+    "reproducible": true
+  },
+  "archived_files": {
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/cpu-qualification.json": {
+      "bytes": 1389,
+      "sha256": "f003aa9491e484370391dbabbfbac5a9b7cb52148800c7fb394171d083f67501"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/module-qualification.json": {
+      "bytes": 2263,
+      "sha256": "938d561df52caefebc0e5f09c1f3c1333c2e839f63cdb7e38a338e5bf98aa00c"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/image-reproducibility.json": {
+      "bytes": 208,
+      "sha256": "d63506b03e566d674d3bb956c7b1135fcce03d80e10680c3208383d9f6ad3553"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/build-command.json": {
+      "bytes": 1706,
+      "sha256": "ac7369b5c26d23ebcfa8b97f10085a380d6c43a58246717213dd50355439ff34"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/module-build.log": {
+      "bytes": 310608,
+      "sha256": "822e007d844ae1fa329bdd3b1cade05ea8ef69e167475209636c982e5059deb0"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/module-repeat.log": {
+      "bytes": 17717,
+      "sha256": "552dde0c1e48f81ccbb105a943d2edf4b8d3487e4f3a6bf04f0d51ed77d21a0f"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/frozen_kernel_initial.inc": {
+      "bytes": 7314,
+      "sha256": "f6096e7fded3bc7a20117672c71a45180d0e70373f8c1bd2e014b167567e1087"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/frozen_kernel_relocations.inc": {
+      "bytes": 3907,
+      "sha256": "0951c181b473527953336e65d63d11522e2a027d15c233ba3ce57c9799fc6e58"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/pds.expected.bin": {
+      "bytes": 131072,
+      "sha256": "3ac17a72dd212361691fccffea40843ad746db4710db76d1ea636e92cc43fe72"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/use.expected.bin": {
+      "bytes": 32768,
+      "sha256": "ca53ab9efb4465bc2722322769f74d46953560a2285e29637550f92fc5f4a3dc"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/vertex_ta.expected.bin": {
+      "bytes": 4096,
+      "sha256": "d3aaa4dfee233d70e8647ba42a140ffd7a3b89214c024a52155f9b9ede122875"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/background.expected.bin": {
+      "bytes": 4096,
+      "sha256": "b365c45568ab5e9c314640cb4604bed6bd3ec93af4b70cb3eca78298be3d1421"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/control.expected.bin": {
+      "bytes": 4096,
+      "sha256": "0a82b3c5bd9ce37da72837a8afb46fa9e6459f7444f57d6967999ac7b9fc0328"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/color.expected.bin": {
+      "bytes": 4096,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/expected-color.bin": {
+      "bytes": 4096,
+      "sha256": "6e9af8e8b6576b979aa78816d44bd3b0ffd31b70e169a982e83736d63ab91729"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/scene.json": {
+      "bytes": 167241,
+      "sha256": "cc68a14b9581e309bd16b7edf579139de6cdf04d4698cf542bcc7d48e132f2ad"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/address-plan.json": {
+      "bytes": 32529,
+      "sha256": "6b70fbe9dc3418a41e892274c9087f7040de343dca6d5f5f44fb112ee898c593"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/delta.json": {
+      "bytes": 9443,
+      "sha256": "be61b0fd37b465decac5e42f7cae99cc00e7f898b965513b8e965153df6d603c"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/source-two_triangle.py": {
+      "bytes": 7891,
+      "sha256": "93f8f324ecdf7b9badda82cc8fd2455504cf5e2e70e3bfa8f88832e2ed124d22"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/source-test_two_triangle.py": {
+      "bytes": 5105,
+      "sha256": "a01bf0c266390fb0c48dd1975dfc2792ab7990b43fa4aa2638028055678f9761"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/source-contract_oracle.c": {
+      "bytes": 1915,
+      "sha256": "fbe87175eceb5035226b260027891099ae54a722bba625633f3395d20516ccce"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/source-qualify_two_triangle.py": {
+      "bytes": 3847,
+      "sha256": "011c8a03a2fd304a5f50bc277a7a629021e04778ce86a1c243af0a42b93a1c7f"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/source-frame_policy.py": {
+      "bytes": 2223,
+      "sha256": "ecd6a56f0530c5fbce63c7b7617241dc54f15ef661a15a4f10b2ab26cc3c658c"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/source-test_frame_policy.py": {
+      "bytes": 3415,
+      "sha256": "12b06bea3e2d971d7ead499e594011edb16e69aa50409ca23f977c3dc16dd162"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-python-regressions.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-python-regressions.stderr": {
+      "bytes": 2239,
+      "sha256": "1bfe4fff0746aa0bb8fe9764119aee77c1a5c0dcb4dc42e5d9d1c2fe9a27cb40"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-compile-native.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-compile-native.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-native-initial.stdout": {
+      "bytes": 180224,
+      "sha256": "f2fea04e9a3b56d8e18958745d7da27e15d5be0789ed5eef404c7b80976c926a"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-native-initial.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-native-relocated.stdout": {
+      "bytes": 180224,
+      "sha256": "d7db9fa2f6cd7c07f7f5d8370f2afe6499fc36ac9f8cc5944936beb9303460f7"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-native-relocated.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-compile-fragment-native.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-compile-fragment-native.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-fragment-native.stdout": {
+      "bytes": 117,
+      "sha256": "006cd813b93191da4a5dfe20ac1f20ae2bca032f053faeb30b3b30f93fac85a2"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-fragment-native.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-compile-ubsan.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-compile-ubsan.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-ubsan-initial.stdout": {
+      "bytes": 180224,
+      "sha256": "f2fea04e9a3b56d8e18958745d7da27e15d5be0789ed5eef404c7b80976c926a"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-ubsan-initial.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-ubsan-relocated.stdout": {
+      "bytes": 180224,
+      "sha256": "d7db9fa2f6cd7c07f7f5d8370f2afe6499fc36ac9f8cc5944936beb9303460f7"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-ubsan-relocated.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-compile-fragment-ubsan.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-compile-fragment-ubsan.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-fragment-ubsan.stdout": {
+      "bytes": 117,
+      "sha256": "006cd813b93191da4a5dfe20ac1f20ae2bca032f053faeb30b3b30f93fac85a2"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-fragment-ubsan.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-compile-i386.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-compile-i386.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-i386-initial.stdout": {
+      "bytes": 180224,
+      "sha256": "f2fea04e9a3b56d8e18958745d7da27e15d5be0789ed5eef404c7b80976c926a"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-i386-initial.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-i386-relocated.stdout": {
+      "bytes": 180224,
+      "sha256": "d7db9fa2f6cd7c07f7f5d8370f2afe6499fc36ac9f8cc5944936beb9303460f7"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-i386-relocated.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-compile-fragment-i386.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-compile-fragment-i386.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-fragment-i386.stdout": {
+      "bytes": 117,
+      "sha256": "006cd813b93191da4a5dfe20ac1f20ae2bca032f053faeb30b3b30f93fac85a2"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-fragment-i386.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-source-guard-native.stdout": {
+      "bytes": 52,
+      "sha256": "3fa19f20befe5accbca897882e226beed5f754bd012f3fa8a921643a0d9de4a2"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-source-guard-native.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-capsule-service-native.stdout": {
+      "bytes": 63,
+      "sha256": "f024f36f9e81442aa276a08279bc65dec99799b11e93f3834b5eea66823759ec"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-capsule-service-native.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-source-guard-ubsan.stdout": {
+      "bytes": 52,
+      "sha256": "3fa19f20befe5accbca897882e226beed5f754bd012f3fa8a921643a0d9de4a2"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-source-guard-ubsan.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-capsule-service-ubsan.stdout": {
+      "bytes": 63,
+      "sha256": "f024f36f9e81442aa276a08279bc65dec99799b11e93f3834b5eea66823759ec"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-capsule-service-ubsan.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/gma500_gfx.ko": {
+      "bytes": 250864,
+      "sha256": "c21c26c567fc7676e28f4f732cb8cd3c7af1a7360560b58a310789523dc9454d"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/candidate.initrd": {
+      "bytes": 50816648,
+      "sha256": "0e45ad4c9ec3eaa891253ea319348286c869644a3ba6c9dba54de39d92bd1e7d"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/image-identity.json": {
+      "bytes": 2751,
+      "sha256": "593e9b312b2d8631639247316be416eee7d6153db074b43584d5a836a150088c"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/semantic-delta-proof.json": {
+      "bytes": 291,
+      "sha256": "710d3bf5bfe7927c0b487625811e7f41c9496917ebb806c89307bcc8d6e948d6"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/guard-regressions.json": {
+      "bytes": 349,
+      "sha256": "7be94ebccf14e678e9fd365ea2538b5b91aa929a35759aaecc9f15132272144d"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/contract-regressions.json": {
+      "bytes": 48,
+      "sha256": "847a92cb5e53bd60879662813fc73bf1608e013bb7af6058946ff15c9973d357"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/image-delta-proof.json": {
+      "bytes": 304,
+      "sha256": "bcb93b3141621d8320b83678db62a7299892b2f9ea718ed758bc945b3592b7ca"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/preservation-check.json": {
+      "bytes": 249,
+      "sha256": "3bbc4f2f8b8283954fea055dc816090d546b4b60e856b16f31219a5267d118f1"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-python-regressions.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-python-regressions.stderr": {
+      "bytes": 2895,
+      "sha256": "2f517bae7230bed0c837c267e54bbc82e427d8d4d3ac37c33aae5bd90f590e24"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-compile-native.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-compile-native.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-native-initial.stdout": {
+      "bytes": 180224,
+      "sha256": "f2fea04e9a3b56d8e18958745d7da27e15d5be0789ed5eef404c7b80976c926a"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-native-initial.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-native-relocated.stdout": {
+      "bytes": 180224,
+      "sha256": "d7db9fa2f6cd7c07f7f5d8370f2afe6499fc36ac9f8cc5944936beb9303460f7"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-native-relocated.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-compile-fragment-native.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-compile-fragment-native.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-fragment-native.stdout": {
+      "bytes": 117,
+      "sha256": "006cd813b93191da4a5dfe20ac1f20ae2bca032f053faeb30b3b30f93fac85a2"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-fragment-native.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-compile-ubsan.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-compile-ubsan.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-ubsan-initial.stdout": {
+      "bytes": 180224,
+      "sha256": "f2fea04e9a3b56d8e18958745d7da27e15d5be0789ed5eef404c7b80976c926a"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-ubsan-initial.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-ubsan-relocated.stdout": {
+      "bytes": 180224,
+      "sha256": "d7db9fa2f6cd7c07f7f5d8370f2afe6499fc36ac9f8cc5944936beb9303460f7"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-ubsan-relocated.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-compile-fragment-ubsan.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-compile-fragment-ubsan.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-fragment-ubsan.stdout": {
+      "bytes": 117,
+      "sha256": "006cd813b93191da4a5dfe20ac1f20ae2bca032f053faeb30b3b30f93fac85a2"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-fragment-ubsan.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-compile-i386.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-compile-i386.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-i386-initial.stdout": {
+      "bytes": 180224,
+      "sha256": "f2fea04e9a3b56d8e18958745d7da27e15d5be0789ed5eef404c7b80976c926a"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-i386-initial.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-i386-relocated.stdout": {
+      "bytes": 180224,
+      "sha256": "d7db9fa2f6cd7c07f7f5d8370f2afe6499fc36ac9f8cc5944936beb9303460f7"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-i386-relocated.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-compile-fragment-i386.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-compile-fragment-i386.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-fragment-i386.stdout": {
+      "bytes": 117,
+      "sha256": "006cd813b93191da4a5dfe20ac1f20ae2bca032f053faeb30b3b30f93fac85a2"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-fragment-i386.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-extra-tests-native.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-extra-tests-native.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-extra-tests-ubsan.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-extra-tests-ubsan.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-extra-tests-i386.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/source-verify_candidate.py": {
+      "bytes": 2876,
+      "sha256": "11a66afe9b259eab26b0dd36c0ce7730a8f0de05dd9d96b10be7c4ef77463f9c"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-extra-tests-i386.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-python-final.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-python-final.stderr": {
+      "bytes": 3001,
+      "sha256": "f6ac4a1385291b40c5ba3f44f31057115b16e1c85371d839b2d03f61c0cafd64"
+    }
+  },
+  "maximum_future_invocations": 1,
+  "sgx_execution_authorized": false,
+  "live_PRE07": "PENDING",
+  "task_SGX_invocations": 0,
+  "task_hardware_interactions": 0,
+  "guard_regressions": {
+    "source-guard-native": "183 source-guard checks; 0 failures; SYNTHETIC ONLY",
+    "capsule-service-native": "7 service/observer differential cases PASS; synthetic CPU only",
+    "source-guard-ubsan": "183 source-guard checks; 0 failures; SYNTHETIC ONLY",
+    "capsule-service-ubsan": "7 service/observer differential cases PASS; synthetic CPU only"
+  },
+  "contract_regressions": {
+    "native": "PASS",
+    "UBSan": "PASS",
+    "i386_QEMU": "PASS"
+  },
+  "image_delta_proof": {
+    "compared_to": "known-good FIRE3 archived image",
+    "only_changed_members": [
+      "init",
+      "usr/lib/sgx535-first-load/gma500_gfx.ko",
+      "scripts/sgx535-first-load"
+    ],
+    "all_other_members_byte_identical": true,
+    "early_prefix_byte_identical": true,
+    "finished_hook_integrity_gate": "PASS"
+  }
+}

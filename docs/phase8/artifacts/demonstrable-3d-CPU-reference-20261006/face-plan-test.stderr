@@ -1,0 +1,12 @@
+test_invalid_inputs (test_face_constant_plan.FacePlan.test_invalid_inputs) ... ok
+test_magenta_baseline (test_face_constant_plan.FacePlan.test_magenta_baseline) ... ok
+test_no_overclaim (test_face_constant_plan.FacePlan.test_no_overclaim) ... ok
+test_only_launch_group_changes (test_face_constant_plan.FacePlan.test_only_launch_group_changes) ... ok
+test_palette_roundtrips (test_face_constant_plan.FacePlan.test_palette_roundtrips) ... ok
+test_same_program_no_spurious_upload (test_face_constant_plan.FacePlan.test_same_program_no_spurious_upload) ... ok
+test_supported_copy_constructor (test_face_constant_plan.FacePlan.test_supported_copy_constructor) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.004s
+
+OK

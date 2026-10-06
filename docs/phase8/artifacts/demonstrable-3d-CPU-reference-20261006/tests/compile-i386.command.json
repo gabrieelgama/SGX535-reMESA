@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+    "--sysroot=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root",
+    "-O2",
+    "-static",
+    "-march=i486",
+    "-std=c11",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-ffp-contract=off",
+    "/home/gama/sgx535-gfx/tools/sgx535_demo/cube_projection_oracle.c",
+    "-o",
+    "/home/gama/sgx535-offline/phase8-demonstrable-3d-plan-20261006T080902Z/CPU-tests/projection-i386",
+    "-lm"
+  ],
+  "returncode": 0,
+  "success_expected": true
+}

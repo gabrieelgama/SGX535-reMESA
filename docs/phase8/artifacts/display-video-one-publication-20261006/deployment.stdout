@@ -1,0 +1,31 @@
+{
+  "deployment": "/home/gama/sgx535-display-FIRE3-video-20261006T071903Z-tools",
+  "verified_files": {
+    "triangle_pixels.py": {
+      "bytes": 5002,
+      "sha256": "e39aac27e8eb3568685e79c3a6d770e3a0e54b52a7650e6934a23d44710a98c5"
+    },
+    "triangle_display.py": {
+      "bytes": 18777,
+      "sha256": "2a9ee1a1f406acdbfda692251ee7d163448c3d2a185ba077627524ee7a22189f"
+    },
+    "triangle_display_centered.py": {
+      "bytes": 7252,
+      "sha256": "362b6337f9b0110ce1e10579ba64207cb22809f09ff17591769f41fd75dad18c"
+    },
+    "card.json": {
+      "bytes": 11812,
+      "sha256": "4219b42b3b0eed7d002a2da74b365bf5dc38c6fc5b0a17ba3d950a3f126d523f"
+    },
+    "authorization.json": {
+      "bytes": 304,
+      "sha256": "a7c62bcbe1bd4643e569c61992e410ef96164724b6a6f98ce63f1064ac4fc110"
+    },
+    "source.bin": {
+      "bytes": 4096,
+      "sha256": "52b2aeb7316820f955d1b9a46cb55a888efb8f74de916acd7ec7ddff6d99ebb5"
+    }
+  },
+  "display_mutations": 0,
+  "sgx_invocations": 0
+}

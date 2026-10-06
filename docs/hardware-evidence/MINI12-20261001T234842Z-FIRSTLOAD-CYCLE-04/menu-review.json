@@ -1,0 +1,12 @@
+{
+  "classification": "PASS",
+  "utc": "2026-10-01T23:57:19.419030+00:00",
+  "photo_supplied": true,
+  "photo_sha256": "f36b603b3f5cdc6622a4ef24d3207dadde29eef009c237b82af5dfe9ab0a58ea",
+  "both_titles_visible": true,
+  "stock_still_default": true,
+  "default_evidence": "fresh root saved_entry/grub bytes plus operator initial STOCK selection; current sysvinit highlight was manual navigation, not a default change",
+  "operator_clarification": "GRUB initially opened with normal STOCK selected; highlight manually moved afterward; neither sysvinit nor EXPERIMENTAL booted",
+  "experimental_selected": false,
+  "sgx_authorized": false
+}

@@ -1,0 +1,9 @@
+from pathlib import Path
+import sys,json,datetime,importlib.util,os
+sys.dont_write_bytecode=True
+W=Path(Path('/tmp/sgx535-square-display-workspace').read_text());render=Path(Path('/tmp/sgx535-square-continuation-workspace').read_text());sp=importlib.util.spec_from_file_location('c',render/'controller.py');c=importlib.util.module_from_spec(sp);sp.loader.exec_module(c);c.ROOT=W;remote=json.loads((W/'remote-paths.json').read_text());card=json.loads((W/'card.json').read_text());auth=json.loads((W/'authorization.json').read_text());assert auth['card_sha256']==c.sha((W/'card.json').read_bytes());assert not (W/'one-authorized-display-publication').exists()
+(W/'operator-recording-ready.json').write_text(json.dumps({'answer':'Ready—start after checks pass','source':'maintainer current publication readiness','time_utc':datetime.datetime.now(datetime.timezone.utc).isoformat()}))
+with (W/'publication-controller-intent.json').open('x') as f:f.write(json.dumps({'state':'ONE DISPLAY PUBLICATION DISPATCH; NO RETRY','card_sha256':auth['card_sha256'],'boot_id':auth['boot_id'],'sgx_invocations':0,'maximum_publications':1}));f.flush();os.fsync(f.fileno())
+argv=['python3','-B',remote['tools']+'/square_display_centered.py','--publish-once','--card',remote['tools']+'/card.json','--authorization',remote['tools']+'/authorization.json','--source',remote['tools']+'/source.bin','--evidence',remote['evidence']]
+s='import subprocess,json\np=subprocess.run('+repr(argv)+',capture_output=True,timeout=35)\nprint(json.dumps({"exit_code":p.returncode,"stdout":p.stdout.decode(),"stderr":p.stderr.decode(),"sgx_invocations":0,"maximum_publications":1}),flush=True)\nif p.returncode or p.stderr:raise SystemExit(1)\n'
+v,receipt=c.once('one-authorized-display-publication',s,timeout=45);print(v[-1]);print('controller duration',receipt['host_duration'])

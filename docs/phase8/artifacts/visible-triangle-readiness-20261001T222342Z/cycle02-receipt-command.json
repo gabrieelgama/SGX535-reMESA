@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "python3",
+    "-m",
+    "unittest",
+    "-v",
+    "test_capture"
+  ],
+  "cwd": "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02",
+  "exit_code": 0
+}

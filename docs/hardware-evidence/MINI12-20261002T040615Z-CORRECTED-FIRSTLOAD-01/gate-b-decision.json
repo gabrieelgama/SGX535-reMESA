@@ -1,0 +1,62 @@
+{
+  "gate_b": "PASS FOR EXACT OFFSCREEN READINESS",
+  "whitelist": [
+    "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1"
+  ],
+  "current_boot_id": "203a5b9b-5a90-4fd3-8001-3c92cdefeddd",
+  "kernel": "5.10.240-antix.1-486-smp",
+  "corrected_module_sha256": "2eaffd22637eef6b7b101f046d6fd9756b48c934818a7353f9aa705616014c1e",
+  "loaded_note_sha256": "b78dc1ffde5cc661d076941e27e10b06edf62ad1da37651f3c38a98e622890c2",
+  "experimental_image_sha256": "55e7a8be6f62c9a1d59f1c532b8790399c21a2706884747e504edfffb45bf52d",
+  "first_owner": "PASS",
+  "sgx_execution_authorized": false,
+  "first_triangle": "NOT ATTEMPTED",
+  "prior_gate_basis": "All unchanged scoped predicates and accepted decisions remain as recorded in Cycle06 gate-b-decision.json; this amendment updates corrected artifact and fresh live binding evidence only.",
+  "predicates": [
+    {
+      "predicate": "Corrected candidate ABI/import qualification",
+      "classification": "PASS",
+      "basis": "232/232 imports covered; module_layout 0xb84efb99; corrected target-table qualification retained in private-gpu-va-fix evidence."
+    },
+    {
+      "predicate": "Private GPU-VA allocator fix",
+      "classification": "PASS OFFLINE",
+      "basis": "PDS allocation at 0x20000000-0x2001ffff; actual GTT overlap and occupied-range negative controls remain -16."
+    },
+    {
+      "predicate": "Corrected image and staging identity",
+      "classification": "PASS",
+      "basis": "Exact corrected image hash/size read back; Cycle06 image/config bytes preserved; new entry non-saving and saved STOCK default unchanged."
+    },
+    {
+      "predicate": "Fresh STOCK preflight",
+      "classification": "PASS",
+      "basis": "57/57 guards; boot 10d6abfa-e7a8-4311-97ae-213f503cee20; original module, PCI/DRM/fb/IRQ16, services, health and stock hashes matched."
+    },
+    {
+      "predicate": "Corrected first-load hook and first owner",
+      "classification": "PASS",
+      "basis": "62/62 guards; boot 203a5b9b-5a90-4fd3-8001-3c92cdefeddd; ordered hook trace, corrected loaded-note identity, PCI/DRM/fb/IRQ16 ownership, and full current-boot kernel-health check passed."
+    },
+    {
+      "predicate": "STOCK fallback/recovery path",
+      "classification": "PASS FOR EXACT ACTION",
+      "basis": "Previously observed Cycle05 stock recovery; fresh stock preflight immediately before this cycle; stock kernel/initramfs/GRUB/default hashes unchanged after staging. No claim that a new post-Cycle07 recovery boot was performed."
+    },
+    {
+      "predicate": "Unchanged scoped Gate B predicates/operator decisions",
+      "classification": "PASS",
+      "basis": "Cycle06 predicate review and four accepted one-attempt decisions; action remains sequence 1, one scene, at most one TA/raster fire, bounded deadline/samples and HOLD."
+    },
+    {
+      "predicate": "Hot removal/replacement/recovery",
+      "classification": "EXCLUDED AND BLOCKED",
+      "basis": "This action uses corrected first ownership and does not permit hot removal, replacement or restoration."
+    },
+    {
+      "predicate": "SGX execution authorization",
+      "classification": "NOT AUTHORIZED",
+      "basis": "Separate explicit authorization is required. This readiness decision does not authorize client ioctl or SGX submission."
+    }
+  ]
+}

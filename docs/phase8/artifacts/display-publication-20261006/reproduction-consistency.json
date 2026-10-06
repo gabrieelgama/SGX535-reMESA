@@ -1,0 +1,9 @@
+{
+  "archive_files": 223,
+  "originals": 18,
+  "copied_seals": "95/95 and81/81 PASS",
+  "manifest_tutorial_agreement": "PASS",
+  "source_triangle": "120 magenta /904 zero PASS",
+  "hardware_interactions": 0,
+  "sgx_invocations": 0
+}

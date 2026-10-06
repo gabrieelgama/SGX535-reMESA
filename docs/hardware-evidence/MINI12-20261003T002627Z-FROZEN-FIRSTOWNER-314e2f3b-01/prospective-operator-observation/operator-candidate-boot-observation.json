@@ -1,0 +1,14 @@
+{
+  "recorded_utc": "2026-10-03T01:07:42.662590+00:00",
+  "source": "operator replies after prospective single candidate selection request",
+  "normal_boot_display_report": "normal display boot",
+  "boot_watch_report": "Normal desktop/display appeared within 10 minutes",
+  "userspace_reached": true,
+  "display_normal": true,
+  "userspace_seen_before_boot_watch": true,
+  "boot_arrival_seconds": "not precisely measured/reported",
+  "clock_meaning": "operator boot-watch observation, not target uptime measurement",
+  "photograph_supplied": false,
+  "capture_started": false,
+  "loaded_candidate_build_id": "NOT YET OBSERVED"
+}

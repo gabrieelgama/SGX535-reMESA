@@ -1,0 +1,5 @@
+make: Entering directory '/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp'
+make -C /home/gama/sgx535-offline/antix-kbuild-successor-20260930/output -f /home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp/Makefile clean
+make -f /home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp/scripts/Makefile.clean obj=/home/gama/sgx535-offline/private-gpu-va-fix-20261002/build-03
+  rm -rf /home/gama/sgx535-offline/private-gpu-va-fix-20261002/build-03/Module.symvers /home/gama/sgx535-offline/private-gpu-va-fix-20261002/build-03/modules.nsdeps /home/gama/sgx535-offline/private-gpu-va-fix-20261002/build-03/compile_commands.json
+make: Leaving directory '/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp'

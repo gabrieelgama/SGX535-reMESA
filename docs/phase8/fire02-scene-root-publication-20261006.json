@@ -1,0 +1,160 @@
+{
+  "date": "2026-10-06",
+  "scope": "GPU-to-CPU scene/root publication/stability only; format not reopened",
+  "classification": "C \u2014 GPU_CPU_PUBLICATION_UNRESOLVED",
+  "meaning": "No defined event plus external commit plus stable window recovered. Not a disproof of physical publication or a finding that current lifecycle necessarily destroys data.",
+  "smallest_missing_guarantee": "A rev121 checkpoint-specific root-backing postcondition: before destructive DPM action/reuse, the TA-produced bytes in the owned S+0x1000..S+0x1300 backing pages are externally committed and cannot receive later relevant writes through a bounded CPU copy.",
+  "lifecycle": [
+    {
+      "phase": "Allocation/initialization",
+      "cpu": "Owns pinned pages; clears backing",
+      "gpu": "Not yet admitted",
+      "mutation": "CPU initialization",
+      "host_reuse": "No while owner retains pages",
+      "publication": "CPU initial bytes only, not TA output"
+    },
+    {
+      "phase": "Pre-fire publication",
+      "cpu": "All BO pages CLFLUSH; input vmaps dropped",
+      "gpu": "Mapped by SGX MMU cached PTEs",
+      "mutation": "No intentional CPU payload writer after this boundary",
+      "host_reuse": "No",
+      "publication": "CPU-to-GPU only"
+    },
+    {
+      "phase": "TA active",
+      "cpu": "No safe payload-read permission established",
+      "gpu": "TA/DPM own execution; scene and separate arenas supplied",
+      "mutation": "TA-generated writes; exact root vs on-chip staging unknown",
+      "host_reuse": "No; owner unsafe release rejected",
+      "publication": "Not established"
+    },
+    {
+      "phase": "Accepted TA completion, before raster start",
+      "cpu": "Component retains ownership and pages",
+      "gpu": "TA_DONE accepted; raster not yet kicked at this internal point",
+      "mutation": "No complete all-writers/root-materialization guarantee",
+      "host_reuse": "No",
+      "publication": "Earliest candidate checkpoint, not proved safe"
+    },
+    {
+      "phase": "Raster/ISP active",
+      "cpu": "No safe root-read contract",
+      "gpu": "Root supplied to ISP; DPM state/deallocation machinery active",
+      "mutation": "ISP root reader; write-free guarantee unknown; DPM root mutations unknown",
+      "host_reuse": "No",
+      "publication": "Not established"
+    },
+    {
+      "phase": "End-render, deallocation pending",
+      "cpu": "Pages retained",
+      "gpu": "Historical scheduler says deallocation may remain busy",
+      "mutation": "DPM cleanup may still act; exact root effect unknown",
+      "host_reuse": "No",
+      "publication": "Not established"
+    },
+    {
+      "phase": "3D-memory-free, possibly before end-render acceptance",
+      "cpu": "Pages retained",
+      "gpu": "DPM allocation reclamation event; separate end-render needed",
+      "mutation": "Whether original root/parameter representation survives unknown",
+      "host_reuse": "No host free; internal DPM reclamation is separate",
+      "publication": "Not established"
+    },
+    {
+      "phase": "Scene completed / RETIRED",
+      "cpu": "Software ledger7 then release USE reservation and retire; pages still held until release",
+      "gpu": "Accepted TA/end-render/memory-free transitions satisfied",
+      "mutation": "No target backing-memory stable-postcondition follows from phase assignment",
+      "host_reuse": "No until owner teardown",
+      "publication": "Stronger software checkpoint; original TA bytes may or may not survive"
+    },
+    {
+      "phase": "Backend end / invalidation / owner release",
+      "cpu": "Backend protection ends; MMU removal and page unpin/free on release",
+      "gpu": "No retained-root contract",
+      "mutation": "Reuse/remap/free possible; invalidation destroys prospective proof",
+      "host_reuse": "Yes after teardown",
+      "publication": "Beyond host observation lifetime; capsule preserves color/state only"
+    }
+  ],
+  "writers": [
+    {
+      "agent": "CPU owner",
+      "role": "WRITER",
+      "scope": "All owned pages initialized; no deliberate root writer after preflush; later teardown only",
+      "tier": "POULSBO_DRIVER_BEHAVIOR"
+    },
+    {
+      "agent": "TA",
+      "role": "WRITER",
+      "scope": "TA-produced scene/parameter role established; exact root write timing and external commit unknown",
+      "tier": "INFERENCE from configured producer/consumer relationship"
+    },
+    {
+      "agent": "DPM",
+      "role": "WRITER to allocation/context state; UNKNOWN for root payload",
+      "scope": "Separate control/state store events and context/arena setup; normal root mutation/postcondition unspecified",
+      "tier": "SGX535_EVIDENCE_REVISION_UNPROVED / POULSBO_DRIVER_BEHAVIOR"
+    },
+    {
+      "agent": "ISP/raster",
+      "role": "READER; READER_ONLY not established",
+      "scope": "Configured root input consumed for rendering; absence of writes to the reservation not proved",
+      "tier": "DIRECT_REV121_EVIDENCE for programmed input; INFERENCE for memory access details"
+    },
+    {
+      "agent": "Microkernel/firmware",
+      "role": "UNKNOWN for root payload",
+      "scope": "Comparative DDK manipulates sync/status/cleanup; not proof current path runs that firmware or root parser",
+      "tier": "SERIES5_COMPARATIVE_EVIDENCE"
+    },
+    {
+      "agent": "Reset/power/clear machinery",
+      "role": "WRITER to state or invalidating transition; UNKNOWN direct root writes",
+      "scope": "Current initialization clears backing; later reset/power invalidates witness and cannot establish preservation",
+      "tier": "POULSBO_DRIVER_BEHAVIOR"
+    }
+  ],
+  "earliest_safe_snapshot": null,
+  "earliest_candidate_checkpoint": "After successful TA status acceptance and before session_begin_raster inside fixed_service_status_impl; existing after tap occurs later, after raster fire.",
+  "latest_safe_snapshot": null,
+  "host_lifetime_upper_bound": "Before first invalidation, backend protection loss, remap/reuse or owner release; this does not bound internal DPM reclamation.",
+  "stable_window_established": false,
+  "host_cache_mechanism": "drm_clflush_pages over exact owned scene pages; full barriers inside helper; cached kmap/vmap on those pages; no intentional CPU dirty alias. Conditional upon GPU external commit/stability, not a standalone publication guarantee.",
+  "gpu_visibility_operation": "UNKNOWN: BIF/MMU/PDS/data invalidation or DPM store names do not establish writeback of this root.",
+  "minimal_proven_publication_contract": null,
+  "conditional_template": [
+    "Require current owner/session/source bindings and pinned pages/no CPU dirty writer",
+    "Require independently established rev121 root-backing postcondition at event E",
+    "Keep source isolation and page/VA ownership throughout copy; do not advance any transition that invalidates E",
+    "CPU cache maintenance on exact retained pages, map/copy within bounds, retain originals",
+    "Any loss, interference, partial completion, reset/power change, mapping error or uncertain postcondition gives UNKNOWN"
+  ],
+  "frozen_lifecycle_compatibility": "Theoretical checkpoints and ownership interval exist; no qualified root snapshot, no safe existing after-status tap for pre-raster capture, no root retained in capsule.",
+  "format": "UNRESOLVED / PARTIAL",
+  "combined": "BOTH INDEPENDENTLY BLOCKED",
+  "implementation_justified": false,
+  "live_capture_justified": false,
+  "fire2_retrospective_coverage": "NOT RESOLVABLE: root memory not retained",
+  "candidate": {
+    "driver_build_id": "9d0b5b2fdb7d9881f2828f43fb89253176c38817",
+    "observer_build_id": "f11d3abb072caa4e1d32836ef92ce201e9c9d126",
+    "image_sha256": "ef7e01cb546c59b6f9bce96c3397feb4b9cd1d9ebdac2faa885ed71fa5ed014d"
+  },
+  "verification": {
+    "source_consistency": "/home/gama/sgx535-offline/phase8-gpu-cpu-publication-20261006T025919Z/source-consistency.json",
+    "source_checks_passed": 48,
+    "gpu_qualification": false,
+    "preservation_receipt": "/home/gama/sgx535-offline/phase8-gpu-cpu-publication-20261006T025919Z/final-consistency.json"
+  },
+  "audit_root": "/home/gama/sgx535-offline/phase8-gpu-cpu-publication-20261006T025919Z",
+  "implementation_changes": [],
+  "new_candidate": false,
+  "fire3_authorized": false,
+  "sgx_execution_authorized": false,
+  "task_sgx_invocations": 0,
+  "task_client_invocations": 0,
+  "task_hardware_interactions": 0,
+  "triangle": "NOT ESTABLISHED"
+}

@@ -1,0 +1,53 @@
+test_exact_authority (test_triangle_display.Authority.test_exact_authority) ... ok
+test_no_authority (test_triangle_display.Authority.test_no_authority) ... ok
+test_second_publication_rejected (test_triangle_display.Authority.test_second_publication_rejected) ... ok
+test_sgx_authority_rejected (test_triangle_display.Authority.test_sgx_authority_rejected) ... ok
+test_unbounded_hold (test_triangle_display.Authority.test_unbounded_hold) ... ok
+test_wrong_boot (test_triangle_display.Authority.test_wrong_boot) ... ok
+test_wrong_card (test_triangle_display.Authority.test_wrong_card) ... ok
+test_wrong_destination (test_triangle_display.Authority.test_wrong_destination) ... ok
+test_alpha_ignored_not_blended (test_triangle_display.Pixels.test_alpha_ignored_not_blended) ... ok
+test_bottom (test_triangle_display.Pixels.test_bottom) ... ok
+test_channel_conversion (test_triangle_display.Pixels.test_channel_conversion) ... ok
+test_exact_byte_coverage (test_triangle_display.Pixels.test_exact_byte_coverage) ... ok
+test_left (test_triangle_display.Pixels.test_left) ... ok
+test_mismatched_pitch (test_triangle_display.Pixels.test_mismatched_pitch) ... ok
+test_noncontiguous_mask (test_triangle_display.Pixels.test_noncontiguous_mask) ... ok
+test_normal (test_triangle_display.Pixels.test_normal) ... ok
+test_outside (test_triangle_display.Pixels.test_outside) ... ok
+test_overflow (test_triangle_display.Pixels.test_overflow) ... ok
+test_overlap (test_triangle_display.Pixels.test_overlap) ... ok
+test_pitch_padding (test_triangle_display.Pixels.test_pitch_padding) ... ok
+test_rgb24 (test_triangle_display.Pixels.test_rgb24) ... ok
+test_rgb565 (test_triangle_display.Pixels.test_rgb565) ... ok
+test_right (test_triangle_display.Pixels.test_right) ... ok
+test_source (test_triangle_display.Pixels.test_source) ... ok
+test_source_corruption (test_triangle_display.Pixels.test_source_corruption) ... ok
+test_source_preserved (test_triangle_display.Pixels.test_source_preserved) ... ok
+test_source_truncated (test_triangle_display.Pixels.test_source_truncated) ... ok
+test_source_wrong_footprint (test_triangle_display.Pixels.test_source_wrong_footprint) ... ok
+test_swapped_masks_bigendian (test_triangle_display.Pixels.test_swapped_masks_bigendian) ... ok
+test_top (test_triangle_display.Pixels.test_top) ... ok
+test_truncated_mapping (test_triangle_display.Pixels.test_truncated_mapping) ... ok
+test_unsupported_format (test_triangle_display.Pixels.test_unsupported_format) ... ok
+test_bad_source_no_claim (test_triangle_display.Transactions.test_bad_source_no_claim) ... ok
+test_initial_ownership_loss (test_triangle_display.Transactions.test_initial_ownership_loss) ... ok
+test_interrupted_hold (test_triangle_display.Transactions.test_interrupted_hold) ... ok
+test_loss_during_claim (test_triangle_display.Transactions.test_loss_during_claim) ... ok
+test_mapping_failure (test_triangle_display.Transactions.test_mapping_failure) ... ok
+test_no_device_access_on_import (test_triangle_display.Transactions.test_no_device_access_on_import) ... ok
+test_no_second_publication (test_triangle_display.Transactions.test_no_second_publication) ... ok
+test_ownership_loss_after_publication (test_triangle_display.Transactions.test_ownership_loss_after_publication) ... ok
+test_partial_publication (test_triangle_display.Transactions.test_partial_publication) ... ok
+test_postwrite_evidence_failure_restores (test_triangle_display.Transactions.test_postwrite_evidence_failure_restores) ... ok
+test_preservation_failure (test_triangle_display.Transactions.test_preservation_failure) ... ok
+test_published_and_restored_evidence (test_triangle_display.Transactions.test_published_and_restored_evidence) ... ok
+test_restore_failure (test_triangle_display.Transactions.test_restore_failure) ... ok
+test_restore_success (test_triangle_display.Transactions.test_restore_success) ... ok
+test_unavailable_destination (test_triangle_display.Transactions.test_unavailable_destination) ... ok
+test_wrong_readback (test_triangle_display.Transactions.test_wrong_readback) ... ok
+
+----------------------------------------------------------------------
+Ran 48 tests in 0.405s
+
+OK

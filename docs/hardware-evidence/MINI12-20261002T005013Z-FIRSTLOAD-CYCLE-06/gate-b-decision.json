@@ -1,0 +1,164 @@
+{
+  "gate_b": "PASS FOR EXACT OFFSCREEN READINESS",
+  "whitelist": [
+    "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1"
+  ],
+  "predicates": [
+    {
+      "predicate": "Exact target/rev121 guards",
+      "classification": "PASS",
+      "basis": "Retained identity and fixed kernel guard; no rediscovery"
+    },
+    {
+      "predicate": "Expected kernel ABI/config/generated layout",
+      "classification": "PASS",
+      "basis": "Captured target table, successor equivalence, fresh unchanged-state checks"
+    },
+    {
+      "predicate": "Candidate artifact identity and complete imports",
+      "classification": "PASS",
+      "basis": "Both frozen binaries freshly checked; derivative is the lifecycle-corrected choice"
+    },
+    {
+      "predicate": "Integration/source/toolchain provenance",
+      "classification": "PASS",
+      "basis": "Strict four-patch replay, input manifests, normal Kbuild evidence and unchanged generated state"
+    },
+    {
+      "predicate": "Static i386 client/UAPI/operation flag",
+      "classification": "PASS",
+      "basis": "Existing artifact/input and inert-flag regressions, unchanged pinned client"
+    },
+    {
+      "predicate": "Ten private BOs/VA/MMU and 49 relocations",
+      "classification": "PASS",
+      "basis": "Tested fixed ownership/bounds/golden equivalence; live postconditions remain unobserved"
+    },
+    {
+      "predicate": "USE 3/4 reservation/programming/lifetime",
+      "classification": "PASS",
+      "basis": "Fixed service tests and ownership retention; no live reservation claimed"
+    },
+    {
+      "predicate": "Publication decision for this frozen scene",
+      "classification": "PASS",
+      "basis": "Recorded operator acceptance only; architectural visibility remains UNKNOWN"
+    },
+    {
+      "predicate": "Historical operational bootstrap predicate",
+      "classification": "PASS",
+      "basis": "Bounded selected init/TA-load executor and failure injection; live ready status unobserved"
+    },
+    {
+      "predicate": "Fixed scene/TA/XHW/raster ordering",
+      "classification": "PASS",
+      "basis": "Narrow kernel-owned plans and one-shot tests; no general userspace command path"
+    },
+    {
+      "predicate": "Attributed TA/PBE/DPM events and selected fault mapping",
+      "classification": "PASS",
+      "basis": "Status-ledger/IRQ capture tests; DPM_TA_MEM_FREE nonterminal; no live event claimed"
+    },
+    {
+      "predicate": "ISP bracket risk decision",
+      "classification": "PASS",
+      "basis": "Recorded scoped acceptance; no new reset/platform safety proof"
+    },
+    {
+      "predicate": "L12 risk decision",
+      "classification": "PASS",
+      "basis": "Recorded scoped acceptance; architectural source containment remains UNKNOWN"
+    },
+    {
+      "predicate": "FT-AUX risk decision",
+      "classification": "PASS",
+      "basis": "Recorded scoped acceptance; auxiliary source containment remains UNKNOWN"
+    },
+    {
+      "predicate": "One scene, sequence 1, at most one TA and raster fire",
+      "classification": "PASS",
+      "basis": "Existing fixed UAPI, latch and failure injection; no automatic retry"
+    },
+    {
+      "predicate": "5\u00d7HZ/300,000-sample limits and HOLD",
+      "classification": "PASS",
+      "basis": "Existing bounded executor/ledger; not a whole-platform hang bound"
+    },
+    {
+      "predicate": "HOLD BO/USE/scene/module ownership",
+      "classification": "PASS",
+      "basis": "No release after ambiguity; held attempt retains module reference; PCI unbind prohibited"
+    },
+    {
+      "predicate": "Completion/readback success criterion",
+      "classification": "PASS",
+      "basis": "Requires attributable events plus defined color output; no current readback, GPU-to-CPU visibility proof or triangle result"
+    },
+    {
+      "predicate": "Derivative IRQ/modeset/error unwind",
+      "classification": "PASS",
+      "basis": "Exact-source tests, core contracts, compiled relocations and paired release; scoped offline qualification"
+    },
+    {
+      "predicate": "Original preserved recovery artifact",
+      "classification": "PASS",
+      "basis": "Preserved original hash/evidence; availability is not hot-restoration safety"
+    },
+    {
+      "predicate": "Original display/console/service teardown facts",
+      "classification": "PASS",
+      "basis": "Retained console-release/service observations only"
+    },
+    {
+      "predicate": "First hot removal of active original",
+      "classification": "EXCLUDED FROM THIS ACTION; STILL BLOCKED",
+      "basis": "First-owner boot avoids hot removal/replacement/restoration; these operations remain prohibited."
+    },
+    {
+      "predicate": "Replacement insertion after that removal",
+      "classification": "EXCLUDED FROM THIS ACTION; STILL BLOCKED",
+      "basis": "First-owner boot avoids hot removal/replacement/restoration; these operations remain prohibited."
+    },
+    {
+      "predicate": "Normal hot original restoration",
+      "classification": "EXCLUDED FROM THIS ACTION; STILL BLOCKED",
+      "basis": "First-owner boot avoids hot removal/replacement/restoration; these operations remain prohibited."
+    },
+    {
+      "predicate": "First-load alternative and original fallback",
+      "classification": "PASS",
+      "basis": "Qualified unchanged image; Cycle06 exact ordered hook/loaded note/ownership; Cycle05 observed three-boot STOCK restoration and unchanged files/default."
+    },
+    {
+      "predicate": "Fresh live kernel/module/PCI/DRM/fb/VT/FD/service guards",
+      "classification": "PASS FOR FIRST-LOAD ACTION",
+      "basis": "Cycle06 fresh54-stock guards and55-experimental guards, normal physical display/userspace. Zero-FD requirement belonged to excluded hot removal; no removal is proposed."
+    },
+    {
+      "predicate": "Fresh loaded candidate identity/binding",
+      "classification": "PASS",
+      "basis": "Cycle06 actual derivative Build-ID note, moduleLive, PCI/DRM/fb/VT/IRQ16, orderedtrace and complete sameboot receipt."
+    },
+    {
+      "predicate": "Runtime module-signature enforcement",
+      "classification": "PASS FOR THIS LOADED ARTIFACT",
+      "basis": "Exact unsigned derivative successfully loaded; bounded source-defined drm loader notice; no selected kernel faults. No signature bypass or future-policy claim."
+    },
+    {
+      "predicate": "Physically present operator/independent capture/root staging",
+      "classification": "PASS FOR CURRENT READINESS",
+      "basis": "Current operator physical/readiness witness, reviewed menu reuse, pinned root SSH capture; existing boot staging rehashed with original creation receipts. Client staging requires separate SGX-action authorization."
+    },
+    {
+      "predicate": "Current exact transition and recovery authorization",
+      "classification": "PASS NON-SGX FIRST-LOAD ONLY",
+      "basis": "Explicit one boot/capture with permission to remain healthy EXPERIMENTAL; Cycle06 executed inside that scope. Reviewed STOCK machine-boundary recovery retained. SGX authorization absent."
+    },
+    {
+      "predicate": "Current Gate B and exact-action whitelist",
+      "classification": "PASS READINESS ONLY",
+      "basis": "First-owner blocker closed. Separate SGX authorization remains mandatory; whitelist pins currentboot/derivative/frozenaction, excludes all hot operations."
+    }
+  ],
+  "sgx_execution_authorized": false
+}

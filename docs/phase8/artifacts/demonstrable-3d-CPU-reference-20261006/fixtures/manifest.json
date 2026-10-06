@@ -1,0 +1,138 @@
+{
+  "scope": "CPU reference only; no SGX candidate/render/publication",
+  "frames": [
+    {
+      "index": 0,
+      "angle": 0,
+      "ARGB_sha256": "86e1247d1f44cbdf603a68a7e91a53289b9d7ebb8b32648ee8b8d243c66c2b31",
+      "face_order": [
+        "top",
+        "left",
+        "front"
+      ]
+    },
+    {
+      "index": 1,
+      "angle": 15,
+      "ARGB_sha256": "0de7c1db7143cac137e9bb560f91ac8096a320d2eaaa7aba00a391f8499ade40",
+      "face_order": [
+        "top",
+        "front",
+        "left"
+      ]
+    },
+    {
+      "index": 2,
+      "angle": 30,
+      "ARGB_sha256": "f8b7f08a4f9139b5cb606f482426afe61f9977349502ea6064e680aee019e8c0",
+      "face_order": [
+        "top",
+        "front",
+        "left"
+      ]
+    },
+    {
+      "index": 3,
+      "angle": 45,
+      "ARGB_sha256": "f7d91133097dad4cd776569c219569ca909984411d8bc86d55287a998dbb2428",
+      "face_order": [
+        "front",
+        "left"
+      ]
+    },
+    {
+      "index": 4,
+      "angle": 60,
+      "ARGB_sha256": "3d34828d703cc33d42de1d7afb736793f95dae74507e7a4aff07ff0ba4952d6c",
+      "face_order": [
+        "left"
+      ]
+    }
+  ],
+  "convention": "right-handed,column vectors,clip -w..w,y-down viewport,CPU painter order",
+  "SGX_payload_fourth_field": 1,
+  "perspective_correct_varyings": "NOT ESTABLISHED",
+  "lighting_values": "reference calculations only; constant diagnostic face colors used",
+  "files": {
+    "frame-0.CPU-REFERENCE.argb": {
+      "bytes": 4096,
+      "sha256": "86e1247d1f44cbdf603a68a7e91a53289b9d7ebb8b32648ee8b8d243c66c2b31"
+    },
+    "frame-0.screen-vertices.bin": {
+      "bytes": 256,
+      "sha256": "a42667a9d96cb5530b4f56f4c6628d799d1d15920966d724d117e2d73d0243f4"
+    },
+    "frame-0.json": {
+      "bytes": 9321,
+      "sha256": "4bc327ae3344aa2db0a8428f93e60ec49dc14788f4987fe56b2ce637486b0884"
+    },
+    "frame-0.CPU-REFERENCE.ppm": {
+      "bytes": 3085,
+      "sha256": "c54dc760e115e5d5370e046a4ae69976fc167bf172c1e8795876c304b2a3ce3d"
+    },
+    "frame-1.CPU-REFERENCE.argb": {
+      "bytes": 4096,
+      "sha256": "0de7c1db7143cac137e9bb560f91ac8096a320d2eaaa7aba00a391f8499ade40"
+    },
+    "frame-1.screen-vertices.bin": {
+      "bytes": 256,
+      "sha256": "8b0cf72ec368ca7cd02e41fa5ac15f5c14c923eb196b6fc819140fd358e110d3"
+    },
+    "frame-1.json": {
+      "bytes": 9333,
+      "sha256": "d04646a6254bb9a9edbb6ec07f6816d0013642487ab52db1f1b91c2d94459bfa"
+    },
+    "frame-1.CPU-REFERENCE.ppm": {
+      "bytes": 3085,
+      "sha256": "30b1d3ccb31da29dc073d87b48c9c856ca647227dcd016e013735ff834cdad68"
+    },
+    "frame-2.CPU-REFERENCE.argb": {
+      "bytes": 4096,
+      "sha256": "f8b7f08a4f9139b5cb606f482426afe61f9977349502ea6064e680aee019e8c0"
+    },
+    "frame-2.screen-vertices.bin": {
+      "bytes": 256,
+      "sha256": "af51d4796d0602f5f292b0e5412d60cefc5bffc4595642bae873abeb29d45dde"
+    },
+    "frame-2.json": {
+      "bytes": 9323,
+      "sha256": "1a92b36900c7346838301a5fdc5be148fe034d5090908ab9df831e1f81e3e315"
+    },
+    "frame-2.CPU-REFERENCE.ppm": {
+      "bytes": 3085,
+      "sha256": "2d4d680a1c868939a96d621f1362721c0c270573bcfd88106d6fd3a3fbf05df2"
+    },
+    "frame-3.CPU-REFERENCE.argb": {
+      "bytes": 4096,
+      "sha256": "f7d91133097dad4cd776569c219569ca909984411d8bc86d55287a998dbb2428"
+    },
+    "frame-3.screen-vertices.bin": {
+      "bytes": 256,
+      "sha256": "878ea4e742863bf276c7ca3f9a31a1934796f8a26fb8a4b3af4a7b95afb0e091"
+    },
+    "frame-3.json": {
+      "bytes": 8291,
+      "sha256": "54440ad1a72a630ccf9c1da3e7c11f41b732add5a0875ddb46bf6828f42e31c8"
+    },
+    "frame-3.CPU-REFERENCE.ppm": {
+      "bytes": 3085,
+      "sha256": "51b27b46b501c143a59a20dabf1855f04f004b3334f4ccfb0d5bf34634ac97f7"
+    },
+    "frame-4.CPU-REFERENCE.argb": {
+      "bytes": 4096,
+      "sha256": "3d34828d703cc33d42de1d7afb736793f95dae74507e7a4aff07ff0ba4952d6c"
+    },
+    "frame-4.screen-vertices.bin": {
+      "bytes": 256,
+      "sha256": "88a88816df30eca8a83ac98f58204500293f0a26b54e93122efbc1a6ed1a20ad"
+    },
+    "frame-4.json": {
+      "bytes": 6829,
+      "sha256": "b632cc51d615827caa973066b57e8c174a48fa5a174632521cba76fa396a4fc1"
+    },
+    "frame-4.CPU-REFERENCE.ppm": {
+      "bytes": 3085,
+      "sha256": "035e5d982790d32b902ff4cac58e1007aa249ede30fb03a776ecbb2bd4253ce9"
+    }
+  }
+}

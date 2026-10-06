@@ -1,0 +1,22 @@
+{
+  "schema": 2,
+  "reference_plan": "docs/phase8/first-load-operational-procedure.json",
+  "reference_plan_sha256": "08799f903d8b51956bca0c41c67e209c5765cb5b7d8c0b3a6268de50ca1ae4f8",
+  "policy": {
+    "max_experimental_boots": 1,
+    "sgx_actions": 0,
+    "automatic_retry": false,
+    "hot_restoration": false,
+    "automatic_reset": false,
+    "restaging": false,
+    "change_default": false,
+    "boot_watch_seconds": 600,
+    "capture_max_kernel_boot_seconds": 1200,
+    "connection_seconds": 40,
+    "child_seconds": 35,
+    "menu_photo_before_selection": true,
+    "sgx_gate_b": "BLOCKED",
+    "sgx_whitelist": [],
+    "live_execution_authorized": false
+  }
+}

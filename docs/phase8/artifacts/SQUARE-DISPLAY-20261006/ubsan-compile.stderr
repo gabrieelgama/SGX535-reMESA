@@ -1,0 +1,7 @@
+/tmp/square_display_layout.c: In function ‘main’:
+/tmp/square_display_layout.c:6:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+    6 |  if(argc!=2)return 2;f=fopen(argv[1],"rb");if(!f)return 3;
+      |  ^~
+/tmp/square_display_layout.c:6:22: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+    6 |  if(argc!=2)return 2;f=fopen(argv[1],"rb");if(!f)return 3;
+      |                      ^

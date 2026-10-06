@@ -1,0 +1,9 @@
+{
+  "passive/command.json": "90cf905264253edbc8e2b25a08b3fe1a45f80a9bced26074bbb327b274db545f",
+  "passive/decoded-records.json": "6db5a5b5e4d32650d19186725dae177c8a8c5769638b2ea01282e0a66eabf8dc",
+  "passive/root-source.py": "ec3e75f0d4d6dd516a0aea9a082157ff079d79f63f10c977d2e5c1da57eccdf3",
+  "passive/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "passive/stdout.txt": "48c2ffedd59437dba51a9f9c6ff9d130c27f64ac21bcdb53bad1753a2b3d81a5",
+  "passive/verdict.json": "c1baa124fff0a35a518579af2ed7a6594dc818502672481effe9ad2c77e27d87",
+  "passive/wrapper-source.py": "5c58cc04205066d0f80099ea678d8b73c02d549237e2a604a9b77961f0ecd349"
+}

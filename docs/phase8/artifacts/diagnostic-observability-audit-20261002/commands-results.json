@@ -1,0 +1,29 @@
+[
+  {
+    "operation": "compile",
+    "argv": [
+      "/usr/bin/gcc-14",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-fsanitize=undefined",
+      "-fno-sanitize-recover=all",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_fixed_service.c",
+      "/home/gama/sgx535-offline/diagnostic-observability-audit-20261002T072101Z/probe.c",
+      "-o",
+      "/home/gama/sgx535-offline/diagnostic-observability-audit-20261002T072101Z/probe"
+    ],
+    "exit_code": 0
+  },
+  {
+    "operation": "run",
+    "argv": [
+      "/home/gama/sgx535-offline/diagnostic-observability-audit-20261002T072101Z/probe"
+    ],
+    "exit_code": 0
+  }
+]

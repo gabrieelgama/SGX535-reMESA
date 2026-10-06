@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-02T00:06:54.537971+00:00",
+  "classification": "OPERATOR-REPORTED HISTORY/current symptom",
+  "normal_short_power_press": "does not shut machine down in this hung state",
+  "required_operator_recovery": "long-press power button for forced power-off, then manual STOCK selection",
+  "causal_attribution": "UNKNOWN; not attributed to experimental configuration",
+  "within_scope": "reviewed manual power-off contingency at machine boundary; existing data-loss risk acknowledged",
+  "experimental_retry_authorized": false
+}

@@ -1,0 +1,662 @@
+{
+  "schema_version": 1,
+  "decision_id": "MINI12-GATE-B-MAINTAINER-READINESS-20261004-314e2f3b",
+  "decision_timestamp_utc": "2026-10-04T07:00:07Z",
+  "timestamp_semantics": "UTC recording timestamp for the maintainer's new instruction in this conversation; no earlier issuance is claimed.",
+  "decision_type": "NEW PROSPECTIVE MAINTAINER GOVERNANCE/READINESS DECISION",
+  "decision_authority": {
+    "role": "project maintainer",
+    "source": "Explicit owner/maintainer instruction in the current conversation",
+    "instruction": "As project maintainer, I am now making a NEW PROSPECTIVE governance/readiness decision.",
+    "recorded_by": "Codex, recording the maintainer's decision; not issuing a self-approval"
+  },
+  "decision_scope": "The documented Gate B readiness predicates for this exact reviewed boot/build/module/image/selected-client/UAPI/action context have been accepted by the project maintainer. Readiness only; no execution permission.",
+  "gate_b": "PASS FOR EXACT OFFSCREEN READINESS",
+  "whitelist": [
+    "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1"
+  ],
+  "sgx_execution_authorized": false,
+  "predicate_counts": {
+    "PASS": 27,
+    "FAIL": 0,
+    "UNKNOWN": 0,
+    "NOT_APPLICABLE": 5
+  },
+  "predicate_matrix_scope": "Reproduces the immediately preceding current-matrix audit accepted by the maintainer: 31 normalized historical entries plus the explicit image/staging predicate. GB21-24 are excluded hot-transition prerequisites; GB31 is the decision output, not an input. PASS is bounded experimental readiness, not physical GPU postcondition or fresh invocation verification.",
+  "predicate_matrix": [
+    {
+      "id": "GB01",
+      "predicate": "Exact target/rev121 guards",
+      "state": "PASS",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "first_owner_records",
+        "qualification"
+      ],
+      "scope_and_reason": "Existing rev121 discovery plus matching target snapshot; no repeated identification."
+    },
+    {
+      "id": "GB02",
+      "predicate": "Expected kernel ABI/config/generated layout",
+      "state": "PASS",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "qualification",
+        "first_owner_records"
+      ],
+      "scope_and_reason": "Exact qualified ABI/config/layout; captured expected kernel."
+    },
+    {
+      "id": "GB03",
+      "predicate": "Candidate artifact identity and complete imports",
+      "state": "PASS",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "module_identity"
+      ],
+      "scope_and_reason": "Current module bytes have their own qualification, not inherited old identity."
+    },
+    {
+      "id": "GB04",
+      "predicate": "Integration/source/toolchain provenance",
+      "state": "PASS",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "qualification"
+      ],
+      "scope_and_reason": "Recorded normal qualified build inputs and byte-identical repeat; no rebuild here."
+    },
+    {
+      "id": "GB05",
+      "predicate": "Static i386 client/UAPI/operation flag",
+      "state": "PASS",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "selected_client_qualification",
+        "qualification"
+      ],
+      "scope_and_reason": "Selected client ABI/identity/inert flag criterion only; known post-call preservation defects remain recorded."
+    },
+    {
+      "id": "GB06",
+      "predicate": "Ten private BOs/VA/MMU and 49 relocations",
+      "state": "PASS",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "obligation_definitions",
+        "qualification"
+      ],
+      "scope_and_reason": "Reviewed fixed ownership/bounds/relocations and private-VA correction; live construction unobserved."
+    },
+    {
+      "id": "GB07",
+      "predicate": "USE 3/4 reservation/programming/lifetime",
+      "state": "PASS",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "obligation_definitions",
+        "qualification",
+        "diagnostic_audit"
+      ],
+      "scope_and_reason": "Reservation/lifetime software criterion; actual GPU reservation unobserved."
+    },
+    {
+      "id": "GB08",
+      "predicate": "Publication decision for this frozen scene",
+      "state": "PASS",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "obligation_definitions",
+        "diagnostic_audit",
+        "qualification"
+      ],
+      "scope_and_reason": "Scoped experimental risk acceptance, not architectural coherency proof."
+    },
+    {
+      "id": "GB09",
+      "predicate": "Historical operational bootstrap predicate",
+      "state": "PASS",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "obligation_definitions",
+        "qualification",
+        "diagnostic_audit"
+      ],
+      "scope_and_reason": "Qualified bounded bootstrap software; physical ready response unobserved."
+    },
+    {
+      "id": "GB10",
+      "predicate": "Fixed scene/TA/XHW/raster ordering",
+      "state": "PASS",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "obligation_definitions",
+        "qualification",
+        "diagnostic_audit"
+      ],
+      "scope_and_reason": "Recorded unchanged fixed scene, plans and sequencing."
+    },
+    {
+      "id": "GB11",
+      "predicate": "Attributed TA/PBE/DPM events and selected fault mapping",
+      "state": "PASS",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "obligation_definitions",
+        "qualification",
+        "diagnostic_audit"
+      ],
+      "scope_and_reason": "Reviewed attribution/fault logic; ledger alone cannot establish hardware completion."
+    },
+    {
+      "id": "GB12",
+      "predicate": "ISP bracket risk decision",
+      "state": "PASS",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "historical_cycle06",
+        "diagnostic_audit"
+      ],
+      "scope_and_reason": "Retained scoped ISP assumption; not universal reset/display safety."
+    },
+    {
+      "id": "GB13",
+      "predicate": "L12 risk decision",
+      "state": "PASS",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "obligation_definitions",
+        "diagnostic_audit"
+      ],
+      "scope_and_reason": "Scoped L12 assumption retained; architectural source bound remains unknown."
+    },
+    {
+      "id": "GB14",
+      "predicate": "FT-AUX risk decision",
+      "state": "PASS",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "obligation_definitions",
+        "diagnostic_audit"
+      ],
+      "scope_and_reason": "Scoped FT-AUX assumption retained; architectural source bound remains unknown."
+    },
+    {
+      "id": "GB15",
+      "predicate": "One scene, sequence 1, at most one TA and raster fire",
+      "state": "PASS",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "obligation_definitions",
+        "qualification",
+        "handoff"
+      ],
+      "scope_and_reason": "Fixed one-call/one-scene contract; immediate one-shot availability still requires verification."
+    },
+    {
+      "id": "GB16",
+      "predicate": "5×HZ/300,000-sample limits and HOLD",
+      "state": "PASS",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "qualification",
+        "diagnostic_audit",
+        "handoff"
+      ],
+      "scope_and_reason": "Unchanged workload deadline/sample/HOLD rules, not a whole-machine hang guarantee."
+    },
+    {
+      "id": "GB17",
+      "predicate": "HOLD BO/USE/scene/module ownership",
+      "state": "PASS",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "obligation_definitions",
+        "qualification",
+        "handoff"
+      ],
+      "scope_and_reason": "Retain resources on ambiguous failure; no hot recovery or retry."
+    },
+    {
+      "id": "GB18",
+      "predicate": "Completion/readback success criterion",
+      "state": "PASS",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "handoff"
+      ],
+      "scope_and_reason": "Defined full-image and attributable completion acceptance rule; no observed completion/readback."
+    },
+    {
+      "id": "GB19",
+      "predicate": "Derivative IRQ/modeset/error unwind",
+      "state": "PASS",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "obligation_definitions",
+        "qualification"
+      ],
+      "scope_and_reason": "Source-unchanged qualified derivative lifecycle handling reused."
+    },
+    {
+      "id": "GB20",
+      "predicate": "Original preserved recovery artifact",
+      "state": "PASS",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "stock_records",
+        "poststage_records",
+        "first_owner_records",
+        "prior_recovery"
+      ],
+      "scope_and_reason": "Preserved original/stock bytes and default verified; not hot restoration safety."
+    },
+    {
+      "id": "GB21",
+      "predicate": "Original display/console/service teardown facts",
+      "state": "NOT_APPLICABLE",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "handoff",
+        "diagnostic_audit"
+      ],
+      "scope_and_reason": "Original display teardown is outside the selected first-owner path."
+    },
+    {
+      "id": "GB22",
+      "predicate": "First hot removal of active original",
+      "state": "NOT_APPLICABLE",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "handoff"
+      ],
+      "scope_and_reason": "Hot removal excluded and still prohibited."
+    },
+    {
+      "id": "GB23",
+      "predicate": "Replacement insertion after that removal",
+      "state": "NOT_APPLICABLE",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "handoff"
+      ],
+      "scope_and_reason": "Hot replacement excluded and still prohibited."
+    },
+    {
+      "id": "GB24",
+      "predicate": "Normal hot original restoration",
+      "state": "NOT_APPLICABLE",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "handoff"
+      ],
+      "scope_and_reason": "Hot original restoration excluded and still prohibited."
+    },
+    {
+      "id": "GB25",
+      "predicate": "First-load alternative and original fallback",
+      "state": "PASS",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "first_owner_records",
+        "operator_witness",
+        "qualification",
+        "prior_recovery",
+        "poststage_records"
+      ],
+      "scope_and_reason": "Current first ownership observed; unchanged recovery design and preserved STOCK path reused; GPU-hang recovery not proved."
+    },
+    {
+      "id": "GB26",
+      "predicate": "Fresh live kernel/module/PCI/DRM/fb/VT/FD/service guards",
+      "state": "PASS",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "first_owner_records"
+      ],
+      "scope_and_reason": "70/70 ownership/health snapshot at capture only, not fresh invocation guards."
+    },
+    {
+      "id": "GB27",
+      "predicate": "Fresh loaded candidate identity/binding",
+      "state": "PASS",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "first_owner_records",
+        "module_identity"
+      ],
+      "scope_and_reason": "Exact current loaded note, Live state, binding and hook trace observed."
+    },
+    {
+      "id": "GB28",
+      "predicate": "Runtime module-signature enforcement",
+      "state": "PASS",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "first_owner_records"
+      ],
+      "scope_and_reason": "Actual candidate load under existing signature policy; bounded diagnostics and no classifier faults."
+    },
+    {
+      "id": "GB29",
+      "predicate": "Physically present operator/independent capture/root staging",
+      "state": "PASS",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "operator_witness",
+        "first_owner_command",
+        "menu_receipt",
+        "stock_records",
+        "poststage_records"
+      ],
+      "scope_and_reason": "Operator reports, attributable root capture and image staging established; client staging not performed."
+    },
+    {
+      "id": "GB30",
+      "predicate": "Current exact transition and recovery authorization",
+      "state": "PASS",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "handoff",
+        "operator_witness",
+        "successor_procedure"
+      ],
+      "scope_and_reason": "Documented first-load/recovery consent and procedure; no SGX execution permission follows."
+    },
+    {
+      "id": "GB31",
+      "predicate": "Current Gate B and exact-action whitelist",
+      "state": "NOT_APPLICABLE",
+      "provenance": [
+        "historical_cycle06"
+      ],
+      "current_evidence": [
+        "prior_opening_boundary"
+      ],
+      "scope_and_reason": "Overall Gate B/whitelist is the review output, not an input predicate."
+    },
+    {
+      "id": "GB32",
+      "predicate": "Exact image/staging/STOCK preservation",
+      "state": "PASS",
+      "provenance": [
+        "historical_corrected"
+      ],
+      "current_evidence": [
+        "qualification",
+        "image_qualification",
+        "image_identity",
+        "stock_records",
+        "poststage_records",
+        "first_owner_records"
+      ],
+      "scope_and_reason": "New image and unique staging independently verified; historical entries and STOCK default preserved."
+    }
+  ],
+  "identity_bindings": {
+    "boot_id": "89fc7306-6dac-4ab9-af62-360b7152ef22",
+    "module_build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+    "action": "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1",
+    "kernel": "5.10.240-antix.1-486-smp",
+    "architecture": "i686",
+    "module": {
+      "path": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/module/gma500_gfx.ko",
+      "size_bytes": 244960,
+      "sha256": "4141a07c1f2d2ffc9ab2770b7b4cf654f68c396275dad15f0ddc68192529d8e6",
+      "build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+      "loaded_note_sha256": "edb1e3e59cfd70c48d400bec89f2a30c1a436b05bf115bc1a05581abc153bdc9",
+      "identity_evidence": [
+        "module_identity",
+        "qualification",
+        "first_owner_records"
+      ]
+    },
+    "diagnostic_image": {
+      "source_path": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/image/build-01/initrd.img-sgx535-firstload-diagnostic-01",
+      "staged_path": "/boot/initrd.img-5.10.240-antix.1-486-smp-sgx535-firstload-314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+      "size_bytes": 50805231,
+      "sha256": "fe64b3dcfe74b78a6d96edcd4fd7c118c3901fcff8631afec6c14647da292e3c",
+      "embedded_module_sha256": "4141a07c1f2d2ffc9ab2770b7b4cf654f68c396275dad15f0ddc68192529d8e6",
+      "identity_evidence": [
+        "image_identity",
+        "image_qualification",
+        "poststage_records",
+        "first_owner_records",
+        "menu_receipt"
+      ]
+    },
+    "selected_client": {
+      "source": {
+        "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot.c",
+        "size": 2032,
+        "sha256": "4271a62846a0f02694e574161658920987ee89ad69e3bf5b2be79fc83f5634d2"
+      },
+      "binary": {
+        "path": "/home/gama/sgx535-gfx/docs/phase8/artifacts/frozen-triangle-one-shot-i386",
+        "size": 771320,
+        "sha256": "758076e2f7e20d0eff2df565d4440c8b3fd3f846922427e770f55ebc472edccf"
+      },
+      "selection_changed": false,
+      "staged_by_this_decision": false,
+      "qualification_evidence": [
+        "selected_client_qualification",
+        "qualification",
+        "client_identity_record"
+      ]
+    },
+    "uapi": {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_uapi.h",
+      "size": 760,
+      "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420",
+      "qualification_evidence": [
+        "selected_client_qualification",
+        "client_identity_record"
+      ]
+    }
+  },
+  "qualification_basis": {
+    "evidence": [
+      "module_identity",
+      "qualification",
+      "image_identity",
+      "image_qualification",
+      "selected_client_qualification",
+      "obligation_definitions",
+      "diagnostic_audit"
+    ],
+    "reuse": "Existing qualified artifact/input/test evidence reused; no builds, hashes or qualification suites repeated. Old artifact identities do not qualify the new candidate.",
+    "verification_this_task": "Existing-record identity, evidence-path, predicate-count and captured-guard consistency checks only."
+  },
+  "first_owner_basis": {
+    "boot_id": "89fc7306-6dac-4ab9-af62-360b7152ef22",
+    "module_build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+    "guard_count": 70,
+    "guards_passed": 70,
+    "candidate_note": "OBSERVED",
+    "module_state_at_capture": "Live",
+    "ordered_hook_trace": "OBSERVED",
+    "health_classifier_faults_at_capture": [],
+    "operator_observation_receipt": "VALID under prospective successor; no photograph supplied",
+    "evidence": [
+      "first_owner_records",
+      "first_owner_stdout",
+      "first_owner_stderr",
+      "first_owner_command",
+      "first_owner_raw_verdict",
+      "first_owner_consistency",
+      "operator_witness",
+      "menu_receipt"
+    ],
+    "freshness_limit": "Historical evidence for this exact recorded boot; not a new observation or substitute for fresh pre-invocation checks. Raw capture verdict alone does not establish first ownership; attributable capture and operator/successor records are used jointly."
+  },
+  "evidence": {
+    "historical_cycle06": "docs/hardware-evidence/MINI12-20261002T005013Z-FIRSTLOAD-CYCLE-06/gate-b-decision.json",
+    "historical_corrected": "docs/hardware-evidence/MINI12-20261002T040615Z-CORRECTED-FIRSTLOAD-01/gate-b-decision.json",
+    "obligation_definitions": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "diagnostic_audit": "docs/phase8/diagnostic-gate-b-technical-audit.md",
+    "module_identity": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/qualification/identity.json",
+    "qualification": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/qualification/offline-result.json",
+    "image_identity": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/image/build-01/identity.json",
+    "image_qualification": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/image/proof/qualification.json",
+    "first_owner_records": "docs/hardware-evidence/MINI12-20261003T002627Z-FROZEN-FIRSTOWNER-314e2f3b-01/candidate-first-owner/decoded-records.json",
+    "first_owner_stdout": "docs/hardware-evidence/MINI12-20261003T002627Z-FROZEN-FIRSTOWNER-314e2f3b-01/candidate-first-owner/stdout.txt",
+    "first_owner_stderr": "docs/hardware-evidence/MINI12-20261003T002627Z-FROZEN-FIRSTOWNER-314e2f3b-01/candidate-first-owner/stderr.txt",
+    "first_owner_command": "docs/hardware-evidence/MINI12-20261003T002627Z-FROZEN-FIRSTOWNER-314e2f3b-01/candidate-first-owner/command.json",
+    "first_owner_raw_verdict": "docs/hardware-evidence/MINI12-20261003T002627Z-FROZEN-FIRSTOWNER-314e2f3b-01/candidate-first-owner/verdict.json",
+    "first_owner_consistency": "docs/hardware-evidence/MINI12-20261003T002627Z-FROZEN-FIRSTOWNER-314e2f3b-01/prospective-operator-observation/first-owner-consistency-verdict.json",
+    "operator_witness": "docs/hardware-evidence/MINI12-20261003T002627Z-FROZEN-FIRSTOWNER-314e2f3b-01/prospective-operator-observation/candidate-witness.json",
+    "menu_receipt": "docs/hardware-evidence/MINI12-20261003T002627Z-FROZEN-FIRSTOWNER-314e2f3b-01/prospective-operator-observation/accepted-menu-receipt.json",
+    "stock_records": "docs/hardware-evidence/MINI12-20261003T002627Z-FROZEN-FIRSTOWNER-314e2f3b-01/stock-preflight/decoded-records.json",
+    "poststage_records": "docs/hardware-evidence/MINI12-20261003T002627Z-FROZEN-FIRSTOWNER-314e2f3b-01/poststage/decoded-records.json",
+    "stage_receipts": "docs/hardware-evidence/MINI12-20261003T002627Z-FROZEN-FIRSTOWNER-314e2f3b-01/stage/stdout.txt",
+    "prior_recovery": "docs/hardware-evidence/MINI12-20261002T054751Z-DIAGNOSTIC-STAGING-01/RESULT.md",
+    "selected_client_qualification": "docs/phase8/artifacts/frozen-triangle-one-shot-i386.md",
+    "client_identity_record": "docs/phase8/prospective-client-substitution-review-request.json",
+    "successor_procedure": "docs/phase8/frozen-first-owner-operator-observation-20261003.md",
+    "prior_opening_boundary": "docs/hardware-evidence/MINI12-20261003T002627Z-FROZEN-FIRSTOWNER-314e2f3b-01/prospective-operator-observation/opening-boundary.json",
+    "promotion_boundary": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/promotion-decision.json",
+    "handoff": "docs/phase8/CODEX-HANDOFF-20261002.md"
+  },
+  "historical_preservation": {
+    "historical_records_remain_unchanged": true,
+    "statement": "This new record does not change or retroactively reinterpret historical BLOCKED/PASS decisions, empty whitelists, consumed attempts, raw captures or client-promotion records. The prior handoff body remains byte-for-byte preserved below the new prospective section.",
+    "prior_gate_b": "BLOCKED",
+    "prior_whitelist": [],
+    "new_decision_previously_existed": false
+  },
+  "prospective_client_substitution": {
+    "approved_by_this_decision": false,
+    "promoted": false,
+    "selected_client_remains": "Existing qualified selected client, unchanged",
+    "prospective_client_state": "Offline technical qualification passed; applicable substitution review not established.",
+    "separate_requirement": "An applicable substitution review and explicit successor identity binding remain required; this readiness decision binds only the old selected client.",
+    "known_selected_client_limitations": "Previously demonstrated post-call short-write/EINTR and failed-ioctl reporting limitations remain recorded; the prospective hardening is not silently selected. End-to-end preservation procedure is not certified by this decision."
+  },
+  "still_required_fresh_pre_invocation_checks": [
+    {
+      "id": "PRE01",
+      "requirement": "Fresh expected boot, kernel/architecture, loaded candidate note/Build ID and module Live state; STOP on drift.",
+      "state": "NOT PERFORMED BY THIS DECISION"
+    },
+    {
+      "id": "PRE02",
+      "requirement": "Fresh PCI/DRM/framebuffer/VT/IRQ ownership, required services and acceptable complete kernel health/taint.",
+      "state": "NOT PERFORMED BY THIS DECISION"
+    },
+    {
+      "id": "PRE03",
+      "requirement": "Unused one-shot supported by invocation/evidence history and continuity; no ioctl availability probe or reset.",
+      "state": "NOT PERFORMED BY THIS DECISION"
+    },
+    {
+      "id": "PRE04",
+      "requirement": "Reviewed client/output destinations; exact selected client protected exclusive-create/no-follow staging, ownership/type/link/identity checks and destination readback; expected output paths absent.",
+      "state": "NOT PERFORMED; DESTINATIONS NOT ESTABLISHED IN AVAILABLE RECORDS"
+    },
+    {
+      "id": "PRE05",
+      "requirement": "Working current noninteractive privilege, physically available operator and reviewed recovery readiness.",
+      "state": "NOT PERFORMED BY THIS DECISION"
+    },
+    {
+      "id": "PRE06",
+      "requirement": "Same-boot continuity across preparation and immediately before invocation; a different boot needs its own applicable binding/decision.",
+      "state": "NOT PERFORMED BY THIS DECISION"
+    },
+    {
+      "id": "PRE07",
+      "requirement": "Legitimately available reviewed invocation/preservation/copy/correlation procedure and protected evidence destinations; preserve original readback, analyze a copy; do not reconstruct the unavailable layer.",
+      "state": "PROCEDURE AVAILABILITY NOT ESTABLISHED BY THIS DECISION"
+    },
+    {
+      "id": "PRE08",
+      "requirement": "Separate applicable explicit SGX execution permission after required prerequisites; unchanged bounds/HOLD/no-retry rules.",
+      "state": "SGX EXECUTION NOT AUTHORIZED"
+    }
+  ],
+  "evidence_acceptance_limits": [
+    "Accepted publication/ISP/L12/FT-AUX assumptions remain scoped experimental risk decisions, not architectural proof.",
+    "Completion ledger alone, exit status, checksum or nonzero pixel count cannot establish GPU execution or a triangle.",
+    "Original 4096-byte 32x32 linear ARGB8888 readback (stride 128) must be preserved unchanged and a copy checked at all 1024 positions against white vertices (8,8),(24,8),(8,24) and zero background, jointly with attributable TA/end-render/3D-memory-free evidence.",
+    "Sampling/edge convention remains unqualified where relevant.",
+    "No implicit hardware observation, future-state continuity, or recovery-from-GPU-hang proof follows from this readiness decision."
+  ],
+  "platform_and_procedure_boundaries": "This is a project-controlled maintainer readiness decision, not an external/platform approval. Existing platform restrictions and unavailable restricted materials remain unchanged; no permission to reopen, reconstruct or bypass them is granted.",
+  "execution_and_result": {
+    "sgx_invocations_on_candidate": 0,
+    "invocations_this_task": 0,
+    "ta_fire": "NOT ATTEMPTED / UNOBSERVED",
+    "ta_completion": "NOT ATTEMPTED / UNOBSERVED",
+    "end_render": "NOT ATTEMPTED / UNOBSERVED",
+    "memory_free_3d": "NOT ATTEMPTED / UNOBSERVED",
+    "readback": "NONE",
+    "triangle": "NOT ATTEMPTED",
+    "new_hold_or_recovery": false,
+    "mini12_contact": false,
+    "new_boot": false,
+    "client_staging": false,
+    "client_substitution": false,
+    "module_or_image_changed": false
+  },
+  "stop_rules": "STOP on failed guard, identity/ownership/health drift, missing attribution or unavailable reviewed procedure. If an ioctl may have occurred and outcome is failure, ambiguous, incomplete or uncertain: preserve raw/HOLD evidence; no retry, no improvised reset/unbind/module replacement/hot recovery. Attempt05 remains consumed."
+}

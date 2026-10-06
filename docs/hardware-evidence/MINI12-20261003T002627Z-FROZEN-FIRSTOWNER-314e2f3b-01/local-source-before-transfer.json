@@ -1,0 +1,24 @@
+[
+  {
+    "path": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/image/build-01/initrd.img-sgx535-firstload-diagnostic-01",
+    "size": 50805231,
+    "sha256": "fe64b3dcfe74b78a6d96edcd4fd7c118c3901fcff8631afec6c14647da292e3c",
+    "dev": 66325,
+    "ino": 1748528,
+    "mtime_ns": 1790981777811349424,
+    "ctime_ns": 1790981777811349424,
+    "nlink": 1,
+    "classification": "PASS SOURCE BEFORE TRANSFER"
+  },
+  {
+    "path": "/home/gama/sgx535-offline/frozen-staging-314e2f3b-20261002T234125Z/diagnostic-entry.proposed",
+    "size": 1090,
+    "sha256": "92d36c4ec863e938246320d88ab003e02ee309d2b9d951c9b153a9243f404b06",
+    "dev": 66325,
+    "ino": 1687873,
+    "mtime_ns": 1790984525047348376,
+    "ctime_ns": 1790984525047348376,
+    "nlink": 1,
+    "classification": "PASS SOURCE BEFORE TRANSFER"
+  }
+]

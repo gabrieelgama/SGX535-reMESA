@@ -1,0 +1,16 @@
+{
+  "classification": "PASS RAW CAPTURE ONLY",
+  "boot_id": "29e27f75-7c84-4537-9ab8-8138bc3eac1d",
+  "mode": "experimental",
+  "sgx_authorized": false,
+  "boot_authorized": false,
+  "first_owner": "NOT QUALIFIED BY TIMING ALONE",
+  "full_recovery": "NOT QUALIFIED BY TIMING ALONE",
+  "existing_stage_receipts": {
+    "classification": "PASS PROVIDED EXISTING FILE RECEIPTS ONLY",
+    "sgx_authorized": false,
+    "boot_authorized": false
+  },
+  "guards_passed": 55,
+  "qualification": "PASS PASSIVE RAW OBSERVATION; full record/operator review required"
+}

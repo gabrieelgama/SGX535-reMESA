@@ -1,0 +1,9 @@
+{
+  "requested_utc": "2026-10-03T00:54:40.383476+00:00",
+  "procedure_id": "MINI12-FROZEN-FIRSTOWNER-OPERATOR-OBSERVATION-01",
+  "prior_stock_boot_id": "f684ce25-dfdc-40bd-8426-c657f24c43ce",
+  "requested_action": "operator machine boundary to visible GRUB; hold without frozen selection; report exact entries and initial STOCK default",
+  "photograph_requested": false,
+  "candidate_selections_authorized_so_far": 0,
+  "sgx_invocations_this_session": 0
+}

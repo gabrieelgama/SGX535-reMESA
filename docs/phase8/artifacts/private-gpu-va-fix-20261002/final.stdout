@@ -1,0 +1,4 @@
+PDS rc=0 start=0x20000000 end=0x2001ffff
+GTT overlap rc=-16
+Occupied PDS rc=-16
+allocation/alignment/GTT/overlap guards PASS

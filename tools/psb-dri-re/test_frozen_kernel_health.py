@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 import unittest
 import frozen_first_load_procedure as procedure
+from frozen_kernel_health import classify_kernel_log
 ROOT=Path(__file__).resolve().parents[2]
 CAPTURE=ROOT/'docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/preflight-02/stdout.txt'
 BL='[   19.356593] gma500 0000:00:02.0: BL bug: Reg 00000000 save 00000000'
@@ -40,5 +41,20 @@ class KernelHealthTests(unittest.TestCase):
  def test_changed_or_repeated_baseline_diagnostics_reject(self):
   for log in [BL.replace('save 00000000','save 00000001'),BL+'\n'+BL,self.capture['kernel_log']+'\n[ 99.0] '+ACPI,BL+' Oops: bad access']:
    with self.subTest(log=log[-120:]):self.reject(log)
+ def test_cycle05_unsigned_drm_loader_notice_is_visible_bounded_and_not_a_gpu_fault(self):
+  notice='drm: module verification failed: signature and/or required key missing - tainting kernel'
+  capture=ROOT/'docs/hardware-evidence/MINI12-20261002T001828Z-FIRSTLOAD-CYCLE-05/experimental/decoded-failed-records.json'
+  log=json.loads(capture.read_text())[1]['kernel_log']
+  for value in [notice,log]:
+   with self.subTest(value=value[-80:]):
+    receipt=classify_kernel_log(value)
+    self.assertNotEqual(receipt['classification'],'REJECT')
+    self.assertEqual(receipt['stock_diagnostics']['unsigned_drm_loader_notice'],1)
+  for value in [notice+'\n'+notice,notice+' Oops: bad access',
+                notice.replace('required key missing','signature invalid'),
+                notice+'\n[drm] ERROR: failed to bind',
+                log+'\nBUG: bad access',log+'\nWARNING: CPU: 0 at test.c:1',
+                log+'\ngma500: MMU fault',log+'\nKernel panic - not syncing']:
+   with self.subTest(value=value[-80:]):self.assertEqual(classify_kernel_log(value)['classification'],'REJECT')
  def test_empty_capture_does_not_pass(self):self.reject('')
 if __name__=='__main__':unittest.main()

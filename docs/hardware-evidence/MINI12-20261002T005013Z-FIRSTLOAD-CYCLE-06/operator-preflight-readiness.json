@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-02T00:51:31.966708+00:00",
+  "local_sudo_succeeded": true,
+  "normal_userspace": true,
+  "physical_display_normal": true,
+  "operator_present": true,
+  "grub_and_manual_power_available": true,
+  "source": "affirmative response to combined current STOCK readiness question",
+  "literal_operator_reply": "CONCEDED"
+}

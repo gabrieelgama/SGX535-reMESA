@@ -1,0 +1,1785 @@
+{
+  "schema": "SGX535_KNOWN_GOOD_TRIANGLE_READBACK_V1",
+  "date": "2026-10-06",
+  "milestone": "KNOWN_GOOD_TRIANGLE_READBACK",
+  "historical_repository_commit": "f8565115977bda8a529401a7ac5cba822d1a0d36",
+  "commit_is_not_complete_source_identity": "dirty qualified source/build snapshots and exact binary hashes are authoritative; commit alone is insufficient",
+  "boot_id": "f1ab6606-0561-445f-a397-28a028516cd7",
+  "machine": "Inspiron 1210",
+  "kernel": "5.10.240-antix.1-486-smp",
+  "architecture": "i686",
+  "CORE_ID": "0x01130000",
+  "CORE_REVISION": "0x00010201",
+  "core": "SGX535 rev121",
+  "candidate": {
+    "driver": {
+      "path": "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/build/module/gma500_gfx.ko",
+      "bytes": 250788,
+      "sha256": "c925caedebcc0699aef53227d29e64b47bf2833efd9d2e611cba276dd3a08ab3",
+      "build_id": "85ec06b428c99fac7f9127919b7a488d204f4a77",
+      "loaded_note_sha256": "4499399a9f06a35b924c770ec5f04b8e5a5170c4f744359c675d13ca89223644",
+      "abi": "ELF32/i386",
+      "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 ",
+      "dependencies": "drm,drm_kms_helper,sgx535_provenance,video,i2c-algo-bit",
+      "versioned_imports": 253,
+      "missing_imports": [],
+      "crc_mismatches": {},
+      "unversioned_undefined": [],
+      "module_layout": "0xb84efb99",
+      "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+      "qualification": "PASS"
+    },
+    "observer": {
+      "path": "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/build/observer/sgx535_provenance.ko",
+      "bytes": 26284,
+      "sha256": "2e35e863d51dbc1d407feef08f08bb2edc6390af621a0f173a9b1a73ec76158a",
+      "build_id": "f11d3abb072caa4e1d32836ef92ce201e9c9d126",
+      "loaded_note_sha256": "6afbac1cf48a211135e2a4b4ffc30f96ace64f6d397071595bbc328966bb8af0",
+      "abi": "ELF32/i386",
+      "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 ",
+      "dependencies": "",
+      "versioned_imports": 38,
+      "missing_imports": [],
+      "crc_mismatches": {},
+      "unversioned_undefined": [],
+      "module_layout": "0xb84efb99",
+      "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+      "qualification": "PASS"
+    },
+    "image": {
+      "path": "/boot/initrd.img-5.10.240-antix.1-486-smp-sgx535-firstload-85ec06b428c99fac7f9127919b7a488d204f4a77-3d9eb6ba",
+      "bytes": 50816631,
+      "sha256": "3d9eb6baa3d821b4ff98e60ea83f1a94022b5fb2881038d2ad91b95cdfb7448e"
+    },
+    "client": {
+      "protected_path": "/root/sgx535-frozen-seq1-85ec06b428c99fac7f9127919b7a488d204f4a77-3d9eb6ba/frozen-triangle-one-shot-response-i386",
+      "size": 775264,
+      "sha256": "2f84917f96db2859678797a327d40d9638325e5c5efb6e0dfccef44d756b4835",
+      "source_sha256": "919c2611e048e4a660ecae3542264adf5a5367d9b0fbe7fbceff2f45f90adedf",
+      "inode_receipt": {
+        "dev": 2049,
+        "ino": 524751,
+        "size": 775264,
+        "sha256": "2f84917f96db2859678797a327d40d9638325e5c5efb6e0dfccef44d756b4835",
+        "uid": 0,
+        "gid": 0,
+        "mode": 320,
+        "nlink": 1,
+        "regular": true
+      },
+      "executed": false
+    },
+    "uapi": {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_uapi.h",
+      "size": 760,
+      "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420"
+    }
+  },
+  "repository_artifacts": {
+    "driver": {
+      "path": "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/known-good-artifacts/gma500_gfx.ko",
+      "sha256": "c925caedebcc0699aef53227d29e64b47bf2833efd9d2e611cba276dd3a08ab3",
+      "bytes": 250788
+    },
+    "observer": {
+      "path": "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/known-good-artifacts/sgx535_provenance.ko",
+      "sha256": "2e35e863d51dbc1d407feef08f08bb2edc6390af621a0f173a9b1a73ec76158a",
+      "bytes": 26284
+    },
+    "image": {
+      "path": "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/known-good-artifacts/initrd.img-sgx535-provenance-85ec06b428c99fac7f9127919b7a488d204f4a77",
+      "sha256": "3d9eb6baa3d821b4ff98e60ea83f1a94022b5fb2881038d2ad91b95cdfb7448e",
+      "bytes": 50816631
+    },
+    "client": {
+      "path": "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/known-good-artifacts/frozen-triangle-one-shot-response-i386",
+      "sha256": "2f84917f96db2859678797a327d40d9638325e5c5efb6e0dfccef44d756b4835",
+      "bytes": 775264
+    },
+    "uapi": {
+      "path": "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/known-good-artifacts/gma500_fixed_uapi.h",
+      "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420",
+      "bytes": 760
+    }
+  },
+  "scene": {
+    "width": 32,
+    "height": 32,
+    "format": "ARGB8888",
+    "stride": 128,
+    "bytes": 4096,
+    "vertices": [
+      [
+        8,
+        8
+      ],
+      [
+        24,
+        8
+      ],
+      [
+        8,
+        24
+      ]
+    ],
+    "geometry_indices_TA_PDS_ISP_PBE_surface_unchanged": true
+  },
+  "fragment": {
+    "classification": "EXPERIMENTAL_HYPOTHESIS \u2014 NOT ESTABLISHED",
+    "hypothesis": "FIRE2 suffix-only fragment may not have established effective nonzero color",
+    "only_variable": "eight fragment-program bytes",
+    "original_words": [
+      "00000000",
+      "f8040140"
+    ],
+    "experimental_words": [
+      "001f00ff",
+      "fca7f1f1"
+    ],
+    "diagnostic_argb": "ffff00ff",
+    "offline_scope": "construction correctness only; GPU behavior unproven"
+  },
+  "source_identity": {
+    "tools/psb-dri-re/frozen_kernel_contract.c": {
+      "sha256": "fd35abd561f21e877c287f7e26f4bdd3775eed165c5ee77d5e00f0d48c1310fe",
+      "bytes": 42506
+    },
+    "tools/psb-dri-re/experimental_fragment_constant.h": {
+      "sha256": "8b1c0316f351c1624f151e3a1dfe46e237081d1862d9d4c7fa98413a32f440a7",
+      "bytes": 1245
+    },
+    "tools/psb-dri-re/test_experimental_fragment_constant.c": {
+      "sha256": "7525f848485337f709f3aeea8364ce9b3b6367a60429035761454bd0277af63a",
+      "bytes": 3085
+    }
+  },
+  "build_environment": {
+    "argv": [
+      "make",
+      "-C",
+      "/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp",
+      "O=/home/gama/sgx535-offline/antix-kbuild-successor-20260930/output",
+      "ARCH=x86",
+      "CC=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14 --sysroot=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root",
+      "CROSS_COMPILE=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-",
+      "LD=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-ld.bfd",
+      "AS=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-as",
+      "HOSTCC=/usr/bin/gcc-14",
+      "HOSTCFLAGS=-I/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/include -I/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/include/aarch64-linux-gnu",
+      "HOSTLDFLAGS=-L/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/lib/aarch64-linux-gnu",
+      "LOCALVERSION=-486-smp",
+      "V=1",
+      "M=/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/build/module",
+      "KBUILD_EXTRA_SYMBOLS=/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/build/observer/Module.symvers",
+      "-j2",
+      "modules"
+    ],
+    "environment": {
+      "LD_LIBRARY_PATH": "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/lib/aarch64-linux-gnu",
+      "KBUILD_BUILD_TIMESTAMP": "2026-09-30 00:00:00 UTC",
+      "KBUILD_BUILD_USER": "sgx535-offline",
+      "KBUILD_BUILD_HOST": "offline"
+    },
+    "entry_input": "unchanged opaque copy; no content investigation"
+  },
+  "expected": {
+    "FIRE3_invocations": 1,
+    "client_exit_status": 0,
+    "ioctl_return": 0,
+    "operation_errno": 0,
+    "phase": {
+      "number": 9,
+      "name": "RETIRED"
+    },
+    "accepted_ledger": "0x7",
+    "response_capsule_readback_agreement": "CONFIRMED with separately verified live boot/producer/source interval bindings",
+    "readback": {
+      "bytes": 4096,
+      "all_zero": false,
+      "nonzero_pixels": 120,
+      "expected_magenta_pixels": 120,
+      "zero_pixels": 904,
+      "unique_values": {
+        "0x00000000": 904,
+        "0xffff00ff": 120
+      },
+      "bbox": {
+        "min_x": 8,
+        "min_y": 8,
+        "max_x": 22,
+        "max_y": 22
+      },
+      "all_foreground_coordinates": "for y=8..22, x=8..(30-y), inclusive",
+      "spatial_analysis": "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/live-fire3-structural-binding-20261006T054114Z/fire3-one-authorized-call/spatial-analysis.json",
+      "shape": "filled right triangle; exact whole-image pixel-center reference with hypotenuse ties excluded",
+      "reference_mismatches": 0
+    },
+    "triangle": "ESTABLISHED IN FIRE3 (diagnostic opaque-magenta frozen triangle)"
+  },
+  "historical_guard_results": {
+    "first_owner": "82/82 preserved PASS",
+    "protected_preparation": "56/56 PASS",
+    "independent_final": "204/204 PASS",
+    "immediate_precheck": "42/42 PASS"
+  },
+  "historical_continuity": "47/47 PASS",
+  "experimental_classification": "CONSTANT_FRAGMENT_HYPOTHESIS_SUPPORTED",
+  "source_original_archive": "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/live-fire3-structural-binding-20261006T054114Z",
+  "archived_execution_card": "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/one-shot-execution-card.json",
+  "archived_final_seal": "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/final-evidence-seal.json",
+  "archived_transfer_seal": "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/preparation-seal.json",
+  "sgx_execution_authorized": false,
+  "display_publication_established": false,
+  "authority": "Historical cards/scripts are archival records only. No render/display execution permission is conveyed.",
+  "successful_build_input_hashes": {
+    "build/module/Makefile": {
+      "bytes": 1524,
+      "sha256": "a6b4dec38edc587352149e3fce2d578c4f76983120ec22d866e04663d2485113"
+    },
+    "build/module/accel_2d.c": {
+      "bytes": 9508,
+      "sha256": "af29e1a7a09f34dbaaacb2c44f04a65c0afc302820bb3ff2460cee619193dfed"
+    },
+    "build/module/backlight.c": {
+      "bytes": 2076,
+      "sha256": "995720191e06a74df2cdb80a1bf8d77fe49aa9dd38e60139dcd15f516be63e1d"
+    },
+    "build/module/blitter.c": {
+      "bytes": 1004,
+      "sha256": "8a829ea614c78dee1bc5fc3995121974b281988372e85ac877e7c6979cc3ec6c"
+    },
+    "build/module/blitter.h": {
+      "bytes": 317,
+      "sha256": "6012ad2f5f093d76a2d2e7252a30065d6a3d65e0cdb63c0dd70110e17a0d9f5a"
+    },
+    "build/module/cdv_device.c": {
+      "bytes": 16219,
+      "sha256": "3559ff5b4a58d051a1ca9d51b8bc30942c94afb4c644312dfa31692bb3df8c5e"
+    },
+    "build/module/cdv_device.h": {
+      "bytes": 876,
+      "sha256": "7b589e4244783323361330aaee7c856f9f853f8b70457b8f6a0bf4b29cbe058f"
+    },
+    "build/module/cdv_intel_crt.c": {
+      "bytes": 8325,
+      "sha256": "71989796ad4d32c56b732db233e7adc45784cdaf50106972ada8d43d00d7cac0"
+    },
+    "build/module/cdv_intel_display.c": {
+      "bytes": 26076,
+      "sha256": "a356563c7378d2127fef40979aa022422c5bfff1d5f700cd6802520c859ce50d"
+    },
+    "build/module/cdv_intel_dp.c": {
+      "bytes": 56879,
+      "sha256": "e0943a581f143894a9205619f71e2ec356f7c4882345001bfff7a462143929e0"
+    },
+    "build/module/cdv_intel_hdmi.c": {
+      "bytes": 10292,
+      "sha256": "a691262f59c69a5aed8e37490035dc44f5942a5c2cb3b76876b8f8bbbda1078a"
+    },
+    "build/module/cdv_intel_lvds.c": {
+      "bytes": 18194,
+      "sha256": "68fcae5e139668dcb945739e95586c62439ddcb394043aa6ca149a8b94807c6b"
+    },
+    "build/module/framebuffer.c": {
+      "bytes": 16950,
+      "sha256": "ec0a8e81d02e6246600e14ed112bd3224ec07db7ee440e78bcae53b4b01541b6"
+    },
+    "build/module/framebuffer.h": {
+      "bytes": 303,
+      "sha256": "7518d4e7e8477ea4d112ee0693753ccb52069acfbd241dd0c32e46627424bd80"
+    },
+    "build/module/frozen_fixed_io.c": {
+      "bytes": 1782,
+      "sha256": "b6edb5e886b48ba9054f9c008283e7862510809b82f4e85cca6dade56ce06343"
+    },
+    "build/module/frozen_fixed_io.h": {
+      "bytes": 788,
+      "sha256": "5189a82db12c20f9a6d243a03c7819636a8e9dbd7acf03baf1f2d12fdc446718"
+    },
+    "build/module/frozen_fixed_service.c": {
+      "bytes": 16979,
+      "sha256": "ac4acc665ccd46b27dbf61fc1ccf07ba56fba2153dc0ce3820f0e2361880dd2e"
+    },
+    "build/module/frozen_fixed_service.h": {
+      "bytes": 6206,
+      "sha256": "ece30da13bb6e18cac84661988ea86280cfcbec8062a029f10e8aa0968b76576"
+    },
+    "build/module/frozen_kernel_contract.c": {
+      "bytes": 42506,
+      "sha256": "fd35abd561f21e877c287f7e26f4bdd3775eed165c5ee77d5e00f0d48c1310fe"
+    },
+    "build/module/frozen_kernel_contract.h": {
+      "bytes": 13282,
+      "sha256": "6bdd02e87f6a11bbc8de3033a78ab49335964b1fcb03d6d8de527aa6ecdaeca2"
+    },
+    "build/module/gem.c": {
+      "bytes": 5097,
+      "sha256": "2e47b9c3df078c49693dbee1f82e6660cb76a876db0ad3156ee4091c999eca43"
+    },
+    "build/module/gem.h": {
+      "bytes": 428,
+      "sha256": "bf4eed56193a4324709b2bf590bedaa05cf36f69eabb1890b67c862365d2d36c"
+    },
+    "build/module/gma500_bo_owner.c": {
+      "bytes": 15837,
+      "sha256": "f05ddbed8d021f2511489bd81491c686e2a071d78988ba3f9e12c924733f97da"
+    },
+    "build/module/gma500_bo_owner.h": {
+      "bytes": 2146,
+      "sha256": "16d017f4f7641617765adaf9a2d0fe68840026db7deba16d0a718b807dc73378"
+    },
+    "build/module/gma500_fixed_backend.c": {
+      "bytes": 18654,
+      "sha256": "dd12a1316cdb3d79539294a333f0f0e319d5e12bdc9398b82330f05996d9785c"
+    },
+    "build/module/gma500_fixed_backend.h": {
+      "bytes": 1463,
+      "sha256": "edb5dd8c1e273813e5f218cb98bab2dc44029c498a562a21cc9c6bcb922e50cb"
+    },
+    "build/module/gma500_fixed_entry.c": {
+      "bytes": 6876,
+      "sha256": "8d7eaec6cf6c75c1c8f66cae8ea65ac20797651f6616f58a2d0c8c6a1719583c"
+    },
+    "build/module/gma500_fixed_entry.h": {
+      "bytes": 1188,
+      "sha256": "5d9ee8fed72c3cb62b432a945dbbba65ec26509ca5a4122c9d86c629da2d8a99"
+    },
+    "build/module/gma500_fixed_uapi.h": {
+      "bytes": 760,
+      "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420"
+    },
+    "build/module/gma_device.c": {
+      "bytes": 1120,
+      "sha256": "18c0183ba2cc3e2eed7aeea19be481ee375ae03b4ee3d7536ba5837101628bd1"
+    },
+    "build/module/gma_device.h": {
+      "bytes": 394,
+      "sha256": "5d6bc147e1fcc15a7e72d4d6d25b4d9555db1336fc29347bdb8773c721dec085"
+    },
+    "build/module/gma_display.c": {
+      "bytes": 21281,
+      "sha256": "877140046fcea01a5e8f0face75384a3dfe2d34983539de76bcfa94ef9f5f2c4"
+    },
+    "build/module/gma_display.h": {
+      "bytes": 3154,
+      "sha256": "ab42d3126641f5438385b946fda76ee86466cdd48c6fc0ddb4b605f894a257c8"
+    },
+    "build/module/gtt.c": {
+      "bytes": 15301,
+      "sha256": "388c5b251cfa17545031c1841a4ef6afcf1bc7385a424e34221948959e15818d"
+    },
+    "build/module/gtt.h": {
+      "bytes": 1908,
+      "sha256": "2407ff8bdbdba056e0583982e94b77da8c665bdd797d3fb3444918566abdc72f"
+    },
+    "build/module/intel_bios.c": {
+      "bytes": 16160,
+      "sha256": "257b1366608c811cdd10d1961ea08347dbd5d4bff456ec8c49d37c980cb3d261"
+    },
+    "build/module/intel_bios.h": {
+      "bytes": 15975,
+      "sha256": "d3259ed7618d6c994323a07fbbbbb7cfc83d19412f3047d75c71117308c89520"
+    },
+    "build/module/intel_gmbus.c": {
+      "bytes": 12863,
+      "sha256": "7f7ba6e1660b67500f001da9d0103b4b1c5213975f535f11dd81d7a92bc483c6"
+    },
+    "build/module/intel_i2c.c": {
+      "bytes": 3788,
+      "sha256": "19f063e36fa2046008f1c2df2b30f907446f81d83762b5578bf620383a0d8d82"
+    },
+    "build/module/mdfld_device.c": {
+      "bytes": 13899,
+      "sha256": "5cf5df83811d4574f3f0f1d64dedc20a7383acbf390e77018bc941b6d2d6fba4"
+    },
+    "build/module/mdfld_dsi_dpi.c": {
+      "bytes": 31984,
+      "sha256": "92d995a9cf2fe0abfd3d08710a435fab7c1e1e84a9f302d4fe99c104d4940a3e"
+    },
+    "build/module/mdfld_dsi_dpi.h": {
+      "bytes": 2846,
+      "sha256": "a2947881b7d2b2e634a08b25e1902a90ac4ea68533403804ff1c7c8b8edd3635"
+    },
+    "build/module/mdfld_dsi_output.c": {
+      "bytes": 16350,
+      "sha256": "2ae5bd4046e0859772cb98c53d68ea823cf077aff08e1bb94256ab1aeb2b0ba9"
+    },
+    "build/module/mdfld_dsi_output.h": {
+      "bytes": 11953,
+      "sha256": "205c39169c55356de0d6cbc714a88b5a47ed6f3302833d394cb7f4ea7868850a"
+    },
+    "build/module/mdfld_dsi_pkg_sender.c": {
+      "bytes": 16106,
+      "sha256": "0b33da2d4bde2d833cc598f5c6e3d7c5896390ac71875cffef5c039c06deb45c"
+    },
+    "build/module/mdfld_dsi_pkg_sender.h": {
+      "bytes": 2634,
+      "sha256": "973dae891c36f2ab8794d6a0b948c961913dcd489080d521db350d735d50af26"
+    },
+    "build/module/mdfld_intel_display.c": {
+      "bytes": 27246,
+      "sha256": "37a530d3a4bbdf1de2910717213d0a2beedbb589f93451431d6a047f27db42cd"
+    },
+    "build/module/mdfld_output.c": {
+      "bytes": 2343,
+      "sha256": "aba87d0ee44e4f4b897d837f8025d6c77dc18f7dafc374247dffc7f16c595118"
+    },
+    "build/module/mdfld_output.h": {
+      "bytes": 2540,
+      "sha256": "5a0adbb0ee0616276a19d7825d85f8f33354d810beec6d98407b7aaca5c466c8"
+    },
+    "build/module/mdfld_tmd_vid.c": {
+      "bytes": 7081,
+      "sha256": "aaf0d10e06a918b4b4956d80a77fad7663d978d38309ecf251c3799ee71eb2d7"
+    },
+    "build/module/mdfld_tpo_vid.c": {
+      "bytes": 2506,
+      "sha256": "0e14c52ededb91e398b1082531e91674907897214b43e857301501654765bd6a"
+    },
+    "build/module/mid_bios.c": {
+      "bytes": 8227,
+      "sha256": "8dac9ca7a2c9cfadb0851383524e7943326fc9c454ba231ba8eceae14695181a"
+    },
+    "build/module/mid_bios.h": {
+      "bytes": 338,
+      "sha256": "6c3086d48b8fc131822e4d51cb8b6c1dece5e9237390c20e9d7d2b191a54f697"
+    },
+    "build/module/mmu.c": {
+      "bytes": 18125,
+      "sha256": "d9a7e839d24c3a6e5a6be77c8583a8073ea4e20fb64eb1fc0228048db4e8fd24"
+    },
+    "build/module/mmu.h": {
+      "bytes": 2550,
+      "sha256": "8855805afae1571590808ae8008a1933288381ee4f301c722c96eda2ccbd412b"
+    },
+    "build/module/oaktrail.h": {
+      "bytes": 7616,
+      "sha256": "19d8c7ddc224958b63529ff4246ae33f5ffa4b3d1cef5c74758e7917de259891"
+    },
+    "build/module/oaktrail_crtc.c": {
+      "bytes": 18476,
+      "sha256": "fd91631c06a8b6c079bdd6d62b822eea212054d7551fd5545d4d7f356a3affbc"
+    },
+    "build/module/oaktrail_device.c": {
+      "bytes": 15314,
+      "sha256": "e881eb254e7ad8d925c67ed01271dbd3bbc5e4d17ec6e8fe7daedbfa3ac47c9b"
+    },
+    "build/module/oaktrail_hdmi.c": {
+      "bytes": 24320,
+      "sha256": "7b6776cfad1c69bb77c3e6aef0c963d929690caf2955077c0c577d0944c6edb0"
+    },
+    "build/module/oaktrail_hdmi_i2c.c": {
+      "bytes": 8388,
+      "sha256": "a72828571cadb57ea6df499187af7f954ac1b8bb7c931e4e72310ec81c538a69"
+    },
+    "build/module/oaktrail_lvds.c": {
+      "bytes": 12512,
+      "sha256": "f7d360a68693d29e5855520b1de3125ae3afa6ab25bb4a39c25cce933733a547"
+    },
+    "build/module/oaktrail_lvds_i2c.c": {
+      "bytes": 4635,
+      "sha256": "4d821946c38b27044b35ffb7b3a8f689572d67799cd2336d442af766b28c5d5b"
+    },
+    "build/module/opregion.c": {
+      "bytes": 10204,
+      "sha256": "a6fd11464b3972d456dea55919cf97c3ccb26f9d5a1a690139cdf1c4c09d35d0"
+    },
+    "build/module/opregion.h": {
+      "bytes": 1896,
+      "sha256": "6261ac8ebc13bdf48deaac006132df2f68bf728276c651165b95adc345a304ed"
+    },
+    "build/module/power.c": {
+      "bytes": 9229,
+      "sha256": "5ea8988fec285111209296cb3fc746d604f7b19f8075e0434b6ae2c908ca1ee5"
+    },
+    "build/module/power.h": {
+      "bytes": 2658,
+      "sha256": "c490f651d21d5af0bcd41106ed000ed80705a7fe056e3b89a4650ddd49bb4889"
+    },
+    "build/module/psb_device.c": {
+      "bytes": 8871,
+      "sha256": "c02f8c825350ed89675d7618e158d503fbb92169a7f2f8aba4255b353de9a493"
+    },
+    "build/module/psb_device.h": {
+      "bytes": 237,
+      "sha256": "b549d59a0a9195f6ede0d96634c5fa49d3ae2d48bbcdf24e75aa34c1a331e06a"
+    },
+    "build/module/psb_drv.c": {
+      "bytes": 16370,
+      "sha256": "b1fe9dc77ca9b010a59df4a4a4cc5f01146c0a512b94cd290e81276381854415"
+    },
+    "build/module/psb_drv.h": {
+      "bytes": 24752,
+      "sha256": "6dce38176eccc8d7037783ec6c41d101c3c614068a3b7b11f40b06e1d1ca6261"
+    },
+    "build/module/psb_intel_display.c": {
+      "bytes": 15362,
+      "sha256": "6c3e1720849665df26ae64a3f93af4ec2a99fa5f46a0bf6d9f023ee5aa71d0b8"
+    },
+    "build/module/psb_intel_drv.h": {
+      "bytes": 8357,
+      "sha256": "deafad565f84f1db62eb79131c8c662f9992482e79c7d3431d753538907b3d17"
+    },
+    "build/module/psb_intel_lvds.c": {
+      "bytes": 22834,
+      "sha256": "f74be00054701ec6297b03824f34994eb77541b9341b5ce4f266351ae8438e12"
+    },
+    "build/module/psb_intel_modes.c": {
+      "bytes": 1102,
+      "sha256": "aa1b9b96b24f5db1a66acf649bfb21cf089810889bdac0bb45f6b9541498c339"
+    },
+    "build/module/psb_intel_reg.h": {
+      "bytes": 50512,
+      "sha256": "2b99f026da46b8db3ef4d09978c3b794c32e2580ec90ea556068573a7804e0f7"
+    },
+    "build/module/psb_intel_sdvo.c": {
+      "bytes": 79841,
+      "sha256": "c69f7f7256edab612f8881f5343385e43210679dd11956c6a1fc3ac6eb221206"
+    },
+    "build/module/psb_intel_sdvo_regs.h": {
+      "bytes": 24416,
+      "sha256": "4e02101a042d248f34fb910534d74b704cde5a721e3a1993b5359d1085d341be"
+    },
+    "build/module/psb_irq.c": {
+      "bytes": 17957,
+      "sha256": "5b9962aa29ec24f844297bb2d0e4fa9b00fc3021ed46d00afbeaa26b326b3025"
+    },
+    "build/module/psb_irq.h": {
+      "bytes": 1250,
+      "sha256": "1069e3033a5086c8cd9e35a9cf986e8be1112389272f91e03404c5b28d2cd436"
+    },
+    "build/module/psb_lid.c": {
+      "bytes": 2282,
+      "sha256": "cc5660e14990d1ab7adfe69880c37125becda71927cd9e6ef7d508343dbf5bf7"
+    },
+    "build/module/psb_reg.h": {
+      "bytes": 18355,
+      "sha256": "a340d4fb7bb9df2403eb196639d930b8c56463ddc7a3754d152e6ed7ab1daef7"
+    },
+    "build/module/tc35876x-dsi-lvds.c": {
+      "bytes": 21491,
+      "sha256": "b301703f75a72dbf9e10f9e0ad3a28a9ca66b164da0f8e8fc9e5a0a1eee4b2d8"
+    },
+    "build/module/tc35876x-dsi-lvds.h": {
+      "bytes": 1728,
+      "sha256": "00ed39446b5ba990f51c37d4ee2df6af264de426c70b1d91fb3bb1f4017beb55"
+    },
+    "build/module/gma500_capsule_observer.h": {
+      "bytes": 2408,
+      "sha256": "ae2a0a4d5c998a67c4a58ee0995906fc5e2968c4ddc7c42cf4adc73f76dfaf5e"
+    },
+    "build/module/frozen_capsule.c": {
+      "bytes": 5311,
+      "sha256": "4b0400f35e5674776d0a6ed92d87eb420f1db9f38a1f42dab07c9af3dc7127db"
+    },
+    "build/module/frozen_capsule.h": {
+      "bytes": 2069,
+      "sha256": "f8cd44c2c2d5ad8f3a4af8d3b434f2dbfa2133b255fb03def98fbfad36692cac"
+    },
+    "build/module/gma500_source_snapshot.h": {
+      "bytes": 1443,
+      "sha256": "61a0043559ea92961319949e59eba75d880b8c94221f9e48c014292217b7cc70"
+    },
+    "build/module/frozen_source_guard.c": {
+      "bytes": 5518,
+      "sha256": "ea7a096e1770ddc06f5252a15df395a0087b03e4822d52ed3def61224e39df1c"
+    },
+    "build/module/frozen_source_guard.h": {
+      "bytes": 2975,
+      "sha256": "dac28a74cd025457d7cec1849301c6012ce218ecfc4feb09cbb4c51f36544322"
+    },
+    "build/module/gma500_capsule_observer.c": {
+      "bytes": 19375,
+      "sha256": "7dbe357b5e5e564b6133dcd73a09d96c6df33fce7c8716efec11eac3cfa6bb68"
+    },
+    "build/module/accel_2d.o": {
+      "bytes": 3604,
+      "sha256": "3231f543c35b74a8936d814afca5bca86deb3cc42142c27041bb6838d04755f0"
+    },
+    "build/module/backlight.o": {
+      "bytes": 1448,
+      "sha256": "40aead0b442e1adad6543c05cd2ab901a6aa995b73f0dba776b5e240c5fff9ea"
+    },
+    "build/module/gtt.o": {
+      "bytes": 6700,
+      "sha256": "3b9bcf6cdd8c79225cc8b5b5da50b3280466008883453ba02917d9aefd17b4ba"
+    },
+    "build/module/framebuffer.o": {
+      "bytes": 8172,
+      "sha256": "4131219702db0f05b078e476d3779c9c8de6caa7b507818e3d0efa153f7b22b7"
+    },
+    "build/module/intel_bios.o": {
+      "bytes": 6260,
+      "sha256": "2fb411e31989f1c009bcb92f58bc1b21df3219ceccaf52a976eb3d00403fa1b2"
+    },
+    "build/module/gem.o": {
+      "bytes": 2912,
+      "sha256": "30b36202539472dd847e6714d2b57f3b462639bf5010d53c47ec7f89c9f22bb8"
+    },
+    "build/module/psb_intel_lvds.o": {
+      "bytes": 9356,
+      "sha256": "d2f08dc57fcae9e51d7dd057ee76693d4a8bed64fda985eb6b2061937c2c98d1"
+    },
+    "build/module/intel_i2c.o": {
+      "bytes": 1968,
+      "sha256": "4e2dd8b9e870f56ffcf03fe2fd5f5a46e7a90181f34507c522f094decbcee9d1"
+    },
+    "build/module/intel_gmbus.o": {
+      "bytes": 5772,
+      "sha256": "cc14560c86d524c957a0b2f3205867887ee62d0783d2e5adebc9430e4a22fda3"
+    },
+    "build/module/mmu.o": {
+      "bytes": 9108,
+      "sha256": "be0397583ef6c675dd808c230cbe330164de4a8a3bc54c072b61b4b4460b131b"
+    },
+    "build/module/power.o": {
+      "bytes": 4696,
+      "sha256": "c06e18d8422cea49dcd9297a8de536c024890cfa2192e6fe28e9bd8222f48141"
+    },
+    "build/module/blitter.o": {
+      "bytes": 944,
+      "sha256": "b0e2d31a6c32e8fd78dfce1c72f84b2fe080030b2953308acc6bb3d193cb7039"
+    },
+    "build/module/gma_device.o": {
+      "bytes": 1116,
+      "sha256": "0983f6c7005f21f96c297243308bda06d2dad64f13bebd795ce36bcb16ded553"
+    },
+    "build/module/psb_drv.o": {
+      "bytes": 11204,
+      "sha256": "4de2d4153dfc0f348d8d5a2c14834d821eaa7e5aee2b4e2a79412d104f0475a7"
+    },
+    "build/module/psb_intel_sdvo.o": {
+      "bytes": 31756,
+      "sha256": "b7e538348cb55adb347b8a4a6d2c7338810c980a53106449964b040796257a68"
+    },
+    "build/module/gma_display.o": {
+      "bytes": 10896,
+      "sha256": "33ae913df1c5d511b284bdbc56e90860ae8bc0fc74659394824729614fcb588f"
+    },
+    "build/module/cdv_intel_crt.o": {
+      "bytes": 3816,
+      "sha256": "fc278f3cbe787650f8f617871863b733bfc124a7ef33788e815b6d81fbb3021f"
+    },
+    "build/module/psb_intel_display.o": {
+      "bytes": 7536,
+      "sha256": "bb2eef5c2b165ea9dc6f97b7efec6c5e96229cd0859de070d7321799a8df9e3f"
+    },
+    "build/module/psb_lid.o": {
+      "bytes": 1820,
+      "sha256": "1869ca675183da93b3b9896826fbe1378ef16bfbe5ff015462dffe289c9725cf"
+    },
+    "build/module/psb_irq.o": {
+      "bytes": 9792,
+      "sha256": "6c8e9c4bc72da064816bb35259a2f0282d4bb077375e812cb68e2952787a4c7c"
+    },
+    "build/module/psb_device.o": {
+      "bytes": 5028,
+      "sha256": "2c4c55256ea630b0c3f876133b3b5566ed52be8a4f0fc14e31b852e14dde1b26"
+    },
+    "build/module/mid_bios.o": {
+      "bytes": 4160,
+      "sha256": "360cb3494436c74b625167c2d4cefcb775ac95456e52ef9fd045edc7500e7b6a"
+    },
+    "build/module/opregion.o": {
+      "bytes": 3144,
+      "sha256": "62107e13442175e05963b710a5d2809ec75bfd629c6ef21a84322e76d7ec47e4"
+    },
+    "build/module/cdv_device.o": {
+      "bytes": 8960,
+      "sha256": "9ead18268c0dd0b67babad27fbe2dfed84d2682e926993b69fe4223b6ac9ac64"
+    },
+    "build/module/cdv_intel_hdmi.o": {
+      "bytes": 4896,
+      "sha256": "be3c2f325c2858eb46c5992ffd4a06664f99d073f0b675555e9ee134134f904d"
+    },
+    "build/module/cdv_intel_lvds.o": {
+      "bytes": 7208,
+      "sha256": "7b48e9e7ef2b5b4af90919c06f4c9b04ac4aa10754bf2b7d5968d8b4dee5b010"
+    },
+    "build/module/psb_intel_modes.o": {
+      "bytes": 1160,
+      "sha256": "29836438d3472e589ed070aa25c1e8bcc7e4e46c6e70602a618f08a241256b46"
+    },
+    "build/module/gma500_gfx.o": {
+      "bytes": 231256,
+      "sha256": "228ec1cce62bdf2e462ff852ae3cd476d0c063f8022aae58e5128680af16536d"
+    },
+    "build/module/gma500_gfx.mod.o": {
+      "bytes": 20240,
+      "sha256": "b673fdebea8c436a891aaeceb37e6f2c310e3945c7b24cfe788dfa3ca888b2f8"
+    },
+    "build/module/cdv_intel_dp.o": {
+      "bytes": 18044,
+      "sha256": "fb6b35f06e475e0a2fc477c27cceea8415b7bf5a4420b360003405d2518c7bf3"
+    },
+    "build/module/cdv_intel_display.o": {
+      "bytes": 11512,
+      "sha256": "cda9e79a8f364612ceb3089e142996aa560edbd5737e547f03b5cb2bec200124"
+    },
+    "build/module/oaktrail_crtc.o": {
+      "bytes": 10408,
+      "sha256": "920fcf5469be5d515234f1ee017016df3143c02291d2b4bf1035b7be6e3b4259"
+    },
+    "build/module/oaktrail_lvds.o": {
+      "bytes": 5024,
+      "sha256": "81c3dad5599e786780c59a5e4a106e700f6b3f14379e91d95067403f67c5c3df"
+    },
+    "build/module/oaktrail_device.o": {
+      "bytes": 8312,
+      "sha256": "f2bb5e3196d45b0bf2ee8ef402026643efa5b3b19e1a390c7e40055f9f11cc30"
+    },
+    "build/module/oaktrail_hdmi.o": {
+      "bytes": 10692,
+      "sha256": "c5acddd8e4ae495322d5f0b390e5d5e635050c6aa5787fe13c2d4b1b97d6b82e"
+    },
+    "build/module/oaktrail_lvds_i2c.o": {
+      "bytes": 1540,
+      "sha256": "8c0e2bb25469965c00d2b80462a0f67e011bdce7b6fdf632a0e99d6b8088905f"
+    },
+    "build/module/oaktrail_hdmi_i2c.o": {
+      "bytes": 4096,
+      "sha256": "f956c3be78fcb8fe522f5d18d1f0f2a68775884d0e3499d47c37cdca758e7bb1"
+    },
+    "build/module/frozen_kernel_contract.o": {
+      "bytes": 19352,
+      "sha256": "535468940b828e2351d1cf8ef5ca9bdb2f8d7e78ba39af5fe12725fc5ec3a598"
+    },
+    "build/module/gma500_bo_owner.o": {
+      "bytes": 7328,
+      "sha256": "eed86b6a3ad24f89b24d8da3b83807daaf75c40a6c7bb3827eea52a03ea272e3"
+    },
+    "build/module/frozen_fixed_io.o": {
+      "bytes": 1232,
+      "sha256": "c3607e61634fd945b9a469f7784a15cf80f5cd9df434388b0fe82bbdc2766cf2"
+    },
+    "build/module/gma500_fixed_entry.o": {
+      "bytes": 3368,
+      "sha256": "ca07d61986983414067536575fb2950ddf64adbb63129f66b560d7b741be18b5"
+    },
+    "build/module/experimental_fragment_constant.h": {
+      "bytes": 1245,
+      "sha256": "8b1c0316f351c1624f151e3a1dfe46e237081d1862d9d4c7fa98413a32f440a7"
+    },
+    "build/module/frozen_fixed_service.o": {
+      "bytes": 8980,
+      "sha256": "e9656b37e3f210deb3fe59cd0afe93b27333e1c4bfc103746dba0a3d7777d1ab"
+    },
+    "build/module/gma500_gfx.mod.c": {
+      "bytes": 12163,
+      "sha256": "2e1a8bb75aacf7363b42ea8097c659140c6c93e9ec415c246e12767ad7135958"
+    },
+    "build/module/gma500_fixed_backend.o": {
+      "bytes": 9072,
+      "sha256": "1de163520a414c94c207522b3c701384ab4e650126034788f46f26413e52a3c5"
+    },
+    "build/observer/gma500_capsule_observer.c": {
+      "bytes": 19459,
+      "sha256": "fb17577c93a54d7eb90fbbbd64aca5dbca6dbd1fc89a13524897d26a09d6205a"
+    },
+    "build/observer/gma500_capsule_observer.h": {
+      "bytes": 2408,
+      "sha256": "ae2a0a4d5c998a67c4a58ee0995906fc5e2968c4ddc7c42cf4adc73f76dfaf5e"
+    },
+    "build/observer/gma500_fixed_backend.h": {
+      "bytes": 1463,
+      "sha256": "edb5dd8c1e273813e5f218cb98bab2dc44029c498a562a21cc9c6bcb922e50cb"
+    },
+    "build/observer/gma500_bo_owner.h": {
+      "bytes": 2146,
+      "sha256": "16d017f4f7641617765adaf9a2d0fe68840026db7deba16d0a718b807dc73378"
+    },
+    "build/observer/gma500_fixed_uapi.h": {
+      "bytes": 760,
+      "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420"
+    },
+    "build/observer/frozen_fixed_service.c": {
+      "bytes": 16839,
+      "sha256": "d4f7bbe6b8255382d307466857dab062b33d5a9000cb6eb754a3541e721eb3d1"
+    },
+    "build/observer/frozen_fixed_service.h": {
+      "bytes": 6206,
+      "sha256": "ece30da13bb6e18cac84661988ea86280cfcbec8062a029f10e8aa0968b76576"
+    },
+    "build/observer/frozen_capsule.c": {
+      "bytes": 5644,
+      "sha256": "c63afe55f002fc408d0d4bc2c1c21b62ce566a1f1cd6bcad07492ca8391b3f21"
+    },
+    "build/observer/frozen_capsule.h": {
+      "bytes": 2069,
+      "sha256": "f8cd44c2c2d5ad8f3a4af8d3b434f2dbfa2133b255fb03def98fbfad36692cac"
+    },
+    "build/observer/frozen_kernel_contract.h": {
+      "bytes": 13282,
+      "sha256": "6bdd02e87f6a11bbc8de3033a78ab49335964b1fcb03d6d8de527aa6ecdaeca2"
+    },
+    "build/observer/Makefile": {
+      "bytes": 117,
+      "sha256": "2d395ed66defacc851d43980ce1b656b1a1202a8d6ed5422d3a3ae942cc25980"
+    },
+    "build/observer/sgx535_provenance.o": {
+      "bytes": 30300,
+      "sha256": "4ff63e0145e57db1cad7f92bdd1a586a5423360dcfcaa910befbf4a9e551eca9"
+    },
+    "build/observer/frozen_source_guard.c": {
+      "bytes": 5518,
+      "sha256": "ea7a096e1770ddc06f5252a15df395a0087b03e4822d52ed3def61224e39df1c"
+    },
+    "build/observer/frozen_source_guard.h": {
+      "bytes": 2975,
+      "sha256": "dac28a74cd025457d7cec1849301c6012ce218ecfc4feb09cbb4c51f36544322"
+    },
+    "build/observer/frozen_capsule.o": {
+      "bytes": 2360,
+      "sha256": "64ada5e6207c14a093d24149e537c7186023ce4076acfac3f7df47304bd19d4c"
+    },
+    "build/observer/frozen_source_guard.o": {
+      "bytes": 2188,
+      "sha256": "96275029432c194722f5d12489684bf40c8d69368c90e093d8528b1463c39dad"
+    },
+    "build/observer/gma500_capsule_observer.o": {
+      "bytes": 27696,
+      "sha256": "604d2414ea5952687c4d450b94ef7c287363e6ffbd75a84631abae7f76c83295"
+    },
+    "build/observer/sgx535_provenance.mod.c": {
+      "bytes": 2011,
+      "sha256": "f2af5904b7412676b62b457f83e7aeacf8a096abeb1024d1e249eaae6a0dcf98"
+    },
+    "build/observer/sgx535_provenance.mod.o": {
+      "bytes": 4288,
+      "sha256": "f46d75a3698a9cad1222dbd42f51e21e11273290cdb5fcf2ca03207d7c561fe0"
+    }
+  },
+  "scene_artifacts": {
+    "frozen-scene-canonical.json": {
+      "path": "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/build-qualification/frozen-scene-canonical.json",
+      "bytes": 166738,
+      "sha256": "f62d0160b21d83375da17f30d22f5cfb78e3aafc93e180cd99495cab7affae03"
+    },
+    "frozen-address-plan.json": {
+      "path": "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/build-qualification/frozen-address-plan.json",
+      "bytes": 32523,
+      "sha256": "3f19dcd95009243519869fafc2e0edb3f6fd57862d55893427983314f57885ab"
+    }
+  },
+  "readback_source": {
+    "path": "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/originals/color.original.bin",
+    "bytes": 4096,
+    "sha256": "52b2aeb7316820f955d1b9a46cb55a888efb8f74de916acd7ec7ddff6d99ebb5",
+    "representation": "1024 little-endian ARGB8888 words; stride128; no display alpha blending"
+  },
+  "historical_commit_provenance": "Current recorded HEAD matches the preserved unchanged campaign tree; the FIRE3 card did not separately capture a git rev-parse receipt. Exact archived binaries, source snapshots and successful-build hash ledger are stronger reproduction identities than the commit alone.",
+  "historical_client_argv": [
+    "/root/sgx535-frozen-seq1-85ec06b428c99fac7f9127919b7a488d204f4a77-3d9eb6ba/frozen-triangle-one-shot-response-i386",
+    "--one-shot-sgx535-rev121",
+    "/root/sgx535-frozen-seq1-85ec06b428c99fac7f9127919b7a488d204f4a77-3d9eb6ba/evidence-f1ab6606-0561-445f-a397-28a028516cd7/color.original.bin",
+    "/root/sgx535-frozen-seq1-85ec06b428c99fac7f9127919b7a488d204f4a77-3d9eb6ba/evidence-f1ab6606-0561-445f-a397-28a028516cd7/response.original.bin"
+  ],
+  "core_identity_provenance": "Physical rev121 evidence in docs/hardware-evidence/MINI12-20260928-FIRST-MMIO-01 and Phase7 corpus; no new MMIO read during this work.",
+  "archive_files": {
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/controller.py": {
+      "bytes": 19861,
+      "sha256": "e345a7ddfae78fdcf8a7a0889234e1cbfac8ac0e2d5c5d5e53d42a4b2be092d0"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/test_controller.py": {
+      "bytes": 7579,
+      "sha256": "64b033e9882b36cd3add3310dc7df27a4e760a7bc7df1b7f71fb8f927d5f2925"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/test_wrapper_binding.py": {
+      "bytes": 873,
+      "sha256": "abee16dd73201dccea6f1836f71481fa662c744197bf88b13dcd0406b05d932b"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/authoritative-bindings.json": {
+      "bytes": 11218,
+      "sha256": "803bbe4dc5340777b47c3ec603c2e4db56b79be8c2d5bb7c80474db54fd0a3cc"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/candidate-context.json": {
+      "bytes": 789,
+      "sha256": "545f25b418e09d1e831f4d6b05f7fbd02d8ba29dfeaea6f2430d6f0f06ecb56f"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/origins.json": {
+      "bytes": 454,
+      "sha256": "cbc4710f0bbc9c7ec6231636e0cdbaa2dd9db4d26495ebc2adf4226e93bcb3d8"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/origin.json": {
+      "bytes": 324,
+      "sha256": "2a1b4f6c2810f7a2c4b30b30711a2cca674f27c217ae5fd6d2356ff20b432dd5"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/witness-authority.json": {
+      "bytes": 363,
+      "sha256": "04a089de570df6426b9b78b4c3450b41aa2b99483a395c3152c81415c96c3883"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/preservation-before.json": {
+      "bytes": 499,
+      "sha256": "471b42f54cb9d81c686dce1959beefe53aed53b2dab52f5e5003c1ebc2a6382b"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/git-before.bin": {
+      "bytes": 9580,
+      "sha256": "32570aaac605dfc79b86dc769d678fe9db1037135686b172ed4c69fcf785974c"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/witness_binding.py": {
+      "bytes": 5074,
+      "sha256": "98ef19722b50d53329f8ac6b116d3883ef0ea955e48763eed95fcf2c1dbb950d"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/test_structural_binding.py": {
+      "bytes": 4263,
+      "sha256": "e174d748a762ce9f7607064200f524ee153ab7ec3dedcd0e5a37c15ed06bd33b"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/controller-tests.stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/controller-tests.stderr.txt": {
+      "bytes": 3571,
+      "sha256": "3230ca44d91dc624c291bdc16f42181b962e5a1d0f5496127610591a5de83cef"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/continuity.audited.py": {
+      "bytes": 17644,
+      "sha256": "079c958caf714d1603f7b05bb97fab9edcf05250b792e7ef472a1f354e00e7ec"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/controller-audit-PASS.json": {
+      "bytes": 1210,
+      "sha256": "10e8d99bf824b8f6185b9675d5b54ba007497181a7852eafe45593062182ca35"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/pre07-live-evaluation.json": {
+      "bytes": 7203,
+      "sha256": "326cf2aef27e7d40d424c057dcdcf512f0f7f0c8196dd3538ca2e5c2b18310c9"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/one-shot-execution-card.json": {
+      "bytes": 8837,
+      "sha256": "768a2099639e412c40a84f2a5e64c9bec3fd8344787f6422d72f738b996a7faa"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/authorized-fire3.audited.py": {
+      "bytes": 38637,
+      "sha256": "3ef3f59eb6b77b6a886b9cff54aa794a2efdd478bfbf745631dc6a714c4cb2e3"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-dispatch-consumed.json": {
+      "bytes": 410,
+      "sha256": "faa242b4ee0408b012c324bc29f9aaa847d7343426056ee8901254e5619ebb6b"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-authorization-consumed.json": {
+      "bytes": 334,
+      "sha256": "2f9bcaff6b15ba6c24746a05eb19665b50f56bdaff1bc5ea37c522a872d5b5af"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/git-after.bin": {
+      "bytes": 9580,
+      "sha256": "32570aaac605dfc79b86dc769d678fe9db1037135686b172ed4c69fcf785974c"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/PHASE8-HANDOFF-FIRE3-20261006.md": {
+      "bytes": 2913,
+      "sha256": "35cebac0649ee6de89b064d34406d5b21dbf5820042ed795577b0256ea5c7e78"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/final-evidence-seal.json": {
+      "bytes": 16226,
+      "sha256": "844246df115651c7edd96d0957884a0cc464e247f1262c47d4c0ebaac4884a53"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/authoritative-bindings.json": {
+      "bytes": 11218,
+      "sha256": "803bbe4dc5340777b47c3ec603c2e4db56b79be8c2d5bb7c80474db54fd0a3cc"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/origins.json": {
+      "bytes": 454,
+      "sha256": "cbc4710f0bbc9c7ec6231636e0cdbaa2dd9db4d26495ebc2adf4226e93bcb3d8"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/controller.py": {
+      "bytes": 19701,
+      "sha256": "3ff450f1ebae8ac7855492ea5215acb55aae8fe241015671e639815c832f237f"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/test_controller.py": {
+      "bytes": 6690,
+      "sha256": "bd3fc4b42b3a43b7ce6d39386a542524bae6d2ab60fe5e52dde5913c718450b6"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/test_wrapper_binding.py": {
+      "bytes": 873,
+      "sha256": "abee16dd73201dccea6f1836f71481fa662c744197bf88b13dcd0406b05d932b"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/candidate-entry.proposed": {
+      "bytes": 1134,
+      "sha256": "eedb2a774dd11e33c0c7257a403c6b614923010de8c9489344a4d462629c1643"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/custom.cfg.proposed": {
+      "bytes": 9749,
+      "sha256": "ac60694d5e31263d080dd6900ae3ff55feeef3f9e6b9e87c8c3330990d200f59"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/prior-custom.cfg": {
+      "bytes": 8615,
+      "sha256": "5b3261d3af8033b9fdefaf8e0a402a3b35a53709ec68365a0ec4b0a6e94e17a0"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/historical-preservation-before.json": {
+      "bytes": 580,
+      "sha256": "8ed827253e2b764c1846b2a80138087965479c5c4e04145b8fe61723363da327"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/origin.json": {
+      "bytes": 497,
+      "sha256": "04314c6e9bca0b6f4192acfac31d9b040c080c5f697422816b5df8478d15a530"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/git-before.bin": {
+      "bytes": 9580,
+      "sha256": "32570aaac605dfc79b86dc769d678fe9db1037135686b172ed4c69fcf785974c"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/controller-tests.stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/controller-tests.stderr.txt": {
+      "bytes": 1843,
+      "sha256": "f068cda27d01971b7d5d388cc3e1107390080e2b3d68a50cdced769e74735576"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/controller-audit-PASS.json": {
+      "bytes": 478,
+      "sha256": "1a86d4306c1f397adf86d916c8f0bd8633e090c2e56b70e03e4bf45ce8e13611"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/transfer-complete-verified.json": {
+      "bytes": 7381,
+      "sha256": "f1444d62c5e05c9bbab7d2f4678eaf92d6887f0f2f44052c68febd09b1e571a3"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/stage.audited.py": {
+      "bytes": 38194,
+      "sha256": "7a5d4dccb97e6bd7221b5eae04e051ab215b74524e0ead5afb5f3b018ef2b43e"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/poststage.root-source.py": {
+      "bytes": 25888,
+      "sha256": "89f300d204dfddc910785d7a6462cc3c3a3b6cdd53754e15e73a66f3511ea43d"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/pre-boot-checkpoint.json": {
+      "bytes": 1046,
+      "sha256": "2ae2eebd79e46fb34c7e8b25b9da8cffd6ec859092d03088c19154446cb19039"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/pre-boot-seal.json": {
+      "bytes": 10181,
+      "sha256": "4e74dcfd3530d07116ae471935984d5a2d5859654b89fe281a1156901697fe65"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/first-owner.root-source.py": {
+      "bytes": 22918,
+      "sha256": "965b631055ebd95693d8c6c486398f3de49b2ac13bd0eb3b5c20e995b2e3730d"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/candidate-context.json": {
+      "bytes": 789,
+      "sha256": "545f25b418e09d1e831f4d6b05f7fbd02d8ba29dfeaea6f2430d6f0f06ecb56f"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/git-after.bin": {
+      "bytes": 9580,
+      "sha256": "32570aaac605dfc79b86dc769d678fe9db1037135686b172ed4c69fcf785974c"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/preparation-stop.json": {
+      "bytes": 3392,
+      "sha256": "87761898ead4510502eefd23e68f3c8d8c6e508acc202d57cb4b7a3cd6a98486"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/preparation-result.md": {
+      "bytes": 1897,
+      "sha256": "4c08dc51240fc78492df4cd1cb5716d2a81a905e4f5245a24cdcd97e72f978d0"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/preparation-seal.json": {
+      "bytes": 12301,
+      "sha256": "98e6ce2ac68eb295649c9b8ca3c14e3f7cb82b47ab10a903db6c5aabf4ba5595"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/known-good-artifacts/gma500_gfx.ko": {
+      "bytes": 250788,
+      "sha256": "c925caedebcc0699aef53227d29e64b47bf2833efd9d2e611cba276dd3a08ab3"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/known-good-artifacts/sgx535_provenance.ko": {
+      "bytes": 26284,
+      "sha256": "2e35e863d51dbc1d407feef08f08bb2edc6390af621a0f173a9b1a73ec76158a"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/known-good-artifacts/initrd.img-sgx535-provenance-85ec06b428c99fac7f9127919b7a488d204f4a77": {
+      "bytes": 50816631,
+      "sha256": "3d9eb6baa3d821b4ff98e60ea83f1a94022b5fb2881038d2ad91b95cdfb7448e"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/known-good-artifacts/frozen-triangle-one-shot-response-i386": {
+      "bytes": 775264,
+      "sha256": "2f84917f96db2859678797a327d40d9638325e5c5efb6e0dfccef44d756b4835"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/known-good-artifacts/gma500_fixed_uapi.h": {
+      "bytes": 760,
+      "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/build-qualification/experimental-candidate.json": {
+      "bytes": 14021,
+      "sha256": "d369c16324f7d7a54d99f7b41c069d96180c472dcbf942bdfe9388d301dc78d5"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/build-qualification/driver-build-command.json": {
+      "bytes": 1713,
+      "sha256": "7a25f5f7ea373d8a1d3f6be33c75f39d86c9aea9436c73e92a1709b696a16f0b"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/build-qualification/module-reproducibility.json": {
+      "bytes": 205,
+      "sha256": "c80c8955b7febc2c0c06f3c41cd9e6518f315b66bac681ed0154e3d86ffe1045"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/build-qualification/image-reproducibility.json": {
+      "bytes": 208,
+      "sha256": "5774539b2bb6be3047b7f224b884f14d69891635f0d312dc784d322c9e3c4224"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/build-qualification/minimal-change-verification.json": {
+      "bytes": 2645,
+      "sha256": "8658462ec5dead285c1fd526828d5975b4c4c8c1e41e8f340da6aeb9bad43c2f"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/build-qualification/focused-tests.json": {
+      "bytes": 5386,
+      "sha256": "c6bad05a1fc7cc7787b3e5142f376aaffc825929eae287e1450197ecd7c8f9eb"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/build-qualification/pixel-payload-qualification.json": {
+      "bytes": 5869,
+      "sha256": "76ba69cd1e0969f6464143a65c21f2f06ce5eff7c6d2d7fa594d909d458cd3e6"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/build-qualification/rev121-constant-cross-correlation.json": {
+      "bytes": 919,
+      "sha256": "0e3c226936b47667bb2f40f6d1184357df4075a98d34747c96149c19a1c8cacb"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/build-qualification/frozen-address-plan.json": {
+      "bytes": 32523,
+      "sha256": "3f19dcd95009243519869fafc2e0edb3f6fd57862d55893427983314f57885ab"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/build-qualification/frozen-scene-canonical.json": {
+      "bytes": 166738,
+      "sha256": "f62d0160b21d83375da17f30d22f5cfb78e3aafc93e180cd99495cab7affae03"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/build-qualification/module-import-checks.json": {
+      "bytes": 710,
+      "sha256": "c4a70f3160e5b5053f7b410d1783209c7ccdb89339c6bf83976b371332608206"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/build-qualification/module-verification.stdout": {
+      "bytes": 1649,
+      "sha256": "6440900af2e6978fd2826ef51dfb3f3d9686b866a364e61dc4f6394bc304df87"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/build-qualification/driver-build.stdout": {
+      "bytes": 315004,
+      "sha256": "aa037b5946a91dce60ebd9fb9c37f476b16dd17ea5764fd75944d21755b9f40e"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/build-qualification/driver-build02.stdout": {
+      "bytes": 315004,
+      "sha256": "eff0278e64e118d839cb9f627dcd38fd4ae2ad45c4f3c1a44b53677f7309d0a6"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/build-qualification/scoped-regression-tests.json": {
+      "bytes": 2905,
+      "sha256": "0db49d4fb205447d9c5c03d5c928a937cb2b749b77000924a285ed484beac7ed"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/build-qualification/client-commands.json": {
+      "bytes": 4924,
+      "sha256": "3399bb6c276a67d7a6d3a405d385e98abcd203a9dbf7ea3e6d32660daa74b589"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/build-qualification/client-qualification.json": {
+      "bytes": 2309,
+      "sha256": "0dbb8685a6712919a7a0157edcd31eab3ef7cffd35397ed40da3dfdfa702046c"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/build-qualification/client-uapi.h": {
+      "bytes": 760,
+      "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/image-construction/identity.json": {
+      "bytes": 2765,
+      "sha256": "d3255fc7e18a7226457c3cf4c13f3bd7f2185f0a82cbfb07835bb5ecfbe6346f"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/image-construction/modified-init": {
+      "bytes": 7268,
+      "sha256": "d34fce0acad1367d1c6d33c1dcb818e7dbc6056c1fa8022448c18bb0df61c1a6"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/image-construction/sgx535-first-load.sh": {
+      "bytes": 8963,
+      "sha256": "32dc3216df60e4dd09ba5b82599ef8a0752ca51d177518fd08c57eb369786512"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/source-snapshot/build_frozen_provenance_image.py": {
+      "bytes": 5537,
+      "sha256": "452e7447c4d9110dd131aa510c47ab623f466ca633beb73b7d8a7aa9bcb78ba0"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/source-snapshot/frozen_first_load_image.py": {
+      "bytes": 15708,
+      "sha256": "5a7b3572699fa284b3cbd407f3fcd62991c6fa437ad03bb0edb49f6dab26cc1a"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/source-snapshot/frozen_kernel_contract.c": {
+      "bytes": 42506,
+      "sha256": "fd35abd561f21e877c287f7e26f4bdd3775eed165c5ee77d5e00f0d48c1310fe"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/source-snapshot/frozen_kernel_contract.h": {
+      "bytes": 13282,
+      "sha256": "6bdd02e87f6a11bbc8de3033a78ab49335964b1fcb03d6d8de527aa6ecdaeca2"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/source-snapshot/experimental_fragment_constant.h": {
+      "bytes": 1245,
+      "sha256": "8b1c0316f351c1624f151e3a1dfe46e237081d1862d9d4c7fa98413a32f440a7"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/source-snapshot/frozen_triangle_one_shot_response.c": {
+      "bytes": 5514,
+      "sha256": "919c2611e048e4a660ecae3542264adf5a5367d9b0fbe7fbceff2f45f90adedf"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/source-snapshot/driver.Makefile": {
+      "bytes": 1524,
+      "sha256": "a6b4dec38edc587352149e3fce2d578c4f76983120ec22d866e04663d2485113"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/source-snapshot/frozen_fixed_service.c": {
+      "bytes": 16979,
+      "sha256": "ac4acc665ccd46b27dbf61fc1ccf07ba56fba2153dc0ce3820f0e2361880dd2e"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/source-snapshot/frozen_fixed_service.h": {
+      "bytes": 6206,
+      "sha256": "ece30da13bb6e18cac84661988ea86280cfcbec8062a029f10e8aa0968b76576"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/source-snapshot/frozen_scene_owner.c": {
+      "bytes": 7019,
+      "sha256": "03898665f5a3850410eea8c914b728684c2ff586c1dee97fea773e577d053237"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/source-snapshot/frozen_scene_owner.h": {
+      "bytes": 2817,
+      "sha256": "00d3eaf9e85619f73d2237d24cabed19ac0cee07487795c5bebe3c6c60962794"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/source-snapshot/frozen_capsule.c": {
+      "bytes": 5644,
+      "sha256": "c63afe55f002fc408d0d4bc2c1c21b62ce566a1f1cd6bcad07492ca8391b3f21"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/source-snapshot/frozen_capsule.h": {
+      "bytes": 2069,
+      "sha256": "f8cd44c2c2d5ad8f3a4af8d3b434f2dbfa2133b255fb03def98fbfad36692cac"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/source-snapshot/frozen_source_guard.c": {
+      "bytes": 5518,
+      "sha256": "ea7a096e1770ddc06f5252a15df395a0087b03e4822d52ed3def61224e39df1c"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/source-snapshot/frozen_source_guard.h": {
+      "bytes": 2975,
+      "sha256": "dac28a74cd025457d7cec1849301c6012ce218ecfc4feb09cbb4c51f36544322"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/source-snapshot/frozen_triangle_readback.py": {
+      "bytes": 6195,
+      "sha256": "da5fc259d40b6071ae35d21147e7e7e81f443009febedb88daabef7803196c92"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/source-snapshot/frozen_capsule_evidence.py": {
+      "bytes": 9227,
+      "sha256": "8fca88622ddfdbef0d741c1dd476c31ab4965304b39798ff8873ec385cdcad93"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/source-snapshot/frozen_source_guard_evidence.py": {
+      "bytes": 2744,
+      "sha256": "5bab7b108eb27a6c6dab2484a3f7da56a0ad69f778d1ed84482389069268cd3a"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/build-qualification/qualified-build-01/identity.json": {
+      "bytes": 1649,
+      "sha256": "6440900af2e6978fd2826ef51dfb3f3d9686b866a364e61dc4f6394bc304df87"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/profiles/incoming.proposed.py": {
+      "bytes": 2604,
+      "sha256": "be7524bc37515ca7efd2c7b0669bccab31baf2dcd92f713bd6a22719fd4b0676"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/profiles/stage.proposed.py": {
+      "bytes": 38187,
+      "sha256": "0ef53e3b25c38ce77ce3555d5f18bd1c09bd96fadafd042e9801082e0c4cb0f4"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/profiles/first-owner.proposed.py": {
+      "bytes": 22900,
+      "sha256": "c9e53931bd9e0f5333a3d3ebf99f8fa6e53e2f8e114635a286ef1f6492bd3650"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/profiles/stock-preflight.corrected.py": {
+      "bytes": 23777,
+      "sha256": "6b9ac9b728470086ee787f9ccc88cd7431f0e62437790b41d5505d60384aa3a0"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/stock-freshness/source.py": {
+      "bytes": 8458,
+      "sha256": "87c5ecf5d1c3f0c6566306c4114a79ad75786d1ab9f9a5a36bf6a25d225b988c"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/stock-freshness/command.json": {
+      "bytes": 11329,
+      "sha256": "9ca0efead6fbaef5d38ea0b7eddba97135e2cc9005134dac1b7738d8e8d04315"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/stock-freshness/stdout.original.txt": {
+      "bytes": 49739,
+      "sha256": "70e225aea5dbab3388ba360a99f2cd762af0e3c6d80d48b5cf7f42b238399a14"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/stock-freshness/stderr.original.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/stock-freshness/receipt.json": {
+      "bytes": 11609,
+      "sha256": "785facca372b2b1af84271e99fba459dc861caaf6da9d609c26de075656a04a2"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/stock-freshness/decoded.json": {
+      "bytes": 49965,
+      "sha256": "0ec6d7f503d864245b6c645617bc7f0db921da23b45f13e1d2b923a7323e21ab"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/incoming-preparation/source.py": {
+      "bytes": 2606,
+      "sha256": "86b44179d39b0812a89a2f1bce76a92525472e3208937e5cef29d14258413830"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/incoming-preparation/command.json": {
+      "bytes": 4118,
+      "sha256": "74322125d88dadf1a73bd856c4a9ee2f6722f00c7a3160c02c2f0fdaef37df83"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/incoming-preparation/stdout.original.txt": {
+      "bytes": 445,
+      "sha256": "795b7ca5fc509531d1f624b81b219ffca2fa1518adace9cf217241ba54682c5f"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/incoming-preparation/stderr.original.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/incoming-preparation/receipt.json": {
+      "bytes": 4398,
+      "sha256": "d58cead10152772ef0cdb0dbde800cb83c48e9fb1bf35b8a566baf89783ce558"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/incoming-preparation/decoded.json": {
+      "bytes": 485,
+      "sha256": "b518d3d34a3fd17b6c14b655302fba11e8aaa032a3e27d49dde7e2ca3913a1c3"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/image-transfer/source.py": {
+      "bytes": 4565,
+      "sha256": "6429ecc90ec5bc1e73b9cabc87c57dffcb74e824437beb514fdf87e68203c9e9"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/image-transfer/command.json": {
+      "bytes": 6564,
+      "sha256": "80647e297099d99681204fe223c60006d8308b9ef4ce36679171aca94cafa360"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/image-transfer/stdout.original.txt": {
+      "bytes": 1285,
+      "sha256": "aa71983f8d752e41dd3cd0935f435e0837a8690b2875ade31f6b0a8cf61fc8a9"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/image-transfer/stderr.original.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/image-transfer/receipt.json": {
+      "bytes": 6844,
+      "sha256": "4412fd2c33c9f9257ee985d35cbc444100993529f6ba0284569a941c793ca6f8"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/image-transfer/decoded.json": {
+      "bytes": 1485,
+      "sha256": "a4cf9faeb111efa70b66d49227ceeb69117234ec7181ca2a64adfdb0445ec414"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/independent-transfer-verification/source.py": {
+      "bytes": 7310,
+      "sha256": "fab22ceadc1fb6ed276cc07836cedf5b995e0548a66a4c8dbc12181c206581d5"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/independent-transfer-verification/command.json": {
+      "bytes": 10774,
+      "sha256": "3a261a56e4efef00dd113fa6489198c89762ff0e32e4e62f4e75fddd033a2353"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/independent-transfer-verification/stdout.original.txt": {
+      "bytes": 5299,
+      "sha256": "e10571be79b612165ae4b9d7ba5030827794439c58ca42a9aeb43ddc769a2a85"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/independent-transfer-verification/stderr.original.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/independent-transfer-verification/receipt.json": {
+      "bytes": 11053,
+      "sha256": "64adeb11e1fd086e914fe2b4b4ceb23a1b1b986229d3de290fee57c18356cf13"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/independent-transfer-verification/decoded.json": {
+      "bytes": 7241,
+      "sha256": "9d321c89cd6720336470d7f6e775e96c8f47b6d6f4f9e28baa65c05d520e0e57"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/entry-transfer/source.py": {
+      "bytes": 4545,
+      "sha256": "e610f1f3acaafa41b5d9029ea5447ebfa23f31853ec24f7da9c189b928de1001"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/entry-transfer/command.json": {
+      "bytes": 6544,
+      "sha256": "3960648b128ab1dbbed044c6f04996eb6a5810da8d3c5ba80e5ee778cebd378c"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/entry-transfer/stdout.original.txt": {
+      "bytes": 1209,
+      "sha256": "cbf2cb5a2b673ffc5cde4aeea813481108ed5b29cb67fbcb09eac12e9e7aad91"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/entry-transfer/stderr.original.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/entry-transfer/receipt.json": {
+      "bytes": 6824,
+      "sha256": "979fdce1df4be9a701b4de11a3109c676892bf418067a4292d983ea3ecbf37fe"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/entry-transfer/decoded.json": {
+      "bytes": 1409,
+      "sha256": "d26a443b7cbfe9f7c2eb87a19c7b90643be03d63893435856a9928f3b6c37684"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/stage/source.py": {
+      "bytes": 38194,
+      "sha256": "7a5d4dccb97e6bd7221b5eae04e051ab215b74524e0ead5afb5f3b018ef2b43e"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/stage/command.json": {
+      "bytes": 50883,
+      "sha256": "554c3dabc14b770bededb4378e0b8a872391dc4c8e7607de9b903ba27a6f130d"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/stage/stdout.original.txt": {
+      "bytes": 126864,
+      "sha256": "400c5f7431831d546cdf11ea43c97d22a42b9835a01102f5fc154ddab59bc19c"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/stage/stderr.original.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/stage/receipt.json": {
+      "bytes": 51161,
+      "sha256": "62e76f23fec19089ca3417ebc95d4fa9b3f20f7db6fc944dc6d1aac7c8be4e27"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/stage/decoded.json": {
+      "bytes": 128628,
+      "sha256": "8e3ef49723013e2ddbe047a3ade3758c96c85294920bdbfa78300c00873b2d5c"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/stage/result.json": {
+      "bytes": 126864,
+      "sha256": "400c5f7431831d546cdf11ea43c97d22a42b9835a01102f5fc154ddab59bc19c"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/independent-poststage/source.py": {
+      "bytes": 30006,
+      "sha256": "937ef5741e0f7a4117f122744e743e2a2c8ef7ca774dadfc161dff0b79c7c8ca"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/independent-poststage/command.json": {
+      "bytes": 41662,
+      "sha256": "588de8eee1c4ea8c9a4f85d0623d0514c854afd1e400edbc9d217bb5f3750621"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/independent-poststage/stdout.original.txt": {
+      "bytes": 122958,
+      "sha256": "d498188d7f7626a0b212dd85c914bdbf0043b99242d6503dcd806a46638410ea"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/independent-poststage/stderr.original.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/independent-poststage/receipt.json": {
+      "bytes": 41940,
+      "sha256": "62d87f055fbd650f662661fa8d05e4bf63a01c599bffb04acf95ec28d16aa5ff"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/independent-poststage/decoded.json": {
+      "bytes": 124604,
+      "sha256": "7a702074bda2b707d47164c58874aad144d8baf5fadf86f7a96208cd02d4db1b"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/independent-poststage/validation.json": {
+      "bytes": 289,
+      "sha256": "2135d921d44f098db877871d5dd48a9b4a49dd49c6c824778b3068fe0a4eb2a3"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/independent-poststage/result.json": {
+      "bytes": 122449,
+      "sha256": "57615f0b4ab18f737c674ac585ec42ac45b430166e94537caccbfa7f693c17aa"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/first-owner/source.py": {
+      "bytes": 26673,
+      "sha256": "4ba1ac5305c56b2ea432c0b2ab191ad71d2d5ef715bdd19bb90a4406793e5a49"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/first-owner/command.json": {
+      "bytes": 35030,
+      "sha256": "52032d939a13208b576fb409c748fd40138a4ca01c9a1a6f6dfc25eb3f921b8d"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/first-owner/stdout.original.txt": {
+      "bytes": 130725,
+      "sha256": "339d7807b8a4122e3a1493f08dbfcca738854e7200b32f4256516e0a3bfa734c"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/first-owner/stderr.original.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/first-owner/receipt.json": {
+      "bytes": 35310,
+      "sha256": "16a9ec984f72769f2f4f0c064a47a4775b42f0e5498306eedc0b6e70ca97559a"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/first-owner/decoded.json": {
+      "bytes": 132337,
+      "sha256": "7472d262ab3e4c393202fda0775bfe2a084b94147fa66ddc7dfbe2fc312c461a"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/first-owner/result.json": {
+      "bytes": 130227,
+      "sha256": "1ef9a273274da3b5132c8e2396170e585d4c96e5e97948f537fde0001f806215"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/transfer-firstload-procedure/first-owner/validation.json": {
+      "bytes": 284,
+      "sha256": "0bd2d6b524549c33fca0076172e30d6bcefb8183ee794bf1f0d235cd6af0be1d"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fresh-continuity/source.py": {
+      "bytes": 17644,
+      "sha256": "079c958caf714d1603f7b05bb97fab9edcf05250b792e7ef472a1f354e00e7ec"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fresh-continuity/command.json": {
+      "bytes": 22143,
+      "sha256": "4991352a65327e928960e5daea9468eba991e97708d45b07800c2ce7be2fc93e"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fresh-continuity/stdout.original.txt": {
+      "bytes": 7717,
+      "sha256": "9c113113685819253363bbbab4b3f58a2c5450d68a91c97a7b940ad57658c658"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fresh-continuity/stderr.original.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fresh-continuity/receipt.json": {
+      "bytes": 22422,
+      "sha256": "093e3565e378fcbef90605f0f5caff4d1349d26260c72452908396d929ed45f9"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fresh-continuity/decoded.json": {
+      "bytes": 8265,
+      "sha256": "47c3c8a2290a61ffaa2ea0412d65995f0137278cb43e42f72594f87486412c41"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fresh-continuity/result.json": {
+      "bytes": 7717,
+      "sha256": "9c113113685819253363bbbab4b3f58a2c5450d68a91c97a7b940ad57658c658"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/protected-preparation/source.py": {
+      "bytes": 17742,
+      "sha256": "9d4e3c788050414634076220a5cdbd5fba792b271f715a0dcc16363d7625855b"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/protected-preparation/command.json": {
+      "bytes": 22152,
+      "sha256": "e40a68232f0f7c49bf0637a8223092cf0d889d12dbf3fef09cd5270d75232f71"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/protected-preparation/stdout.original.txt": {
+      "bytes": 11316,
+      "sha256": "43b0147f8ad8a58ee6ed3f8fe41a1135106c4ebb78c51210106154b5f02353d9"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/protected-preparation/stderr.original.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/protected-preparation/receipt.json": {
+      "bytes": 22431,
+      "sha256": "1397228d17e49a1e480037cd0386cd7fd200d0358b047c161e2301d07d52178f"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/protected-preparation/decoded.json": {
+      "bytes": 12178,
+      "sha256": "09aadb8a66c42eb3a29b2f8095e8a2ffab26e99a4477c886c5b8a5ce3d8306ca"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/protected-preparation/result.json": {
+      "bytes": 11316,
+      "sha256": "43b0147f8ad8a58ee6ed3f8fe41a1135106c4ebb78c51210106154b5f02353d9"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/independent-final-guards/source.py": {
+      "bytes": 28822,
+      "sha256": "2e463a5101ec3f4acaefb68361b0dd17ef225828dcaec3149df147718e85a391"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/independent-final-guards/command.json": {
+      "bytes": 38504,
+      "sha256": "6d7de6af52a9407c1924047b926c2189c540b8acd17514118d3e67993b6ec85f"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/independent-final-guards/stdout.original.txt": {
+      "bytes": 74404,
+      "sha256": "f37b6cb497724e0c7a267a96881940ee1f24cb7aebba567714b5ee6a13cb2214"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/independent-final-guards/stderr.original.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/independent-final-guards/receipt.json": {
+      "bytes": 38783,
+      "sha256": "d0b8144a48826dfb2435127d942229b9d14c6e4b2f8f876a39f83f2b482b9b0a"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/independent-final-guards/decoded.json": {
+      "bytes": 76236,
+      "sha256": "7add3dc18b8b8c66ad07ad9c463205c181d4d9dfc871a842fd30a60a83596ac3"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/independent-final-guards/result.json": {
+      "bytes": 74404,
+      "sha256": "f37b6cb497724e0c7a267a96881940ee1f24cb7aebba567714b5ee6a13cb2214"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/immediate-fire-precheck/source.py": {
+      "bytes": 25927,
+      "sha256": "93ee41df2a8f9bbf14308392845883dae6c1dfe0a7901dd8f5245ee3995e747a"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/immediate-fire-precheck/command.json": {
+      "bytes": 34786,
+      "sha256": "685c9bab60627b8332f4dc7d54c557956597eb639876d094c88f741a41d2eb66"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/immediate-fire-precheck/stdout.original.txt": {
+      "bytes": 57678,
+      "sha256": "3f33673f93b621224de42019eb8cc8d39ccc080bab57e8b7fafa9a818f7a7b08"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/immediate-fire-precheck/stderr.original.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/immediate-fire-precheck/receipt.json": {
+      "bytes": 35066,
+      "sha256": "e696acf5f008f0f1f31535eb540b33f18d47098ab8e4165919abcdfc2efa7527"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/immediate-fire-precheck/decoded.json": {
+      "bytes": 58124,
+      "sha256": "38d06bd1e2bc810f114884ecaa3f087f28452d0cdcb6d85d6ca6dd5fa66c8968"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/immediate-fire-precheck/result.json": {
+      "bytes": 57678,
+      "sha256": "3f33673f93b621224de42019eb8cc8d39ccc080bab57e8b7fafa9a818f7a7b08"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/source.py": {
+      "bytes": 38637,
+      "sha256": "3ef3f59eb6b77b6a886b9cff54aa794a2efdd478bfbf745631dc6a714c4cb2e3"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/command.json": {
+      "bytes": 50942,
+      "sha256": "268c9a5eabe7ad0689f6d1af0fa75c7181ad0e37421e12e8a4862921465f5815"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/stdout.original.txt": {
+      "bytes": 13336,
+      "sha256": "0908f3d03a858079ce207027f92b9caf7f22e2de81952e902873892c859b7ad0"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/stderr.original.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/receipt.json": {
+      "bytes": 51221,
+      "sha256": "fbc45bb9f184b8c221195ca59a21f494e0967df0ae60277eef11b90f6384b23a"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/decoded.json": {
+      "bytes": 14346,
+      "sha256": "c288140e9ec1af28e25c3b0ed533c9a59b528049a3fd930254574a160499377e"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/execution-receipt.json": {
+      "bytes": 13336,
+      "sha256": "0908f3d03a858079ce207027f92b9caf7f22e2de81952e902873892c859b7ad0"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/originals-manifest.json": {
+      "bytes": 5220,
+      "sha256": "e6111c7e50ff3ef9b471f91cfcacfa7fafdb87459097338cedaa555ba48778ad"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/originals-seal.json": {
+      "bytes": 166,
+      "sha256": "b4092804e07905eae37ac360e11c0a024092c22ac2dfbff0bc3dd0809c420e6d"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/initial-offline-checks.json": {
+      "bytes": 10022,
+      "sha256": "0eff6ab33636b2b4d055948864da5c7868021507fbbe327b68d8a67360eb24d2"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/kernel-delta.derived.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/diagnostic-reference-comparison.json": {
+      "bytes": 4469,
+      "sha256": "a829143c533c21bbdb83322ef709c7c0d6b9272194184af301c784d4dc97fb0e"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/spatial-analysis.json": {
+      "bytes": 9423,
+      "sha256": "89fb0c4cafd8ccc518552378a8e9226be5debd7b26c15708f3eb6e014458703a"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/readback-exact32.derived.png": {
+      "bytes": 129,
+      "sha256": "fad863e44f60cfef5bcdce719f9b0e9f616758359d4be86f3d31c4984e0f3aa1"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/readback-nearest512.derived.png": {
+      "bytes": 1806,
+      "sha256": "18cc23e413dd0aa74d3c8a976180c8e81eee75cadc2f931b3c14c5421900ac7e"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/visualization-receipt.json": {
+      "bytes": 554,
+      "sha256": "9ae68ef9f40816c6781508918409d88ad622713f0be67eaaed901a875f42bc94"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/outcome-report.json": {
+      "bytes": 6209,
+      "sha256": "ac6e0eeafe98c8068ba149906a81775c83ee4c67c198a348c819c6e1b40de915"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/outcome-report.md": {
+      "bytes": 3012,
+      "sha256": "acc8a76deb1e5b90fb8dc5a15b9ee5a72684ee7f30277db0b8729ea5e432ccc6"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/final-seal-verification.json": {
+      "bytes": 683,
+      "sha256": "fb5522df3feed322b454ff9395fa634208eb0b76d6e7373e2e8102e8c6561fda"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-originals-retrieval/source.py": {
+      "bytes": 1880,
+      "sha256": "166ea50bff6f3fccc7df1110b9983211a0355bc58067bdd5d176c313cfbc086f"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-originals-retrieval/command.json": {
+      "bytes": 3027,
+      "sha256": "33d9e9930f3c25cbaad80d8905811795f264d4bd226ac16844b99050b2a14f22"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-originals-retrieval/stdout.original.txt": {
+      "bytes": 246438,
+      "sha256": "13b1398c7c916d7d35ff4bb3cccea6e27df750603173a1245f4e74be6865ff64"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-originals-retrieval/stderr.original.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-originals-retrieval/receipt.json": {
+      "bytes": 3307,
+      "sha256": "d45b9030dac5019a462c200d7127e3142e892ada65b69b1597083f1697d12979"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-originals-retrieval/decoded.json": {
+      "bytes": 246852,
+      "sha256": "509f1bcfbf27bac3c5c7b5b3e33a56a1378a5dfd3a3f1660b5834455990f5eb8"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-originals-retrieval/result.json": {
+      "bytes": 246438,
+      "sha256": "13b1398c7c916d7d35ff4bb3cccea6e27df750603173a1245f4e74be6865ff64"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/originals/capsule.before.original.bin": {
+      "bytes": 4152,
+      "sha256": "0d24c306b7e1fcd4eee1d2dc77637fe1eafa91816e849fd5c134e683bf3f3504"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/originals/capsule.original.bin": {
+      "bytes": 4152,
+      "sha256": "fef2c62cbba7d847345e8f73278b407e97e46d58e9286864308e889ece941135"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/originals/capsule.preparation.bin": {
+      "bytes": 4152,
+      "sha256": "0d24c306b7e1fcd4eee1d2dc77637fe1eafa91816e849fd5c134e683bf3f3504"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/originals/client.stderr.original.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/originals/client.stdout.original.txt": {
+      "bytes": 406,
+      "sha256": "44ebba065e9b502e6d211c068c9f1a9cc01b0d1cc8d070682e770c2d2db1a338"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/originals/color.original.bin": {
+      "bytes": 4096,
+      "sha256": "52b2aeb7316820f955d1b9a46cb55a888efb8f74de916acd7ec7ddff6d99ebb5"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/originals/context.preparation.json": {
+      "bytes": 789,
+      "sha256": "92743b803780dab8df2db107f6a97eced11c3399a24ead28828f04e522aadb3f"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/originals/execution-card.original.json": {
+      "bytes": 8837,
+      "sha256": "768a2099639e412c40a84f2a5e64c9bec3fd8344787f6422d72f738b996a7faa"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/originals/execution.receipt.original.json": {
+      "bytes": 12884,
+      "sha256": "dc0424171efee5b2f45e556978610ad06b50c08928619b70d45aeabea602678c"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/originals/fire-authorization.original.json": {
+      "bytes": 271,
+      "sha256": "6bd73156b0972cc8e37b5ff9cd475efa497594b9603fae3396ad720a87044635"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/originals/invocation.intent.original.json": {
+      "bytes": 723,
+      "sha256": "e1c7757a9fb47692fcd8e710a4394a0431de1896ef0ddc14de7abba6f76ebcdb"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/originals/kernel.after.original.txt": {
+      "bytes": 45131,
+      "sha256": "2c13e499a8d9b837c3e5b8a367e73966fc7f874fc553eb01b32aee4f164aeaf8"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/originals/kernel.before.original.txt": {
+      "bytes": 45131,
+      "sha256": "2c13e499a8d9b837c3e5b8a367e73966fc7f874fc553eb01b32aee4f164aeaf8"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/originals/kernel.preparation.original.txt": {
+      "bytes": 45131,
+      "sha256": "2c13e499a8d9b837c3e5b8a367e73966fc7f874fc553eb01b32aee4f164aeaf8"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/originals/response.original.bin": {
+      "bytes": 4268,
+      "sha256": "2939959fbc6ca20744eb00986e076dd4a0854cbbd9116e6b15a1fd4a6a5b2a69"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/originals/source.post.original.txt": {
+      "bytes": 243,
+      "sha256": "4219fe8dd303374b0aedbc9219a32e328a1fe6432346559c148fdb33ff0db91c"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/originals/source.pre.original.txt": {
+      "bytes": 243,
+      "sha256": "2967348bcf2f2e85ff1bbd56848283df9a187839acf43a5c4a48c6fb4b76f555"
+    },
+    "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/originals/source.preparation.original.txt": {
+      "bytes": 243,
+      "sha256": "2967348bcf2f2e85ff1bbd56848283df9a187839acf43a5c4a48c6fb4b76f555"
+    }
+  },
+  "fragment_program_identity": {
+    "words": [
+      "001f00ff",
+      "fca7f1f1"
+    ],
+    "byte_order": "little-endian dwords",
+    "bytes_hex": "ff001f00f1f1a7fc",
+    "bytes": 8,
+    "sha256": "ce03eb07b128b67d091f5a1cbaaee9d40eff5d896476f81cfed6af5e06455e6e",
+    "compile_option": "SGX535_EXPERIMENTAL_CONSTANT_FRAGMENT=1",
+    "CPU_construction": "qualified",
+    "GPU_effect": "FIRE3 effective magenta triangle confirmed; no instruction-level trace"
+  }
+}

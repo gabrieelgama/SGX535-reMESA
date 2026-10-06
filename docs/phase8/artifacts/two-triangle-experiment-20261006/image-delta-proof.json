@@ -1,0 +1,11 @@
+{
+  "compared_to": "known-good FIRE3 archived image",
+  "only_changed_members": [
+    "init",
+    "usr/lib/sgx535-first-load/gma500_gfx.ko",
+    "scripts/sgx535-first-load"
+  ],
+  "all_other_members_byte_identical": true,
+  "early_prefix_byte_identical": true,
+  "finished_hook_integrity_gate": "PASS"
+}

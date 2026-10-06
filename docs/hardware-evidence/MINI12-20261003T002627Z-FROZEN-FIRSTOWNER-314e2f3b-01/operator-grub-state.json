@@ -1,0 +1,9 @@
+{
+  "recorded_utc": "2026-10-03T00:34:35.793650+00:00",
+  "source": "operator reply",
+  "state": "At GRUB; new entry not selected",
+  "new_candidate_experimental_boots": 0,
+  "sgx_invocations_this_session": 0,
+  "selection_photo_available": false,
+  "next_manual_action": "normal STOCK selection only"
+}

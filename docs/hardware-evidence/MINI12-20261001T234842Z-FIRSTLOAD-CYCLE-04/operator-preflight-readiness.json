@@ -1,0 +1,10 @@
+{
+  "local_sudo_succeeded": true,
+  "normal_userspace": true,
+  "physical_display_normal": true,
+  "physically_present": true,
+  "grub_controls_available": true,
+  "manual_power_controls_available": true,
+  "data_loss_risk_understood": true,
+  "source": "operator current reply"
+}

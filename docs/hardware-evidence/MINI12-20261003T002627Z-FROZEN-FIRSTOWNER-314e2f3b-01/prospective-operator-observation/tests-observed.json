@@ -1,0 +1,9 @@
+{
+  "command": "python3 -B -m unittest discover -s tools/psb-dri-re -p 'test_frozen_first_owner*.py'",
+  "source": "completed execution-tool output in this turn",
+  "exit_status": 0,
+  "tests": 25,
+  "result": "OK",
+  "skips": 0,
+  "candidate_builds": 0
+}

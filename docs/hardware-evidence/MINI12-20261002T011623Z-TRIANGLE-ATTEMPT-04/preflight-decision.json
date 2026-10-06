@@ -1,0 +1,19 @@
+{
+  "classification": "PASS SAMEBOOT PRE-SGX",
+  "boot_id": "29e27f75-7c84-4537-9ab8-8138bc3eac1d",
+  "guards": 56,
+  "health": {
+    "classification": "PASS WITH BOUNDED STOCK DIAGNOSTICS",
+    "faults": [],
+    "stock_diagnostics": {
+      "unsigned_drm_loader_notice": 1,
+      "backlight_zero_register": 1,
+      "acpi_powerbutton_error": 2,
+      "acpi_powerbutton_warning": 2,
+      "powerbutton_probe": 1,
+      "tiny_powerbutton_probe": 1
+    }
+  },
+  "stock_stage_receipts": "PASS",
+  "no_sgx_yet": true
+}

@@ -1,0 +1,123 @@
+{
+  "record_id": "MINI12-PASSIVE-SOURCE-GUARD-OFFLINE-20261005",
+  "timestamp_utc": "2026-10-05T06:04:08.921316+00:00",
+  "authority": "Current maintainer instruction: design, implement and qualify the minimum source guard OFFLINE ONLY; no target interaction or SGX",
+  "evidence_root": "/home/gama/sgx535-offline/phase8-source-quiescence-20261005T055127Z",
+  "qualification": "PASS FOR FAIL-CLOSED POLICY, ADAPTER, BUILD AND ABI CHECKS ONLY; DELAYED-WORK EXCLUSION NOT ESTABLISHED",
+  "production_admissible_boundary_available": false,
+  "source_quiescence": "UNKNOWN: no qualified passive hardware idle/drain/causal exclusion provider for delayed TA/3D work",
+  "pre07": "BLOCKED",
+  "guard_semantics": {
+    "location": "gma500_fixed_backend_begin after existing powered-owner preconditions and before backend/IRQ owner publication",
+    "observation": "Four read-only MMIO observations under the existing fixed IRQ lock: STATUS1/2, 2D FIFO and 2D busy; combine software pending/fire state; no waiting, clearing, reset or submission",
+    "delayed_prior_work": "Native adapters force delayed_excluded=0; clean status/2D-idle never becomes an admissibility certificate",
+    "failure": "Retain monotonic reason bits; return -EAGAIN before backend admission, -EBUSY on attempted guard reuse; no rearm",
+    "isolation": "Direct balanced begin/end taps around the existing normal 2D submission and psb_spank reset functions; no new invocation of either. Existing syscall/capsule detects competing eligible fixed calls. Active producers at boundary or any such activity during boundary-to-ioctl-close invalidate evidence",
+    "scope_limit": "These taps observe covered driver paths; they are not universal raw-MMIO/system activity attestation. Native timing/registration/loading and physical quiescence remain unobserved",
+    "retention": "New root0400 read-only /proc/sgx535_source_guard snapshots retained state/reasons/active count/attachment and explicit UNPROVEN delayed exclusion. Opening never performs MMIO or starts admission. Existing capsule ABI unchanged. RAM retention is not durable preservation."
+  },
+  "tests": {
+    "red": "tests/red.stderr: missing source guard header before implementation",
+    "native": "58/58 checks PASS; synthetic premises only",
+    "ubsan": "58/58 checks PASS; zero sanitizer failures",
+    "adapter": "5/5 Python tests PASS, zero skips; includes 4 actual backend-function fake-MMIO cases",
+    "not_proven_by_synthetic_clean_test": "The core clean admissible case supplies a synthetic separately-proved delayed-exclusion premise; production cannot supply it. This is not hardware qualification.",
+    "failure_and_loss": "Pending, busy, unreadable, delayed-unproven, already-active/concurrent producer, incomplete coverage, observation loss, unmatched producer exit, counter overflow, stale/reuse/wrong lifetime, closed interval and retained reasons checked",
+    "no_hardware_mutation": "Actual backend function compiles/runs in harness without write/ack/reset/submission APIs; patch adds only passive taps to existing reset/submission; retained-evidence reader inspected and tested for no MMIO/admission"
+  },
+  "modules": {
+    "driver": {
+      "path": "/home/gama/sgx535-offline/phase8-source-quiescence-20261005T055127Z/build/module/gma500_gfx.ko",
+      "bytes": 247976,
+      "sha256": "23c8ff4b362939c98ef95a8337261a52953e7b5c5465b7c51842f9fc512d9e88",
+      "build_id": "7ff468d4fd6ec55784a84225c74777f54443c449",
+      "ELF32_i386": "PASS",
+      "vermagic": "PASS"
+    },
+    "observer": {
+      "path": "/home/gama/sgx535-offline/phase8-source-quiescence-20261005T055127Z/build/observer/sgx535_provenance.ko",
+      "bytes": 19824,
+      "sha256": "8abc0a6b66dc05fed0a27739932794624a8fbe16ecb1aa0563f5416b4c793b10",
+      "build_id": "32efdc007bce47237c5fba1f1c00ac01e51b1c91",
+      "ELF32_i386": "PASS",
+      "vermagic": "PASS"
+    }
+  },
+  "module_import_checks": {
+    "driver": {
+      "result": "PASS",
+      "versioned_imports": 245,
+      "missing": [],
+      "crc_mismatches": {},
+      "unversioned_undefined": [],
+      "kernel_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+      "supplemental_observer_table_sha256": "457c3e2c543909881429d6eaeb131152f27aeae21a447b2d65c4365887996dde"
+    },
+    "observer": {
+      "result": "PASS",
+      "versioned_imports": 35,
+      "missing": [],
+      "crc_mismatches": {},
+      "unversioned_undefined": [],
+      "kernel_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+      "supplemental_observer_table_sha256": "457c3e2c543909881429d6eaeb131152f27aeae21a447b2d65c4365887996dde"
+    }
+  },
+  "source_identities": {
+    "kernel/sgx535_frozen/gma500_fixed_backend.c": {
+      "bytes": 18547,
+      "sha256": "e7921a8027ae342fbadf4f99154b2c0064589c5c6f95dbb7bd185a4d9c738b50"
+    },
+    "kernel/sgx535_frozen/gma500_capsule_observer.c": {
+      "bytes": 13544,
+      "sha256": "7d68be2c6466d99041901a87c2e1c1654019cec1906b2c50ecb9f9cd9c098ff1"
+    },
+    "kernel/sgx535_frozen/gma500_capsule_observer.h": {
+      "bytes": 1564,
+      "sha256": "3b7c176b0b8358390026a848b0c804fadecad45eacec15357d2d19931c871f38"
+    },
+    "kernel/sgx535_frozen/patches/antix-source-guard.patch": {
+      "bytes": 1485,
+      "sha256": "f134ba394b2b9ea37ee18f60e968a17ba5ef146bdb22004928de41cb682d3cf0"
+    },
+    "tools/psb-dri-re/frozen_source_guard.c": {
+      "bytes": 2384,
+      "sha256": "842d048a6be6366a1ed5a103269baa682997b20400adb18b6ea1deaf4ba7ea14"
+    },
+    "tools/psb-dri-re/frozen_source_guard.h": {
+      "bytes": 1623,
+      "sha256": "728a06876232225bb3bc156dd943ca524728705a8571bd7ef00d975572a9cd5e"
+    },
+    "tools/psb-dri-re/test_frozen_source_guard.c": {
+      "bytes": 4035,
+      "sha256": "5533e9e2e5a5e4788f37bf62916731392643ebad15ea0cfed7143130c5542930"
+    },
+    "tools/psb-dri-re/test_frozen_source_guard.py": {
+      "bytes": 7865,
+      "sha256": "821b3e516a95b8e43efdf303ee371e6592cb40aa257f4db0a2b5c3d3805caa6c"
+    }
+  },
+  "image": "NOT BUILT: delayed-work proof remains unavailable; constructing an execution image would not resolve it",
+  "reused": [
+    "Existing kernel/toolchain/import table",
+    "Approved client, source/request bytes and fixed triangle UAPI unchanged",
+    "Qualified event acceptance and retirement/readback algorithms unchanged",
+    "Existing capsule core, archive and full-image validator unchanged",
+    "Historical FIRSTLOAD correction/first-owner evidence remains applicable to original candidate only"
+  ],
+  "changed_or_requires_new_binding": [
+    "Driver and provenance observer bytes changed; old module hashes do not describe new builds",
+    "New source-evidence interface/integration qualified only offline",
+    "No new image/current boot qualification or live guard evidence",
+    "Current running candidate lacks this guard and is unchanged; no hot replacement"
+  ],
+  "minimum_remaining_action": "Establish a permitted hardware-backed passive idle/drain or causal-source guarantee excluding delayed prior TA/3D work, connect it to the covered continuous interval, and qualify that provider offline. No constant/status-only/elapsed-time/clearing/reset substitute. Only then can an updated image and separately authorized fresh live preparation be considered.",
+  "ready_for_staging": false,
+  "ready_for_execution_authorization": false,
+  "sgx_execution_authorized": false,
+  "sgx_invocations": 0,
+  "hardware_interactions": 0,
+  "triangle": "NOT ATTEMPTED",
+  "no_rebuild_of_existing_image": true,
+  "git_stage_or_commit": false
+}

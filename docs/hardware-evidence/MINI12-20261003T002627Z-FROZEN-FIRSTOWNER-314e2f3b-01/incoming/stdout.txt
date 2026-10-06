@@ -1,0 +1,18 @@
+{
+  "classification": "INCOMING PREPARATION PASS",
+  "operations": [
+    {
+      "path": "/home/gama/sgx535-firstload-incoming-314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+      "dev": 2049,
+      "ino": 1048708,
+      "uid": 1000,
+      "gid": 1000,
+      "mode": 448,
+      "phase": "created"
+    }
+  ],
+  "sgx": false,
+  "boot": false,
+  "retry": false,
+  "boot_id": "149fd195-9392-4aa6-a62a-efae01e7177e"
+}

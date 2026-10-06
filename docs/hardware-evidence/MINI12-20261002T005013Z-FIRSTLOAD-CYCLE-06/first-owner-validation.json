@@ -1,0 +1,19 @@
+{
+  "validator_result": {
+    "first_owner": "PASS PROVIDED RECORD",
+    "first_load": "PASS PROVIDED RECORD",
+    "raw_provenance": "INDEPENDENT VERIFICATION REQUIRED",
+    "boot_authorized": false,
+    "sgx_authorized": false
+  },
+  "raw_provenance": "PASS: exact recorded command/root hash, status0, empty stderr, sameboot receipt and55 successful guards",
+  "menu_photo_scope_change": "User-authorized reuse; old real photo, unchanged fresh GRUB/default/staged hashes and current operator menu witness. No fabricated fresh photo.",
+  "first_owner": "PASS OBSERVED",
+  "first_load": "PASS OBSERVED",
+  "capture_window": [
+    130.27,
+    137.27
+  ],
+  "host_duration_seconds": 9.743573590065353,
+  "sgx_authorized": false
+}

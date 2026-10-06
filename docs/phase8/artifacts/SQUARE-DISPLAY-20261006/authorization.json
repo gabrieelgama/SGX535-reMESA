@@ -1,0 +1,8 @@
+{
+  "scope": "ONE DISPLAY-ONLY CPU PUBLICATION; NO SGX",
+  "card_sha256": "1295d948fd6e54eb6dbc310d9e715695b15c3e260a8f70909085ccde84922e15",
+  "boot_id": "83ee4ff8-a7f1-4468-b348-d10627f38d17",
+  "maximum_publications": 1,
+  "display_publication_authorized": true,
+  "sgx_execution_authorized": false
+}

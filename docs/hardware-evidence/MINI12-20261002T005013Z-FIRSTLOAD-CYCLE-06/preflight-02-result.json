@@ -1,0 +1,28 @@
+{
+  "classification": "PASS",
+  "guards": 54,
+  "boot_id": "8c89c9c9-d8c5-48b8-bfad-a4afa0442257",
+  "loaded_original_note_sha256": "484f90964d0c36b50256e42b1bc1cd8fb905fad8476b5a1bf5e549dc178792d7",
+  "kernel_health": {
+    "classification": "PASS WITH BOUNDED STOCK DIAGNOSTICS",
+    "faults": [],
+    "stock_diagnostics": {
+      "acpi_powerbutton_error": 2,
+      "acpi_powerbutton_warning": 2,
+      "powerbutton_probe": 1,
+      "tiny_powerbutton_probe": 1,
+      "backlight_zero_register": 1
+    }
+  },
+  "uptime_start": 1416.15,
+  "uptime_end": 1419.53,
+  "host_duration_seconds": 4.346684476942755,
+  "stock_and_staged_file_receipts": "PASS",
+  "failed_preflight": "PRESERVED UNCHANGED",
+  "reboot": "NOT PERFORMED",
+  "experimental_selection": "NOT PERFORMED",
+  "sgx_execution": false,
+  "gate_b": "BLOCKED",
+  "whitelist": [],
+  "next_physical_step": "AWAIT OPERATOR RELEASE OF CURRENT NO-REBOOT-YET HOLD"
+}

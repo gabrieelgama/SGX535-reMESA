@@ -1,0 +1,124 @@
+{
+  "scope": "Offline new response-export client only; no target; device-touching invocation never executed; approved source/artifact untouched",
+  "commands": [
+    {
+      "label": "client-build-01",
+      "argv": [
+        "/data/data/com.termux/files/usr/bin/clang",
+        "--target=i386-linux-gnu",
+        "--sysroot=/tmp/sgx535-i386-client-build/sysroot/usr/i686-linux-gnu",
+        "--gcc-install-dir=/tmp/sgx535-i386-client-build/sysroot/usr/lib/gcc-cross/i686-linux-gnu/14",
+        "-fuse-ld=lld",
+        "-static",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-pedantic",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot_response.c",
+        "-o",
+        "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-build-01/frozen-triangle-one-shot-response-i386"
+      ],
+      "cwd": "/home/gama/sgx535-gfx",
+      "exit_code": 0,
+      "stdout": "client-build-01.stdout.txt",
+      "stderr": "client-build-01.stderr.txt"
+    },
+    {
+      "label": "client-build-02",
+      "argv": [
+        "/data/data/com.termux/files/usr/bin/clang",
+        "--target=i386-linux-gnu",
+        "--sysroot=/tmp/sgx535-i386-client-build/sysroot/usr/i686-linux-gnu",
+        "--gcc-install-dir=/tmp/sgx535-i386-client-build/sysroot/usr/lib/gcc-cross/i686-linux-gnu/14",
+        "-fuse-ld=lld",
+        "-static",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-pedantic",
+        "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot_response.c",
+        "-o",
+        "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-build-02/frozen-triangle-one-shot-response-i386"
+      ],
+      "cwd": "/home/gama/sgx535-gfx",
+      "exit_code": 0,
+      "stdout": "client-build-02.stdout.txt",
+      "stderr": "client-build-02.stderr.txt"
+    },
+    {
+      "label": "client-readelf",
+      "argv": [
+        "/usr/bin/readelf",
+        "-h",
+        "-l",
+        "-d",
+        "-n",
+        "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-build-01/frozen-triangle-one-shot-response-i386"
+      ],
+      "cwd": "/home/gama/sgx535-gfx",
+      "exit_code": 0,
+      "stdout": "client-readelf.stdout.txt",
+      "stderr": "client-readelf.stderr.txt"
+    },
+    {
+      "label": "client-refuse-default",
+      "argv": [
+        "/tmp/sgx535-i386-client-build/qemu/usr/bin/qemu-i386",
+        "-strace",
+        "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-build-01/frozen-triangle-one-shot-response-i386"
+      ],
+      "cwd": "/home/gama/sgx535-gfx",
+      "exit_code": 2,
+      "stdout": "client-refuse-default.stdout.txt",
+      "stderr": "client-refuse-default.stderr.txt"
+    },
+    {
+      "label": "client-refuse-wrong-flag",
+      "argv": [
+        "/tmp/sgx535-i386-client-build/qemu/usr/bin/qemu-i386",
+        "-strace",
+        "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-build-01/frozen-triangle-one-shot-response-i386",
+        "--WRONG-FLAG",
+        "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-NEVER-created-color.bin",
+        "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-NEVER-created-raw.bin"
+      ],
+      "cwd": "/home/gama/sgx535-gfx",
+      "exit_code": 2,
+      "stdout": "client-refuse-wrong-flag.stdout.txt",
+      "stderr": "client-refuse-wrong-flag.stderr.txt"
+    },
+    {
+      "label": "client-refuse-legacy-arity",
+      "argv": [
+        "/tmp/sgx535-i386-client-build/qemu/usr/bin/qemu-i386",
+        "-strace",
+        "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-build-01/frozen-triangle-one-shot-response-i386",
+        "--one-shot-sgx535-rev121",
+        "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-NEVER-created-color.bin"
+      ],
+      "cwd": "/home/gama/sgx535-gfx",
+      "exit_code": 2,
+      "stdout": "client-refuse-legacy-arity.stdout.txt",
+      "stderr": "client-refuse-legacy-arity.stderr.txt"
+    },
+    {
+      "label": "client-refuse-aliased-paths",
+      "argv": [
+        "/tmp/sgx535-i386-client-build/qemu/usr/bin/qemu-i386",
+        "-strace",
+        "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-build-01/frozen-triangle-one-shot-response-i386",
+        "--one-shot-sgx535-rev121",
+        "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-NEVER-created-color.bin",
+        "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-NEVER-created-color.bin"
+      ],
+      "cwd": "/home/gama/sgx535-gfx",
+      "exit_code": 2,
+      "stdout": "client-refuse-aliased-paths.stdout.txt",
+      "stderr": "client-refuse-aliased-paths.stderr.txt"
+    }
+  ]
+}

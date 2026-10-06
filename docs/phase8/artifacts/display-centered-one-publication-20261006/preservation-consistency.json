@@ -1,0 +1,9 @@
+{
+  "FIRE3_original_95_sealed_files_unchanged": true,
+  "prior_display_attempt_36_sealed_files_unchanged": true,
+  "preexisting_implementation_135_files_unchanged": true,
+  "known_good_rendering_unchanged": true,
+  "candidate_identity_unchanged": true,
+  "sgx_invocations": 0,
+  "no_retry": true
+}

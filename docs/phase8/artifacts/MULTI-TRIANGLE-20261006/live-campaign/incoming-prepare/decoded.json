@@ -1,0 +1,20 @@
+[
+  {
+    "classification": "INCOMING PREPARATION PASS",
+    "operations": [
+      {
+        "path": "/home/gama/sgx535-square-incoming-8be2777b2a79eaa6651b89d19faf4d68cdcdc460-0e45ad4c-20261006T083635Z",
+        "dev": 2049,
+        "ino": 1049045,
+        "uid": 1000,
+        "gid": 1000,
+        "mode": 448,
+        "phase": "created"
+      }
+    ],
+    "sgx": false,
+    "boot": false,
+    "retry": false,
+    "boot_id": "4b6515d2-9e04-47e9-8e2f-5de7f3b38624"
+  }
+]

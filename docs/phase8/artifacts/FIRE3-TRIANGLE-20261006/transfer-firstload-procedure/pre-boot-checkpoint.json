@@ -1,0 +1,21 @@
+{
+  "utc": "2026-10-06T05:28:16.067614+00:00",
+  "previous_partial_preserved": true,
+  "historical_STOP_and_inspection_seals_unchanged": true,
+  "new_transfer": "COMPLETE_VERIFIED",
+  "transfer_seconds": 28.548412957927212,
+  "size": 50816631,
+  "sha256": "3d9eb6baa3d821b4ff98e60ea83f1a94022b5fb2881038d2ad91b95cdfb7448e",
+  "staging": "FROZEN CANDIDATE STAGING PASS; NO BOOT/SGX ACTION",
+  "independent_poststage": "78/78 PASS",
+  "stock_boot": "fc623297-419e-4bce-85d1-271c1b937d0e",
+  "next": "ONE MANUAL FIRSTLOAD SELECTION; operator reply required; no automatic boot",
+  "candidate_entry": "EXPERIMENTAL SGX535 rev121 FROZEN 85ec06b428c99fac7f9127919b7a488d204f4a77 CONSTANT-MAGENTA 3d9eb6ba FIRST-LOAD ONLY (no SGX)",
+  "experimental_boot_uuid": null,
+  "PRE07_READY_FOR_FIRE3": false,
+  "FIRE3_invocations": 0,
+  "FIRE3_authorization_consumed": false,
+  "sgx_execution_authorized": false,
+  "conditional_execution_authorization": "ONE only after complete fresh PRE07 per current maintainer instruction",
+  "triangle": "NOT ESTABLISHED"
+}

@@ -1,0 +1,43 @@
+{
+  "classification": "FRESH STOCK OBSERVATION; not a historical-cycle qualification",
+  "boot_id": "0103242d-9a46-4d66-8a61-42b0c44e00c6",
+  "capture_receipt_recheck": {
+    "classification": "PASS RAW CAPTURE ONLY",
+    "boot_id": "0103242d-9a46-4d66-8a61-42b0c44e00c6",
+    "mode": "stock_preparation",
+    "sgx_authorized": false,
+    "boot_authorized": false,
+    "first_owner": "NOT QUALIFIED BY TIMING ALONE",
+    "full_recovery": "NOT QUALIFIED BY TIMING ALONE"
+  },
+  "capture_start_uptime": 1430.18,
+  "capture_end_uptime": 1436.84,
+  "time_namespace": "time:[4026531834]",
+  "time_namespace_offsets": "monotonic           0         0\nboottime            0         0",
+  "process_starts": [
+    {
+      "pid": 1,
+      "start_ticks": 9,
+      "clock_ticks_per_second": 100,
+      "process_start_since_boot_seconds": 0.09,
+      "meaning": "process start, not userspace readiness"
+    },
+    {
+      "pid": 1401,
+      "start_ticks": 3155,
+      "clock_ticks_per_second": 100,
+      "process_start_since_boot_seconds": 31.55,
+      "meaning": "process start, not userspace readiness"
+    },
+    {
+      "pid": 1794,
+      "start_ticks": 4340,
+      "clock_ticks_per_second": 100,
+      "process_start_since_boot_seconds": 43.4,
+      "meaning": "process start, not userspace readiness"
+    }
+  ],
+  "hdd_boot_can_exceed120": "OPERATOR-REPORTED; not contradicted or confirmed by process-start data",
+  "normal_userspace_arrival_seconds": "UNKNOWN; process launch is not readiness",
+  "cycle03_missing_experimental_identity": "UNCHANGED; cannot be reconstructed"
+}

@@ -1,0 +1,505 @@
+[
+  {
+    "scope": "EXPLICITLY AUTHORIZED ONE ORDINARY CLIENT CALL; NO RETRY",
+    "operations": [
+      {
+        "phase": "created",
+        "name": "source.pre.original.txt",
+        "dev": 2049,
+        "ino": 524778
+      },
+      {
+        "dev": 2049,
+        "ino": 524778,
+        "size": 243,
+        "sha256": "2967348bcf2f2e85ff1bbd56848283df9a187839acf43a5c4a48c6fb4b76f555",
+        "uid": 0,
+        "gid": 0,
+        "mode": 256,
+        "nlink": 1,
+        "regular": true,
+        "phase": "verified",
+        "name": "source.pre.original.txt"
+      },
+      {
+        "phase": "created",
+        "name": "capsule.before.original.bin",
+        "dev": 2049,
+        "ino": 524779
+      },
+      {
+        "dev": 2049,
+        "ino": 524779,
+        "size": 4152,
+        "sha256": "0d24c306b7e1fcd4eee1d2dc77637fe1eafa91816e849fd5c134e683bf3f3504",
+        "uid": 0,
+        "gid": 0,
+        "mode": 256,
+        "nlink": 1,
+        "regular": true,
+        "phase": "verified",
+        "name": "capsule.before.original.bin"
+      },
+      {
+        "phase": "created",
+        "name": "kernel.before.original.txt",
+        "dev": 2049,
+        "ino": 524780
+      },
+      {
+        "dev": 2049,
+        "ino": 524780,
+        "size": 46735,
+        "sha256": "d77b0d676c1a2b54c580791c969a8c854ffd97b2e92b5bede7db226bd7e741cf",
+        "uid": 0,
+        "gid": 0,
+        "mode": 256,
+        "nlink": 1,
+        "regular": true,
+        "phase": "verified",
+        "name": "kernel.before.original.txt"
+      },
+      {
+        "phase": "created",
+        "name": "execution-card.original.json",
+        "dev": 2049,
+        "ino": 524781
+      },
+      {
+        "dev": 2049,
+        "ino": 524781,
+        "size": 17411,
+        "sha256": "1cc193984a39a8c161fff55c2c9002da28740ebaddf367c623696b585125eae7",
+        "uid": 0,
+        "gid": 0,
+        "mode": 256,
+        "nlink": 1,
+        "regular": true,
+        "phase": "verified",
+        "name": "execution-card.original.json"
+      },
+      {
+        "phase": "created",
+        "name": "fire-authorization.original.json",
+        "dev": 2049,
+        "ino": 524782
+      },
+      {
+        "dev": 2049,
+        "ino": 524782,
+        "size": 271,
+        "sha256": "40fc686c936296f7ee5838b42e8867d9a389a08d370d00af08eee24190803380",
+        "uid": 0,
+        "gid": 0,
+        "mode": 256,
+        "nlink": 1,
+        "regular": true,
+        "phase": "verified",
+        "name": "fire-authorization.original.json"
+      },
+      {
+        "phase": "created",
+        "name": "invocation.intent.original.json",
+        "dev": 2049,
+        "ino": 524785
+      },
+      {
+        "dev": 2049,
+        "ino": 524785,
+        "size": 723,
+        "sha256": "ddaaa35b57b79767cfb712a14567b7148938904bdad556ecb4fbd080a1e4bd82",
+        "uid": 0,
+        "gid": 0,
+        "mode": 256,
+        "nlink": 1,
+        "regular": true,
+        "phase": "verified",
+        "name": "invocation.intent.original.json"
+      },
+      {
+        "phase": "created",
+        "name": "capsule.original.bin",
+        "dev": 2049,
+        "ino": 524788
+      },
+      {
+        "dev": 2049,
+        "ino": 524788,
+        "size": 4152,
+        "sha256": "597176281722ee2cc333f3f16ae4658df46cd2aa748f46ba6fb99fae49a40f0b",
+        "uid": 0,
+        "gid": 0,
+        "mode": 256,
+        "nlink": 1,
+        "regular": true,
+        "phase": "verified",
+        "name": "capsule.original.bin"
+      },
+      {
+        "phase": "created",
+        "name": "source.post.original.txt",
+        "dev": 2049,
+        "ino": 524789
+      },
+      {
+        "dev": 2049,
+        "ino": 524789,
+        "size": 243,
+        "sha256": "4219fe8dd303374b0aedbc9219a32e328a1fe6432346559c148fdb33ff0db91c",
+        "uid": 0,
+        "gid": 0,
+        "mode": 256,
+        "nlink": 1,
+        "regular": true,
+        "phase": "verified",
+        "name": "source.post.original.txt"
+      },
+      {
+        "phase": "created",
+        "name": "kernel.after.original.txt",
+        "dev": 2049,
+        "ino": 524790
+      },
+      {
+        "dev": 2049,
+        "ino": 524790,
+        "size": 46735,
+        "sha256": "d77b0d676c1a2b54c580791c969a8c854ffd97b2e92b5bede7db226bd7e741cf",
+        "uid": 0,
+        "gid": 0,
+        "mode": 256,
+        "nlink": 1,
+        "regular": true,
+        "phase": "verified",
+        "name": "kernel.after.original.txt"
+      },
+      {
+        "phase": "created",
+        "name": "execution.receipt.original.json",
+        "dev": 2049,
+        "ino": 524791
+      },
+      {
+        "dev": 2049,
+        "ino": 524791,
+        "size": 12886,
+        "sha256": "d362c0c24456df1e3510984e1e1f3fa4d08a57e0eb9cafa8110f53c96b678d3f",
+        "uid": 0,
+        "gid": 0,
+        "mode": 256,
+        "nlink": 1,
+        "regular": true,
+        "phase": "verified",
+        "name": "execution.receipt.original.json"
+      }
+    ],
+    "guards": [
+      {
+        "name": "root privilege",
+        "pass": true
+      },
+      {
+        "name": "regular input /proc/sys/kernel/random/boot_id",
+        "pass": true
+      },
+      {
+        "name": "exact candidate boot continuity",
+        "pass": true
+      },
+      {
+        "name": "kernel/architecture continuity",
+        "pass": true
+      },
+      {
+        "name": "regular input /sys/module/gma500_gfx/initstate",
+        "pass": true
+      },
+      {
+        "name": "module Live gma500_gfx",
+        "pass": true
+      },
+      {
+        "name": "regular input /sys/module/gma500_gfx/notes/.note.gnu.build-id",
+        "pass": true
+      },
+      {
+        "name": "module note identity gma500_gfx",
+        "pass": true
+      },
+      {
+        "name": "regular input /sys/module/sgx535_provenance/initstate",
+        "pass": true
+      },
+      {
+        "name": "module Live sgx535_provenance",
+        "pass": true
+      },
+      {
+        "name": "regular input /sys/module/sgx535_provenance/notes/.note.gnu.build-id",
+        "pass": true
+      },
+      {
+        "name": "module note identity sgx535_provenance",
+        "pass": true
+      },
+      {
+        "name": "PCI owner continuity",
+        "pass": true
+      },
+      {
+        "name": "actual capsule UNUSED; zero eligible calls",
+        "pass": true
+      },
+      {
+        "name": "same loaded producer clean source and continuous-isolation witness",
+        "pass": true
+      },
+      {
+        "name": "same source boundary remains prepared without rearm",
+        "pass": true
+      },
+      {
+        "name": "kernel log availability",
+        "pass": true
+      },
+      {
+        "name": "current-boot kernel health",
+        "pass": true
+      },
+      {
+        "name": "protected original evidence directory unchanged",
+        "pass": true
+      },
+      {
+        "name": "regular input /root/sgx535-square-seq1-8be2777b2a79eaa6651b89d19faf4d68cdcdc460-0e45ad4c/frozen-triangle-one-shot-response-i386",
+        "pass": true
+      },
+      {
+        "name": "exact protected approved executable immediately before call",
+        "pass": true
+      },
+      {
+        "name": "unused future evidence destination response.original.bin",
+        "pass": true
+      },
+      {
+        "name": "unused future evidence destination color.original.bin",
+        "pass": true
+      },
+      {
+        "name": "unused future evidence destination client.stdout.original.txt",
+        "pass": true
+      },
+      {
+        "name": "unused future evidence destination client.stderr.original.txt",
+        "pass": true
+      },
+      {
+        "name": "unused future evidence destination capsule.original.bin",
+        "pass": true
+      },
+      {
+        "name": "unused future evidence destination kernel.before.original.txt",
+        "pass": true
+      },
+      {
+        "name": "unused future evidence destination kernel.after.original.txt",
+        "pass": true
+      },
+      {
+        "name": "unused future evidence destination manifest.json",
+        "pass": true
+      },
+      {
+        "name": "unused future evidence destination sealed.json",
+        "pass": true
+      },
+      {
+        "name": "unused future evidence destination capsule.binding.json",
+        "pass": true
+      },
+      {
+        "name": "unused future evidence destination capsule.binding.sealed.json",
+        "pass": true
+      },
+      {
+        "name": "unused future evidence destination archive",
+        "pass": true
+      },
+      {
+        "name": "unused future evidence destination source.pre.original.txt",
+        "pass": true
+      },
+      {
+        "name": "unused future evidence destination source.post.original.txt",
+        "pass": true
+      },
+      {
+        "name": "continuous clean source/isolation immediately before one call",
+        "pass": true
+      },
+      {
+        "name": "regular input /proc/sys/kernel/random/boot_id",
+        "pass": true
+      },
+      {
+        "name": "same boot and UNUSED capsule immediately before one call",
+        "pass": true
+      },
+      {
+        "name": "regular input /proc/sys/kernel/random/boot_id",
+        "pass": true
+      },
+      {
+        "name": "regular input /sys/module/gma500_gfx/notes/.note.gnu.build-id",
+        "pass": true
+      },
+      {
+        "name": "regular input /sys/module/sgx535_provenance/notes/.note.gnu.build-id",
+        "pass": true
+      }
+    ],
+    "sgx_execution_authorized": true,
+    "client_launch_attempted": true,
+    "retry": false,
+    "interpretation": "NONE: PRESERVING ORIGINALS FIRST",
+    "source_observations": [
+      {
+        "sha256": "2967348bcf2f2e85ff1bbd56848283df9a187839acf43a5c4a48c6fb4b76f555",
+        "payload_base64": "U0dYU09VUkNFMgpzdGF0ZT0wCnJlYXNvbnM9MApwcm9kdWNlcnNfYWN0aXZlPTAKZHJpdmVyX2F0dGFjaGVkPTEKY2Fwc3VsZV9zdGF0ZT0wCmJvb3Q9MwpwcmVwYXJlZD0xCmFzc2VydGVkX3Jlc2V0PTEyNwpyZWxlYXNlZF9yZXNldD0wCnN0YXJ0dXBfcGVuZGluZz0wCnN0YXJ0dXBfcmVhZHM9MApzdGFydHVwX2ZhdWx0PTAKc3RhcnR1cF9hdXRvbm9tb3VzPTAKZGVsYXllZF9leGNsdXNpb249U1RBUlRVUF9MSUZFQ1lDTEUK",
+        "decoded": {
+          "supplied_record_consistency": "CONFIRMED",
+          "interval": "PREPARED, MUST REMAIN CONTINUOUS",
+          "hardware_attribution": "UNKNOWN WITHOUT VERIFIED LIVE BOOT/PRODUCER PROVENANCE",
+          "triangle": "NOT ESTABLISHED BY SOURCE WITNESS",
+          "errors": [],
+          "values": {
+            "state": 0,
+            "reasons": 0,
+            "producers_active": 0,
+            "driver_attached": 1,
+            "capsule_state": 0,
+            "boot": 3,
+            "prepared": 1,
+            "asserted_reset": 127,
+            "released_reset": 0,
+            "startup_pending": 0,
+            "startup_reads": 0,
+            "startup_fault": 0,
+            "startup_autonomous": 0,
+            "delayed_exclusion": "STARTUP_LIFECYCLE"
+          }
+        }
+      }
+    ],
+    "kernel_health": {
+      "classification": "PASS WITH BOUNDED STOCK DIAGNOSTICS",
+      "faults": [],
+      "stock_diagnostics": {
+        "unsigned_drm_loader_notice": 1,
+        "backlight_zero_register": 1,
+        "acpi_powerbutton_error": 2,
+        "acpi_powerbutton_warning": 2,
+        "powerbutton_probe": 1,
+        "tiny_powerbutton_probe": 1
+      }
+    },
+    "client_argv": [
+      "/root/sgx535-square-seq1-8be2777b2a79eaa6651b89d19faf4d68cdcdc460-0e45ad4c/frozen-triangle-one-shot-response-i386",
+      "--one-shot-sgx535-rev121",
+      "/root/sgx535-square-seq1-8be2777b2a79eaa6651b89d19faf4d68cdcdc460-0e45ad4c/evidence-83ee4ff8-a7f1-4468-b348-d10627f38d17/color.original.bin",
+      "/root/sgx535-square-seq1-8be2777b2a79eaa6651b89d19faf4d68cdcdc460-0e45ad4c/evidence-83ee4ff8-a7f1-4468-b348-d10627f38d17/response.original.bin"
+    ],
+    "client_start_utc": "2026-10-06T08:35:32.297187+00:00",
+    "client_pid": 14563,
+    "client_exit_status": 0,
+    "client_end_utc": "2026-10-06T08:35:32.946083+00:00",
+    "post_originals": {
+      "capsule.original.bin": {
+        "dev": 2049,
+        "ino": 524788,
+        "size": 4152,
+        "sha256": "597176281722ee2cc333f3f16ae4658df46cd2aa748f46ba6fb99fae49a40f0b",
+        "uid": 0,
+        "gid": 0,
+        "mode": 256,
+        "nlink": 1,
+        "regular": true
+      },
+      "source.post.original.txt": {
+        "dev": 2049,
+        "ino": 524789,
+        "size": 243,
+        "sha256": "4219fe8dd303374b0aedbc9219a32e328a1fe6432346559c148fdb33ff0db91c",
+        "uid": 0,
+        "gid": 0,
+        "mode": 256,
+        "nlink": 1,
+        "regular": true
+      },
+      "kernel.after.original.txt": {
+        "dev": 2049,
+        "ino": 524790,
+        "size": 46735,
+        "sha256": "d77b0d676c1a2b54c580791c969a8c854ffd97b2e92b5bede7db226bd7e741cf",
+        "uid": 0,
+        "gid": 0,
+        "mode": 256,
+        "nlink": 1,
+        "regular": true
+      }
+    },
+    "post_boot_id": "83ee4ff8-a7f1-4468-b348-d10627f38d17",
+    "post_notes": {
+      "gma500_gfx": "35ec9f4e576a83a3990ebda4f8aee5869c0e4ea32e1e35969fa48abffa7dc832",
+      "sgx535_provenance": "6afbac1cf48a211135e2a4b4ffc30f96ace64f6d397071595bbc328966bb8af0"
+    },
+    "client_originals": {
+      "response.original.bin": {
+        "dev": 2049,
+        "ino": 524786,
+        "size": 4268,
+        "sha256": "3475715ca27582f82c392d92ee88e1fdb71383646ab480018fa8edc0c82a657f",
+        "uid": 0,
+        "gid": 0,
+        "mode": 384,
+        "nlink": 1,
+        "regular": true
+      },
+      "color.original.bin": {
+        "dev": 2049,
+        "ino": 524787,
+        "size": 4096,
+        "sha256": "6e9af8e8b6576b979aa78816d44bd3b0ffd31b70e169a982e83736d63ab91729",
+        "uid": 0,
+        "gid": 0,
+        "mode": 384,
+        "nlink": 1,
+        "regular": true
+      },
+      "client.stdout.original.txt": {
+        "dev": 2049,
+        "ino": 524783,
+        "size": 416,
+        "sha256": "dd04d2234d8840fc49fea46084feafd0105010616f80bad9d8a0e071c1471b5a",
+        "uid": 0,
+        "gid": 0,
+        "mode": 384,
+        "nlink": 1,
+        "regular": true
+      },
+      "client.stderr.original.txt": {
+        "dev": 2049,
+        "ino": 524784,
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "uid": 0,
+        "gid": 0,
+        "mode": 384,
+        "nlink": 1,
+        "regular": true
+      }
+    },
+    "classification": "ONE CLIENT LAUNCH COMPLETED; ORIGINALS RETAINED; REQUIRES OFFLINE CORRELATION"
+  }
+]

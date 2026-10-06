@@ -1,0 +1,17 @@
+[
+  {
+    "source": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "target": "../hardware-evidence/MINI12-20261002T001828Z-FIRSTLOAD-CYCLE-05/RESULT.md",
+    "exists": true
+  },
+  {
+    "source": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "target": "../hardware-evidence/MINI12-20261002T001828Z-FIRSTLOAD-CYCLE-05/RESULT.md",
+    "exists": true
+  },
+  {
+    "source": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "target": "../hardware-evidence/MINI12-20261002T001828Z-FIRSTLOAD-CYCLE-05/RESULT.md",
+    "exists": true
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "source_files_compared": 94,
+  "changed": [
+    "frozen_kernel_initial.inc",
+    "frozen_kernel_relocations.inc"
+  ],
+  "opaque_input_sha256": "ca07d61986983414067536575fb2950ddf64adbb63129f66b560d7b741be18b5",
+  "opaque_bytes_unchanged": true,
+  "opaque_contents_not_inspected": true
+}

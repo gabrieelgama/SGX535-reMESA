@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-02T00:05:16.064741+00:00",
+  "classification": "OPERATOR-REPORTED HISTORY; not causal proof",
+  "statement": "This pre-existing Mini 12 boot behavior has occurred outside this experiment; it persists until reset and another boot. The operator does not believe EXPERIMENTAL caused it but explicitly does not claim proof of the cause.",
+  "experimental_causation": "UNKNOWN",
+  "recovery_scope_confirmed": "authorized STOCK recovery only; no experimental reselection"
+}

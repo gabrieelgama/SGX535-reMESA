@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-06T05:47:31.108508+00:00",
+  "boot_id": "f1ab6606-0561-445f-a397-28a028516cd7",
+  "card_sha256": "768a2099639e412c40a84f2a5e64c9bec3fd8344787f6422d72f738b996a7faa",
+  "maximum_dispatches": 1,
+  "state": "ONE REMOTE DISPATCH ABOUT TO BE ATTEMPTED; POSSIBLE ISSUANCE IF INTERRUPTED; NO RETRY",
+  "authorization_reserved_for_this_dispatch": true,
+  "further_SGX_execution_authorized": false
+}

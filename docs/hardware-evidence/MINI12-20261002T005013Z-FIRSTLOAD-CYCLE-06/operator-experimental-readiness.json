@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-02T01:02:08.405209+00:00",
+  "local_sudo_succeeded": true,
+  "normal_userspace": true,
+  "physical_display_normal": true,
+  "experimental_selected_exactly_once": true,
+  "menu_and_default_matched": true,
+  "userspace_seen_before_boot_watch": true,
+  "literal_operator_reply": "Confirmed. EXPERIMENTAL was selected exactly once. The reviewed menu titles and STOCK default matched. Physical display/userspace are normal, sudo -v succeeded locally, and userspace appeared within the600-second watch. No retry or graphics/SGX commands."
+}

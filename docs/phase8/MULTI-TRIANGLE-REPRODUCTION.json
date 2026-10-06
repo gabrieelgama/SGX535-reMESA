@@ -1,0 +1,136 @@
+{
+  "schema": "SGX535_MULTI_TRIANGLE_MILESTONE_V1",
+  "milestone": "MULTI_TRIANGLE_ESTABLISHED",
+  "classification": "CONFIRMED",
+  "recorded_utc": "2026-10-06T08:58:10.302889+00:00",
+  "boot_id": "83ee4ff8-a7f1-4468-b348-d10627f38d17",
+  "driver": {
+    "path": "/home/gama/sgx535-offline/phase8-first-3d-offline-20261006T072942Z/build/module/gma500_gfx.ko",
+    "bytes": 250864,
+    "sha256": "c21c26c567fc7676e28f4f732cb8cd3c7af1a7360560b58a310789523dc9454d",
+    "build_id": "8be2777b2a79eaa6651b89d19faf4d68cdcdc460",
+    "loaded_note_sha256": "35ec9f4e576a83a3990ebda4f8aee5869c0e4ea32e1e35969fa48abffa7dc832",
+    "abi": "ELF32/i386",
+    "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 ",
+    "dependencies": "drm,drm_kms_helper,sgx535_provenance,video,i2c-algo-bit",
+    "versioned_imports": 253,
+    "missing_imports": [],
+    "crc_mismatches": {},
+    "unversioned_undefined": [],
+    "module_layout": "0xb84efb99",
+    "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+    "qualification": "PASS"
+  },
+  "observer": {
+    "path": "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/build/observer/sgx535_provenance.ko",
+    "bytes": 26284,
+    "sha256": "2e35e863d51dbc1d407feef08f08bb2edc6390af621a0f173a9b1a73ec76158a",
+    "build_id": "f11d3abb072caa4e1d32836ef92ce201e9c9d126",
+    "loaded_note_sha256": "6afbac1cf48a211135e2a4b4ffc30f96ace64f6d397071595bbc328966bb8af0",
+    "abi": "ELF32/i386",
+    "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 ",
+    "dependencies": "",
+    "versioned_imports": 38,
+    "missing_imports": [],
+    "crc_mismatches": {},
+    "unversioned_undefined": [],
+    "module_layout": "0xb84efb99",
+    "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+    "qualification": "PASS"
+  },
+  "image": {
+    "path": "/boot/initrd.img-5.10.240-antix.1-486-smp-sgx535-firstload-8be2777b2a79eaa6651b89d19faf4d68cdcdc460-0e45ad4c",
+    "bytes": 50816648,
+    "sha256": "0e45ad4c9ec3eaa891253ea319348286c869644a3ba6c9dba54de39d92bd1e7d"
+  },
+  "client_sha256": "2f84917f96db2859678797a327d40d9638325e5c5efb6e0dfccef44d756b4835",
+  "uapi_sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420",
+  "indices": [
+    0,
+    1,
+    2,
+    1,
+    3,
+    2
+  ],
+  "vertices": [
+    [
+      8,
+      8,
+      0.5,
+      1
+    ],
+    [
+      24,
+      8,
+      0.5,
+      1
+    ],
+    [
+      8,
+      24,
+      0.5,
+      1
+    ],
+    [
+      24,
+      24,
+      0.5,
+      1
+    ]
+  ],
+  "rendering_delta_from_FIRE3": "add fourth vertex; count6; six indices; stream placement adjusted;49 canonical relocations; no shader/PDS/ISP/PBE/lifecycle change",
+  "lifecycle": {
+    "client_exit": 0,
+    "ioctl": 0,
+    "operation_errno": 0,
+    "phase": 9,
+    "ledger": 7,
+    "TA_completion": "CONFIRMED",
+    "end_render": "CONFIRMED",
+    "3D_memory_free": "CONFIRMED",
+    "retirement": "CONFIRMED",
+    "same_operation_attribution": "CONFIRMED"
+  },
+  "readback": {
+    "path": "docs/phase8/artifacts/MULTI-TRIANGLE-20261006/live-campaign/one-authorized-square-call/originals/color.original.bin",
+    "bytes": 4096,
+    "sha256": "6e9af8e8b6576b979aa78816d44bd3b0ffd31b70e169a982e83736d63ab91729",
+    "magenta_pixels": 256,
+    "zero_pixels": 768,
+    "magenta_value": "0xffff00ff",
+    "zero_value": "0x00000000",
+    "bbox_inclusive": [
+      8,
+      8,
+      23,
+      23
+    ],
+    "exact_coordinates": "all (x,y) where8<=x<=23 and8<=y<=23; all other pixels zero",
+    "oracle_mismatch_pixels": 0
+  },
+  "execution_card": "docs/phase8/artifacts/MULTI-TRIANGLE-20261006/live-campaign/one-shot-execution-card.corrected.OFFLINE-ONLY.json",
+  "base_execution_card": "docs/phase8/next-3d-execution-card-20261006.json",
+  "candidate_manifest": "docs/phase8/two-triangle-experimental-candidate-20261006.json",
+  "originals_seal": "docs/phase8/artifacts/MULTI-TRIANGLE-20261006/live-campaign/one-authorized-square-call/originals/originals.seal.json",
+  "live_result": "docs/phase8/artifacts/MULTI-TRIANGLE-20261006/live-campaign/square-live-result.json",
+  "archive": "docs/phase8/artifacts/MULTI-TRIANGLE-20261006",
+  "display_publication_performed": false,
+  "new_sgx_invocations": 1,
+  "authorization_consumed": true,
+  "further_execution_authorized": false,
+  "not_established": [
+    "perspective",
+    "interpolation",
+    "per-draw color rebinding",
+    "depth testing",
+    "repeated frames",
+    "3D object",
+    "square physical presentation"
+  ],
+  "frozen_baselines": [
+    "KNOWN_GOOD_TRIANGLE_RENDER",
+    "KNOWN_GOOD_TRIANGLE_DISPLAY_PUBLICATION",
+    "KNOWN_GOOD_TWO_INDEXED_TRIANGLE_QUAD"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "classification": "PRE07 LIVE PASS",
+  "PRE07_READY_FOR_SQUARE": "YES",
+  "boot_id": "83ee4ff8-a7f1-4468-b348-d10627f38d17",
+  "identity": "EXACT SQUARE DRIVER/UNCHANGED OBSERVER/QUALIFIED IMAGE",
+  "first_owner": "83/83 PASS",
+  "protected_preparation": "56/56 PASS",
+  "independent_final_guards": "204/204 PASS",
+  "startup_source": "CONFIRMED",
+  "continuous_isolation": "CONFIRMED",
+  "capsule": "UNUSED",
+  "kernel_health": {
+    "classification": "PASS WITH BOUNDED STOCK DIAGNOSTICS",
+    "faults": [],
+    "stock_diagnostics": {
+      "unsigned_drm_loader_notice": 1,
+      "backlight_zero_register": 1,
+      "acpi_powerbutton_error": 2,
+      "acpi_powerbutton_warning": 2,
+      "powerbutton_probe": 1,
+      "tiny_powerbutton_probe": 1
+    }
+  },
+  "evidence_destination": {
+    "path": "/root/sgx535-square-seq1-8be2777b2a79eaa6651b89d19faf4d68cdcdc460-0e45ad4c/evidence-83ee4ff8-a7f1-4468-b348-d10627f38d17",
+    "dev": 2049,
+    "ino": 524773,
+    "uid": 0,
+    "gid": 0,
+    "mode": "0o700"
+  },
+  "client_executed": false,
+  "possible_issuance": false,
+  "requested_invocation_limit": 1,
+  "physical_display_publication": false,
+  "authorization": "explicit maintainer square authorization, continued after preserved controller STOP",
+  "timestamp_utc": "2026-10-06T08:53:16.034629+00:00"
+}

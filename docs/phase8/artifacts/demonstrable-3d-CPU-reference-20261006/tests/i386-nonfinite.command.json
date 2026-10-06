@@ -1,0 +1,8 @@
+{
+  "argv": [
+    "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/tests/qemu-root/usr/bin/qemu-i386",
+    "/home/gama/sgx535-offline/phase8-demonstrable-3d-plan-20261006T080902Z/CPU-tests/projection-i386"
+  ],
+  "returncode": 2,
+  "success_expected": false
+}

@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "request_id": "MINI12-PRE07-ACCEPTED-OUTCOME-PROPERTY-REVIEW-20261004-314e2f3b",
+  "record_kind": "PENDING PROPERTY-ONLY TECHNICAL REVIEW REQUEST; NO DECISION OR AUTHORITY CHANGE",
+  "prepared_timestamp_utc": "2026-10-04T20:22:43Z",
+  "request_preparation_authority": "Explicit maintainer instruction to freeze the scoped root cause and prepare the narrowest property-only review; no permission to inspect excluded implementation.",
+  "decision": null,
+  "decision_authority": null,
+  "decision_timestamp_utc": null,
+  "property_finding": null,
+  "approved": false,
+  "scope": "Evaluate externally supportable properties of the EXACT EXISTING qualified reporting boundary without accessing, recovering, deriving or disclosing restricted implementation. No implementation or live work requested.",
+  "exact_context": {
+    "boot_id": "89fc7306-6dac-4ab9-af62-360b7152ef22",
+    "module_build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+    "action": "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1",
+    "freshness": "Boot and 70/70 first-owner facts are preserved historical observations, not fresh invocation guards."
+  },
+  "approved_response_client": {
+    "source": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot_response.c",
+      "size": 5514,
+      "sha256": "919c2611e048e4a660ecae3542264adf5a5367d9b0fbe7fbceff2f45f90adedf"
+    },
+    "binary": {
+      "path": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-build-01/frozen-triangle-one-shot-response-i386",
+      "size": 775264,
+      "sha256": "2f84917f96db2859678797a327d40d9638325e5c5efb6e0dfccef44d756b4835"
+    },
+    "uapi": {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_uapi.h",
+      "size": 760,
+      "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420"
+    }
+  },
+  "unchanged_context_bindings": {
+    "kernel": "5.10.240-antix.1-486-smp",
+    "architecture": "i686",
+    "module": {
+      "path": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/module/gma500_gfx.ko",
+      "size_bytes": 244960,
+      "sha256": "4141a07c1f2d2ffc9ab2770b7b4cf654f68c396275dad15f0ddc68192529d8e6",
+      "build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+      "loaded_note_sha256": "edb1e3e59cfd70c48d400bec89f2a30c1a436b05bf115bc1a05581abc153bdc9",
+      "identity_evidence": [
+        "module_identity",
+        "qualification",
+        "first_owner_records"
+      ]
+    },
+    "diagnostic_image": {
+      "source_path": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/image/build-01/initrd.img-sgx535-firstload-diagnostic-01",
+      "staged_path": "/boot/initrd.img-5.10.240-antix.1-486-smp-sgx535-firstload-314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+      "size_bytes": 50805231,
+      "sha256": "fe64b3dcfe74b78a6d96edcd4fd7c118c3901fcff8631afec6c14647da292e3c",
+      "embedded_module_sha256": "4141a07c1f2d2ffc9ab2770b7b4cf654f68c396275dad15f0ddc68192529d8e6",
+      "identity_evidence": [
+        "image_identity",
+        "image_qualification",
+        "poststage_records",
+        "first_owner_records",
+        "menu_receipt"
+      ]
+    }
+  },
+  "root_cause_record": "/home/gama/sgx535-gfx/docs/phase8/accepted-outcome-export-proof-review-20261004.md",
+  "question": "Does the existing exact qualified boundary guarantee that externally retained outcome information (which may be an attributable accepted-event ledger) and the returned response/image refer to the same freshly initialized, hardware-observed owner/session of the exact single approved ioctl, with required ordering, terminal state and preservation lifetime, under independently established current context, exclusivity and producer provenance?",
+  "representation_policy": {
+    "required_facts_not_fields": true,
+    "raw_status_history_mandatory": false,
+    "unique_token_mandatory": false,
+    "new_uapi_mandatory": false,
+    "ledger_rule": "A genuine qualified current-session ledger may represent acceptance of classes and required partial order. An unbound response word, synthetic ledger, event count or readiness decision alone is insufficient hardware evidence.",
+    "ordering": "Accepted TA precedes raster continuation; raster outcomes require raster-start gating. No mandatory total order or timestamps for end-render versus memory-free."
+  },
+  "properties_to_review": [
+    {
+      "id": "EP01",
+      "property": "The actual approved process/ioctl in the bound continuous boot/build/action context has one eligible owner/session; unrelated activity cannot substitute outcomes. Identity may be established by independent observation rather than new embedded fields."
+    },
+    {
+      "id": "EP02",
+      "property": "Relevant completion state starts cleared for that session and accepted outcomes derive from the actual qualified hardware-status backend and contract, not fabricated or stale software state; current isolation/baseline/history evidence excludes another eligible hardware producer."
+    },
+    {
+      "id": "EP03",
+      "property": "Externally retained accepted classes faithfully represent that session's TA completion, end-render and 3D memory-free acceptance. Ledger1/2/4 may suffice if its authenticity/lineage is established."
+    },
+    {
+      "id": "EP04",
+      "property": "The required partial ordering and terminal phase/outcome are faithfully represented, even if detailed raw observation history is overwritten. A zero diagnostic field is not treated as success."
+    },
+    {
+      "id": "EP05",
+      "property": "The returned operation_errno/outcome/phase/observed_events and color results are from that same invocation/session at response construction, not another or previously completed operation."
+    },
+    {
+      "id": "EP06",
+      "property": "Outcome information necessary for the proof remains externally obtainable and intact until legitimate evidence preservation; response and original image have demonstrable common producer/source lineage. No restricted output-discovery technique is requested."
+    },
+    {
+      "id": "EP07",
+      "property": "Permitted evidence supporting the preceding guarantees can be identified at property/interface level for the exact qualified artifact, without disclosing excluded source, implementation flow or reconstruction hints. Existing retained kernel evidence requirements remain in force."
+    },
+    {
+      "id": "EP08",
+      "property": "Abnormal client termination, negative ioctl, incomplete copy-out/export, missing records or unknown issuance never acquires invented completion or no-invocation status; partial evidence is retained and STOP/NO RETRY applies."
+    }
+  ],
+  "minimum_external_proof": "There exists exactly one current eligible session S associated with invocation I in the approved context; actual backend observations accepted by the qualified contract supply S's ledger and terminal outcome; retained response R faithfully reports S and image C when produced shares that source; required order, freshness, integrity and continuity exclude substitutions. Every claimed edge requires applicable evidence, not declared metadata alone.",
+  "allowed_evidence": [
+    "Permitted contract/service/backend/owner source facts already established; no excluded caller/emitter contents.",
+    "Public UAPI and exact approved response-client interface/behavior.",
+    "Existing exact module/image/client/UAPI qualification metadata; no repeated qualification or hashes.",
+    "Unrestricted evidence requirements and clean-room design/scope records.",
+    "Independently permitted public/property-level interface guarantees, if genuinely available and attributable to the exact qualified artifact."
+  ],
+  "forbidden_inputs_or_requests": [
+    "Restricted ioctl-entry/reporting or wrapper source/content, control flow, internal implementation details or historical payloads.",
+    "Reconstruction from restricted behavior, hidden code or hints; alternate tools/sources/encodings to recover excluded information.",
+    "An equivalent indirect substitute for a blocked operation, or a request to recreate the historical wrapper.",
+    "Hardware contact, live capture, fresh guards, client/SGX execution, staging, installation, boot or recovery changes.",
+    "Kernel/module/UAPI changes, implementation or deployment."
+  ],
+  "contamination_stop_rule": "If answering requires accessing, deriving, remembering as a specification, reconstructing, disclosing or obtaining excluded material by another route, STOP that branch and report NOT_ESTABLISHED_FROM_PERMITTED_EVIDENCE. Do not reveal restricted implementation or infer a negative guarantee from missing access.",
+  "requested_review_result": {
+    "allowed_findings": [
+      "ESTABLISHED_FROM_PERMITTED_EVIDENCE",
+      "DISPROVEN_BY_PERMITTED_EVIDENCE",
+      "NOT_ESTABLISHED_FROM_PERMITTED_EVIDENCE"
+    ],
+    "per_property_required": "Finding, permitted supporting evidence path/public guarantee, exact artifact/context scope, observable assurance and limits. No hidden implementation description. Negative findings require permitted counterevidence.",
+    "reviewer_authority": "No signer roster or access capability invented. The record must identify its actual permitted source and the scope of the technical finding; it does not manufacture live authority.",
+    "affirmative_limit": "A supported property result can resolve the semantic binding uncertainty; it is not live provenance, completed fresh guards, full PRE07 readiness, promotion, staging permission or SGX execution authorization."
+  },
+  "gap_classification": "B. SESSION-TO-IOCTL BINDING GAP",
+  "classification_scope": "Minimum unproved semantic edge; not a proven defect in excluded code. Faithful ledger/terminal/image export is part of binding. Other PRE07 guard/destination/capture prerequisites remain separate.",
+  "existing_sufficient_observable": "UNKNOWN; this request does not issue a technical finding.",
+  "kernel_module_change_necessary": "NOT YET DEMONSTRATED",
+  "uapi_change_necessary": "NOT YET DEMONSTRATED",
+  "fallback": {
+    "trigger": "Only a later permitted finding that existing property cannot be established or is actually inadequate.",
+    "next_review": "Separately request design-only review of an independent accepted-outcome binding/export contract derived solely from permitted acceptance semantics, public UAPI and evidence requirements.",
+    "design_request_issued_now": false,
+    "reason": "Property-only review is conceptually legitimate and has not been shown impossible; do not create a premature new design/patch gate.",
+    "automatic_escalation": false,
+    "design_or_implementation_permission_granted": false
+  },
+  "evidence": {
+    "handoff": "/home/gama/sgx535-gfx/docs/phase8/CODEX-HANDOFF-20261002.md",
+    "gate_b": "/home/gama/sgx535-gfx/docs/phase8/gate-b-maintainer-readiness-20261004-314e2f3b.json",
+    "exact_client_approval": "/home/gama/sgx535-gfx/docs/phase8/response-export-client-substitution-maintainer-20261004-314e2f3b.json",
+    "clean_room_scope": "/home/gama/sgx535-gfx/docs/phase8/pre07-clean-room-review-scope-20261004.md",
+    "design_scope_decision": "/home/gama/sgx535-gfx/docs/phase8/pre07-clean-room-design-scope-maintainer-20261004-314e2f3b.json",
+    "existing_partial_design": "/home/gama/sgx535-gfx/docs/phase8/pre07-clean-room-design-contract-20261004-314e2f3b.json",
+    "permitted_observability_inventory": "/home/gama/sgx535-gfx/docs/phase8/pre07-kernel-attribution-20261004.md",
+    "diagnostic_audit": "/home/gama/sgx535-gfx/docs/phase8/diagnostic-gate-b-technical-audit.md",
+    "source_manifest": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/source-manifest.json",
+    "module_identity": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/qualification/identity.json",
+    "response_client_qualification": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-qualification.json"
+  },
+  "source_anchors": [
+    {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+      "lines": [
+        841,
+        862
+      ],
+      "fact": "Per-session initialization clears ledger/sequence/raster state."
+    },
+    {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+      "lines": [
+        899,
+        1034
+      ],
+      "fact": "Same-sequence acceptance, duplicate checks and partial order; ledger survives retirement."
+    },
+    {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_fixed_service.c",
+      "lines": [
+        310,
+        329
+      ],
+      "fact": "Latest sample overwrites diagnostic; completed session retires without restoring historical observations."
+    },
+    {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_fixed_service.h",
+      "lines": [
+        66,
+        80
+      ],
+      "fact": "Latest-point diagnostic lacks embedded provenance/event history."
+    },
+    {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_backend.c",
+      "lines": [
+        58,
+        101
+      ],
+      "fact": "Actual status sampling/ack under active-owner and sequence checks."
+    },
+    {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_uapi.h",
+      "lines": [
+        10,
+        27
+      ],
+      "fact": "Public response fields contain ledger/image but no session discriminator/raw accepted snapshots."
+    },
+    {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot_response.c",
+      "lines": [
+        75,
+        146
+      ],
+      "fact": "One ioctl, raw export, failure unauthority and same-local-object image source."
+    }
+  ],
+  "gate_b": "PASS FOR EXACT OFFSCREEN READINESS",
+  "whitelist": [
+    "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1"
+  ],
+  "pre07": "BLOCKED",
+  "design_status": "PARTIAL; semantic gap narrowed to pending same-session export/binding property review",
+  "ready_for_implementation_review": false,
+  "ready_for_execution_authorization": false,
+  "implementation_authorized": false,
+  "staging_authorized": false,
+  "fresh_guard_collection_authorized": false,
+  "hardware_contact_authorized": false,
+  "sgx_execution_authorized": false,
+  "sgx_invocations": 0,
+  "hardware_interactions": 0,
+  "triangle": "NOT ATTEMPTED",
+  "preservation": "New untracked review-only record. No qualified source/binary/module/image/UAPI, authority, raw evidence or historical decision changed; no stage/commit."
+}

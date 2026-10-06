@@ -1,0 +1,32 @@
+{
+  "argv": [
+    "ssh",
+    "-T",
+    "-p",
+    "22",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "ConnectTimeout=8",
+    "-o",
+    "ConnectionAttempts=1",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "UserKnownHostsFile=/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260927-H0/ssh_known_hosts",
+    "-o",
+    "IdentitiesOnly=yes",
+    "-o",
+    "PasswordAuthentication=no",
+    "-o",
+    "KbdInteractiveAuthentication=no",
+    "-i",
+    "/home/gama/.ssh/id_ed25519_sgx535_h0",
+    "gama@192.168.18.90",
+    "python3 -I -B -S -c 'import subprocess,json\np=subprocess.run(['\"'\"'python3'\"'\"', '\"'\"'-B'\"'\"', '\"'\"'/home/gama/sgx535-square-display-20261006T090214Z-tools/square_display_centered.py'\"'\"', '\"'\"'--inspect'\"'\"'],capture_output=True,timeout=30)\nprint(p.stdout.decode(),end=\"\")\nif p.returncode or p.stderr:raise RuntimeError(p.stderr.decode())\n'"
+  ],
+  "source_sha256": "90e4da57b22a5ff70470d55240464746b3a08f26b4bc8aa54d9984c529040447",
+  "start_utc": "2026-10-06T09:02:15.725073+00:00",
+  "automatic_retry": false,
+  "stdin": "DEVNULL"
+}

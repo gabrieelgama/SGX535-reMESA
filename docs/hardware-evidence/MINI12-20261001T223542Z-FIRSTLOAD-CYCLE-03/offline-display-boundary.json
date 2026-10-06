@@ -1,0 +1,45 @@
+{
+  "observed_utc": "2026-10-01T23:05:30.031431+00:00",
+  "classification": "SOURCE-PROVEN current handoff boundary; no proposed live display operation",
+  "sources": [
+    {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_entry.c",
+      "sha256": "d78555bb35ab816f96257a74d4c70b50fc6d86dcde88f392d776774d53eb5b27",
+      "bytes": 5325
+    },
+    {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_bo_owner.c",
+      "sha256": "81721337bbfcf7ccf7eb2c9e863141173fe1b7f1e735c99983741d01587cc8e5",
+      "bytes": 15673
+    },
+    {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot.c",
+      "sha256": "4271a62846a0f02694e574161658920987ee89ad69e3bf5b2be79fc83f5634d2",
+      "bytes": 2032
+    },
+    {
+      "path": "/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp/drivers/gpu/drm/gma500/gma_display.c",
+      "sha256": "877140046fcea01a5e8f0face75384a3dfe2d34983539de76bcfa94ef9f5f2c4",
+      "bytes": 21281
+    },
+    {
+      "path": "/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp/drivers/gpu/drm/gma500/framebuffer.c",
+      "sha256": "ec0a8e81d02e6246600e14ed112bd3224ec07db7ee440e78bcae53b4b01541b6",
+      "bytes": 16950
+    }
+  ],
+  "findings": [
+    "Fixed entry captures color after permitted retirement then releases owner on success; HOLD retention remains unchanged.",
+    "Private frozen pages use SGX MMU mappings; owner deliberately does not call psb_gtt_pin. They are not a stock gtt_range scanout allocation.",
+    "Stock gma_pipe_set_base expects a framebuffer GEM object represented by gtt_range, pins it into display GTT and programs pitch/format/base through the stock driver.",
+    "Diagnostic client writes returned pixels to an exclusive regular file; no scanout operation exists in that path."
+  ],
+  "not_established": [
+    "Mapping the same SGX-produced pages into a retained display framebuffer with compatible format/pitch/bounds.",
+    "Scanout ownership and synchronization over the full display lifetime.",
+    "Panel presentation of the frozen 32x32 result."
+  ],
+  "changes": "NONE to driver/client/artifacts",
+  "cpu_framebuffer_substitute": "Not proposed; does not satisfy requested evidence chain",
+  "authorization": "No SGX or experimental display action authorized"
+}

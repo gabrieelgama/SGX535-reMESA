@@ -1,0 +1,11 @@
+{
+  "operator_instruction": "Use already-reviewed menu/default configuration and fresh54/54 STOCK preflight; no new photo unless a specific unresolved technical fact requires it",
+  "basis": [
+    "Cycle05 actual reviewed menu photo",
+    "Cycle06 fresh unchanged grub.cfg/grubenv/custom.cfg/image identities and saved STOCK default"
+  ],
+  "current_operator_menu_check": "REQUIRED before selection; reply pending",
+  "fresh_photo": "NOT REQUESTED; explicit scoped procedure change",
+  "first_owner_trace_and_loaded_identity": "UNCHANGED mandatory",
+  "sgx_authorized": false
+}

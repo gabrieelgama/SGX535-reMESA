@@ -1,0 +1,10 @@
+{
+  "classification": "CONTROLLER_OFFLINE_AUDIT_PASS",
+  "tests": "14/14 PASS on current distinct-path binding",
+  "controller_sha256": "3ff450f1ebae8ac7855492ea5215acb55aae8fe241015671e639815c832f237f",
+  "table_sha256": "803bbe4dc5340777b47c3ec603c2e4db56b79be8c2d5bb7c80474db54fd0a3cc",
+  "changed_binding": "incoming directory only; previous partial remains historical evidence",
+  "candidate_unchanged": true,
+  "transfer_deadline_seconds": 900,
+  "FIRE3_invocations": 0
+}

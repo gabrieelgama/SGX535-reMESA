@@ -1,0 +1,98 @@
+{
+  "classification": "OFFLINE_CENTERED_CPU_PRESENTATION_QUALIFIED",
+  "synthetic_tests": {
+    "passed": 61,
+    "failed": 0,
+    "baseline": 48,
+    "centered_extension": 13
+  },
+  "oracle": {
+    "modes": [
+      {
+        "mode": "native",
+        "command": [
+          "gcc",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-O2",
+          "/home/gama/sgx535-offline/phase8-display-centered-preparation-20261006T070608Z/cpu-centered-layout-oracle.c",
+          "-o",
+          "/home/gama/sgx535-offline/phase8-display-centered-preparation-20261006T070608Z/oracle-native"
+        ],
+        "execution": [
+          "/home/gama/sgx535-offline/phase8-display-centered-preparation-20261006T070608Z/oracle-native"
+        ],
+        "returncode": 0,
+        "bytes": 4096000,
+        "sha256": "f5f1ce01309b9f9fbf0142e0032f378d0c5c5fbcb9cd22d9f7cf7d5c507f717c"
+      },
+      {
+        "mode": "ubsan",
+        "command": [
+          "gcc",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-O1",
+          "-g",
+          "-fsanitize=undefined",
+          "-fno-sanitize-recover=all",
+          "/home/gama/sgx535-offline/phase8-display-centered-preparation-20261006T070608Z/cpu-centered-layout-oracle.c",
+          "-o",
+          "/home/gama/sgx535-offline/phase8-display-centered-preparation-20261006T070608Z/oracle-ubsan"
+        ],
+        "execution": [
+          "/home/gama/sgx535-offline/phase8-display-centered-preparation-20261006T070608Z/oracle-ubsan"
+        ],
+        "returncode": 0,
+        "bytes": 4096000,
+        "sha256": "f5f1ce01309b9f9fbf0142e0032f378d0c5c5fbcb9cd22d9f7cf7d5c507f717c"
+      },
+      {
+        "mode": "i386",
+        "command": [
+          "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+          "--sysroot=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-O2",
+          "-static",
+          "-march=i486",
+          "/home/gama/sgx535-offline/phase8-display-centered-preparation-20261006T070608Z/cpu-centered-layout-oracle.c",
+          "-o",
+          "/home/gama/sgx535-offline/phase8-display-centered-preparation-20261006T070608Z/oracle-i386"
+        ],
+        "execution": [
+          "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/tests/qemu-root/usr/bin/qemu-i386",
+          "/home/gama/sgx535-offline/phase8-display-centered-preparation-20261006T070608Z/oracle-i386"
+        ],
+        "returncode": 0,
+        "bytes": 4096000,
+        "sha256": "f5f1ce01309b9f9fbf0142e0032f378d0c5c5fbcb9cd22d9f7cf7d5c507f717c"
+      }
+    ],
+    "all_byte_identical": true,
+    "full_python_buffer_matches_C": true,
+    "CPU_only": true,
+    "hardware_interactions": 0,
+    "sgx_invocations": 0,
+    "initial_tool_environment_error": "i386 assembler shared library directory corrected to host aarch64; no source change"
+  },
+  "source_sha256": "52b2aeb7316820f955d1b9a46cb55a888efb8f74de916acd7ec7ddff6d99ebb5",
+  "enlarged_cpu_bytes": 102400,
+  "enlarged_cpu_sha256": "099d15f6ce89b422bf2132cea3d2d71ef241923e38788d54edcb204546557b4c",
+  "expected_magenta_pixels": 3000,
+  "source_unchanged": true,
+  "original_display_helpers_unchanged": true,
+  "live_binding_freshness": "NOT YET OBSERVED FOR THIS NEW ATTEMPT",
+  "live_display_attempts_this_task": 0,
+  "sgx_invocations": 0,
+  "hardware_interactions": 0,
+  "no_new_candidate": true,
+  "scope_limit": "CPU synthetic tests and independent packing oracle; not proof of physical visibility or live restoration of the larger region."
+}

@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "decision_id": "MINI12-RESPONSE-EXPORT-CLIENT-SUBSTITUTION-MAINTAINER-20261004-314e2f3b",
+  "request_id": "MINI12-RESPONSE-EXPORT-CLIENT-SUBSTITUTION-REVIEW-20261004",
+  "record_kind": "PREPARED PROSPECTIVE DECISION; PENDING MAINTAINER; NO APPROVAL",
+  "prepared_timestamp_utc": "2026-10-04T10:12:42Z",
+  "decision_timestamp_utc": null,
+  "decision": null,
+  "decision_authority": null,
+  "requested_decision": "APPROVE_EXACT_CLIENT_SUBSTITUTION",
+  "decision_scope": "Accept the established offline response-export qualification and prospectively supplement only the exact forward client source/binary/UAPI binding. No Gate B re-evaluation or certification of unavailable live procedures. Effective binding is unchanged until an explicit maintainer decision is recorded.",
+  "exact_context": {
+    "boot_id": "89fc7306-6dac-4ab9-af62-360b7152ef22",
+    "module_build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+    "action": "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1",
+    "freshness": "Boot and 70/70 first-owner facts are preserved historical observations, not fresh invocation guards."
+  },
+  "proposed_successor": {
+    "source": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot_response.c",
+      "size": 5514,
+      "sha256": "919c2611e048e4a660ecae3542264adf5a5367d9b0fbe7fbceff2f45f90adedf"
+    },
+    "binary": {
+      "path": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-build-01/frozen-triangle-one-shot-response-i386",
+      "size": 775264,
+      "sha256": "2f84917f96db2859678797a327d40d9638325e5c5efb6e0dfccef44d756b4835"
+    },
+    "uapi": {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_uapi.h",
+      "size": 760,
+      "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420"
+    }
+  },
+  "proposed_forward_client_binding": {
+    "source": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot_response.c",
+      "size": 5514,
+      "sha256": "919c2611e048e4a660ecae3542264adf5a5367d9b0fbe7fbceff2f45f90adedf"
+    },
+    "binary": {
+      "path": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-build-01/frozen-triangle-one-shot-response-i386",
+      "size": 775264,
+      "sha256": "2f84917f96db2859678797a327d40d9638325e5c5efb6e0dfccef44d756b4835"
+    },
+    "uapi": {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_uapi.h",
+      "size": 760,
+      "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420"
+    }
+  },
+  "approved_successor": null,
+  "approved_forward_client_binding": null,
+  "historical_selected_client_to_preserve": {
+    "source": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot.c",
+      "size": 2032,
+      "sha256": "4271a62846a0f02694e574161658920987ee89ad69e3bf5b2be79fc83f5634d2"
+    },
+    "binary": {
+      "path": "/home/gama/sgx535-gfx/docs/phase8/artifacts/frozen-triangle-one-shot-i386",
+      "size": 771320,
+      "sha256": "758076e2f7e20d0eff2df565d4440c8b3fd3f846922427e770f55ebc472edccf"
+    },
+    "identity_provenance": "Permitted selected artifact note and existing differential metadata; no rehash in this request.",
+    "selected_and_forward_pins_changed": false
+  },
+  "previous_approved_successor_to_preserve": {
+    "source": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot_prospective.c",
+      "size": 3711,
+      "sha256": "8b277dcb8c4e00a4eea78774b2bf8529c9396bfbbf05597be05b75cff2bd2b49"
+    },
+    "binary": {
+      "path": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/client-build-01/frozen-triangle-one-shot-prospective-i386",
+      "size": 774336,
+      "sha256": "a854d4f719b92cfe31a9ad33adc15d0f881d397c163ad6c34b5518d4a21da2e9"
+    },
+    "uapi": {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_uapi.h",
+      "size": 760,
+      "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420"
+    },
+    "elf": {
+      "class": "ELF32",
+      "endianness": "little",
+      "machine": "Intel 80386",
+      "PT_DYNAMIC": false,
+      "PT_INTERP": false,
+      "build_id": null
+    },
+    "qualification_state": "QUALIFIED FOR PROMOTION: established offline technical qualification plus this exact prospective maintainer substitution review approval. Target selection/staging transaction has not occurred."
+  },
+  "unchanged_context_bindings": {
+    "kernel": "5.10.240-antix.1-486-smp",
+    "architecture": "i686",
+    "module": {
+      "path": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/module/gma500_gfx.ko",
+      "size_bytes": 244960,
+      "sha256": "4141a07c1f2d2ffc9ab2770b7b4cf654f68c396275dad15f0ddc68192529d8e6",
+      "build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+      "loaded_note_sha256": "edb1e3e59cfd70c48d400bec89f2a30c1a436b05bf115bc1a05581abc153bdc9",
+      "identity_evidence": [
+        "module_identity",
+        "qualification",
+        "first_owner_records"
+      ]
+    },
+    "diagnostic_image": {
+      "source_path": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/image/build-01/initrd.img-sgx535-firstload-diagnostic-01",
+      "staged_path": "/boot/initrd.img-5.10.240-antix.1-486-smp-sgx535-firstload-314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+      "size_bytes": 50805231,
+      "sha256": "fe64b3dcfe74b78a6d96edcd4fd7c118c3901fcff8631afec6c14647da292e3c",
+      "embedded_module_sha256": "4141a07c1f2d2ffc9ab2770b7b4cf654f68c396275dad15f0ddc68192529d8e6",
+      "identity_evidence": [
+        "image_identity",
+        "image_qualification",
+        "poststage_records",
+        "first_owner_records",
+        "menu_receipt"
+      ]
+    }
+  },
+  "gate_b": "PASS FOR EXACT OFFSCREEN READINESS",
+  "whitelist": [
+    "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1"
+  ],
+  "sgx_execution_authorized": false,
+  "sgx_invocations": 0,
+  "hardware_interactions": 0,
+  "triangle": "NOT ATTEMPTED",
+  "first_owner": "Historical 70/70 retained for recorded boot only; not fresh guards",
+  "new_boot_module_image_build_required_solely_by_substitution": false,
+  "not_granted": [
+    "Target contact or passive guard collection",
+    "Client/output/evidence staging or target selection transaction",
+    "Boot",
+    "SGX execution authorization",
+    "Any retry of an ioctl or consumed attempt",
+    "Approval, replacement or reconstruction of unavailable/restricted procedures",
+    "A claim of TA/raster/readback/triangle success"
+  ],
+  "interface_scope": "Required distinct raw response argument in addition to original color argument; exact target paths remain unestablished. Pre-call request/device semantics unchanged in retained paired evidence.",
+  "preservation_rule": "Keep historical Gate B/approval/qualification, previous approved and old selected client bytes, staged image/module and raw first-owner evidence unchanged. A future affirmative record must bind approved_successor and approved_forward_client_binding identically to this proposed source/binary/UAPI. This pending record cannot satisfy bind_context.",
+  "evidence": {
+    "request": "/home/gama/sgx535-gfx/docs/phase8/response-export-client-substitution-review-request-20261004.json",
+    "qualification": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-qualification.json",
+    "verification": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/final-verification.json",
+    "differential": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/SYNTHETIC-paired-evidence/results.json",
+    "consistency": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/consistency-checks.json",
+    "prior_approval": "/home/gama/sgx535-gfx/docs/phase8/prospective-client-substitution-maintainer-20261004-314e2f3b.json"
+  },
+  "unchanged_workload": {
+    "action": "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1",
+    "width": 32,
+    "height": 32,
+    "format": "linear ARGB8888",
+    "stride_bytes": 128,
+    "original_image_bytes": 4096,
+    "white_triangle_vertices": [
+      [
+        8,
+        8
+      ],
+      [
+        24,
+        8
+      ],
+      [
+        8,
+        24
+      ]
+    ],
+    "request_response_bytes": 4268,
+    "UAPI_and_pre_ioctl_request_semantics": "UNCHANGED in established paired evidence",
+    "upper_bound_if_separately_authorized": "At most ONE new exact action; no retry/Attempt05 reuse/exploratory operation",
+    "sampling_edge_convention": "Still unqualified; no interpretation or success standard weakened"
+  }
+}

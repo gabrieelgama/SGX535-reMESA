@@ -1,0 +1,10 @@
+{
+  "scope": "lossless DERIVED visualization only; original readback immutable",
+  "source_sha256": "52b2aeb7316820f955d1b9a46cb55a888efb8f74de916acd7ec7ddff6d99ebb5",
+  "exact_png": "readback-exact32.derived.png",
+  "exact_png_CRC_decompressed_BGRA_matches_source": true,
+  "preview": "readback-nearest512.derived.png",
+  "preview_scaling": "nearest neighbor 16x; no added/mutated source pixels",
+  "alpha": "original alpha preserved, including transparent-zero background",
+  "encoder": "Python standard struct/zlib/binascii; no external dependency"
+}

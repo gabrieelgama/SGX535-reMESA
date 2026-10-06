@@ -1,0 +1,14 @@
+{
+  "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/live-fire3-controller-audit-20261006T045337Z": {
+    "seal": "preparation-seal.json",
+    "sha256": "ff5f5ae007abe1272fcb0e6017dbbfdfb89a28de56f5cf065e79f6f0d920261d",
+    "files": 45,
+    "unchanged": true
+  },
+  "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/passive-incoming-inspection-20261006T051110Z": {
+    "seal": "inspection-seal.json",
+    "sha256": "6a3b03183acec13fbd21d2c8e0ec98e745453abb145ba110030da13537be3639",
+    "files": 12,
+    "unchanged": true
+  }
+}

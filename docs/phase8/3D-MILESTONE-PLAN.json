@@ -1,0 +1,182 @@
+{
+  "date": "2026-10-06",
+  "state": "MULTI_TRIANGLE_ESTABLISHED_NEXT_PROBE_OFFLINE",
+  "next_card": null,
+  "next_experiment": "TWO_COLOR_TWO_DRAW_QUAD",
+  "next_maximum_invocations": 1,
+  "next_live_authorized": false,
+  "ideal_visual_sequence": [
+    "TRIANGLE_ESTABLISHED",
+    "INTERPOLATION_OR_SHADING_ESTABLISHED",
+    "MULTI_TRIANGLE_ESTABLISHED",
+    "FIRST_3D_OBJECT_ESTABLISHED",
+    "FIRST_ANIMATED_3D",
+    "FIRST_LIT_ANIMATED_3D",
+    "FIRST_GEARS"
+  ],
+  "ordering_policy": "isolated probes may establish capabilities out of order; preserve actual evidence immediately; never add artificial gates or combine ambiguous new contracts",
+  "stages": [
+    {
+      "milestone": "TRIANGLE_ESTABLISHED",
+      "state": "ESTABLISHED",
+      "requirements": [],
+      "independent_archive_required": true
+    },
+    {
+      "milestone": "INTERPOLATION_OR_SHADING_ESTABLISHED",
+      "state": "NOT_ESTABLISHED",
+      "requirements": [
+        "qualified varying/export or controlled shading program"
+      ],
+      "independent_archive_required": true
+    },
+    {
+      "milestone": "MULTI_TRIANGLE_ESTABLISHED",
+      "state": "ESTABLISHED",
+      "requirements": [
+        "indexed foreground contributions"
+      ],
+      "independent_archive_required": true,
+      "evidence": "docs/phase8/MULTI-TRIANGLE-REPRODUCTION.json"
+    },
+    {
+      "milestone": "FIRST_3D_OBJECT_ESTABLISHED",
+      "state": "NOT_ESTABLISHED",
+      "requirements": [
+        "mesh",
+        "model/view/projection",
+        "homogeneous clipping",
+        "recognizable multi-face geometry",
+        "controlled face appearance"
+      ],
+      "independent_archive_required": true
+    },
+    {
+      "milestone": "REPEATABLE_3D_PIPELINE",
+      "state": "NOT_ESTABLISHED",
+      "requirements": [
+        "static cube",
+        "authoritative post-frame rearm provider",
+        "five bounded distinct attributable SGX operations"
+      ],
+      "independent_archive_required": true
+    },
+    {
+      "milestone": "FIRST_ANIMATED_3D",
+      "state": "NOT_ESTABLISHED",
+      "requirements": [
+        "repeatable pipeline",
+        "predictable moving geometry",
+        "bounded owner-managed presentation"
+      ],
+      "independent_archive_required": true
+    },
+    {
+      "milestone": "SHADING_ESTABLISHED",
+      "state": "NOT_ESTABLISHED",
+      "requirements": [
+        "normals",
+        "fixed light",
+        "deterministic diffuse arithmetic/transport oracle"
+      ],
+      "independent_archive_required": true
+    },
+    {
+      "milestone": "FIRST_LIT_ANIMATED_3D",
+      "state": "NOT_ESTABLISHED",
+      "requirements": [
+        "animated cube",
+        "orientation-dependent verified lighting"
+      ],
+      "independent_archive_required": true
+    },
+    {
+      "milestone": "FIRST_GEARS",
+      "state": "NOT_ESTABLISHED",
+      "requirements": [
+        "repeatable lit mesh",
+        "deterministic gear geometry and rotation",
+        "attributed SGX frames"
+      ],
+      "independent_archive_required": true
+    },
+    {
+      "milestone": "ACTUAL_OPENGL_GEARS",
+      "state": "NOT_ESTABLISHED",
+      "requirements": [
+        "Mesa/Gallium/OpenGL/GLX stack",
+        "actual OpenGL gears binary using developing driver"
+      ],
+      "independent_archive_required": true
+    }
+  ],
+  "initial_repeatability_frames": [
+    {
+      "index": 0,
+      "angle_degrees": 0
+    },
+    {
+      "index": 1,
+      "angle_degrees": 15
+    },
+    {
+      "index": 2,
+      "angle_degrees": 30
+    },
+    {
+      "index": 3,
+      "angle_degrees": 45
+    },
+    {
+      "index": 4,
+      "angle_degrees": 60
+    }
+  ],
+  "repeatability_frame_count_is_current_authorization": false,
+  "frame_evidence_required": [
+    "fresh operation context",
+    "geometry/transform hash",
+    "program/state/buffer delta",
+    "accepted events",
+    "retirement",
+    "complete attributable response/readback",
+    "source/capsule evidence",
+    "authoritative reuse provider",
+    "presentation source hash when displayed"
+  ],
+  "preserve_for_every_first_success": [
+    "source identities",
+    "binary identities",
+    "GPU programs/state",
+    "geometry/indices/transforms",
+    "expected CPU oracle",
+    "actual original GPU readback",
+    "boot/image/module identities",
+    "execution records",
+    "presentation/restoration records",
+    "hashes/seal",
+    "reproduction tutorial",
+    "available photo/video references"
+  ],
+  "presentation_architecture": "SGX RENDER + CPU/XORG PRESENTATION",
+  "presentation_scope": "bounded rectangle,short per-frame owner-managed copy,backup once,restore on clean exit; no historical15second repeated grab",
+  "direct_scanout_established": false,
+  "CPU_transformed_cube_label": "CPU TRANSFORM + SGX RASTERIZATION",
+  "no_depth_initial_cube_label": "PAINTER-ORDERED DIAGNOSTIC CUBE; depth UNKNOWN",
+  "lighting_model": "I=max(0,normalize((M^-1)^T n) dot normalize(1,2,3)); define rounding/clamp/encoding in fixture",
+  "lighting_claim_limit": "constant face colors alone do not establish lighting; distinguish CPU intensity calculation from GPU shader arithmetic",
+  "custom_gears_label": "custom SGX535-reMESA gears demo",
+  "glxgears_claim_requires": "actual OpenGL/GLX application through the developing Mesa stack",
+  "stop_conditions": [
+    "identity/ownership/source/isolation invalidation",
+    "missing authorization or frame quota exhausted",
+    "ambiguous possible issuance",
+    "incomplete lifecycle or provenance",
+    "evidence loss",
+    "reuse provider UNKNOWN",
+    "presentation ownership loss"
+  ],
+  "retry_policy": "none automatic; retain prior successful stages independently",
+  "task_SGX_invocations": 0,
+  "task_hardware_interactions": 0
+}

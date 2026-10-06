@@ -1,0 +1,17 @@
+{
+  "image_path": "docs/phase8/artifacts/experimental-first-load-01-20261001/build-03/initrd.img-sgx535-firstload-01",
+  "image_bytes": 50804481,
+  "image_sha256": "4ac6bd1bed7dbf53b3653037f3e6e757160672560176b1938a63488636efaa71",
+  "derivative_in_image_sha256": "91a6040e743d9c6222cb1307067db6e29fe92558576716a33d9fe0f4f5a87d74",
+  "hook_in_image_sha256": "e95e373d2f07740ce2ad6e90f4bfa31d4e25860ab7f1f67dda5cc62368d3c4ee",
+  "early_prefix_sha256": "45070075f32565213d862468ba99e9f7b05ca95ba76e57d37331ad032a12a929",
+  "native_cpio_sha256": "4cd0ab6a3d30b873e26f58aab44017a4d3c96b7c064ec18d435f62554bd2047f",
+  "native_cpio_version": "cpio (GNU cpio) 2.15",
+  "independent_parser_path": "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/offline-analysis/read_initramfs.py",
+  "independent_parser_sha256": "937e11716add8fdcc3d79668baa0fb7431dc94634db07d7e746cd3ddca7c9f51",
+  "result": "PASS OFFLINE",
+  "live_first_owner": "UNKNOWN",
+  "live_display_ssh_recovery": "UNKNOWN",
+  "gate_b": "BLOCKED",
+  "whitelist": []
+}

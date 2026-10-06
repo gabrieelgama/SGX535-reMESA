@@ -1,0 +1,524 @@
+{
+  "schema": "SGX535_NEXT_3D_EXPERIMENT_CARD_V1",
+  "state": "PRE07_LIVE_PASS_BOUND_TO_FRESH_BOOT",
+  "experiment": "TWO_TRIANGLE_FOREGROUND_QUAD",
+  "candidate_manifest": "docs/phase8/two-triangle-experimental-candidate-20261006.json",
+  "candidate_manifest_sha256": "5d0a75098002e0785770c5fc0452538a4e4cfb271bf3ee9ab862a6e73e615f30",
+  "driver": {
+    "path": "/home/gama/sgx535-offline/phase8-first-3d-offline-20261006T072942Z/build/module/gma500_gfx.ko",
+    "bytes": 250864,
+    "sha256": "c21c26c567fc7676e28f4f732cb8cd3c7af1a7360560b58a310789523dc9454d",
+    "build_id": "8be2777b2a79eaa6651b89d19faf4d68cdcdc460",
+    "loaded_note_sha256": "35ec9f4e576a83a3990ebda4f8aee5869c0e4ea32e1e35969fa48abffa7dc832",
+    "abi": "ELF32/i386",
+    "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 ",
+    "dependencies": "drm,drm_kms_helper,sgx535_provenance,video,i2c-algo-bit",
+    "versioned_imports": 253,
+    "missing_imports": [],
+    "crc_mismatches": {},
+    "unversioned_undefined": [],
+    "module_layout": "0xb84efb99",
+    "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+    "qualification": "PASS"
+  },
+  "observer": {
+    "path": "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/build/observer/sgx535_provenance.ko",
+    "bytes": 26284,
+    "sha256": "2e35e863d51dbc1d407feef08f08bb2edc6390af621a0f173a9b1a73ec76158a",
+    "build_id": "f11d3abb072caa4e1d32836ef92ce201e9c9d126",
+    "loaded_note_sha256": "6afbac1cf48a211135e2a4b4ffc30f96ace64f6d397071595bbc328966bb8af0",
+    "abi": "ELF32/i386",
+    "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 ",
+    "dependencies": "",
+    "versioned_imports": 38,
+    "missing_imports": [],
+    "crc_mismatches": {},
+    "unversioned_undefined": [],
+    "module_layout": "0xb84efb99",
+    "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+    "qualification": "PASS"
+  },
+  "image": {
+    "path": "/boot/initrd.img-5.10.240-antix.1-486-smp-sgx535-firstload-8be2777b2a79eaa6651b89d19faf4d68cdcdc460-0e45ad4c",
+    "bytes": 50816648,
+    "sha256": "0e45ad4c9ec3eaa891253ea319348286c869644a3ba6c9dba54de39d92bd1e7d"
+  },
+  "client": {
+    "path": "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/known-good-artifacts/frozen-triangle-one-shot-response-i386",
+    "sha256": "2f84917f96db2859678797a327d40d9638325e5c5efb6e0dfccef44d756b4835",
+    "bytes": 775264,
+    "protected_path": "/root/sgx535-square-seq1-8be2777b2a79eaa6651b89d19faf4d68cdcdc460-0e45ad4c/frozen-triangle-one-shot-response-i386",
+    "inode_receipt": {
+      "dev": 2049,
+      "ino": 524772,
+      "size": 775264,
+      "sha256": "2f84917f96db2859678797a327d40d9638325e5c5efb6e0dfccef44d756b4835",
+      "uid": 0,
+      "gid": 0,
+      "mode": 320,
+      "nlink": 1,
+      "regular": true
+    },
+    "executed": false
+  },
+  "uapi": {
+    "path": "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/known-good-artifacts/gma500_fixed_uapi.h",
+    "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420",
+    "bytes": 760
+  },
+  "kernel": "5.10.240-antix.1-486-smp",
+  "machine": "Inspiron 1210",
+  "core_id": "0x01130000",
+  "core_revision": "0x00010201",
+  "boot_uuid": "83ee4ff8-a7f1-4468-b348-d10627f38d17",
+  "source_witness": {
+    "authoritative_field": "witness",
+    "relationship": "same operation witness; no second independent witness"
+  },
+  "capsule": "MUST_BE_UNUSED",
+  "live_PRE07": "PASS",
+  "sgx_execution_authorized": true,
+  "maximum_client_launches": 1,
+  "maximum_ioctl_attempts": 1,
+  "no_retry": true,
+  "authorization_consumed_at": "first possible client/ioctl issuance, including controller interruption or ambiguous result",
+  "delta": {
+    "geometry": {
+      "before_vertices": 3,
+      "after_vertices": 4,
+      "positions": [
+        [
+          8.0,
+          8.0,
+          0.5,
+          1.0
+        ],
+        [
+          24.0,
+          8.0,
+          0.5,
+          1.0
+        ],
+        [
+          8.0,
+          24.0,
+          0.5,
+          1.0
+        ],
+        [
+          24.0,
+          24.0,
+          0.5,
+          1.0
+        ]
+      ],
+      "indices_before": [
+        0,
+        1,
+        2
+      ],
+      "indices_after": [
+        0,
+        1,
+        2,
+        1,
+        3,
+        2
+      ]
+    },
+    "packet_count": {
+      "before": "0x81400003",
+      "after": "0x81400006"
+    },
+    "layout": {
+      "TA_stream_before": 96,
+      "TA_stream_after": 128,
+      "TA_bytes": 68,
+      "vertex_stride": 32,
+      "indices_offset": 512,
+      "indices_capacity": 16384
+    },
+    "relocation_changes": [
+      {
+        "index": 41,
+        "before": {
+          "site": "ta_stream+00",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 24,
+          "buffer": 0,
+          "pre_add": 17280,
+          "dst_buffer": 2,
+          "target_alignment": 16,
+          "op": 0,
+          "mask": 268435455,
+          "shift": 262144,
+          "background": 1073741824,
+          "arg0": 0,
+          "arg1": 0
+        },
+        "after": {
+          "site": "ta_stream+00",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 32,
+          "buffer": 0,
+          "pre_add": 17280,
+          "dst_buffer": 2,
+          "target_alignment": 16,
+          "op": 0,
+          "mask": 268435455,
+          "shift": 262144,
+          "background": 1073741824,
+          "arg0": 0,
+          "arg1": 0
+        }
+      },
+      {
+        "index": 42,
+        "before": {
+          "site": "ta_stream+0c",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 27,
+          "buffer": 0,
+          "pre_add": 17220,
+          "dst_buffer": 2,
+          "target_alignment": 4,
+          "op": 0,
+          "mask": 4294967295,
+          "shift": 0,
+          "background": 0,
+          "arg0": 0,
+          "arg1": 0
+        },
+        "after": {
+          "site": "ta_stream+0c",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 35,
+          "buffer": 0,
+          "pre_add": 17220,
+          "dst_buffer": 2,
+          "target_alignment": 4,
+          "op": 0,
+          "mask": 4294967295,
+          "shift": 0,
+          "background": 0,
+          "arg0": 0,
+          "arg1": 0
+        }
+      },
+      {
+        "index": 43,
+        "before": {
+          "site": "ta_stream+14",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 29,
+          "buffer": 0,
+          "pre_add": 17024,
+          "dst_buffer": 2,
+          "target_alignment": 16,
+          "op": 0,
+          "mask": 268435455,
+          "shift": 262144,
+          "background": 0,
+          "arg0": 0,
+          "arg1": 0
+        },
+        "after": {
+          "site": "ta_stream+14",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 37,
+          "buffer": 0,
+          "pre_add": 17024,
+          "dst_buffer": 2,
+          "target_alignment": 16,
+          "op": 0,
+          "mask": 268435455,
+          "shift": 262144,
+          "background": 0,
+          "arg0": 0,
+          "arg1": 0
+        }
+      },
+      {
+        "index": 44,
+        "before": {
+          "site": "ta_stream+1c",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 31,
+          "buffer": 0,
+          "pre_add": 17408,
+          "dst_buffer": 2,
+          "target_alignment": 16,
+          "op": 0,
+          "mask": 268435455,
+          "shift": 262144,
+          "background": 1073741824,
+          "arg0": 0,
+          "arg1": 0
+        },
+        "after": {
+          "site": "ta_stream+1c",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 39,
+          "buffer": 0,
+          "pre_add": 17408,
+          "dst_buffer": 2,
+          "target_alignment": 16,
+          "op": 0,
+          "mask": 268435455,
+          "shift": 262144,
+          "background": 1073741824,
+          "arg0": 0,
+          "arg1": 0
+        }
+      },
+      {
+        "index": 45,
+        "before": {
+          "site": "ta_stream+28",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 34,
+          "buffer": 0,
+          "pre_add": 512,
+          "dst_buffer": 2,
+          "target_alignment": 4,
+          "op": 0,
+          "mask": 4294967295,
+          "shift": 0,
+          "background": 0,
+          "arg0": 0,
+          "arg1": 0
+        },
+        "after": {
+          "site": "ta_stream+28",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 42,
+          "buffer": 0,
+          "pre_add": 512,
+          "dst_buffer": 2,
+          "target_alignment": 4,
+          "op": 0,
+          "mask": 4294967295,
+          "shift": 0,
+          "background": 0,
+          "arg0": 0,
+          "arg1": 0
+        }
+      },
+      {
+        "index": 46,
+        "before": {
+          "site": "ta_stream+30",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 36,
+          "buffer": 0,
+          "pre_add": 16928,
+          "dst_buffer": 2,
+          "target_alignment": 16,
+          "op": 0,
+          "mask": 268435455,
+          "shift": 262144,
+          "background": 0,
+          "arg0": 0,
+          "arg1": 0
+        },
+        "after": {
+          "site": "ta_stream+30",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 44,
+          "buffer": 0,
+          "pre_add": 16928,
+          "dst_buffer": 2,
+          "target_alignment": 16,
+          "op": 0,
+          "mask": 268435455,
+          "shift": 262144,
+          "background": 0,
+          "arg0": 0,
+          "arg1": 0
+        }
+      },
+      {
+        "index": 47,
+        "before": {
+          "site": "ta_stream+38",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 38,
+          "buffer": 0,
+          "pre_add": 17504,
+          "dst_buffer": 2,
+          "target_alignment": 16,
+          "op": 0,
+          "mask": 268435455,
+          "shift": 262144,
+          "background": 1610612736,
+          "arg0": 0,
+          "arg1": 0
+        },
+        "after": {
+          "site": "ta_stream+38",
+          "owner_bo": "vertex_ta",
+          "target_bo": "pds",
+          "where": 46,
+          "buffer": 0,
+          "pre_add": 17504,
+          "dst_buffer": 2,
+          "target_alignment": 16,
+          "op": 0,
+          "mask": 268435455,
+          "shift": 262144,
+          "background": 1610612736,
+          "arg0": 0,
+          "arg1": 0
+        }
+      },
+      {
+        "index": 48,
+        "before": {
+          "site": "ta_registers+34",
+          "owner_bo": "control",
+          "target_bo": "vertex_ta",
+          "where": 65,
+          "buffer": 2,
+          "pre_add": 96,
+          "dst_buffer": 4,
+          "target_alignment": 4,
+          "op": 0,
+          "mask": 4294967295,
+          "shift": 0,
+          "background": 0,
+          "arg0": 0,
+          "arg1": 0
+        },
+        "after": {
+          "site": "ta_registers+34",
+          "owner_bo": "control",
+          "target_bo": "vertex_ta",
+          "where": 65,
+          "buffer": 2,
+          "pre_add": 128,
+          "dst_buffer": 4,
+          "target_alignment": 4,
+          "op": 0,
+          "mask": 4294967295,
+          "shift": 0,
+          "background": 0,
+          "arg0": 0,
+          "arg1": 0
+        }
+      }
+    ],
+    "fragment": "UNCHANGED 001f00ff fca7f1f1",
+    "all_other_state": "unchanged as qualified manifest"
+  },
+  "preparation": [
+    "explicit authorization required before target contact/staging/render",
+    "fresh healthy STOCK and sudo/root access; preserve normal/default recovery",
+    "transactional exclusive-path transfer; complete/stable/synced size+hash+byte verification; no retry after STOP",
+    "stage exact candidate at distinct destination; independently verify image/GRUB and preserve previous artifacts",
+    "one manual FIRSTLOAD; no hot replacement or second boot after failed qualification",
+    "fresh exact boot/module/image and first-owner qualification; source startup witness, pending/busy/BIF, continuous isolation, capsule UNUSED, client never run, kernel health, protected destinations",
+    "bind observed boot UUID and witness to a new derived live card; require complete PRE07 PASS",
+    "immediate minimum passive bindings; any change prevents dispatch"
+  ],
+  "call_template": [
+    "<verified root-owned qualified client>",
+    "--one-shot-sgx535-rev121",
+    "<exclusive protected output>/color.original.bin",
+    "<exclusive protected output>/response.original.bin"
+  ],
+  "call_template_is_executable": false,
+  "expected_lifecycle": {
+    "ioctl_return": 0,
+    "client_exit": 0,
+    "operation_errno": 0,
+    "phase": 9,
+    "phase_name": "RETIRED",
+    "accepted_ledger": "0x7",
+    "TA": "confirmed",
+    "end_render": "confirmed",
+    "3D_memory_free": "confirmed",
+    "provenance": "same fresh operation required"
+  },
+  "expected_readback": {
+    "bytes": 4096,
+    "width": 32,
+    "height": 32,
+    "format": "LE ARGB8888",
+    "pitch": 128,
+    "magenta": 256,
+    "zero": 768,
+    "coordinates": "x=8..23,y=8..23 inclusive",
+    "oracle_path": "docs/phase8/artifacts/two-triangle-experiment-20261006/expected-color.bin",
+    "oracle_sha256": "6e9af8e8b6576b979aa78816d44bd3b0ffd31b70e169a982e83736d63ab91729",
+    "scope": "CPU predicted fill; not established SGX raster convention"
+  },
+  "predeclared_outcomes": {
+    "exact_quad": "MULTI_TRIANGLE_ESTABLISHED if complete attributed output equals oracle and additional second-triangle pixels exist; not 3D/perspective/interpolation",
+    "baseline_120": "MULTIPLE_PRIMITIVES_NOT_ESTABLISHED; second primitive may not have contributed; no automatic correction/retry",
+    "partial_or_other_nonzero": "UNEXPECTED_COVERAGE; preserve exact values/coordinates, no binary PASS inference",
+    "all_zero": "MULTIPLE_PRIMITIVES_NOT_ESTABLISHED; keep first triangle baseline established",
+    "HOLD_or_failure": "LIFECYCLE_FAILURE separate from coverage",
+    "missing_or_ambiguous_evidence": "AMBIGUOUS STOP; no retry"
+  },
+  "preservation_order": [
+    "mark possible issuance consumed before launch",
+    "retain complete stdout/stderr/exit/timing and full4268 response,4096 color if produced",
+    "retain capsule/source before+after,raw producer evidence,accepted ledger,boot/module/witness/ownership bindings,kernel logs and card",
+    "retrieve and hash originals without overwrite, fsync seal manifest, independently correlate",
+    "only then spatially interpret exact pixels; derived images separately named"
+  ],
+  "stop_conditions": [
+    "identity/hash/CRC/image mismatch",
+    "wrong boot or invalid source lifetime",
+    "ownership/isolation/pending/busy/BIF/health guard failure or UNKNOWN",
+    "capsule not UNUSED or prior invocation",
+    "evidence destination/binding failure",
+    "any ambiguous possible issuance, timeout,partial result,HOLD or preservation loss"
+  ],
+  "recovery": "No automatic retry/reboot/reload/reset/clear. Preserve resources and evidence on uncertainty; report to maintainer; normal STOCK remains manual recovery boundary.",
+  "display_publication_follows": false,
+  "presentation_plan": "Only after attribution and separate display scope: SGX RENDER + CPU/XORG PRESENTATION. Existing FIRE3 source validator rejects a quad; use an explicitly qualified quad validator/new card, never overwrite old source.",
+  "requested_authorization": "fresh live preparation and at most ONE render only after PRE07 PASS; no repeated frames or display publication",
+  "offline_pixel_interpreter": "tools/sgx535_demo/two_triangle.py:inspect_readback (requires independently established provenance)",
+  "maximum_candidate_transfers": 1,
+  "transport_deadline_seconds": 900,
+  "card_id": "MINI12-TWO-INDEXED-TRIANGLES-83ee4ff8-a7f1-4468-b348-d10627f38d17",
+  "boot_id": "83ee4ff8-a7f1-4468-b348-d10627f38d17",
+  "witness": {
+    "boot_id": "83ee4ff8-a7f1-4468-b348-d10627f38d17",
+    "module_build_id": "8be2777b2a79eaa6651b89d19faf4d68cdcdc460",
+    "observer_build_id": "f11d3abb072caa4e1d32836ef92ce201e9c9d126",
+    "image_sha256": "0e45ad4c9ec3eaa891253ea319348286c869644a3ba6c9dba54de39d92bd1e7d",
+    "source_boundary": "2967348bcf2f2e85ff1bbd56848283df9a187839acf43a5c4a48c6fb4b76f555"
+  },
+  "PRE07_READY_FOR_SQUARE": "YES",
+  "ready_for_execution_authorization": true,
+  "execution_authorized": true,
+  "protected_evidence_directory": "/root/sgx535-square-seq1-8be2777b2a79eaa6651b89d19faf4d68cdcdc460-0e45ad4c/evidence-83ee4ff8-a7f1-4468-b348-d10627f38d17",
+  "directory_receipt": {
+    "path": "/root/sgx535-square-seq1-8be2777b2a79eaa6651b89d19faf4d68cdcdc460-0e45ad4c/evidence-83ee4ff8-a7f1-4468-b348-d10627f38d17",
+    "dev": 2049,
+    "ino": 524773,
+    "uid": 0,
+    "gid": 0,
+    "mode": "0o700"
+  },
+  "pre07_evidence": "/home/gama/sgx535-offline/phase8-square-continuation-20261006T084340Z/pre07-live-evaluation.json",
+  "prepared_card_path": "/home/gama/sgx535-gfx/docs/phase8/next-3d-execution-card-20261006.json",
+  "prepared_card_sha256": "33739509458424f3e717084078f45240965736a35d3817e52a178065a6660dae",
+  "invocations_before_call": 0,
+  "operator_readiness": "/home/gama/sgx535-offline/phase8-square-continuation-20261006T084340Z/operator-readiness.json"
+}

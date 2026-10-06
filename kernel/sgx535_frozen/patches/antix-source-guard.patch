@@ -1,0 +1,125 @@
+--- a/psb_drv.c
++++ b/psb_drv.c
+@@ -32,6 +32,8 @@
+ #include "power.h"
+ #include "psb_drv.h"
+ #include "gma500_fixed_entry.h"
++#include "gma500_capsule_observer.h"
++#include "gma500_source_snapshot.h"
+ #include "gma500_fixed_uapi.h"
+ #include "psb_intel_reg.h"
+ #include "psb_reg.h"
+@@ -114,6 +116,7 @@
+ 	struct psb_gtt *pg = &dev_priv->gtt;
+ 
+ 	uint32_t stolen_gtt;
++	struct sgx535_source_facts source;
+ 
+ 	if (pg->mmu_gatt_start & 0x0FFFFFFF) {
+ 		dev_err(dev->dev, "Gatt must be 256M aligned. This is a bug.\n");
+@@ -139,6 +142,11 @@
+ 		   PSB_CR_BIF_CTRL);
+ 	PSB_RSGX32(PSB_CR_BIF_CTRL);
+ 
++	/* Observe the existing initialization reset before registration. */
++	sgx535_provenance_source_attach(dev, THIS_MODULE,
++		sgx535_gma500_source_observe_passive);
++	sgx535_gma500_source_snapshot(dev_priv, &source);
++	sgx535_provenance_source_startup(dev, &source);
+ 	psb_spank(dev_priv);
+ 
+ 	/* mmu_gatt ?? */
+@@ -153,6 +161,7 @@
+ 	struct drm_psb_private *dev_priv = dev->dev_private;
+ 
+ 	if (dev_priv) {
++		sgx535_provenance_source_lifecycle(dev);
+ 		/* Quiesce KMS users before unregistering the IRQ, while all
+ 		 * private state and register mappings are still alive. */
+ 		if (dev_priv->modeset) {
+--- a/accel_2d.c
++++ b/accel_2d.c
+@@ -26,6 +26,8 @@
+ 
+ #include "psb_drv.h"
+ #include "psb_reg.h"
++#include "gma500_capsule_observer.h"
++#include "gma500_source_snapshot.h"
+ 
+ /**
+  *	psb_spank		-	reset the 2D engine
+@@ -37,11 +39,14 @@
+  */
+ void psb_spank(struct drm_psb_private *dev_priv)
+ {
++	struct sgx535_source_facts source;
++	sgx535_provenance_source_reset_begin(dev_priv->dev);
+ 	PSB_WSGX32(_PSB_CS_RESET_BIF_RESET | _PSB_CS_RESET_DPM_RESET |
+ 		_PSB_CS_RESET_TA_RESET | _PSB_CS_RESET_USE_RESET |
+ 		_PSB_CS_RESET_ISP_RESET | _PSB_CS_RESET_TSP_RESET |
+ 		_PSB_CS_RESET_TWOD_RESET, PSB_CR_SOFT_RESET);
+-	PSB_RSGX32(PSB_CR_SOFT_RESET);
++	sgx535_provenance_source_reset_assert(dev_priv->dev,
++		PSB_RSGX32(PSB_CR_SOFT_RESET));
+ 
+ 	msleep(1);
+ 
+@@ -57,6 +62,8 @@
+ 		   PSB_CR_BIF_CTRL);
+ 	(void) PSB_RSGX32(PSB_CR_BIF_CTRL);
+ 	PSB_WSGX32(dev_priv->gtt.gatt_start, PSB_CR_BIF_TWOD_REQ_BASE);
++	sgx535_gma500_source_snapshot(dev_priv, &source);
++	sgx535_provenance_source_reset_end(dev_priv->dev, &source);
+ }
+ 
+ /**
+@@ -100,6 +107,7 @@
+ 	unsigned submit_size;
+ 	unsigned long flags;
+ 
++	sgx535_provenance_source_producer(1);
+ 	spin_lock_irqsave(&dev_priv->lock_2d, flags);
+ 	while (size > 0) {
+ 		submit_size = (size < 0x60) ? size : 0x60;
+@@ -116,6 +124,7 @@
+ 		(void)PSB_RSGX32(PSB_SGX_2D_SLAVE_PORT + i - 4);
+ 	}
+ 	spin_unlock_irqrestore(&dev_priv->lock_2d, flags);
++	sgx535_provenance_source_producer(0);
+ 	return ret;
+ }
+ 
+--- a/power.c
++++ b/power.c
+@@ -29,6 +29,7 @@
+  */
+ 
+ #include "power.h"
++#include "gma500_capsule_observer.h"
+ #include "psb_drv.h"
+ #include "psb_reg.h"
+ #include "psb_intel_reg.h"
+@@ -198,6 +199,7 @@
+ 			dev_err(dev->dev, "GPU hardware busy, cannot suspend\n");
+ 			return -EBUSY;
+ 		}
++		sgx535_provenance_source_lifecycle(dev);
+ 		psb_irq_uninstall(dev);
+ 		gma_suspend_display(dev);
+ 		gma_suspend_pci(pdev);
+@@ -218,6 +220,7 @@
+ 	struct drm_device *dev = pci_get_drvdata(pdev);
+ 
+ 	mutex_lock(&power_mutex);
++	sgx535_provenance_source_lifecycle(dev);
+ 	gma_resume_pci(pdev);
+ 	gma_resume_display(pdev);
+ 	psb_irq_preinstall(dev);
+@@ -264,6 +267,7 @@
+ 		goto out_false;
+ 
+ 	/* Ok power up needed */
++	sgx535_provenance_source_lifecycle(dev);
+ 	ret = gma_resume_pci(dev->pdev);
+ 	if (ret == 0) {
+ 		psb_irq_preinstall(dev);

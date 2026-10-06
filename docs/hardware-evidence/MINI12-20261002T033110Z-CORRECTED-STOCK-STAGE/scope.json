@@ -1,0 +1,31 @@
+{
+  "scope": "fresh passive STOCK identity and path inspection; no filesystem writes or graphics actions",
+  "argv": [
+    "ssh",
+    "-T",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "ConnectTimeout=8",
+    "-o",
+    "ConnectionAttempts=1",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "IdentitiesOnly=yes",
+    "-o",
+    "PasswordAuthentication=no",
+    "-o",
+    "KbdInteractiveAuthentication=no",
+    "-o",
+    "UserKnownHostsFile=/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260927-H0/ssh_known_hosts",
+    "-i",
+    "/home/gama/.ssh/id_ed25519_sgx535_h0",
+    "-p",
+    "22",
+    "gama@192.168.18.90",
+    "sudo -n -p '' python3 -I -B -S -c 'import os,hashlib,json,stat,shutil,base64\npaths=['\"'\"'/boot/vmlinuz-5.10.240-antix.1-486-smp'\"'\"','\"'\"'/boot/initrd.img-5.10.240-antix.1-486-smp'\"'\"','\"'\"'/boot/initrd.img-5.10.240-antix.1-486-smp-sgx535-firstload-01'\"'\"','\"'\"'/boot/grub/grub.cfg'\"'\"','\"'\"'/boot/grub/grubenv'\"'\"','\"'\"'/boot/grub/custom.cfg'\"'\"','\"'\"'/boot/initrd.img-5.10.240-antix.1-486-smp-sgx535-firstload-corrected-01'\"'\"','\"'\"'/boot/grub/custom.cfg.cycle06-preserved'\"'\"']\ndef rd(p):\n with open(p,'\"'\"'rb'\"'\"') as f:return f.read()\ndef ident(p):\n try:\n  s=os.lstat(p);d={'\"'\"'exists'\"'\"':True,'\"'\"'mode'\"'\"':oct(stat.S_IMODE(s.st_mode)),'\"'\"'uid'\"'\"':s.st_uid,'\"'\"'gid'\"'\"':s.st_gid,'\"'\"'nlink'\"'\"':s.st_nlink,'\"'\"'regular'\"'\"':stat.S_ISREG(s.st_mode),'\"'\"'symlink'\"'\"':stat.S_ISLNK(s.st_mode)}\n  if d['\"'\"'regular'\"'\"']:\n   b=rd(p);d.update(size=len(b),sha256=hashlib.sha256(b).hexdigest())\n   if p.endswith('\"'\"'/custom.cfg'\"'\"'):d['\"'\"'base64'\"'\"']=base64.b64encode(b).decode()\n  return d\n except FileNotFoundError:return {'\"'\"'exists'\"'\"':False}\nr={'\"'\"'boot_id'\"'\"':rd('\"'\"'/proc/sys/kernel/random/boot_id'\"'\"').decode().strip(),'\"'\"'kernel'\"'\"':os.uname().release,'\"'\"'machine'\"'\"':os.uname().machine,'\"'\"'product'\"'\"':rd('\"'\"'/sys/class/dmi/id/product_name'\"'\"').decode().strip(),'\"'\"'cmdline'\"'\"':rd('\"'\"'/proc/cmdline'\"'\"').decode().strip(),'\"'\"'taint'\"'\"':rd('\"'\"'/proc/sys/kernel/tainted'\"'\"').decode().strip(),'\"'\"'loaded'\"'\"':{'\"'\"'state'\"'\"':rd('\"'\"'/sys/module/gma500_gfx/initstate'\"'\"').decode().strip(),'\"'\"'note_sha256'\"'\"':hashlib.sha256(rd('\"'\"'/sys/module/gma500_gfx/notes/.note.gnu.build-id'\"'\"')).hexdigest(),'\"'\"'pci_driver'\"'\"':os.path.realpath('\"'\"'/sys/bus/pci/devices/0000:00:02.0/driver'\"'\"'),'\"'\"'drm_device'\"'\"':os.path.realpath('\"'\"'/sys/class/drm/card0/device'\"'\"')},'\"'\"'paths'\"'\"':{p:ident(p) for p in paths},'\"'\"'boot_free_bytes'\"'\"':shutil.disk_usage('\"'\"'/boot'\"'\"').free,'\"'\"'boot_parent'\"'\"':{p:{'\"'\"'mode'\"'\"':oct(stat.S_IMODE(os.stat(p).st_mode)),'\"'\"'uid'\"'\"':os.stat(p).st_uid,'\"'\"'gid'\"'\"':os.stat(p).st_gid,'\"'\"'symlink'\"'\"':os.path.islink(p)} for p in ['\"'\"'/boot'\"'\"','\"'\"'/boot/grub'\"'\"']}}\nprint(json.dumps(r))\n'"
+  ],
+  "stdin": "DEVNULL",
+  "root_source_sha256": "7a1e8afdecc7c88ad5677b7a981cc6c5c1e6e3ebb053684b745d31140b3b4f60"
+}

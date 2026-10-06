@@ -1,0 +1,9 @@
+{
+  "recorded_utc": "2026-10-03T00:53:50.666097+00:00",
+  "source": "explicit operator decision in conversation",
+  "decision": "Use direct operator observation instead of photography where project-controlled; revise prospectively; preserve v2; no independent Gate-B override",
+  "exact_operator_entry_report": "EXPERIMENTAL SGX535 rev121 FROZEN 314e2f3b37195dc56df7c57dd938d78377a5ea8e FIRST-LOAD ONLY (no SGX)",
+  "photograph_supplied": false,
+  "current_stock_local_sudo_v": "SUCCEDED, operator reported",
+  "candidate_boots_before_selection": 0
+}

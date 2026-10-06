@@ -1,0 +1,15 @@
+# FIRE #3 — opaque-magenta triangle established — 2026-10-06
+
+**CONSTANT_FRAGMENT_HYPOTHESIS_SUPPORTED. Triangle ESTABLISHED in FIRE #3.**
+
+Exactly one client launch/one ioctl occurred on boot `f1ab6606-0561-445f-a397-28a028516cd7`. Client exit0; ioctl0; operation errno0; outcome2; phase9 RETIRED; accepted ledger0x7. Valid source and capsule CLOSED, reasons/invalidity0. Attributable TA completion, end-render, 3D-memory-free and retirement are CONFIRMED. Complete4268 response, immutable capsule and4096 image agree and share the verified current-operation provenance. No preservation error occurred.
+
+The raw image contains120 pixels `0xffff00ff` and904 zero pixels. Exact coordinates: `y=8..22`, `x=8..(30-y)` inclusive. Bounding box `(8,8)..(22,22)` inclusive. This is an exact full-image match (0 mismatches) to the known triangle `(8,8),(24,8),(8,24)` under pixel-center sampling with hypotenuse ties excluded. It establishes the intended diagnostic triangle for FIRE3; no general hardware edge-rule certification is claimed.
+
+The only experimental rendering variable remains the qualified eight fragment-program bytes: `00000000 f8040140` → `001f00ff fca7f1f1`. The nonzero expected diagnostic triangle strongly supports the constant-fragment hypothesis. FIRE2's unretained post-TA coverage remains UNKNOWN. Direct TA command acceptance, internal primitive record encoding, instruction-level export and PBE bus traces were not captured; internal-stage conclusions are distinguished from confirmed final pixels and accepted completion.
+
+Controller fix: bind the unique source predicate structurally, then validate context/receipt/card references against one authoritative boot/module/image witness. Expected repeated references are permitted only in exact roles; conflicts, unexpected duplicates, stale/missing/malformed references and wrong surrounding provenance fail closed. **28/28 CPU-only tests PASS.** Existing boot reused; continuity47/47, protected preparation56/56, independent final204/204, immediate precheck42/42 PASS. First-owner82/82 evidence reused with current continuity. **PRE07 LIVE PASS** before FIRE.
+
+All18 original files were retrieved, copied exclusively, synced, hash-verified and sealed BEFORE interpretation. See [original manifest](originals-manifest.json), [original seal](originals-seal.json), [exact result](outcome-report.json), [capsule/source checks](initial-offline-checks.json), [all coordinates](spatial-analysis.json), [whole-image comparison](diagnostic-reference-comparison.json), [lossless32×32 PNG](readback-exact32.derived.png), [nearest-neighbor preview](readback-nearest512.derived.png) and [visualization receipt](visualization-receipt.json). The PNG is derived from preserved pixels; original bytes are unchanged.
+
+**FIRE #3 authorization consumed: YES. Further SGX execution authorized: NO.** No retry, further client launch or hardware intervention followed. STOP. Previous STOP/transfer/inspection records and all68 FIRE2 files remain immutable.

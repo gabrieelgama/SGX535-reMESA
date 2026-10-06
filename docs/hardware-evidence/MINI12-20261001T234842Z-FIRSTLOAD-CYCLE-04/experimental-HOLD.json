@@ -1,0 +1,18 @@
+{
+  "utc": "2026-10-02T00:03:38.798675+00:00",
+  "classification": "HOLD; experimental boot did not reach observable normal userspace",
+  "basis": "operator recognizes this persistent console state as hung from prior machine behavior; stop early under existing hang guard rather than wait out maximum watch",
+  "console": "VMX (outside TXT) disabled by BIOS",
+  "kernel_hang_cause": "UNKNOWN; displayed VMX message also exists in verified STOCK baseline",
+  "experimental_connection_made": false,
+  "experimental_capture": "NOT RUN",
+  "experimental_boot_id": "UNKNOWN",
+  "loaded_module_identity": "UNKNOWN",
+  "hook_trace": "UNKNOWN",
+  "first_owner": "NOT ESTABLISHED",
+  "sgx_actions": 0,
+  "hot_module_actions": 0,
+  "experimental_selection_consumed": true,
+  "automatic_retry": false,
+  "recovery": "existing authorized operator reset/power boundary followed by exactly one manual normal STOCK boot; no hot restoration"
+}

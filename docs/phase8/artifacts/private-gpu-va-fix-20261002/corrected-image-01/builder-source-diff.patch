@@ -1,0 +1,20 @@
+--- repo/frozen_first_load_image.py
++++ temporary-pinned-builder/frozen_first_load_image.py
+@@ -14,7 +14,7 @@
+ DERIVATIVE=Path('docs/phase8/artifacts/candidate-01-build-20260930/candidate-02-lifecycle/gma500_gfx.ko')
+ TABLE=Path('docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/build_Module_symvers')
+ RELEASE='5.10.240-antix.1-486-smp'
+-DERIVATIVE_HASH='91a6040e743d9c6222cb1307067db6e29fe92558576716a33d9fe0f4f5a87d74'
++DERIVATIVE_HASH='2eaffd22637eef6b7b101f046d6fd9756b48c934818a7353f9aa705616014c1e'
+ STOCK_HASH='f02cde6c7e712fa0620f99438ef5dc81c131b481a84dc9dbc4f7b854c364e341'
+ TABLE_HASH='faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca'
+ GRUB_HASH='396ac7dff0bdea48393fd0a25a5fc633d40e2368caf14872b855eba03e96089f'
+@@ -121,7 +121,7 @@
+  if any('gma500' in x['name'] for x in first+rows):raise ValueError('unexpected original in stock image')
+  if len(first)!=5 or len(rows)!=2133:raise ValueError('stock member count')
+  derivative=(repo/DERIVATIVE).read_bytes()
+- if len(derivative)!=242724 or sha(derivative)!=DERIVATIVE_HASH:raise ValueError('derivative identity')
++ if len(derivative)!=242740 or sha(derivative)!=DERIVATIVE_HASH:raise ValueError('derivative identity')
+  table=versions.read_symvers(repo/TABLE)
+  if table[1]!=TABLE_HASH:raise ValueError('target table identity')
+  info=elf_info(derivative)

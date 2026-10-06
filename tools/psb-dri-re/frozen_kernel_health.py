@@ -1,7 +1,7 @@
 """Operational kernel-log guard; known diagnostics remain visible, never generic fault exemptions.
 
-The five bounded diagnostic forms derive from the preserved stock capture, not
-an arbitrary caller-provided whitelist. Fault-bearing/repeated/changed variants
+The bounded diagnostics derive from preserved captures and the exact kernel
+loader source, not an arbitrary caller-provided whitelist. Fault-bearing/repeated/changed variants
 fail closed. This is an operational predicate, not architectural health proof.
 """
 import re
@@ -21,6 +21,10 @@ ACPI_DIAGNOSTICS = {
  'button: probe of LNXPWRBN:00 failed with error -22': ('powerbutton_probe', 1),
  'tiny-power-button: probe of LNXPWRBN:00 failed with error -22': ('tiny_powerbutton_probe', 1),
 }
+# kernel/module.c emits this exact notice once when permissive signature
+# checking admits an unverified module. Cycle05 loads captured stock drm first.
+# Module provenance/taint/ownership remain separate mandatory checks.
+UNSIGNED_DRM_NOTICE = ('drm: module verification failed: signature and/or required key missing - tainting kernel')
 BACKLIGHT = re.compile(r"gma500 0000:00:02\.0: BL bug: Reg ([0-9a-fA-F]{8}) save ([0-9a-fA-F]{8})")
 
 def classify_kernel_log(log):
@@ -35,6 +39,7 @@ def classify_kernel_log(log):
   if FATAL.search(message): reason = 'kernel fault/lockup'
   else:
    known = ACPI_DIAGNOSTICS.get(message)
+   if message == UNSIGNED_DRM_NOTICE: known = ('unsigned_drm_loader_notice', 1)
    backlight = BACKLIGHT.fullmatch(message)
    if backlight:
     if any(int(value, 16) != 0 for value in backlight.groups()): reason = 'changed backlight diagnostic fields'

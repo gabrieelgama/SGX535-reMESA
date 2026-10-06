@@ -1,0 +1,13 @@
+{
+  "boot_id": "83ee4ff8-a7f1-4468-b348-d10627f38d17",
+  "card_sha256": "1cc193984a39a8c161fff55c2c9002da28740ebaddf367c623696b585125eae7",
+  "argv": [
+    "/root/sgx535-square-seq1-8be2777b2a79eaa6651b89d19faf4d68cdcdc460-0e45ad4c/frozen-triangle-one-shot-response-i386",
+    "--one-shot-sgx535-rev121",
+    "/root/sgx535-square-seq1-8be2777b2a79eaa6651b89d19faf4d68cdcdc460-0e45ad4c/evidence-83ee4ff8-a7f1-4468-b348-d10627f38d17/color.original.bin",
+    "/root/sgx535-square-seq1-8be2777b2a79eaa6651b89d19faf4d68cdcdc460-0e45ad4c/evidence-83ee4ff8-a7f1-4468-b348-d10627f38d17/response.original.bin"
+  ],
+  "maximum_launches": 1,
+  "state": "ONE LAUNCH ABOUT TO BE ATTEMPTED; UNKNOWN IF INTERRUPTED",
+  "no_retry": true
+}

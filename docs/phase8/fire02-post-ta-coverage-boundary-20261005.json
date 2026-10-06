@@ -1,0 +1,303 @@
+{
+  "record": "SGX535-PHASE8-FIRE02-POST-TA-COVERAGE-EVIDENCE-BOUNDARY-20261005",
+  "timestamp_utc": "2026-10-05T23:57:00.580844+00:00",
+  "disposition": "B_PRECISE_EVIDENCE_BOUNDARY",
+  "hardware_fact": "POST_TA_SELECTED_TRIANGLE_COVERAGE_UNKNOWN",
+  "sealed_fire2_root": "/home/gama/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/live-preparation/fire-one-authorized-call",
+  "preserved_findings": [
+    "TA_COMPLETION_CONFIRMED",
+    "END_RENDER_CONFIRMED",
+    "3D_MEMORY_FREE_CONFIRMED",
+    "RETIREMENT_CONFIRMED",
+    "COMMON_OPERATION_RESPONSE_CAPSULE_COLOR_PROVENANCE_CONFIRMED",
+    "COLOR_4096_BYTES_ALL_ZERO"
+  ],
+  "missing_capability": "Revision-valid triangle-specific geometry/coverage witness with proved observation/publication semantics; not completion or opaque nonzero bytes.",
+  "retroactive_recovery": {
+    "possible_from_retained_records": false,
+    "reason": "No scene/page-table/parameter snapshot or visibility feedback was retained."
+  },
+  "checkpoint": {
+    "file": "tools/psb-dri-re/frozen_fixed_service.c",
+    "function": "fixed_service_status_impl",
+    "point": "After qualified TA status acceptance, before session_begin_raster and existing ISP/raster steps.",
+    "existing_taps": "before is pre-acceptance; after is post-raster-fire, neither retains scene output."
+  },
+  "new_reference_candidate": {
+    "kind": "VISTEST_FEEDBACK",
+    "confidence": "CONFIRMED_CPU_READ_PATH_ONLY",
+    "public_opcode": 7,
+    "reference_binary": "references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/drivers/Xpsb.so",
+    "table_va": "0xd0a0",
+    "case7_target": "0x328a",
+    "loop_range": "0x3290-0x32a9",
+    "offsets": [
+      "0x498",
+      "0x49c",
+      "0x4a0",
+      "0x4a4",
+      "0x4a8",
+      "0x4ac",
+      "0x4b0",
+      "0x4b4"
+    ],
+    "explicit_writes_in_read_loop": false,
+    "requested_by_historical_kernel": "PSB_psb_schedule_c.txt:489-501, after raster completion with feedback page",
+    "unknowns": [
+      "SGX535 rev121 read side effects",
+      "what is counted",
+      "current triangle counter selection/enable",
+      "bounds/background contribution",
+      "baseline/reset and stale lifetime behavior",
+      "terminal availability and reporting completeness"
+    ],
+    "qualified_for_current_draw": false
+  },
+  "scene_capture_candidate": {
+    "confidence": "OWNED_ADDRESSES_AND_CHECKPOINT_CONFIRMED_FORMAT_UNKNOWN",
+    "scene_allocation_bytes": 8192,
+    "scene_logical_bytes": 5152,
+    "ta_page_table_bytes": 33554432,
+    "ta_parameter_bytes": 33554432,
+    "shared_offset": "0x1000",
+    "ta_register": "0x21c",
+    "raster_register": "0x408",
+    "unknowns": [
+      "region/link/primitive record semantics",
+      "selected triangle identity versus bounds/termination",
+      "bounded complete traversal",
+      "clipping/culling/viewport relation",
+      "GPU-to-CPU publication at checkpoint"
+    ],
+    "raw_nonzero_proves_coverage": false,
+    "cpu_clflush_dma_rmb_proves_gpu_publication": false
+  },
+  "minimum_provider_obligations": [
+    "triangle-specific positive or complete negative coverage under current raster state",
+    "revision-valid observation and read/publication behavior",
+    "fresh current-operation origin under existing qualified provenance",
+    "complete immutable retention before lifecycle loss",
+    "stale/reuse/interference/incomplete/lost evidence is UNKNOWN",
+    "no new work, event clear, reset or shader/register guessing"
+  ],
+  "future_focused_qualification_not_executed": [
+    "selected-triangle positive",
+    "complete-empty or culled negative",
+    "bounds-only negative",
+    "stale/reused/wrong-owner evidence rejection",
+    "incomplete traversal or counter reporting",
+    "competing activity",
+    "device-publication uncertainty",
+    "evidence loss",
+    "immutable retention"
+  ],
+  "fragment_export": {
+    "status": "SPECIFIC_CONCERN_NOT_PROVEN_DEFECT",
+    "compiled_instructions": 0,
+    "compiled_attributes": 0,
+    "linked_words": [
+      "0x00000000",
+      "0xf8040140"
+    ],
+    "suffix_isa_or_implicit_export": "NOT_ESTABLISHED",
+    "correction_justified": false
+  },
+  "pbe_store": {
+    "status": "UNKNOWN",
+    "no_store_vs_zero_store": "INDISTINGUISHABLE",
+    "response_color_provenance": "CONFIRMED",
+    "actual_store_value_destination_visibility": "NOT_OBSERVED"
+  },
+  "next_downstream_discriminator": "After positive coverage, establish intended nonzero color output at the fragment/PBE boundary; if present, establish actual PBE destination/value/visibility.",
+  "implementation": {
+    "source_changes": [],
+    "new_observer": false,
+    "reason": "No qualified semantics permit an unambiguous passive coverage reader. A speculative reader or opaque dump would not close the question.",
+    "new_candidate": false
+  },
+  "qualification": {
+    "reference_checks": {
+      "scope": "static reference extraction, NOT a coverage provider qualification",
+      "checks": {
+        "case7_dispatches_to_read_loop": true,
+        "eight_contiguous_feedback_offsets": true,
+        "source_vistest_is_operation7": true,
+        "kernel_feedback_has_eight_words": true,
+        "frozen_raster_writes_no_feedback_offsets": true,
+        "same_sparse_sgx535_header_in_all_available_tips": true
+      },
+      "result": "PASS"
+    },
+    "native": "NOT_RUN_NO_NEW_IMPLEMENTATION",
+    "ubsan": "NOT_RUN_NO_NEW_IMPLEMENTATION",
+    "i386_execution": "NOT_RUN_STATIC_ELF_ANALYSIS_ONLY",
+    "hardware_validation": "NOT_PERFORMED",
+    "unaffected_previous_qualification": "REUSABLE_UNCHANGED"
+  },
+  "candidate_unchanged": {
+    "driver_build_id": "9d0b5b2fdb7d9881f2828f43fb89253176c38817",
+    "observer_build_id": "f11d3abb072caa4e1d32836ef92ce201e9c9d126",
+    "image_sha256": "ef7e01cb546c59b6f9bce96c3397feb4b9cd1d9ebdac2faa885ed71fa5ed014d"
+  },
+  "live_discriminating_capture": "JUSTIFIED_ONLY_AFTER_A_VALID_WITNESS_IS_SPECIFIED_AND_QUALIFIED",
+  "fire3_requires_separate_explicit_authorization": true,
+  "sgx_execution_authorized": false,
+  "task_sgx_invocations": 0,
+  "task_hardware_interactions": 0,
+  "historical_authorized_client_invocations": 2,
+  "triangle": "NOT_ESTABLISHED",
+  "restricted_inputs_accessed": false,
+  "files_inspected": [
+    {
+      "path": "docs/phase8/CODEX-HANDOFF-20261005.md",
+      "sha256_at_record_creation": "9d07bf0efb67585eeb5c533b49422c9c617fdc3e13ffdc604ede0423a5fece0c"
+    },
+    {
+      "path": "docs/phase8/fire02-zero-readback-investigation-20261005.md",
+      "sha256_at_record_creation": "3f19055f7101a4ad827e9edd6d776ee4f16bc960ec533c7b35d0ad81e230ace2"
+    },
+    {
+      "path": "kernel/sgx535_frozen/gma500_bo_owner.h",
+      "sha256_at_record_creation": "16d017f4f7641617765adaf9a2d0fe68840026db7deba16d0a718b807dc73378"
+    },
+    {
+      "path": "kernel/sgx535_frozen/gma500_bo_owner.c",
+      "sha256_at_record_creation": "f05ddbed8d021f2511489bd81491c686e2a071d78988ba3f9e12c924733f97da"
+    },
+    {
+      "path": "kernel/sgx535_frozen/gma500_fixed_backend.c",
+      "sha256_at_record_creation": "dd12a1316cdb3d79539294a333f0f0e319d5e12bdc9398b82330f05996d9785c"
+    },
+    {
+      "path": "kernel/sgx535_frozen/gma500_fixed_backend.h",
+      "sha256_at_record_creation": "edb5dd8c1e273813e5f218cb98bab2dc44029c498a562a21cc9c6bcb922e50cb"
+    },
+    {
+      "path": "kernel/sgx535_frozen/gma500_capsule_observer.c",
+      "sha256_at_record_creation": "fb17577c93a54d7eb90fbbbd64aca5dbca6dbd1fc89a13524897d26a09d6205a"
+    },
+    {
+      "path": "kernel/sgx535_frozen/gma500_capsule_observer.h",
+      "sha256_at_record_creation": "ae2a0a4d5c998a67c4a58ee0995906fc5e2968c4ddc7c42cf4adc73f76dfaf5e"
+    },
+    {
+      "path": "tools/psb-dri-re/frozen_kernel_contract.c",
+      "sha256_at_record_creation": "0ec2b8640acac9d6ee672b1aa81d0b7504cc3432f1165df9460c846ec71fea6b"
+    },
+    {
+      "path": "tools/psb-dri-re/frozen_kernel_contract.h",
+      "sha256_at_record_creation": "6bdd02e87f6a11bbc8de3033a78ab49335964b1fcb03d6d8de527aa6ecdaeca2"
+    },
+    {
+      "path": "tools/psb-dri-re/frozen_fixed_service.c",
+      "sha256_at_record_creation": "ac4acc665ccd46b27dbf61fc1ccf07ba56fba2153dc0ce3820f0e2361880dd2e"
+    },
+    {
+      "path": "tools/psb-dri-re/frozen_fixed_service.h",
+      "sha256_at_record_creation": "ece30da13bb6e18cac84661988ea86280cfcbec8062a029f10e8aa0968b76576"
+    },
+    {
+      "path": "tools/psb-dri-re/frozen_triangle_image.py",
+      "sha256_at_record_creation": "c88356a2f31cb79cc17d4dd67465c64a4d33f734e1ef69473245eb197b3ebc57"
+    },
+    {
+      "path": "docs/poulsbo-data/PSB_psb_scene_c.txt",
+      "sha256_at_record_creation": "07309f6a189eb0ede64aaa98e7fbd858f44314256e2262226f48ba33d9b7528e"
+    },
+    {
+      "path": "docs/poulsbo-data/PSB_psb_schedule_c.txt",
+      "sha256_at_record_creation": "1a139a24cfbd6593e7a6c71315bd63d5ea649fda712555dc34ae30650f24eeca"
+    },
+    {
+      "path": "docs/poulsbo-data/PSB_psb_reg_h.txt",
+      "sha256_at_record_creation": "512563057c48f651176928ccd33666a8a1145f19eb28c60296382776be1c4344"
+    },
+    {
+      "path": "docs/poulsbo-data/PSB_psb_drm_h.txt",
+      "sha256_at_record_creation": "85f30c2f01eb29884778de7959f4f122353f0cbb4ed5cec00db9fb862707dc21"
+    },
+    {
+      "path": "docs/poulsbo-data/PSB_psb_xhw_c.txt",
+      "sha256_at_record_creation": "73783fad6b072b655d50386621d09d7fe6f4cdd896cb991ed0258a2494330fc1"
+    },
+    {
+      "path": "docs/poulsbo-data/PSB_psb_sgx_c.txt",
+      "sha256_at_record_creation": "f17805b4a8959c064e222255baa5c885366c1970630b655dea04047daec79d02"
+    },
+    {
+      "path": "docs/poulsbo-data/EMGD_drm_emgd_include_plb_sgx_h.txt",
+      "sha256_at_record_creation": "de8196c8c4da6a749656c544826b157b27e24717ffa815125ab64cbb5bbf291c"
+    },
+    {
+      "path": "docs/poulsbo-data/EMGD_drm_pvr_services4_srvkm_hwdefs_sgx535defs_h.txt",
+      "sha256_at_record_creation": "634fbb74645d373e0c60ad5e01194fa96e91bb6b26d60dbc35a71a2eda49d12c"
+    },
+    {
+      "path": "docs/archaeology-data/H535.txt",
+      "sha256_at_record_creation": "cb2a3e9119d65b421a16744137b1114b0ebd6982cb27549b4fce1d8405bd41c3"
+    },
+    {
+      "path": "docs/phase7/xpsb-re/xhw-init-frozen-draw.md",
+      "sha256_at_record_creation": "d580b562b697db60d3ec4f915d94892f12270fcd6b78d0f4fffe7e6bc613db94"
+    },
+    {
+      "path": "docs/phase7/psb-dri-re/frozen-fragment-exact-output.md",
+      "sha256_at_record_creation": "f7ce7d7e9747ebd2146dc449b014aa71464188b4716208154b4356fc5561e9de"
+    },
+    {
+      "path": "docs/phase7/psb-dri-re/frozen-fragment-link-progress.md",
+      "sha256_at_record_creation": "e4f7dfe15f6e656b3dcc4ae109e4cf201c31c92ce98a7d50d775db5c8d5bc8c5"
+    },
+    {
+      "path": "docs/phase7/psb-dri-re/pds-launch-count.md",
+      "sha256_at_record_creation": "2bd5f5885b352579572a591076a7db59a542ab2a3c4e8b8fd24676e7c8fd8bbe"
+    },
+    {
+      "path": "docs/phase7/psb-dri-re/selected-pds-hard-boundary.md",
+      "sha256_at_record_creation": "a7a6fe6adf12a96f0fce9d879e8d92178813b175c0762064184b8e67b438c54e"
+    },
+    {
+      "path": "docs/usse.md",
+      "sha256_at_record_creation": "20212273ca760d775e64a84418fe1142d06625b97fa778acaa4ccd23eb861a09"
+    },
+    {
+      "path": "docs/sgx535-missing-files.md",
+      "sha256_at_record_creation": "18d47c8b2bc5a32f703e01355f837f4a05b56a08a5a07a2d944d74263437c2d9"
+    },
+    {
+      "path": "docs/source-archaeology.md",
+      "sha256_at_record_creation": "6b61906d079d380eeed346541ea0113ea349f198aad7a52f3feea33d9bb7d916"
+    },
+    {
+      "path": "references/omap5-sgx-ddk-linux/eurasia_km/include4/sgxapi_km.h",
+      "sha256_at_record_creation": "7fd77b4e057439a7f2bd2b34830e8b251bbfc9f419621b7667334f0c17bf63f5"
+    },
+    {
+      "path": "references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+      "sha256_at_record_creation": "3f63be6e5fc0196a7a72bacae165d4982e18018c6c9770342915f3ea486ca660"
+    },
+    {
+      "path": "references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h",
+      "sha256_at_record_creation": "580f632cea9b973108988d431f873625789bce41288e5053f62ff8dcb2f08cd6"
+    },
+    {
+      "path": "references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/pb.c",
+      "sha256_at_record_creation": "6ecf9b4b2bebe84113a48d7608cdd9306c5ddb10245468dce40ef0850aedf742"
+    },
+    {
+      "path": "references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+      "sha256_at_record_creation": "43b6f970f764c414575271c5eea3eda277d62de277cf19e4d492ee24617f6908"
+    },
+    {
+      "path": "references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/drivers/Xpsb.so",
+      "sha256_at_record_creation": "da531587b1ec59fe433fa20ddd2e691b2f8b7fb35bb82525d4db99259c5e571f"
+    },
+    {
+      "path": "references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/dri/psb_dri.so",
+      "sha256_at_record_creation": "74ca42991906741ee91be1bc088ae0b142fa71b6a85658c5dad0851ce50dd0d8"
+    }
+  ],
+  "audit_root": "/home/gama/sgx535-offline/phase8-post-ta-coverage-20261005T234612Z",
+  "checks_record": "/home/gama/sgx535-offline/phase8-post-ta-coverage-20261005T234612Z/reference-checks.json",
+  "header_history": "/home/gama/sgx535-offline/phase8-post-ta-coverage-20261005T234612Z/sgx535-header-history-check.json"
+}

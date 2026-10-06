@@ -1,0 +1,1 @@
+Explicitly authorized ONE bounded read-only sameboot check. Reuse reviewed identity/ownership/health/stock/staged-hook reads and verify already-staged client using no-follow read. Stat DRM only; no DRM open/ioctl/MMIO/module/service/boot/write/SGX action.40s host/35s child; no retry.

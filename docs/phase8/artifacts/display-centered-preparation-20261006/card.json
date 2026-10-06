@@ -1,0 +1,767 @@
+{
+  "schema": "SGX535_DISPLAY_PUBLICATION_CARD_V1",
+  "status": "OFFLINE_PREPARED_PENDING_EXACT_SCOPE_AUTHORIZATION_AND_FRESH_BINDINGS",
+  "scope": "ONE DISPLAY-ONLY CPU PUBLICATION; NO SGX",
+  "target": {
+    "boot_id": "f1ab6606-0561-445f-a397-28a028516cd7",
+    "kernel": "5.10.240-antix.1-486-smp",
+    "active_vt": "tty7",
+    "display": ":0.0",
+    "root": 614,
+    "visual": 33,
+    "width": 1280,
+    "height": 800,
+    "depth": 24,
+    "rgb_masks": [
+      16711680,
+      65280,
+      255
+    ],
+    "x": 560,
+    "y": 320,
+    "server": {
+      "pid": 1939,
+      "start_ticks": "4890"
+    },
+    "compositor": null,
+    "scanout": {
+      "crtc": 34,
+      "framebuffer": 77,
+      "x": 0,
+      "y": 0,
+      "mode_hex": "d41101000005300550058b050000200323032903370300003c0000000a000000480000003132383078383030000000000000000000000000000000000000000000000000",
+      "layout": {
+        "width": 1280,
+        "height": 800,
+        "pitch": 5120,
+        "bits_per_pixel": 32,
+        "depth": 24,
+        "backing_exported": false
+      }
+    },
+    "loaded_driver_note_sha256": "4499399a9f06a35b924c770ec5f04b8e5a5170c4f744359c675d13ca89223644",
+    "loaded_observer_note_sha256": "6afbac1cf48a211135e2a4b4ffc30f96ace64f6d397071595bbc328966bb8af0",
+    "publication": "X11 core software XPutImage; existing Xorg owns scanout",
+    "presentation_scale": 5,
+    "publication_width": 160,
+    "publication_height": 160
+  },
+  "source": {
+    "path": "docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/successful-procedure/fire3-one-authorized-call/originals/color.original.bin",
+    "bytes": 4096,
+    "sha256": "52b2aeb7316820f955d1b9a46cb55a888efb8f74de916acd7ec7ddff6d99ebb5",
+    "representation": "1024 little-endian ARGB8888 words; stride128; no display alpha blending"
+  },
+  "hold_seconds": 15,
+  "affected_rectangle": {
+    "x": 560,
+    "y": 320,
+    "width": 160,
+    "height": 160
+  },
+  "source_pitch": 128,
+  "scanout_pitch": 5120,
+  "scanout_format": "XRGB8888 / depth24 TrueColor",
+  "encoded_magenta_rgb": "0x00ff00ff",
+  "zero_pixel_semantics": "black; not alpha-blended transparency",
+  "affected_scanout_row_intervals": [
+    [
+      1640640,
+      1641280
+    ],
+    [
+      1645760,
+      1646400
+    ],
+    [
+      1650880,
+      1651520
+    ],
+    [
+      1656000,
+      1656640
+    ],
+    [
+      1661120,
+      1661760
+    ],
+    [
+      1666240,
+      1666880
+    ],
+    [
+      1671360,
+      1672000
+    ],
+    [
+      1676480,
+      1677120
+    ],
+    [
+      1681600,
+      1682240
+    ],
+    [
+      1686720,
+      1687360
+    ],
+    [
+      1691840,
+      1692480
+    ],
+    [
+      1696960,
+      1697600
+    ],
+    [
+      1702080,
+      1702720
+    ],
+    [
+      1707200,
+      1707840
+    ],
+    [
+      1712320,
+      1712960
+    ],
+    [
+      1717440,
+      1718080
+    ],
+    [
+      1722560,
+      1723200
+    ],
+    [
+      1727680,
+      1728320
+    ],
+    [
+      1732800,
+      1733440
+    ],
+    [
+      1737920,
+      1738560
+    ],
+    [
+      1743040,
+      1743680
+    ],
+    [
+      1748160,
+      1748800
+    ],
+    [
+      1753280,
+      1753920
+    ],
+    [
+      1758400,
+      1759040
+    ],
+    [
+      1763520,
+      1764160
+    ],
+    [
+      1768640,
+      1769280
+    ],
+    [
+      1773760,
+      1774400
+    ],
+    [
+      1778880,
+      1779520
+    ],
+    [
+      1784000,
+      1784640
+    ],
+    [
+      1789120,
+      1789760
+    ],
+    [
+      1794240,
+      1794880
+    ],
+    [
+      1799360,
+      1800000
+    ],
+    [
+      1804480,
+      1805120
+    ],
+    [
+      1809600,
+      1810240
+    ],
+    [
+      1814720,
+      1815360
+    ],
+    [
+      1819840,
+      1820480
+    ],
+    [
+      1824960,
+      1825600
+    ],
+    [
+      1830080,
+      1830720
+    ],
+    [
+      1835200,
+      1835840
+    ],
+    [
+      1840320,
+      1840960
+    ],
+    [
+      1845440,
+      1846080
+    ],
+    [
+      1850560,
+      1851200
+    ],
+    [
+      1855680,
+      1856320
+    ],
+    [
+      1860800,
+      1861440
+    ],
+    [
+      1865920,
+      1866560
+    ],
+    [
+      1871040,
+      1871680
+    ],
+    [
+      1876160,
+      1876800
+    ],
+    [
+      1881280,
+      1881920
+    ],
+    [
+      1886400,
+      1887040
+    ],
+    [
+      1891520,
+      1892160
+    ],
+    [
+      1896640,
+      1897280
+    ],
+    [
+      1901760,
+      1902400
+    ],
+    [
+      1906880,
+      1907520
+    ],
+    [
+      1912000,
+      1912640
+    ],
+    [
+      1917120,
+      1917760
+    ],
+    [
+      1922240,
+      1922880
+    ],
+    [
+      1927360,
+      1928000
+    ],
+    [
+      1932480,
+      1933120
+    ],
+    [
+      1937600,
+      1938240
+    ],
+    [
+      1942720,
+      1943360
+    ],
+    [
+      1947840,
+      1948480
+    ],
+    [
+      1952960,
+      1953600
+    ],
+    [
+      1958080,
+      1958720
+    ],
+    [
+      1963200,
+      1963840
+    ],
+    [
+      1968320,
+      1968960
+    ],
+    [
+      1973440,
+      1974080
+    ],
+    [
+      1978560,
+      1979200
+    ],
+    [
+      1983680,
+      1984320
+    ],
+    [
+      1988800,
+      1989440
+    ],
+    [
+      1993920,
+      1994560
+    ],
+    [
+      1999040,
+      1999680
+    ],
+    [
+      2004160,
+      2004800
+    ],
+    [
+      2009280,
+      2009920
+    ],
+    [
+      2014400,
+      2015040
+    ],
+    [
+      2019520,
+      2020160
+    ],
+    [
+      2024640,
+      2025280
+    ],
+    [
+      2029760,
+      2030400
+    ],
+    [
+      2034880,
+      2035520
+    ],
+    [
+      2040000,
+      2040640
+    ],
+    [
+      2045120,
+      2045760
+    ],
+    [
+      2050240,
+      2050880
+    ],
+    [
+      2055360,
+      2056000
+    ],
+    [
+      2060480,
+      2061120
+    ],
+    [
+      2065600,
+      2066240
+    ],
+    [
+      2070720,
+      2071360
+    ],
+    [
+      2075840,
+      2076480
+    ],
+    [
+      2080960,
+      2081600
+    ],
+    [
+      2086080,
+      2086720
+    ],
+    [
+      2091200,
+      2091840
+    ],
+    [
+      2096320,
+      2096960
+    ],
+    [
+      2101440,
+      2102080
+    ],
+    [
+      2106560,
+      2107200
+    ],
+    [
+      2111680,
+      2112320
+    ],
+    [
+      2116800,
+      2117440
+    ],
+    [
+      2121920,
+      2122560
+    ],
+    [
+      2127040,
+      2127680
+    ],
+    [
+      2132160,
+      2132800
+    ],
+    [
+      2137280,
+      2137920
+    ],
+    [
+      2142400,
+      2143040
+    ],
+    [
+      2147520,
+      2148160
+    ],
+    [
+      2152640,
+      2153280
+    ],
+    [
+      2157760,
+      2158400
+    ],
+    [
+      2162880,
+      2163520
+    ],
+    [
+      2168000,
+      2168640
+    ],
+    [
+      2173120,
+      2173760
+    ],
+    [
+      2178240,
+      2178880
+    ],
+    [
+      2183360,
+      2184000
+    ],
+    [
+      2188480,
+      2189120
+    ],
+    [
+      2193600,
+      2194240
+    ],
+    [
+      2198720,
+      2199360
+    ],
+    [
+      2203840,
+      2204480
+    ],
+    [
+      2208960,
+      2209600
+    ],
+    [
+      2214080,
+      2214720
+    ],
+    [
+      2219200,
+      2219840
+    ],
+    [
+      2224320,
+      2224960
+    ],
+    [
+      2229440,
+      2230080
+    ],
+    [
+      2234560,
+      2235200
+    ],
+    [
+      2239680,
+      2240320
+    ],
+    [
+      2244800,
+      2245440
+    ],
+    [
+      2249920,
+      2250560
+    ],
+    [
+      2255040,
+      2255680
+    ],
+    [
+      2260160,
+      2260800
+    ],
+    [
+      2265280,
+      2265920
+    ],
+    [
+      2270400,
+      2271040
+    ],
+    [
+      2275520,
+      2276160
+    ],
+    [
+      2280640,
+      2281280
+    ],
+    [
+      2285760,
+      2286400
+    ],
+    [
+      2290880,
+      2291520
+    ],
+    [
+      2296000,
+      2296640
+    ],
+    [
+      2301120,
+      2301760
+    ],
+    [
+      2306240,
+      2306880
+    ],
+    [
+      2311360,
+      2312000
+    ],
+    [
+      2316480,
+      2317120
+    ],
+    [
+      2321600,
+      2322240
+    ],
+    [
+      2326720,
+      2327360
+    ],
+    [
+      2331840,
+      2332480
+    ],
+    [
+      2336960,
+      2337600
+    ],
+    [
+      2342080,
+      2342720
+    ],
+    [
+      2347200,
+      2347840
+    ],
+    [
+      2352320,
+      2352960
+    ],
+    [
+      2357440,
+      2358080
+    ],
+    [
+      2362560,
+      2363200
+    ],
+    [
+      2367680,
+      2368320
+    ],
+    [
+      2372800,
+      2373440
+    ],
+    [
+      2377920,
+      2378560
+    ],
+    [
+      2383040,
+      2383680
+    ],
+    [
+      2388160,
+      2388800
+    ],
+    [
+      2393280,
+      2393920
+    ],
+    [
+      2398400,
+      2399040
+    ],
+    [
+      2403520,
+      2404160
+    ],
+    [
+      2408640,
+      2409280
+    ],
+    [
+      2413760,
+      2414400
+    ],
+    [
+      2418880,
+      2419520
+    ],
+    [
+      2424000,
+      2424640
+    ],
+    [
+      2429120,
+      2429760
+    ],
+    [
+      2434240,
+      2434880
+    ],
+    [
+      2439360,
+      2440000
+    ],
+    [
+      2444480,
+      2445120
+    ],
+    [
+      2449600,
+      2450240
+    ],
+    [
+      2454720,
+      2455360
+    ]
+  ],
+  "affected_bytes": 102400,
+  "physical_base": "UNKNOWN and never used; Xorg owns allocation/mapping/pitch",
+  "backup": "exclusive durable102400-byte XGetImage of160x160 before first PutImage",
+  "restoration": "same original transaction: server grab, one GXcopy IncludeInferiors PutImage, bounded15-second hold, restore same saved160x160 RGB24 region, readback comparison before ungrab",
+  "evidence_directory": "/home/gama/sgx535-display-FIRE3-centered-20261006-evidence",
+  "deployment_directory": "/home/gama/sgx535-display-FIRE3-centered-20261006-tools",
+  "expected_visible_footprint": {
+    "magenta_pixels": 3000,
+    "zero_black_pixels": 22600,
+    "bbox_inclusive": [
+      600,
+      360,
+      674,
+      434
+    ],
+    "coordinates": "Each original magenta (x,y) occupies x=560+5*x..564+5*x, y=320+5*y..324+5*y. Original y=8..22, x=8..30-y."
+  },
+  "stop_conditions": [
+    "source/card/tool identity mismatch",
+    "boot/module note/Xorg lifetime/VT/root/visual/CRTC/framebuffer/mode changed",
+    "compositor or intersecting different-depth window",
+    "GPU acceleration path not established as software",
+    "evidence destination exists; preservation failure",
+    "missing explicit exact-card display-only authorization",
+    "copy/readback/ownership/restoration failure: preserve, STOP, no retry",
+    "X connection/server loss: retain backup and classify restoration UNKNOWN; no foreign write",
+    "operator cannot see display, unexpected blanking or requested stop"
+  ],
+  "milestones_before": {
+    "TRIANGLE_ESTABLISHED": true,
+    "DISPLAY_PUBLICATION_ESTABLISHED": false,
+    "GPU_RENDER_CPU_PUBLICATION_ESTABLISHED": false,
+    "DIRECT_SGX_SCANOUT_ESTABLISHED": false
+  },
+  "display_publication_authorized": false,
+  "sgx_execution_authorized": false,
+  "no_render_required": true,
+  "maximum_publications": 1,
+  "no_retry": true,
+  "tools": {
+    "tools/display/triangle_pixels.py": {
+      "sha256": "e39aac27e8eb3568685e79c3a6d770e3a0e54b52a7650e6934a23d44710a98c5",
+      "bytes": 5002
+    },
+    "tools/display/triangle_display.py": {
+      "sha256": "2a9ee1a1f406acdbfda692251ee7d163448c3d2a185ba077627524ee7a22189f",
+      "bytes": 18777
+    },
+    "tools/display/triangle_display_centered.py": {
+      "sha256": "362b6337f9b0110ce1e10579ba64207cb22809f09ff17591769f41fd75dad18c",
+      "bytes": 7252
+    }
+  },
+  "variant": "CENTERED_NEAREST_NEIGHBOR_5X",
+  "publication_pitch": 640,
+  "publication_bytes": 102400,
+  "presentation_change": "CPU nearest-neighbor fivefold enlargement and centered placement only; no new SGX render; original sealed4096 source unchanged",
+  "entry_point": "triangle_display_centered.py"
+}

@@ -1,4 +1,5 @@
 #include "frozen_fixed_service.h"
+#include <errno.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -19,11 +20,13 @@ static const sgx535_u32 raster_offsets[26] = {
 struct mock {
     unsigned calls;
     unsigned fail_at;
+    int fail_result;
     unsigned seen;
     unsigned bad_status;
     unsigned bad_baseline;
     unsigned samples;
     unsigned sample_mode;
+    enum sgx535_fixed_stage stages[64];
 };
 
 static int sample_and_ack(void *context, sgx535_u32 sequence,
@@ -52,6 +55,8 @@ static int sample_and_ack(void *context, sgx535_u32 sequence,
                     ((1U << 18) | 1U));
     if (m->sample_mode == 7)
         *status1 = 1U << 24;
+    if (m->sample_mode == 8)
+        *status2 = 8; /* Preserved DHOST-load rejection; never completion. */
     return 0;
 }
 
@@ -61,9 +66,11 @@ static int run(void *context, enum sgx535_fixed_stage stage,
 {
     struct mock *m = context;
     m->calls++;
+    if (m->calls <= sizeof(m->stages) / sizeof(m->stages[0]))
+        m->stages[m->calls - 1] = stage;
     m->seen |= 1U << stage;
     if (m->calls == m->fail_at)
-        return -1;
+        return m->fail_result ? m->fail_result : -1;
     if (stage == SGX535_FIXED_INIT_WRITES && count != 12)
         return -1;
     if (stage == SGX535_FIXED_TA_LOAD) {
@@ -71,11 +78,15 @@ static int run(void *context, enum sgx535_fixed_stage stage,
         if (count != 29 || actions[0].offset != 0x618)
             return -1;
         observation->load_flags = 0x1f;
-        observation->status2 = m->bad_status ? 3 : 7;
+        observation->status2 = m->bad_status ? 7 : 15;
         observation->initend = 0x400000;
     }
-    if (stage == SGX535_FIXED_STATUS_BASELINE && m->bad_baseline)
-        observation->status1 = 1U << 13;
+    if (stage == SGX535_FIXED_STATUS_BASELINE && m->bad_baseline) {
+        if (m->bad_baseline == 1)
+            observation->status1 = 1U << 13;
+        else
+            observation->status2 = m->bad_baseline == 2 ? 8 : (1U << 17);
+    }
     if (stage == SGX535_FIXED_TA_SCHEDULE) {
         const struct sgx535_frozen_reg_action *actions = payload;
         if (count != 8 || actions[0].offset != 0x204 ||
@@ -161,13 +172,34 @@ int main(void)
     struct sgx535_fixed_service service;
     struct sgx535_frozen_session session;
     struct mock m;
+    static const enum sgx535_fixed_stage post_translation_stages[] = {
+        SGX535_FIXED_DEVICE_MAINTAIN,
+        SGX535_FIXED_INIT_WRITES,
+        SGX535_FIXED_XHW_INIT,
+        SGX535_FIXED_TA_INFO,
+        SGX535_FIXED_SCENE_INFO,
+        SGX535_FIXED_TA_LOAD,
+        SGX535_FIXED_SCENE_VALIDATE,
+        SGX535_FIXED_USE_RESERVE,
+        SGX535_FIXED_USE_PROGRAM,
+        SGX535_FIXED_STATUS_BASELINE
+    };
     unsigned fail_at, total_stages;
+    size_t i;
 
     CHECK(new_service(&service, &session) == 0);
     CHECK(sgx535_fixed_service_may_release(&service) == 1);
     memset(&m, 0, sizeof(m));
     CHECK(sgx535_fixed_service_prepare(&service, &ops, &m,
                                        0x00010201) == 0);
+    CHECK(service.diagnostic.stage_reached == SGX535_FIXED_STATUS_BASELINE);
+    CHECK(service.diagnostic.failure_stage == SGX535_FIXED_STAGE_NONE);
+    CHECK(service.diagnostic.raw_result == 0);
+    CHECK(m.calls == 2 + sizeof(post_translation_stages) /
+                                  sizeof(post_translation_stages[0]));
+    for (i = 0; i < sizeof(post_translation_stages) /
+                    sizeof(post_translation_stages[0]); i++)
+        CHECK(m.stages[i + 2] == post_translation_stages[i]);
     CHECK(session.phase == SGX535_PHASE_SERVICE_READY);
     CHECK(sgx535_fixed_service_fire_ta(&service, &ops, &m, 42, 10) == 0);
     CHECK(session.phase == SGX535_PHASE_FIRE_POSSIBLE);
@@ -227,18 +259,81 @@ int main(void)
               : SGX535_PHASE_HELD_AFTER_FAILURE));
         CHECK(sgx535_fixed_service_may_release(&service) == (fail_at <= 2));
     }
+    /* Diagnostics retain the exact failed callback and its raw result. */
+    CHECK(new_service(&service, &session) == 0);
+    memset(&m, 0, sizeof(m));
+    m.fail_at = 3; /* DEVICE_MAINTAIN, immediately after translation publish. */
+    m.fail_result = -EIO;
+    CHECK(sgx535_fixed_service_prepare(&service, &ops, &m,
+                                       0x00010201) != 0);
+    CHECK(session.phase == SGX535_PHASE_HELD_AFTER_FAILURE);
+    CHECK(service.diagnostic.stage_reached == SGX535_FIXED_DEVICE_MAINTAIN);
+    CHECK(service.diagnostic.failure_stage == SGX535_FIXED_DEVICE_MAINTAIN);
+    CHECK(service.diagnostic.raw_result == -EIO);
+    CHECK(m.calls == 3);
+    CHECK(sgx535_fixed_service_prepare(&service, &ops, &m,
+                                       0x00010201) != 0);
+    CHECK(m.calls == 3); /* no retry after HOLD */
+    CHECK(service.diagnostic.raw_result == -EIO);
+
+    CHECK(new_service(&service, &session) == 0);
+    memset(&m, 0, sizeof(m));
+    m.fail_at = 4; /* INIT_WRITES, a distinct later callback boundary. */
+    m.fail_result = -ETIMEDOUT;
+    CHECK(sgx535_fixed_service_prepare(&service, &ops, &m,
+                                       0x00010201) != 0);
+    CHECK(session.phase == SGX535_PHASE_HELD_AFTER_FAILURE);
+    CHECK(service.diagnostic.stage_reached == SGX535_FIXED_INIT_WRITES);
+    CHECK(service.diagnostic.failure_stage == SGX535_FIXED_INIT_WRITES);
+    CHECK(service.diagnostic.raw_result == -ETIMEDOUT);
+    CHECK(m.calls == 4);
+    CHECK(!(m.seen & (1U << SGX535_FIXED_XHW_INIT)));
     CHECK(new_service(&service, &session) == 0);
     memset(&m, 0, sizeof(m));
     m.bad_status = 1;
     CHECK(sgx535_fixed_service_prepare(&service, &ops, &m,
                                        0x00010201) != 0);
     CHECK(session.phase == SGX535_PHASE_HELD_AFTER_FAILURE);
+    CHECK(service.diagnostic.stage_reached == SGX535_FIXED_TA_LOAD);
+    CHECK(service.diagnostic.failure_stage == SGX535_FIXED_TA_LOAD);
+    CHECK(service.diagnostic.failure_source ==
+          SGX535_FIXED_FAILURE_SERVICE_CHECK);
+    CHECK(service.diagnostic.observation_stage == SGX535_FIXED_TA_LOAD);
+    CHECK(service.diagnostic.observation_status2 == 7U);
     CHECK(new_service(&service, &session) == 0);
     memset(&m, 0, sizeof(m));
     m.bad_baseline = 1;
     CHECK(sgx535_fixed_service_prepare(&service, &ops, &m,
                                        0x00010201) != 0);
     CHECK(session.phase == SGX535_PHASE_HELD_AFTER_FAILURE);
+    CHECK(service.diagnostic.stage_reached == SGX535_FIXED_STATUS_BASELINE);
+    CHECK(service.diagnostic.failure_stage == SGX535_FIXED_STATUS_BASELINE);
+    CHECK(service.diagnostic.failure_source ==
+          SGX535_FIXED_FAILURE_SERVICE_CHECK);
+    CHECK(service.diagnostic.observation_status1 == (1U << 13));
+    for (m.bad_baseline = 2; m.bad_baseline <= 3; ) {
+        unsigned bad = m.bad_baseline;
+        CHECK(new_service(&service, &session) == 0);
+        memset(&m, 0, sizeof(m));
+        m.bad_baseline = bad;
+        CHECK(sgx535_fixed_service_prepare(&service, &ops, &m, 0x00010201) != 0);
+        CHECK(session.phase == SGX535_PHASE_HELD_AFTER_FAILURE);
+        CHECK(!(m.seen & (1U << SGX535_FIXED_TA_FIRE)));
+        CHECK(service.diagnostic.failure_stage == SGX535_FIXED_STATUS_BASELINE);
+        CHECK(service.diagnostic.observation_status2 == (bad == 2 ? 8U : (1U << 17)));
+        m.bad_baseline = bad + 1;
+    }
+    CHECK(new_service(&service, &session) == 0);
+    memset(&m, 0, sizeof(m));
+    m.sample_mode = 8;
+    CHECK(sgx535_fixed_service_run_once(&service, &ops, &source, &m,
+                                       0x00010201, 79, 10, 4) != 0);
+    CHECK(session.phase == SGX535_PHASE_HELD_AFTER_FAILURE);
+    CHECK(session.observed_events == 0);
+    CHECK(service.diagnostic.raw_result == -1);
+    CHECK(service.diagnostic.failure_stage == SGX535_FIXED_STATUS_PROCESS);
+    CHECK(service.diagnostic.failure_source == SGX535_FIXED_FAILURE_SERVICE_CHECK);
+    CHECK(service.diagnostic.observation_status2 == 8);
     CHECK(new_service(&service, &session) == 0);
     memset(&m, 0, sizeof(m));
     CHECK(sgx535_fixed_service_prepare(&service, &ops, &m,
@@ -285,6 +380,11 @@ int main(void)
                                         0x00010201, 92, 10, 3) != 0);
     CHECK(session.phase == SGX535_PHASE_HELD_AFTER_FAILURE);
     CHECK(m.samples == 1);
+    CHECK(service.diagnostic.stage_reached == SGX535_FIXED_STATUS_SAMPLE);
+    CHECK(service.diagnostic.failure_stage == SGX535_FIXED_STATUS_SAMPLE);
+    CHECK(service.diagnostic.failure_source ==
+          SGX535_FIXED_FAILURE_STATUS_SOURCE);
+    CHECK(service.diagnostic.raw_result == -1);
     CHECK(new_service(&service, &session) == 0);
     memset(&m, 0, sizeof(m));
     m.sample_mode = 4;

@@ -1,0 +1,1 @@
+{"card.json": {"bytes": 16909, "sha256": "1295d948fd6e54eb6dbc310d9e715695b15c3e260a8f70909085ccde84922e15"}, "authorization.json": {"bytes": 304, "sha256": "6a631b0422893b4ee317b91b7eafa345e864c02b6c6238af0d22196214e5a854"}}

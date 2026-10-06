@@ -1,0 +1,119 @@
+{
+  "classification": "STAGING PASS; NO REBOOT/BOOT/SGX ACTION",
+  "start_utc": "2026-10-02T03:39:39.597418+00:00",
+  "operations": [
+    {
+      "path": "/boot/initrd.img-5.10.240-antix.1-486-smp-sgx535-firstload-corrected-01",
+      "size": 50804478,
+      "sha256": "55e7a8be6f62c9a1d59f1c532b8790399c21a2706884747e504edfffb45bf52d",
+      "dev": 2049,
+      "ino": 2616672,
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o644",
+      "nlink": 1,
+      "fsync": "PASS",
+      "readback": "PASS"
+    },
+    {
+      "path": "/boot/grub/custom.cfg.cycle06-preserved",
+      "size": 974,
+      "sha256": "181d33aa42cc9a73d35a50b5e7b1636121edb7a607c2949540fa04a4d0d32612",
+      "dev": 2049,
+      "ino": 2616673,
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o644",
+      "nlink": 1,
+      "fsync": "PASS",
+      "readback": "PASS"
+    },
+    {
+      "path": "/boot/grub/.custom.cfg.corrected-01.pending",
+      "size": 2040,
+      "sha256": "269cce045b81da002318f9b478e07f05d235a773c3c82fd6557d8d50da7f38c8",
+      "dev": 2049,
+      "ino": 2616674,
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o644",
+      "nlink": 1,
+      "fsync": "PASS",
+      "readback": "PASS"
+    }
+  ],
+  "stock_checks": [
+    {
+      "path": "/boot/vmlinuz-5.10.240-antix.1-486-smp",
+      "size": 5984416,
+      "sha256": "cda6e6c7f61cae83793c974f745af888211bb3543d411283b9bcf79ce5304438",
+      "pass": true
+    },
+    {
+      "path": "/boot/initrd.img-5.10.240-antix.1-486-smp",
+      "size": 50863580,
+      "sha256": "f02cde6c7e712fa0620f99438ef5dc81c131b481a84dc9dbc4f7b854c364e341",
+      "pass": true
+    },
+    {
+      "path": "/boot/grub/grub.cfg",
+      "size": 10438,
+      "sha256": "396ac7dff0bdea48393fd0a25a5fc633d40e2368caf14872b855eba03e96089f",
+      "pass": true
+    },
+    {
+      "path": "/boot/grub/grubenv",
+      "size": 1024,
+      "sha256": "72c291233d508c8ed06305f0bf9d33130ea206bfaf67873dbe77413f77d19927",
+      "pass": true
+    },
+    {
+      "path": "/lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/gpu/drm/gma500/gma500_gfx.ko",
+      "size": 205964,
+      "sha256": "7b42a99d157ad00494c358a7663a2daf438ba9fc9a8f2ca5076d28ddeb6adafb",
+      "pass": true
+    },
+    {
+      "path": "/boot/vmlinuz-5.10.240-antix.1-486-smp",
+      "size": 5984416,
+      "sha256": "cda6e6c7f61cae83793c974f745af888211bb3543d411283b9bcf79ce5304438",
+      "pass": true
+    },
+    {
+      "path": "/boot/initrd.img-5.10.240-antix.1-486-smp",
+      "size": 50863580,
+      "sha256": "f02cde6c7e712fa0620f99438ef5dc81c131b481a84dc9dbc4f7b854c364e341",
+      "pass": true
+    },
+    {
+      "path": "/boot/grub/grub.cfg",
+      "size": 10438,
+      "sha256": "396ac7dff0bdea48393fd0a25a5fc633d40e2368caf14872b855eba03e96089f",
+      "pass": true
+    },
+    {
+      "path": "/boot/grub/grubenv",
+      "size": 1024,
+      "sha256": "72c291233d508c8ed06305f0bf9d33130ea206bfaf67873dbe77413f77d19927",
+      "pass": true
+    },
+    {
+      "path": "/lib/modules/5.10.240-antix.1-486-smp/kernel/drivers/gpu/drm/gma500/gma500_gfx.ko",
+      "size": 205964,
+      "sha256": "7b42a99d157ad00494c358a7663a2daf438ba9fc9a8f2ca5076d28ddeb6adafb",
+      "pass": true
+    }
+  ],
+  "published_custom_cfg": {
+    "size": 2040,
+    "sha256": "269cce045b81da002318f9b478e07f05d235a773c3c82fd6557d8d50da7f38c8",
+    "old_cycle06_bytes_exact_prefix": true,
+    "backup_sha256": "181d33aa42cc9a73d35a50b5e7b1636121edb7a607c2949540fa04a4d0d32612",
+    "backup_size": 974,
+    "menuentry_count": 2,
+    "corrected_path_count": 1,
+    "savedefault": false,
+    "save_env": false
+  },
+  "end_utc": "2026-10-02T03:40:08.842228+00:00"
+}

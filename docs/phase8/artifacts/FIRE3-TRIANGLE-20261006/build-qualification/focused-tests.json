@@ -1,0 +1,167 @@
+{
+  "native-control-compile": {
+    "argv": [
+      "gcc",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-I",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/test_experimental_fragment_constant.c",
+      "-o",
+      "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/tests/native-control"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "native-control": {
+    "returncode": 0,
+    "stdout": "1032 immediate roundtrips; full six-backing construction; invalid-view no-write; repeat construction PASS (CPU ONLY)\n",
+    "stderr": ""
+  },
+  "native-experiment-compile": {
+    "argv": [
+      "gcc",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-I",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re",
+      "-DSGX535_EXPERIMENTAL_CONSTANT_FRAGMENT=1",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/test_experimental_fragment_constant.c",
+      "-o",
+      "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/tests/native-experiment"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "native-experiment": {
+    "returncode": 0,
+    "stdout": "1032 immediate roundtrips; full six-backing construction; invalid-view no-write; repeat construction PASS (CPU ONLY)\n",
+    "stderr": ""
+  },
+  "ubsan-control-compile": {
+    "argv": [
+      "gcc",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-I",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re",
+      "-fsanitize=undefined",
+      "-fno-sanitize-recover=all",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/test_experimental_fragment_constant.c",
+      "-o",
+      "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/tests/ubsan-control"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "ubsan-control": {
+    "returncode": 0,
+    "stdout": "1032 immediate roundtrips; full six-backing construction; invalid-view no-write; repeat construction PASS (CPU ONLY)\n",
+    "stderr": ""
+  },
+  "ubsan-experiment-compile": {
+    "argv": [
+      "gcc",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-I",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re",
+      "-fsanitize=undefined",
+      "-fno-sanitize-recover=all",
+      "-DSGX535_EXPERIMENTAL_CONSTANT_FRAGMENT=1",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/test_experimental_fragment_constant.c",
+      "-o",
+      "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/tests/ubsan-experiment"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "ubsan-experiment": {
+    "returncode": 0,
+    "stdout": "1032 immediate roundtrips; full six-backing construction; invalid-view no-write; repeat construction PASS (CPU ONLY)\n",
+    "stderr": ""
+  },
+  "i386-initial-run": {
+    "result": "tool unavailable in PATH; corrected using isolated Debian qemu-user extraction",
+    "gpu_work": false
+  },
+  "i386-control-compile": {
+    "argv": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+      "--sysroot=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root",
+      "-static",
+      "-march=i486",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-I",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/test_experimental_fragment_constant.c",
+      "-o",
+      "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/tests/i386-control"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  "i386-control": {
+    "returncode": 0,
+    "stdout": "1032 immediate roundtrips; full six-backing construction; invalid-view no-write; repeat construction PASS (CPU ONLY)\n",
+    "stderr": ""
+  },
+  "i386-experiment-compile": {
+    "argv": [
+      "/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root/usr/bin/i686-linux-gnu-gcc-14",
+      "--sysroot=/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root",
+      "-static",
+      "-march=i486",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-I",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re",
+      "-DSGX535_EXPERIMENTAL_CONSTANT_FRAGMENT=1",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+      "/home/gama/sgx535-gfx/tools/psb-dri-re/test_experimental_fragment_constant.c",
+      "-o",
+      "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/tests/i386-experiment"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  "i386-experiment": {
+    "returncode": 0,
+    "stdout": "1032 immediate roundtrips; full six-backing construction; invalid-view no-write; repeat construction PASS (CPU ONLY)\n",
+    "stderr": ""
+  }
+}

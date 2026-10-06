@@ -1,0 +1,324 @@
+{
+  "schema_version": 1,
+  "record_id": "MINI12-CURRENT-OPERATION-PROVENANCE-QUALIFICATION-20261005-CD9B9473",
+  "timestamp_utc": "2026-10-05T01:47:42.105268Z",
+  "implementation_approval": "/home/gama/sgx535-gfx/docs/phase8/current-operation-result-provenance-implementation-maintainer-20261005-314e2f3b.json",
+  "design_contract": {
+    "path": "/home/gama/sgx535-gfx/docs/phase8/current-operation-result-provenance-design-contract-20261005-314e2f3b.json",
+    "sha256": "6126eec518599b792e9db7aab506251020eb94f937c85bf6a6ee22a7bc79e639"
+  },
+  "implementation_review": {
+    "scope": "Architecture B implementation; permitted sources only; no legacy G01/G02 certification",
+    "result": "PASS AFTER REPRODUCED CORRECTIONS",
+    "authority": {
+      "role": "project maintainer",
+      "source": "Explicit current instruction authorizing minimum implementation approval if bounded technical review passes",
+      "recorded_by": "Codex performing the delegated bounded implementation review"
+    },
+    "reviewer": "independent focused code-review worker plus coordinator identity/build consistency checks",
+    "resolved_findings": [
+      "invalidity suppressed matched issuance/terminal facts",
+      "incomplete acceptance suppressed same-owner retired color",
+      "independent binding verifier omitted exact approved-client pin",
+      "compiled executable hash pin transcription mismatch"
+    ],
+    "red_evidence": [
+      "tests/partial-retention-red.stderr",
+      "tests/terminal-retention-red.stderr",
+      "tests/color-retention-red.stderr",
+      "tests/independent-client-red.stderr",
+      "tests/producer-pin-red.stderr"
+    ],
+    "unresolved_critical_or_important_findings": [],
+    "runtime_prerequisites": [
+      "prior-event quiescence and continuous eligible-producer isolation",
+      "native loaded observer and procfs origin/unused instance",
+      "exact new boot/build/context and protected destinations"
+    ],
+    "excluded_source_access": false,
+    "hardware_interactions": 0
+  },
+  "result": "PROVENANCE MECHANISM QUALIFIED",
+  "qualification_scope": "OFFLINE source/producer-state/real-service integration/read-only materialization/ABI-import/reproducibility qualification, conditional on required future live guards; not native loaded-kernel or physical SGX validation",
+  "sources": {
+    "kernel/sgx535_frozen/gma500_capsule_observer.c": {
+      "bytes": 9770,
+      "sha256": "5baf43a9b63a9a6f668c22ded8271df2113484bc2ef52fef19336d9016f9fb4c"
+    },
+    "kernel/sgx535_frozen/gma500_capsule_observer.h": {
+      "bytes": 1053,
+      "sha256": "ed8b759de9baea1c8075f3bc2e6d6fe48883923e34e4812c14ee55868c67117a"
+    },
+    "kernel/sgx535_frozen/gma500_fixed_backend.c": {
+      "bytes": 16863,
+      "sha256": "c054c9b49f7dd45178355a6fbc2b8e4ebd59f63986fbebc989644c214ab9f803"
+    },
+    "kernel/sgx535_frozen/gma500_bo_owner.c": {
+      "bytes": 15837,
+      "sha256": "f05ddbed8d021f2511489bd81491c686e2a071d78988ba3f9e12c924733f97da"
+    },
+    "tools/psb-dri-re/frozen_capsule.c": {
+      "bytes": 5644,
+      "sha256": "c63afe55f002fc408d0d4bc2c1c21b62ce566a1f1cd6bcad07492ca8391b3f21"
+    },
+    "tools/psb-dri-re/frozen_capsule.h": {
+      "bytes": 2069,
+      "sha256": "f8cd44c2c2d5ad8f3a4af8d3b434f2dbfa2133b255fb03def98fbfad36692cac"
+    },
+    "tools/psb-dri-re/frozen_fixed_service.c": {
+      "bytes": 16839,
+      "sha256": "d4f7bbe6b8255382d307466857dab062b33d5a9000cb6eb754a3541e721eb3d1"
+    },
+    "tools/psb-dri-re/frozen_fixed_service.h": {
+      "bytes": 6206,
+      "sha256": "ece30da13bb6e18cac84661988ea86280cfcbec8062a029f10e8aa0968b76576"
+    },
+    "tools/psb-dri-re/frozen_capsule_evidence.py": {
+      "bytes": 9227,
+      "sha256": "8fca88622ddfdbef0d741c1dd476c31ab4965304b39798ff8873ec385cdcad93"
+    },
+    "tools/psb-dri-re/test_frozen_capsule.c": {
+      "bytes": 8332,
+      "sha256": "aa3a37f3fcd75e31aecb8f26cb24f74882ded7330201331824e0348d4d3446bc"
+    },
+    "tools/psb-dri-re/test_frozen_capsule_service.c": {
+      "bytes": 4418,
+      "sha256": "a5e88482d455436e1fbc8956f46287150782859be5db5dad4ea142ce9f7553d5"
+    },
+    "tools/psb-dri-re/test_frozen_capsule_evidence.py": {
+      "bytes": 9538,
+      "sha256": "aea3e69bc1b4e6a57fca3ba13fd3fb7160930e0f594a793d7fc4f26f5e2505e2"
+    }
+  },
+  "driver": {
+    "path": "/home/gama/sgx535-offline/phase8-provenance-implementation-20261005T005304Z/qualified-build-01/gma500_gfx.ko",
+    "bytes": 246972,
+    "sha256": "400b16b14a7fd648fe219842e3b0d5994ee8eec910e5a7894f31c373098e8b54",
+    "build_id": "cd9b947371f18c2d19af05bfda69fbf9462c2e62",
+    "loaded_note_sha256": "0a72fda39f4521baf6815d39c2b97734f2b38dbf263ca1a44c498170ecbd5df7",
+    "abi": "ELF32/i386",
+    "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 ",
+    "dependencies": "drm,drm_kms_helper,sgx535_provenance,video,i2c-algo-bit",
+    "versioned_imports": 241,
+    "missing_imports": [],
+    "crc_mismatches": {},
+    "unversioned_undefined": [],
+    "module_layout": "0xb84efb99",
+    "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+    "byte_identical_repeat": true,
+    "qualification": "PASS"
+  },
+  "observer": {
+    "path": "/home/gama/sgx535-offline/phase8-provenance-implementation-20261005T005304Z/qualified-build-01/sgx535_provenance.ko",
+    "bytes": 15524,
+    "sha256": "6842b21b4ab0905e198ca95e07bee7ff52f0d225c8992e9ef18921055482a11d",
+    "build_id": "143b1284fc643ea9a7ddd4aeeefa05cdc682718b",
+    "loaded_note_sha256": "9f0fe23322fda884612dc5b539230e75fbc1f892275e149cbe6709d9369db9fc",
+    "abi": "ELF32/i386",
+    "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 ",
+    "dependencies": "",
+    "versioned_imports": 33,
+    "missing_imports": [],
+    "crc_mismatches": {},
+    "unversioned_undefined": [],
+    "module_layout": "0xb84efb99",
+    "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+    "byte_identical_repeat": true,
+    "qualification": "PASS"
+  },
+  "diagnostic_image": {
+    "path": "/home/gama/sgx535-offline/phase8-provenance-implementation-20261005T005304Z/image-build-01/initrd.img-sgx535-provenance-cd9b947371f18c2d19af05bfda69fbf9462c2e62",
+    "bytes": 50811745,
+    "sha256": "5001a64ff5ef78751aea45f8762eeea8abbfc8ef3c3774c12a34fa214858288d",
+    "early_prefix_bytes": 15006720,
+    "early_prefix_sha256": "45070075f32565213d862468ba99e9f7b05ca95ba76e57d37331ad032a12a929",
+    "base_image_sha256": "fe64b3dcfe74b78a6d96edcd4fd7c118c3901fcff8631afec6c14647da292e3c",
+    "driver": {
+      "path": "/home/gama/sgx535-offline/phase8-provenance-implementation-20261005T005304Z/qualified-build-01/gma500_gfx.ko",
+      "bytes": 246972,
+      "sha256": "400b16b14a7fd648fe219842e3b0d5994ee8eec910e5a7894f31c373098e8b54",
+      "build_id": "cd9b947371f18c2d19af05bfda69fbf9462c2e62",
+      "loaded_note_sha256": "0a72fda39f4521baf6815d39c2b97734f2b38dbf263ca1a44c498170ecbd5df7",
+      "abi": "ELF32/i386",
+      "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 ",
+      "dependencies": "drm,drm_kms_helper,sgx535_provenance,video,i2c-algo-bit",
+      "versioned_imports": 241,
+      "missing_imports": [],
+      "crc_mismatches": {},
+      "unversioned_undefined": [],
+      "module_layout": "0xb84efb99",
+      "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+      "byte_identical_repeat": true,
+      "qualification": "PASS"
+    },
+    "observer": {
+      "path": "/home/gama/sgx535-offline/phase8-provenance-implementation-20261005T005304Z/qualified-build-01/sgx535_provenance.ko",
+      "bytes": 15524,
+      "sha256": "6842b21b4ab0905e198ca95e07bee7ff52f0d225c8992e9ef18921055482a11d",
+      "build_id": "143b1284fc643ea9a7ddd4aeeefa05cdc682718b",
+      "loaded_note_sha256": "9f0fe23322fda884612dc5b539230e75fbc1f892275e149cbe6709d9369db9fc",
+      "abi": "ELF32/i386",
+      "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 ",
+      "dependencies": "",
+      "versioned_imports": 33,
+      "missing_imports": [],
+      "crc_mismatches": {},
+      "unversioned_undefined": [],
+      "module_layout": "0xb84efb99",
+      "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+      "byte_identical_repeat": true,
+      "qualification": "PASS"
+    },
+    "changed_members": [
+      "usr/lib/sgx535-first-load/gma500_gfx.ko",
+      "scripts/sgx535-first-load"
+    ],
+    "added_members": [
+      "usr/lib/sgx535-first-load/sgx535_provenance.ko"
+    ],
+    "all_other_member_raw_bytes_unchanged": true,
+    "driver_after_observer": true,
+    "hook_shell_syntax": "PASS",
+    "loaded_on_target": false,
+    "boot_id": null,
+    "sgx_execution_authorized": false
+  },
+  "approved_client_unchanged": {
+    "source": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot_response.c",
+      "size": 5514,
+      "sha256": "919c2611e048e4a660ecae3542264adf5a5367d9b0fbe7fbceff2f45f90adedf"
+    },
+    "binary": {
+      "path": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-build-01/frozen-triangle-one-shot-response-i386",
+      "size": 775264,
+      "sha256": "2f84917f96db2859678797a327d40d9638325e5c5efb6e0dfccef44d756b4835"
+    },
+    "uapi": {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_uapi.h",
+      "size": 760,
+      "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420"
+    }
+  },
+  "fixed_triangle_uapi_changed": false,
+  "supplemental_evidence_interface": {
+    "path": "/proc/sgx535_current_operation",
+    "mode": "root0400 read-only",
+    "format": "SGXCAPB1 version1;56-byte LE header plus4096 color;4152 total",
+    "fixed_triangle_response_ABI_changed": false,
+    "new_interface": true,
+    "no_uuid_pid_timestamp_or_exported_sequence": true,
+    "no_raw_status_history": true
+  },
+  "tests": {
+    "core": {
+      "checks": 45,
+      "failures": 0,
+      "modes": [
+        "native",
+        "UBSan",
+        "static i386 under qemu"
+      ]
+    },
+    "real_service_differential": {
+      "cases": 7,
+      "failures": 0,
+      "modes": [
+        "native",
+        "UBSan",
+        "static i386 under qemu"
+      ],
+      "compared": "result, phase, accepted ledger, backend stage ordering/call count and sample count"
+    },
+    "new_checker_materialization_binding": {
+      "methods": 13,
+      "failures": 0,
+      "skips": 0
+    },
+    "affected_existing_service_regression": {
+      "unittest_methods": 1,
+      "result": "PASS",
+      "evidence": "/home/gama/sgx535-offline/phase8-provenance-implementation-20261005T005304Z/tests/reader-green.json"
+    },
+    "kernel_modules": {
+      "driver_imports": 241,
+      "observer_imports": 33,
+      "missing": 0,
+      "crc_mismatches": 0,
+      "module_layout": "0xb84efb99",
+      "ELF32_i386": true,
+      "vermagic": true,
+      "repeat_byte_identical": true
+    },
+    "image": {
+      "repeat_byte_identical": true,
+      "unchanged_early_archive_and_other_members": true,
+      "observer_before_driver": true,
+      "shell_syntax": "PASS"
+    },
+    "physical_execution_proof_from_synthetic_tests": false
+  },
+  "qualification_reuse": {
+    "geometry/workload": "REUSABLE \u2014 unchanged 32x32 ARGB8888, stride128, white vertices(8,8),(24,8),(8,24)",
+    "public request bytes/approved client": "REUSABLE \u2014 client source/binary unchanged; original complete4268 pre-call/one-call qualification reused",
+    "fixed triangle UAPI layout": "REUSABLE \u2014760-byte header unchanged;4268 response and image offset172 unchanged",
+    "contract acceptance and readback semantics": "REUSABLE \u2014 no acceptance/cache/readback algorithm replacement; original service bodies unchanged behind passive taps; seven real-service differential cases qualify tap integration",
+    "kernel/toolchain/target symbol table": "REUSABLE \u2014 same kernel config/toolchain/table; required observer and driver import checks newly performed",
+    "archive/file/validator/guard predicates": "REUSABLE \u2014 existing code unchanged; new supplemental reader/binding qualified separately",
+    "old module/image byte qualification": "INVALIDATED BY CHANGED BYTES for the new candidate only; old artifacts and records remain valid history; new identity qualification performed",
+    "old boot and70/70 first-owner": "REQUIRES REBINDING \u2014 historical boot314e2f3b evidence cannot establish first ownership/current guards for cd9b9473+new observer; no hot replacement",
+    "Gate B/client authority": "REQUIRES REBINDING for new exact build/boot context; old readiness/substitution decisions remain unchanged and valid in original scope; client technical qualification and exact-byte approval preserved",
+    "old image paths/staging receipts/current guard pins": "REQUIRES REBINDING \u2014 new image size/hash/dependency order/boot and observer origin must be recorded; old hardcoded first-owner checker must not be presented as qualifying this new pair",
+    "PDS/Attempt03/Attempt05/broad historical audits": "NOT RELEVANT to the new offline mechanism qualification; not repeated"
+  },
+  "limitations": [
+    "No loaded-kernel tracepoint/admission/procfs behavior observed on the Mini12; static interface/source proof and offline build only",
+    "No current prior-event quiescence or continuous competing-producer isolation observation",
+    "No GPU-to-CPU visibility/completion/triangle measurement; full-image validator remains required after any future experiment",
+    "Saved capsule bytes/manifests alone do not authenticate producer or boot; checkers deliberately keep hardware attribution UNKNOWN",
+    "RAM capsule retention does not guarantee power-loss survival",
+    "Source admission/observer invalidity does not abort or launch the existing ioctl; it invalidates evidence. Any possible ioctl consumes the attempt regardless of issued bit."
+  ],
+  "pre07": {
+    "offline_producer_and_preservation_components": "QUALIFIED",
+    "live_status": "BLOCKED BY NEW CANDIDATE NOT STAGED/FIRST-OWNER BOOTED AND NO FRESH CONTEXT/ORIGIN/ISOLATION/DESTINATION/PRIVILEGE/RECOVERY RECEIPTS",
+    "evaluated_once_after_final_qualification": true,
+    "smallest_next_boundary": "Separate maintainer authorization for new-candidate staging/first-owner boot/passive preparation; no SGX authorization",
+    "fresh_boot_id": null,
+    "historical_boot_id": "89fc7306-6dac-4ab9-af62-360b7152ef22",
+    "historical_build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+    "old_70_of_70_valid_history": true,
+    "old_70_of_70_applies_to_new_candidate": false,
+    "fresh_guards_collected": false,
+    "protected_live_destinations_established": false,
+    "kernel_producer_loaded_verified": false
+  },
+  "ready_for_execution_authorization": false,
+  "sgx_execution_authorized": false,
+  "sgx_invocations": 0,
+  "hardware_interactions": 0,
+  "triangle": "NOT ATTEMPTED",
+  "new_hold_recovery_state": false,
+  "evidence_root": "/home/gama/sgx535-offline/phase8-provenance-implementation-20261005T005304Z",
+  "files_changed_this_task": [
+    "kernel/sgx535_frozen/gma500_capsule_observer.c",
+    "kernel/sgx535_frozen/gma500_capsule_observer.h",
+    "kernel/sgx535_frozen/gma500_fixed_backend.c",
+    "kernel/sgx535_frozen/gma500_bo_owner.c",
+    "tools/psb-dri-re/frozen_capsule.c",
+    "tools/psb-dri-re/frozen_capsule.h",
+    "tools/psb-dri-re/frozen_fixed_service.c",
+    "tools/psb-dri-re/frozen_fixed_service.h",
+    "tools/psb-dri-re/frozen_capsule_evidence.py",
+    "tools/psb-dri-re/test_frozen_capsule.c",
+    "tools/psb-dri-re/test_frozen_capsule_service.c",
+    "tools/psb-dri-re/test_frozen_capsule_evidence.py",
+    "docs/phase8/current-operation-result-provenance-implementation-maintainer-20261005-314e2f3b.json",
+    "docs/phase8/current-operation-result-provenance-qualification-20261005-cd9b9473.json",
+    "docs/phase8/current-operation-result-provenance-implementation-20261005.md",
+    "docs/phase8/CODEX-HANDOFF-20261002.md"
+  ],
+  "restricted_entry_reporting_or_wrapper_modified": false,
+  "historical_decisions_modified": false,
+  "git_stage_or_commit": false
+}

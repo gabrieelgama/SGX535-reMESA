@@ -1,0 +1,22 @@
+{
+  "as_of": "2026-10-06",
+  "triangle_established": true,
+  "physical_triangle_publication": true,
+  "multi_triangle_established": true,
+  "physical_square_publication": true,
+  "demonstrable_3d_established": false,
+  "repeatable_3d_pipeline": false,
+  "direct_sgx_scanout_established": false,
+  "mesa_opengl_driver_complete": false,
+  "presentation": "SGX-produced preserved readback + CPU/Xorg publication",
+  "evidence": {
+    "triangle": "docs/phase8/FIRE3-TRIANGLE-REPRODUCTION.json",
+    "visible_triangle": "docs/phase8/VISIBLE-TRIANGLE-REPRODUCTION.json",
+    "square": "docs/phase8/MULTI-TRIANGLE-REPRODUCTION.json",
+    "visible_square": "docs/phase8/square-display-result-20261006.json"
+  },
+  "unknown_in_this_reconstructed_path": [
+    "interpolation", "controlled lighting", "perspective object", "depth testing",
+    "frame-to-frame resource reuse", "animation", "direct shared-buffer presentation"
+  ]
+}

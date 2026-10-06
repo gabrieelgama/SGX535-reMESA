@@ -80,11 +80,40 @@ int sgx535_gma500_fixed_attempt(struct drm_device *dev,
              &sgx535_gma500_fixed_backend_ops,
              &sgx535_gma500_fixed_backend_status_source,
              &attempt->backend, core_revision, 1U, 5U * HZ, 300000U);
+    result->diagnostic_stage_reached =
+        attempt->owner.fixed_service.diagnostic.stage_reached;
+    result->diagnostic_failure_stage =
+        attempt->owner.fixed_service.diagnostic.failure_stage;
+    result->diagnostic_observation_stage =
+        attempt->owner.fixed_service.diagnostic.observation_stage;
+    result->diagnostic_failure_source =
+        attempt->owner.fixed_service.diagnostic.failure_source;
+    result->diagnostic_raw_result =
+        attempt->owner.fixed_service.diagnostic.raw_result;
+    result->diagnostic_load_flags =
+        attempt->owner.fixed_service.diagnostic.observation_load_flags;
+    result->diagnostic_status1 =
+        attempt->owner.fixed_service.diagnostic.observation_status1;
+    result->diagnostic_status2 =
+        attempt->owner.fixed_service.diagnostic.observation_status2;
+    result->diagnostic_initend =
+        attempt->owner.fixed_service.diagnostic.observation_initend;
     result->phase = attempt->owner.session.phase;
     result->observed_events = attempt->owner.session.observed_events;
     if (!sgx535_fixed_service_may_release(&attempt->owner.fixed_service)) {
         fixed_held_attempt = attempt;
         result->outcome = SGX535_FIXED_HELD;
+        dev_info(&dev->pdev->dev,
+                 "SGX535 fixed HOLD: reached=%u failure_stage=%u source=%u raw=%d obs_stage=%u load=%08x status1=%08x status2=%08x initend=%08x\n",
+                 result->diagnostic_stage_reached,
+                 result->diagnostic_failure_stage,
+                 result->diagnostic_failure_source,
+                 result->diagnostic_raw_result,
+                 result->diagnostic_observation_stage,
+                 result->diagnostic_load_flags,
+                 result->diagnostic_status1,
+                 result->diagnostic_status2,
+                 result->diagnostic_initend);
         if (!ret)
             ret = -EIO;
         goto unlock;

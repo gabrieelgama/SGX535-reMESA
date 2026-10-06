@@ -1,0 +1,27 @@
+[
+  {
+    "path": "tools/psb-dri-re/frozen_first_load_capture_v2.py",
+    "sha256": "f31f0ff650db31ac793f8816708ee9aead03087608f061a6786bc73471dff756",
+    "bytes": 9438
+  },
+  {
+    "path": "tools/psb-dri-re/frozen_first_load_procedure_v2.py",
+    "sha256": "b7b38a0e8e0eda1a37e5631ca4c64ab7e2a0179a9c67f1b070009234552f31b2",
+    "bytes": 4226
+  },
+  {
+    "path": "tools/psb-dri-re/test_frozen_first_load_capture_v2.py",
+    "sha256": "e669775e7d549687031c08f39009c3e3c8944f6000e2d4964edfa036f0067fb6",
+    "bytes": 8141
+  },
+  {
+    "path": "tools/psb-dri-re/test_frozen_first_load_procedure_v2.py",
+    "sha256": "80f6812356472d101282a4543851467d72f9cde032b59e70954df45e517853ca",
+    "bytes": 3950
+  },
+  {
+    "path": "docs/phase8/cycle04-first-load-procedure.json",
+    "sha256": "77c4a3cb172080c0388e4e9d09e08f46e1c7b202562ac77daa9db5efaeecd0a5",
+    "bytes": 668
+  }
+]

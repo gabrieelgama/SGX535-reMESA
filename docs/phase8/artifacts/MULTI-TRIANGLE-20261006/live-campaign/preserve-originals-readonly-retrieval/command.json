@@ -1,0 +1,32 @@
+{
+  "argv": [
+    "ssh",
+    "-T",
+    "-p",
+    "22",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "ConnectTimeout=8",
+    "-o",
+    "ConnectionAttempts=1",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "UserKnownHostsFile=/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260927-H0/ssh_known_hosts",
+    "-o",
+    "IdentitiesOnly=yes",
+    "-o",
+    "PasswordAuthentication=no",
+    "-o",
+    "KbdInteractiveAuthentication=no",
+    "-i",
+    "/home/gama/.ssh/id_ed25519_sgx535_h0",
+    "gama@192.168.18.90",
+    "sudo -n -p '' python3 -I -B -S -c 'import os,stat,json,hashlib,base64\nEVIDENCE='\"'\"'/root/sgx535-square-seq1-8be2777b2a79eaa6651b89d19faf4d68cdcdc460-0e45ad4c/evidence-83ee4ff8-a7f1-4468-b348-d10627f38d17'\"'\"'\nPIN={'\"'\"'path'\"'\"': '\"'\"'/root/sgx535-square-seq1-8be2777b2a79eaa6651b89d19faf4d68cdcdc460-0e45ad4c/evidence-83ee4ff8-a7f1-4468-b348-d10627f38d17'\"'\"', '\"'\"'dev'\"'\"': 2049, '\"'\"'ino'\"'\"': 524773, '\"'\"'uid'\"'\"': 0, '\"'\"'gid'\"'\"': 0, '\"'\"'mode'\"'\"': '\"'\"'0o700'\"'\"'}\nrecord={'\"'\"'scope'\"'\"':'\"'\"'READ-ONLY RETRIEVAL OF ALREADY PRESERVED ORIGINALS; NO CLIENT/IOCTL'\"'\"','\"'\"'files'\"'\"':{},'\"'\"'errors'\"'\"':[]}\nfd=os.open(EVIDENCE,os.O_RDONLY|os.O_DIRECTORY|os.O_NOFOLLOW)\nst=os.fstat(fd)\nassert st.st_uid==0 and st.st_gid==0 and stat.S_IMODE(st.st_mode)==0o700 and (st.st_dev,st.st_ino)==(PIN['\"'\"'dev'\"'\"'],PIN['\"'\"'ino'\"'\"'])\nfor name in sorted(os.listdir(fd)):\n try:\n  handle=os.open(name,os.O_RDONLY|os.O_NOFOLLOW|os.O_NONBLOCK,dir_fd=fd)\n  try:\n   before=os.fstat(handle);assert stat.S_ISREG(before.st_mode) and before.st_nlink==1 and before.st_uid==0 and before.st_gid==0 and before.st_size<=8*1024*1024\n   data=bytearray()\n   while True:\n    chunk=os.read(handle,1048576)\n    if not chunk:break\n    data.extend(chunk)\n   after=os.fstat(handle)\n   assert (before.st_dev,before.st_ino,before.st_size,before.st_mtime_ns,before.st_ctime_ns,before.st_nlink)==(after.st_dev,after.st_ino,after.st_size,after.st_mtime_ns,after.st_ctime_ns,after.st_nlink) and len(data)==before.st_size\n   record['\"'\"'files'\"'\"'][name]={'\"'\"'bytes'\"'\"':len(data),'\"'\"'sha256'\"'\"':hashlib.sha256(data).hexdigest(),'\"'\"'dev'\"'\"':before.st_dev,'\"'\"'ino'\"'\"':before.st_ino,'\"'\"'uid'\"'\"':before.st_uid,'\"'\"'gid'\"'\"':before.st_gid,'\"'\"'mode'\"'\"':stat.S_IMODE(before.st_mode),'\"'\"'nlink'\"'\"':before.st_nlink,'\"'\"'payload_base64'\"'\"':base64.b64encode(data).decode()}\n  finally:os.close(handle)\n except BaseException as exc:record['\"'\"'errors'\"'\"'].append({'\"'\"'name'\"'\"':name,'\"'\"'error'\"'\"':repr(exc)})\nos.close(fd)\nwith open('\"'\"'/proc/sys/kernel/random/boot_id'\"'\"') as b:record['\"'\"'retrieval_boot_id'\"'\"']=b.read().strip()\nprint(json.dumps(record,indent=2),flush=True)\n'"
+  ],
+  "source_sha256": "8e043718a5642d580004d6540fc7ae3729151be23db9b0787105c09153315c28",
+  "start_utc": "2026-10-06T08:55:52.619958+00:00",
+  "automatic_retry": false,
+  "stdin": "DEVNULL"
+}

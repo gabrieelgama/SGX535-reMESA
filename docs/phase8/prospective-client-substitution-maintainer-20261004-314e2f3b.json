@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "decision_id": "MINI12-PROSPECTIVE-CLIENT-SUBSTITUTION-MAINTAINER-20261004-314e2f3b",
+  "request_id": "MINI12-PROSPECTIVE-CLIENT-SUBSTITUTION-REVIEW-20261004",
+  "decision_timestamp_utc": "2026-10-04T08:56:20Z",
+  "timestamp_semantics": "Time this new prospective maintainer decision was recorded; not a historical approval or target observation timestamp.",
+  "decision": "APPROVE_EXACT_CLIENT_SUBSTITUTION",
+  "decision_authority": {
+    "role": "project maintainer",
+    "source": "Explicit maintainer decision in the current conversation",
+    "statement": "Maintainer decision: APPROVE_EXACT_CLIENT_SUBSTITUTION for MINI12-PROSPECTIVE-CLIENT-SUBSTITUTION-REVIEW-20261004, exactly as bounded in the prepared decision. Record the decision without expanding its scope. Do not invoke SGX. Continue with the remaining preservation and fresh-guard prerequisites for the separate execution-authorization decision.",
+    "recording_agent_role": "Records the maintainer decision; does not self-approve or issue execution permission."
+  },
+  "decision_scope": {
+    "prospective_only": true,
+    "accepted": "Existing offline successor qualification and unchanged-request evidence, for exact client substitution review coverage only.",
+    "not_granted_by_this_decision": [
+      "Target contact",
+      "Client/output staging",
+      "Boot",
+      "SGX invocation or execution permission",
+      "Certification or reconstruction of the unavailable invocation/preservation procedure"
+    ],
+    "forward_binding_rule": "This record prospectively supplements the old-client binding of the existing readiness decision for the exact successor below. Any later selection/preparation must explicitly bind successor source/binary/UAPI together; do not overwrite the historical old artifact or mix old/new identities."
+  },
+  "exact_context": {
+    "boot_id": "89fc7306-6dac-4ab9-af62-360b7152ef22",
+    "module_build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+    "action": "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1",
+    "freshness": "Boot and 70/70 first-owner facts are preserved historical observations, not fresh invocation guards."
+  },
+  "unchanged_context_bindings": {
+    "kernel": "5.10.240-antix.1-486-smp",
+    "architecture": "i686",
+    "module": {
+      "path": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/module/gma500_gfx.ko",
+      "size_bytes": 244960,
+      "sha256": "4141a07c1f2d2ffc9ab2770b7b4cf654f68c396275dad15f0ddc68192529d8e6",
+      "build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+      "loaded_note_sha256": "edb1e3e59cfd70c48d400bec89f2a30c1a436b05bf115bc1a05581abc153bdc9",
+      "identity_evidence": [
+        "module_identity",
+        "qualification",
+        "first_owner_records"
+      ]
+    },
+    "diagnostic_image": {
+      "source_path": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/image/build-01/initrd.img-sgx535-firstload-diagnostic-01",
+      "staged_path": "/boot/initrd.img-5.10.240-antix.1-486-smp-sgx535-firstload-314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+      "size_bytes": 50805231,
+      "sha256": "fe64b3dcfe74b78a6d96edcd4fd7c118c3901fcff8631afec6c14647da292e3c",
+      "embedded_module_sha256": "4141a07c1f2d2ffc9ab2770b7b4cf654f68c396275dad15f0ddc68192529d8e6",
+      "identity_evidence": [
+        "image_identity",
+        "image_qualification",
+        "poststage_records",
+        "first_owner_records",
+        "menu_receipt"
+      ]
+    }
+  },
+  "historical_selected_client_to_preserve": {
+    "source": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot.c",
+      "size": 2032,
+      "sha256": "4271a62846a0f02694e574161658920987ee89ad69e3bf5b2be79fc83f5634d2"
+    },
+    "binary": {
+      "path": "/home/gama/sgx535-gfx/docs/phase8/artifacts/frozen-triangle-one-shot-i386",
+      "size": 771320,
+      "sha256": "758076e2f7e20d0eff2df565d4440c8b3fd3f846922427e770f55ebc472edccf"
+    },
+    "identity_provenance": "Permitted selected artifact note and existing differential metadata; no rehash in this request.",
+    "selected_and_forward_pins_changed": false
+  },
+  "approved_successor": {
+    "source": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot_prospective.c",
+      "size": 3711,
+      "sha256": "8b277dcb8c4e00a4eea78774b2bf8529c9396bfbbf05597be05b75cff2bd2b49"
+    },
+    "binary": {
+      "path": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/client-build-01/frozen-triangle-one-shot-prospective-i386",
+      "size": 774336,
+      "sha256": "a854d4f719b92cfe31a9ad33adc15d0f881d397c163ad6c34b5518d4a21da2e9"
+    },
+    "uapi": {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_uapi.h",
+      "size": 760,
+      "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420"
+    },
+    "elf": {
+      "class": "ELF32",
+      "endianness": "little",
+      "machine": "Intel 80386",
+      "PT_DYNAMIC": false,
+      "PT_INTERP": false,
+      "build_id": null
+    },
+    "qualification_state": "QUALIFIED FOR PROMOTION: established offline technical qualification plus this exact prospective maintainer substitution review approval. Target selection/staging transaction has not occurred."
+  },
+  "approved_forward_client_binding": {
+    "source": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot_prospective.c",
+      "size": 3711,
+      "sha256": "8b277dcb8c4e00a4eea78774b2bf8529c9396bfbbf05597be05b75cff2bd2b49"
+    },
+    "binary": {
+      "path": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/client-build-01/frozen-triangle-one-shot-prospective-i386",
+      "size": 774336,
+      "sha256": "a854d4f719b92cfe31a9ad33adc15d0f881d397c163ad6c34b5518d4a21da2e9"
+    },
+    "uapi": {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_uapi.h",
+      "size": 760,
+      "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420"
+    }
+  },
+  "qualification_basis": {
+    "request_size_bytes": 4268,
+    "request_prefix_bytes": 16,
+    "request": "Little-endian {1,1,0,0}; remaining 4252 bytes zero before ioctl.",
+    "whole_request_sha256_from_existing_differential": "e45267b255ea079d91dcfd38da61c038b77151fd419573268e7de8310750a7a3",
+    "paired_cases": 9,
+    "paired_ioctl_reaching_cases": 6,
+    "ioctl": "0xd0ac6440",
+    "device_node": "/dev/dri/card0",
+    "device_open_flags": "O_RDWR | O_CLOEXEC",
+    "ioctl_count_per_reaching_case": 1,
+    "ioctl_retries": 0,
+    "ordering": "Device open, whole-request capture at mock ioctl entry, mock return, device close; preservation/reporting changes follow the call.",
+    "abi_offsets": {
+      "operation_errno": 16,
+      "color_row_nonzero": 44,
+      "color_bytes": 172
+    },
+    "scope": "Whole-request comparison is native CPU/mock evidence. Separate recorded static i386 build/ABI/refusal checks establish offline technical qualification; neither establishes GPU execution."
+  },
+  "dependency_and_checkpoint_reuse": {
+    "dependency_rows": 15,
+    "affected_rows": 4,
+    "detail_record": "dependency_impact_15_rows",
+    "module": {
+      "size": 244960,
+      "sha256": "4141a07c1f2d2ffc9ab2770b7b4cf654f68c396275dad15f0ddc68192529d8e6",
+      "build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+      "changed": false
+    },
+    "diagnostic_image": {
+      "size": 50805231,
+      "sha256": "fe64b3dcfe74b78a6d96edcd4fd7c118c3901fcff8631afec6c14647da292e3c",
+      "changed": false
+    },
+    "first_owner": "70/70 PASS retained for recorded boot only; raw evidence unchanged.",
+    "new_boot_required_by_client_only_change": false,
+    "module_image_rebuild_or_restaging_required_by_client_only_change": false,
+    "historical_selected_client_and_hardware_pins": "Preserve; successor qualification does not replace historical identities."
+  },
+  "first_owner_basis": {
+    "boot_id": "89fc7306-6dac-4ab9-af62-360b7152ef22",
+    "module_build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+    "guard_count": 70,
+    "guards_passed": 70,
+    "candidate_note": "OBSERVED",
+    "module_state_at_capture": "Live",
+    "ordered_hook_trace": "OBSERVED",
+    "health_classifier_faults_at_capture": [],
+    "operator_observation_receipt": "VALID under prospective successor; no photograph supplied",
+    "evidence": [
+      "first_owner_records",
+      "first_owner_stdout",
+      "first_owner_stderr",
+      "first_owner_command",
+      "first_owner_raw_verdict",
+      "first_owner_consistency",
+      "operator_witness",
+      "menu_receipt"
+    ],
+    "freshness_limit": "Historical evidence for this exact recorded boot; not a new observation or substitute for fresh pre-invocation checks. Raw capture verdict alone does not establish first ownership; attributable capture and operator/successor records are used jointly."
+  },
+  "gate_b": "PASS FOR EXACT OFFSCREEN READINESS",
+  "whitelist": [
+    "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1"
+  ],
+  "gate_b_semantics": "Existing readiness acceptance remains unchanged; this decision supplements only its forward client binding, without rewriting the old decision.",
+  "sgx_execution_authorized": false,
+  "transaction_state": {
+    "approval_recorded": true,
+    "historical_selected_artifact_changed": false,
+    "forward_binding_recorded": true,
+    "target_selection_or_staging_transaction_performed": false,
+    "target_client_path": null,
+    "original_readback_path": null,
+    "raw_response_path": null,
+    "kernel_completion_evidence_path": null,
+    "target_contact_performed": false,
+    "sgx_invocations_this_task": 0,
+    "candidate_sgx_invocations_in_preserved_history": 0,
+    "fresh_identity_continuity": "NOT OBSERVED",
+    "fresh_ownership_health": "NOT OBSERVED",
+    "fresh_unused_one_shot": "NOT OBSERVED",
+    "fresh_privilege_recovery": "NOT OBSERVED",
+    "triangle": "NOT ATTEMPTED",
+    "new_hold_or_recovery_state": false
+  },
+  "remaining_prerequisites": {
+    "reviewed_transaction": "Unavailable in permitted records: protected target client/output/evidence destinations, staging identity/link/ownership/readback guards, pre-ioctl rollback receipts and complete invocation/preservation/copy/correlation executor. STOP before target staging; do not invent or reconstruct it.",
+    "complete_raw_response_preservation": "The qualified successor emits full raw bytes after a failed ioctl but does not itself preserve the complete successful 4268-byte response. The legitimately available reviewed transaction must supply complete response preservation; this approval does not certify that missing component.",
+    "fresh_guard_route": "No separately reviewed current-boot/build guard source established. Historical passive source pins a different boot and artifacts; do not repin it or repeat first-owner capture as a substitute.",
+    "fresh_checks": [
+      {
+        "id": "PRE01",
+        "requirement": "Fresh expected boot, kernel/architecture, loaded candidate note/Build ID and module Live state; STOP on drift.",
+        "state": "NOT PERFORMED BY THIS DECISION"
+      },
+      {
+        "id": "PRE02",
+        "requirement": "Fresh PCI/DRM/framebuffer/VT/IRQ ownership, required services and acceptable complete kernel health/taint.",
+        "state": "NOT PERFORMED BY THIS DECISION"
+      },
+      {
+        "id": "PRE03",
+        "requirement": "Unused one-shot supported by invocation/evidence history and continuity; no ioctl availability probe or reset.",
+        "state": "NOT PERFORMED BY THIS DECISION"
+      },
+      {
+        "id": "PRE04",
+        "requirement": "Reviewed client/output destinations; exact selected client protected exclusive-create/no-follow staging, ownership/type/link/identity checks and destination readback; expected output paths absent.",
+        "state": "NOT PERFORMED; DESTINATIONS NOT ESTABLISHED IN AVAILABLE RECORDS"
+      },
+      {
+        "id": "PRE05",
+        "requirement": "Working current noninteractive privilege, physically available operator and reviewed recovery readiness.",
+        "state": "NOT PERFORMED BY THIS DECISION"
+      },
+      {
+        "id": "PRE06",
+        "requirement": "Same-boot continuity across preparation and immediately before invocation; a different boot needs its own applicable binding/decision.",
+        "state": "NOT PERFORMED BY THIS DECISION"
+      },
+      {
+        "id": "PRE07",
+        "requirement": "Legitimately available reviewed invocation/preservation/copy/correlation procedure and protected evidence destinations; preserve original readback, analyze a copy; do not reconstruct the unavailable layer.",
+        "state": "PROCEDURE AVAILABILITY NOT ESTABLISHED BY THIS DECISION"
+      },
+      {
+        "id": "PRE08",
+        "requirement": "Separate applicable explicit SGX execution permission after required prerequisites; unchanged bounds/HOLD/no-retry rules.",
+        "state": "SGX EXECUTION NOT AUTHORIZED"
+      }
+    ],
+    "execution_permission": "Separate explicit maintainer execution authorization remains required after applicable prerequisites are established; false here."
+  },
+  "stop_rules": [
+    "Stop before target staging while the reviewed destinations or invocation/preservation procedure are unavailable.",
+    "STOP on identity, ownership, health or one-shot drift; do not broaden the frozen experiment.",
+    "At most one future frozen invocation after all applicable prerequisites and separate execution permission; Attempt05 remains consumed and must never be retried.",
+    "If an ioctl may have occurred and execution is failed, ambiguous, incomplete or uncertain: preserve raw/HOLD evidence, STOP, NO RETRY; no improvised hot recovery.",
+    "Preserve original 4096-byte readback unchanged; analyze a copy and require joint attributable completion plus compatible full-image evidence."
+  ],
+  "historical_preservation": "Original request, historical promotion/qualification decisions, Gate B decision, old client, module/image, staging, 70/70 records and all preserved raw evidence remain unchanged. This is a new prospective substitution decision only.",
+  "evidence": {
+    "request_package": "/home/gama/sgx535-gfx/docs/phase8/prospective-client-substitution-review-request.json",
+    "existing_gate_b_readiness_decision": "/home/gama/sgx535-gfx/docs/phase8/gate-b-maintainer-readiness-20261004-314e2f3b.json",
+    "authoritative_checkpoint": "/home/gama/sgx535-gfx/docs/phase8/CODEX-HANDOFF-20261002.md",
+    "selected_artifact_identity_note": "/home/gama/sgx535-gfx/docs/phase8/artifacts/frozen-triangle-one-shot-i386.md",
+    "preservation_red_green_commands_results": "/home/gama/sgx535-offline/phase8-evidence-round2-20261004T040431Z/preservation-regression-commands.json",
+    "preservation_red_stderr": "/home/gama/sgx535-offline/phase8-evidence-round2-20261004T040431Z/preservation-red.stderr",
+    "preservation_green_stderr": "/home/gama/sgx535-offline/phase8-evidence-round2-20261004T040431Z/preservation-green.stderr",
+    "failure_red_commands_results": "/home/gama/sgx535-offline/phase8-evidence-round2-20261004T040431Z/failure-prospective-red-command.json",
+    "failure_red_stderr": "/home/gama/sgx535-offline/phase8-evidence-round2-20261004T040431Z/failure-prospective-red.stderr.txt",
+    "failure_green_commands_results": "/home/gama/sgx535-offline/phase8-evidence-round2-20261004T040431Z/failure-prospective-green-command.json",
+    "failure_green_stderr": "/home/gama/sgx535-offline/phase8-evidence-round2-20261004T040431Z/failure-prospective-green.stderr.txt",
+    "new_client_technical_qualification": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/client-qualification.json",
+    "new_client_exact_commands_and_raw_stream_index": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/client-commands.json",
+    "retained_normal_build_workflow": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/client-normal-workflow.json",
+    "i386_elf_raw_output": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/client-readelf.stdout.txt",
+    "i386_abi_raw_output": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/client-abi-run.stdout.txt",
+    "i386_default_refusal_trace": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/client-refuse-default.stderr.txt",
+    "i386_wrong_flag_refusal_trace": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/client-refuse-wrong-flag.stderr.txt",
+    "source_diff": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/differential-source.diff",
+    "paired_whole_request_differential": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/differential-results.json",
+    "differential_commands_and_raw_stream_index": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/differential-commands.json",
+    "differential_selected_complete_request_before_ioctl": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/differential-selected-complete.before.bin",
+    "differential_successor_complete_request_before_ioctl": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/differential-prospective-complete.before.bin",
+    "dependency_impact_15_rows": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/dependency-impact.json",
+    "prior_promotion_boundary_assessment": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/adversarial-promotion-review.json",
+    "prior_promotion_decision_record": "/home/gama/sgx535-offline/phase8-client-promotion-20261004T042709Z/promotion-decision.json",
+    "preserved_first_owner_verdict": "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20261003T002627Z-FROZEN-FIRSTOWNER-314e2f3b-01/candidate-first-owner/verdict.json",
+    "preserved_first_owner_raw_stdout": "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20261003T002627Z-FROZEN-FIRSTOWNER-314e2f3b-01/candidate-first-owner/stdout.txt",
+    "preserved_first_owner_command_timing": "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20261003T002627Z-FROZEN-FIRSTOWNER-314e2f3b-01/candidate-first-owner/command.json",
+    "first_round_offline_actual_receipt_consistency": "/home/gama/sgx535-offline/phase8-focused-review-20261004T034224Z/receipt-actual-record-check.json"
+  },
+  "recording_checks": "Existing identity and evidence records reused; no artifact rehash, build, test or qualification repetition; no target contact, staging, boot or SGX."
+}

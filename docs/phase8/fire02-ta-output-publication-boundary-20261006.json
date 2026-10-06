@@ -1,0 +1,243 @@
+{
+  "record": "FIRE02_TA_OUTPUT_PUBLICATION_AND_SGX543_COMPARATIVE_BOUNDARY_20261006",
+  "date_utc": "2026-10-06",
+  "finding": "ENDPOINT_B — PRECISE FORMAT AND PUBLICATION BOUNDARY",
+  "audit_root": "/home/gama/sgx535-offline/phase8-ta-output-boundary-20261006T003026Z",
+  "report": "docs/phase8/fire02-ta-output-publication-boundary-20261006.md",
+  "fire2": {
+    "completion": "CONFIRMED",
+    "ledger": 7,
+    "phase": 9,
+    "retirement": "CONFIRMED",
+    "response_capsule_color_provenance": "CONFIRMED",
+    "color_bytes": 4096,
+    "color": "ALL_ZERO",
+    "post_ta_selected_triangle": "UNKNOWN",
+    "retrospective_decoding": "IMPOSSIBLE FROM RETAINED BYTES — TA output not captured",
+    "sealed_files": 68,
+    "originals": 18
+  },
+  "memory_map": [
+    {
+      "role": "SCENE_HW",
+      "size": 8192,
+      "alignment": 4096,
+      "domain": "MMU",
+      "ta_registers": {
+        "0x220": "S",
+        "0x21c": "S+0x1000"
+      },
+      "raster_register": {
+        "0x408": "S+0x1000"
+      },
+      "relationship": "CONFIRMED software address handoff; region/list root interpretation INFERRED; entry encoding UNKNOWN"
+    },
+    {
+      "role": "TA_PAGE_TABLE",
+      "size": 33554432,
+      "alignment": 4096,
+      "domain": "MMU",
+      "registers": [
+        "0x600",
+        "0x608",
+        "0x610",
+        "0x618"
+      ],
+      "relationship": "CONFIRMED separate DPM allocator object; not SGX MMU PTE directory"
+    },
+    {
+      "role": "TA_PARAMETER",
+      "size": 33554432,
+      "alignment": 1048576,
+      "domain": "RASTGEOM",
+      "pages": 8192,
+      "relationship": "CONFIRMED software page range; primitive format UNKNOWN"
+    },
+    {
+      "role": "VERTEX_TA",
+      "size": 4096,
+      "relationship": "CONFIRMED CPU input, not TA output"
+    },
+    {
+      "role": "COLOR",
+      "size": 4096,
+      "relationship": "CONFIRMED retained color provenance, not geometry coverage"
+    }
+  ],
+  "primitive_lead": {
+    "source": "public historical Xpsb.so",
+    "sha256": "da531587b1ec59fe433fa20ddd2e691b2f8b7fb35bb82525d4db99259c5e571f",
+    "elf_functions": {
+      "reset": "0x74c0",
+      "quad_input": "0x7b50",
+      "block_writer": "0x7560",
+      "list_writer": "0x7c90",
+      "composite_finish": "0x5c40",
+      "raster_builder": "0x5830"
+    },
+    "confirmed": "CPU-authored quad block/index/coordinate/reference/end encoding and direct raster handoff",
+    "not_established": "SGX535 rev121 hardware TA output uses this encoding; scene-root region/list type and traversal"
+  },
+  "region_semantics": {
+    "confirmed": "Xpsb screen allocation uses a 16-unit grid and a 12-times-grid-area size term",
+    "inferred": "screen partition/region relationship",
+    "unknown": [
+      "physical region dimensions",
+      "root entry encoding",
+      "empty/end/continuation tags",
+      "primitive-to-region pointer traversal",
+      "region membership and binning rules"
+    ]
+  },
+  "selected_triangle": {
+    "input_vertices": [
+      [
+        8,
+        8,
+        0.5,
+        1
+      ],
+      [
+        24,
+        8,
+        0.5,
+        1
+      ],
+      [
+        8,
+        24,
+        0.5,
+        1
+      ]
+    ],
+    "indices": [
+      0,
+      1,
+      2
+    ],
+    "input_area": 128,
+    "input_bounds": [
+      8,
+      8,
+      24,
+      24
+    ],
+    "input_edges": [
+      "x=8",
+      "y=8",
+      "x+y=32"
+    ],
+    "qualified_ta_output_signature": null,
+    "conditional_cpu_packing_hypothesis": [
+      "0x40804080",
+      "0x41804080",
+      "0x40804180"
+    ],
+    "false_positive_risk": "UNBOUNDED WITHOUT TYPED REACHABILITY, CURRENT OWNERSHIP AND PUBLICATION"
+  },
+  "publication": {
+    "nearest_prospective_checkpoint": "after sgx535_frozen_session_observe_status accepts TA, before sgx535_frozen_session_begin_raster",
+    "proven_safe_cpu_snapshot": false,
+    "missing_fact": "Specific raster-input scene/list/parameter bytes materialized in their owned backing pages and stable through bounded CPU copy before recycling",
+    "not_sufficient": [
+      "TA completion alone",
+      "CPU mapping",
+      "CLFLUSH/dma_rmb alone",
+      "MMU invalidation",
+      "DPM context-store event without a data-publication contract",
+      "later memory-free/retirement without TA lifetime proof"
+    ]
+  },
+  "vita_comparison": {
+    "required_classification": "FAMILY-LEVEL INFERENCE — SGX543",
+    "sources_manifest": "/home/gama/sgx535-offline/phase8-ta-output-boundary-20261006T003026Z/vita-comparison/sources.json",
+    "permitted_used": [
+      "vitasdk/vita-headers",
+      "xerpi/libvita2d",
+      "Vita3K/Vita3K",
+      "Rinnegatamante/vitaGL",
+      "xfangfang/nanovg-gxm",
+      "libsdl-org/SDL"
+    ],
+    "useful_concepts": [
+      "separate parameter/scene allocations",
+      "opaque render-target GPU structure ownership",
+      "vertex/fragment synchronization separation",
+      "mapping and teardown lifetime"
+    ],
+    "independent_sgx535_correlations": [
+      "PSB scene and separate TA arenas",
+      "TA_DONE vs RASTER_DONE/SCENE_DONE fences",
+      "owned-page retirement/release",
+      "TA and ISP shared scene offset"
+    ],
+    "rejected_transfers": [
+      "Vita 32x32 tile macros as SGX535 physical region dimensions",
+      "Vita uncached ARM memory as Poulsbo GPU publication",
+      "Vita3K host-renderer/stub allocations as hardware TA formats",
+      "GXM primitive API enumerants as TA record tags"
+    ],
+    "unknown_or_forbidden_branches_excluded": [
+      "PVR_PSP2 low-level header branch marked Strictly Confidential",
+      "compiler/microkernel confidential lead not opened",
+      "samples/psvgxp input permission not established; no relevant layout used"
+    ],
+    "material_decoder_reduction": false,
+    "selected_triangle_signature_now_derivable": false,
+    "bitfield_promotion_to_sgx535": false
+  },
+  "capture_gate": {
+    "object_roles": "ESTABLISHED",
+    "owned_addresses_sizes": "ESTABLISHED AT COMPONENT LEVEL; runtime receipt would be required",
+    "cpu_publication": "NOT ESTABLISHED",
+    "selected_triangle_decoder": "NOT ESTABLISHED",
+    "passive_immutable_snapshot": "NOT ESTABLISHED",
+    "operation_attribution_components": "REUSABLE — no capture implemented"
+  },
+  "implementation": {
+    "decoder_created": false,
+    "capture_created": false,
+    "rendering_changed": false,
+    "new_candidate": false,
+    "native_decoder_tests": "NOT RUN — decoder gate not met",
+    "ubsan_decoder_tests": "NOT RUN — decoder gate not met",
+    "i386_decoder_tests": "NOT RUN — decoder gate not met",
+    "verification": "CPU reference/document/preservation consistency only; final-consistency.json"
+  },
+  "next_action": "Obtain permitted SGX535 rev121 raster-root-to-typed-primitive semantics and a backing-memory publication/lifetime guarantee; no speculative dump or live capture",
+  "live_capture_justified": false,
+  "identities_unchanged": {
+    "driver_build_id": "9d0b5b2fdb7d9881f2828f43fb89253176c38817",
+    "observer_build_id": "f11d3abb072caa4e1d32836ef92ce201e9c9d126",
+    "image_sha256": "ef7e01cb546c59b6f9bce96c3397feb4b9cd1d9ebdac2faa885ed71fa5ed014d"
+  },
+  "authority": {
+    "sgx_execution_authorized": false,
+    "FIRE3_authorized": false,
+    "task_sgx_invocations": 0,
+    "task_hardware_interactions": 0,
+    "historical_client_invocations": 2,
+    "triangle": "NOT ESTABLISHED"
+  },
+  "repository_scope": [
+    "docs/phase8/fire02-ta-output-publication-boundary-20261006.md",
+    "docs/phase8/fire02-ta-output-publication-boundary-20261006.json",
+    "docs/phase8/CODEX-HANDOFF-20261005.md"
+  ],
+  "verification": {
+    "cpu_reference_consistency": "40/40 PASS",
+    "GPU_or_TA_decoder_qualification": false,
+    "sealed_fire2_files_unchanged": 68,
+    "cited_inputs_unchanged": 39,
+    "git_baseline": {
+      "modified_tracked": 19,
+      "untracked": 118,
+      "index_empty": true
+    },
+    "git_final": {
+      "modified_tracked": 19,
+      "untracked": 120,
+      "index_empty": true
+    }
+  }
+}

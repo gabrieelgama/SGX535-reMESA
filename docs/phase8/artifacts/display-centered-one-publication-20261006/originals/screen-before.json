@@ -1,0 +1,44 @@
+{
+  "boot_id": "f1ab6606-0561-445f-a397-28a028516cd7",
+  "kernel": "5.10.240-antix.1-486-smp",
+  "active_vt": "tty7",
+  "display": ":0.0",
+  "root": 614,
+  "visual": 33,
+  "width": 1280,
+  "height": 800,
+  "depth": 24,
+  "rgb_masks": [
+    16711680,
+    65280,
+    255
+  ],
+  "x": 560,
+  "y": 320,
+  "server": {
+    "pid": 1939,
+    "start_ticks": "4890"
+  },
+  "compositor": null,
+  "scanout": {
+    "crtc": 34,
+    "framebuffer": 77,
+    "x": 0,
+    "y": 0,
+    "mode_hex": "d41101000005300550058b050000200323032903370300003c0000000a000000480000003132383078383030000000000000000000000000000000000000000000000000",
+    "layout": {
+      "width": 1280,
+      "height": 800,
+      "pitch": 5120,
+      "bits_per_pixel": 32,
+      "depth": 24,
+      "backing_exported": false
+    }
+  },
+  "loaded_driver_note_sha256": "4499399a9f06a35b924c770ec5f04b8e5a5170c4f744359c675d13ca89223644",
+  "loaded_observer_note_sha256": "6afbac1cf48a211135e2a4b4ffc30f96ace64f6d397071595bbc328966bb8af0",
+  "publication": "X11 core software XPutImage; existing Xorg owns scanout",
+  "presentation_scale": 5,
+  "publication_width": 160,
+  "publication_height": 160
+}

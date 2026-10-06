@@ -1,0 +1,181 @@
+{
+  "record": "FIRE02_XPSB_REV121_COMMON_RASTER_ABI_20261006",
+  "date_utc": "2026-10-06",
+  "finding": "B \u2014 COMMON_RASTER_ABI_STRONGLY_SUPPORTED_BUT_INCOMPLETE",
+  "report": "docs/phase8/fire02-xpsb-common-raster-abi-20261006.md",
+  "audit_root": "/home/gama/sgx535-offline/phase8-common-raster-abi-20261006T005131Z",
+  "revision_provenance": {
+    "classification": "SGX535 REV121 HISTORICAL EVIDENCE",
+    "scope": "Applicable static path; binary is not revision-exclusive; historical quad execution not demonstrated by this task",
+    "package": "xpsb-glx 0.18 i686 / Poulsbo / Ubuntu-mobile",
+    "binary_sha256": "da531587b1ec59fe433fa20ddd2e691b2f8b7fb35bb82525d4db99259c5e571f",
+    "binary_release": "5.0.1.0046",
+    "elf_edges": [
+      "0x2690 XpsbInit zero allocation",
+      "0x2c12 calls revision selector",
+      "0x4b02 reads relative 0x14",
+      "0x4b07\u20130x4b14 computes 100+low+10*second",
+      "0x2c1a calls 0x3820 initialization",
+      "0x3820\u20130x38ee selected normal initialization"
+    ],
+    "raw_core_revision": "0x00010201",
+    "selected_decimal_revision": 121,
+    "raw_core_id": "0x01130000",
+    "target_identity_origin": "Established project context and maintainer correction; no new read",
+    "repository_correlation": [
+      "docs/phase7/xpsb-re/xhw-init-frozen-draw.md",
+      "docs/phase8/kernel-submission-reconstruction.md:419",
+      "tools/psb-dri-re/frozen_kernel_contract.c:431"
+    ],
+    "rev121_rev122_question_required": false,
+    "effect_on_classification": "Stronger same-revision provenance; does not promote B to A"
+  },
+  "cpu_path": {
+    "caller": "public DDX src/psb_composite.c:134\u2013297",
+    "allocation": "XpsbInit 0x2690 -> Xpsb3DContextInit 0x51c0 -> batch pools",
+    "geometry_slot_bytes": 8192,
+    "shader_slot_bytes": 1024,
+    "register_slot_bytes": 4096,
+    "slots_per_pool": 64,
+    "geometry_pool_flags": "0x80000025",
+    "prepare": "0x5ee0 maps BO wrappers +0x1d0/+0x1d4; 0x74c0 binds CPU context to geometry BO",
+    "input": "0x6430 -> 0x7b50 copies quads and bounds",
+    "writer": "0x7560",
+    "list_writer": "0x7c90",
+    "root_alignment_bytes": 64,
+    "host_metadata_bytes": 28,
+    "gpu_reference_bytes": 8,
+    "list_end": "0xc0000000",
+    "root": "0x408 relocation of geometry BO + root offset, mask 0x0fffffff",
+    "raster_control_differences": [
+      "CPU 0x4bc=0x300 vs normal 0x200",
+      "CPU 0x41c=0 vs normal 0x0da24260",
+      "CPU helper does not write normal 0x400 state or construct scene/DPM context"
+    ],
+    "submission": "0x5ea5 -> 0x9f70, engine2, index0 144-byte CMDBUF at0xa325",
+    "reuse": "fenced batch-pool pending/free lists; c310 reclamation after fence signaled/wait",
+    "hardware_field_names": "UNKNOWN where no independent definition; emission formulas documented separately"
+  },
+  "cpu_layout": {
+    "q": "1..3 quads",
+    "a": "attribute-pair count",
+    "first_block_size": "28+36*q",
+    "first_reference_anchor": "B+0x0c",
+    "first_words": [
+      "0",
+      "0",
+      "0",
+      "0x07e80000",
+      "0x02000000"
+    ],
+    "index_formula": "0x42104210|i|(i<<16)|((i+1)<<26)|((i+3)<<21)|((i+3)<<10)|((i+2)<<5), i=4*j",
+    "coordinate_formula": "trunc((x+1024)*16+0.5)<<16 | trunc((y+1024)*16+0.5)",
+    "adjacent_coordinate_word": "0x3f800000",
+    "second_block_size": "24+36*q+32*q*a",
+    "second_reference_anchor": "H after three prefix words and 4*q*a attribute pairs",
+    "host_entry": [
+      "BO wrapper",
+      "anchor offset",
+      "4*q",
+      "2*q",
+      "(1<<(4*q))-1",
+      "(1<<(2*q))-1",
+      "1"
+    ],
+    "reference_word0": "0x40200000|primitiveMask|(flag<<22)|(vertexMask<<8)|((vertexCount-1)<<25)",
+    "reference_word1": "((GPU(BO)+anchor_offset)>>2)&0x03ffffff | ((primitiveCount-1)<<27)",
+    "reference_list_length": "8*N+4",
+    "hardware_chaining": "NOT ESTABLISHED",
+    "ta_region_empty_representation": "NOT ESTABLISHED"
+  },
+  "normal_path": {
+    "scene": "S,8192 bytes,MMU; TA0x220=S,TA0x21c=S+0x1000,RASTER0x408=S+0x1000 at selected initial context",
+    "dpm_allocator": "P,32MiB,MMU; separate object",
+    "parameter": "Q,32MiB,RASTGEOM,1MiB alignment",
+    "context_root_stride": "context_index*cookie[1]*12 in other helper branches; not decoded region-entry grammar",
+    "scheduler": "normal TA_DONE -> scene COMPLETE/DIRTY -> raster queue; CPU raster-only task -> same raster scheduler",
+    "kick": "same Xpsb_closed_kick_render 0x5040 after scene bind or direct render",
+    "typed_root_traversal": "UNKNOWN"
+  },
+  "independent_software_correlation": {
+    "source": "same-package psb_dri.so, ELF0x39000\u20130x391c0",
+    "relations": [
+      "metadata4 vertices/2 primitives/masks0xf and3/flag1",
+      "reference anchor +0x2c",
+      "header0x01c00000",
+      "shifted/masked relocations",
+      "packed coordinates +1.0"
+    ],
+    "establishes": "Common software-authored raster subset strongly corroborated",
+    "does_not_establish": "Hardware TA-produced selected triangle grammar"
+  },
+  "minimum_missing_equivalence_fact": "Under normal rev121 scene/raster controls, the TA-produced S+0x1000 root reaches primitive records through a defined region/reference grammar whose address and primitive interpretation agrees with the CPU-generated grammar for the selected triangle primitive class.",
+  "publication": {
+    "cpu_to_gpu": "Mapped parameter slots, relocation/validation, submit and fenced reuse established; exact cross-build cache pairing not authenticated",
+    "gpu_to_cpu": "NOT ESTABLISHED",
+    "required_fact": "Specific raster-input root/list/parameter payload materialized in owned CPU backing pages and stable through bounded copy before reclamation, with correct cache maintenance",
+    "forbidden_inferences": [
+      "mapping proves publication",
+      "CPU->GPU implies GPU->CPU symmetry",
+      "TA_DONE proves all backing bytes visible",
+      "MMU flush is payload drain",
+      "retirement proves parameter memory immutable"
+    ]
+  },
+  "selected_triangle_signature": "NOT DERIVABLE AS QUALIFIED TA OUTPUT; conditional coordinate hypothesis only",
+  "fire2_retrospective": "IMPOSSIBLE FROM RETAINED BYTES; TA memory absent",
+  "gates": {
+    "selected_triangle_decoder": false,
+    "cpu_publication": false,
+    "passive_capture_justified": false
+  },
+  "implementation": {
+    "decoder": false,
+    "capture": false,
+    "rendering_changed": false,
+    "new_candidate": false,
+    "native_decoder_qualification": "NOT RUN \u2014 gate unmet",
+    "ubsan_decoder_qualification": "NOT RUN \u2014 gate unmet",
+    "i386_decoder_qualification": "NOT RUN \u2014 gate unmet",
+    "audit_checks": "CPU reference/document/preservation consistency only"
+  },
+  "next_action": "Resolve normal-root-to-typed-primitive grammar equivalence from permitted rev121 evidence; then establish independent backing-page publication/stability before capture",
+  "live_capture_justified": false,
+  "identities_unchanged": {
+    "driver_build_id": "9d0b5b2fdb7d9881f2828f43fb89253176c38817",
+    "observer_build_id": "f11d3abb072caa4e1d32836ef92ce201e9c9d126",
+    "image_sha256": "ef7e01cb546c59b6f9bce96c3397feb4b9cd1d9ebdac2faa885ed71fa5ed014d"
+  },
+  "authority": {
+    "sgx_execution_authorized": false,
+    "FIRE3_authorized": false,
+    "task_sgx_invocations": 0,
+    "task_hardware_interactions": 0,
+    "historical_client_invocations": 2,
+    "triangle": "NOT ESTABLISHED"
+  },
+  "repository_scope": [
+    "docs/phase8/fire02-xpsb-common-raster-abi-20261006.md",
+    "docs/phase8/fire02-xpsb-common-raster-abi-20261006.json",
+    "docs/phase8/CODEX-HANDOFF-20261005.md"
+  ],
+  "verification": {
+    "cpu_reference_document_preservation_consistency": "124/124 PASS",
+    "scope": "NOT GPU or TA-decoder qualification",
+    "receipt": "/home/gama/sgx535-offline/phase8-common-raster-abi-20261006T005131Z/final-consistency.json",
+    "inspected_inputs": "/home/gama/sgx535-offline/phase8-common-raster-abi-20261006T005131Z/inspected-inputs.json",
+    "sealed_fire2_files_unchanged": 68,
+    "preexisting_files_checked": 3721,
+    "only_preexisting_changed_file": "docs/phase8/CODEX-HANDOFF-20261005.md",
+    "git_before": {
+      "modified_tracked": 19,
+      "untracked_entries": 120,
+      "index_empty": true
+    },
+    "git_after": {
+      "modified_tracked": 19,
+      "untracked_entries": 122,
+      "index_empty": true
+    }
+  }
+}

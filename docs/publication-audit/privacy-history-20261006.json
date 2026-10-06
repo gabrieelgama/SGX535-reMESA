@@ -1,0 +1,692 @@
+{
+  "scope": "all reachable Git objects; patterns are leads, not confirmed secret counts",
+  "network_history_paths": 170,
+  "paths": [
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/README.md",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/baseline-captures.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/identity-after-fix-meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/identity-auth-debug-meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/identity-auth-debug-stderr.txt",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/identity-meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/identity-stderr.txt",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/identity-verified-meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/identity-verified-stderr.txt",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/installed-gma500_gfx.ko.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/loaded-gma500-build-id.note.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/operator-dmesg-mini12.stat.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/operator-dmesg-mini12.txt",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/operator-dmesg-mini12.txt.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/raw/passive-probe-meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260927-H0/results.md",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/capture.py",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/candidate-metadata.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/immediate-identity-bar.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/install-binary.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/install-sudoers.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/linked-load-routine.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/linked-main.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/make-build-dir.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/native-build.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/permission-list.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/single-core-revision-attempt.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/sudoers-validation.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/target-preflight.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/transfer-fixed-source.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/transferred-hashes.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/verify-binary.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/verify-sudoers-root.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-CORE-REVISION-01/raw/verify-sudoers.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-01/raw/compiler-identity.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-01/raw/identity.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-01/raw/make-build-dir.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-01/raw/native-build.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-01/raw/transfer-reviewed-files.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-01/raw/transferred-hashes.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/candidate-metadata.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/effective-sudo-permission.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/extra-argument-rejection.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/install-binary.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/install-path-precheck.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/install-sudoers.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/installed-binary-verification.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/installed-file-metadata.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/installed-parent-check.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/installed-sudoers-hash.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/installed-sudoers-validation.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/linked-load-routine.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/linked-main.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/load-symbol-references.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/native-build.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/sudo-rule-details-extra-arg.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/sudo-rule-details-no-args.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/sudoers-draft-validation-absolute.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-BUILD-INSTALL-02/raw/sudoers-draft-validation.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/candidate-metadata.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/installed-hash-before.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/installed-v2-final-check.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/linked-load-routine.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/linked-main.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/make-build-dir.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/native-build.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/replace-helper-binary.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/transfer-revised-source.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-FIX-INSTALL-01/raw/transferred-source-hashes.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-DMI-REFUSAL-01/raw/dmi-four-field-check.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-COREID-HEADER-PREREQ-01/query.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-FIRST-MMIO-01/capture_preflight.py",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-FIRST-MMIO-01/raw/preflight.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-GATEB-P1/capture.py",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-GATEB-P1/raw/display-processes.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-GATEB-P1/raw/identity.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260928-GATEB-P1/raw/snapshot.meta.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/failure_status.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/failure_status.stdout",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/load_original.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/precheck.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/precheck.stdout",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/run_stage.py",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-CONSOLE-RELEASE-01/final.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-CONSOLE-RELEASE-01/release_rebind.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-CONSOLE-RELEASE-01/restore.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-CONSOLE-RELEASE-01/run_stage.py",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-CONSOLE-RELEASE-01/stage0.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-CONSOLE-RELEASE-01/stop.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-CREDENTIAL-TRANSPORT-TEST/cached.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-CREDENTIAL-TRANSPORT-TEST/initial-cache.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-CREDENTIAL-TRANSPORT-TEST/invalidate.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-CREDENTIAL-TRANSPORT-TEST/uncached-check.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-CREDENTIAL-TRANSPORT-TEST/uncached.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-GMA500-REFCOUNT-READONLY-01/capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-GMA500-REFCOUNT-READONLY-01/holders.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-01/RESULT.md",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-01/capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-01/stderr.txt",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-02/RESULT.md",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-02/capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-02/local-network.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-02/stderr.txt",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-03/PLAN.md",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-03/RESULT.md",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-03/capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-04/PLAN.md",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-04/capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-05/PLAN.md",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-05/capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-06/capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-07/capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRANSITION-INVENTORY/PLAN.md",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRANSITION-INVENTORY/capture-root.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRANSITION-INVENTORY/capture-supervisor.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRANSITION-INVENTORY/capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-01/inventory.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-01/preflight.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-01/service-root.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-01/service.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-01/stage0-path-check.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/inventory.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/module-removal-preview.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/post-restore-preflight.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/post-service-stop.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/pre-service-restore.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/preflight.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/root-stage.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/service-restore.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/service-stop.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/stage0-check.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/transfer-client.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/transfer-module.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/transfer-verify-absolute.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/transfer-verify.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/candidate.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/hold_status.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/preview.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/release.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/remove.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/run_stage.py",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/stage0.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/stop.capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20260930-TRIANGLE-PREFLIGHT/capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T025947Z-BOOT-PROVENANCE-READONLY-01/PLAN.md",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T025947Z-BOOT-PROVENANCE-READONLY-01/capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/PLAN.md",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/capture.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/stdout.txt",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T030754Z-BOOT-PROVENANCE-READONLY-02/transcript-without-base64.txt",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/preflight-02/command.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/preflight-02/stdout.txt",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T055237Z-FIRSTLOAD-CYCLE-01/preflight-command.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/experimental/command.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/preflight-01/command.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/preflight-02/command.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/preflight-02/stdout.txt",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/staging/command.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/staging/decoded-records.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/staging/stdout.txt",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/stock-recovery/command.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T062604Z-FIRSTLOAD-CYCLE-02/stock-recovery/stdout.txt",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/phase4-1-data/intel-sch-octopart.pdf.txt",
+      "most_recent_commit_touching_path": "da58d69795c095a9ba033dffc7759df52e829bc6"
+    },
+    {
+      "path": "docs/phase7/psb-dri-re/CODEX-HANDOFF-chronology.md",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/phase8/artifacts/first-load-review-20261001/retained-boot-timeline.json",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/phase8/first-load-stock-boot-observation.md",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    },
+    {
+      "path": "docs/phase8/post-attempt03-checkpoint-audit.md",
+      "most_recent_commit_touching_path": "f8565115977bda8a529401a7ac5cba822d1a0d36"
+    }
+  ],
+  "current_tree_narrative_redactions": [
+    "docs/phase7/psb-dri-re/CODEX-HANDOFF-chronology.md",
+    "docs/phase8/first-load-stock-boot-observation.md",
+    "docs/phase8/post-attempt03-checkpoint-audit.md"
+  ],
+  "no_values_included": true
+}

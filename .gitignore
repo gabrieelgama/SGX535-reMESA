@@ -9,3 +9,19 @@ __pycache__/
 *.pyc
 *.pyo
 docs/superpowers/
+
+# Local reproduction/test output, not historical evidence bundles.
+/.local-reproduction/
+/.pytest_cache/
+/.coverage
+/coverage.xml
+# Build scratch should stay outside the source/evidence tree.
+/build/
+/dist/
+*.swp
+*.swo
+*~
+# Untracked original camera captures retain metadata locally; public copies above
+# live in docs/publication-audit/sanitized-media/. Do not delete the originals.
+/docs/hardware-evidence/MINI12-20261001T234842Z-FIRSTLOAD-CYCLE-04/menu-photo.jpg
+/docs/hardware-evidence/MINI12-20261002T001828Z-FIRSTLOAD-CYCLE-05/menu-photo.jpg

@@ -1,0 +1,18 @@
+{
+  "kernel_module_c_path": "/home/gama/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp/kernel/module.c",
+  "kernel_module_c_sha256": "23f2429baaced4b151b3de8fd850daaa883109f91c9bafae9d5e934df7f21d72",
+  "config_path": "docs/hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifacts/boot-config",
+  "source_claims": {
+    "CONFIG_MODULE_SIG": "y",
+    "CONFIG_MODULE_SIG_FORCE": "not set",
+    "CONFIG_SECURITY_LOCKDOWN_LSM": "not set",
+    "notice": "pr_notice_once after nonfatal signature check; module name is first unverified module",
+    "unsigned_derivative": "candidate-02-lifecycle/identity.json says signature trailer absent"
+  },
+  "stock_notice_modules": [
+    "fjes",
+    "video"
+  ],
+  "experimental_notice_module": "drm",
+  "taint_stock_and_experimental": 12289
+}

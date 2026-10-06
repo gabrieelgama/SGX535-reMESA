@@ -1,0 +1,158 @@
+{
+  "record": "fire02-root-successor-rule-20261006",
+  "recorded_utc": "2026-10-06T02:09:15.017023+00:00",
+  "report": "docs/phase8/fire02-root-successor-rule-20261006.md",
+  "audit_root": "/home/gama/sgx535-offline/phase8-root-successor-20261006T015923Z",
+  "successor_rule": "C \u2014 SUCCESSOR_RULE_UNRESOLVED",
+  "decoder_format": "DECODER_FORMAT_PARTIAL",
+  "common_raster_abi": "B \u2014 COMMON_RASTER_ABI_STRONGLY_SUPPORTED_BUT_INCOMPLETE",
+  "cpu_flat_convergence": "UNKNOWN",
+  "evidence_class": "SGX535 REV121 HISTORICAL EVIDENCE",
+  "allocation": {
+    "calculation_confidence": "CONFIRMED CPU arithmetic",
+    "unscaled_screen_counts": [
+      2,
+      2
+    ],
+    "padded_axes": [
+      4,
+      4
+    ],
+    "scaled_axes": [
+      8,
+      8
+    ],
+    "unit_count_product": 64,
+    "allocation_factor_bytes": 12,
+    "reservation_bytes": 768,
+    "reservation_offset": 4096,
+    "hardware_unit_stride": "UNKNOWN",
+    "independently_addressable_64_units": "UNKNOWN",
+    "physical_region_or_tile_count": "UNKNOWN",
+    "explicit_stride_register_found": false,
+    "individual_unit_cpu_access_found": false,
+    "whole_slice_selection_formula": "(cookie[15]&15)*cookie[1]*12",
+    "selected_slice_bytes": 192
+  },
+  "initialization": {
+    "fresh_cpu_allocation": {
+      "words": [
+        0,
+        0,
+        0
+      ],
+      "grouping": "hypothetical 12-byte grouping, not confirmed hardware header",
+      "confidence": "CONFIRMED source behavior for fresh allocated backing",
+      "historical_writer": "drm_ttm_alloc_page(__GFP_ZERO) via drm_ttm_get_page/populate",
+      "current_writer": "owner clear_highpage"
+    },
+    "immediately_before_ta_start": {
+      "words": [
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN"
+      ],
+      "reason": "intervening hardware setup has no root-payload byte contract/capture"
+    },
+    "empty_meaning": "UNKNOWN",
+    "reuse": "historical explicit CPU clear covers prefix only"
+  },
+  "ta_per_word_mutation": [
+    "UNKNOWN",
+    "UNKNOWN",
+    "UNKNOWN"
+  ],
+  "states": {
+    "ROOT_EMPTY": "UNKNOWN",
+    "ROOT_POPULATED": "UNKNOWN",
+    "FIRST_REFERENCE": "UNKNOWN",
+    "CONTINUATION": "UNKNOWN",
+    "LIST_END": "UNKNOWN",
+    "PRIMITIVE_TERMINATOR": "UNKNOWN"
+  },
+  "pointer": {
+    "source_word": "UNKNOWN",
+    "width": "UNKNOWN",
+    "mask": "UNKNOWN",
+    "shift": "UNKNOWN",
+    "base": "UNKNOWN",
+    "address_space": "UNKNOWN",
+    "absolute_or_relative": "UNKNOWN",
+    "alignment": "UNKNOWN",
+    "inline_or_indirect": "UNKNOWN"
+  },
+  "schema": "consume_normal_root(initial_position, selected_controls) -> EMPTY or successor; predicate, record width and address transform UNKNOWN; not a parser specification",
+  "smallest_missing_fact": "The selected normal rev121 ISP root consumer's first-position EMPTY/successor predicate, consumed width and successor-address transformation for bytes beginning at S+0x1000.",
+  "additional_primary_evidence": {
+    "ttm_zero_allocation": "CONFIRMED in pinned historical source family; exact historical binary/kernel pairing unproved",
+    "emgd_region_header_handle": "Feature-gated resource identity only; no payload encoder/parser or equivalence to this S",
+    "emgd_parameter_management": "Ownership/command/sync metadata; no root-unit successor rule",
+    "other_generation_region_events": "Not transferred to rev121"
+  },
+  "hypotheses": [
+    {
+      "name": "H_ZERO_EMPTY",
+      "qualified": false,
+      "disproven": false
+    },
+    {
+      "name": "H_FOUR_GROUPS",
+      "qualified": false,
+      "disproven": false
+    },
+    {
+      "name": "H_HEAD_TAIL_META",
+      "qualified": false,
+      "disproven": false
+    },
+    {
+      "name": "H_CPU_LIST",
+      "qualified": false,
+      "disproven": false
+    }
+  ],
+  "verification": {
+    "source_consistency_checks_passed": 38,
+    "source_consistency_checks_failed": 0,
+    "scope": "CPU/source reference consistency, not GPU qualification",
+    "final_receipt": "/home/gama/sgx535-offline/phase8-root-successor-20261006T015923Z/final-consistency.json"
+  },
+  "implementation": {
+    "decoder": false,
+    "capture": false,
+    "publication": false,
+    "rendering_change": false,
+    "build": false,
+    "new_candidate": false
+  },
+  "publication": "UNRESOLVED \u2014 SEPARATE FUTURE BOUNDARY; not investigated",
+  "fire2": {
+    "sealed_files": 68,
+    "modified": false,
+    "ta_output_retained": false,
+    "retrospective_coverage_decodable": false,
+    "accepted_ledger": 7,
+    "phase": "RETIRED",
+    "color_all_zero_bytes": 4096,
+    "completion_provenance_findings": "CONFIRMED \u2014 unchanged"
+  },
+  "identities_unchanged": {
+    "driver_build_id": "9d0b5b2fdb7d9881f2828f43fb89253176c38817",
+    "observer_build_id": "f11d3abb072caa4e1d32836ef92ce201e9c9d126",
+    "image_sha256": "ef7e01cb546c59b6f9bce96c3397feb4b9cd1d9ebdac2faa885ed71fa5ed014d"
+  },
+  "next_action": "Obtain permitted primary rev121 normal-mode root consumer predicate/width/address-transform evidence, or an independently established same-mode encoder contract; no identified current source supplies it.",
+  "live_capture_justified": false,
+  "authority": {
+    "fire3_authorized": false,
+    "sgx_execution_authorized": false,
+    "task_sgx_invocations": 0,
+    "task_hardware_interactions": 0,
+    "triangle": "NOT ESTABLISHED"
+  },
+  "files_changed": [
+    "docs/phase8/fire02-root-successor-rule-20261006.md",
+    "docs/phase8/fire02-root-successor-rule-20261006.json",
+    "docs/phase8/CODEX-HANDOFF-20261005.md"
+  ]
+}

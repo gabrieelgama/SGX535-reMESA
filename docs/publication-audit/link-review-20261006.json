@@ -1,0 +1,3995 @@
+{
+  "scope": "all Markdown under docs/tools/experiments; relative filesystem targets, not web fetching or anchor verification",
+  "checked_links": 3078,
+  "category_counts": {
+    "external_reference_checkout": 255,
+    "machine_absolute_path": 111,
+    "missing_target": 298
+  },
+  "findings": [
+    {
+      "path": "docs/architecture.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/architecture.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxdefs.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/architecture.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/eurasiacon/build/linux2/omap4430_linux/Makefile",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/architecture.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/eurasiacon/build/linux2/omap5430_linux/Makefile",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/architecture.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/architecture.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/architecture.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/architecture.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/bridged/sgx/bridged_sgx_bridge.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/architecture.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxkick.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/architecture.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxkick.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/architecture.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/architecture.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/architecture.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/architecture.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/architecture.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/gem.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/architecture.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/architecture.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/architecture.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/architecture.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/architecture.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/README",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/architecture.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxmmu.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/architecture.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/mmu.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxmmu.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/mmu.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/mmu.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxmmu.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/mmu.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/mmu.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/gem.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/gem.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/gtt.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/system/omap5/sysconfig.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxconfig.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxconfig.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/mmu.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/mmu.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/mmu.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/common/buffer_manager.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/env/linux/osfunc.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/mmu-bif.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/env/linux/mmap.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxkick.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgxinfo.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/bridged/sgx/bridged_sgx_bridge.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxkick.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxkick.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxkick.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxkick.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/bridged/sgx/bridged_sgx_bridge.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxkick.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxkick.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxkick.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxkick.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxkick.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxkick.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxutils.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxtransfer.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxtransfer.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxtransfer.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxtransfer.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/command-submission.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/usse.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/usse.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/usse.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/usse.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/usse.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/usse.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/usse.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxconfig.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/usse.md",
+      "target": "../references/omap5-sgx-ddk-um-linux/README",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/firmware.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgxinfo.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/firmware.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/firmware.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/include4/sgxscript.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/firmware.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/firmware.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/firmware.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/firmware.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/firmware.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/eurasiacon/build/linux2/omap5430_linux/Makefile",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/firmware.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/firmware.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/firmware.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxpower.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/firmware.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxpower.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/firmware.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxdefs.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/eurasiacon/build/linux2/omap4430_linux/Makefile",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/eurasiacon/build/linux2/omap5430_linux/Makefile",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxfeaturedefs.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxdefs.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxmmu.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxpower.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgxinfo.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/eurasiacon/build/linux2/omap4430_linux/Makefile",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/eurasiacon/build/linux2/omap5430_linux/Makefile",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/system/omap5/sysconfig.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/system/omap5/sysconfig.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/system/omap5/sysutils_linux.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/system/omap5/sysutils_linux.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/omap5-sgx-ddk-um-linux/README",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_device.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/gem.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/gem.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/power.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_device.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_device.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/system/omap5/sysconfig.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/system/omap5/sysconfig.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_device.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/hwdefs/sgxerrata.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/ti-vs-poulsbo.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/Makefile",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_device.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_device.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/gem.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/gem.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/gem.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/gtt.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/gtt.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/mmu.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/gem.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/gem.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/power.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/Kconfig",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/gem.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_device.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/power.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxreset.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgx_mkif_km.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgxinfo.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/gma500-current-state.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_device.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_irq.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/gtt.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/include/sgxinfo.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_reg.h",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/linux/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/registers.md",
+      "target": "../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/phase7/source-provenance.md",
+      "target": "../../references/omap5-sgx-ddk-um-linux/README",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/phase7/source-provenance.md",
+      "target": "../../references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/dri/psb_dri.so",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/phase7/source-provenance.md",
+      "target": "../../references/home:lkundrak:poulsbo/xpsb-glx/xpsb-glx.spec",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/phase7/source-provenance.md",
+      "target": "../../references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/drivers/Xpsb.so",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/pre07-historical-live-procedures-20261004.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-historical-pre07-20261004T104700Z/historical-operation-matrix.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/CODEX-HANDOFF-20261005.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/experimental-candidate.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/CODEX-HANDOFF-20261005.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/live-preparation/fire-one-authorized-call/outcome-report.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/CODEX-HANDOFF-20261005.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/live-preparation/fire-one-authorized-call/sealed-evidence/",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/CODEX-HANDOFF-20261005.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/one-shot-package.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/CODEX-HANDOFF-20261005.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/live-preparation/pre07-live-evaluation.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/CODEX-HANDOFF-20261005.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/live-preparation/one-shot-execution-card.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/CODEX-HANDOFF-20261005.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-source-lifecycle-20261005T064455Z/one-shot-package.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/CODEX-HANDOFF-20261005.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-firstload-hash-fix-20261005T040456Z-cd9b9473/one-shot-package.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/CODEX-HANDOFF-20261005.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-corrected-live-preparation-20261005T041729Z-b19838c1/pre07-result.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/CODEX-HANDOFF-20261005.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-corrected-live-preparation-20261005T041729Z-b19838c1/candidate-first-owner/decoded.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/CODEX-HANDOFF-20261005.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-corrected-live-preparation-20261005T041729Z-b19838c1/protected-preparation/decoded.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/CODEX-HANDOFF-20261005.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-corrected-live-preparation-20261005T041729Z-b19838c1/independent-final-guards/decoded.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/CODEX-HANDOFF-20261005.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-corrected-live-preparation-20261005T041729Z-b19838c1/final-consistency.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/CODEX-HANDOFF-20261005.md",
+      "target": "/home/<operator>/sgx535-offline/antix-kbuild-successor-20260930/output/.config",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/CODEX-HANDOFF-20261005.md",
+      "target": "/home/<operator>/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp/Documentation/trace/kprobetrace.rst",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/CODEX-HANDOFF-20261005.md",
+      "target": "/home/<operator>/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp/Documentation/trace/ftrace.rst",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/CODEX-HANDOFF-20261005.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-provenance-implementation-20261005T005304Z/build/module/accel_2d.c",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/CODEX-HANDOFF-20261005.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-corrected-live-preparation-20261005T041729Z-b19838c1/git-after.txt",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/source-lifecycle-quiescence-20261005.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-source-lifecycle-20261005T064455Z/one-shot-package.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/source-lifecycle-quiescence-20261005.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-source-lifecycle-20261005T064455Z/authority.txt",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/source-lifecycle-quiescence-20261005.md",
+      "target": "../../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/source-lifecycle-quiescence-20261005.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-source-lifecycle-20261005T064455Z/final-consistency.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-zero-readback-investigation-20261005.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/live-preparation/fire-one-authorized-call/",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-zero-readback-investigation-20261005.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-zero-readback-20261005T233046Z",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-post-ta-coverage-boundary-20261005.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-post-ta-coverage-20261005T234612Z/",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-post-ta-coverage-boundary-20261005.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-dhost-hold-fix-20261005T224726Z/live-preparation/fire-one-authorized-call/",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-vistest-lifecycle-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-vistest-lifecycle-20261006T000531Z/",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-ta-output-publication-boundary-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-ta-output-boundary-20261006T003026Z/",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-gpu-cpu-publication-20261006T025919Z/inspected-inputs.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-gpu-cpu-publication-20261006T025919Z/pinned-ti-manifest.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-gpu-cpu-publication-20261006T025919Z/ddx-readback-manifest.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-gfx/kernel/sgx535_frozen/gma500_bo_owner.c",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-gfx/kernel/sgx535_frozen/gma500_bo_owner.c",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-gfx/kernel/sgx535_frozen/gma500_bo_owner.c",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-gpu-cpu-publication-20261006T025919Z/ddx-psb_accel.c",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-common-raster-abi-20261006T005131Z/xserver-xorg-video-psb-0.32.0/libmm/mm_drm.c",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-root-successor-20261006T015923Z/public-psb/drm_bo.c",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-gfx/kernel/sgx535_frozen/gma500_bo_owner.c",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-gpu-cpu-publication-20261006T025919Z/pinned-ti/sgxkick.c",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-gpu-cpu-publication-20261006T025919Z/pinned-ti/sgx_mkif_km.h",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-gpu-cpu-publication-20261006T025919Z/pinned-ti/sgxutils.c",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-gpu-cpu-publication-20261006T025919Z/ta-mem-save.disasm.txt",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-gpu-cpu-publication-20261006T025919Z/kernel-bo-read-lock.disasm.txt",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-gpu-cpu-publication-20261006T025919Z/bo-wait-idle.disasm.txt",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-gpu-cpu-publication-20261006T025919Z/event-wait-helper.disasm.txt",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp/drivers/gpu/drm/drm_gem.c",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-root-successor-20261006T015923Z/public-psb/drm_ttm.c",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-gpu-cpu-publication-20261006T025919Z/pinned-ti/sgx_mkif_km.h",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp/drivers/gpu/drm/drm_cache.c",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/antix-kbuild-preparation-20260930/source-unpack/linux-5.10.240-antix.1-486-smp/arch/x86/include/asm/barrier.h",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-gpu-cpu-publication-20261006T025919Z/pinned-ti/osfunc.c",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-gfx/tools/psb-dri-re/frozen_fixed_service.c",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-gfx/tools/psb-dri-re/frozen_fixed_service.c",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-gfx/tools/psb-dri-re/frozen_fixed_service.c",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-gpu-cpu-publication-20261006T025919Z/source-consistency.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-scene-root-publication-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-gpu-cpu-publication-20261006T025919Z/final-consistency.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/two-triangle-live-preparation-stop-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-square-continuation-20261006T084340Z/pre07-stop-seal.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/dhost-load-hold-fix-20261005.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-source-lifecycle-live-preparation-20261005T221026Z-f243e1b4/fire-one-authorized-call/originals/",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-xpsb-common-raster-abi-20261006.md",
+      "target": "../../references/home:lkundrak:poulsbo/xpsb-glx/xpsb-glx.spec",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-xpsb-common-raster-abi-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-common-raster-abi-20261006T005131Z/",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-normal-ta-root-grammar-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-normal-root-grammar-20261006T013334Z/",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-root-successor-rule-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-root-successor-20261006T015923Z/",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-independent-root-evidence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-independent-root-evidence-20261006T023140Z/evidence-inventory.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-independent-root-evidence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-independent-root-evidence-20261006T023140Z/ddk-1.14-manifest.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-independent-root-evidence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-independent-root-evidence-20261006T023140Z/independent-primary-manifest.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-independent-root-evidence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-independent-root-evidence-20261006T023140Z/available-artifact-inventory.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-independent-root-evidence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-independent-root-evidence-20261006T023140Z/search-scope.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-independent-root-evidence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-independent-root-evidence-20261006T023140Z/ddk-history-expanded-scope.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-independent-root-evidence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-independent-root-evidence-20261006T023140Z/ddk-history-expanded-hits.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-independent-root-evidence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-independent-root-evidence-20261006T023140Z/independent-offset-result.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-independent-root-evidence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-independent-root-evidence-20261006T023140Z/ddk-1.14/eurasia_km_services4_include_sgx_ukernel_status_codes.h",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-independent-root-evidence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-independent-root-evidence-20261006T023140Z/microkernel-lead-references.txt",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-independent-root-evidence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-independent-root-evidence-20261006T023140Z/ddk-1.14/eurasia_km_services4_include_sgxinfo.h",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-independent-root-evidence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-independent-root-evidence-20261006T023140Z/ddk-1.14/eurasia_km_services4_srvkm_hwdefs_sgxerrata.h",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-independent-root-evidence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-independent-root-evidence-20261006T023140Z/independent-primary/drm_emgd_include_plb_state3d.h",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-independent-root-evidence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-independent-root-evidence-20261006T023140Z/source-consistency.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-independent-root-evidence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-independent-root-evidence-20261006T023140Z/final-consistency.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-ta-output-witness-final-convergence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-ta-witness-final-20261006T031833Z/route-ledger.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-ta-output-witness-final-convergence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-ta-witness-final-20261006T031833Z/public-primary-manifest.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-ta-output-witness-final-convergence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-ta-witness-final-20261006T031833Z/public-primary-final-hits.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-ta-output-witness-final-convergence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-ta-witness-final-20261006T031833Z/ti-targeted-event-history.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-ta-output-witness-final-convergence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-ta-witness-final-20261006T031833Z/ti-parser-object-locator.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-ta-output-witness-final-convergence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-ta-witness-final-20261006T031833Z/public-search-scope.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-ta-output-witness-final-convergence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-ta-witness-final-20261006T031833Z/render-kick.disasm.txt",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-ta-output-witness-final-convergence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-ta-witness-final-20261006T031833Z/ti-context/ecf0e6207c-sgxreset.c",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-ta-output-witness-final-convergence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-ta-witness-final-20261006T031833Z/public-primary/samsung-sgx_sgxreset.c",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-ta-output-witness-final-convergence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-independent-root-evidence-20261006T023140Z/ddk-1.14/eurasia_km_services4_include_sgx_ukernel_status_codes.h",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-ta-output-witness-final-convergence-20261006.md",
+      "target": "../../references/omap5-sgx-ddk-linux/eurasia_km/services4/srvkm/devices/sgx/sgxinit.c",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-ta-output-witness-final-convergence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-ta-witness-final-20261006T031833Z/psb-version-comparison.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-ta-output-witness-final-convergence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-ta-witness-final-20261006T031833Z/xpsb-version-comparison.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-ta-output-witness-final-convergence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-ta-witness-final-20261006T031833Z/source-consistency.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-ta-output-witness-final-convergence-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-ta-witness-final-20261006T031833Z/final-consistency.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-single-fragment-experiment-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-single-fragment-experiment-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/experimental-candidate.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-single-fragment-experiment-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/frozen-scene-canonical.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-single-fragment-experiment-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/canonical-state-fields.csv",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-single-fragment-experiment-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/frozen-address-plan.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-single-fragment-experiment-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/dri-decompiled/39ac4.txt",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-single-fragment-experiment-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/dri-decompiled/27060.txt",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-single-fragment-experiment-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/dri-decompiled/2a794.txt",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-single-fragment-experiment-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/constant-constructor.disassembly.txt",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-single-fragment-experiment-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/decompiled/a660.txt",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-single-fragment-experiment-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/decompiled/82c0.txt",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-single-fragment-experiment-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/dri-decompiled/392ab.txt",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-single-fragment-experiment-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/rev121-constant-cross-correlation.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-single-fragment-experiment-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/minimal-change-verification.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-single-fragment-experiment-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/qualified-initializer.disassembly.txt",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-single-fragment-experiment-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/pixel-payload-qualification.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/fire02-single-fragment-experiment-20261006.md",
+      "target": "/home/<operator>/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/final-consistency.json",
+      "category": "machine_absolute_path",
+      "archive": false
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "i386-gcc-offline-build-plan.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "i386-gcc-toolchain-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "antix-kbuild-preparation-equivalence.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "antix-kbuild-successor-equivalence.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "candidate-01-build-and-lifecycle-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "../hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "attempt03-module-version-followup.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/candidate-target-table-check.json",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifact-manifest.json",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "artifacts/frozen-triangle-one-shot-i386.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "i386-gcc-toolchain-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "artifacts/i386-gcc-toolchain-20260930/README.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "antix-kbuild-preparation-equivalence.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "artifacts/antix-kbuild-preparation-20260930/README.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "antix-kbuild-successor-equivalence.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "artifacts/antix-kbuild-successor-20260930/README.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "i386-gcc-offline-build-plan.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "candidate-01-build-and-lifecycle-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "candidate-01-build-and-lifecycle-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+      "target": "candidate-01-build-and-lifecycle-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+      "target": "attempt03-module-version-followup.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-CONSOLE-RELEASE-01/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-CONSOLE-RELEASE-01/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+      "target": "gma500-fbcon-refcount.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-GMA500-REFCOUNT-READONLY-01/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+      "target": "artifacts/frozen-triangle-one-shot-i386.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRANSITION-INVENTORY/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+      "target": "mini12-credential-delivery.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/active-gma500-transition-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRANSITION-INVENTORY/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/fixed-one-shot-gate-b-review.md",
+      "target": "candidate-01-build-and-lifecycle-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/fixed-one-shot-gate-b-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/fixed-one-shot-gate-b-review.md",
+      "target": "attempt03-module-version-followup.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/fixed-one-shot-gate-b-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/fixed-one-shot-gate-b-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/fixed-one-shot-gate-b-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-PREFLIGHT/README.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/fixed-one-shot-gate-b-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRANSITION-INVENTORY/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/fixed-one-shot-gate-b-review.md",
+      "target": "artifacts/frozen-triangle-one-shot-i386.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+      "target": "candidate-01-build-and-lifecycle-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+      "target": "i386-gcc-toolchain-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+      "target": "antix-kbuild-preparation-equivalence.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+      "target": "antix-kbuild-successor-equivalence.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+      "target": "candidate-01-offline-build-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+      "target": "i386-gcc-offline-build-plan.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+      "target": "i386-gcc-toolchain-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-01/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-02/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-03/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-04/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-05/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-06/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-07/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+      "target": "attempt03-module-version-followup.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+      "target": "../phase4-2-data/antix-source/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+      "target": "../phase4-2-data/antix-source/drivers/gpu/drm/gma500/power.c",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/lifecycle-gate-review-20261001/before/docs/phase8/post-attempt03-checkpoint-audit.md",
+      "target": "../phase4-2-data/antix-source/drivers/gpu/drm/gma500/psb_irq.c",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "i386-gcc-toolchain-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "antix-kbuild-preparation-equivalence.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "antix-kbuild-successor-equivalence.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "candidate-01-offline-build-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "../hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "attempt03-module-version-followup.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/candidate-target-table-check.json",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifact-manifest.json",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "artifacts/frozen-triangle-one-shot-i386.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "i386-gcc-toolchain-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "artifacts/i386-gcc-toolchain-20260930/README.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "antix-kbuild-preparation-equivalence.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "artifacts/antix-kbuild-preparation-20260930/README.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "antix-kbuild-successor-equivalence.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "artifacts/antix-kbuild-successor-20260930/README.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "candidate-01-offline-build-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/active-gma500-transition-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/active-gma500-transition-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/active-gma500-transition-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/active-gma500-transition-review.md",
+      "target": "attempt03-module-version-followup.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/active-gma500-transition-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-CONSOLE-RELEASE-01/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/active-gma500-transition-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-CONSOLE-RELEASE-01/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/active-gma500-transition-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/active-gma500-transition-review.md",
+      "target": "gma500-fbcon-refcount.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/active-gma500-transition-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-GMA500-REFCOUNT-READONLY-01/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/active-gma500-transition-review.md",
+      "target": "artifacts/frozen-triangle-one-shot-i386.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/active-gma500-transition-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRANSITION-INVENTORY/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/active-gma500-transition-review.md",
+      "target": "mini12-credential-delivery.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/active-gma500-transition-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRANSITION-INVENTORY/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "attempt03-module-version-followup.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-PREFLIGHT/README.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRANSITION-INVENTORY/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "artifacts/frozen-triangle-one-shot-i386.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/i386-gcc-offline-build-plan.md",
+      "target": "i386-gcc-toolchain-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/i386-gcc-offline-build-plan.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/i386-gcc-offline-build-plan.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifact-manifest.json",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/i386-gcc-offline-build-plan.md",
+      "target": "antix-kbuild-preparation-equivalence.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/i386-gcc-offline-build-plan.md",
+      "target": "antix-kbuild-successor-equivalence.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/i386-gcc-offline-build-plan.md",
+      "target": "candidate-01-offline-build-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "i386-gcc-toolchain-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "antix-kbuild-preparation-equivalence.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "antix-kbuild-successor-equivalence.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "candidate-01-offline-build-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "i386-gcc-toolchain-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-01/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-02/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-03/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-04/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-05/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-06/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-07/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "attempt03-module-version-followup.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../phase4-2-data/antix-source/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../phase4-2-data/antix-source/drivers/gpu/drm/gma500/power.c",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase8/artifacts/candidate-01-build-20260930/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../phase4-2-data/antix-source/drivers/gpu/drm/gma500/psb_irq.c",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/phase7/psb-dri-re/binary-inventory.md",
+      "target": "../../../references/home:lkundrak:poulsbo/xpsb-glx/xpsb-glx.spec",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/phase7/xpsb-re/binary-inventory.md",
+      "target": "../../../references/home:lkundrak:poulsbo/xpsb-glx/extracted/xpsb-glx/drivers/Xpsb.so",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/phase7/xpsb-re/binary-inventory.md",
+      "target": "../../../references/home:lkundrak:poulsbo/xpsb-glx/xpsb-glx.spec",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/phase7/xpsb-re/source-provenance.md",
+      "target": "../../../references/home:lkundrak:poulsbo/xpsb-glx/xpsb-glx.spec",
+      "category": "external_reference_checkout",
+      "archive": false
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/timing-proposal-before-final-review.md",
+      "target": "first-load-cycle-03-result.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "first-load-cycle-03-result.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "first-load-capture-timing-redesign.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "first-load-cycle-02-result.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "first-load-cycle-01-result.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "first-load-operational-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "first-load-staging-boot-recovery-procedure.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "first-load-operator-checklist.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "experimental-first-load-image-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "artifacts/experimental-first-load-01-20261001/README.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "first-load-stock-boot-observation.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "first-load-boot-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "lifecycle-first-removal-gate-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "candidate-01-build-and-lifecycle-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "attempt03-module-version-followup.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "active-gma500-transition-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-PREFLIGHT/README.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRANSITION-INVENTORY/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "artifacts/frozen-triangle-one-shot-i386.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "active-gma500-transition-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "first-load-cycle-03-result.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "first-load-capture-timing-redesign.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "first-load-cycle-02-result.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "first-load-cycle-01-result.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "first-load-operational-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "first-load-staging-boot-recovery-procedure.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "first-load-operator-checklist.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "experimental-first-load-image-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "artifacts/experimental-first-load-01-20261001/README.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "first-load-stock-boot-observation.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "first-load-boot-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "lifecycle-first-removal-gate-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "i386-gcc-offline-build-plan.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "i386-gcc-toolchain-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "antix-kbuild-preparation-equivalence.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "antix-kbuild-successor-equivalence.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "candidate-01-build-and-lifecycle-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "../hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "attempt03-module-version-followup.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/candidate-target-table-check.json",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifact-manifest.json",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "artifacts/frozen-triangle-one-shot-i386.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "i386-gcc-toolchain-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "artifacts/i386-gcc-toolchain-20260930/README.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "antix-kbuild-preparation-equivalence.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "artifacts/antix-kbuild-preparation-20260930/README.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "antix-kbuild-successor-equivalence.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "artifacts/antix-kbuild-successor-20260930/README.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "i386-gcc-offline-build-plan.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "candidate-01-build-and-lifecycle-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "candidate-01-build-and-lifecycle-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "first-load-cycle-03-result.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "first-load-capture-timing-redesign.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "first-load-cycle-02-result.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "first-load-cycle-01-result.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "first-load-operational-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "first-load-staging-boot-recovery-procedure.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "first-load-operator-checklist.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "experimental-first-load-image-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "artifacts/experimental-first-load-01-20261001/README.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "first-load-stock-boot-observation.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "first-load-boot-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "lifecycle-first-removal-gate-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "candidate-01-build-and-lifecycle-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "i386-gcc-toolchain-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "antix-kbuild-preparation-equivalence.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "antix-kbuild-successor-equivalence.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "candidate-01-offline-build-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "i386-gcc-offline-build-plan.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "i386-gcc-toolchain-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-01/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-02/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-03/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-04/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-05/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-06/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-07/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "attempt03-module-version-followup.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../phase4-2-data/antix-source/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../phase4-2-data/antix-source/drivers/gpu/drm/gma500/power.c",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../phase4-2-data/antix-source/drivers/gpu/drm/gma500/psb_irq.c",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "first-load-cycle-02-result.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "first-load-cycle-01-result.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "first-load-operational-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "first-load-staging-boot-recovery-procedure.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "first-load-operator-checklist.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "experimental-first-load-image-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "artifacts/experimental-first-load-01-20261001/README.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "first-load-stock-boot-observation.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "first-load-boot-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "lifecycle-first-removal-gate-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "candidate-01-build-and-lifecycle-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "attempt03-module-version-followup.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "active-gma500-transition-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-PREFLIGHT/README.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRANSITION-INVENTORY/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "artifacts/frozen-triangle-one-shot-i386.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/fixed-one-shot-gate-b-review.md",
+      "target": "active-gma500-transition-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "first-load-cycle-02-result.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "first-load-cycle-01-result.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "first-load-operational-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "first-load-staging-boot-recovery-procedure.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "first-load-operator-checklist.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "experimental-first-load-image-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "artifacts/experimental-first-load-01-20261001/README.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "first-load-stock-boot-observation.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "first-load-boot-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "lifecycle-first-removal-gate-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "i386-gcc-offline-build-plan.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "i386-gcc-toolchain-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "antix-kbuild-preparation-equivalence.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "antix-kbuild-successor-equivalence.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "candidate-01-build-and-lifecycle-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "../hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "attempt03-module-version-followup.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/candidate-target-table-check.json",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifact-manifest.json",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "artifacts/frozen-triangle-one-shot-i386.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "i386-gcc-toolchain-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "artifacts/i386-gcc-toolchain-20260930/README.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "antix-kbuild-preparation-equivalence.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "artifacts/antix-kbuild-preparation-20260930/README.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "antix-kbuild-successor-equivalence.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "artifacts/antix-kbuild-successor-20260930/README.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "i386-gcc-offline-build-plan.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "candidate-01-build-and-lifecycle-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+      "target": "candidate-01-build-and-lifecycle-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "first-load-cycle-02-result.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "first-load-cycle-01-result.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "first-load-operational-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "first-load-staging-boot-recovery-procedure.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "first-load-operator-checklist.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "experimental-first-load-image-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "artifacts/experimental-first-load-01-20261001/README.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "first-load-stock-boot-observation.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "first-load-boot-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "lifecycle-first-removal-gate-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "candidate-01-build-and-lifecycle-review.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "i386-gcc-toolchain-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "antix-kbuild-preparation-equivalence.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "antix-kbuild-successor-equivalence.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "candidate-01-offline-build-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "i386-gcc-offline-build-plan.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "i386-gcc-toolchain-qualification.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-01/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-02/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-03/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-04/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-05/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-06/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-07/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/RESULT.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "attempt03-module-version-followup.md",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../phase4-2-data/antix-source/drivers/gpu/drm/gma500/psb_drv.c",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../phase4-2-data/antix-source/drivers/gpu/drm/gma500/power.c",
+      "category": "missing_target",
+      "archive": true
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261001T223542Z-FIRSTLOAD-CYCLE-03/documentation-before/post-attempt03-checkpoint-audit.md",
+      "target": "../phase4-2-data/antix-source/drivers/gpu/drm/gma500/psb_irq.c",
+      "category": "missing_target",
+      "archive": true
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "scope": "OFFLINE MAGENTA-SPECIALIZED WHOLE-IMAGE COMPARISON; live origin/completion assessed separately",
+  "layout": {
+    "width": 32,
+    "height": 32,
+    "stride_bytes": 128,
+    "size_bytes": 4096,
+    "word_format": "ARGB8888",
+    "memory_order": "BGRA",
+    "layout": "LINEAR"
+  },
+  "vertices": [
+    [
+      8,
+      8
+    ],
+    [
+      24,
+      8
+    ],
+    [
+      8,
+      24
+    ]
+  ],
+  "reference_assumptions": "pixel_center samples (x+0.5,y+0.5); memory row y equals geometry y; SGX sampling/edge tie semantics are unqualified; include/exclude are separate whole-image references, not tolerated pixel errors",
+  "image_matches_reference": true,
+  "matching_edge_rules": [
+    "exclude"
+  ],
+  "references": {
+    "exclude": {
+      "expected_white_pixels": 120,
+      "mismatch_count": 0,
+      "mismatches": [],
+      "details_omitted": 0
+    },
+    "include": {
+      "expected_white_pixels": 136,
+      "mismatch_count": 16,
+      "mismatches": [
+        {
+          "x": 23,
+          "y": 8,
+          "byte_offset": 1116,
+          "expected_argb": "0xffff00ff",
+          "actual_argb": "0x00000000",
+          "kind": "missing_foreground"
+        },
+        {
+          "x": 22,
+          "y": 9,
+          "byte_offset": 1240,
+          "expected_argb": "0xffff00ff",
+          "actual_argb": "0x00000000",
+          "kind": "missing_foreground"
+        },
+        {
+          "x": 21,
+          "y": 10,
+          "byte_offset": 1364,
+          "expected_argb": "0xffff00ff",
+          "actual_argb": "0x00000000",
+          "kind": "missing_foreground"
+        },
+        {
+          "x": 20,
+          "y": 11,
+          "byte_offset": 1488,
+          "expected_argb": "0xffff00ff",
+          "actual_argb": "0x00000000",
+          "kind": "missing_foreground"
+        },
+        {
+          "x": 19,
+          "y": 12,
+          "byte_offset": 1612,
+          "expected_argb": "0xffff00ff",
+          "actual_argb": "0x00000000",
+          "kind": "missing_foreground"
+        },
+        {
+          "x": 18,
+          "y": 13,
+          "byte_offset": 1736,
+          "expected_argb": "0xffff00ff",
+          "actual_argb": "0x00000000",
+          "kind": "missing_foreground"
+        },
+        {
+          "x": 17,
+          "y": 14,
+          "byte_offset": 1860,
+          "expected_argb": "0xffff00ff",
+          "actual_argb": "0x00000000",
+          "kind": "missing_foreground"
+        },
+        {
+          "x": 16,
+          "y": 15,
+          "byte_offset": 1984,
+          "expected_argb": "0xffff00ff",
+          "actual_argb": "0x00000000",
+          "kind": "missing_foreground"
+        },
+        {
+          "x": 15,
+          "y": 16,
+          "byte_offset": 2108,
+          "expected_argb": "0xffff00ff",
+          "actual_argb": "0x00000000",
+          "kind": "missing_foreground"
+        },
+        {
+          "x": 14,
+          "y": 17,
+          "byte_offset": 2232,
+          "expected_argb": "0xffff00ff",
+          "actual_argb": "0x00000000",
+          "kind": "missing_foreground"
+        },
+        {
+          "x": 13,
+          "y": 18,
+          "byte_offset": 2356,
+          "expected_argb": "0xffff00ff",
+          "actual_argb": "0x00000000",
+          "kind": "missing_foreground"
+        },
+        {
+          "x": 12,
+          "y": 19,
+          "byte_offset": 2480,
+          "expected_argb": "0xffff00ff",
+          "actual_argb": "0x00000000",
+          "kind": "missing_foreground"
+        },
+        {
+          "x": 11,
+          "y": 20,
+          "byte_offset": 2604,
+          "expected_argb": "0xffff00ff",
+          "actual_argb": "0x00000000",
+          "kind": "missing_foreground"
+        },
+        {
+          "x": 10,
+          "y": 21,
+          "byte_offset": 2728,
+          "expected_argb": "0xffff00ff",
+          "actual_argb": "0x00000000",
+          "kind": "missing_foreground"
+        },
+        {
+          "x": 9,
+          "y": 22,
+          "byte_offset": 2852,
+          "expected_argb": "0xffff00ff",
+          "actual_argb": "0x00000000",
+          "kind": "missing_foreground"
+        },
+        {
+          "x": 8,
+          "y": 23,
+          "byte_offset": 2976,
+          "expected_argb": "0xffff00ff",
+          "actual_argb": "0x00000000",
+          "kind": "missing_foreground"
+        }
+      ],
+      "details_omitted": 0
+    }
+  },
+  "completion_attribution": "UNKNOWN",
+  "triangle_established": false,
+  "diagnostic_argb": "0xffff00ff"
+}

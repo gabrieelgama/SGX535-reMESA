@@ -1,0 +1,10 @@
+{
+  "classification": "FRESH READ-ONLY STOCK PREFLIGHT",
+  "target_operations": "read-only sysfs/proc/files/log/GRUB-env reads and status queries only",
+  "prohibited": "no file writes on target; no DRM open; no module/service/PCI/VT operations; no reboot; no SGX/ioctl/MMIO",
+  "operator_report": {
+    "stock_userspace_up": true,
+    "physical_display_normal": true,
+    "local_sudo_v_succeeded": true
+  }
+}

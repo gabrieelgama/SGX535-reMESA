@@ -1,0 +1,37 @@
+{
+  "classification": "STOP_BEFORE_CLIENT_CONTROLLER_CARD_BINDING",
+  "boot_id": "83ee4ff8-a7f1-4468-b348-d10627f38d17",
+  "PRE07": "LIVE PASS",
+  "first_owner": "83/83 PASS",
+  "protected_preparation": "56/56 PASS",
+  "independent_final": "204/204 PASS",
+  "immediate_precheck": "42/42 PASS",
+  "sgx_invocations": 0,
+  "client_launches": 0,
+  "ioctl_attempts": 0,
+  "authorization_consumed": false,
+  "new_multi_triangle_milestone": false,
+  "cause": "Unexpected duplicate witness reference in offline derived launch card",
+  "offline_correction_tests": "7/7 PASS; not dispatched",
+  "live_execution": "STOPPED; no retry",
+  "next_action": "Authorize passive continuity and use the corrected explicit witness alias; same candidate boot may be reused only if all bindings remain valid",
+  "historical_triangle": "ESTABLISHED; immutable FIRE3/display baselines unchanged",
+  "preservation_checks": [
+    {
+      "seal": "/home/gama/sgx535-offline/phase8-square-live-20261006T083635Z/preparation-seal.json",
+      "verified_files": 18,
+      "pass": true
+    },
+    {
+      "seal": "/home/gama/sgx535-offline/phase8-square-continuation-20261006T084340Z/staging-seal.json",
+      "verified_files": 53,
+      "pass": true
+    },
+    {
+      "seal": "/home/gama/sgx535-offline/phase8-square-continuation-20261006T084340Z/pre07-stop-seal.json",
+      "verified_files": 95,
+      "pass": true
+    }
+  ],
+  "offline_controller_workspace": "/home/gama/sgx535-offline/phase8-square-continuation-20261006T084340Z"
+}

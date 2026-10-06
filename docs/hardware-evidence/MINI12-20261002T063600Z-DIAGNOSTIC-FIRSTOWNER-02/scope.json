@@ -1,0 +1,7 @@
+{
+  "scope": "one fresh authorized diagnostic boot; one bounded read-only first-owner capture",
+  "source_capture": "docs/hardware-evidence/MINI12-20261002T054751Z-DIAGNOSTIC-STAGING-01",
+  "no_sgx_during_capture": true,
+  "no_retry": true,
+  "operator_report": "normal physical display/userspace; sudo -v succeeded locally; approximately 120 seconds to userspace"
+}

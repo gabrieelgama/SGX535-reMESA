@@ -1,3 +1,7 @@
+> Historical DDK/source comparison, begun 16 September 2026. For the current
+> reconstructed rendering path and established results, see the
+> [project overview](PROJECT-OVERVIEW.md) and [documentation index](README.md).
+
 # SGX535-GFX — rebuilt architecture
 
 > Phase 2 update: local history contains `sgx535defs.h` and an explicit Poulsbo integration in DDK 1.14. The absence references below describe the Phase 1 master checkout. See [archaeology](source-archaeology.md), [recovered files](sgx535-missing-files.md), and [Poulsbo comparison](poulsbo-evidence.md) for the expanded state.

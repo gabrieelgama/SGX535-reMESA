@@ -236,7 +236,7 @@ int main(void)
     CHECK(ta_load[21].offset, 0x690);
     CHECK(ta_load[22].kind, SGX535_REG_POLL_SET);
     CHECK(ta_load[22].offset, 0x118);
-    CHECK(ta_load[22].mask, 7);
+    CHECK(ta_load[22].mask, 15);
     CHECK(ta_load[23].kind, SGX535_REG_WRITE);
     CHECK(ta_load[23].offset, 0x114);
     CHECK(ta_load[24].kind, SGX535_REG_POLL_CLEAR);
@@ -297,7 +297,8 @@ int main(void)
     CHECK(sgx535_frozen_bootstrap_observe(&service_boot, SGX535_BOOT_TA_INFO_REPLY, 0), 0);
     CHECK(sgx535_frozen_bootstrap_observe(&service_boot, SGX535_BOOT_SCENE_INFO_REPLY, 0), 0);
     CHECK(sgx535_frozen_bootstrap_observe(&service_boot, SGX535_BOOT_LOAD_KICKS, 0x1f), 0);
-    CHECK(sgx535_frozen_bootstrap_observe(&service_boot, SGX535_BOOT_LOAD_STATUS2, 7), 0);
+    CHECK(sgx535_frozen_bootstrap_observe(&service_boot, SGX535_BOOT_LOAD_STATUS2, 7), SGX535_FROZEN_BAD_REQUEST);
+    CHECK(sgx535_frozen_bootstrap_observe(&service_boot, SGX535_BOOT_LOAD_STATUS2, 15), 0);
     CHECK(sgx535_frozen_bootstrap_observe(&service_boot, SGX535_BOOT_INITEND_STATUS, 0x400000), 0);
     CHECK(sgx535_frozen_bootstrap_observe(&service_boot, SGX535_BOOT_TA_LOAD_REPLY, 0), 0);
     CHECK(sgx535_frozen_bootstrap_observe(&service_boot, SGX535_BOOT_SCENE_VALIDATED, 0), 0);
@@ -511,7 +512,8 @@ int main(void)
         CHECK(sgx535_frozen_bootstrap_observe(&boot, SGX535_BOOT_LOAD_KICKS, 0x1f), 0);
         CHECK(sgx535_frozen_bootstrap_observe(&boot, SGX535_BOOT_LOAD_STATUS2, 3),
               SGX535_FROZEN_BAD_REQUEST);
-        CHECK(sgx535_frozen_bootstrap_observe(&boot, SGX535_BOOT_LOAD_STATUS2, 7), 0);
+        CHECK(sgx535_frozen_bootstrap_observe(&boot, SGX535_BOOT_LOAD_STATUS2, 7), SGX535_FROZEN_BAD_REQUEST);
+        CHECK(sgx535_frozen_bootstrap_observe(&boot, SGX535_BOOT_LOAD_STATUS2, 15), 0);
         CHECK(sgx535_frozen_bootstrap_observe(&boot, SGX535_BOOT_INITEND_STATUS, 0),
               SGX535_FROZEN_BAD_REQUEST);
         CHECK(sgx535_frozen_bootstrap_observe(&boot, SGX535_BOOT_INITEND_STATUS, 0x400000), 0);

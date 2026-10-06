@@ -1,0 +1,59 @@
+FFFFFF
+======================================================================
+FAIL: test_all_first_owner_evidence_still_required_without_manual_elapsed (test_frozen_first_load_procedure_v2.ProcedureV2Tests.test_all_first_owner_evidence_still_required_without_manual_elapsed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure_v2.py", line 19, in test_all_first_owner_evidence_still_required_without_manual_elapsed
+    self.assertIsNotNone(v2);out=v2.validate_first_owner(self.old,self.record());self.assertEqual(out['first_owner'],'PASS PROVIDED RECORD');self.assertFalse(out['sgx_authorized'])
+    ~~~~~~~~~~~~~~~~~~~~^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_exact_error_free_hook_trace_still_required (test_frozen_first_load_procedure_v2.ProcedureV2Tests.test_exact_error_free_hook_trace_still_required)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure_v2.py", line 43, in test_exact_error_free_hook_trace_still_required
+    self.assertIsNotNone(v2)
+    ~~~~~~~~~~~~~~~~~~~~^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_future_policy_drift_retry_or_restaging_is_rejected (test_frozen_first_load_procedure_v2.ProcedureV2Tests.test_future_policy_drift_retry_or_restaging_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure_v2.py", line 48, in test_future_policy_drift_retry_or_restaging_is_rejected
+    self.assertIsNotNone(v2);p=v2.load_plan();v2.validate_plan(p)
+    ~~~~~~~~~~~~~~~~~~~~^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_missing_late_or_fault_capture_is_refused (test_frozen_first_load_procedure_v2.ProcedureV2Tests.test_missing_late_or_fault_capture_is_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure_v2.py", line 33, in test_missing_late_or_fault_capture_is_refused
+    self.assertIsNotNone(v2)
+    ~~~~~~~~~~~~~~~~~~~~^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_preparation_receipt_cannot_qualify_experimental_boot (test_frozen_first_load_procedure_v2.ProcedureV2Tests.test_preparation_receipt_cannot_qualify_experimental_boot)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure_v2.py", line 29, in test_preparation_receipt_cannot_qualify_experimental_boot
+    self.assertIsNotNone(v2);f=self.record()
+    ~~~~~~~~~~~~~~~~~~~~^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_recovery_still_requires_three_distinct_boots_and_stock_default (test_frozen_first_load_procedure_v2.ProcedureV2Tests.test_recovery_still_requires_three_distinct_boots_and_stock_default)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_procedure_v2.py", line 24, in test_recovery_still_requires_three_distinct_boots_and_stock_default
+    self.assertIsNotNone(v2);self.assertEqual(v2.validate_recovery(self.old,self.record(True))['recovery'],'PASS PROVIDED RECORD')
+    ~~~~~~~~~~~~~~~~~~~~^^^^
+AssertionError: unexpectedly None
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.053s
+
+FAILED (failures=6)

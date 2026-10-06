@@ -1,0 +1,10 @@
+{
+  "v2_pins": "UNCHANGED",
+  "experimental_image_and_entry_pins": "PASS; exact plan checked against source artifacts",
+  "previous_cycle04_manifest": "UNCHANGED",
+  "controller_change": "local evidence marker only, Cycle04 to Cycle05",
+  "stock_root_sha256": "ca6bc59a0b265084a78ca975ea5d69138d2af12459f2409bc0dda12966b49f3f",
+  "v2_tests": 22,
+  "implementation_changes": false,
+  "sgx_actions": 0
+}

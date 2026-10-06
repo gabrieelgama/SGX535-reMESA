@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-02T00:27:57.388912+00:00",
+  "experimental_selected_exactly_once": true,
+  "normal_userspace": true,
+  "physical_display_normal": true,
+  "local_sudo_succeeded": true,
+  "userspace_seen_before_boot_watch": true,
+  "source": "explicit current experimental-boot operator confirmation",
+  "literal_operator_reply": "EXPERIMENTAL selected exactly once; normal display/userspace within 600-second watch; local sudo-v succeeded; no retry or graphics/SGX commands",
+  "retry": false,
+  "sgx_actions": 0
+}

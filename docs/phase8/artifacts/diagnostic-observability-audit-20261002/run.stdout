@@ -1,0 +1,2 @@
+{"case":"recognized-fault","result":-1,"phase":11,"events":0,"stage_reached":21,"failure_stage":0,"failure_source":0,"raw_result":0,"status1":268435456,"callbacks":14,"samples":1}
+{"case":"exclusive-ownership-rejected","result":-1,"phase":11,"events":0,"stage_reached":21,"failure_stage":0,"failure_source":3,"raw_result":-1,"status1":16777216,"callbacks":14,"samples":1}

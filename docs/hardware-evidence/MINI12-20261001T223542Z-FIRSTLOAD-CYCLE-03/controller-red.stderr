@@ -1,0 +1,26 @@
+..E..
+======================================================================
+ERROR: test_stock_capture_still_runs_after_failed_experimental_sudo (__main__.ControllerTests.test_stock_capture_still_runs_after_failed_experimental_sudo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-offline/firstload-cycle03-20261001T223542Z/test_capture_controller.py", line 36, in test_stock_capture_still_runs_after_failed_experimental_sudo
+    with patch.object(m,'capture',return_value=self.result()) as run:m.main('stock-recovery')
+                                                                     ~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/gama/sgx535-offline/firstload-cycle03-20261001T223542Z/capture_once.py", line 62, in main
+    exp=json.loads((E/'experimental/decoded-records.json').read_text());expid=next(x for x in exp if 'guards' in x)['boot_id']
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/pathlib/_local.py", line 548, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/pathlib/_local.py", line 539, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/tmp5whcqpwe/experimental/decoded-records.json'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.226s
+
+FAILED (errors=1)

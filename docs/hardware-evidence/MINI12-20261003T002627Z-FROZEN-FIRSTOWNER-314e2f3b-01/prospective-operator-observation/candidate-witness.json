@@ -1,0 +1,19 @@
+{
+  "expected_boot_id": "89fc7306-6dac-4ab9-af62-360b7152ef22",
+  "expected_boot_id_source": "bounded unprivileged capture prefix",
+  "prior_boot_id": "f684ce25-dfdc-40bd-8426-c657f24c43ce",
+  "capture_status": 0,
+  "capture_stderr": "",
+  "host_duration_seconds": 18.140968378051184,
+  "selection_photo": false,
+  "stock_entry_visible_before_selection": true,
+  "experimental_selected_once": true,
+  "userspace_reached": true,
+  "display_normal": true,
+  "local_sudo_succeeded": true,
+  "userspace_seen_before_boot_watch": true,
+  "operator_recovery_confirmed": true,
+  "experimental_boots": 1,
+  "sgx_actions": 0,
+  "hot_module_actions": 0
+}

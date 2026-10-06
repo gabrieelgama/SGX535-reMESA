@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-02T00:55:24.661614+00:00",
+  "local_sudo_succeeded": true,
+  "normal_userspace": true,
+  "physical_display_normal": true,
+  "source": "current explicit local sudo-v success; existing physical STOCK readiness retained",
+  "literal_operator_reply": "sudo -v succeeded locally on the Mini 12. I explicitly authorize ONE fresh read-only STOCK preflight under the same scope. Do not reboot or select EXPERIMENTAL yet."
+}

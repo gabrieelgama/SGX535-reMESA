@@ -1,0 +1,6 @@
+{
+  "physical_recovery_controls": "available, explicitly reported by operator",
+  "stock_boot_id": "149fd195-9392-4aa6-a62a-efae01e7177e",
+  "source": "operator reply before writes",
+  "sgx_actions_this_session": 0
+}

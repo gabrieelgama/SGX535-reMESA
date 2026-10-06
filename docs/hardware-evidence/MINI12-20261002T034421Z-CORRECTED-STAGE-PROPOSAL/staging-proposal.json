@@ -1,0 +1,21 @@
+{
+  "classification": "OFFLINE STAGING PROPOSAL ONLY",
+  "new_initrd_destination": "/boot/initrd.img-5.10.240-antix.1-486-smp-sgx535-firstload-corrected-01",
+  "new_grub_title": "EXPERIMENTAL SGX535 rev121 CORRECTED FIRST-LOAD ONLY (no triangle)",
+  "new_grub_id": "sgx535-rev121-firstload-corrected-01",
+  "stock_initrd_sha256": "f02cde6c7e712fa0620f99438ef5dc81c131b481a84dc9dbc4f7b854c364e341",
+  "cycle06_initrd_destination": "/boot/initrd.img-5.10.240-antix.1-486-smp-sgx535-firstload-01",
+  "cycle06_initrd_sha256": "4ac6bd1bed7dbf53b3653037f3e6e757160672560176b1938a63488636efaa71",
+  "cycle06_custom_cfg_sha256": "181d33aa42cc9a73d35a50b5e7b1636121edb7a607c2949540fa04a4d0d32612",
+  "corrected_image_bytes": 50804478,
+  "corrected_image_sha256": "55e7a8be6f62c9a1d59f1c532b8790399c21a2706884747e504edfffb45bf52d",
+  "embedded_module_sha256": "2eaffd22637eef6b7b101f046d6fd9756b48c934818a7353f9aa705616014c1e",
+  "new_entry_bytes": 1004,
+  "new_entry_sha256": "16f0ef7abc9cf330808c843ed0b17afef99cd562407bd801edc3bed5295563f8",
+  "merged_custom_cfg_bytes": 2040,
+  "merged_custom_cfg_sha256": "269cce045b81da002318f9b478e07f05d235a773c3c82fd6557d8d50da7f38c8",
+  "old_custom_cfg_preserved_as_exact_prefix": true,
+  "menuentry_count": 2,
+  "savedefault_or_save_env": false,
+  "target_mutation": "NONE; proposal only"
+}

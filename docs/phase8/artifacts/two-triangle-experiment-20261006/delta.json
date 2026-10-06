@@ -1,0 +1,418 @@
+{
+  "experiment": "TWO_TRIANGLE_FOREGROUND_QUAD",
+  "GPU_result": "NOT YET OBSERVED",
+  "sgx_execution_authorized": false,
+  "maximum_future_invocations": 1,
+  "geometry": {
+    "before_vertices": 3,
+    "after_vertices": 4,
+    "positions": [
+      [
+        8.0,
+        8.0,
+        0.5,
+        1.0
+      ],
+      [
+        24.0,
+        8.0,
+        0.5,
+        1.0
+      ],
+      [
+        8.0,
+        24.0,
+        0.5,
+        1.0
+      ],
+      [
+        24.0,
+        24.0,
+        0.5,
+        1.0
+      ]
+    ],
+    "indices_before": [
+      0,
+      1,
+      2
+    ],
+    "indices_after": [
+      0,
+      1,
+      2,
+      1,
+      3,
+      2
+    ]
+  },
+  "packet_count": {
+    "before": "0x81400003",
+    "after": "0x81400006"
+  },
+  "layout": {
+    "TA_stream_before": 96,
+    "TA_stream_after": 128,
+    "TA_bytes": 68,
+    "vertex_stride": 32,
+    "indices_offset": 512,
+    "indices_capacity": 16384
+  },
+  "relocation_changes": [
+    {
+      "index": 41,
+      "before": {
+        "site": "ta_stream+00",
+        "owner_bo": "vertex_ta",
+        "target_bo": "pds",
+        "where": 24,
+        "buffer": 0,
+        "pre_add": 17280,
+        "dst_buffer": 2,
+        "target_alignment": 16,
+        "op": 0,
+        "mask": 268435455,
+        "shift": 262144,
+        "background": 1073741824,
+        "arg0": 0,
+        "arg1": 0
+      },
+      "after": {
+        "site": "ta_stream+00",
+        "owner_bo": "vertex_ta",
+        "target_bo": "pds",
+        "where": 32,
+        "buffer": 0,
+        "pre_add": 17280,
+        "dst_buffer": 2,
+        "target_alignment": 16,
+        "op": 0,
+        "mask": 268435455,
+        "shift": 262144,
+        "background": 1073741824,
+        "arg0": 0,
+        "arg1": 0
+      }
+    },
+    {
+      "index": 42,
+      "before": {
+        "site": "ta_stream+0c",
+        "owner_bo": "vertex_ta",
+        "target_bo": "pds",
+        "where": 27,
+        "buffer": 0,
+        "pre_add": 17220,
+        "dst_buffer": 2,
+        "target_alignment": 4,
+        "op": 0,
+        "mask": 4294967295,
+        "shift": 0,
+        "background": 0,
+        "arg0": 0,
+        "arg1": 0
+      },
+      "after": {
+        "site": "ta_stream+0c",
+        "owner_bo": "vertex_ta",
+        "target_bo": "pds",
+        "where": 35,
+        "buffer": 0,
+        "pre_add": 17220,
+        "dst_buffer": 2,
+        "target_alignment": 4,
+        "op": 0,
+        "mask": 4294967295,
+        "shift": 0,
+        "background": 0,
+        "arg0": 0,
+        "arg1": 0
+      }
+    },
+    {
+      "index": 43,
+      "before": {
+        "site": "ta_stream+14",
+        "owner_bo": "vertex_ta",
+        "target_bo": "pds",
+        "where": 29,
+        "buffer": 0,
+        "pre_add": 17024,
+        "dst_buffer": 2,
+        "target_alignment": 16,
+        "op": 0,
+        "mask": 268435455,
+        "shift": 262144,
+        "background": 0,
+        "arg0": 0,
+        "arg1": 0
+      },
+      "after": {
+        "site": "ta_stream+14",
+        "owner_bo": "vertex_ta",
+        "target_bo": "pds",
+        "where": 37,
+        "buffer": 0,
+        "pre_add": 17024,
+        "dst_buffer": 2,
+        "target_alignment": 16,
+        "op": 0,
+        "mask": 268435455,
+        "shift": 262144,
+        "background": 0,
+        "arg0": 0,
+        "arg1": 0
+      }
+    },
+    {
+      "index": 44,
+      "before": {
+        "site": "ta_stream+1c",
+        "owner_bo": "vertex_ta",
+        "target_bo": "pds",
+        "where": 31,
+        "buffer": 0,
+        "pre_add": 17408,
+        "dst_buffer": 2,
+        "target_alignment": 16,
+        "op": 0,
+        "mask": 268435455,
+        "shift": 262144,
+        "background": 1073741824,
+        "arg0": 0,
+        "arg1": 0
+      },
+      "after": {
+        "site": "ta_stream+1c",
+        "owner_bo": "vertex_ta",
+        "target_bo": "pds",
+        "where": 39,
+        "buffer": 0,
+        "pre_add": 17408,
+        "dst_buffer": 2,
+        "target_alignment": 16,
+        "op": 0,
+        "mask": 268435455,
+        "shift": 262144,
+        "background": 1073741824,
+        "arg0": 0,
+        "arg1": 0
+      }
+    },
+    {
+      "index": 45,
+      "before": {
+        "site": "ta_stream+28",
+        "owner_bo": "vertex_ta",
+        "target_bo": "pds",
+        "where": 34,
+        "buffer": 0,
+        "pre_add": 512,
+        "dst_buffer": 2,
+        "target_alignment": 4,
+        "op": 0,
+        "mask": 4294967295,
+        "shift": 0,
+        "background": 0,
+        "arg0": 0,
+        "arg1": 0
+      },
+      "after": {
+        "site": "ta_stream+28",
+        "owner_bo": "vertex_ta",
+        "target_bo": "pds",
+        "where": 42,
+        "buffer": 0,
+        "pre_add": 512,
+        "dst_buffer": 2,
+        "target_alignment": 4,
+        "op": 0,
+        "mask": 4294967295,
+        "shift": 0,
+        "background": 0,
+        "arg0": 0,
+        "arg1": 0
+      }
+    },
+    {
+      "index": 46,
+      "before": {
+        "site": "ta_stream+30",
+        "owner_bo": "vertex_ta",
+        "target_bo": "pds",
+        "where": 36,
+        "buffer": 0,
+        "pre_add": 16928,
+        "dst_buffer": 2,
+        "target_alignment": 16,
+        "op": 0,
+        "mask": 268435455,
+        "shift": 262144,
+        "background": 0,
+        "arg0": 0,
+        "arg1": 0
+      },
+      "after": {
+        "site": "ta_stream+30",
+        "owner_bo": "vertex_ta",
+        "target_bo": "pds",
+        "where": 44,
+        "buffer": 0,
+        "pre_add": 16928,
+        "dst_buffer": 2,
+        "target_alignment": 16,
+        "op": 0,
+        "mask": 268435455,
+        "shift": 262144,
+        "background": 0,
+        "arg0": 0,
+        "arg1": 0
+      }
+    },
+    {
+      "index": 47,
+      "before": {
+        "site": "ta_stream+38",
+        "owner_bo": "vertex_ta",
+        "target_bo": "pds",
+        "where": 38,
+        "buffer": 0,
+        "pre_add": 17504,
+        "dst_buffer": 2,
+        "target_alignment": 16,
+        "op": 0,
+        "mask": 268435455,
+        "shift": 262144,
+        "background": 1610612736,
+        "arg0": 0,
+        "arg1": 0
+      },
+      "after": {
+        "site": "ta_stream+38",
+        "owner_bo": "vertex_ta",
+        "target_bo": "pds",
+        "where": 46,
+        "buffer": 0,
+        "pre_add": 17504,
+        "dst_buffer": 2,
+        "target_alignment": 16,
+        "op": 0,
+        "mask": 268435455,
+        "shift": 262144,
+        "background": 1610612736,
+        "arg0": 0,
+        "arg1": 0
+      }
+    },
+    {
+      "index": 48,
+      "before": {
+        "site": "ta_registers+34",
+        "owner_bo": "control",
+        "target_bo": "vertex_ta",
+        "where": 65,
+        "buffer": 2,
+        "pre_add": 96,
+        "dst_buffer": 4,
+        "target_alignment": 4,
+        "op": 0,
+        "mask": 4294967295,
+        "shift": 0,
+        "background": 0,
+        "arg0": 0,
+        "arg1": 0
+      },
+      "after": {
+        "site": "ta_registers+34",
+        "owner_bo": "control",
+        "target_bo": "vertex_ta",
+        "where": 65,
+        "buffer": 2,
+        "pre_add": 128,
+        "dst_buffer": 4,
+        "target_alignment": 4,
+        "op": 0,
+        "mask": 4294967295,
+        "shift": 0,
+        "background": 0,
+        "arg0": 0,
+        "arg1": 0
+      }
+    }
+  ],
+  "shader_words_unchanged": [
+    "001f00ff",
+    "fca7f1f1"
+  ],
+  "source_overlay_files": [
+    "frozen_kernel_initial.inc",
+    "frozen_kernel_relocations.inc"
+  ],
+  "unchanged": [
+    "fragment/PDS/USE programs",
+    "triangle ISP state",
+    "TA/raster register values except stream address",
+    "PBE/surface/target",
+    "BO sizes/domains",
+    "UAPI/client",
+    "observer",
+    "lifecycle/source/capsule guards"
+  ],
+  "expected_pixels": {
+    "magenta": 256,
+    "zero": 768,
+    "bbox_inclusive": [
+      8,
+      8,
+      23,
+      23
+    ],
+    "scope": "predeclared CPU oracle, not an observed SGX fill contract"
+  },
+  "files": {
+    "frozen_kernel_initial.inc": {
+      "bytes": 7314,
+      "sha256": "f6096e7fded3bc7a20117672c71a45180d0e70373f8c1bd2e014b167567e1087"
+    },
+    "frozen_kernel_relocations.inc": {
+      "bytes": 3907,
+      "sha256": "0951c181b473527953336e65d63d11522e2a027d15c233ba3ce57c9799fc6e58"
+    },
+    "pds.expected.bin": {
+      "bytes": 131072,
+      "sha256": "3ac17a72dd212361691fccffea40843ad746db4710db76d1ea636e92cc43fe72"
+    },
+    "use.expected.bin": {
+      "bytes": 32768,
+      "sha256": "ca53ab9efb4465bc2722322769f74d46953560a2285e29637550f92fc5f4a3dc"
+    },
+    "vertex_ta.expected.bin": {
+      "bytes": 4096,
+      "sha256": "d3aaa4dfee233d70e8647ba42a140ffd7a3b89214c024a52155f9b9ede122875"
+    },
+    "background.expected.bin": {
+      "bytes": 4096,
+      "sha256": "b365c45568ab5e9c314640cb4604bed6bd3ec93af4b70cb3eca78298be3d1421"
+    },
+    "control.expected.bin": {
+      "bytes": 4096,
+      "sha256": "0a82b3c5bd9ce37da72837a8afb46fa9e6459f7444f57d6967999ac7b9fc0328"
+    },
+    "color.expected.bin": {
+      "bytes": 4096,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    "expected-color.bin": {
+      "bytes": 4096,
+      "sha256": "6e9af8e8b6576b979aa78816d44bd3b0ffd31b70e169a982e83736d63ab91729"
+    },
+    "scene.json": {
+      "bytes": 167241,
+      "sha256": "cc68a14b9581e309bd16b7edf579139de6cdf04d4698cf542bcc7d48e132f2ad"
+    },
+    "address-plan.json": {
+      "bytes": 32529,
+      "sha256": "6b70fbe9dc3418a41e892274c9087f7040de343dca6d5f5f44fb112ee898c593"
+    }
+  }
+}

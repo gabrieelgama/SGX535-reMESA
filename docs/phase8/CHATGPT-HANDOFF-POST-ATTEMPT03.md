@@ -1,5 +1,116 @@
 # ChatGPT handoff — post-Attempt-03, qualified target ABI evidence
 
+## Latest execution result: Attempt04 (2026-10-02)
+
+[Attempt04](../hardware-evidence/MINI12-20261002T011623Z-TRIANGLE-ATTEMPT-04/RESULT.md)
+passed56 sameboot guards and exclusive frozen-client staging, then stopped before
+client invocation on a wrapper assertion. A canonical DRM path was compared to
+an uncanonicalized bus alias; the corrected guard passes the retained valid
+mapping and rejects a wrong device offline. Corrected wrapper NOT RUN. No ioctl,
+SGX fire, readback, retry or reboot. Gate B exact off-screen readiness remains
+PASS; the identifier is not unspent retry permission. Stop for renewed explicit
+sameboot/corrected-invocation authorization. Earlier notices below are historical.
+
+
+## Latest result: Cycle06 (2026-10-02)
+
+[Cycle06](../hardware-evidence/MINI12-20261002T005013Z-FIRSTLOAD-CYCLE-06/RESULT.md)
+retrieved the exact ordered hook trace and passed55 experimental guards, including
+derivative identity/ownership, full kernel health and automatic timing. FIRST
+OWNER and LIVE FIRST LOAD: PASS. Cycle05 STOCK recovery remains verified.
+EXPERIMENTAL boot `29e27f75-7c84-4537-9ab8-8138bc3eac1d` is deliberately left
+running. Gate B: PASS for the exact frozen off-screen readiness action;
+whitelist `[MINI12-SGX535-REV121-FROZEN-32x32-SEQ1]`, pinned to this boot and lifecycle
+derivative. No SGX permission or execution; no triangle. Hot transition stays
+prohibited. LCD handoff remains unqualified. Stop for separate SGX authorization.
+Earlier notices below are historical.
+
+
+## Latest result: Cycle05 (2026-10-02)
+
+[Cycle05](../hardware-evidence/MINI12-20261002T001828Z-FIRSTLOAD-CYCLE-05/RESULT.md)
+observed the expected derivative Live with PCI/DRM/fb/IRQ16 ownership and normal
+userspace. Its capture stopped on a source-proven permissive module-signature
+notice before reading the hook trace. The narrow health fix and 330 tests pass;
+the original STOP remains preserved. STOCK recovery passed 55 guards and all
+three boot IDs are now observed. First ownership still lacks the required trace.
+Gate B BLOCKED; whitelist `[]`; no SGX execution. One newly authorized unchanged
+experimental boot/passive capture is the minimum remaining first-load action.
+Earlier notices below are historical.
+
+
+## Latest result: Cycle04 (2026-10-02)
+
+[Cycle04](first-load-cycle-04-result.md) passed its 54-guard fresh STOCK preflight
+and actual menu-photo review. EXPERIMENTAL was selected once, then entered HOLD
+when the operator recognized a persistent stalled boot. Its cause remains UNKNOWN;
+the operator reports this behavior outside the experiment as well. No experimental
+connection ran, so boot ID, loaded derivative note, hook trace and first-owner
+capture are missing. No candidate/image change is justified by that observation.
+
+After the authorized manual power boundary, one normal STOCK boot and 55-guard
+capture verified original ownership, services, kernel health, preserved files
+and saved default. Current STOCK restoration is PASS. Full three-boot LIVE
+RECOVERY and FIRST OWNER remain NOT ESTABLISHED because the experimental capture
+is missing. Capture uptime 162.93–170.02s passed the v2 bounds. No SGX operation,
+hot replacement, restaging or retry occurred. Gate B BLOCKED; whitelist `[]`.
+
+The single blocker is the missing experimental first-owner raw capture. The
+minimum next experiment is one separately authorized non-SGX first-load/recovery
+cycle with the unchanged pinned files and v2 procedure. Cycle04 is spent; no
+new experimental selection or SGX execution is authorized. Earlier notices below
+are historical. Verification: 329 pre-cycle tests, 22 post-cycle v2 tests PASS;
+existing ABI/image/UBSan/generator/dry guards unchanged.
+
+## Latest checkpoint: Cycle04 preparation (2026-10-01)
+
+[Cycle04 preparation](cycle04-preparation.md) used one authorized STOCK read-only
+connection: 54 root guards and existing-file creation receipts passed. Current
+original identity/ownership/services/health, stock files/default and staged hashes
+are independently captured. Automatic uptime 1430.18–1436.84s and host duration
+9.757s bound that observation. Process-start data does not establish HDD boot or
+usable-userspace duration. Stock boot exceeding 120 seconds remains operator-reported.
+
+Separate v2 tools preserve v1 and Cycle03's 120-second failures. The prospective
+bounds are 600 seconds for boot watch, 1200 kernel-boot seconds for capture completion,
+40 seconds for the connection and35 seconds for its root child. No manual exact
+elapsed typing is needed for capture; boot-watch/operator evidence remains
+separate. 329 tests passed; 14 boot-analysis tests, three UBSan harnesses, generator,
+CRC/dry guards and independent unchanged-image inspection passed.
+
+Gate B BLOCKED; whitelist `[]`; LIVE FIRST OWNER/full three-boot RECOVERY still
+NOT ESTABLISHED; no SGX action or triangle. No experimental boot, restaging or
+hot transition occurred. Existing candidates/image remain unchanged. The next
+boundary is new explicit authorization for ONE Cycle04 non-SGX experimental/stock
+cycle with these reviewed bounds, actual pre-selection photo and fresh guards.
+Preparation authorization does not cover that boot. Earlier notices below are
+historical.
+
+
+## Latest result: first-load cycle03 (2026-10-01)
+
+[Cycle03](first-load-cycle-03-result.md) passed a fresh 53-guard STOCK preflight
+and existing staged-file receipt checks. The operator reported experimental
+userspace/display at approximately 120 seconds. No experimental connection was
+made because no remaining capture budget was established. The menu photo was
+not captured; the operator's correction is preserved. Experimental boot identity,
+loaded note, hook trace and ownership evidence are missing.
+
+Stock recovery capture did not run because readiness/deadline facts were not
+established. The operator confirmed current STOCK userspace and a normal physical
+display; that is an operator observation, not fresh module/ownership/kernel-health
+proof. LIVE FIRST LOAD, FIRST OWNER and full LIVE RECOVERY remain NOT ESTABLISHED.
+The cycle is spent. No restaging, hot transition, fixed ioctl or SGX fire occurred.
+
+Gate B remains BLOCKED; SGX whitelist `[]`; FIRST TRIANGLE NOT ATTEMPTED.
+307 repository tests, 14 boot-analysis tests, three UBSan harnesses and existing
+CRC/generator/dry guards passed. The pinned image/candidates remain unchanged.
+The [timing redesign](first-load-capture-timing-redesign.md) is a draft for review;
+current 120-second guards are unchanged. The next step is OFFLINE design review,
+then separately scoped implementation/qualification and live authorization.
+Earlier current-state and next-step notices below are historical.
+
+
 ## Current result: cycle02 (2026-10-01)
 
 [Cycle02 evidence](first-load-cycle-02-result.md) records a corrected and tested health guard, a fresh 49-guard

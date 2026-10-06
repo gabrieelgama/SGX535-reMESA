@@ -1,0 +1,31 @@
+{
+  "scope": "single passive identity/path read; no writes, module/DRM open, ioctl, or SGX",
+  "argv": [
+    "ssh",
+    "-T",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "ConnectTimeout=8",
+    "-o",
+    "ConnectionAttempts=1",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "IdentitiesOnly=yes",
+    "-o",
+    "PasswordAuthentication=no",
+    "-o",
+    "KbdInteractiveAuthentication=no",
+    "-o",
+    "UserKnownHostsFile=/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20260927-H0/ssh_known_hosts",
+    "-i",
+    "/home/gama/.ssh/id_ed25519_sgx535_h0",
+    "-p",
+    "22",
+    "gama@192.168.18.90",
+    "sudo -n -p '' python3 -I -B -S -c 'import os,hashlib,json,stat,subprocess\npaths=['\"'\"'/boot/vmlinuz-5.10.240-antix.1-486-smp'\"'\"','\"'\"'/boot/initrd.img-5.10.240-antix.1-486-smp'\"'\"','\"'\"'/boot/initrd.img-5.10.240-antix.1-486-smp-sgx535-firstload-01'\"'\"','\"'\"'/boot/grub/grub.cfg'\"'\"','\"'\"'/boot/grub/grubenv'\"'\"','\"'\"'/boot/grub/custom.cfg'\"'\"']\ndef read(p):\n with open(p,'\"'\"'rb'\"'\"') as f:return f.read()\ndef ident(p):\n try:\n  s=os.lstat(p)\n  d={'\"'\"'exists'\"'\"':True,'\"'\"'mode'\"'\"':oct(stat.S_IMODE(s.st_mode)),'\"'\"'uid'\"'\"':s.st_uid,'\"'\"'gid'\"'\"':s.st_gid,'\"'\"'nlink'\"'\"':s.st_nlink,'\"'\"'regular'\"'\"':stat.S_ISREG(s.st_mode),'\"'\"'symlink'\"'\"':stat.S_ISLNK(s.st_mode)}\n  if d['\"'\"'regular'\"'\"']:\n   b=read(p);d.update(size=len(b),sha256=hashlib.sha256(b).hexdigest())\n  return d\n except FileNotFoundError:return {'\"'\"'exists'\"'\"':False}\nr={'\"'\"'boot_id'\"'\"':read('\"'\"'/proc/sys/kernel/random/boot_id'\"'\"').decode().strip(),'\"'\"'uname'\"'\"':os.uname()._asdict(),'\"'\"'product'\"'\"':read('\"'\"'/sys/class/dmi/id/product_name'\"'\"').decode().strip(),'\"'\"'taint'\"'\"':read('\"'\"'/proc/sys/kernel/tainted'\"'\"').decode().strip(),'\"'\"'loaded'\"'\"':{}}\ntry:r['\"'\"'loaded'\"'\"']={'\"'\"'state'\"'\"':read('\"'\"'/sys/module/gma500_gfx/initstate'\"'\"').decode().strip(),'\"'\"'note_sha256'\"'\"':hashlib.sha256(read('\"'\"'/sys/module/gma500_gfx/notes/.note.gnu.build-id'\"'\"')).hexdigest(),'\"'\"'pci_driver'\"'\"':os.path.realpath('\"'\"'/sys/bus/pci/devices/0000:00:02.0/driver'\"'\"'),'\"'\"'drm_device'\"'\"':os.path.realpath('\"'\"'/sys/class/drm/card0/device'\"'\"')}\nexcept Exception as x:r['\"'\"'loaded_error'\"'\"']=repr(x)\nr['\"'\"'paths'\"'\"']={p:ident(p) for p in paths}\nr['\"'\"'cmdline'\"'\"']=read('\"'\"'/proc/cmdline'\"'\"').decode().strip()\nprint(json.dumps(r))\n'"
+  ],
+  "stdin": "DEVNULL",
+  "root_source_sha256": "c0122d5449466bd69caeecc5d1b6532f9089f3e0620ff8499833bddf53765be7"
+}

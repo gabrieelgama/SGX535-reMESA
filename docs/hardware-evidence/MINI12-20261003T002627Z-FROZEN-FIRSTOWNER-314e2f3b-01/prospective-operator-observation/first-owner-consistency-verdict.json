@@ -1,0 +1,15 @@
+{
+  "classification": "CONSISTENT SUPPLIED FIRST-OWNER OPERATOR-OBSERVATION RECORDS",
+  "boot_id": "89fc7306-6dac-4ab9-af62-360b7152ef22",
+  "build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+  "live_provenance": "INDEPENDENT VERIFICATION REQUIRED",
+  "staging_procedure": "NOT APPROVED BY THIS CHECK",
+  "boot_authorized": false,
+  "sgx_authorized": false,
+  "opening_decision": "NOT EVALUATED",
+  "triangle_established": false,
+  "procedure_id": "MINI12-FROZEN-FIRSTOWNER-OPERATOR-OBSERVATION-01",
+  "evidence_kind": "direct_operator_report",
+  "photograph_supplied": false,
+  "legacy_v2_satisfied": false
+}

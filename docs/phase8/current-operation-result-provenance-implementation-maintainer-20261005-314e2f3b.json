@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "decision_id": "MINI12-CURRENT-OPERATION-RESULT-PROVENANCE-MINIMUM-IMPLEMENTATION-20261005-314e2f3b",
+  "decision": "APPROVE_MINIMUM_IMPLEMENTATION",
+  "decision_timestamp_utc": "2026-10-05T00:49:58Z",
+  "decision_authority": {
+    "role": "project maintainer",
+    "source": "Explicit current instruction authorizing minimum implementation approval if bounded technical review passes",
+    "recorded_by": "Codex performing the delegated bounded implementation review"
+  },
+  "request": {
+    "path": "/home/gama/sgx535-gfx/docs/phase8/current-operation-result-provenance-implementation-review-request-20261005-314e2f3b.json",
+    "request_id": "MINI12-CURRENT-OPERATION-RESULT-PROVENANCE-IMPLEMENTATION-REVIEW-20261005-314e2f3b"
+  },
+  "implementation_review_result": "PASS FOR MINIMUM OFFLINE IMPLEMENTATION; qualification and live readiness not yet established",
+  "review_basis": {
+    "causal_admission": "Qualified kernel enables HAVE_SYSCALL_TRACEPOINTS and exports enumeration/probe registration APIs. Observe real sys_enter/sys_exit and actual task lifetime; verify approved executable at permitted backend admission.",
+    "accepted_lineage": "Bind one private observer to fresh backend/embedded service; retain acceptance only after matched real sampler observations pass unchanged qualified service acceptance.",
+    "terminal_and_color": "Tap actual permitted service terminal return and same retired owner color capture; retain full bytes before release.",
+    "immutability_nonreuse": "One static boot-lifetime capsule, no rearm API, frozen payload, explicit invalidity/loss; independent module retention.",
+    "export": "Narrow root-readable binary proc record; no fixed ioctl ABI or approved-client change.",
+    "qualification": "Portable shared core plus real service integration fixtures, kernel build/ABI/import checks, exporter/archive agreement and failure tests."
+  },
+  "minimum_scope": [
+    "Independent passive observer module using existing generic syscall tracepoints",
+    "Shared bounded capsule state machine and explicit byte serialization",
+    "Permitted backend/service/readback taps only; no excluded entry/reporting access or modification",
+    "Read-only capsule materialization and conservative offline agreement checker",
+    "Focused tests, sequential qualified builds and dependency-scoped module/image qualification"
+  ],
+  "invariants_to_preserve": {
+    "I1": "Qualified observer establishes actual approved public call lifetime and exactly one eligible admitted backend operation T, with continuous context. Uncertainty is invalidity.",
+    "I2": "Only that admission can create its private bounded evidence capsule; it is not an arbitrary response formatter.",
+    "I3": "Only source-matched qualified hardware-origin acceptance transitions for T can populate authoritative accepted evidence. Software claims/equal numeric sequences alone cannot.",
+    "I4": "Terminal writer observes actual service result/phase of T from permitted interfaces, not legacy response scalars.",
+    "I5": "Color writer reads T storage while retired/readback-valid and freezes all 4096 bytes before invalidation.",
+    "I6": "No other lifetime can write/rebind this capsule; faithful snapshots remain permitted.",
+    "I7": "Closure requires complete observation/no second admission; immutable retention and trusted fresh-instance materialization preserve payload origin.",
+    "I8": "Protected archive independently rereads actual preserved bytes; hashes alone cannot supply producer provenance."
+  },
+  "exact_context": {
+    "boot_id": "89fc7306-6dac-4ab9-af62-360b7152ef22",
+    "module_build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+    "action": "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1",
+    "freshness": "Boot and 70/70 first-owner facts are preserved historical observations, not fresh invocation guards."
+  },
+  "approved_response_client": {
+    "source": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot_response.c",
+      "size": 5514,
+      "sha256": "919c2611e048e4a660ecae3542264adf5a5367d9b0fbe7fbceff2f45f90adedf"
+    },
+    "binary": {
+      "path": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-build-01/frozen-triangle-one-shot-response-i386",
+      "size": 775264,
+      "sha256": "2f84917f96db2859678797a327d40d9638325e5c5efb6e0dfccef44d756b4835"
+    },
+    "uapi": {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_uapi.h",
+      "size": 760,
+      "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420"
+    }
+  },
+  "unchanged_context_bindings": {
+    "kernel": "5.10.240-antix.1-486-smp",
+    "architecture": "i686",
+    "module": {
+      "path": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/module/gma500_gfx.ko",
+      "size_bytes": 244960,
+      "sha256": "4141a07c1f2d2ffc9ab2770b7b4cf654f68c396275dad15f0ddc68192529d8e6",
+      "build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+      "loaded_note_sha256": "edb1e3e59cfd70c48d400bec89f2a30c1a436b05bf115bc1a05581abc153bdc9",
+      "identity_evidence": [
+        "module_identity",
+        "qualification",
+        "first_owner_records"
+      ]
+    },
+    "diagnostic_image": {
+      "source_path": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/image/build-01/initrd.img-sgx535-firstload-diagnostic-01",
+      "staged_path": "/boot/initrd.img-5.10.240-antix.1-486-smp-sgx535-firstload-314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+      "size_bytes": 50805231,
+      "sha256": "fe64b3dcfe74b78a6d96edcd4fd7c118c3901fcff8631afec6c14647da292e3c",
+      "embedded_module_sha256": "4141a07c1f2d2ffc9ab2770b7b4cf654f68c396275dad15f0ddc68192529d8e6",
+      "identity_evidence": [
+        "image_identity",
+        "image_qualification",
+        "poststage_records",
+        "first_owner_records",
+        "menu_receipt"
+      ]
+    }
+  },
+  "permission_boundary": "Offline implementation/build/test/qualification only under current maintainer direction. No technical confirmation of old G01_prime/G02_prime; new identities require applicable binding, not old hash reuse.",
+  "implementation_authorized": true,
+  "offline_builds_authorized": true,
+  "offline_tests_authorized": true,
+  "staging_authorized": false,
+  "hardware_contact_authorized": false,
+  "fresh_guard_collection_authorized": false,
+  "live_use_authorized": false,
+  "ioctl_execution_authorized": false,
+  "sgx_execution_authorized": false,
+  "retry_authorized": false,
+  "restricted_material_access_authorized": false,
+  "contamination_stop_rule": "If a design branch requires excluded/UNKNOWN material, reconstruction, derivation, indirect recovery, historical-wrapper recreation or equivalent indirect substitution for a blocked operation, STOP that branch and return its dependency to review. Do not infer hidden behavior or obtain material through another route.",
+  "gate_b": "PASS FOR EXACT OFFSCREEN READINESS",
+  "whitelist": [
+    "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1"
+  ],
+  "sgx_invocations": 0,
+  "hardware_interactions_this_task": 0,
+  "triangle": "NOT ATTEMPTED",
+  "historical_records_unchanged": true
+}

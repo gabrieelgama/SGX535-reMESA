@@ -1,0 +1,96 @@
+2911: #ifdef CONFIG_MODULE_SIG
+2912: static int module_sig_check(struct load_info *info, int flags)
+2913: {
+2914: 	int err = -ENODATA;
+2915: 	const unsigned long markerlen = sizeof(MODULE_SIG_STRING) - 1;
+2916: 	const char *reason;
+2917: 	const void *mod = info->hdr;
+2918: 
+2919: 	/*
+2920: 	 * Require flags == 0, as a module with version information
+2921: 	 * removed is no longer the module that was signed
+2922: 	 */
+2923: 	if (flags == 0 &&
+2924: 	    info->len > markerlen &&
+2925: 	    memcmp(mod + info->len - markerlen, MODULE_SIG_STRING, markerlen) == 0) {
+2926: 		/* We truncate the module to discard the signature */
+2927: 		info->len -= markerlen;
+2928: 		err = mod_verify_sig(mod, info);
+2929: 	}
+2930: 
+2931: 	switch (err) {
+2932: 	case 0:
+2933: 		info->sig_ok = true;
+2934: 		return 0;
+2935: 
+2936: 		/* We don't permit modules to be loaded into trusted kernels
+2937: 		 * without a valid signature on them, but if we're not
+2938: 		 * enforcing, certain errors are non-fatal.
+2939: 		 */
+2940: 	case -ENODATA:
+2941: 		reason = "unsigned module";
+2942: 		break;
+2943: 	case -ENOPKG:
+2944: 		reason = "module with unsupported crypto";
+2945: 		break;
+2946: 	case -ENOKEY:
+2947: 		reason = "module with unavailable key";
+2948: 		break;
+2949: 
+2950: 		/* All other errors are fatal, including nomem, unparseable
+2951: 		 * signatures and signature check failures - even if signatures
+2952: 		 * aren't required.
+2953: 		 */
+2954: 	default:
+2955: 		return err;
+2956: 	}
+2957: 
+2958: 	if (is_module_sig_enforced()) {
+2959: 		pr_notice("Loading of %s is rejected\n", reason);
+2960: 		return -EKEYREJECTED;
+2961: 	}
+2962: 
+2963: 	return security_locked_down(LOCKDOWN_MODULE_SIGNATURE);
+2964: }
+2965: #else /* !CONFIG_MODULE_SIG */
+2966: static int module_sig_check(struct load_info *info, int flags)
+2967: {
+2968: 	return 0;
+2969: }
+2970: #endif /* !CONFIG_MODULE_SIG */
+2971: 
+2972: static int validate_section_offset(struct load_info *info, Elf_Shdr *shdr)
+2973: {
+2974: 	unsigned long secend;
+2975: 
+3956: 	 * of a corrupt module causing problems before
+3957: 	 * we even get to the signature check.
+3958: 	 *
+3959: 	 * The check will also adjust info->len by stripping
+3960: 	 * off the sig length at the end of the module, making
+3961: 	 * checks against info->len more correct.
+3962: 	 */
+3963: 	err = module_sig_check(info, flags);
+3964: 	if (err)
+3965: 		goto free_copy;
+3966: 
+3967: 	/*
+3968: 	 * Do basic sanity checks against the ELF header and
+3969: 	 * sections.
+3970: 	 */
+3971: 	err = elf_validity_check(info);
+3972: 	if (err) {
+3973: 		pr_err("Module has invalid ELF structures\n");
+3974: 		goto free_copy;
+3975: 	}
+3976: 
+3977: 	/*
+4019: #ifdef CONFIG_MODULE_SIG
+4020: 	mod->sig_ok = info->sig_ok;
+4021: 	if (!mod->sig_ok) {
+4022: 		pr_notice_once("%s: module verification failed: signature "
+4023: 			       "and/or required key missing - tainting "
+4024: 			       "kernel\n", mod->name);
+4025: 		add_taint_module(mod, TAINT_UNSIGNED_MODULE, LOCKDEP_STILL_OK);
+4026: 	}
+4027: #endif

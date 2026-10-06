@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "prepared_timestamp_utc": "2026-10-04T20:57:15Z",
+  "decision": null,
+  "decision_authority": null,
+  "decision_timestamp_utc": null,
+  "approved": false,
+  "exact_context": {
+    "boot_id": "89fc7306-6dac-4ab9-af62-360b7152ef22",
+    "module_build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+    "action": "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1",
+    "freshness": "Boot and 70/70 first-owner facts are preserved historical observations, not fresh invocation guards."
+  },
+  "approved_response_client": {
+    "source": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot_response.c",
+      "size": 5514,
+      "sha256": "919c2611e048e4a660ecae3542264adf5a5367d9b0fbe7fbceff2f45f90adedf"
+    },
+    "binary": {
+      "path": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-build-01/frozen-triangle-one-shot-response-i386",
+      "size": 775264,
+      "sha256": "2f84917f96db2859678797a327d40d9638325e5c5efb6e0dfccef44d756b4835"
+    },
+    "uapi": {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_uapi.h",
+      "size": 760,
+      "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420"
+    }
+  },
+  "unchanged_context_bindings": {
+    "kernel": "5.10.240-antix.1-486-smp",
+    "architecture": "i686",
+    "module": {
+      "path": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/module/gma500_gfx.ko",
+      "size_bytes": 244960,
+      "sha256": "4141a07c1f2d2ffc9ab2770b7b4cf654f68c396275dad15f0ddc68192529d8e6",
+      "build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+      "loaded_note_sha256": "edb1e3e59cfd70c48d400bec89f2a30c1a436b05bf115bc1a05581abc153bdc9",
+      "identity_evidence": [
+        "module_identity",
+        "qualification",
+        "first_owner_records"
+      ]
+    },
+    "diagnostic_image": {
+      "source_path": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/image/build-01/initrd.img-sgx535-firstload-diagnostic-01",
+      "staged_path": "/boot/initrd.img-5.10.240-antix.1-486-smp-sgx535-firstload-314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+      "size_bytes": 50805231,
+      "sha256": "fe64b3dcfe74b78a6d96edcd4fd7c118c3901fcff8631afec6c14647da292e3c",
+      "embedded_module_sha256": "4141a07c1f2d2ffc9ab2770b7b4cf654f68c396275dad15f0ddc68192529d8e6",
+      "identity_evidence": [
+        "image_identity",
+        "image_qualification",
+        "poststage_records",
+        "first_owner_records",
+        "menu_receipt"
+      ]
+    }
+  },
+  "analysis_finding": "SESSION-TO-RESPONSE PROPERTY: NOT ESTABLISHED",
+  "same_owner_transaction_property": "Authoritative response accepted state originates from the fresh current-ioctl active hardware session, directly or through a faithful snapshot; all returned terminal state/results and color information faithfully represent that same operation captured while valid.",
+  "unproved_clauses": [
+    {
+      "id": "G01",
+      "property": "The accepted state underlying the authoritative response derives from the actual qualified status source of the freshly initialized active hardware owner for this ioctl, directly or by a faithful snapshot; no independent/stale session transition lineage substitutes its state.",
+      "question": "Does the exact qualified boundary guarantee this current-ioctl accepted-event lineage? A proof may use the conditional fresh single-transition theorem below, or a different independently permitted semantic guarantee; literal embedded-service object identity is not required."
+    },
+    {
+      "id": "G02",
+      "property": "On authoritative successful return, all claimed terminal ledger/phase/results and color bytes/summaries faithfully represent the one current ioctl's hardware-backed session and retirement-gated color capture, captured while their source lifetime was valid, with no stale or mixed-operation substitution.",
+      "question": "Does the exact qualified boundary guarantee this common-current-operation projection? A valid retained snapshot made before owner release is allowed; owner persistence through userspace file preservation and implementation intent are not required."
+    }
+  ],
+  "evidence": {
+    "original_bounded_question": "/home/gama/sgx535-gfx/docs/phase8/accepted-outcome-export-property-review-request-20261004-314e2f3b.json",
+    "compositional_finding": "/home/gama/sgx535-gfx/docs/phase8/session-response-binding-property-finding-20261004.md",
+    "exact_client_approval": "/home/gama/sgx535-gfx/docs/phase8/response-export-client-substitution-maintainer-20261004-314e2f3b.json",
+    "clean_room_scope": "/home/gama/sgx535-gfx/docs/phase8/pre07-clean-room-review-scope-20261004.md",
+    "qualified_client_metadata": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-qualification.json",
+    "synthetic_differential_metadata": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/SYNTHETIC-paired-evidence/results.json",
+    "source_manifest": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/source-manifest.json",
+    "negative_proof_finding": "/home/gama/sgx535-gfx/docs/phase8/session-response-binding-negative-proof-review-20261004.md"
+  },
+  "allowed_inputs": [
+    "Permitted owner/session/service/backend API signatures, embedding, acceptance/reset/retirement/readback invariants.",
+    "Public UAPI and exact approved response exporter source/behavior.",
+    "Existing unrestricted qualification metadata and CPU mock tests, within their established limits.",
+    "Unrestricted evidence requirements and approved clean-room scope.",
+    "Independently permitted property-level guarantees attributable to this exact qualified artifact, if available."
+  ],
+  "forbidden_inputs_and_actions": [
+    "Excluded ioctl-entry/reporting or historical wrapper contents, control flow, integration tests revealing those contents, or reconstruction hints.",
+    "Alternate representations, disassembly, indirect recovery, inferred hidden behavior or derivation from restricted material.",
+    "Equivalent indirect substitution for the blocked operation or recreation of restricted entry/reporting/wrapper implementation.",
+    "Hardware contact, live guards/logs, staging, installation, boot, recovery, client/ioctl/SGX execution or retry.",
+    "Kernel/module/UAPI/client changes, patches, builds, implementation or deployment."
+  ],
+  "contamination_stop_rule": "If a branch requires restricted/UNKNOWN inputs or would derive/recover excluded material, STOP that branch. Do not infer that missing access proves an implementation defect.",
+  "representation_policy": {
+    "raw_status_journal_required": false,
+    "new_token_uuid_required": false,
+    "uapi_change_required": false,
+    "module_change_necessary": "NOT YET DEMONSTRATED"
+  },
+  "gate_b": "PASS FOR EXACT OFFSCREEN READINESS",
+  "whitelist": [
+    "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1"
+  ],
+  "pre07": "BLOCKED",
+  "design_status": "PARTIAL",
+  "ready_for_implementation_review": false,
+  "ready_for_execution_authorization": false,
+  "implementation_authorized": false,
+  "staging_authorized": false,
+  "hardware_contact_authorized": false,
+  "fresh_guard_collection_authorized": false,
+  "sgx_execution_authorized": false,
+  "sgx_invocations": 0,
+  "hardware_interactions": 0,
+  "triangle": "NOT ATTEMPTED",
+  "preservation": "New pending untracked request plus new finding only. Original requests/fallback/authority/handoff/evidence/artifacts unchanged. No stage/commit.",
+  "request_id": "MINI12-PRE07-MINIMUM-SESSION-RESPONSE-PROPERTY-REVIEW-20261004-314e2f3b",
+  "record_kind": "NEW PENDING SEPARATE G01/G02 SEMANTIC CONFIRMATION REQUEST; NO APPROVAL",
+  "scope": "Property-only confirmation/denial of weakest sufficient G01 acceptance lineage and G02 observable projection for exact approved context. No caller intent, embedded service address, hidden assignments/source/control flow or restricted access requested.",
+  "question": "Confirm or deny G01 accepted-state current-ioctl lineage and G02 common authoritative successful-response projection separately, using permitted artifact-specific guarantees. Literal service address and implementation intent are not required.",
+  "property_confirmation": null,
+  "requested_review_result": {
+    "per_clause_findings": [
+      "ESTABLISHED",
+      "DISPROVEN",
+      "NOT ESTABLISHED FROM PERMITTED EVIDENCE"
+    ],
+    "required_support": "Return a separate finding for each clause, exact artifact scope, actual permitted interface/evidence supporting it and every conditional premise. Disproof requires permitted counterevidence about the actual guarantee; generic API freedom is not proof of actual erroneous code. No excluded implementation contents/hints requested.",
+    "limit": "Neither a technical finding nor maintainer assertion alone creates fresh live provenance, PRE07 readiness, staging/hardware authority or execution authorization."
+  },
+  "qualification_limit": "Component/mock/ABI evidence does not establish actual kernel argument pairing or response field origin. Existing zero-invocation first-owner evidence cannot do so.",
+  "confirmation_mechanism_available": "NOT ESTABLISHED from available permitted evidence; no issuer/access capability invented.",
+  "refines_request": "/home/gama/sgx535-gfx/docs/phase8/session-response-binding-property-review-request-20261004-314e2f3b.json",
+  "clause_findings": {
+    "G01": "NOT ESTABLISHED FROM PERMITTED EVIDENCE",
+    "G02": "NOT ESTABLISHED FROM PERMITTED EVIDENCE",
+    "G01_isolated_fresh_acceptance_theorem": "CONDITIONALLY PROVEN; exact runtime/caller premises below are not established for the ioctl",
+    "candidate_clause_disproven": false
+  },
+  "conditional_g01_proof": {
+    "premises": [
+      "The backend owner is freshly constructed for this operation; backend_begin succeeds.",
+      "Real qualified backend ops/status source and one stable backend context are used.",
+      "One uninterrupted run_once is the only session transition producer; no independent advances, rebinding/copies, concurrent operations, direct writes or owner/backend substitution.",
+      "The required supplied sequence q is nonzero."
+    ],
+    "derivation": "Fresh backend-owner session sequence is0. run_once/fire assigns nonzero q only to its service session. If distinct, backend-owner sequence stays0 and real sample rejects before supplying completion status to acceptance. Hence accepted completion under these premises implies same-session pairing.",
+    "premises_established_for_actual_ioctl": false,
+    "limit": "One userspace ioctl does not prove one internal transition producer; matching sequences alone do not prove pointer identity. TA fire and earlier hardware reads can precede the rejected completion sample. This is not a pre-issuance safety guarantee.",
+    "generic_api_negative_result": "Detached copied sessions with equal sequence can accept through stage APIs if their ordinary preconditions hold. USE_RELEASE also requires backend-owner completion, but it does not compare session pointers. These are source-level hypothetical API facts, not an actual candidate counterexample."
+  },
+  "g02_negative_result": "Readback checks the supplied owner's live retired state; field/image consistency cannot exclude using saved terminal values from another lifetime. No permitted helper constructs the full typed public response from one owner. Initial userspace zeros and exporter fidelity do not authenticate field origins.",
+  "per_clause_confirmation": {
+    "G01": null,
+    "G02": null
+  },
+  "source_anchors": [
+    {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_backend.c",
+      "lines": [
+        383,
+        409
+      ],
+      "fact": "Checks its owner's embedded service pointer; actual service argument is not passed to begin."
+    },
+    {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_backend.c",
+      "lines": [
+        58,
+        101
+      ],
+      "fact": "Actual completion sampling requires backend-owner sequence equality, active/power/deadline and IRQ owner."
+    },
+    {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_backend.c",
+      "lines": [
+        361,
+        369
+      ],
+      "fact": "Release requires backend-owner completion phase; not a pointer comparison with supplied service session."
+    },
+    {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_fixed_service.c",
+      "lines": [
+        287,
+        329
+      ],
+      "fact": "run_once advances supplied service session and independently supplies callback context."
+    },
+    {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_kernel_contract.c",
+      "lines": [
+        841,
+        912
+      ],
+      "fact": "Session initialization zeros sequence; enter_fire is the nonzero assignment in qualified transitions."
+    },
+    {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_bo_owner.c",
+      "lines": [
+        204,
+        231
+      ],
+      "fact": "Same-owner retirement-gated readback; generic summary/raw output pointers."
+    },
+    {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_fixed_service.c",
+      "lines": [
+        212,
+        217
+      ],
+      "fact": "Copied-session test rejects unequal sequence; no equal-sequence pointer mismatch assertion."
+    },
+    {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_uapi.h",
+      "lines": [
+        10,
+        27
+      ],
+      "fact": "Public layout lacks same-operation authoritative projection postcondition."
+    }
+  ],
+  "fallback_state": {
+    "path": "/home/gama/sgx535-gfx/docs/phase8/session-response-binding-independent-design-review-request-20261004-314e2f3b.json",
+    "activated": false,
+    "approved": false,
+    "modified": false,
+    "reason": "Available permitted artifact proof is exhausted, but property confirmation has not been obtained. This reduced request remains a property-only path; no automatic design activation or implementation gate."
+  }
+}

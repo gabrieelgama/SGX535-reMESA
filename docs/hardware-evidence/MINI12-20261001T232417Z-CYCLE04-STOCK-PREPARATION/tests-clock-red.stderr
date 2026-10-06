@@ -1,0 +1,32 @@
+.......FF.F...
+======================================================================
+FAIL: test_receipt_rejects_disagreeing_kernel_or_architecture (test_frozen_first_load_capture_v2.CaptureV2Tests.test_receipt_rejects_disagreeing_kernel_or_architecture) (field='kernel')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 55, in test_receipt_rejects_disagreeing_kernel_or_architecture
+    with self.subTest(field=field),self.assertRaises(ValueError):v2.validate_receipt(mutant,0,b'',1,'stock_preparation')
+                                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_receipt_rejects_disagreeing_kernel_or_architecture (test_frozen_first_load_capture_v2.CaptureV2Tests.test_receipt_rejects_disagreeing_kernel_or_architecture) (field='architecture')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 55, in test_receipt_rejects_disagreeing_kernel_or_architecture
+    with self.subTest(field=field),self.assertRaises(ValueError):v2.validate_receipt(mutant,0,b'',1,'stock_preparation')
+                                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_suspension_or_forward_clock_jump_is_not_ignored (test_frozen_first_load_capture_v2.CaptureV2Tests.test_suspension_or_forward_clock_jump_is_not_ignored)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/gama/sgx535-gfx/tools/psb-dri-re/test_frozen_first_load_capture_v2.py", line 50, in test_suspension_or_forward_clock_jump_is_not_ignored
+    status,rows,_,_=self.execute(uptimes=(2000,2010),times=(10,11));self.assertNotEqual(status,0)
+                                                                    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+AssertionError: 0 == 0
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.050s
+
+FAILED (failures=3)

@@ -1,0 +1,10 @@
+{
+  "stock_selection": "manual, operator reported",
+  "display": "normal, operator reported",
+  "boot": "normal, operator reported",
+  "local_sudo_v": "succeeded, operator reported",
+  "physical_presence": "operator reported",
+  "recovery_controls": "awaiting explicit confirmation",
+  "sgx_actions_this_session": 0,
+  "candidate_build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e"
+}

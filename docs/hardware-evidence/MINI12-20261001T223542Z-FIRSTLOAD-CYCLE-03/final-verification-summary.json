@@ -1,0 +1,32 @@
+{
+  "verified_utc": "2026-10-01T23:15:15.083903+00:00",
+  "repository_tests": 307,
+  "repository_skips": 0,
+  "analysis_helper_tests": 14,
+  "ubsan_harnesses": 3,
+  "wrapper_readiness_tests": 11,
+  "controller_tests": 6,
+  "generator": "PASS",
+  "candidate_crc_checks": "PASS",
+  "dry_run_sha256": "2e85beef0c1a7ec2f8ccc2656b49dd4fb054bf0f55424c226f5fda70e621720e",
+  "complete_exit": 1,
+  "complete_stderr": "PARTIAL: L12, FT-AUX, FT-BO, FT-SERVICE",
+  "git_diff_check": "PASS",
+  "local_links": "PASS",
+  "tracked_changes": [
+    "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "docs/phase8/post-attempt03-checkpoint-audit.md"
+  ],
+  "pinned_input_changes": 0,
+  "production_implementation_changes": 0,
+  "experimental_connections": 0,
+  "recovery_connections": 0,
+  "sgx_actions": 0,
+  "head": "f8565115977bda8a529401a7ac5cba822d1a0d36",
+  "index_changed": false,
+  "link_anchors": "PASS",
+  "final_document_diff_check": "PASS",
+  "draft_limits": "180/600/40 seconds; unapproved and unimplemented",
+  "current_deadline_constants": "120 seconds unchanged"
+}

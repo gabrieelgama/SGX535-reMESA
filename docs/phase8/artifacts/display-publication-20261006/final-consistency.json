@@ -1,0 +1,34 @@
+{
+  "known_good_FIRE3_95_files_unchanged": true,
+  "prior_81_file_seal_unchanged": true,
+  "existing_rendering_implementation_files_unchanged": 135,
+  "new_candidate": false,
+  "new_document_references_resolve": 46,
+  "production_ioctl_allowlist": [
+    "0xc01c64ad",
+    "0xc04064a0",
+    "0xc06864a1"
+  ],
+  "card_tools_source_bounds_match": true,
+  "no_live_publication": true,
+  "sgx_invocations": 0,
+  "index_empty": true,
+  "prior_dirty_entries_preserved": true,
+  "additional_git_entries": [
+    " M README.md",
+    "?? docs/phase8/CODEX-HANDOFF-20261006.md",
+    "?? docs/phase8/FIRE3-TRIANGLE-REPRODUCTION.json",
+    "?? docs/phase8/FIRE3-TRIANGLE-REPRODUCTION.md",
+    "?? docs/phase8/README.md",
+    "?? docs/phase8/artifacts/FIRE3-TRIANGLE-20261006/",
+    "?? docs/phase8/artifacts/display-publication-20261006/",
+    "?? docs/phase8/display-publication-20261006.md",
+    "?? docs/phase8/display-publication-execution-card-20261006.json",
+    "?? docs/phase8/display-publication-qualification-20261006.json",
+    "?? tools/display/"
+  ],
+  "fragment_identity_checked": true,
+  "reproduction_validator": "PASS 223 archive files",
+  "display_tests": "48/48 PASS",
+  "sealed_FIRE2_68_files_unchanged": true
+}

@@ -1,0 +1,6 @@
+{
+  "received_utc": "2026-10-01T23:07:07.827724+00:00",
+  "answer": "ready stock",
+  "classification": "INCOMPLETE READINESS: elapsed time, manual selection, current-boot sudo success and display/userspace confirmations not supplied",
+  "stock_capture_connections": 0
+}

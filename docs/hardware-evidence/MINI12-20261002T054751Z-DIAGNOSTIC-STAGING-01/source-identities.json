@@ -1,0 +1,11 @@
+{
+  "image_source": "/home/gama/sgx535-offline/private-gpu-va-diagnostic-20261002/diagnostic-image-01/build-03/initrd.img-sgx535-firstload-diagnostic-01",
+  "image_bytes": 50805273,
+  "image_sha256": "376da01e11c3fd7079f348c0b10c1ea4d09c58dd917fb8be4dda52a7d805abae",
+  "entry_source": "/home/gama/sgx535-offline/private-gpu-va-diagnostic-20261002/diagnostic-image-01/build-03/proposed-custom.cfg",
+  "entry_bytes": 1002,
+  "entry_sha256": "892fbbff2c8126bd6d330b59a3bab7bd3884eb53b82d1a2c6fd672522654deaa",
+  "merged_config": "/home/gama/sgx535-offline/private-gpu-va-diagnostic-20261002/diagnostic-image-01/proposed-custom.cfg.merged",
+  "merged_bytes": 3042,
+  "merged_sha256": "a2d2b6bd33868deefe64e5e1cb2cd9ecedbfd1fe0e78370af983a92a2ec655c5"
+}

@@ -1,0 +1,431 @@
+[
+  {
+    "scope": "AUTHORIZED PASSIVE PROTECTED PREPARATION; NO CLIENT/IOCTL EXECUTION",
+    "operations": [
+      {
+        "phase": "directory-created",
+        "path": "/root/sgx535-frozen-seq1-85ec06b428c99fac7f9127919b7a488d204f4a77-3d9eb6ba"
+      },
+      {
+        "phase": "created",
+        "name": "frozen-triangle-one-shot-response-i386",
+        "dev": 2049,
+        "ino": 524751
+      },
+      {
+        "dev": 2049,
+        "ino": 524751,
+        "size": 775264,
+        "sha256": "2f84917f96db2859678797a327d40d9638325e5c5efb6e0dfccef44d756b4835",
+        "uid": 0,
+        "gid": 0,
+        "mode": 320,
+        "nlink": 1,
+        "regular": true,
+        "phase": "verified",
+        "name": "frozen-triangle-one-shot-response-i386"
+      },
+      {
+        "phase": "created",
+        "name": "context.preparation.json",
+        "dev": 2049,
+        "ino": 524753
+      },
+      {
+        "dev": 2049,
+        "ino": 524753,
+        "size": 789,
+        "sha256": "92743b803780dab8df2db107f6a97eced11c3399a24ead28828f04e522aadb3f",
+        "uid": 0,
+        "gid": 0,
+        "mode": 256,
+        "nlink": 1,
+        "regular": true,
+        "phase": "verified",
+        "name": "context.preparation.json"
+      },
+      {
+        "phase": "created",
+        "name": "capsule.preparation.bin",
+        "dev": 2049,
+        "ino": 524754
+      },
+      {
+        "dev": 2049,
+        "ino": 524754,
+        "size": 4152,
+        "sha256": "0d24c306b7e1fcd4eee1d2dc77637fe1eafa91816e849fd5c134e683bf3f3504",
+        "uid": 0,
+        "gid": 0,
+        "mode": 256,
+        "nlink": 1,
+        "regular": true,
+        "phase": "verified",
+        "name": "capsule.preparation.bin"
+      },
+      {
+        "phase": "created",
+        "name": "kernel.preparation.original.txt",
+        "dev": 2049,
+        "ino": 524755
+      },
+      {
+        "dev": 2049,
+        "ino": 524755,
+        "size": 45131,
+        "sha256": "2c13e499a8d9b837c3e5b8a367e73966fc7f874fc553eb01b32aee4f164aeaf8",
+        "uid": 0,
+        "gid": 0,
+        "mode": 256,
+        "nlink": 1,
+        "regular": true,
+        "phase": "verified",
+        "name": "kernel.preparation.original.txt"
+      },
+      {
+        "phase": "created",
+        "name": "source.preparation.original.txt",
+        "dev": 2049,
+        "ino": 524756
+      },
+      {
+        "dev": 2049,
+        "ino": 524756,
+        "size": 243,
+        "sha256": "2967348bcf2f2e85ff1bbd56848283df9a187839acf43a5c4a48c6fb4b76f555",
+        "uid": 0,
+        "gid": 0,
+        "mode": 256,
+        "nlink": 1,
+        "regular": true,
+        "phase": "verified",
+        "name": "source.preparation.original.txt"
+      }
+    ],
+    "guards": [
+      {
+        "name": "root privilege",
+        "pass": true
+      },
+      {
+        "name": "regular input /proc/sys/kernel/random/boot_id",
+        "pass": true
+      },
+      {
+        "name": "exact candidate boot continuity",
+        "pass": true
+      },
+      {
+        "name": "kernel/architecture continuity",
+        "pass": true
+      },
+      {
+        "name": "regular input /sys/module/gma500_gfx/initstate",
+        "pass": true
+      },
+      {
+        "name": "module Live gma500_gfx",
+        "pass": true
+      },
+      {
+        "name": "regular input /sys/module/gma500_gfx/notes/.note.gnu.build-id",
+        "pass": true
+      },
+      {
+        "name": "module note identity gma500_gfx",
+        "pass": true
+      },
+      {
+        "name": "regular input /sys/module/sgx535_provenance/initstate",
+        "pass": true
+      },
+      {
+        "name": "module Live sgx535_provenance",
+        "pass": true
+      },
+      {
+        "name": "regular input /sys/module/sgx535_provenance/notes/.note.gnu.build-id",
+        "pass": true
+      },
+      {
+        "name": "module note identity sgx535_provenance",
+        "pass": true
+      },
+      {
+        "name": "PCI owner continuity",
+        "pass": true
+      },
+      {
+        "name": "actual capsule UNUSED; zero eligible calls",
+        "pass": true
+      },
+      {
+        "name": "actual source boundary and uninterrupted producer isolation",
+        "pass": true
+      },
+      {
+        "name": "same prepared UNUSED source boundary",
+        "pass": true
+      },
+      {
+        "name": "kernel log availability",
+        "pass": true
+      },
+      {
+        "name": "current-boot kernel health",
+        "pass": true
+      },
+      {
+        "name": "trusted root parent",
+        "pass": true
+      },
+      {
+        "name": "exclusive unused client/evidence base",
+        "pass": true
+      },
+      {
+        "name": "protected base ownership/mode",
+        "pass": true
+      },
+      {
+        "name": "exact client input length",
+        "pass": true
+      },
+      {
+        "name": "protected evidence parent",
+        "pass": true
+      },
+      {
+        "name": "future evidence destination absent response.original.bin",
+        "pass": true
+      },
+      {
+        "name": "future evidence destination absent color.original.bin",
+        "pass": true
+      },
+      {
+        "name": "future evidence destination absent client.stdout.original.txt",
+        "pass": true
+      },
+      {
+        "name": "future evidence destination absent client.stderr.original.txt",
+        "pass": true
+      },
+      {
+        "name": "future evidence destination absent capsule.original.bin",
+        "pass": true
+      },
+      {
+        "name": "future evidence destination absent kernel.before.original.txt",
+        "pass": true
+      },
+      {
+        "name": "future evidence destination absent kernel.after.original.txt",
+        "pass": true
+      },
+      {
+        "name": "future evidence destination absent manifest.json",
+        "pass": true
+      },
+      {
+        "name": "future evidence destination absent sealed.json",
+        "pass": true
+      },
+      {
+        "name": "future evidence destination absent capsule.binding.json",
+        "pass": true
+      },
+      {
+        "name": "future evidence destination absent capsule.binding.sealed.json",
+        "pass": true
+      },
+      {
+        "name": "future evidence destination absent archive",
+        "pass": true
+      },
+      {
+        "name": "future evidence destination absent source.pre.original.txt",
+        "pass": true
+      },
+      {
+        "name": "future evidence destination absent source.post.original.txt",
+        "pass": true
+      },
+      {
+        "name": "root privilege",
+        "pass": true
+      },
+      {
+        "name": "regular input /proc/sys/kernel/random/boot_id",
+        "pass": true
+      },
+      {
+        "name": "exact candidate boot continuity",
+        "pass": true
+      },
+      {
+        "name": "kernel/architecture continuity",
+        "pass": true
+      },
+      {
+        "name": "regular input /sys/module/gma500_gfx/initstate",
+        "pass": true
+      },
+      {
+        "name": "module Live gma500_gfx",
+        "pass": true
+      },
+      {
+        "name": "regular input /sys/module/gma500_gfx/notes/.note.gnu.build-id",
+        "pass": true
+      },
+      {
+        "name": "module note identity gma500_gfx",
+        "pass": true
+      },
+      {
+        "name": "regular input /sys/module/sgx535_provenance/initstate",
+        "pass": true
+      },
+      {
+        "name": "module Live sgx535_provenance",
+        "pass": true
+      },
+      {
+        "name": "regular input /sys/module/sgx535_provenance/notes/.note.gnu.build-id",
+        "pass": true
+      },
+      {
+        "name": "module note identity sgx535_provenance",
+        "pass": true
+      },
+      {
+        "name": "PCI owner continuity",
+        "pass": true
+      },
+      {
+        "name": "actual capsule UNUSED; zero eligible calls",
+        "pass": true
+      },
+      {
+        "name": "actual source boundary and uninterrupted producer isolation",
+        "pass": true
+      },
+      {
+        "name": "same prepared UNUSED source boundary",
+        "pass": true
+      },
+      {
+        "name": "kernel log availability",
+        "pass": true
+      },
+      {
+        "name": "current-boot kernel health",
+        "pass": true
+      },
+      {
+        "name": "UNUSED capsule unchanged through preparation",
+        "pass": true
+      }
+    ],
+    "sgx_execution_authorized": false,
+    "source_observations": [
+      {
+        "sha256": "2967348bcf2f2e85ff1bbd56848283df9a187839acf43a5c4a48c6fb4b76f555",
+        "payload_base64": "U0dYU09VUkNFMgpzdGF0ZT0wCnJlYXNvbnM9MApwcm9kdWNlcnNfYWN0aXZlPTAKZHJpdmVyX2F0dGFjaGVkPTEKY2Fwc3VsZV9zdGF0ZT0wCmJvb3Q9MwpwcmVwYXJlZD0xCmFzc2VydGVkX3Jlc2V0PTEyNwpyZWxlYXNlZF9yZXNldD0wCnN0YXJ0dXBfcGVuZGluZz0wCnN0YXJ0dXBfcmVhZHM9MApzdGFydHVwX2ZhdWx0PTAKc3RhcnR1cF9hdXRvbm9tb3VzPTAKZGVsYXllZF9leGNsdXNpb249U1RBUlRVUF9MSUZFQ1lDTEUK",
+        "decoded": {
+          "supplied_record_consistency": "CONFIRMED",
+          "interval": "PREPARED, MUST REMAIN CONTINUOUS",
+          "hardware_attribution": "UNKNOWN WITHOUT VERIFIED LIVE BOOT/PRODUCER PROVENANCE",
+          "triangle": "NOT ESTABLISHED BY SOURCE WITNESS",
+          "errors": [],
+          "values": {
+            "state": 0,
+            "reasons": 0,
+            "producers_active": 0,
+            "driver_attached": 1,
+            "capsule_state": 0,
+            "boot": 3,
+            "prepared": 1,
+            "asserted_reset": 127,
+            "released_reset": 0,
+            "startup_pending": 0,
+            "startup_reads": 0,
+            "startup_fault": 0,
+            "startup_autonomous": 0,
+            "delayed_exclusion": "STARTUP_LIFECYCLE"
+          }
+        }
+      },
+      {
+        "sha256": "2967348bcf2f2e85ff1bbd56848283df9a187839acf43a5c4a48c6fb4b76f555",
+        "payload_base64": "U0dYU09VUkNFMgpzdGF0ZT0wCnJlYXNvbnM9MApwcm9kdWNlcnNfYWN0aXZlPTAKZHJpdmVyX2F0dGFjaGVkPTEKY2Fwc3VsZV9zdGF0ZT0wCmJvb3Q9MwpwcmVwYXJlZD0xCmFzc2VydGVkX3Jlc2V0PTEyNwpyZWxlYXNlZF9yZXNldD0wCnN0YXJ0dXBfcGVuZGluZz0wCnN0YXJ0dXBfcmVhZHM9MApzdGFydHVwX2ZhdWx0PTAKc3RhcnR1cF9hdXRvbm9tb3VzPTAKZGVsYXllZF9leGNsdXNpb249U1RBUlRVUF9MSUZFQ1lDTEUK",
+        "decoded": {
+          "supplied_record_consistency": "CONFIRMED",
+          "interval": "PREPARED, MUST REMAIN CONTINUOUS",
+          "hardware_attribution": "UNKNOWN WITHOUT VERIFIED LIVE BOOT/PRODUCER PROVENANCE",
+          "triangle": "NOT ESTABLISHED BY SOURCE WITNESS",
+          "errors": [],
+          "values": {
+            "state": 0,
+            "reasons": 0,
+            "producers_active": 0,
+            "driver_attached": 1,
+            "capsule_state": 0,
+            "boot": 3,
+            "prepared": 1,
+            "asserted_reset": 127,
+            "released_reset": 0,
+            "startup_pending": 0,
+            "startup_reads": 0,
+            "startup_fault": 0,
+            "startup_autonomous": 0,
+            "delayed_exclusion": "STARTUP_LIFECYCLE"
+          }
+        }
+      }
+    ],
+    "kernel_health": {
+      "classification": "PASS WITH BOUNDED STOCK DIAGNOSTICS",
+      "faults": [],
+      "stock_diagnostics": {
+        "unsigned_drm_loader_notice": 1,
+        "backlight_zero_register": 1,
+        "acpi_powerbutton_error": 2,
+        "acpi_powerbutton_warning": 2,
+        "powerbutton_probe": 1,
+        "tiny_powerbutton_probe": 1
+      }
+    },
+    "client": {
+      "dev": 2049,
+      "ino": 524751,
+      "size": 775264,
+      "sha256": "2f84917f96db2859678797a327d40d9638325e5c5efb6e0dfccef44d756b4835",
+      "uid": 0,
+      "gid": 0,
+      "mode": 320,
+      "nlink": 1,
+      "regular": true
+    },
+    "base": {
+      "path": "/root/sgx535-frozen-seq1-85ec06b428c99fac7f9127919b7a488d204f4a77-3d9eb6ba",
+      "dev": 2049,
+      "ino": 524750,
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o700"
+    },
+    "evidence": {
+      "path": "/root/sgx535-frozen-seq1-85ec06b428c99fac7f9127919b7a488d204f4a77-3d9eb6ba/evidence-f1ab6606-0561-445f-a397-28a028516cd7",
+      "dev": 2049,
+      "ino": 524752,
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o700"
+    },
+    "boot_id": "f1ab6606-0561-445f-a397-28a028516cd7",
+    "capsule_sha256": "0d24c306b7e1fcd4eee1d2dc77637fe1eafa91816e849fd5c134e683bf3f3504",
+    "classification": "PASS PROTECTED PREPARATION ONLY"
+  }
+]

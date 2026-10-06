@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-02T00:09:38.938981+00:00",
+  "stock_manually_selected": true,
+  "stock_title": "antiX-26 Stephen Kapos, 5.10.240-antix.1-486-smp",
+  "normal_userspace": true,
+  "physical_display_normal": true,
+  "local_sudo_succeeded": true,
+  "userspace_seen_before_boot_watch": true,
+  "boot_watch_observation": "quickly and well within 600 seconds; operator observation, no invented exact duration",
+  "operator_reply": "Normal STOCK (no suffix) was manually selected; physical display/userspace normal; local sudo-v succeeded; no extra reboot or graphics/module commands.",
+  "experimental_retry": false
+}

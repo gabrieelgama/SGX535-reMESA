@@ -1,0 +1,9 @@
+{
+  "answer": "ready",
+  "question": "For the new STOCK read-only tooling check, please run sudo -v locally and confirm STOCK userspace/display are normal and sudo succeeded in this boot. There is no120-second deadline for this preparation check. Do not reboot/select EXPERIMENTAL or run graphics/module commands.",
+  "normal_userspace": true,
+  "physical_display_normal": true,
+  "local_sudo_succeeded": true,
+  "scope": "Acknowledgement to combined current STOCK readiness question; no elapsed time inferred",
+  "recorded_utc": "2026-10-01T23:27:39.460595+00:00"
+}

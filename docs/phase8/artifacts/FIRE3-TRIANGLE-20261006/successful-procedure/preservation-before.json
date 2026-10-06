@@ -1,0 +1,7 @@
+{
+  "prior": "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/live-fire3-fresh-transfer-20261006T052417Z",
+  "main_seal_sha256": "98e6ce2ac68eb295649c9b8ca3c14e3f7cb82b47ab10a903db6c5aabf4ba5595",
+  "late_operator_seal_sha256": "ef1f9ed07d972929c1ad8c7687fee6ca07a18801fea6eb819365fc12ecd1dd27",
+  "all_81_unchanged": true,
+  "operator_established": "normal display/userspace; keyboard/GRUB/power controls work; no client; ~90 seconds per current maintainer instruction"
+}

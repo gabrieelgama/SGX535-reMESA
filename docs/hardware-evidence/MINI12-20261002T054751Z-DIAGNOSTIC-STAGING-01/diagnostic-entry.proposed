@@ -1,0 +1,18 @@
+# OFFLINE PROPOSAL ONLY. Manual selection; leave the saved stock entry unchanged.
+menuentry 'EXPERIMENTAL SGX535 rev121 DIAGNOSTIC FIRST-LOAD ONLY (no SGX)' --class gnu-linux --class os --id 'sgx535-rev121-firstload-diagnostic-01' {
+	load_video
+	insmod gzio
+	if [ x$grub_platform = xxen ]; then insmod xzio; insmod lzopio; fi
+	insmod part_msdos
+	insmod ext2
+	set root='hd0,msdos1'
+	if [ x$feature_platform_search_hint = xy ]; then
+	  search --no-floppy --fs-uuid --set=root --hint-ieee1275='ieee1275//disk@0,msdos1' --hint-bios=hd0,msdos1 --hint-efi=hd0,msdos1 --hint-baremetal=ahci0,msdos1  6da9b4a7-ede2-4e27-bbfc-b537f568eaf1
+	else
+	  search --no-floppy --fs-uuid --set=root 6da9b4a7-ede2-4e27-bbfc-b537f568eaf1
+	fi
+	echo	'Loading Linux 5.10.240-antix.1-486-smp ...'
+	linux	/boot/vmlinuz-5.10.240-antix.1-486-smp root=UUID=6da9b4a7-ede2-4e27-bbfc-b537f568eaf1 ro  quiet selinux=0
+	echo	'Loading initial ramdisk ...'
+	initrd	/boot/initrd.img-5.10.240-antix.1-486-smp-sgx535-firstload-diagnostic-01
+}

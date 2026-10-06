@@ -1,0 +1,526 @@
+{
+  "schema_version": 1,
+  "scope": "PRE07 RESPONSIBILITY/COMPONENT AVAILABILITY AUDIT ONLY; NOT A GATE B MATRIX, LIVE GUARD VERDICT OR EXECUTION PROCEDURE",
+  "recorded_timestamp_utc": "2026-10-04T10:12:42Z",
+  "classification_semantics": "SATISFIED BY EXISTING REVIEWED COMPONENT means the named reusable capability is established within its documented scope, not a performed live operation, exact response-client approval or physical observation. PARTIALLY SATISFIED separates available primitives/predicates from absent current-context orchestration/evidence. UNAVAILABLE/RESTRICTED denotes the preserved unavailable boundary, not a demonstrated code or GPU defect.",
+  "evidence_semantics": {
+    "CONFIRMED": "Directly supported available code or established preserved qualification/result",
+    "INFERRED": "Dependency/shared-executor relationship supported by interfaces; internal unavailable implementation not reconstructed",
+    "UNKNOWN": "Current live provenance, observations, unavailable success-report detail, and contents of restricted executor"
+  },
+  "evidence_catalog": {
+    "A": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_evidence_bundle.py",
+      "anchors": {
+        "context": 43,
+        "sources": 70,
+        "private_directory": 88,
+        "exclusive_write": 106,
+        "archive": 130,
+        "copy_order": 153,
+        "attribution_limit": 177,
+        "verify_archive": 208,
+        "guards": 245
+      }
+    },
+    "C": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot_response.c",
+      "anchors": {
+        "raw_writer": 20,
+        "single_ioctl": 77,
+        "failure": 78,
+        "successful_raw_export": 101,
+        "image_writer": 114
+      }
+    },
+    "S": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_first_load_stage.py",
+      "anchors": {
+        "copy_exclusive": 21,
+        "sync": 39,
+        "destination_readback": 41,
+        "partial_receipt": 48
+      }
+    },
+    "P": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_first_load_capture_v2.py",
+      "anchors": {
+        "modes": 12,
+        "readiness": 15,
+        "caller_source_required": 38,
+        "continuity": 66,
+        "capture_once": 121
+      }
+    },
+    "F": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_first_owner_session.py",
+      "anchors": {
+        "scope": 64,
+        "stop_recovery": 74,
+        "supplied_runtime": 83,
+        "health": 111,
+        "image_inode": 139
+      }
+    },
+    "G": {
+      "path": "/home/gama/sgx535-gfx/docs/phase8/gate-b-maintainer-readiness-20261004-314e2f3b.json",
+      "anchors": {
+        "fresh_requirements": 595,
+        "PRE04": 612,
+        "PRE05": 617,
+        "PRE07": 627,
+        "limits": 637
+      }
+    },
+    "D": {
+      "path": "/home/gama/sgx535-gfx/docs/phase8/prospective-client-substitution-maintainer-20261004-314e2f3b.json",
+      "anchors": {
+        "transaction_unavailable": 207,
+        "guard_route_unavailable": 209
+      }
+    },
+    "H": {
+      "path": "/home/gama/sgx535-gfx/docs/phase8/CODEX-HANDOFF-20261002.md",
+      "anchors": {
+        "current_boundary": 51,
+        "client_export_result": 89,
+        "restriction": 529
+      }
+    },
+    "K": {
+      "path": "/home/gama/sgx535-gfx/docs/phase8/diagnostic-gate-b-technical-audit.md",
+      "anchors": {
+        "kernel_report_need": 102
+      }
+    },
+    "U": {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_uapi.h",
+      "anchors": {
+        "response_fields": 10
+      }
+    },
+    "T": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_candidate_stage.py",
+      "anchors": {
+        "image_only_plan": 258,
+        "no_invocation": 288
+      }
+    },
+    "Q": {
+      "path": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-qualification.json",
+      "anchors": {
+        "qualified_pins": 2
+      }
+    },
+    "V": {
+      "path": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/final-verification.json",
+      "anchors": {
+        "established_results": 1
+      }
+    },
+    "I": {
+      "path": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/offline-integration-contract.json",
+      "anchors": {
+        "offline_only_roles_and_limits": 1
+      }
+    },
+    "E": {
+      "path": "/home/gama/sgx535-gfx/docs/hardware-evidence/MINI12-20261002T013129Z-POSTATTEMPT04-SAMEBOOT-READONLY/result.json",
+      "anchors": {
+        "different_boot_client": 1
+      }
+    },
+    "B": {
+      "path": "/home/gama/sgx535-offline/frozen-staging-314e2f3b-20261002T234125Z/preparation.json",
+      "anchors": {
+        "image_first_owner_scope_only": 1
+      }
+    },
+    "R": {
+      "path": "/home/gama/sgx535-gfx/docs/phase8/response-export-client-substitution-maintainer-20261004-314e2f3b.json",
+      "anchors": {
+        "exact_approval": 8
+      }
+    },
+    "N": {
+      "path": "/home/gama/sgx535-gfx/docs/phase8/pre07-kernel-attribution-20261004.md",
+      "anchors": {
+        "inventory": 22,
+        "minimum_proof": 40,
+        "independent_dependencies": 80
+      }
+    }
+  },
+  "responsibilities": [
+    {
+      "id": 1,
+      "responsibility": "Exact boot/build/action/client binding",
+      "classification": "PARTIALLY SATISFIED",
+      "evidence": [
+        "A:43",
+        "G:595",
+        "D:207",
+        "V:1",
+        "R:8",
+        "N:22"
+      ],
+      "confirmed_reusable_capability": "Existing record binder checks context, forward source/binary/UAPI, historical client and unchanged module/image.",
+      "remaining_live_or_binding_gap": "Exact response-client forward binding now approved and accepted by archive binder; actual producing process and present boot continuity remain unobserved.",
+      "fresh_observation_state": "UNKNOWN / NOT COLLECTED"
+    },
+    {
+      "id": 2,
+      "responsibility": "Exact response-export client identity",
+      "classification": "SATISFIED BY EXISTING REVIEWED COMPONENT",
+      "evidence": [
+        "Q:2",
+        "V:1",
+        "R:8"
+      ],
+      "confirmed_reusable_capability": "Established source5514/SHA919c2611... and binary775264/SHA2f84917f... pins; offline technical qualification retained.",
+      "remaining_live_or_binding_gap": "Exact forward approval now recorded; artifact identity and approval are not deployed identity or live freshness.",
+      "fresh_observation_state": "UNKNOWN / NOT COLLECTED"
+    },
+    {
+      "id": 3,
+      "responsibility": "Protected response destination",
+      "classification": "PARTIALLY SATISFIED",
+      "evidence": [
+        "C:20",
+        "A:88",
+        "I:1",
+        "G:612"
+      ],
+      "confirmed_reusable_capability": "Raw file creation is exclusive/no-follow0600; offline root traversal is protected.",
+      "remaining_live_or_binding_gap": "Reviewed target parent/path and pre-call absence/ownership checks not established; client does not establish parents.",
+      "fresh_observation_state": "UNKNOWN / NOT COLLECTED"
+    },
+    {
+      "id": 4,
+      "responsibility": "Protected original-image destination",
+      "classification": "PARTIALLY SATISFIED",
+      "evidence": [
+        "C:114",
+        "A:88",
+        "I:1",
+        "G:612"
+      ],
+      "confirmed_reusable_capability": "Image exclusive-create writer and original-first offline archive exist.",
+      "remaining_live_or_binding_gap": "Reviewed target image parent/path and absent-output checks not established.",
+      "fresh_observation_state": "UNKNOWN / NOT COLLECTED"
+    },
+    {
+      "id": 5,
+      "responsibility": "Stdout/stderr preservation",
+      "classification": "PARTIALLY SATISFIED",
+      "evidence": [
+        "P:121",
+        "A:32",
+        "D:207"
+      ],
+      "confirmed_reusable_capability": "Passive capture records supplied child stdout/stderr/status/timeout partial output; archive preserves supplied streams.",
+      "remaining_live_or_binding_gap": "Read-only capture scope is not approved client invocation orchestration; no enclosing candidate client-stream capture established.",
+      "fresh_observation_state": "UNKNOWN / NOT COLLECTED"
+    },
+    {
+      "id": 6,
+      "responsibility": "Attributable kernel evidence",
+      "classification": "UNAVAILABLE/RESTRICTED",
+      "evidence": [
+        "K:102",
+        "A:177",
+        "H:529",
+        "D:207",
+        "N:22"
+      ],
+      "confirmed_reusable_capability": "Reviewed backend captures actual status under shared IRQ/poll lock for active matching-device owner; service accepts same-sequence exclusive status. Internal diagnostic/HOLD report described; archive stores supplied logs. No actual completion observed.",
+      "remaining_live_or_binding_gap": "Applicable bounded capture/export of accepted completion and failure/HOLD evidence remains unavailable. Internal association is not a preserved external event stream; successful kernel emission/correlation details UNKNOWN. Restricted entry/wrapper not reopened.",
+      "fresh_observation_state": "UNKNOWN / NOT COLLECTED"
+    },
+    {
+      "id": 7,
+      "responsibility": "Invocation correlation",
+      "classification": "UNAVAILABLE/RESTRICTED",
+      "evidence": [
+        "A:161",
+        "A:178",
+        "U:10",
+        "H:529",
+        "N:40"
+      ],
+      "confirmed_reusable_capability": "Internal sequence1 plus one-attempt/module latch are documented; archive UUID binds supplied files. No rule requiring a new nonce was found. UAPI has no exposed invocation token.",
+      "remaining_live_or_binding_gap": "No applicable reviewed bounded interval associates actual client single ioctl and returned artifacts with complete attributable kernel observations. Whether restricted reporting contains an additional token is UNKNOWN; one-call/timing/ledger alone is insufficient.",
+      "fresh_observation_state": "UNKNOWN / NOT COLLECTED"
+    },
+    {
+      "id": 8,
+      "responsibility": "Exclusive creation / no overwrite",
+      "classification": "SATISFIED BY EXISTING REVIEWED COMPONENT",
+      "evidence": [
+        "C:24",
+        "C:114",
+        "S:21",
+        "A:106",
+        "A:139"
+      ],
+      "confirmed_reusable_capability": "Client outputs, generic staged file and archive directory/files use exclusive creation; existing evidence retained on collision.",
+      "remaining_live_or_binding_gap": "Component-level no-overwrite capability only; live destination selection/checks remain rows3/4/9.",
+      "fresh_observation_state": "UNKNOWN / NOT COLLECTED"
+    },
+    {
+      "id": 9,
+      "responsibility": "Destination ownership/type/link checks",
+      "classification": "PARTIALLY SATISFIED",
+      "evidence": [
+        "S:41",
+        "A:70",
+        "A:88",
+        "F:139"
+      ],
+      "confirmed_reusable_capability": "Generic staged-file receipt verifies inode/type/nlink/uid/gid/mode; archive rejects links/FIFOs and checks its private root.",
+      "remaining_live_or_binding_gap": "No supplied verified target directory descriptors or approved response-client/evidence paths for this live context.",
+      "fresh_observation_state": "UNKNOWN / NOT COLLECTED"
+    },
+    {
+      "id": 10,
+      "responsibility": "Sync/durability requirements",
+      "classification": "PARTIALLY SATISFIED",
+      "evidence": [
+        "C:43",
+        "C:135",
+        "S:39",
+        "A:106",
+        "A:153"
+      ],
+      "confirmed_reusable_capability": "Checked client file sync/close; generic copy file+parent sync; archive originals and directory synced before derived copy.",
+      "remaining_live_or_binding_gap": "No live enclosing transaction covering streams/kernel evidence and target directories. Checked sync is not a power-loss survival guarantee.",
+      "fresh_observation_state": "UNKNOWN / NOT COLLECTED"
+    },
+    {
+      "id": 11,
+      "responsibility": "Destination readback verification",
+      "classification": "PARTIALLY SATISFIED",
+      "evidence": [
+        "S:41",
+        "A:208",
+        "A:153"
+      ],
+      "confirmed_reusable_capability": "Generic staged bytes reread with inode/content checks; archive independent reread compares saved originals/copy.",
+      "remaining_live_or_binding_gap": "No current target client or response/image readback receipts; offline verification cannot retrieve target bytes or authenticate their producer.",
+      "fresh_observation_state": "UNKNOWN / NOT COLLECTED"
+    },
+    {
+      "id": 12,
+      "responsibility": "Partial-evidence retention after failure",
+      "classification": "PARTIALLY SATISFIED",
+      "evidence": [
+        "C:33",
+        "S:48",
+        "P:148",
+        "A:190"
+      ],
+      "confirmed_reusable_capability": "Client, generic copy, passive timeout and offline archive retain available partial bytes/receipts and return failure.",
+      "remaining_live_or_binding_gap": "Full invocation/transport/storage failure evidence capture and HOLD attribution depend on unavailable live transaction.",
+      "fresh_observation_state": "UNKNOWN / NOT COLLECTED"
+    },
+    {
+      "id": 13,
+      "responsibility": "No-retry semantics",
+      "classification": "SATISFIED BY EXISTING REVIEWED COMPONENT",
+      "evidence": [
+        "C:77",
+        "C:78",
+        "S:48",
+        "P:121",
+        "A:180",
+        "F:74"
+      ],
+      "confirmed_reusable_capability": "Client has exactly one ioctl; retry loops are file I/O only. Primitives do not rerun device actions; existing STOP/no-retry rule explicit.",
+      "remaining_live_or_binding_gap": "This does not authenticate global history or enforce an unavailable orchestration wrapper; rows7/16 remain pending.",
+      "fresh_observation_state": "UNKNOWN / NOT COLLECTED"
+    },
+    {
+      "id": 14,
+      "responsibility": "Boot continuity guard",
+      "classification": "PARTIALLY SATISFIED",
+      "evidence": [
+        "A:250",
+        "P:66",
+        "G:595",
+        "G:622"
+      ],
+      "confirmed_reusable_capability": "Supplied-record checker matches boot start/end; passive wrapper checks continuity of its own one read-only capture.",
+      "remaining_live_or_binding_gap": "No approved current invocation guard source or continuity observation across preparation/actual ioctl; historical timing not fresh.",
+      "fresh_observation_state": "UNKNOWN / NOT COLLECTED"
+    },
+    {
+      "id": 15,
+      "responsibility": "Ownership/health guard",
+      "classification": "PARTIALLY SATISFIED",
+      "evidence": [
+        "A:257",
+        "F:111",
+        "G:602",
+        "D:209"
+      ],
+      "confirmed_reusable_capability": "Existing supplied-record predicates cover PCI/DRM/fb/VT/services/kernel identity/health/taint.",
+      "remaining_live_or_binding_gap": "Current live records absent; prior first-owner or old boot29e27 passive capture cannot supply freshness.",
+      "fresh_observation_state": "UNKNOWN / NOT COLLECTED"
+    },
+    {
+      "id": 16,
+      "responsibility": "Unused-one-shot/history guard",
+      "classification": "PARTIALLY SATISFIED",
+      "evidence": [
+        "A:252",
+        "G:607",
+        "E:1",
+        "D:209"
+      ],
+      "confirmed_reusable_capability": "Checker requires integer zero invocation/hot-action counts and complete-history witness; ioctl availability probe prohibited.",
+      "remaining_live_or_binding_gap": "Current history/continuity collector or witness not established. Old absent marker/color is not proof for this boot or client.",
+      "fresh_observation_state": "UNKNOWN / NOT COLLECTED"
+    },
+    {
+      "id": 17,
+      "responsibility": "Privilege readiness",
+      "classification": "PARTIALLY SATISFIED",
+      "evidence": [
+        "P:15",
+        "P:58",
+        "A:256",
+        "G:617"
+      ],
+      "confirmed_reusable_capability": "Passive capture uses noninteractive sudo and checker requires root euid; local readiness interface documented.",
+      "remaining_live_or_binding_gap": "Current noninteractive privilege not observed through an applicable permitted guard route.",
+      "fresh_observation_state": "UNKNOWN / NOT COLLECTED"
+    },
+    {
+      "id": 18,
+      "responsibility": "Recovery readiness",
+      "classification": "PARTIALLY SATISFIED",
+      "evidence": [
+        "F:76",
+        "A:254",
+        "G:617",
+        "H:36"
+      ],
+      "confirmed_reusable_capability": "Existing operator machine-boundary/normal STOCK recovery model and witness predicate retained.",
+      "remaining_live_or_binding_gap": "Physically available powered-on machine does not establish current recovery-control readiness or post-SGX recovery success.",
+      "fresh_observation_state": "UNKNOWN / NOT COLLECTED"
+    },
+    {
+      "id": 19,
+      "responsibility": "Staging identity verification",
+      "classification": "SATISFIED BY EXISTING REVIEWED COMPONENT",
+      "evidence": [
+        "S:21",
+        "S:41",
+        "Q:2"
+      ],
+      "confirmed_reusable_capability": "Reviewed generic copy accepts qualified size/hash and verifies exact destination bytes, inode, ownership/mode/link count and receipts.",
+      "remaining_live_or_binding_gap": "Exact response-client forward binding is approved; protected target parent and permitted staging transaction remain unestablished. Image staging planT/B does not stage userspace client.",
+      "fresh_observation_state": "UNKNOWN / NOT COLLECTED"
+    },
+    {
+      "id": 20,
+      "responsibility": "Pre-invocation STOP conditions",
+      "classification": "PARTIALLY SATISFIED",
+      "evidence": [
+        "F:74",
+        "G:595",
+        "A:245",
+        "D:207"
+      ],
+      "confirmed_reusable_capability": "Existing drift/history/health/privilege predicates and STOP/no-retry/HOLD policy specified; offline checker rejects contradictory records.",
+      "remaining_live_or_binding_gap": "No available live executor enforces these immediately before an actual ioctl; no current guard results.",
+      "fresh_observation_state": "UNKNOWN / NOT COLLECTED"
+    },
+    {
+      "id": 21,
+      "responsibility": "Post-invocation preservation ordering",
+      "classification": "PARTIALLY SATISFIED",
+      "evidence": [
+        "C:101",
+        "A:153",
+        "A:163",
+        "I:1"
+      ],
+      "confirmed_reusable_capability": "Client raw export precedes image processing; archive originals are synced before validation copy.",
+      "remaining_live_or_binding_gap": "Client streams and kernel evidence capture/order/timeout handling not integrated into a reviewed live transaction.",
+      "fresh_observation_state": "UNKNOWN / NOT COLLECTED"
+    },
+    {
+      "id": 22,
+      "responsibility": "Evidence sealing/manifest verification",
+      "classification": "SATISFIED BY EXISTING REVIEWED COMPONENT",
+      "evidence": [
+        "A:183",
+        "A:208",
+        "V:1"
+      ],
+      "confirmed_reusable_capability": "Offline archive seals manifest and independently verifies preserved files/derived copy; 21 established focused tests retained.",
+      "remaining_live_or_binding_gap": "Integrity/completeness only; does not authenticate kernel/device execution or satisfy live attribution.",
+      "fresh_observation_state": "UNKNOWN / NOT COLLECTED"
+    }
+  ],
+  "counts": {
+    "PARTIALLY SATISFIED": 15,
+    "SATISFIED BY EXISTING REVIEWED COMPONENT": 5,
+    "UNAVAILABLE/RESTRICTED": 2
+  },
+  "pre07_status": "BLOCKED",
+  "can_assemble_from_currently_available_reviewed_components": "NO",
+  "composition_reason": "Copy/protection/readback/sync/archive and supplied-record checks are reusable. Passive capture requires caller-supplied reviewed root source and is scoped read-only/first-owner with timing; it is not a candidate client invocation transaction. No available component observes or binds the actual ioctl boundary to attributable kernel completion/HOLD evidence. Composing metadata, prefixes or generic file primitives cannot add that observation. Creating the missing guarded invocation/capture program would replace the explicitly unavailable exact wrapper.",
+  "single_smallest_PRE07_capability": "Legitimately available reviewed observation/association of kernel completion/HOLD evidence with the exact candidate single client ioctl and returned artifact set at the runtime invocation boundary.",
+  "shared_dependency_relationship": "Protected target paths, stream capture, fresh guard collection, staging parameterization and preservation ordering need the current-context target-side transaction executor or guard source. File mechanisms/predicates already exist. Kernel invocation attribution is irreducible even if those other pieces are supplied; the evidence does not prove every implementation gap is reducible to a single kernel function.",
+  "missing_mechanism_boundary": "Applicable reviewed target-side exact invocation/preservation/correlation program and current-context guard source remain unavailable; do not replace them with root_script for the passive API, repin an old boot/client capture, remove first-owner timing, or invent target paths.",
+  "restricted_report_details": "UNKNOWN; permitted records describe diagnostic/HOLD reporting but do not establish a successful invocation-specific kernel capture interface or authenticate its completion evidence. No kernel-entry/wrapper source inspected.",
+  "forward_binding": "APPROVE_EXACT_CLIENT_SUBSTITUTION recorded in response-export-client-substitution-maintainer-20261004-314e2f3b.json; no target staging/contact/guards/execution implied.",
+  "protected_live_evidence_preservation_established": false,
+  "invocation_specific_kernel_attribution_established": false,
+  "legitimate_current_fresh_guard_collection_available": false,
+  "successor_staging_permitted": false,
+  "ready_for_execution_authorization": false,
+  "gate_b": "PASS FOR EXACT OFFSCREEN READINESS",
+  "whitelist": [
+    "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1"
+  ],
+  "sgx_execution_authorized": false,
+  "sgx_invocations": 0,
+  "hardware_interactions": 0,
+  "triangle": "NOT ATTEMPTED",
+  "hold_or_recovery": "No new state/action",
+  "tests_builds_qualification": "None rerun; only new record consistency checks needed.",
+  "exact_context": {
+    "boot_id": "89fc7306-6dac-4ab9-af62-360b7152ef22",
+    "module_build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+    "action": "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1",
+    "freshness": "Boot and 70/70 first-owner facts are preserved historical observations, not fresh invocation guards."
+  },
+  "proposed_response_client": {
+    "source": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot_response.c",
+      "size": 5514,
+      "sha256": "919c2611e048e4a660ecae3542264adf5a5367d9b0fbe7fbceff2f45f90adedf"
+    },
+    "binary": {
+      "path": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-build-01/frozen-triangle-one-shot-response-i386",
+      "size": 775264,
+      "sha256": "2f84917f96db2859678797a327d40d9638325e5c5efb6e0dfccef44d756b4835"
+    },
+    "uapi": {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_uapi.h",
+      "size": 760,
+      "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420"
+    }
+  },
+  "attribution_investigation": "/home/gama/sgx535-gfx/docs/phase8/pre07-kernel-attribution-20261004.md",
+  "kernel_source_change_required": "UNKNOWN; not demonstrated. Existing internal observation association found; successful external reporting details remain unavailable.",
+  "composition_if_kernel_attribution_solved": "NO: applicable current-context guard source and protected target staging/stream/preservation transaction remain separately unestablished.",
+  "independent_remaining_requirements": [
+    "Applicable reviewed current-boot/build/client fresh guard source",
+    "Applicable protected target transaction/path/stream and preservation failure-handling bindings"
+  ],
+  "scoped_revision": "2026-10-04: exact client approval recorded and permitted backend observability investigated; only affected responsibility explanations changed; counts and live states unchanged. Previous matrix snapshot retained in investigation evidence."
+}

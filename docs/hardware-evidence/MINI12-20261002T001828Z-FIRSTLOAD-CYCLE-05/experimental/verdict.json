@@ -1,0 +1,6 @@
+{
+  "classification": "STOP",
+  "reason": "failed capture or unexpected stderr",
+  "retry": false,
+  "sgx_authorized": false
+}

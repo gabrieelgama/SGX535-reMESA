@@ -128,6 +128,38 @@ class FrozenKernelContractTests(unittest.TestCase):
             run = subprocess.run([str(binary)], capture_output=True, text=True)
             self.assertEqual(run.returncode, 0, run.stderr)
 
+    def test_unaligned_wire_request_is_validated_without_undefined_behavior(self):
+        with tempfile.TemporaryDirectory() as directory:
+            source = pathlib.Path(directory) / 'unaligned-request.c'
+            binary = pathlib.Path(directory) / 'unaligned-request'
+            source.write_text('''#include "frozen_kernel_contract.h"
+int main(void)
+{
+    sgx535_u32 storage[5] = {0};
+    sgx535_u8 *wire = (sgx535_u8 *)storage + 1;
+    wire[0] = wire[4] = 1;
+    if (sgx535_frozen_validate_request(wire, 16) != SGX535_FROZEN_OK)
+        return 1;
+    wire[11] = 1; /* Nonzero flags, including their high byte, must reject. */
+    if (sgx535_frozen_validate_request(wire, 16) != SGX535_FROZEN_BAD_REQUEST)
+        return 2;
+    wire[11] = 0;
+    if (sgx535_frozen_validate_request(wire, 15) != SGX535_FROZEN_BAD_REQUEST)
+        return 3;
+    return 0;
+}
+''')
+            build = subprocess.run([
+                'cc', '-std=c11', '-O2', '-Wall', '-Wextra', '-Werror',
+                '-pedantic', '-fsanitize=undefined', '-fno-sanitize-recover=all',
+                '-I', str(HERE), str(HERE / 'frozen_kernel_contract.c'),
+                str(source), '-o', str(binary),
+            ], capture_output=True, text=True)
+            self.assertEqual(build.returncode, 0, build.stderr)
+            run = subprocess.run([str(binary)], capture_output=True, text=True)
+            self.assertEqual(run.returncode, 0, run.stderr)
+            self.assertEqual(run.stderr, '')
+
     def test_exact_frozen_relocation_wire(self):
         plan = bo.build(image.build())
         raw = bo.relocation_bytes(plan)

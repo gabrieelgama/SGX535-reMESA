@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "request_id": "MINI12-PRE07-AVAILABLE-PASSIVE-PREPARATION-SCOPE-REVIEW-20261004",
+  "record_kind": "PENDING REVIEW REQUEST ONLY; NOT AN APPROVAL, LIVE PROCEDURE OR AUTHORIZATION",
+  "prepared_timestamp_utc": "2026-10-04T10:47:00Z",
+  "timestamp_semantics": "Investigation start; no live observation timestamp",
+  "decision": null,
+  "decision_authority": null,
+  "decision_timestamp_utc": null,
+  "requested_review": "Determine and review an exact current-context standalone passive-guard and protected-destination preparation scope using only available non-SGX components. Do not reconstruct or substitute for the restricted invocation wrapper.",
+  "scope": "PRE01-PRE06/PRE07 available passive/preparation subcomponents only; no invocation, kernel capture around an ioctl, replacement executor, boot, hot change or retry",
+  "exact_context": {
+    "boot_id": "89fc7306-6dac-4ab9-af62-360b7152ef22",
+    "module_build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+    "action": "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1",
+    "freshness": "Boot and 70/70 first-owner facts are preserved historical observations, not fresh invocation guards."
+  },
+  "approved_response_client": {
+    "source": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot_response.c",
+      "size": 5514,
+      "sha256": "919c2611e048e4a660ecae3542264adf5a5367d9b0fbe7fbceff2f45f90adedf"
+    },
+    "binary": {
+      "path": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-build-01/frozen-triangle-one-shot-response-i386",
+      "size": 775264,
+      "sha256": "2f84917f96db2859678797a327d40d9638325e5c5efb6e0dfccef44d756b4835"
+    },
+    "uapi": {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_uapi.h",
+      "size": 760,
+      "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420"
+    }
+  },
+  "unchanged_context_bindings": {
+    "kernel": "5.10.240-antix.1-486-smp",
+    "architecture": "i686",
+    "module": {
+      "path": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/module/gma500_gfx.ko",
+      "size_bytes": 244960,
+      "sha256": "4141a07c1f2d2ffc9ab2770b7b4cf654f68c396275dad15f0ddc68192529d8e6",
+      "build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+      "loaded_note_sha256": "edb1e3e59cfd70c48d400bec89f2a30c1a436b05bf115bc1a05581abc153bdc9",
+      "identity_evidence": [
+        "module_identity",
+        "qualification",
+        "first_owner_records"
+      ]
+    },
+    "diagnostic_image": {
+      "source_path": "/home/gama/sgx535-offline/request-byte-decoding-20261002T222753Z/image/build-01/initrd.img-sgx535-firstload-diagnostic-01",
+      "staged_path": "/boot/initrd.img-5.10.240-antix.1-486-smp-sgx535-firstload-314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+      "size_bytes": 50805231,
+      "sha256": "fe64b3dcfe74b78a6d96edcd4fd7c118c3901fcff8631afec6c14647da292e3c",
+      "embedded_module_sha256": "4141a07c1f2d2ffc9ab2770b7b4cf654f68c396275dad15f0ddc68192529d8e6",
+      "identity_evidence": [
+        "image_identity",
+        "image_qualification",
+        "poststage_records",
+        "first_owner_records",
+        "menu_receipt"
+      ]
+    }
+  },
+  "existing_approval": "/home/gama/sgx535-gfx/docs/phase8/response-export-client-substitution-maintainer-20261004-314e2f3b.json",
+  "available_component_interfaces": [
+    {
+      "path": "tools/psb-dri-re/frozen_first_load_capture_v2.py",
+      "interface": "capture_once(evidence_path, reviewed_ssh_prefix, root_script, readiness, mode)",
+      "limit": "Caller supplies separately reviewed source/scope/authority. Existing modes do not define a current diagnostic pre-invocation snapshot; experimental/recovery capture ceiling1200 is not waived."
+    },
+    {
+      "path": "docs/hardware-evidence/MINI12-20261003T002627Z-FROZEN-FIRSTOWNER-314e2f3b-01/candidate-first-owner/root-source.py",
+      "historical_source_sha256": "57bab4d1b10b6f68716526fe39022f6778706dc06d85cd6767d2bc9d087a0677",
+      "pin_provenance": "candidate-first-owner/command.json; no new artifact hashing",
+      "limit": "Available passive evidence reference already matches candidate module/image; completed first-owner source/clock is not approved as a fresh one-shot guard. No source alteration or new capture proposed by this request."
+    },
+    {
+      "path": "tools/psb-dri-re/frozen_first_load_stage.py",
+      "interface": "copy_exclusive(parent,name,source,size,digest,uid,gid,mode,event)",
+      "limit": "Reviewed generic file capability requires verified directory descriptor, explicit fixed source/destination pins and receipts; supplies no live transport/authority by itself."
+    },
+    {
+      "path": "tools/psb-dri-re/frozen_candidate_stage.py",
+      "interface": "first-load source/preparation generator",
+      "limit": "Evidence for normal historical prospective repinning process only. Current completed image staging is not repeated and cannot stage the response client."
+    },
+    {
+      "path": "tools/psb-dri-re/frozen_evidence_bundle.py",
+      "interface": "check_guard_snapshot; archive; verify_archive",
+      "limit": "Offline supplied-record consistency/preservation only; does not collect/authenticate live evidence."
+    }
+  ],
+  "minimum_items_for_a_concrete_current_review": [
+    "A standalone passive current-context source/profile with expected89fc boot/note/Live/ownership/health/services and current unused-invocation history/operator privilege/recovery witnesses. Preserve existing first-owner clock/records rather than relabeling stock_preparation or repinning an old exact invocation program.",
+    "Exact approved-client and distinct raw/original-image/stdout/stderr/kernel evidence parent/path plan, verified directory ownership/type/link/absence rules and identity/readback/receipt/failure policy. No target paths are guessed here.",
+    "Applicable source/profile identity and focused review/verification of any genuinely new passive behavior before a concrete live-preparation decision."
+  ],
+  "not_yet_supplied": {
+    "applicable_current_guard_source": null,
+    "applicable_current_guard_profile": null,
+    "protected_target_paths": null,
+    "live_preparation_authorization": null
+  },
+  "possible_later_bounded_maintainer_decision": "After a concrete permitted source/profile/path review exists, authorize only the named current-context passive guard capture and protected file preparation. Such a decision would not supply restricted invocation correlation or authorize SGX.",
+  "ready_for_affirmative_live_preparation_decision": false,
+  "why_not_merely_an_approval_signature": "Historical capture/stage APIs exist, but role/timing/current-history/destination bindings are incomplete. This request does not represent an implemented or qualified replacement.",
+  "restricted_dependency_not_requested": "The exact invocation-wrapper/artifact/kernel-entry review remains unavailable. No request to reopen or repackage it is made. The full historical one-shot cannot be rebound through this request.",
+  "historical_basis": "/home/gama/sgx535-offline/phase8-historical-pre07-20261004T104700Z/historical-operation-matrix.json",
+  "gate_b": "PASS FOR EXACT OFFSCREEN READINESS",
+  "whitelist": [
+    "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1"
+  ],
+  "sgx_execution_authorized": false,
+  "sgx_invocations": 0,
+  "hardware_interactions": 0,
+  "triangle": "NOT ATTEMPTED",
+  "not_authorized": [
+    "target contact",
+    "staging",
+    "fresh guard collection",
+    "SGX/ioctl",
+    "retry",
+    "boot/reset/hot replacement",
+    "restricted wrapper reconstruction",
+    "triangle claim"
+  ],
+  "preservation": "All historical decisions, pending templates, raw records, approved source/binary/module/image bytes,70/70 record and current PRE07 matrix remain unchanged."
+}

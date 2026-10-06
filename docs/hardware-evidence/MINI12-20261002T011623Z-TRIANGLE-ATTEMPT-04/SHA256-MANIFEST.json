@@ -1,0 +1,152 @@
+[
+  {
+    "path": "AUTHORIZATION.md",
+    "bytes": 445,
+    "sha256": "8a82984f60e03106689dff68ca15686ab2af70fa0aff88c628a7b626afd0ac48"
+  },
+  {
+    "path": "README.md",
+    "bytes": 241,
+    "sha256": "c29d392609dc2de28e4978bbbf9e3842b9e3adbf18bf595d2537257e1d226eac"
+  },
+  {
+    "path": "RESULT.md",
+    "bytes": 2508,
+    "sha256": "40e6693943b7b9ff1bbdd38c3d1305a0905ab5306795c3cb1ee6cd8488114138"
+  },
+  {
+    "path": "active-connection-claimed",
+    "bytes": 39,
+    "sha256": "469ebaf91b4afda0fd80a1a832f61c17619b0c74ec4e0831a5262d722a6cbe47"
+  },
+  {
+    "path": "canonical-guard-regression.json",
+    "bytes": 372,
+    "sha256": "6f495bd4cc08513be536cf54cbd111fde495c3869274e444b0274c31ae6aa5ad"
+  },
+  {
+    "path": "execution-command.json",
+    "bytes": 11576,
+    "sha256": "4846d4dac3d8a992e24309438386214a1e143b5b3615df4700fe9bc93726afd2"
+  },
+  {
+    "path": "execution-decoded.json",
+    "bytes": 259,
+    "sha256": "be2daedd5b3544b1f76dbe42a04fc4ca4d0065a81dee55e41abc24768ea85ae0"
+  },
+  {
+    "path": "execution-root-source-corrected-NOT-RUN.py",
+    "bytes": 8721,
+    "sha256": "e73b01b6a0331fb457d3de1fd818f197fac861f72f02b42c351c28de6c393dda"
+  },
+  {
+    "path": "execution-root-source.py",
+    "bytes": 8670,
+    "sha256": "df40e4a0b64e0de7ad223b5d05c123d4e6363c0f7b22e1720db36ee6a2a8ab6f"
+  },
+  {
+    "path": "execution.stderr",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "execution.stdout",
+    "bytes": 229,
+    "sha256": "2bed6609c26045751c978d30831839078c6768605cbea80e02827bfa85f48582"
+  },
+  {
+    "path": "final-git-status.txt",
+    "bytes": 1294,
+    "sha256": "1bc1566ad1f4503205cb379272338fc5d26ee0f57891004cd9d764af7a9045af"
+  },
+  {
+    "path": "initial-git-status.txt",
+    "bytes": 1223,
+    "sha256": "b3e12c38232096334409d93e6a9c5608d4dc9e4549f7d88c339bb4c0f0c920f0"
+  },
+  {
+    "path": "local-preparation-note.txt",
+    "bytes": 335,
+    "sha256": "fa0772aca4ac73a72641170843875fc66f8c549a89e110cf5d5a9edb431c1bfa"
+  },
+  {
+    "path": "pinned-ssh-prefix.json",
+    "bytes": 468,
+    "sha256": "f0bbe0b5b2098725d43df34a9cc838ea4f25fcc63954f01df2b4095cfba5d4c0"
+  },
+  {
+    "path": "preflight/command.json",
+    "bytes": 22226,
+    "sha256": "0889040a134b63c3d57f55c0d76e4f9c7754645a0e13f8c352e0f2e6e2b91378"
+  },
+  {
+    "path": "preflight/decoded-records.json",
+    "bytes": 116788,
+    "sha256": "1a1aa881f72f051b1eaa40fd42604a6e1fa964df9224acbefa1578385af7813f"
+  },
+  {
+    "path": "preflight/root-source.py",
+    "bytes": 12541,
+    "sha256": "8f410142a5413a3a0d51c0f4e604cc577d8d4f82c95fe22e51a7b98e351e2ad6"
+  },
+  {
+    "path": "preflight/stderr.txt",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "preflight/stdout.txt",
+    "bytes": 115702,
+    "sha256": "ba9eb62f2ba53dc30989401429eedabe394b10e97c4201caf4b4419c22b6e302"
+  },
+  {
+    "path": "preflight/verdict.json",
+    "bytes": 289,
+    "sha256": "7416ca71c948effb949ee3132ca25e9021842cbf4d0b61498e23050de03fabc6"
+  },
+  {
+    "path": "preflight/wrapper-source.py",
+    "bytes": 15823,
+    "sha256": "450e7d5be826ad35894ce9e00eb10f36487cb0df0599d2ed41880e6ce7ba91fe"
+  },
+  {
+    "path": "preflight-decision.json",
+    "bytes": 515,
+    "sha256": "6403dabc42c272b98f8b4d74a39f3f1ed90bac37dfb6d1befee31264de8c3ccf"
+  },
+  {
+    "path": "reviewed-proposal.json",
+    "bytes": 1616,
+    "sha256": "4587442d851ba427ced4f77709f48fbbb81b5e6049ae2f1d77cea75deb86408f"
+  },
+  {
+    "path": "sameboot-preflight-source.py",
+    "bytes": 12541,
+    "sha256": "8f410142a5413a3a0d51c0f4e604cc577d8d4f82c95fe22e51a7b98e351e2ad6"
+  },
+  {
+    "path": "stage-command.json",
+    "bytes": 3272,
+    "sha256": "35da8dbe4ab3644191f199ec3174d6a47a7b9d1aae0a3f796febe52fceed3c7e"
+  },
+  {
+    "path": "stage-receipt.json",
+    "bytes": 409,
+    "sha256": "a1dc29b4fbff845412912de3254d56800d79e88f06801fec477ecf4de3073282"
+  },
+  {
+    "path": "stage-source.py",
+    "bytes": 1900,
+    "sha256": "1942fdf2b1c1b9ab67118d6d42b07898edc6ca60a4dad8d2559f0e9c1c1e4144"
+  },
+  {
+    "path": "stage.stderr",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "stage.stdout",
+    "bytes": 383,
+    "sha256": "a03a050ab583f3d348d021bbeac49557bd56990f5d55b40421cc832fa830f4f1"
+  }
+]

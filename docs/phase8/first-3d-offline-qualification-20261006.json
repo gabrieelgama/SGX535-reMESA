@@ -1,0 +1,162 @@
+{
+  "date": "2026-10-06",
+  "classification": "PASS_OFFLINE_ONLY",
+  "state": "NEXT_3D_EXPERIMENT_READY",
+  "workspace": "/home/gama/sgx535-offline/phase8-first-3d-offline-20261006T072942Z",
+  "candidate_manifest": "docs/phase8/two-triangle-experimental-candidate-20261006.json",
+  "execution_card": "docs/phase8/next-3d-execution-card-20261006.json",
+  "CPU": {
+    "classification": "PASS",
+    "scope": "CPU construction/policy only; no GPU proof",
+    "cases": {
+      "python_regressions": 32,
+      "native_initial": {
+        "bytes": 180224,
+        "sha256": "f2fea04e9a3b56d8e18958745d7da27e15d5be0789ed5eef404c7b80976c926a",
+        "PASS": true
+      },
+      "native_relocated": {
+        "bytes": 180224,
+        "sha256": "d7db9fa2f6cd7c07f7f5d8370f2afe6499fc36ac9f8cc5944936beb9303460f7",
+        "PASS": true
+      },
+      "fragment_native": {
+        "immediate_roundtrips": 1032,
+        "PASS": true
+      },
+      "ubsan_initial": {
+        "bytes": 180224,
+        "sha256": "f2fea04e9a3b56d8e18958745d7da27e15d5be0789ed5eef404c7b80976c926a",
+        "PASS": true
+      },
+      "ubsan_relocated": {
+        "bytes": 180224,
+        "sha256": "d7db9fa2f6cd7c07f7f5d8370f2afe6499fc36ac9f8cc5944936beb9303460f7",
+        "PASS": true
+      },
+      "fragment_ubsan": {
+        "immediate_roundtrips": 1032,
+        "PASS": true
+      },
+      "i386_initial": {
+        "bytes": 180224,
+        "sha256": "f2fea04e9a3b56d8e18958745d7da27e15d5be0789ed5eef404c7b80976c926a",
+        "PASS": true
+      },
+      "i386_relocated": {
+        "bytes": 180224,
+        "sha256": "d7db9fa2f6cd7c07f7f5d8370f2afe6499fc36ac9f8cc5944936beb9303460f7",
+        "PASS": true
+      },
+      "fragment_i386": {
+        "immediate_roundtrips": 1032,
+        "PASS": true
+      }
+    },
+    "SGX_invocations": 0,
+    "hardware_interactions": 0
+  },
+  "guards": {
+    "source-guard-native": "183 source-guard checks; 0 failures; SYNTHETIC ONLY",
+    "capsule-service-native": "7 service/observer differential cases PASS; synthetic CPU only",
+    "source-guard-ubsan": "183 source-guard checks; 0 failures; SYNTHETIC ONLY",
+    "capsule-service-ubsan": "7 service/observer differential cases PASS; synthetic CPU only"
+  },
+  "unchanged_full_contract_regressions": {
+    "native": "PASS",
+    "UBSan": "PASS",
+    "i386_QEMU": "PASS"
+  },
+  "module": {
+    "ABI": {
+      "classification": "PASS",
+      "reference_sha256": "c925caedebcc0699aef53227d29e64b47bf2833efd9d2e611cba276dd3a08ab3",
+      "candidate_sha256": "c21c26c567fc7676e28f4f732cb8cd3c7af1a7360560b58a310789523dc9454d",
+      "reference_import_count": 253,
+      "candidate_import_count": 253,
+      "shared_count": 253,
+      "mismatched_count": 0,
+      "mismatches": {},
+      "unverified_candidate_imports": [],
+      "module_layout": {
+        "reference": "0xb84efb99",
+        "candidate": "0xb84efb99"
+      }
+    },
+    "undefined_symbols_versioned": true,
+    "modinfo_byte_identical": true,
+    "driver_repeat_byte_identical": true,
+    "driver": {
+      "path": "/home/gama/sgx535-offline/phase8-first-3d-offline-20261006T072942Z/build/module/gma500_gfx.ko",
+      "bytes": 250864,
+      "sha256": "c21c26c567fc7676e28f4f732cb8cd3c7af1a7360560b58a310789523dc9454d",
+      "build_id": "8be2777b2a79eaa6651b89d19faf4d68cdcdc460",
+      "loaded_note_sha256": "35ec9f4e576a83a3990ebda4f8aee5869c0e4ea32e1e35969fa48abffa7dc832",
+      "abi": "ELF32/i386",
+      "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 ",
+      "dependencies": "drm,drm_kms_helper,sgx535_provenance,video,i2c-algo-bit",
+      "versioned_imports": 253,
+      "missing_imports": [],
+      "crc_mismatches": {},
+      "unversioned_undefined": [],
+      "module_layout": "0xb84efb99",
+      "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+      "qualification": "PASS"
+    },
+    "observer": {
+      "path": "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/build/observer/sgx535_provenance.ko",
+      "bytes": 26284,
+      "sha256": "2e35e863d51dbc1d407feef08f08bb2edc6390af621a0f173a9b1a73ec76158a",
+      "build_id": "f11d3abb072caa4e1d32836ef92ce201e9c9d126",
+      "loaded_note_sha256": "6afbac1cf48a211135e2a4b4ffc30f96ace64f6d397071595bbc328966bb8af0",
+      "abi": "ELF32/i386",
+      "vermagic": "5.10.240-antix.1-486-smp SMP mod_unload modversions 486 ",
+      "dependencies": "",
+      "versioned_imports": 38,
+      "missing_imports": [],
+      "crc_mismatches": {},
+      "unversioned_undefined": [],
+      "module_layout": "0xb84efb99",
+      "target_table_sha256": "faab2fae02fec696f2901790feba0e81776a0b66e74e14bbce0c72c570039dca",
+      "qualification": "PASS"
+    }
+  },
+  "image_reproducibility": {
+    "byte_identical": true,
+    "sha256": "0e45ad4c9ec3eaa891253ea319348286c869644a3ba6c9dba54de39d92bd1e7d",
+    "scope": "offline image construction/unpack/order/syntax only; not live first-owner validation"
+  },
+  "image_delta": {
+    "compared_to": "known-good FIRE3 archived image",
+    "only_changed_members": [
+      "init",
+      "usr/lib/sgx535-first-load/gma500_gfx.ko",
+      "scripts/sgx535-first-load"
+    ],
+    "all_other_members_byte_identical": true,
+    "early_prefix_byte_identical": true,
+    "finished_hook_integrity_gate": "PASS"
+  },
+  "source_delta": {
+    "source_files_compared": 94,
+    "changed": [
+      "frozen_kernel_initial.inc",
+      "frozen_kernel_relocations.inc"
+    ],
+    "opaque_input_sha256": "ca07d61986983414067536575fb2950ddf64adbb63129f66b560d7b741be18b5",
+    "opaque_bytes_unchanged": true,
+    "opaque_contents_not_inspected": true
+  },
+  "preservation": {
+    "preexisting_implementation_files_unchanged": 129,
+    "FIRE2_files_unchanged": 68,
+    "FIRE3_archive_files_verified": 223,
+    "centered_display_archive_verified": 39,
+    "current_task_hardware_interactions": 0,
+    "current_task_SGX_invocations": 0
+  },
+  "live_PRE07": "PENDING",
+  "SGX_authorization": false,
+  "display_authorization": false,
+  "hardware_proof": "NONE from offline tests"
+}

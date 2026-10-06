@@ -1,0 +1,12 @@
+{
+  "recorded_utc": "2026-10-03T00:33:44.936253+00:00",
+  "operator_statement": "Will not take a GRUB menu photograph; can report displayed entry text; do not request photography again this session",
+  "selection_photo_available": false,
+  "experimental_selection_observed": null,
+  "current_boot_observed": null,
+  "procedure_source": "docs/phase8/first-load-capture-timing-redesign.md:62",
+  "applicable_requirement": "Capture and actually supply the photo showing both exact titles and STOCK as default. If the menu cannot be held or photographed, stop.",
+  "permitted_text_only_replacement": "not supplied by applicable v2 procedure",
+  "action": "No further experimental selection requested; awaiting actual current screen/selection observation",
+  "sgx_invocations_this_session": 0
+}

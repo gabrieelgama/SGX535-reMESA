@@ -1,0 +1,9 @@
+{
+  "recorded_utc": "2026-10-03T00:35:50.451250+00:00",
+  "source": "operator visual report at GRUB",
+  "entry_visibly_present": true,
+  "reported_text": "EXPERIMENTAL SGX535 rev121 FROZEN 314e2f3b37195dc56df7c57dd938d78377a5ea8e FIRST-LOAD ONLY (no SGX)",
+  "photograph_available": false,
+  "experimental_selection_reported": false,
+  "interpretation": "Visible presence established by operator report; mandatory v2 photographic selection evidence remains unavailable; entry is not classified as missing"
+}

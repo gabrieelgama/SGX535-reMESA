@@ -1,0 +1,18 @@
+{
+  "decision_id": "MINI12-CORRECTED-B19838C1-LIVE-PREPARATION-20261005T041729Z-b19838c1",
+  "timestamp_utc": "2026-10-05T04:17:29.902527+00:00",
+  "authority": "project maintainer/operator; exact current user authorization",
+  "scope": "fresh passive STOCK preflight; if PASS distinct corrected-image staging and verification; request one manual corrected-image boot; passive candidate verification/PRE07; STOP before execution",
+  "corrected_image_sha256": "b19838c188e9257834ed470f1c401f6ce3938da46f8dae3b7822e46839db7142",
+  "driver_build_id": "cd9b947371f18c2d19af05bfda69fbf9462c2e62",
+  "observer_build_id": "143b1284fc643ea9a7ddd4aeeefa05cdc682718b",
+  "starting_point": "operator-reported normal running STOCK; no extra recovery reboot requested",
+  "candidate_boot_budget": 1,
+  "stock_health_failure_stop": true,
+  "candidate_hold_failure_stop_no_retry": true,
+  "preserve_malformed_image_and_historical_evidence": true,
+  "sgx_execution_authorized": false,
+  "client_execution_authorized": false,
+  "retry_authorized": false,
+  "evidence_root": "/home/gama/sgx535-offline/phase8-corrected-live-preparation-20261005T041729Z-b19838c1"
+}

@@ -1,0 +1,557 @@
+{
+  "schema_version": 1,
+  "design_id": "MINI12-PRE07-CLEANROOM-OBSERVATION-PRESERVATION-SPEC-20261004-314e2f3b",
+  "record_kind": "PARTIAL OFFLINE DESIGN SPECIFICATION ONLY; NOT IMPLEMENTATION OR LIVE PROCEDURE",
+  "prepared_timestamp_utc": "2026-10-04T19:42:37Z",
+  "design_scope_decision": "/home/gama/sgx535-gfx/docs/phase8/pre07-clean-room-design-scope-maintainer-20261004-314e2f3b.json",
+  "request_id": "MINI12-PRE07-CLEANROOM-OBSERVATION-PRESERVATION-DESIGN-REVIEW-20261004-314e2f3b",
+  "exact_context": {
+    "boot_id": "89fc7306-6dac-4ab9-af62-360b7152ef22",
+    "module_build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+    "action": "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1",
+    "freshness": "Boot and 70/70 first-owner facts are preserved historical observations, not fresh invocation guards."
+  },
+  "approved_response_client": {
+    "source": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot_response.c",
+      "size": 5514,
+      "sha256": "919c2611e048e4a660ecae3542264adf5a5367d9b0fbe7fbceff2f45f90adedf"
+    },
+    "binary": {
+      "path": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-build-01/frozen-triangle-one-shot-response-i386",
+      "size": 775264,
+      "sha256": "2f84917f96db2859678797a327d40d9638325e5c5efb6e0dfccef44d756b4835"
+    },
+    "uapi": {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_uapi.h",
+      "size": 760,
+      "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420"
+    }
+  },
+  "allowed_inputs": [
+    {
+      "input": "approved_client_interface",
+      "evidence": "C,Q,R",
+      "scope": "Approved public CLI, exact one-call behavior, raw/image outputs and failure reporting only; not permission to run it."
+    },
+    {
+      "input": "current_uapi",
+      "evidence": "U,R",
+      "scope": "Published request/response layout and fixed ioctl interface; no kernel-entry implementation."
+    },
+    {
+      "input": "readiness_requirements_and_identity_records",
+      "evidence": "G,R",
+      "scope": "PRE01-PRE08, evidence acceptance, exact approved pins and scope; authority is not changed."
+    },
+    {
+      "input": "offline_archive_checker",
+      "evidence": "A",
+      "scope": "Already-captured file preservation, supplied-record checking and verification within existing scope."
+    },
+    {
+      "input": "exclusive_file_primitives",
+      "evidence": "S",
+      "scope": "Documented copy/create/sync/reread interfaces; no historical orchestration details."
+    },
+    {
+      "input": "passive_predicates",
+      "evidence": "A:245,F:83",
+      "scope": "Unrestricted supplied-value identity/ownership/health predicates, not historical target programs or their operation sequence."
+    },
+    {
+      "input": "high_level_evidence_contract",
+      "evidence": "G,F:69,I",
+      "scope": "Observable attribution, raw evidence, original-before-copy, STOP and recovery requirements only; historical unavailable implementation descriptions are excluded as design specifications."
+    },
+    {
+      "input": "restriction_provenance",
+      "evidence": "P",
+      "scope": "Only original user prohibition and completed provenance finding; not blocked payloads or inferred implementation details."
+    },
+    {
+      "input": "ordinary_linux_documentation",
+      "evidence": "/usr/share/man/man2/{ioctl,open,fsync,syslog,execve,waitpid}.2.gz",
+      "scope": "Available local ordinary documentation may inform later review. Documentation availability does not establish Mini 12 interface availability, capture sufficiency or live authority."
+    }
+  ],
+  "forbidden_and_unknown_excluded": true,
+  "contamination_stop_rule": "If satisfying any requirement requires consulting, remembering as a specification, deriving, reconstructing or obtaining restricted material, STOP that work, preserve its dependency as UNKNOWN, exclude the material and return to review. Do not use another tool, representation, encoding or source to continue the blocked branch. Past exposure is not certified absent; disclose it and do not use it.",
+  "source_catalog": {
+    "G": {
+      "path": "/home/gama/sgx535-gfx/docs/phase8/gate-b-maintainer-readiness-20261004-314e2f3b.json",
+      "lines": [
+        595,
+        647,
+        655
+      ]
+    },
+    "R": {
+      "path": "/home/gama/sgx535-gfx/docs/phase8/response-export-client-substitution-maintainer-20261004-314e2f3b.json",
+      "lines": [
+        7,
+        17,
+        74,
+        165
+      ]
+    },
+    "C": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot_response.c",
+      "lines": [
+        19,
+        58,
+        65,
+        77,
+        78,
+        101,
+        114
+      ]
+    },
+    "U": {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_uapi.h",
+      "lines": [
+        8,
+        10,
+        26
+      ]
+    },
+    "A": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_evidence_bundle.py",
+      "lines": [
+        1,
+        43,
+        70,
+        88,
+        106,
+        130,
+        155,
+        177,
+        208,
+        245
+      ]
+    },
+    "S": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_first_load_stage.py",
+      "lines": [
+        1,
+        21,
+        39,
+        41,
+        48
+      ]
+    },
+    "F": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_first_owner_session.py",
+      "lines": [
+        69,
+        74,
+        76,
+        83,
+        111
+      ]
+    },
+    "Q": {
+      "path": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-qualification.json",
+      "lines": [
+        1
+      ]
+    },
+    "I": {
+      "path": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/offline-integration-contract.json",
+      "lines": [
+        1
+      ]
+    },
+    "P": {
+      "path": "/home/gama/.codex/sessions/2026/10/02/rollout-2026-10-02T01-48-39-01a0fa4c-9a56-7481-9a13-caedf52b3a2c.jsonl",
+      "lines": [
+        3204,
+        3228,
+        3249
+      ],
+      "use": "Previously established USER instruction wording only; no tool/source payload is an input."
+    }
+  },
+  "architecture": {
+    "A": "Independent observations of approved context, current continuity/ownership/health/history/privilege/recovery; protected role/sink requirements and capture readiness; failed/unknown prerequisite STOP. No collection performed.",
+    "B": "Externally controlled separately authorized ordinary execution of the unchanged approved client. This design neither launches nor provides an SGX executor; observation boundary consumes independently permitted process/outcome/sink evidence only.",
+    "C": "Preserve every available original response/image/stream/kernel observation and actual outcome; repeat no ioctl. Completion/loss/owner/boot facts remain explicit and UNKNOWN when missing.",
+    "D": "Preserve/sync originals before copies; reread/hash/manifest and independently verify with existing archive; validate only copy; a separate evidence review establishes provenance. Existing archive always leaves triangle_established false."
+  },
+  "formal_proof_obligation": {
+    "variables": "C bound context; P observed exact executable/process instance; I eligible single ioctl; R original post-call object; O image; K kernel observation; E independently preserved observation set.",
+    "attribution": "Attr_E(K,I,R,C) requires observed context continuity, proven approved process instance, uniquely eligible I for P/device/action, causal output provenance R<-P<-I, original integrity, documented accepted-event meaning for K, sufficient completeness/exclusion of stale/unrelated producers, and a documented causal association K<-I OR a proved exclusive-current-operation association under a trusted observation model.",
+    "uniqueness": "There exists exactly one eligible I consistent with the evidence; no alternate invocation/boot/producer/event history explains K and R. Counts/labels alone do not establish uniqueness.",
+    "observable_constraints": "Every premise must be justified by an ALLOWED actual observation/interface specification. No hidden emitter/token/sequence is assumed. Any missing premise makes Attr UNKNOWN, not false or true.",
+    "trust_model": "Relies on the independently reviewed OS/collector and pinned artifacts plus observed access/ownership boundaries; no claim of adversarial privileged-host authenticity or power-loss survival. A declared trusted collector without provenance is not proof.",
+    "determinism": "Only a complete causal or exclusion proof is accepted as deterministic scoped attribution; timestamp proximity alone is probabilistic and insufficient."
+  },
+  "correlation_models": [
+    {
+      "model": "A \u2014 exactly-one invocation plus bounded kernel window",
+      "classification": "INSUFFICIENT",
+      "facts_proved": "Qualified client has one ioctl site; independent records can bracket an intended action if actually collected.",
+      "remaining_ambiguity": "Intent and temporal proximity do not identify an actual process, accepted device event or origin of returned files.",
+      "stale_unrelated_events": "Cannot exclude delayed/stale records or another producer merely from a window.",
+      "multiple_events": "Visible record order may distinguish text entries, not causal origin or hardware meaning.",
+      "process_lifetime": "Not established by one-action count.",
+      "artifact_process_binding": "Not established; files can be unrelated.",
+      "boot_binding": "Needs independent observed boot continuity; a label is insufficient.",
+      "failure_hold_attribution": "A failure within a window is not by itself attributable.",
+      "success_completion_attribution": "Completion within a window is not by itself attributable.",
+      "kernel_module_change": "No change required for these supporting observations; sufficiency unresolved.",
+      "restricted_information": "No restricted input needed to evaluate insufficiency.",
+      "invocation_semantics": "No change if purely externally observed; no logging mutation or ioctl probe.",
+      "observational_scope": "Supporting observations only; no launch described.",
+      "abnormal_termination": "Partial records may survive; completeness/outcome after crash remains UNKNOWN.",
+      "proof_strength": "Time association only, not deterministic attribution."
+    },
+    {
+      "model": "B \u2014 process identity plus exactly-one invocation plus bounded window",
+      "classification": "INSUFFICIENT",
+      "facts_proved": "Can identify a process instance if its lifetime/executable evidence is actually observed; qualified client bounds its call count.",
+      "remaining_ambiguity": "Kernel IRQ/work completion may not identify the originating process; numeric PID alone can be reused.",
+      "stale_unrelated_events": "Other or delayed kernel events remain possible without a proven causal/exclusivity bridge.",
+      "multiple_events": "Can separate records, not assign accepted kernel events to the process.",
+      "process_lifetime": "Requires stable lifetime/generation or independently documented equivalent; route not assumed available.",
+      "artifact_process_binding": "Requires sole authorized writer and externally observed output binding; PID labels alone insufficient.",
+      "boot_binding": "Needs independent continuity and exact executable/module context.",
+      "failure_hold_attribution": "Process failure is attributable to the process if witnessed; kernel HOLD attribution still unresolved.",
+      "success_completion_attribution": "Not established from PID plus event timing.",
+      "kernel_module_change": "No change required for process metadata alone; full sufficiency unresolved.",
+      "restricted_information": "No restricted material needed; unknown lifetime interface is not presumed usable.",
+      "invocation_semantics": "No changed client bytes/request; no executor or invasive tracing specified.",
+      "observational_scope": "Observational if passive; no process stop/attach/control assumed.",
+      "abnormal_termination": "Independent process outcome record may survive; missing output/kernel facts remain UNKNOWN.",
+      "proof_strength": "Deterministic process identity conditional on lifetime witness; kernel association remains unproved."
+    },
+    {
+      "model": "C \u2014 process identity plus monotonic/clock timestamps plus bounded window",
+      "classification": "INSUFFICIENT",
+      "facts_proved": "Can improve ordering if each clock domain, source, resolution and continuity is documented and observed.",
+      "remaining_ambiguity": "Clock agreement and adjacency cannot establish causation; asynchronous completion and PID reuse still require exclusion.",
+      "stale_unrelated_events": "Cannot exclude concurrent producers/delayed events by timestamps alone.",
+      "multiple_events": "Only distinguish timing/order within proven resolution; equal timestamps or reordered collection remain possible.",
+      "process_lifetime": "Requires the same stable process witness as B; time alone does not supply it.",
+      "artifact_process_binding": "Requires preserved output inode/process ownership relation independent of clocks.",
+      "boot_binding": "Boot and clock-domain identity must be bound; wall-clock continuity not assumed.",
+      "failure_hold_attribution": "Timing locates failure observation, not necessarily the failing invocation.",
+      "success_completion_attribution": "Accepted completion association remains unproved.",
+      "kernel_module_change": "No module change for ordinary timestamp metadata; actual interface sufficiency UNKNOWN.",
+      "restricted_information": "No restricted knowledge needed; unclassified clock/interface inputs excluded.",
+      "invocation_semantics": "No request or invocation change; perturbing observation is outside the design.",
+      "observational_scope": "Passive ordering support only.",
+      "abnormal_termination": "Before/crash evidence retained; absent end evidence remains UNKNOWN.",
+      "proof_strength": "Deterministic ordering only with documented clocks; temporal correlation is not deterministic kernel attribution."
+    },
+    {
+      "model": "D \u2014 existing exported kernel/ledger sequence",
+      "classification": "NOT AVAILABLE",
+      "facts_proved": "Permitted UAPI provides outcome/phase/event bits, not an invocation sequence/token.",
+      "remaining_ambiguity": "The ledger is a bitset, not an invocation identifier or independent execution proof.",
+      "stale_unrelated_events": "No exposed sequence establishes stale/other invocation exclusion.",
+      "multiple_events": "Bits 1/2/4 support categories, not ordered unique event instances.",
+      "process_lifetime": "No public sequence-to-process relation established.",
+      "artifact_process_binding": "Response fields alone do not bind files to producer.",
+      "boot_binding": "UAPI has no boot identity field; separate observation required.",
+      "failure_hold_attribution": "Failure response may be UNAUTHORITATIVE; zero reporting values are not success.",
+      "success_completion_attribution": "Ledger alone cannot establish accepted hardware completion.",
+      "kernel_module_change": "No change proposed; discovering another permitted interface could resolve availability; necessity of source change UNKNOWN.",
+      "restricted_information": "Searching hidden kernel-entry or restricted internals would be forbidden; branch stopped.",
+      "invocation_semantics": "Unchanged client/UAPI; no new token/request field introduced.",
+      "observational_scope": "Analysis of permitted fields only.",
+      "abnormal_termination": "Missing/partial response cannot authenticate a sequence; retain bytes.",
+      "proof_strength": "No proof from a field that is not exported. Other unclassified interfaces are UNKNOWN, not globally nonexistent."
+    },
+    {
+      "model": "E \u2014 existing unrestricted accepted kernel event/marker",
+      "classification": "UNKNOWN",
+      "facts_proved": "Ordinary log interface documentation establishes potential visibility of retained text, not this driver's event semantics.",
+      "remaining_ambiguity": "An actual permitted accepted-event record schema, source, producer association and completeness guarantee are unestablished.",
+      "stale_unrelated_events": "Cannot claim exclusion without a documented causal binding or separately proved unique current owner plus full event history.",
+      "multiple_events": "TA/end-render/3D-free/HOLD differentiation must be documented; marker strings are not invented.",
+      "process_lifetime": "Process linkage must be independently established; kernel execution can be asynchronous.",
+      "artifact_process_binding": "Would still require approved-process/output binding.",
+      "boot_binding": "Would require current boot and owner continuity.",
+      "failure_hold_attribution": "Failure/HOLD schema/source-to-invocation meaning UNKNOWN.",
+      "success_completion_attribution": "SUCCESS ATTRIBUTION OBSERVABILITY: UNKNOWN.",
+      "kernel_module_change": "UNKNOWN whether a source change is necessary; none authorized or proposed.",
+      "restricted_information": "Permitted semantic documentation could suffice; restricted emitter material remains excluded and branch stopped.",
+      "invocation_semantics": "Only existing observations may be considered; no emitter/request changes.",
+      "observational_scope": "Potentially observational, but no live collection method approved.",
+      "abnormal_termination": "Survival after abnormal termination/loss UNKNOWN; absence does not prove no completion.",
+      "proof_strength": "Potentially deterministic with a complete documented causal/exclusivity bridge; presently UNKNOWN."
+    },
+    {
+      "model": "F \u2014 new observation-side correlation metadata",
+      "classification": "INSUFFICIENT",
+      "facts_proved": "A transaction receipt can bind independently observed context, process instance, inode identities, ordering and preserved bytes.",
+      "remaining_ambiguity": "Metadata cannot create a missing hardware observation or causal relation; self-declared UUID/pins remain labels.",
+      "stale_unrelated_events": "Cannot independently exclude unrelated kernel outcomes without the E observable/proof.",
+      "multiple_events": "Can index preserved records; cannot authenticate their accepted-event semantics.",
+      "process_lifetime": "Can retain a stable process witness if separately permitted/documented; does not invent it.",
+      "artifact_process_binding": "Can bind observed output descriptors/inodes and original bytes if sole-writer chain actually established.",
+      "boot_binding": "Can preserve actual continuity evidence, not manufacture it.",
+      "failure_hold_attribution": "Can preserve failure and UNKNOWN/STOP evidence; causal HOLD association still requires E.",
+      "success_completion_attribution": "No successful kernel proof produced by metadata alone.",
+      "kernel_module_change": "No kernel/module/request change for observer-only receipts; adequate event source unresolved.",
+      "restricted_information": "Derived solely from abstract contract; no historical correlation format or sequence reused.",
+      "invocation_semantics": "No execution or client modification; no additional ioctl.",
+      "observational_scope": "Purely observational/storage metadata if later implementation conforms; no executor.",
+      "abnormal_termination": "Independent journal/partial files can retain available observations; storage failure may leave receipt incomplete.",
+      "proof_strength": "Deterministic file/metadata consistency possible; kernel provenance not established."
+    }
+  ],
+  "best_conditional_model": {
+    "model": "Conditional F+B+C+E evidence chain",
+    "classification": "POTENTIALLY SUFFICIENT \u2014 NEEDS SPECIFIC PROOF",
+    "basis": "Observer receipts and stable process/output identity plus documented accepted-event provenance, complete history, current boot/owner continuity and exclusion of alternate producers. Not a token requirement and not a claim those observations are exposed.",
+    "missing_observable": "A permitted, documented kernel outcome observation distinguishable as accepted TA/end-render/3D-memory-free or failure/HOLD of this current operation, with enough provenance for either a causal association or an independently proved exclusive-current-operation association.",
+    "current_state": "UNKNOWN; cannot instantiate or accept this hybrid without the missing observable and exclusion proof."
+  },
+  "confounder_exclusions": [
+    {
+      "confounder": "Stale kernel records",
+      "required_observation": "Observed pre-action baseline and a documented way to identify records belonging to the current action, excluding delayed/pending earlier work. A text prefix alone is insufficient.",
+      "availability": "Baseline storage available; sufficient current event boundary UNKNOWN."
+    },
+    {
+      "confounder": "Unrelated kernel events",
+      "required_observation": "Accepted-event semantic classification and either causal association or proof no alternative producer can emit the accepted event in the interval.",
+      "availability": "Kernel source/association observable UNKNOWN."
+    },
+    {
+      "confounder": "Another process",
+      "required_observation": "Stable approved executable/process-instance witness and independently observed/excluded competing device activity. Private files do not prove exclusive GPU access.",
+      "availability": "Executable pin known; live exclusivity/lifetime evidence not collected."
+    },
+    {
+      "confounder": "Another ioctl or previous invocation",
+      "required_observation": "One-call client semantics plus complete observed invocation history and uniqueness of the actually observed eligible operation; no availability probe.",
+      "availability": "Qualified one-call semantics known; live issuance/history observation unresolved."
+    },
+    {
+      "confounder": "Previous boot or boot change",
+      "required_observation": "Actual same expected boot before, immediately before action and after collection, with evidence the collection interval has no unseen boot transition.",
+      "availability": "Predicate known; live witness absent."
+    },
+    {
+      "confounder": "Missing completion",
+      "required_observation": "Preserve absence/timeout/incomplete return as UNKNOWN; no inferred event from success-looking tuple/image.",
+      "availability": "Policy specified; successful external event observable UNKNOWN."
+    },
+    {
+      "confounder": "Incomplete/dropped/cleared logs",
+      "required_observation": "Documented source continuity/loss detection or otherwise sufficient retained event evidence; a partial interval may not support exclusion.",
+      "availability": "Ordinary ring-buffer documentation does not establish loss-free current collection; UNKNOWN."
+    },
+    {
+      "confounder": "Clock discontinuity/reordering",
+      "required_observation": "Clock domain/source, monotonic ordering/resolution and continuity witness, or an independently sufficient non-time causal order.",
+      "availability": "No current clock mapping assumed."
+    },
+    {
+      "confounder": "PID reuse",
+      "required_observation": "Process-instance lifetime discriminator/stable witness, not bare PID; relate observations to the same lifetime.",
+      "availability": "Specific permitted runtime interface not established; obligation only."
+    },
+    {
+      "confounder": "Client crash",
+      "required_observation": "Independent process outcome and last directly observed action boundary; any possible ioctl means no retry and execution UNKNOWN unless narrower direct evidence exists.",
+      "availability": "Retained client failure semantics known; live outcome collection absent."
+    },
+    {
+      "confounder": "Artifact preservation failure",
+      "required_observation": "Original bytes/partial bytes, actual syscall/write/sync/close/capture outcome and inode provenance, with failed/missing roles explicitly listed.",
+      "availability": "Client/file primitives available; live observation needed."
+    },
+    {
+      "confounder": "Artifact substitution or wrong producer",
+      "required_observation": "Trusted parent/sink binding, sole authorized writer, observed executable/lifetime and inode receipts plus reread bytes; hash alone proves no producer.",
+      "availability": "File integrity mechanisms known; producer observation needed."
+    },
+    {
+      "confounder": "Ownership change",
+      "required_observation": "Observed module/PCI/device ownership through relevant interval; change or uncertain continuity stops attribution.",
+      "availability": "Unrestricted predicates known; current continuity absent."
+    },
+    {
+      "confounder": "Duplicate or reordered event records",
+      "required_observation": "Preserved source ordering/identity and documented accepted-event semantics; duplicates do not count as additional completion and a later sample is not event history.",
+      "availability": "Event schema/order guarantees UNKNOWN."
+    }
+  ],
+  "kernel_observability": {
+    "confirmed": "Public UAPI/approved client expose response tuple/ledger/image; ordinary Linux log documentation describes retained ring-buffer visibility, not these SGX accepted-event semantics. Existing archive preserves supplied logs only.",
+    "success_attribution_observability": "UNKNOWN",
+    "failure_attribution_observability": "UNKNOWN for a sufficient current live route; failure bytes/client outcome alone remain bounded as documented.",
+    "invocation_unique_export": "Not present in permitted UAPI; unknown additional interfaces excluded.",
+    "missing_observable": "A permitted, documented kernel outcome observation distinguishable as accepted TA/end-render/3D-memory-free or failure/HOLD of this current operation, with enough provenance for either a causal association or an independently proved exclusive-current-operation association.",
+    "kernel_module_change_required": "UNKNOWN; neither necessity nor a change is demonstrated/authorized.",
+    "restricted_material_required": "NO for this partial specification; unavailable branches stopped rather than consulting it."
+  },
+  "destination_contract": {
+    "roles": [
+      "approved_client",
+      "response_original",
+      "image_original",
+      "stdout_original",
+      "stderr_original",
+      "kernel_observations_original",
+      "identity_guard_outcome_receipts",
+      "validation_copy",
+      "manifest",
+      "seal"
+    ],
+    "actual_target_paths": null,
+    "parent": "Independently verified directory ancestry/identity/owner, no symlink traversal or untrusted writer; private evidence directory owned by the permitted effective account with mode0700. Live privilege predicate requires euid0; no target account/path invented.",
+    "binding": "Review binds each logical role to its resolved parent+basename and permissions, not just a string; no role aliasing, reused destination or inode/hardlink collision.",
+    "creation": "Response/image names remain absent before client writes because approved exporter uses exclusive create; never pre-create their files. Stream/receipt sinks may be exclusively created by the observation layer, but external actor must prove its actual sink binding. No launcher implementation specified.",
+    "type_and_mode": "Regular evidence files, nlink1, verified owner, mode0600; no symlink/FIFO/device. Approved client inode must be protected/identity-verified with execution permissions separately reviewed, not inferred from evidence-file0600.",
+    "durability": "Check available write/fsync/close outcomes and parent-directory sync; retain original order. fsync success is not a guarantee after arbitrary power loss.",
+    "reread": "Reopen without following links, verify regular type/link/owner/inode/size and reread bytes; compare raw4268/image4096 equality at offset172 when complete; size/hash establish integrity not provenance.",
+    "ordering": "Preserve all available originals before derived image/copy/analysis; approved client attempts raw preservation before success summary/image handling. Raw-write failure may still leave image/other evidence; retain every produced original and partial. Do not manufacture absent original image.",
+    "failure": "Retain created/partial files and errors; no unlink/overwrite/reuse. If storage prevents a receipt, record that uncertainty where still possible; no claim of durable evidence."
+  },
+  "guard_contract": [
+    {
+      "class": "PRECONDITION",
+      "items": "Exact boot/kernel/arch, BuildID/note/moduleLive and device/image/client/UAPI identities; PCI/DRM/fb/VT/IRQ/services/health/taint; unused history; privilege/operator/recovery; protected sinks; sufficient observation availability; explicit future execution permission.",
+      "purpose": "Identity/history/observation availability are attribution prerequisites; health/privilege/recovery are also readiness/safety.",
+      "when": "After preparation and freshly before externally authorized invocation; any FAIL/UNKNOWN prevents proceeding."
+    },
+    {
+      "class": "CONTINUITY CONDITION",
+      "items": "Same boot and owner/approved process/output identities across preparation/action/collection; capture ordering/source continuity; complete invocation history; no competing eligible action.",
+      "purpose": "Attribution and safety; private destination ownership alone does not prove GPU exclusivity.",
+      "when": "Through relevant evidence interval and immediately before action; loss of continuity stops claims."
+    },
+    {
+      "class": "POSTCONDITION",
+      "items": "Actual process/syscall/capture outcome; preserved byte/inode/role identity; response/image consistency; available kernel event/completeness and relevant health/boot/owner state.",
+      "purpose": "Preservation, outcome and attribution; no mandatory repetition of entire first-owner capture.",
+      "when": "After action or abnormal end, preserve before interpretation; unknown/dropped evidence retained as UNKNOWN."
+    },
+    {
+      "class": "RECOVERY CONDITION",
+      "items": "Pre-established manual control/readiness; only separately authorized existing machine-boundary/normalSTOCK procedure if needed; no automatic/hot/reset/retry action.",
+      "purpose": "Safety; recovery readiness alone cannot prove execution attribution or recovery success.",
+      "when": "Readiness pre-action; recovery decision after observed failure/uncertainty only if applicable, no action in this specification."
+    }
+  ],
+  "failure_classification_table": [
+    {
+      "case": "Pre-action guard/destination/capture readiness failure before directly established invocation",
+      "retained_evidence": "Preserve failed guard and preparation/partial receipts.",
+      "classification": "NOT ATTEMPTED only if no client/ioctl issuance is directly established; otherwise EXECUTION UNKNOWN.",
+      "retry": "No automatic retry.",
+      "recovery_review": "Review failed readiness; no recovery action authorized."
+    },
+    {
+      "case": "ioctl negative return",
+      "retained_evidence": "Retain full raw userspace object if saved, stderr hex, syscall error/outcome, streams and available kernel records.",
+      "classification": "Failed syscall bytes UNAUTHORITATIVE; EXECUTION UNKNOWN unless independent events localize a boundary.",
+      "retry": "DO NOT RETRY.",
+      "recovery_review": "STOP; reviewed recovery only if needed; driver HOLD only if observed."
+    },
+    {
+      "case": "Response preservation failure",
+      "retained_evidence": "Retain partial raw file, write/sync/close errors, stdout/stderr and other available artifacts.",
+      "classification": "Complete response unestablished; EXECUTION UNKNOWN or narrower independently proved execution state; no triangle.",
+      "retry": "DO NOT RETRY if ioctl may have occurred.",
+      "recovery_review": "STOP; recovery review if execution may have occurred."
+    },
+    {
+      "case": "Image preservation failure",
+      "retained_evidence": "Retain complete response if available, partial image, streams/error/inode receipts and kernel observations.",
+      "classification": "Image may exist within response but standalone original export is incomplete; preserve unchanged evidence, no invented successful original or triangle.",
+      "retry": "DO NOT RETRY.",
+      "recovery_review": "STOP; recovery review if needed; no extraction/redesign approved here."
+    },
+    {
+      "case": "stdout/stderr collection failure",
+      "retained_evidence": "Retain stream partials, capture errors, process outcome, response/image and kernel records.",
+      "classification": "Missing failure/report evidence stays UNKNOWN; complete transaction not certified.",
+      "retry": "DO NOT RETRY if issuance possible.",
+      "recovery_review": "STOP; recovery review if needed."
+    },
+    {
+      "case": "Kernel record loss/incomplete observation",
+      "retained_evidence": "Retain before/after/partial records and explicit loss/uncertainty witness, plus client artifacts.",
+      "classification": "Completion attribution UNKNOWN; perfect ledger/image does not establish triangle.",
+      "retry": "DO NOT RETRY.",
+      "recovery_review": "STOP; review recovery need, no automatic action."
+    },
+    {
+      "case": "Process crash/abnormal termination",
+      "retained_evidence": "Retain external process/lifetime/outcome witness and every already-written byte/partial stream.",
+      "classification": "If ioctl may have occurred, EXECUTION UNKNOWN unless direct narrower outcome evidence exists.",
+      "retry": "DO NOT RETRY.",
+      "recovery_review": "STOP; reviewed machine-boundary recovery only if needed."
+    },
+    {
+      "case": "Completion absent/unobserved",
+      "retained_evidence": "Retain kernel/client records and timeout/end-of-capture witness without a fabricated event.",
+      "classification": "No observed completion; no inference that submission failed or never occurred.",
+      "retry": "DO NOT RETRY.",
+      "recovery_review": "STOP; recovery review as applicable."
+    },
+    {
+      "case": "Observed failure/HOLD",
+      "retained_evidence": "Preserve complete available response and original kernel HOLD/failure record plus association proof and streams.",
+      "classification": "HOLD only if directly observed; failure localized only as far as attributed evidence supports.",
+      "retry": "DO NOT RETRY.",
+      "recovery_review": "Only existing separately authorized recovery boundary; no reset/unbind/replacement."
+    },
+    {
+      "case": "Boot/ownership continuity uncertain or changed",
+      "retained_evidence": "Retain both identities, discontinuity evidence and all partial artifacts.",
+      "classification": "Attribution to reviewed context UNKNOWN; STOP even if image appears correct.",
+      "retry": "DO NOT RETRY.",
+      "recovery_review": "Requires review; no boot/reset/rebinding action granted."
+    },
+    {
+      "case": "Archive write/sync/close/reread/seal verification failure",
+      "retained_evidence": "Retain originals/partials and available incomplete receipts; never reuse failed destination.",
+      "classification": "Integrity/completeness UNKNOWN for failed roles; seal cannot certify a failed transaction.",
+      "retry": "DO NOT RETRY ioctl; no automatic transaction restart.",
+      "recovery_review": "Storage/recovery review separately scoped."
+    }
+  ],
+  "triangle_evidence_policy": [
+    {
+      "label": "TRIANGLE ESTABLISHED",
+      "requires": "Trusted current-context approved process/ioctl and artifact association; full response with necessary tuple operation_errno0/outcome2/phase9/events7/color_observed1; attributable accepted TA/end-render/3D-free; original4096 preserved and response[172:] identical; checked validation copy at all1024 pixels consistent with frozen white geometry/zero background/layout; independent archive verification; no unresolved material provenance/loss/edge contradiction.",
+      "forbidden_shortcuts": "Exit/ledger/hash/nonzero count/reference image alone; reporting zeros alone."
+    },
+    {
+      "label": "READBACK PRESENT BUT TRIANGLE NOT ESTABLISHED",
+      "requires": "Original candidate image bytes actually retained, with image presence directly established; missing completion/provenance, geometric contradiction or unresolved edge interpretation recorded.",
+      "limit": "If producer provenance absent, say image bytes present and hardware-readback provenance UNKNOWN; do not imply GPU readback."
+    },
+    {
+      "label": "EXECUTION OBSERVED BUT RASTER RESULT UNKNOWN",
+      "requires": "A directly attributable execution/submission/completion observation that establishes exactly the named stage; raster/image stage not adequately observed.",
+      "limit": "Specify which stage is observed. TA accepted completion permits TA-fire INFERRED if not directly observed; does not establish raster completion."
+    },
+    {
+      "label": "EXECUTION UNKNOWN",
+      "requires": "Possible ioctl with failed/ambiguous/lost/incomplete attribution, or no direct hardware execution proof.",
+      "limit": "Can retain a complete response/image while actual execution remains UNKNOWN; neither implies successful GPU behavior."
+    }
+  ],
+  "sampling_edge_limit": "Convention unqualified; complete image positions and values checked, boundary discrepancies remain unresolved until independently reviewed; neither count match nor synthetic reference is proof.",
+  "design_status": "DESIGN PARTIAL \u2014 BLOCKED ON DOCUMENTED INVOCATION-ATTRIBUTABLE KERNEL OUTCOME OBSERVABLE",
+  "ready_for_implementation_review": false,
+  "partial_sections_reviewable": true,
+  "complete_future_design_approved": false,
+  "implementation_authorized": false,
+  "live_use_authorized": false,
+  "pre07_live_readiness_changed": false,
+  "pre07": "BLOCKED",
+  "sgx_execution_authorized": false,
+  "sgx_invocations": 0,
+  "hardware_interactions": 0,
+  "triangle": "NOT ATTEMPTED",
+  "preservation": "No approved source/binary/UAPI/module/image/old authority/raw evidence changed; no tests/builds/qualification/live operations; no stage/commit."
+}

@@ -1,0 +1,8 @@
+{
+  "root_source_sha256": "343f739e507edb18a539953ced7e4e18b25d06f39ca9e173a70f88d981819ef3",
+  "wrapper_source_sha256": "42f6d497fc39d17712d0b8d22ae0102250e2cd7a9ebcb354112587e487a69328",
+  "prior_stock_boot_id": "5eed5985-f4e7-4277-8ceb-a7a69b8d7e95",
+  "deadline_seconds": 120,
+  "one_capture_only": true,
+  "sgx_actions": 0
+}

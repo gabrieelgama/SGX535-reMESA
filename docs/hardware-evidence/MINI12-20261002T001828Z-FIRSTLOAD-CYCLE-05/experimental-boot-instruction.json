@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-02T00:24:30.909297+00:00",
+  "selection_directed": "EXPERIMENTAL SGX535 rev121 FIRST-LOAD ONLY (no triangle)",
+  "maximum_experimental_selections": 1,
+  "boot_watch_seconds": 600,
+  "capture_max_kernel_boot_seconds": 1200,
+  "sgx_authorized": false,
+  "retry": false
+}

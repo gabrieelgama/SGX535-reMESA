@@ -1,0 +1,11 @@
+{
+  "mode": "stock_recovery",
+  "root_source_sha256": "8085bb4ce2720050332e384a548085d2cd7c3b5718d13951b1fa8692edfa274a",
+  "wrapper_sha256": "e9146899e081c7c5665b4f526be2b0fcdc35d72a917d2f6976f545add09bc266",
+  "capture_directory": "docs/hardware-evidence/MINI12-20261002T054751Z-DIAGNOSTIC-STAGING-01/stock-recovery",
+  "boot_watch_seconds": 600,
+  "capture_ceiling_seconds": 1200,
+  "connection_seconds": 40,
+  "child_seconds": 35,
+  "action": "read-only STOCK recovery evidence"
+}

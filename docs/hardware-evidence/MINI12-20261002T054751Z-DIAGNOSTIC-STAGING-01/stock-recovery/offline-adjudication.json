@@ -1,0 +1,24 @@
+{
+  "boot_id": "bce184cb-f5d1-40a2-8591-bd800f4679cc",
+  "classification": "PASS AFTER OFFLINE SCHEMA ADJUDICATION",
+  "diagnostic_boot_id": "69847808-be83-4a28-88b1-96688f0b0d66",
+  "guard_count": 39,
+  "guard_pass_count": 39,
+  "loaded_module_build_id": "d8dcb4d38b774ad64799d5e13aaedede069371f3",
+  "normalization": "Added only root.kernel as an alias of the captured root.kernel_release in an in-memory copy; raw records unchanged",
+  "operator_report": "STOCK manually selected exactly once; physical display and userspace normal; sudo -v succeeded locally; userspace about 120 seconds from handoff",
+  "original_wrapper_verdict": "STOP: capture kernel drift",
+  "prior_stock_boot_id": "d78d349e-daac-43aa-b7f9-156485506ca5",
+  "raw_stdout_sha256": "5fe7efc5374be6ad7013764afaae83b835d8842fe53cca0ac2cf6061a8fc2964",
+  "root_kernel_release": "5.10.240-antix.1-486-smp",
+  "start_kernel": "5.10.240-antix.1-486-smp",
+  "wrapper_validator_after_alias": {
+    "boot_authorized": false,
+    "boot_id": "bce184cb-f5d1-40a2-8591-bd800f4679cc",
+    "classification": "PASS RAW CAPTURE ONLY",
+    "first_owner": "NOT QUALIFIED BY TIMING ALONE",
+    "full_recovery": "NOT QUALIFIED BY TIMING ALONE",
+    "mode": "stock_recovery",
+    "sgx_authorized": false
+  }
+}

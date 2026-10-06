@@ -1,0 +1,525 @@
+{
+  "scope": "new offline 3D package/documentation only; not GPU qualification",
+  "files": {
+    "docs/phase8/3D-MILESTONE-PLAN.json": {
+      "bytes": 5673,
+      "sha256": "46a7a5902b39b1d42adc3e713ffcbf942ce70005a532b0e8590e41690b8af6af"
+    },
+    "docs/phase8/FIRST-REAL-3D-ROADMAP.md": {
+      "bytes": 16479,
+      "sha256": "b5050e6db7882722fd93b7e5145d76f6e977c65f7fb1591f414ce56f29c78485"
+    },
+    "docs/phase8/REUSABLE-RENDER-FRAMES.md": {
+      "bytes": 6207,
+      "sha256": "132602b64e87441a44d208c5efbb84e28ee86bf7b3ecdcf87c31e6d9d9fedcce"
+    },
+    "docs/phase8/VISIBLE-TRIANGLE-REPRODUCTION.json": {
+      "bytes": 19134,
+      "sha256": "49734ad319540ce9483eb91daffe003bdbf28b9cef81751d063652b510bf6fd1"
+    },
+    "docs/phase8/VISIBLE-TRIANGLE-REPRODUCTION.md": {
+      "bytes": 10739,
+      "sha256": "fd5e61009b522c2fc4ecfc27b5e88528821edae4dd04084e1ee36247887aef9c"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/address-plan.json": {
+      "bytes": 32529,
+      "sha256": "6b70fbe9dc3418a41e892274c9087f7040de343dca6d5f5f44fb112ee898c593"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/background.expected.bin": {
+      "bytes": 4096,
+      "sha256": "b365c45568ab5e9c314640cb4604bed6bd3ec93af4b70cb3eca78298be3d1421"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/build-command.json": {
+      "bytes": 1706,
+      "sha256": "ac7369b5c26d23ebcfa8b97f10085a380d6c43a58246717213dd50355439ff34"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/candidate.initrd": {
+      "bytes": 50816648,
+      "sha256": "0e45ad4c9ec3eaa891253ea319348286c869644a3ba6c9dba54de39d92bd1e7d"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/color.expected.bin": {
+      "bytes": 4096,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/contract-regressions.json": {
+      "bytes": 48,
+      "sha256": "847a92cb5e53bd60879662813fc73bf1608e013bb7af6058946ff15c9973d357"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/control.expected.bin": {
+      "bytes": 4096,
+      "sha256": "0a82b3c5bd9ce37da72837a8afb46fa9e6459f7444f57d6967999ac7b9fc0328"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/cpu-qualification.json": {
+      "bytes": 1389,
+      "sha256": "f003aa9491e484370391dbabbfbac5a9b7cb52148800c7fb394171d083f67501"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/delta.json": {
+      "bytes": 9443,
+      "sha256": "be61b0fd37b465decac5e42f7cae99cc00e7f898b965513b8e965153df6d603c"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/expected-color.bin": {
+      "bytes": 4096,
+      "sha256": "6e9af8e8b6576b979aa78816d44bd3b0ffd31b70e169a982e83736d63ab91729"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/frozen_kernel_initial.inc": {
+      "bytes": 7314,
+      "sha256": "f6096e7fded3bc7a20117672c71a45180d0e70373f8c1bd2e014b167567e1087"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/frozen_kernel_relocations.inc": {
+      "bytes": 3907,
+      "sha256": "0951c181b473527953336e65d63d11522e2a027d15c233ba3ce57c9799fc6e58"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/gma500_gfx.ko": {
+      "bytes": 250864,
+      "sha256": "c21c26c567fc7676e28f4f732cb8cd3c7af1a7360560b58a310789523dc9454d"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/guard-regressions.json": {
+      "bytes": 349,
+      "sha256": "7be94ebccf14e678e9fd365ea2538b5b91aa929a35759aaecc9f15132272144d"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/image-delta-proof.json": {
+      "bytes": 304,
+      "sha256": "bcb93b3141621d8320b83678db62a7299892b2f9ea718ed758bc945b3592b7ca"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/image-identity.json": {
+      "bytes": 2751,
+      "sha256": "593e9b312b2d8631639247316be416eee7d6153db074b43584d5a836a150088c"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/image-reproducibility.json": {
+      "bytes": 208,
+      "sha256": "d63506b03e566d674d3bb956c7b1135fcce03d80e10680c3208383d9f6ad3553"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/module-build.log": {
+      "bytes": 310608,
+      "sha256": "822e007d844ae1fa329bdd3b1cade05ea8ef69e167475209636c982e5059deb0"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/module-qualification.json": {
+      "bytes": 2263,
+      "sha256": "938d561df52caefebc0e5f09c1f3c1333c2e839f63cdb7e38a338e5bf98aa00c"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/module-repeat.log": {
+      "bytes": 17717,
+      "sha256": "552dde0c1e48f81ccbb105a943d2edf4b8d3487e4f3a6bf04f0d51ed77d21a0f"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/pds.expected.bin": {
+      "bytes": 131072,
+      "sha256": "3ac17a72dd212361691fccffea40843ad746db4710db76d1ea636e92cc43fe72"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/preservation-check.json": {
+      "bytes": 249,
+      "sha256": "3bbc4f2f8b8283954fea055dc816090d546b4b60e856b16f31219a5267d118f1"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/scene.json": {
+      "bytes": 167241,
+      "sha256": "cc68a14b9581e309bd16b7edf579139de6cdf04d4698cf542bcc7d48e132f2ad"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/semantic-delta-proof.json": {
+      "bytes": 291,
+      "sha256": "710d3bf5bfe7927c0b487625811e7f41c9496917ebb806c89307bcc8d6e948d6"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/source-contract_oracle.c": {
+      "bytes": 1915,
+      "sha256": "fbe87175eceb5035226b260027891099ae54a722bba625633f3395d20516ccce"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/source-frame_policy.py": {
+      "bytes": 2223,
+      "sha256": "ecd6a56f0530c5fbce63c7b7617241dc54f15ef661a15a4f10b2ab26cc3c658c"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/source-qualify_two_triangle.py": {
+      "bytes": 3847,
+      "sha256": "011c8a03a2fd304a5f50bc277a7a629021e04778ce86a1c243af0a42b93a1c7f"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/source-test_frame_policy.py": {
+      "bytes": 3415,
+      "sha256": "12b06bea3e2d971d7ead499e594011edb16e69aa50409ca23f977c3dc16dd162"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/source-test_two_triangle.py": {
+      "bytes": 5105,
+      "sha256": "a01bf0c266390fb0c48dd1975dfc2792ab7990b43fa4aa2638028055678f9761"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/source-two_triangle.py": {
+      "bytes": 7891,
+      "sha256": "93f8f324ecdf7b9badda82cc8fd2455504cf5e2e70e3bfa8f88832e2ed124d22"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/source-verify_candidate.py": {
+      "bytes": 2876,
+      "sha256": "11a66afe9b259eab26b0dd36c0ce7730a8f0de05dd9d96b10be7c4ef77463f9c"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-capsule-service-native.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-capsule-service-native.stdout": {
+      "bytes": 63,
+      "sha256": "f024f36f9e81442aa276a08279bc65dec99799b11e93f3834b5eea66823759ec"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-capsule-service-ubsan.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-capsule-service-ubsan.stdout": {
+      "bytes": 63,
+      "sha256": "f024f36f9e81442aa276a08279bc65dec99799b11e93f3834b5eea66823759ec"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-compile-fragment-i386.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-compile-fragment-i386.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-compile-fragment-native.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-compile-fragment-native.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-compile-fragment-ubsan.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-compile-fragment-ubsan.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-compile-i386.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-compile-i386.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-compile-native.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-compile-native.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-compile-ubsan.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-compile-ubsan.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-extra-tests-i386.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-extra-tests-i386.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-extra-tests-native.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-extra-tests-native.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-extra-tests-ubsan.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-extra-tests-ubsan.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-fragment-i386.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-fragment-i386.stdout": {
+      "bytes": 117,
+      "sha256": "006cd813b93191da4a5dfe20ac1f20ae2bca032f053faeb30b3b30f93fac85a2"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-fragment-native.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-fragment-native.stdout": {
+      "bytes": 117,
+      "sha256": "006cd813b93191da4a5dfe20ac1f20ae2bca032f053faeb30b3b30f93fac85a2"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-fragment-ubsan.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-fragment-ubsan.stdout": {
+      "bytes": 117,
+      "sha256": "006cd813b93191da4a5dfe20ac1f20ae2bca032f053faeb30b3b30f93fac85a2"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-i386-initial.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-i386-initial.stdout": {
+      "bytes": 180224,
+      "sha256": "f2fea04e9a3b56d8e18958745d7da27e15d5be0789ed5eef404c7b80976c926a"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-i386-relocated.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-i386-relocated.stdout": {
+      "bytes": 180224,
+      "sha256": "d7db9fa2f6cd7c07f7f5d8370f2afe6499fc36ac9f8cc5944936beb9303460f7"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-native-initial.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-native-initial.stdout": {
+      "bytes": 180224,
+      "sha256": "f2fea04e9a3b56d8e18958745d7da27e15d5be0789ed5eef404c7b80976c926a"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-native-relocated.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-native-relocated.stdout": {
+      "bytes": 180224,
+      "sha256": "d7db9fa2f6cd7c07f7f5d8370f2afe6499fc36ac9f8cc5944936beb9303460f7"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-python-final.stderr": {
+      "bytes": 3001,
+      "sha256": "f6ac4a1385291b40c5ba3f44f31057115b16e1c85371d839b2d03f61c0cafd64"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-python-final.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-python-regressions.stderr": {
+      "bytes": 2239,
+      "sha256": "1bfe4fff0746aa0bb8fe9764119aee77c1a5c0dcb4dc42e5d9d1c2fe9a27cb40"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-python-regressions.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-source-guard-native.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-source-guard-native.stdout": {
+      "bytes": 52,
+      "sha256": "3fa19f20befe5accbca897882e226beed5f754bd012f3fa8a921643a0d9de4a2"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-source-guard-ubsan.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-source-guard-ubsan.stdout": {
+      "bytes": 52,
+      "sha256": "3fa19f20befe5accbca897882e226beed5f754bd012f3fa8a921643a0d9de4a2"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-compile-fragment-i386.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-compile-fragment-i386.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-compile-fragment-native.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-compile-fragment-native.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-compile-fragment-ubsan.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-compile-fragment-ubsan.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-compile-i386.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-compile-i386.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-compile-native.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-compile-native.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-compile-ubsan.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-compile-ubsan.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-fragment-i386.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-fragment-i386.stdout": {
+      "bytes": 117,
+      "sha256": "006cd813b93191da4a5dfe20ac1f20ae2bca032f053faeb30b3b30f93fac85a2"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-fragment-native.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-fragment-native.stdout": {
+      "bytes": 117,
+      "sha256": "006cd813b93191da4a5dfe20ac1f20ae2bca032f053faeb30b3b30f93fac85a2"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-fragment-ubsan.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-fragment-ubsan.stdout": {
+      "bytes": 117,
+      "sha256": "006cd813b93191da4a5dfe20ac1f20ae2bca032f053faeb30b3b30f93fac85a2"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-i386-initial.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-i386-initial.stdout": {
+      "bytes": 180224,
+      "sha256": "f2fea04e9a3b56d8e18958745d7da27e15d5be0789ed5eef404c7b80976c926a"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-i386-relocated.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-i386-relocated.stdout": {
+      "bytes": 180224,
+      "sha256": "d7db9fa2f6cd7c07f7f5d8370f2afe6499fc36ac9f8cc5944936beb9303460f7"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-native-initial.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-native-initial.stdout": {
+      "bytes": 180224,
+      "sha256": "f2fea04e9a3b56d8e18958745d7da27e15d5be0789ed5eef404c7b80976c926a"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-native-relocated.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-native-relocated.stdout": {
+      "bytes": 180224,
+      "sha256": "d7db9fa2f6cd7c07f7f5d8370f2afe6499fc36ac9f8cc5944936beb9303460f7"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-python-regressions.stderr": {
+      "bytes": 2895,
+      "sha256": "2f517bae7230bed0c837c267e54bbc82e427d8d4d3ac37c33aae5bd90f590e24"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-python-regressions.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-ubsan-initial.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-ubsan-initial.stdout": {
+      "bytes": 180224,
+      "sha256": "f2fea04e9a3b56d8e18958745d7da27e15d5be0789ed5eef404c7b80976c926a"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-ubsan-relocated.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-tests-ubsan-relocated.stdout": {
+      "bytes": 180224,
+      "sha256": "d7db9fa2f6cd7c07f7f5d8370f2afe6499fc36ac9f8cc5944936beb9303460f7"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-ubsan-initial.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-ubsan-initial.stdout": {
+      "bytes": 180224,
+      "sha256": "f2fea04e9a3b56d8e18958745d7da27e15d5be0789ed5eef404c7b80976c926a"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-ubsan-relocated.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/test-ubsan-relocated.stdout": {
+      "bytes": 180224,
+      "sha256": "d7db9fa2f6cd7c07f7f5d8370f2afe6499fc36ac9f8cc5944936beb9303460f7"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/use.expected.bin": {
+      "bytes": 32768,
+      "sha256": "ca53ab9efb4465bc2722322769f74d46953560a2285e29637550f92fc5f4a3dc"
+    },
+    "docs/phase8/artifacts/two-triangle-experiment-20261006/vertex_ta.expected.bin": {
+      "bytes": 4096,
+      "sha256": "d3aaa4dfee233d70e8647ba42a140ffd7a3b89214c024a52155f9b9ede122875"
+    },
+    "docs/phase8/first-3d-offline-qualification-20261006.json": {
+      "bytes": 6055,
+      "sha256": "b0937bb909fde95c0db2d9a6e85b0a629ca9aa0e3bee9b29e394088f11f34879"
+    },
+    "docs/phase8/next-3d-execution-card-20261006.json": {
+      "bytes": 15291,
+      "sha256": "33739509458424f3e717084078f45240965736a35d3817e52a178065a6660dae"
+    },
+    "docs/phase8/two-triangle-experimental-candidate-20261006.json": {
+      "bytes": 44162,
+      "sha256": "5d0a75098002e0785770c5fc0452538a4e4cfb271bf3ee9ab862a6e73e615f30"
+    },
+    "tools/display/verify_visible_triangle_reproduction.py": {
+      "bytes": 2545,
+      "sha256": "393ab076e7b6e848d3f8f60b6ab7233e67eb3e2a48334c81277f54da4ed2a9cf"
+    },
+    "tools/sgx535_demo/contract_oracle.c": {
+      "bytes": 1915,
+      "sha256": "fbe87175eceb5035226b260027891099ae54a722bba625633f3395d20516ccce"
+    },
+    "tools/sgx535_demo/frame_policy.py": {
+      "bytes": 2223,
+      "sha256": "ecd6a56f0530c5fbce63c7b7617241dc54f15ef661a15a4f10b2ab26cc3c658c"
+    },
+    "tools/sgx535_demo/qualify_two_triangle.py": {
+      "bytes": 3847,
+      "sha256": "011c8a03a2fd304a5f50bc277a7a629021e04778ce86a1c243af0a42b93a1c7f"
+    },
+    "tools/sgx535_demo/test_frame_policy.py": {
+      "bytes": 3415,
+      "sha256": "12b06bea3e2d971d7ead499e594011edb16e69aa50409ca23f977c3dc16dd162"
+    },
+    "tools/sgx535_demo/test_two_triangle.py": {
+      "bytes": 5105,
+      "sha256": "a01bf0c266390fb0c48dd1975dfc2792ab7990b43fa4aa2638028055678f9761"
+    },
+    "tools/sgx535_demo/two_triangle.py": {
+      "bytes": 7891,
+      "sha256": "93f8f324ecdf7b9badda82cc8fd2455504cf5e2e70e3bfa8f88832e2ed124d22"
+    },
+    "tools/sgx535_demo/verify_candidate.py": {
+      "bytes": 2876,
+      "sha256": "11a66afe9b259eab26b0dd36c0ce7730a8f0de05dd9d96b10be7c4ef77463f9c"
+    }
+  },
+  "SGX_invocations": 0,
+  "hardware_interactions": 0,
+  "sgx_execution_authorized": false,
+  "old_originals_unchanged": true
+}

@@ -1,0 +1,80 @@
+{
+  "classification": "STOP OFFLINE CONTROLLER BINDING ASSERTION; BEFORE PROTECTED PREPARATION DISPATCH",
+  "utc": "2026-10-06T05:35:44.420847+00:00",
+  "boot_id": "f1ab6606-0561-445f-a397-28a028516cd7",
+  "driver_build_id": "85ec06b428c99fac7f9127919b7a488d204f4a77",
+  "observer_build_id": "f11d3abb072caa4e1d32836ef92ce201e9c9d126",
+  "image_sha256": "3d9eb6baa3d821b4ff98e60ea83f1a94022b5fb2881038d2ad91b95cdfb7448e",
+  "transfer": "COMPLETE_VERIFIED",
+  "transfer_seconds": 28.548412957927212,
+  "staging": "PASS",
+  "poststage_guards": "78/78 PASS",
+  "first_owner_guards": "82/82 PASS",
+  "kernel_health": {
+    "classification": "PASS WITH BOUNDED STOCK DIAGNOSTICS",
+    "faults": [],
+    "stock_diagnostics": {
+      "unsigned_drm_loader_notice": 1,
+      "backlight_zero_register": 1,
+      "acpi_powerbutton_error": 2,
+      "acpi_powerbutton_warning": 2,
+      "powerbutton_probe": 1,
+      "tiny_powerbutton_probe": 1
+    }
+  },
+  "source_guard": {
+    "supplied_record_consistency": "CONFIRMED",
+    "interval": "PREPARED, MUST REMAIN CONTINUOUS",
+    "hardware_attribution": "UNKNOWN WITHOUT VERIFIED LIVE BOOT/PRODUCER PROVENANCE",
+    "triangle": "NOT ESTABLISHED BY SOURCE WITNESS",
+    "errors": [],
+    "values": {
+      "state": 0,
+      "reasons": 0,
+      "producers_active": 0,
+      "driver_attached": 1,
+      "capsule_state": 0,
+      "boot": 3,
+      "prepared": 1,
+      "asserted_reset": 127,
+      "released_reset": 0,
+      "startup_pending": 0,
+      "startup_reads": 0,
+      "startup_fault": 0,
+      "startup_autonomous": 0,
+      "delayed_exclusion": "STARTUP_LIFECYCLE"
+    }
+  },
+  "capsule": "UNUSED",
+  "controller_error": "ValueError: literal binding count '2967348bcf2f2e85ff1bbd56848283df9a187839acf43a5c4a48c6fb4b76f555'",
+  "earliest_condition": "controller.late replaces OLD_SOURCE after inserting fresh CONTEXT. Current source witness bytes have the same valid SHA-256 as historical prepared witness; the new CONTEXT literal plus passive predicate produce count 2, while expected=1. Offline synthetic tests used a different hash and missed this valid case.",
+  "occurrences": [
+    {
+      "line": 217,
+      "parent_scope": "fresh context or actual passive witness predicate",
+      "value": "2967348bcf2f2e85ff1bbd56848283df9a187839acf43a5c4a48c6fb4b76f555"
+    },
+    {
+      "line": 249,
+      "parent_scope": "fresh context or actual passive witness predicate",
+      "value": "2967348bcf2f2e85ff1bbd56848283df9a187839acf43a5c4a48c6fb4b76f555"
+    }
+  ],
+  "not_a_hardware_failure": true,
+  "remote_protected_preparation_dispatched": false,
+  "minimum_controller_correction": "Select exactly the source-boundary guard comparison AST node for rebinding, rather than global value matches after fresh CONTEXT insertion; test real same-hash case across every late phase. Preserve all guard predicates. No retry under this STOP.",
+  "PRE07_READY_FOR_FIRE3": false,
+  "READY_FOR_EXECUTION_AUTHORIZATION": false,
+  "FIRE3_invocations": 0,
+  "client_launches_this_task": 0,
+  "ioctl_attempts_this_task": 0,
+  "FIRE3_authorization_consumed": false,
+  "sgx_execution_authorized": false,
+  "experimental_result": "NOT RUN; preparation/controller STOP, not GPU result",
+  "triangle": "NOT ESTABLISHED",
+  "prior_seals_unchanged": true,
+  "FIRE2_68_unchanged": true,
+  "candidate_unchanged": true,
+  "git_status_unchanged": true,
+  "no_retry": true
+}

@@ -1,0 +1,458 @@
+{
+  "schema_version": 1,
+  "decision_id": "MINI12-PRE07-CLEANROOM-DESIGN-SCOPE-MAINTAINER-20261004-314e2f3b",
+  "record_kind": "NEW PROSPECTIVE MAINTAINER OFFLINE DESIGN-SCOPE DECISION ONLY",
+  "decision": "APPROVE_DESIGN_SCOPE_ONLY",
+  "decision_timestamp_utc": "2026-10-04T19:35:21Z",
+  "decision_authority": {
+    "role": "project maintainer/operator",
+    "source": "Explicit maintainer instruction in the current conversation",
+    "statement": "APPROVE DESIGN SCOPE ONLY for the bounded pre07-clean-room-observation-preservation-design-review-request-20261004.json; design offline only from its ALLOWED requirements and inputs."
+  },
+  "request": {
+    "path": "/home/gama/sgx535-gfx/docs/phase8/pre07-clean-room-observation-preservation-design-review-request-20261004.json",
+    "request_id": "MINI12-PRE07-CLEANROOM-OBSERVATION-PRESERVATION-DESIGN-REVIEW-20261004-314e2f3b",
+    "sha256": "4181db8049ba8e6563380c7bb36fe11c629e45c43d5e635ecc3e7e15c3f5b7de",
+    "hash_scope": "Exact pending request bytes bound by this new decision only; no artifact requalification or artifact rehash."
+  },
+  "decision_scope": "Offline design/specification only of the independently derived observation/preservation responsibilities listed here. No implementation, target action, invocation orchestrator or permission to reconstruct restricted material. Any eventual specification requires its own review before implementation/live use.",
+  "approved_input_boundary": {
+    "ALLOWED": [
+      {
+        "input": "approved_client_interface",
+        "evidence": "C,Q,R",
+        "scope": "Approved public CLI, exact one-call behavior, raw/image outputs and failure reporting only; not permission to run it."
+      },
+      {
+        "input": "current_uapi",
+        "evidence": "U,R",
+        "scope": "Published request/response layout and fixed ioctl interface; no kernel-entry implementation."
+      },
+      {
+        "input": "readiness_requirements_and_identity_records",
+        "evidence": "G,R",
+        "scope": "PRE01-PRE08, evidence acceptance, exact approved pins and scope; authority is not changed."
+      },
+      {
+        "input": "offline_archive_checker",
+        "evidence": "A",
+        "scope": "Already-captured file preservation, supplied-record checking and verification within existing scope."
+      },
+      {
+        "input": "exclusive_file_primitives",
+        "evidence": "S",
+        "scope": "Documented copy/create/sync/reread interfaces; no historical orchestration details."
+      },
+      {
+        "input": "passive_predicates",
+        "evidence": "A:245,F:83",
+        "scope": "Unrestricted supplied-value identity/ownership/health predicates, not historical target programs or their operation sequence."
+      },
+      {
+        "input": "high_level_evidence_contract",
+        "evidence": "G,F:69,I",
+        "scope": "Observable attribution, raw evidence, original-before-copy, STOP and recovery requirements only; historical unavailable implementation descriptions are excluded as design specifications."
+      },
+      {
+        "input": "restriction_provenance",
+        "evidence": "P",
+        "scope": "Only original user prohibition and completed provenance finding; not blocked payloads or inferred implementation details."
+      },
+      {
+        "input": "ordinary_linux_documentation",
+        "evidence": "/usr/share/man/man2/{ioctl,open,fsync,syslog,execve,waitpid}.2.gz",
+        "scope": "Available local ordinary documentation may inform later review. Documentation availability does not establish Mini 12 interface availability, capture sufficiency or live authority."
+      }
+    ],
+    "FORBIDDEN": [
+      {
+        "input": "Restricted wrapper source/content and restricted transcript/tool payloads.",
+        "evidence": "Original user instruction P:3249; current maintainer clean-room scope"
+      },
+      {
+        "input": "Hidden or restricted kernel-entry implementation content.",
+        "evidence": "Original user instruction P:3249; current maintainer clean-room scope"
+      },
+      {
+        "input": "Reconstruction, reverse derivation or recovery of restricted material from behavior, summaries, another representation or another route.",
+        "evidence": "Original user instruction P:3249; current maintainer clean-room scope"
+      },
+      {
+        "input": "Historical restricted operation ordering, paths, commands, correlation internals or implementation details used as a specification.",
+        "evidence": "Original user instruction P:3249; current maintainer clean-room scope"
+      },
+      {
+        "input": "An equivalent indirect substitute intended to perform the same blocked operation; different code/name is not independence.",
+        "evidence": "Original user instruction P:3249; current maintainer clean-room scope"
+      },
+      {
+        "input": "Weakening, evasion, obfuscation or bypass of any safety mechanism or restriction.",
+        "evidence": "Original user instruction P:3249; current maintainer clean-room scope"
+      }
+    ],
+    "UNKNOWN": [
+      {
+        "input": "Exact underlying safety rejection issuer/reason and complete operation/material boundary; exclude uncertain material and do not infer a rescission.",
+        "rule": "Excluded until independently classified and permitted; no inference from filesystem existence or prior successful use."
+      },
+      {
+        "input": "Unclassified historical root/capture programs, success emitters and wrapper portions; no blanket unrestricted classification from filesystem existence.",
+        "rule": "Excluded until independently classified and permitted; no inference from filesystem existence or prior successful use."
+      },
+      {
+        "input": "Actual target availability, permissions and completeness of an ordinary kernel-log interface; local documentation alone is not target evidence.",
+        "rule": "Excluded until independently classified and permitted; no inference from filesystem existence or prior successful use."
+      },
+      {
+        "input": "Sufficiency of any proposed token, sequence, time window or kernel marker for accepted-event attribution.",
+        "rule": "Excluded until independently classified and permitted; no inference from filesystem existence or prior successful use."
+      },
+      {
+        "input": "Present boot continuity, one-shot history, ownership/health and privilege/recovery observations; historical evidence is not fresh.",
+        "rule": "Excluded until independently classified and permitted; no inference from filesystem existence or prior successful use."
+      },
+      {
+        "input": "Author exposure to restricted implementation before this request; no claim of isolation or erased knowledge. Exclude such knowledge and disclose uncertainty during review.",
+        "rule": "Excluded until independently classified and permitted; no inference from filesystem existence or prior successful use."
+      }
+    ]
+  },
+  "approved_source_catalog": {
+    "G": {
+      "path": "/home/gama/sgx535-gfx/docs/phase8/gate-b-maintainer-readiness-20261004-314e2f3b.json",
+      "lines": [
+        595,
+        647,
+        655
+      ]
+    },
+    "R": {
+      "path": "/home/gama/sgx535-gfx/docs/phase8/response-export-client-substitution-maintainer-20261004-314e2f3b.json",
+      "lines": [
+        7,
+        17,
+        74,
+        165
+      ]
+    },
+    "C": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot_response.c",
+      "lines": [
+        19,
+        58,
+        65,
+        77,
+        78,
+        101,
+        114
+      ]
+    },
+    "U": {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_uapi.h",
+      "lines": [
+        8,
+        10,
+        26
+      ]
+    },
+    "A": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_evidence_bundle.py",
+      "lines": [
+        1,
+        43,
+        70,
+        88,
+        106,
+        130,
+        155,
+        177,
+        208,
+        245
+      ]
+    },
+    "S": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_first_load_stage.py",
+      "lines": [
+        1,
+        21,
+        39,
+        41,
+        48
+      ]
+    },
+    "F": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_first_owner_session.py",
+      "lines": [
+        69,
+        74,
+        76,
+        83,
+        111
+      ]
+    },
+    "Q": {
+      "path": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-qualification.json",
+      "lines": [
+        1
+      ]
+    },
+    "I": {
+      "path": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/offline-integration-contract.json",
+      "lines": [
+        1
+      ]
+    },
+    "P": {
+      "path": "/home/gama/.codex/sessions/2026/10/02/rollout-2026-10-02T01-48-39-01a0fa4c-9a56-7481-9a13-caedf52b3a2c.jsonl",
+      "lines": [
+        3204,
+        3228,
+        3249
+      ],
+      "use": "Previously established USER instruction wording only; no tool/source payload is an input."
+    }
+  },
+  "approved_abstract_contract": [
+    {
+      "id": "CR01",
+      "classification": "REQUIRED",
+      "observable_requirement": "Bind boot, kernel/architecture, Build ID/module identity, diagnostic image, action, exact approved client and UAPI to the evidence set.",
+      "permitted_evidence": "G:PRE01,R:exact_context/approved_successor,A:43",
+      "existing_unrestricted_capability": "Identity records and offline binder.",
+      "independent_review_responsibility": "Determine how independently collected observations establish actual producer identity, rather than matching declarations.",
+      "restricted_or_unknown_dependency": "No restricted knowledge demonstrated necessary; any uncertain dependency is excluded."
+    },
+    {
+      "id": "CR02",
+      "classification": "REQUIRED",
+      "observable_requirement": "Establish current boot continuity across preparation and immediately before action; stop on drift.",
+      "permitted_evidence": "G:PRE01/PRE06,A:250",
+      "existing_unrestricted_capability": "Supplied snapshot checks.",
+      "independent_review_responsibility": "Specify required observations and freshness criteria without copying historical collector behavior.",
+      "restricted_or_unknown_dependency": "No restricted knowledge demonstrated necessary; any uncertain dependency is excluded."
+    },
+    {
+      "id": "CR03",
+      "classification": "REQUIRED",
+      "observable_requirement": "Establish current PCI/DRM/framebuffer/VT/IRQ ownership, required services and complete acceptable kernel health/taint.",
+      "permitted_evidence": "G:PRE02,A:257,F:111",
+      "existing_unrestricted_capability": "Unrestricted predicates.",
+      "independent_review_responsibility": "Specify independently observable guard evidence; no live collection now.",
+      "restricted_or_unknown_dependency": "No restricted knowledge demonstrated necessary; any uncertain dependency is excluded."
+    },
+    {
+      "id": "CR04",
+      "classification": "REQUIRED",
+      "observable_requirement": "Establish unused one-shot from complete invocation history and continuity; no probe/reset.",
+      "permitted_evidence": "G:PRE03,A:252",
+      "existing_unrestricted_capability": "History consistency checks.",
+      "independent_review_responsibility": "Specify evidence completeness and uncertainty/STOP criteria; counter zero alone is insufficient.",
+      "restricted_or_unknown_dependency": "No restricted knowledge demonstrated necessary; any uncertain dependency is excluded."
+    },
+    {
+      "id": "CR05",
+      "classification": "REQUIRED",
+      "observable_requirement": "Establish current required privilege, physical operator availability and reviewed recovery readiness.",
+      "permitted_evidence": "G:PRE05,F:76",
+      "existing_unrestricted_capability": "Readiness requirements and recovery boundary.",
+      "independent_review_responsibility": "Specify required observations without automating physical recovery.",
+      "restricted_or_unknown_dependency": "No restricted knowledge demonstrated necessary; any uncertain dependency is excluded."
+    },
+    {
+      "id": "CR06",
+      "classification": "REQUIRED",
+      "observable_requirement": "Protect and bind client/output/evidence destinations; verify identity, type, owner, links, absence and destination reread as applicable.",
+      "permitted_evidence": "G:PRE04/PRE07,S:21/A:70-106",
+      "existing_unrestricted_capability": "Exclusive file and verification primitives.",
+      "independent_review_responsibility": "Review parent/destination requirements only; no target path selected or created.",
+      "restricted_or_unknown_dependency": "No restricted knowledge demonstrated necessary; any uncertain dependency is excluded."
+    },
+    {
+      "id": "CR07",
+      "classification": "REQUIRED",
+      "observable_requirement": "Preserve complete client stdout and stderr and their actual capture/process outcomes.",
+      "permitted_evidence": "F:69,I:artifact_roles/attribution_requirements,A:32",
+      "existing_unrestricted_capability": "Offline storage roles.",
+      "independent_review_responsibility": "Specify stream completeness, identity and loss/failure evidence; do not specify an executor.",
+      "restricted_or_unknown_dependency": "No restricted knowledge demonstrated necessary; any uncertain dependency is excluded."
+    },
+    {
+      "id": "CR08",
+      "classification": "REQUIRED",
+      "observable_requirement": "For a separately authorized action, evidence must support at most one approved client invocation and exactly its single ioctl if reached; no retry.",
+      "permitted_evidence": "R:unchanged_workload,C:65-98,Q:refusal,I:attribution_requirements",
+      "existing_unrestricted_capability": "Approved client has one ioctl site and no ioctl retry; wrong/default flags are inert in preserved qualification.",
+      "independent_review_responsibility": "Observation of an externally controlled authorized process is reviewable; implementing launch/executor/retry logic is excluded from this request.",
+      "restricted_or_unknown_dependency": "No restricted knowledge demonstrated necessary; any uncertain dependency is excluded."
+    },
+    {
+      "id": "CR09",
+      "classification": "REQUIRED",
+      "observable_requirement": "Preserve the exact 4268-byte post-call userspace object, with syscall outcome; failed syscall bytes remain UNAUTHORITATIVE.",
+      "permitted_evidence": "C:19/78/101,I:artifact_roles.response",
+      "existing_unrestricted_capability": "Approved raw exporter.",
+      "independent_review_responsibility": "Specify completeness/durability/provenance handoff to archive; no client modification.",
+      "restricted_or_unknown_dependency": "No restricted knowledge demonstrated necessary; any uncertain dependency is excluded."
+    },
+    {
+      "id": "CR10",
+      "classification": "REQUIRED",
+      "observable_requirement": "Preserve original 4096-byte image unchanged when available; confirm response color bytes at offset172 agree; incomplete bytes retained without success claim.",
+      "permitted_evidence": "G:evidence_acceptance_limits,U:23,I:artifact_roles.image,A:156",
+      "existing_unrestricted_capability": "Approved image exporter and offline equality checks.",
+      "independent_review_responsibility": "Specify original preservation and error classification; no fabrication or extraction of a substitute success image.",
+      "restricted_or_unknown_dependency": "No restricted knowledge demonstrated necessary; any uncertain dependency is excluded."
+    },
+    {
+      "id": "CR11",
+      "classification": "REQUIRED",
+      "observable_requirement": "Preserve applicable kernel completion OR failure/HOLD evidence and relevant kernel state; on success establish attributable accepted TA, end-render and 3D-memory-free observations.",
+      "permitted_evidence": "G:evidence_acceptance_limits/stop_rules,I:attribution_requirements",
+      "existing_unrestricted_capability": "Archive can retain supplied kernel files, not authenticate event origin.",
+      "independent_review_responsibility": "Define accepted observable evidence and reject missing/truncated/stale/unrelated observations.",
+      "restricted_or_unknown_dependency": "Successful external observable record shape and sufficient current capture route UNKNOWN; kernel-entry contents excluded."
+    },
+    {
+      "id": "CR12",
+      "classification": "REQUIRED",
+      "observable_requirement": "Associate approved process, exact single ioctl if reached, returned artifacts and kernel evidence with the same boot/build/action/client transaction.",
+      "permitted_evidence": "I:attribution_requirements,G:PRE07,A:177",
+      "existing_unrestricted_capability": "Context binder, byte equality and one-call qualification are supporting evidence only.",
+      "independent_review_responsibility": "Specify independently reviewable proof obligations; no historical correlation machinery or acceptance by UUID/time/count alone.",
+      "restricted_or_unknown_dependency": "Sufficient kernel observability UNKNOWN; cannot claim completed attribution or invent event markers."
+    },
+    {
+      "id": "CR13",
+      "classification": "REQUIRED",
+      "observable_requirement": "Preserve originals before copies/analysis, check writes/sync/close/readback as applicable, never overwrite originals.",
+      "permitted_evidence": "C:101/114,A:155,S:39/41,I:ordering",
+      "existing_unrestricted_capability": "Existing original-first, checked file operations.",
+      "independent_review_responsibility": "Specify live-to-offline preservation completeness, ordering and partial-retention requirements.",
+      "restricted_or_unknown_dependency": "No restricted knowledge demonstrated necessary; any uncertain dependency is excluded."
+    },
+    {
+      "id": "CR14",
+      "classification": "REQUIRED",
+      "observable_requirement": "On failed guard, possible ioctl with failure/ambiguity/lost evidence, STOP and preserve available evidence; no retry or hot recovery.",
+      "permitted_evidence": "G:stop_rules,C:78-103,F:74-77,A:190",
+      "existing_unrestricted_capability": "Approved failure reporting and offline partial retention.",
+      "independent_review_responsibility": "Specify observational failure/UNKNOWN handling without executing recovery or treating uncertain issuance as not attempted.",
+      "restricted_or_unknown_dependency": "No restricted knowledge demonstrated necessary; any uncertain dependency is excluded."
+    },
+    {
+      "id": "CR15",
+      "classification": "REQUIRED",
+      "observable_requirement": "Seal and independently reread preserved artifacts; distinguish integrity from provenance; validate only a copy and correlate with attributable completion evidence.",
+      "permitted_evidence": "G:evidence_acceptance_limits,A:183/208",
+      "existing_unrestricted_capability": "Offline sealing/verifier and full-image validator.",
+      "independent_review_responsibility": "Specify component boundary and evidence handoff; seal must not certify execution or triangle.",
+      "restricted_or_unknown_dependency": "No restricted knowledge demonstrated necessary; any uncertain dependency is excluded."
+    },
+    {
+      "id": "CR16",
+      "classification": "REQUIRED",
+      "observable_requirement": "Separate readiness/client approval from design, implementation, live use and explicit SGX execution authority.",
+      "permitted_evidence": "G:PRE08,R:not_granted",
+      "existing_unrestricted_capability": "Existing bounded decisions.",
+      "independent_review_responsibility": "Maintain distinct decision scopes; this request creates no live or execution permission.",
+      "restricted_or_unknown_dependency": "No restricted knowledge demonstrated necessary; any uncertain dependency is excluded."
+    },
+    {
+      "id": "CR17",
+      "classification": "NOT ESTABLISHED",
+      "observable_requirement": "An explicit unique token or exported sequence is mandatory.",
+      "permitted_evidence": "U:10-23,I:attribution_requirements",
+      "existing_unrestricted_capability": "UAPI exports neither such token nor sequence.",
+      "independent_review_responsibility": "Do not impose a new mandatory token without evidence; evaluate proof sufficiency from permitted observations.",
+      "restricted_or_unknown_dependency": "No restricted knowledge demonstrated necessary; any uncertain dependency is excluded."
+    },
+    {
+      "id": "CR18",
+      "classification": "NOT ESTABLISHED",
+      "observable_requirement": "A bounded before/after log interval plus exactly-one-ioctl automatically suffices for hardware attribution.",
+      "permitted_evidence": "I:attribution_requirements,A:177",
+      "existing_unrestricted_capability": "Prefix continuity and one-call semantics support consistency only.",
+      "independent_review_responsibility": "No automatic acceptance; evaluate whether actual events and exclusion of stale/unrelated sources satisfy CR12.",
+      "restricted_or_unknown_dependency": "No restricted knowledge demonstrated necessary; any uncertain dependency is excluded."
+    },
+    {
+      "id": "CR19",
+      "classification": "NOT ESTABLISHED",
+      "observable_requirement": "Specific kernel markers, timestamp format, PID field or log transport is mandatory or available.",
+      "permitted_evidence": "U,C,I:attribution_requirements",
+      "existing_unrestricted_capability": "Process/transaction identity is required but representation is unspecified.",
+      "independent_review_responsibility": "No invented emitter/interface; disclose observation limits and return unresolved proof to review.",
+      "restricted_or_unknown_dependency": "No restricted knowledge demonstrated necessary; any uncertain dependency is excluded."
+    },
+    {
+      "id": "CR20",
+      "classification": "NOT ESTABLISHED",
+      "observable_requirement": "An automatic post-action full guard sweep is mandatory.",
+      "permitted_evidence": "G:PRE01-PRE08/stop_rules,F:69",
+      "existing_unrestricted_capability": "Relevant post-action kernel/response/failure evidence is required.",
+      "independent_review_responsibility": "Any additional post-action guards need an evidence-based justification; do not repeat entire first-owner qualification.",
+      "restricted_or_unknown_dependency": "No restricted knowledge demonstrated necessary; any uncertain dependency is excluded."
+    }
+  ],
+  "exact_context": {
+    "boot_id": "89fc7306-6dac-4ab9-af62-360b7152ef22",
+    "module_build_id": "314e2f3b37195dc56df7c57dd938d78377a5ea8e",
+    "action": "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1",
+    "freshness": "Boot and 70/70 first-owner facts are preserved historical observations, not fresh invocation guards."
+  },
+  "approved_response_client": {
+    "source": {
+      "path": "/home/gama/sgx535-gfx/tools/psb-dri-re/frozen_triangle_one_shot_response.c",
+      "size": 5514,
+      "sha256": "919c2611e048e4a660ecae3542264adf5a5367d9b0fbe7fbceff2f45f90adedf"
+    },
+    "binary": {
+      "path": "/home/gama/sgx535-offline/phase8-response-export-20261004T092750Z/final/client-build-01/frozen-triangle-one-shot-response-i386",
+      "size": 775264,
+      "sha256": "2f84917f96db2859678797a327d40d9638325e5c5efb6e0dfccef44d756b4835"
+    },
+    "uapi": {
+      "path": "/home/gama/sgx535-gfx/kernel/sgx535_frozen/gma500_fixed_uapi.h",
+      "size": 760,
+      "sha256": "04dd2080deeb0056a366546fe27faddbdeff6c1657a2471c96e39749dc080420"
+    }
+  },
+  "contamination_stop_rule": "If satisfying any requirement requires consulting, remembering as a specification, deriving, reconstructing or obtaining restricted material, STOP that work, preserve its dependency as UNKNOWN, exclude the material and return to review. Do not use another tool, representation, encoding or source to continue the blocked branch. Past exposure is not certified absent; disclose it and do not use it.",
+  "independence_condition": "Derive observational behavior only from ALLOWED requirements/interfaces. No claim of authorship isolation or erased past exposure; restricted knowledge is not a specification. If a branch requires FORBIDDEN/UNKNOWN material or would reproduce the blocked operation indirectly, STOP it and return to review.",
+  "explicit_exclusions": [
+    "Mini 12 contact",
+    "Hardware interaction",
+    "Staging",
+    "Fresh live guards",
+    "Client execution",
+    "Ioctl execution",
+    "SGX execution",
+    "Retry",
+    "Kernel/module modification",
+    "Installation",
+    "Boot changes",
+    "Recovery actions",
+    "Live log collection",
+    "Implementation or implementation deployment",
+    "Reconstruction/reopening/derivation/indirect recovery of restricted material",
+    "Historical-wrapper recreation",
+    "Equivalent indirect substitution for blocked operation",
+    "Client launcher/executor design",
+    "Execution authorization"
+  ],
+  "design_authorized": true,
+  "implementation_authorized": false,
+  "live_use_authorized": false,
+  "sgx_execution_authorized": false,
+  "gate_b": "PASS FOR EXACT OFFSCREEN READINESS",
+  "whitelist": [
+    "MINI12-SGX535-REV121-FROZEN-32x32-SEQ1"
+  ],
+  "pre07_live_state": "BLOCKED; design permission is not live readiness",
+  "sgx_invocations_on_candidate": 0,
+  "hardware_interactions_this_task": 0,
+  "triangle": "NOT ATTEMPTED",
+  "historical_records_unchanged": true,
+  "request_updated_or_retroactively_approved": false,
+  "future_boundaries": "Specification review, implementation review, live-use review and explicit execution authorization remain separate. This decision accepts no future correlation proof as sufficient."
+}

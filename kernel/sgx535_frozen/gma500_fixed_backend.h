@@ -34,5 +34,7 @@ unsigned long sgx535_gma500_fixed_irq_lock(void);
 void sgx535_gma500_fixed_irq_capture_locked(struct drm_device *dev,
                                              u32 status1, u32 status2);
 void sgx535_gma500_fixed_irq_unlock(unsigned long flags);
+/* Read-only preparation callback; no admission, power wake or device writes. */
+void sgx535_gma500_source_observe_passive(struct drm_device *);
 
 #endif

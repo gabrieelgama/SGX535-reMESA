@@ -1,0 +1,25 @@
+{
+  "classification": "PASS CPU construction only",
+  "checks": [
+    {
+      "variant": "native",
+      "bytes": 409600,
+      "sha256": "0fca7329a873c65239e9b6962d92058b2c35bd8bc51fb199ea521c27a8eb50a6",
+      "pass": true
+    },
+    {
+      "variant": "ubsan",
+      "bytes": 409600,
+      "sha256": "0fca7329a873c65239e9b6962d92058b2c35bd8bc51fb199ea521c27a8eb50a6",
+      "pass": true
+    },
+    {
+      "variant": "i386",
+      "bytes": 409600,
+      "sha256": "0fca7329a873c65239e9b6962d92058b2c35bd8bc51fb199ea521c27a8eb50a6",
+      "pass": true
+    }
+  ],
+  "sgx_invocations": 0,
+  "hardware_interactions": 0
+}

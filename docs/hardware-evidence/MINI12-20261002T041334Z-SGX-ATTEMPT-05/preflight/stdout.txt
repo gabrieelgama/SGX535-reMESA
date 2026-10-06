@@ -1,0 +1,34 @@
+{
+  "scope": "fresh same-boot read-only SGX preflight; no device open, no write, no module/service operation",
+  "start_utc": "2026-10-02T03:59:40.603291+00:00",
+  "guards": [
+    {
+      "guard": "root via noninteractive sudo",
+      "pass": true
+    },
+    {
+      "guard": "authorized corrected experimental boot",
+      "pass": true
+    },
+    {
+      "guard": "kernel/architecture",
+      "pass": true
+    },
+    {
+      "guard": "machine identity",
+      "pass": true
+    },
+    {
+      "guard": "corrected experimental boot command line",
+      "pass": false
+    }
+  ],
+  "boot_id": "203a5b9b-5a90-4fd3-8001-3c92cdefeddd",
+  "kernel": "5.10.240-antix.1-486-smp",
+  "architecture": "i686",
+  "machine": "Inspiron 1210",
+  "cmdline": "BOOT_IMAGE=/boot/vmlinuz-5.10.240-antix.1-486-smp root=UUID=6da9b4a7-ede2-4e27-bbfc-b537f568eaf1 ro quiet selinux=0",
+  "classification": "STOP/HOLD",
+  "failure": "RuntimeError('corrected experimental boot command line')",
+  "end_utc": "2026-10-02T03:59:40.604272+00:00"
+}

@@ -1,0 +1,6 @@
+{
+  "scope": "OFFLINE only",
+  "failed_operation": "First documentation write ran in isolated work directory rather than repository; relative docs paths did not exist",
+  "result": "No checkpoint document modified by failed write. Empty documentation-before directory created. Six controller tests still ran and passed. Corrected by using repository cwd and explicit absolute paths.",
+  "target_contact": false
+}

@@ -1,0 +1,138 @@
+{
+  "classification": "COMPLETE ORIGINALS PRESERVED BEFORE INTERPRETATION",
+  "boot_id": "83ee4ff8-a7f1-4468-b348-d10627f38d17",
+  "created_utc": "2026-10-06T08:55:53.743179+00:00",
+  "files": [
+    {
+      "path": "capsule.before.original.bin",
+      "bytes": 4152,
+      "sha256": "0d24c306b7e1fcd4eee1d2dc77637fe1eafa91816e849fd5c134e683bf3f3504",
+      "remote_dev": 2049,
+      "remote_ino": 524779
+    },
+    {
+      "path": "capsule.original.bin",
+      "bytes": 4152,
+      "sha256": "597176281722ee2cc333f3f16ae4658df46cd2aa748f46ba6fb99fae49a40f0b",
+      "remote_dev": 2049,
+      "remote_ino": 524788
+    },
+    {
+      "path": "capsule.preparation.bin",
+      "bytes": 4152,
+      "sha256": "0d24c306b7e1fcd4eee1d2dc77637fe1eafa91816e849fd5c134e683bf3f3504",
+      "remote_dev": 2049,
+      "remote_ino": 524775
+    },
+    {
+      "path": "client.stderr.original.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "remote_dev": 2049,
+      "remote_ino": 524784
+    },
+    {
+      "path": "client.stdout.original.txt",
+      "bytes": 416,
+      "sha256": "dd04d2234d8840fc49fea46084feafd0105010616f80bad9d8a0e071c1471b5a",
+      "remote_dev": 2049,
+      "remote_ino": 524783
+    },
+    {
+      "path": "color.original.bin",
+      "bytes": 4096,
+      "sha256": "6e9af8e8b6576b979aa78816d44bd3b0ffd31b70e169a982e83736d63ab91729",
+      "remote_dev": 2049,
+      "remote_ino": 524787
+    },
+    {
+      "path": "context.preparation.json",
+      "bytes": 771,
+      "sha256": "36667a98ec473ef7793451c7bae1ac52593929bbfa149e0fc2554a47a2252e5d",
+      "remote_dev": 2049,
+      "remote_ino": 524774
+    },
+    {
+      "path": "execution-card.original.json",
+      "bytes": 17411,
+      "sha256": "1cc193984a39a8c161fff55c2c9002da28740ebaddf367c623696b585125eae7",
+      "remote_dev": 2049,
+      "remote_ino": 524781
+    },
+    {
+      "path": "execution.receipt.original.json",
+      "bytes": 12886,
+      "sha256": "d362c0c24456df1e3510984e1e1f3fa4d08a57e0eb9cafa8110f53c96b678d3f",
+      "remote_dev": 2049,
+      "remote_ino": 524791
+    },
+    {
+      "path": "fire-authorization.original.json",
+      "bytes": 271,
+      "sha256": "40fc686c936296f7ee5838b42e8867d9a389a08d370d00af08eee24190803380",
+      "remote_dev": 2049,
+      "remote_ino": 524782
+    },
+    {
+      "path": "invocation.intent.original.json",
+      "bytes": 723,
+      "sha256": "ddaaa35b57b79767cfb712a14567b7148938904bdad556ecb4fbd080a1e4bd82",
+      "remote_dev": 2049,
+      "remote_ino": 524785
+    },
+    {
+      "path": "kernel.after.original.txt",
+      "bytes": 46735,
+      "sha256": "d77b0d676c1a2b54c580791c969a8c854ffd97b2e92b5bede7db226bd7e741cf",
+      "remote_dev": 2049,
+      "remote_ino": 524790
+    },
+    {
+      "path": "kernel.before.original.txt",
+      "bytes": 46735,
+      "sha256": "d77b0d676c1a2b54c580791c969a8c854ffd97b2e92b5bede7db226bd7e741cf",
+      "remote_dev": 2049,
+      "remote_ino": 524780
+    },
+    {
+      "path": "kernel.preparation.original.txt",
+      "bytes": 46735,
+      "sha256": "d77b0d676c1a2b54c580791c969a8c854ffd97b2e92b5bede7db226bd7e741cf",
+      "remote_dev": 2049,
+      "remote_ino": 524776
+    },
+    {
+      "path": "response.original.bin",
+      "bytes": 4268,
+      "sha256": "3475715ca27582f82c392d92ee88e1fdb71383646ab480018fa8edc0c82a657f",
+      "remote_dev": 2049,
+      "remote_ino": 524786
+    },
+    {
+      "path": "source.post.original.txt",
+      "bytes": 243,
+      "sha256": "4219fe8dd303374b0aedbc9219a32e328a1fe6432346559c148fdb33ff0db91c",
+      "remote_dev": 2049,
+      "remote_ino": 524789
+    },
+    {
+      "path": "source.pre.original.txt",
+      "bytes": 243,
+      "sha256": "2967348bcf2f2e85ff1bbd56848283df9a187839acf43a5c4a48c6fb4b76f555",
+      "remote_dev": 2049,
+      "remote_ino": 524778
+    },
+    {
+      "path": "source.preparation.original.txt",
+      "bytes": 243,
+      "sha256": "2967348bcf2f2e85ff1bbd56848283df9a187839acf43a5c4a48c6fb4b76f555",
+      "remote_dev": 2049,
+      "remote_ino": 524777
+    }
+  ],
+  "count": 18,
+  "required_originals_complete": true,
+  "invocations": 1,
+  "authorization_consumed": true,
+  "further_sgx_execution_authorized": false
+}

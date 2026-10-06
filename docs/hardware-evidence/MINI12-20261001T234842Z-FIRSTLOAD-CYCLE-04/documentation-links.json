@@ -1,0 +1,532 @@
+[
+  {
+    "document": "docs/phase8/cycle04-preparation.md",
+    "link": "first-load-cycle-04-result.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/cycle04-preparation.md",
+    "link": "first-load-cycle-03-result.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/cycle04-preparation.md",
+    "link": "../hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/README.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/cycle04-preparation.md",
+    "link": "cycle04-first-load-procedure.json",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/cycle04-preparation.md",
+    "link": "../../tools/psb-dri-re/frozen_first_load_capture_v2.py",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/cycle04-preparation.md",
+    "link": "../../tools/psb-dri-re/frozen_first_load_procedure_v2.py",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/first-load-cycle-04-result.md",
+    "link": "../hardware-evidence/MINI12-20261001T234842Z-FIRSTLOAD-CYCLE-04/README.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "first-load-cycle-04-result.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "cycle04-preparation.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "first-load-cycle-03-result.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "first-load-capture-timing-redesign.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "first-load-cycle-02-result.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "first-load-cycle-01-result.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "first-load-operational-review.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "first-load-staging-boot-recovery-procedure.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "first-load-operator-checklist.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "experimental-first-load-image-qualification.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "artifacts/experimental-first-load-01-20261001/README.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "first-load-stock-boot-observation.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "first-load-boot-qualification.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "lifecycle-first-removal-gate-review.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "post-attempt03-checkpoint-audit.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "i386-gcc-offline-build-plan.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "i386-gcc-toolchain-qualification.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "antix-kbuild-preparation-equivalence.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "antix-kbuild-successor-equivalence.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "candidate-01-build-and-lifecycle-review.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "../hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/RESULT.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "attempt03-module-version-followup.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/candidate-target-table-check.json",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/artifact-manifest.json",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "artifacts/frozen-triangle-one-shot-i386.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "i386-gcc-toolchain-qualification.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "artifacts/i386-gcc-toolchain-20260930/README.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "antix-kbuild-preparation-equivalence.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "artifacts/antix-kbuild-preparation-20260930/README.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "antix-kbuild-successor-equivalence.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "artifacts/antix-kbuild-successor-20260930/README.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "i386-gcc-offline-build-plan.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "candidate-01-build-and-lifecycle-review.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "link": "candidate-01-build-and-lifecycle-review.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "link": "first-load-cycle-04-result.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "link": "cycle04-preparation.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "link": "first-load-cycle-03-result.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "link": "first-load-capture-timing-redesign.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "link": "first-load-cycle-02-result.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "link": "first-load-cycle-01-result.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "link": "first-load-operational-review.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "link": "first-load-staging-boot-recovery-procedure.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "link": "first-load-operator-checklist.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "link": "experimental-first-load-image-qualification.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "link": "artifacts/experimental-first-load-01-20261001/README.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "link": "first-load-stock-boot-observation.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "link": "first-load-boot-qualification.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "link": "lifecycle-first-removal-gate-review.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "link": "candidate-01-build-and-lifecycle-review.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "link": "post-attempt03-checkpoint-audit.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "link": "attempt03-module-version-followup.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "link": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "link": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-02/RESULT.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "link": "active-gma500-transition-review.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "link": "../hardware-evidence/MINI12-20260930-TRIANGLE-PREFLIGHT/README.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "link": "../hardware-evidence/MINI12-20260930-TRANSITION-INVENTORY/RESULT.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "link": "artifacts/frozen-triangle-one-shot-i386.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/fixed-one-shot-gate-b-review.md",
+    "link": "active-gma500-transition-review.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "first-load-cycle-04-result.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "cycle04-preparation.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "first-load-cycle-03-result.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "first-load-capture-timing-redesign.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "first-load-cycle-02-result.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "first-load-cycle-01-result.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "first-load-operational-review.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "first-load-staging-boot-recovery-procedure.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "first-load-operator-checklist.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "experimental-first-load-image-qualification.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "artifacts/experimental-first-load-01-20261001/README.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "first-load-stock-boot-observation.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "first-load-boot-qualification.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "lifecycle-first-removal-gate-review.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "candidate-01-build-and-lifecycle-review.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-08/RESULT.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "i386-gcc-toolchain-qualification.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "antix-kbuild-preparation-equivalence.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "antix-kbuild-successor-equivalence.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "candidate-01-offline-build-qualification.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "i386-gcc-offline-build-plan.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "i386-gcc-toolchain-qualification.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "CHATGPT-HANDOFF-POST-ATTEMPT03.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-01/RESULT.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-02/RESULT.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-03/RESULT.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-04/RESULT.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-05/RESULT.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-06/RESULT.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "../hardware-evidence/MINI12-20260930-POSTRESET-ABI-READONLY-07/RESULT.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "../hardware-evidence/MINI12-20260930-TRIANGLE-ATTEMPT-03/RESULT.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "../hardware-evidence/MINI12-20260930-ATTEMPT03-ORIGINAL-RECOVERY-01/RESULT.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "attempt03-module-version-followup.md",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "../phase4-2-data/antix-source/drivers/gpu/drm/gma500/psb_drv.c",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "../phase4-2-data/antix-source/drivers/gpu/drm/gma500/power.c",
+    "exists": true
+  },
+  {
+    "document": "docs/phase8/post-attempt03-checkpoint-audit.md",
+    "link": "../phase4-2-data/antix-source/drivers/gpu/drm/gma500/psb_irq.c",
+    "exists": true
+  },
+  {
+    "document": "docs/hardware-evidence/MINI12-20261001T234842Z-FIRSTLOAD-CYCLE-04/README.md",
+    "link": "RESULT.md",
+    "exists": true
+  },
+  {
+    "document": "docs/hardware-evidence/MINI12-20261001T232417Z-CYCLE04-STOCK-PREPARATION/README.md",
+    "link": "../../phase8/cycle04-preparation.md",
+    "exists": true
+  }
+]

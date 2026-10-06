@@ -1,0 +1,116 @@
+{
+  "scope": "CPU-only adapter construction and qualified transaction reuse; not hardware proof",
+  "passed": 27,
+  "total": 27,
+  "checks": [
+    {
+      "name": "sealed source accepted",
+      "pass": true
+    },
+    {
+      "name": "truncated rejected",
+      "pass": true
+    },
+    {
+      "name": "wrong hash rejected",
+      "pass": true
+    },
+    {
+      "name": "changed bytes rejected",
+      "pass": true
+    },
+    {
+      "name": "bounded enlarged byte size",
+      "pass": true
+    },
+    {
+      "name": "exact expected magenta count",
+      "pass": true
+    },
+    {
+      "name": "exact zero count",
+      "pass": true
+    },
+    {
+      "name": "exact centered square footprint",
+      "pass": true
+    },
+    {
+      "name": "320 bounded scanout row ranges",
+      "pass": true
+    },
+    {
+      "name": "unmodified padding",
+      "pass": true
+    },
+    {
+      "name": "unsupported layout (1280, 800, 8192) rejected",
+      "pass": true
+    },
+    {
+      "name": "unsupported layout (1279, 800, 5120) rejected",
+      "pass": true
+    },
+    {
+      "name": "unsupported layout (1280, 799, 5120) rejected",
+      "pass": true
+    },
+    {
+      "name": "None publication status",
+      "pass": true
+    },
+    {
+      "name": "None cleanup/restore",
+      "pass": true
+    },
+    {
+      "name": "ownership publication status",
+      "pass": true
+    },
+    {
+      "name": "ownership cleanup/restore",
+      "pass": true
+    },
+    {
+      "name": "ownership no publication before valid backup",
+      "pass": true
+    },
+    {
+      "name": "mapping publication status",
+      "pass": true
+    },
+    {
+      "name": "mapping cleanup/restore",
+      "pass": true
+    },
+    {
+      "name": "mapping no publication before valid backup",
+      "pass": true
+    },
+    {
+      "name": "partial publication status",
+      "pass": true
+    },
+    {
+      "name": "partial cleanup/restore",
+      "pass": true
+    },
+    {
+      "name": "backup publication status",
+      "pass": true
+    },
+    {
+      "name": "backup cleanup/restore",
+      "pass": true
+    },
+    {
+      "name": "backup no publication before valid backup",
+      "pass": true
+    },
+    {
+      "name": "source unchanged",
+      "pass": true
+    }
+  ],
+  "sgx_invocations": 0
+}

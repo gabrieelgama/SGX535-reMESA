@@ -1,0 +1,32 @@
+test_claims_no_gpu (test_cube_reference.CubeReference.test_claims_no_gpu) ... ok
+test_clip_crossing (test_cube_reference.CubeReference.test_clip_crossing) ... ok
+test_clip_each_plane (test_cube_reference.CubeReference.test_clip_each_plane) ... ok
+test_clip_inside (test_cube_reference.CubeReference.test_clip_inside) ... ok
+test_clip_outside (test_cube_reference.CubeReference.test_clip_outside) ... ok
+test_deterministic_exclusive_fixture (test_cube_reference.CubeReference.test_deterministic_exclusive_fixture) ... ok
+test_diffuse_oracle (test_cube_reference.CubeReference.test_diffuse_oracle) ... ok
+test_distinct_reference_frames (test_cube_reference.CubeReference.test_distinct_reference_frames) ... ok
+test_mesh_normals (test_cube_reference.CubeReference.test_mesh_normals) ... ok
+test_near_far (test_cube_reference.CubeReference.test_near_far) ... ok
+test_nonfinite_rejected (test_cube_reference.CubeReference.test_nonfinite_rejected) ... ok
+test_perspective (test_cube_reference.CubeReference.test_perspective) ... ok
+test_projection_center (test_cube_reference.CubeReference.test_projection_center) ... ok
+test_projection_domains (test_cube_reference.CubeReference.test_projection_domains) ... ok
+test_reciprocal_w_not_confused_with_payload (test_cube_reference.CubeReference.test_reciprocal_w_not_confused_with_payload) ... ok
+test_rotation_changes_lighting_reference (test_cube_reference.CubeReference.test_rotation_changes_lighting_reference) ... ok
+test_rotation_preserves_lengths (test_cube_reference.CubeReference.test_rotation_preserves_lengths) ... ok
+test_screen_bounds_and_packing (test_cube_reference.CubeReference.test_screen_bounds_and_packing) ... ok
+test_three_visible_faces (test_cube_reference.CubeReference.test_three_visible_faces) ... ok
+test_zero_w_rejected (test_cube_reference.CubeReference.test_zero_w_rejected) ... ok
+test_invalid_inputs (test_face_constant_plan.FacePlan.test_invalid_inputs) ... ok
+test_magenta_baseline (test_face_constant_plan.FacePlan.test_magenta_baseline) ... ok
+test_no_overclaim (test_face_constant_plan.FacePlan.test_no_overclaim) ... ok
+test_only_launch_group_changes (test_face_constant_plan.FacePlan.test_only_launch_group_changes) ... ok
+test_palette_roundtrips (test_face_constant_plan.FacePlan.test_palette_roundtrips) ... ok
+test_same_program_no_spurious_upload (test_face_constant_plan.FacePlan.test_same_program_no_spurious_upload) ... ok
+test_supported_copy_constructor (test_face_constant_plan.FacePlan.test_supported_copy_constructor) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.129s
+
+OK

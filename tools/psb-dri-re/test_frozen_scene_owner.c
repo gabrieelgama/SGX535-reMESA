@@ -15,13 +15,17 @@ struct mock {
     int duplicate_va;
     int duplicate_owner;
     int omit_view;
+    int partial_cpu_alias;
+    int overflowing_cpu_view;
+    int adjacent_cpu_view;
     int map_calls;
     unsigned acquired;
     unsigned reserved;
     unsigned mapped;
 };
 
-static sgx535_u8 pds[0x20000], use[0x8000], vertex[0x1000];
+/* Extra fixture capacity lets USE occupy the disjoint range just after PDS. */
+static sgx535_u8 pds[0x28000], use[0x8000], vertex[0x1000];
 static sgx535_u8 background[0x1000], control[0x1000], color[0x1000];
 static sgx535_u8 *const bytes[6] = {
     pds, use, vertex, background, control, color
@@ -49,6 +53,12 @@ static int acquire(void *context, sgx535_u32 role,
     if (role < 6 && !(m->omit_view && role == SGX535_BO_COLOR)) {
         view->bytes = bytes[role];
         view->length = requirement->size;
+        if (m->partial_cpu_alias && role == SGX535_BO_USE)
+            view->bytes = pds + 0x1000;
+        if (m->overflowing_cpu_view && role == SGX535_BO_PDS)
+            view->bytes = (sgx535_u8 *)(~0UL - 0xfffUL);
+        if (m->adjacent_cpu_view && role == SGX535_BO_USE)
+            view->bytes = pds + 0x20000;
     }
     return 0;
 }
@@ -192,7 +202,7 @@ static int advance_to_submit(struct sgx535_frozen_scene_owner *scene)
         SGX535_BOOT_INITEND_STATUS, SGX535_BOOT_TA_LOAD_REPLY,
         SGX535_BOOT_SCENE_VALIDATED
     };
-    const sgx535_u32 values[] = {0, 0, 0, 0, 0x1f, 7, 0x400000, 0, 0};
+    const sgx535_u32 values[] = {0, 0, 0, 0, 0x1f, 15, 0x400000, 0, 0};
     size_t i;
 
     if (sgx535_frozen_bootstrap_begin(&boot, 0x00010201))
@@ -258,6 +268,35 @@ int main(void)
     CHECK(sgx535_frozen_scene_create(&scene, &backend, &m,
                                      0x80000000) == SGX535_FROZEN_BAD_OWNER);
     CHECK(m.map_calls == 0);
+    CHECK(m.acquired == 0 && m.reserved == 0 && m.mapped == 0);
+
+    /* Distinct pointers can still describe overlapping CPU backings. Reject
+     * before zeroing either view or inserting any GPU mapping. */
+    memset(&scene, 0, sizeof(scene));
+    memset(&m, 0, sizeof(m));
+    m.partial_cpu_alias = 1;
+    pds[0] = pds[0x1000] = 0xa5;
+    CHECK(sgx535_frozen_scene_create(&scene, &backend, &m,
+                                     0x80000000) == SGX535_FROZEN_ALIAS);
+    CHECK(pds[0] == 0xa5 && pds[0x1000] == 0xa5);
+    CHECK(m.map_calls == 0 && !scene.initialized);
+    CHECK(m.acquired == 0 && m.reserved == 0 && m.mapped == 0);
+
+    memset(&scene, 0, sizeof(scene));
+    memset(&m, 0, sizeof(m));
+    m.overflowing_cpu_view = 1;
+    CHECK(sgx535_frozen_scene_create(&scene, &backend, &m,
+                                     0x80000000) == SGX535_FROZEN_BAD_SIZE);
+    CHECK(m.map_calls == 0 && !scene.initialized);
+    CHECK(m.acquired == 0 && m.reserved == 0 && m.mapped == 0);
+
+    memset(&scene, 0, sizeof(scene));
+    memset(&m, 0, sizeof(m));
+    m.adjacent_cpu_view = 1;
+    pds[0x27fff] = 0xa5;
+    CHECK(sgx535_frozen_scene_create(&scene, &backend, &m, 0x80000000) == 0);
+    CHECK(pds[0x27fff] == 0);
+    CHECK(sgx535_frozen_scene_destroy(&scene, &backend, &m) == 0);
     CHECK(m.acquired == 0 && m.reserved == 0 && m.mapped == 0);
 
     for (failed = 1; failed <= steps; failed++) {

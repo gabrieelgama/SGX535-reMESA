@@ -1,0 +1,21 @@
+{
+  "classification": "PASS",
+  "passed": 14,
+  "checks": {
+    "stock_pass": true,
+    "same_stock_boot": true,
+    "prior_cfg_hash": true,
+    "merged_prefix": true,
+    "menu_entries": true,
+    "new_entry_unique": true,
+    "no_saved_selection": true,
+    "new_image_binding": true,
+    "explicit_stage_argv": true,
+    "explicit_incoming_argv": true,
+    "stage_reject_stale": true,
+    "incoming_reject_stale": true,
+    "incoming_no_argv_override": true,
+    "stage_no_argv_override": true
+  },
+  "binding_policy": "fresh explicit top-level phase inputs; historical validation preserved; fresh inode authority correct; prospective boot/source/capsule have no defaults"
+}

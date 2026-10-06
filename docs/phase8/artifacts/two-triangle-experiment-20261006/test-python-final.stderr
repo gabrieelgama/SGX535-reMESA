@@ -1,0 +1,37 @@
+test_clean_synthetic_interval (test_frame_policy.Policy.test_clean_synthetic_interval) ... ok
+test_each_missing_guarantee_blocks (test_frame_policy.Policy.test_each_missing_guarantee_blocks) ... ok
+test_interference_before_admission (test_frame_policy.Policy.test_interference_before_admission) ... ok
+test_loss_blocks_reuse (test_frame_policy.Policy.test_loss_blocks_reuse) ... ok
+test_no_authorization (test_frame_policy.Policy.test_no_authorization) ... ok
+test_no_second_admission (test_frame_policy.Policy.test_no_second_admission) ... ok
+test_partial_completion_hold (test_frame_policy.Policy.test_partial_completion_hold) ... ok
+test_prepare_requires_all_premises (test_frame_policy.Policy.test_prepare_requires_all_premises) ... ok
+test_retirement_alone_not_rearm (test_frame_policy.Policy.test_retirement_alone_not_rearm) ... ok
+test_synthetic_provider_success (test_frame_policy.Policy.test_synthetic_provider_success) ... ok
+test_truthy_unknown_is_not_evidence (test_frame_policy.Policy.test_truthy_unknown_is_not_evidence) ... ok
+test_unknown_rearm_blocks (test_frame_policy.Policy.test_unknown_rearm_blocks) ... ok
+test_baseline_interpretation (test_two_triangle.Construction.test_baseline_interpretation) ... ok
+test_corrupt_plan_rejected (test_two_triangle.Construction.test_corrupt_plan_rejected) ... ok
+test_corrupt_relocation_rejected (test_two_triangle.Construction.test_corrupt_relocation_rejected) ... ok
+test_exclusive_deterministic_generation (test_two_triangle.Construction.test_exclusive_deterministic_generation) ... ok
+test_incomplete_readback (test_two_triangle.Construction.test_incomplete_readback) ... ok
+test_indices (test_two_triangle.Construction.test_indices) ... ok
+test_layout (test_two_triangle.Construction.test_layout) ... ok
+test_no_device_api (test_two_triangle.Construction.test_no_device_api) ... ok
+test_old_footprint_not_quad (test_two_triangle.Construction.test_old_footprint_not_quad) ... ok
+test_only_geometry_objects_change (test_two_triangle.Construction.test_only_geometry_objects_change) ... ok
+test_packet_view (test_two_triangle.Construction.test_packet_view) ... ok
+test_pixel_analysis_does_not_invent_provenance (test_two_triangle.Construction.test_pixel_analysis_does_not_invent_provenance) ... ok
+test_quad_interpretation (test_two_triangle.Construction.test_quad_interpretation) ... ok
+test_raw_oracle (test_two_triangle.Construction.test_raw_oracle) ... ok
+test_relocations (test_two_triangle.Construction.test_relocations) ... ok
+test_sizes_domains_unchanged (test_two_triangle.Construction.test_sizes_domains_unchanged) ... ok
+test_unknown_color (test_two_triangle.Construction.test_unknown_color) ... ok
+test_vertices (test_two_triangle.Construction.test_vertices) ... ok
+test_wrong_region (test_two_triangle.Construction.test_wrong_region) ... ok
+test_zero_interpretation (test_two_triangle.Construction.test_zero_interpretation) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 0.180s
+
+OK

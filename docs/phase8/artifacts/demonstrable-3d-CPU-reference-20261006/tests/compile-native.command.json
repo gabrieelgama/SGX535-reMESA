@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "cc",
+    "-O2",
+    "-std=c11",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-ffp-contract=off",
+    "/home/gama/sgx535-gfx/tools/sgx535_demo/cube_projection_oracle.c",
+    "-o",
+    "/home/gama/sgx535-offline/phase8-demonstrable-3d-plan-20261006T080902Z/CPU-tests/projection-native",
+    "-lm"
+  ],
+  "returncode": 0,
+  "success_expected": true
+}
