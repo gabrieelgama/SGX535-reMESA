@@ -40,9 +40,9 @@ first-owner evidence:     established
 old Gate B:               PASSED
 first fixed ioctl:        REACHED
 
-TA submission:            not reached
-rasterization:            not reached
-triangle:                 not yet
+TA submission:            YESSSSSSSSSSS
+rasterization:            YESSSSSSSSSSSSSSS
+triangle:                 FUCKING YESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS 2:51 AM BRT
 
 first live blocker:       -EBUSY
 root cause:               GPU VA allocator
