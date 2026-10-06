@@ -158,7 +158,7 @@ The authorization was consumed after the single invocation.
 
 The diagnostic triangle does not need another execution to establish it.
 
-After approximately 22 days of reverse engineering:
+After approximately 20 days of reverse engineering:
 
 # 🔺
 
@@ -1756,7 +1756,7 @@ There was no plan.
 
 ~~*how hard could three vertices possibly be*~~
 
-**Answer: approximately 22 days.**
+**Answer: approximately 20 days.**
 
 ---
 
