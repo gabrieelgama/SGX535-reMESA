@@ -1,0 +1,33 @@
+#!/usr/bin/env python3
+# SPDX-License-Identifier: MIT
+"""Exercise actual pinned Mesa NIR structs and callbacks; no hardware."""
+import json,os,subprocess,argparse
+from pathlib import Path
+p=argparse.ArgumentParser();p.add_argument('--cache',type=Path,required=True);p.add_argument('--test',choices=['test_nir.c','test_nir_builder.c','test_vertex_nir.c'],default='test_nir.c');p.add_argument('--output',type=Path,required=True);a=p.parse_args()
+repo=Path(__file__).resolve().parents[3];m=a.cache;s=m/'mesa-25.2.0';b=m/'build-i386';a.output.mkdir(parents=True,exist_ok=True)
+env=dict(os.environ);env.update(json.loads((m/'build-environment.json').read_text()))
+base=['-ffunction-sections','-fdata-sections','-Wl,--gc-sections','-std=c11','-D_GNU_SOURCE','-DHAVE_ENDIAN_H','-DHAVE_SECURE_GETENV','-DHAVE_PTHREAD','-DHAVE_STRUCT_TIMESPEC','-DREMESA_WITH_MESA_HEADERS','-DREMESA_WITH_NIR']
+base+=['-I'+str(x) for x in [repo/'include',repo/'mesa/sgx535',s/'include',s/'src',s/'src/gallium/include',s/'src/compiler/nir',b/'src/compiler/nir',b/'src/compiler',b/'src']]
+sources=[repo/'mesa/sgx535'/x for x in ['remesa_nir.c','remesa_fixed_state.c','remesa_render_pass.c','remesa_screen.c','remesa_draw.c']]+[repo/'common/remesa/draw_packet.c',b/'src/compiler/nir/nir_intrinsics.c',s/'src/util/ralloc.c',s/'src/util/u_printf.c']
+q='/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/tests/qemu-root/usr/bin/qemu-i386'
+results={}
+for name,cc,flags,run in [('native',['cc'],['-O2'],[]),('ubsan',['cc'],['-O1','-fsanitize=undefined','-fno-sanitize-recover=all'],[]),('i386',[str(m/'wrappers/cc')],['-O2','-march=i486','-static'],[q])]:
+ exe=a.output/name;cmd=cc+base+flags+list(map(str,sources))+[str(repo/'mesa/sgx535/tests'/a.test),'-Wl,--wrap=calloc','-o',str(exe)]
+ r=subprocess.run(cmd,env=env,text=True,capture_output=True);(a.output/(name+'-compile.log')).write_text(r.stdout+r.stderr)
+ if r.returncode:raise SystemExit(name+' compilation failed')
+ r=subprocess.run(run+[str(exe)],env=env,text=True,capture_output=True);(a.output/(name+'-run.log')).write_text(r.stdout+r.stderr)
+ if r.returncode:raise SystemExit(name+' execution failed')
+ results[name]={'pass':True,'command':cmd,'output':r.stdout.strip()}
+ exe=a.output/(name+'-draw');cmd=cc+base+flags+list(map(str,sources))+[str(repo/'mesa/sgx535/tests/test_driver_nir.c'),'-o',str(exe)]
+ r=subprocess.run(cmd,env=env,text=True,capture_output=True);(a.output/(name+'-draw-compile.log')).write_text(r.stdout+r.stderr)
+ if r.returncode:raise SystemExit(name+' draw compile failed')
+ r=subprocess.run(run+[str(exe)],env=env,text=True,capture_output=True);(a.output/(name+'-draw-run.log')).write_text(r.stdout+r.stderr)
+ if r.returncode:raise SystemExit(name+' draw execution failed')
+ results[name+'-draw']={'pass':True,'command':cmd,'output':r.stdout.strip()}
+ exe=a.output/(name+'-caps');cmd=cc+base+flags+list(map(str,sources))+[str(repo/'mesa/sgx535/tests/test_screen_caps.c'),'-o',str(exe)]
+ r=subprocess.run(cmd,env=env,text=True,capture_output=True);(a.output/(name+'-caps-compile.log')).write_text(r.stdout+r.stderr)
+ if r.returncode:raise SystemExit(name+' NIR caps compile failed')
+ r=subprocess.run(run+[str(exe)],env=env,text=True,capture_output=True);(a.output/(name+'-caps-run.log')).write_text(r.stdout+r.stderr)
+ if r.returncode:raise SystemExit(name+' NIR caps execution failed')
+ results[name+'-caps']={'pass':True,'command':cmd,'output':r.stdout.strip()}
+(a.output/'result.json').write_text(json.dumps(results,indent=2)+'\n');print(json.dumps(results,indent=2))

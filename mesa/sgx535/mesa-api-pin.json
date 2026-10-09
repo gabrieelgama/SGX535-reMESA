@@ -1,0 +1,24 @@
+{
+  "version": "25.2.0",
+  "origin": "https://archive.mesa3d.org/mesa-25.2.0.tar.xz",
+  "archive_sha256": "7c726b21c074d14d31d253d638b741422f3c0a497ce7f1b4aaaa917d10bd8d4f",
+  "purpose": "Official Gallium API/build headers only. No third-party SGX implementation reference.",
+  "license": "MIT-style notices in interface headers; retained in external archive/extraction.",
+  "interface_files": {
+    "src/gallium/include/pipe/p_screen.h": "84a9cdf9f66ce7d95a402e4de993bff3a687700b70622584f02dce5b1612b271",
+    "src/gallium/include/pipe/p_context.h": "1cc1145fb8856657edecbc775f1a9a1de31f0620b175391dc9a025bf68d7dc67",
+    "src/gallium/include/pipe/p_state.h": "066e9ee6248c56233ac2e9bb1d3c04aae135fc1132ca6a3f8503a98992939f15",
+    "src/gallium/include/pipe/p_defines.h": "3f28e565d2f5b392cfab59bf73ec4161d52bdbf1e83507a0817002b89c68fbd8",
+    "src/util/format/u_format.yaml": "0aabe9d19cd05ce9bed963023b5790080a468a9316ef69bf162f27366a642a67",
+    "src/util/format/u_format_table.py": "2978c931030b391bb315947d143e89a0461458a77248b24483e99c35cc56bd3b"
+  },
+  "generated_formats_sha256": "1fadb92f35a3819da0981530e8a8ec4f7d0c295e894f1f8bb75bd2adf97d1d65",
+  "generation": "PYTHONPATH=pyyaml-6.0.2/lib python3 mesa-25.2.0/src/util/format/u_format_table.py mesa-25.2.0/src/util/format/u_format.yaml --enums",
+  "dependency": {
+    "name": "PyYAML",
+    "version": "6.0.2",
+    "origin": "https://github.com/yaml/pyyaml/archive/refs/tags/6.0.2.tar.gz",
+    "archive_sha256": "9377c381ac3fccad8df73d96b5139ef8b1a2c57a0d913e95ab0a2275d66b5caa",
+    "role": "Build-time format enum generation only"
+  }
+}

@@ -1,0 +1,84 @@
+#!/usr/bin/env python3
+# SPDX-License-Identifier: MIT
+"""Stage a pinned Mesa DRI/pipe-loader overlay in a NEW directory; never install.
+This registers a fail-closed reMESA descriptor, not OpenGL capability.
+Input may be a read-only Mesa source tree or the extracted contract subset.
+"""
+import argparse,hashlib,json,shutil
+from pathlib import Path
+
+def prepare(mesa,repo,output):
+    pin=json.loads((repo/'mesa/sgx535/mesa-loader-pin.json').read_text())
+    originals={}
+    for rel,h in pin['files'].items():
+        b=(mesa/rel).read_bytes()
+        if hashlib.sha256(b).hexdigest()!=h:raise ValueError('Mesa contract mismatch: '+rel)
+        originals[rel]=b.decode()
+    if output.exists():raise ValueError('Output must be new; no overwrite')
+    texts=dict(originals)
+    def replace(rel,old,new):
+        if texts[rel].count(old)!=1:raise ValueError('Nonunique integration anchor: '+rel)
+        texts[rel]=texts[rel].replace(old,new)
+    replace('src/gallium/auxiliary/pipe-loader/pipe_loader_drm.c',
+            'static const struct drm_driver_descriptor *driver_descriptors[] = {',
+            'static const struct drm_driver_descriptor *driver_descriptors[] = {\n   &gma500_driver_descriptor,')
+    replace('src/gallium/auxiliary/target-helpers/drm_helper_public.h',
+            'extern const struct drm_driver_descriptor i915_driver_descriptor;',
+            'extern const struct drm_driver_descriptor gma500_driver_descriptor;\nextern const struct drm_driver_descriptor i915_driver_descriptor;')
+    replace('src/gallium/auxiliary/target-helpers/drm_helper.h',
+            '/* kmsro should be the last entry in the file. */',
+            '#ifdef GALLIUM_SGX535\n#include "sgx535/remesa_dri.h"\n#else\nDRM_DRIVER_DESCRIPTOR_STUB(gma500)\n#endif\n\n/* kmsro should be the last entry in the file. */')
+    replace('src/gallium/meson.build',
+            "if with_gallium_softpipe\n  subdir('drivers/softpipe')",
+            "libremesa_loader = []\nif with_gallium_sgx535\n  subdir('drivers/sgx535')\nendif\nif with_gallium_softpipe\n  subdir('drivers/softpipe')")
+    replace('src/gallium/targets/dri/meson.build',
+            "  files('dri_target.c'),", "  files('dri_target.c'),\n  c_args : with_gallium_sgx535 ? ['-DGALLIUM_SGX535'] : [],")
+    replace('src/gallium/targets/dri/meson.build',
+            'link_whole : [libdri, gallium_dri_link_whole]',
+            'link_whole : [libdri, libremesa_loader, gallium_dri_link_whole]')
+    replace('meson.options',
+            "'softpipe', 'svga', 'tegra', 'v3d', 'vc4', 'virgl', 'zink',",
+            "'softpipe', 'svga', 'tegra', 'v3d', 'vc4', 'virgl', 'zink', 'sgx535',")
+    replace('meson.build',
+            "with_gallium_asahi = gallium_drivers.contains('asahi')",
+            "with_gallium_asahi = gallium_drivers.contains('asahi')\nwith_gallium_sgx535 = gallium_drivers.contains('sgx535')")
+    # DRIL uses GBM, not Xlib; build the compatibility artifact for the SGX535
+    # DRM-only configuration too. This does not expose an OpenGL context.
+    replace('src/meson.build',
+            "if with_glx == 'dri' or with_platform_x11 or with_platform_xcb",
+            "if with_glx == 'dri' or with_platform_x11 or with_platform_xcb or with_gallium_sgx535")
+    replace('src/gallium/targets/dril/dril_target.c',
+            'DEFINE_LOADER_DRM_ENTRYPOINT(i915)',
+            'DEFINE_LOADER_DRM_ENTRYPOINT(gma500)\nDEFINE_LOADER_DRM_ENTRYPOINT(i915)')
+    replace('src/gallium/targets/dril/meson.build',
+            "[with_gallium_i915, 'i915_dri.so'],",
+            "[with_gallium_i915, 'i915_dri.so'],\n             [with_gallium_sgx535, 'gma500_dri.so'],")
+    output.mkdir(parents=True)
+    for rel,text in texts.items():
+        p=output/rel;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(text)
+    dst=output/'src/gallium/drivers/sgx535';dst.mkdir(parents=True)
+    sources=['remesa_render_pass.c','remesa_render_pass.h','remesa_fixed_state.c','remesa_fixed_state.h','remesa_nir.c','remesa_nir.h','remesa_resource_ref.h','remesa_resource_layout.h','remesa_screen.c','remesa_screen.h','remesa_draw.c','remesa_draw.h','remesa_linux.c','remesa_linux.h','remesa_device.h','remesa_loader.c','remesa_loader.h','remesa_dri.c','remesa_dri.h']
+    for n in sources:shutil.copyfile(repo/'mesa/sgx535'/n,dst/n)
+    shutil.copyfile(repo/'common/remesa/draw_packet.c',dst/'draw_packet.c')
+    inc=dst/'include/remesa';inc.mkdir(parents=True)
+    for n in ['native_uapi.h','draw_packet.h']:shutil.copyfile(repo/'include/remesa'/n,inc/n)
+    shim=dst/'include/drm';shim.mkdir();(shim/'drm.h').write_text('/* SPDX-License-Identifier: MIT */\n#include <drm.h>\n')
+    (dst/'meson.build').write_text("""# SPDX-License-Identifier: MIT
+# Isolated experimental integration; DRI constructor currently rejects GL.
+libremesa_loader = static_library('remesa_loader',
+  files('remesa_render_pass.c','remesa_fixed_state.c','remesa_nir.c','remesa_screen.c', 'remesa_draw.c', 'remesa_linux.c',
+        'remesa_loader.c', 'remesa_dri.c', 'draw_packet.c'),
+  include_directories : [inc_include, inc_src, inc_gallium, inc_nir, inc_compiler,
+                        include_directories('include')],
+  dependencies : [dep_libdrm],
+  c_args : ['-DREMESA_WITH_MESA_HEADERS', '-DREMESA_WITH_NIR'],
+  install : false,
+)
+""")
+    manifest={'mesa_version':pin['version'],'scope':'Isolated source overlay only; no installation or hardware execution; OpenGL admission remains closed',
+              'inputs':pin['files'],'files':{str(p.relative_to(output)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(output.rglob('*')) if p.is_file()}}
+    (output/'integration.json').write_text(json.dumps(manifest,indent=2)+'\n')
+    return manifest
+if __name__=='__main__':
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--mesa',type=Path,required=True);p.add_argument('--repo',type=Path,default=Path(__file__).resolve().parents[2]);p.add_argument('--output',type=Path,required=True)
+    a=p.parse_args();m=prepare(a.mesa,a.repo,a.output);print('PASS: pinned isolated overlay, '+str(len(m['files']))+' files; OpenGL unavailable')
