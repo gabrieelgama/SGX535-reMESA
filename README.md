@@ -1,4 +1,4 @@
-# SGX535-reMESA
+ SGX535-reMESA
 
 Reverse engineering the PowerVR SGX535 used in Intel Poulsbo / GMA 500.
 
@@ -46,4 +46,4 @@ Information about other PowerVR Series5 GPUs is useful too.
 
 Thanks to Simon Fenney for pointing me towards Intel EMGD. That helped a lot.
 ## Special Thanks 
-Thanks 0x07000345 i hate you
+Thanks 0x07000345 aka Xpsb_emit_pixel_shader i hate you
