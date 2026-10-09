@@ -6,6 +6,7 @@
 #include "remesa_shader_ir.h"
 #include "remesa_usse.h"
 #include "remesa_pds.h"
+#include "remesa_program_registers.h"
 
 /* Host policy identifiers, not hardware version/register fields. */
 #define REMESA_SHADER_PROGRAM_SCHEMA 1u
@@ -23,6 +24,9 @@ struct remesa_shader_program_report {
  enum remesa_shader_program_status status;
  unsigned virtual_instructions;
  int binary_error;
+ /* Public program-base field facts are reported separately from executable
+  * instruction evidence. Their presence must never admit a GPU shader. */
+ struct remesa_program_register_evidence register_evidence;
 };
 /* Owns by-value immutable semantic/lowering snapshots; no pointer into NIR.
  * Success means host lowering only. It never means executable GPU code.

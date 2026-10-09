@@ -23,6 +23,12 @@ int main(void)
  CHECK(!remesa_shader_program_report(&program,&report));
  CHECK(report.stage==REMESA_IR_FRAGMENT&&report.status==REMESA_PROGRAM_SEMANTIC_ONLY&&
        report.virtual_instructions==8&&report.binary_error==ENOTSUP);
+ CHECK(report.register_evidence.use_banks==16&&
+       report.register_evidence.use_address_bits==25&&
+       report.register_evidence.declared_pds_alignment_shift==20&&
+       !report.register_evidence.use_va_packing_verified&&
+       !report.register_evidence.rev121_verified&&
+       !report.register_evidence.instruction_fields_known);
  unsigned char binary[128],before[128];memset(binary,0xa5,sizeof(binary));memcpy(before,binary,sizeof(before));
  size_t written=987;
  CHECK(remesa_shader_program_encode(&program,binary,sizeof(binary),&written)==ENOTSUP);
@@ -82,6 +88,10 @@ int main(void)
  CHECK(report.stage==REMESA_IR_VERTEX&&report.binary_error==ENOTSUP);
  CHECK(!remesa_context_shader_program_report(ctx,PIPE_SHADER_FRAGMENT,fs,&report));
  CHECK(report.stage==REMESA_IR_FRAGMENT&&report.binary_error==ENOTSUP);
+ CHECK(report.register_evidence.use_banks==16&&
+       !report.register_evidence.use_va_packing_verified&&
+       !report.register_evidence.rev121_verified&&
+       !report.register_evidence.instruction_fields_known);
  ctx->bind_vs_state(ctx,vs);ctx->bind_fs_state(ctx,fs);CHECK(!remesa_context_error(ctx));
  CHECK(remesa_context_shader_program_encode(ctx,PIPE_SHADER_VERTEX,vs,binary,sizeof(binary),&written)==ENOTSUP);
  CHECK(remesa_context_shader_program_encode(ctx,PIPE_SHADER_FRAGMENT,fs,binary,sizeof(binary),&written)==ENOTSUP);

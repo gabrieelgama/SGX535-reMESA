@@ -45,6 +45,7 @@ int remesa_shader_program_report(const struct remesa_shader_program *program,
   .stage=program->semantic.stage,.status=program->status,
   .virtual_instructions=program->usse.count,.binary_error=ENOTSUP
  };
+ remesa_program_register_evidence(&report.register_evidence);
  *out=report;
  return 0;
 }

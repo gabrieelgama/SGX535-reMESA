@@ -1,0 +1,279 @@
+{
+  "schema": "remesa-sgx5-new-public-field-research-v1",
+  "created_utc": "2026-10-09T21:37:43.059311+00:00",
+  "baseline": "e2db5cd",
+  "scope": "New contemporaneous public patent evidence; no repeat NEC/Rogue/SGX530/forum-quote research.",
+  "result": {
+    "USSE_ISA_FORMAT": "UNKNOWN",
+    "PDS_ISA_FORMAT": "UNKNOWN",
+    "new_hardware_fields_admitted": 0,
+    "new_hardware_instruction_bytes": 0,
+    "new_physical_executions": 0
+  },
+  "sources": [
+    {
+      "id": "US20070101013A1",
+      "url": "https://patents.google.com/patent/US20070101013A1/en",
+      "publication_pdf": "https://patentimages.storage.googleapis.com/0e/29/64/5d9241714818a2/US20070101013A1.pdf",
+      "title": "Scalable multi-threaded media processing architecture",
+      "inventor": "John Howson",
+      "priority_date": "2005-09-26",
+      "publication_date": "2007-05-03",
+      "assignee_metadata": "Imagination Technologies Limited assignment recorded 2006-12-18",
+      "provenance": "Public United States patent application publication; bibliographic metadata screened before the technical body. No proprietary driver or shader corpus.",
+      "permitted_use": "Factual paraphrase and citation. Patent publication is not asserted to grant a patent-practice or software-copying license. No source code, algorithms, diagrams or instruction words imported.",
+      "access": "Google Patents published HTML and public publication PDF via web tool; no local PDF downloaded.",
+      "target_scope": "Contemporaneous multi-threaded media and tile-rendering architecture. Neither SGX535 nor rev121 identified in inspected body.",
+      "admitted_bitfields": []
+    },
+    {
+      "id": "EP1987422A1-METADATA",
+      "url": "https://patents.google.com/patent/EP1987422A1/en",
+      "title": "Instruction sets for microprocessors",
+      "priority_date": "2006-02-10",
+      "access": "Search-result metadata only; body not opened.",
+      "screen_result": "Generic microprocessor/Meta-related architecture; no established USSE/PDS/SGX535 binding. Not a field source."
+    },
+    {
+      "id": "US20080010640A1-METADATA",
+      "url": "https://patents.google.com/patent/US20080010640A1/ja",
+      "title": "Synchronisation of execution threads on a multi-threaded processor",
+      "priority_date": "2006-07-04",
+      "access": "Search excerpts only; body not opened.",
+      "screen_result": "Thread synchronization architecture; no field encoding or SGX535 product binding established. Not admitted as encoder evidence."
+    },
+    {
+      "id": "US8743117B2-METADATA",
+      "url": "https://patents.google.com/patent/US8743117B2/en",
+      "title": "Processing of 3D computer graphics data on multiple shading engines",
+      "priority_date": "2010-03-19",
+      "access": "Search metadata/excerpt only; body not opened.",
+      "screen_result": "Later multi-USSE tile scheduling; metadata references 2005 architecture patent used above. No rev121 bitfields admitted."
+    }
+  ],
+  "facts": [
+    {
+      "id": "PUBLIC-MTMP-TASK-TUPLE",
+      "locator": "paragraph [0027], FIG.1",
+      "finding": "The disclosed task carries source identity, execution address and data address.",
+      "classification": "CONFIRMED",
+      "source": "US20070101013A1",
+      "product_binding": "UNKNOWN",
+      "hardware_field_admission": false
+    },
+    {
+      "id": "PUBLIC-PDS-DATA-LOAD",
+      "locator": "paragraphs [0035]-[0036], FIG.3",
+      "finding": "PDS execution may populate shared data directly or through DMA before queuing an execution task.",
+      "classification": "CONFIRMED",
+      "source": "US20070101013A1",
+      "product_binding": "UNKNOWN",
+      "hardware_field_admission": false
+    },
+    {
+      "id": "PUBLIC-OUTPUT-MACROTASK",
+      "locator": "paragraph [0033], FIG.3",
+      "finding": "Some output storage persists across grouped requests until a macro-task completion signal.",
+      "classification": "CONFIRMED",
+      "source": "US20070101013A1",
+      "product_binding": "UNKNOWN",
+      "hardware_field_admission": false
+    },
+    {
+      "id": "PUBLIC-SAME-SOURCE-DEPENDENCY",
+      "locator": "paragraph [0043]",
+      "finding": "Sequential output dependencies wait for earlier same-source tasks, with optional overlap masks.",
+      "classification": "CONFIRMED",
+      "source": "US20070101013A1",
+      "product_binding": "UNKNOWN",
+      "hardware_field_admission": false
+    },
+    {
+      "id": "PUBLIC-LAST-NOT-OUTPUT-FREE",
+      "locator": "paragraph [0047], FIG.4",
+      "finding": "An instruction marked Last frees the thread and input/temporary storage, but does not free output storage.",
+      "classification": "CONFIRMED",
+      "source": "US20070101013A1",
+      "product_binding": "UNKNOWN",
+      "hardware_field_admission": false
+    },
+    {
+      "id": "PUBLIC-OUTPUT-EMIT-COMPLETION",
+      "locator": "paragraph [0054]",
+      "finding": "The consuming processing pipeline signals output-buffer release after reading emitted output.",
+      "classification": "CONFIRMED",
+      "source": "US20070101013A1",
+      "product_binding": "UNKNOWN",
+      "hardware_field_admission": false
+    },
+    {
+      "id": "PUBLIC-TILE-EMIT",
+      "locator": "paragraph [0069], FIG.7",
+      "finding": "Individual pixel invocations write shared output; an event task emits the completed tile rather than each fragment emitting externally.",
+      "classification": "CONFIRMED",
+      "source": "US20070101013A1",
+      "product_binding": "UNKNOWN",
+      "hardware_field_admission": false
+    },
+    {
+      "id": "PUBLIC-VERTEX-EMIT",
+      "locator": "paragraph [0070], FIG.7",
+      "finding": "Vertex processing emits each processed vertex toward the tiling engine.",
+      "classification": "CONFIRMED",
+      "source": "US20070101013A1",
+      "product_binding": "UNKNOWN",
+      "hardware_field_admission": false
+    }
+  ],
+  "inferences": [
+    {
+      "id": "TILE-STORE-DISTINCT-FROM-GEM",
+      "classification": "INFERRED",
+      "finding": "The published architecture suggests separating external COLOR backing, per-thread storage and persistent tile-output lifetime in future experiments. It does not prove SGX535 preservation or any load encoding.",
+      "source": "US20070101013A1"
+    }
+  ],
+  "unknown_fields": [
+    {
+      "field": "instruction_width_bits",
+      "classification": "UNKNOWN",
+      "reason": "No inspected admitted source binds exact encoding to SGX535 rev121."
+    },
+    {
+      "field": "instruction_alignment_bytes",
+      "classification": "UNKNOWN",
+      "reason": "No inspected admitted source binds exact encoding to SGX535 rev121."
+    },
+    {
+      "field": "instruction_endianness",
+      "classification": "UNKNOWN",
+      "reason": "No inspected admitted source binds exact encoding to SGX535 rev121."
+    },
+    {
+      "field": "opcode_locations_values",
+      "classification": "UNKNOWN",
+      "reason": "No inspected admitted source binds exact encoding to SGX535 rev121."
+    },
+    {
+      "field": "register_bank_selector",
+      "classification": "UNKNOWN",
+      "reason": "No inspected admitted source binds exact encoding to SGX535 rev121."
+    },
+    {
+      "field": "operand_index_fields",
+      "classification": "UNKNOWN",
+      "reason": "No inspected admitted source binds exact encoding to SGX535 rev121."
+    },
+    {
+      "field": "predicate_fields",
+      "classification": "UNKNOWN",
+      "reason": "No inspected admitted source binds exact encoding to SGX535 rev121."
+    },
+    {
+      "field": "scheduling_fields",
+      "classification": "UNKNOWN",
+      "reason": "No inspected admitted source binds exact encoding to SGX535 rev121."
+    },
+    {
+      "field": "last_instruction_bit",
+      "classification": "UNKNOWN",
+      "reason": "No inspected admitted source binds exact encoding to SGX535 rev121."
+    },
+    {
+      "field": "vertex_export_fields",
+      "classification": "UNKNOWN",
+      "reason": "No inspected admitted source binds exact encoding to SGX535 rev121."
+    },
+    {
+      "field": "fragment_export_fields",
+      "classification": "UNKNOWN",
+      "reason": "No inspected admitted source binds exact encoding to SGX535 rev121."
+    },
+    {
+      "field": "PDS_launch_words",
+      "classification": "UNKNOWN",
+      "reason": "No inspected admitted source binds exact encoding to SGX535 rev121."
+    },
+    {
+      "field": "PDS_data_store_format",
+      "classification": "UNKNOWN",
+      "reason": "No inspected admitted source binds exact encoding to SGX535 rev121."
+    },
+    {
+      "field": "rev121_constraints",
+      "classification": "UNKNOWN",
+      "reason": "No inspected admitted source binds exact encoding to SGX535 rev121."
+    }
+  ],
+  "excluded_search_discoveries": [
+    {
+      "url": "https://github.com/frangarcj/open-shacccg",
+      "access": "Search-result excerpt surfaced unexpectedly; repository never opened, downloaded, cloned or searched.",
+      "reason": "USSE2/Vita compiler-oracle and GXP corpus derivation; provenance permission and SGX535 compatibility not established. No words, fields or code imported."
+    },
+    {
+      "url": "https://fileadmin.cs.lth.se/cs/education/Examensarbete/Rapporter/2008/Rapport_2008-08.pdf",
+      "access": "Search excerpt only; PDF not opened or downloaded.",
+      "reason": "Reported disassembler based on unspecified target technical manual; authorization of manual-derived ISA material and SGX535 identity not established."
+    },
+    {
+      "url": "https://docs.alexrp.com/metag/meta_htp_insns.pdf",
+      "access": "Search excerpt only; not opened or downloaded.",
+      "reason": "Meta CPU instruction set is not SGX535 USSE/PDS evidence."
+    }
+  ],
+  "discriminating_experiments": [
+    {
+      "id": "DOCUMENTED-TERMINATION-BOOTSTRAP",
+      "status": "BLOCKED",
+      "question": "Which documented termination instruction releases a shader thread while retaining output storage?",
+      "minimum_prerequisite": "An authorized SGX535 rev121 instruction-width/format and termination specification or wholly independently authored proven terminating program, plus qualified launch path.",
+      "discriminant": "With an independently admitted program only: separate thread-completion observations from output-consumer completion and retirement. Output release before consuming completion is rejection.",
+      "negative_controls": [
+        "wrong operation/generation attribution",
+        "missing output-consumer event",
+        "timeout with uncertain completion"
+      ],
+      "machine_code_guessing": false,
+      "proprietary_output_inspection": false,
+      "currently_executable": false
+    },
+    {
+      "id": "PRESERVE-SOURCE-DISTINCTION",
+      "status": "BLOCKED",
+      "question": "Does an admitted load path read external seeded COLOR into persistent tile output, or merely initialize tile output independently?",
+      "minimum_prerequisite": "Independently established COLOR load command plus shader-policy-admitted program and exact owned resource mapping.",
+      "discriminant": "Distinct per-pixel seeds and exact untouched-pixel comparison; distinguish seeded backing visibility from tile-store persistence.",
+      "negative_controls": [
+        "no-load control",
+        "wrong resource generation",
+        "independent capture disagreement"
+      ],
+      "machine_code_guessing": false,
+      "currently_executable": false
+    }
+  ],
+  "policy": {
+    "psb_dri_accessed": false,
+    "Xpsb_accessed": false,
+    "historical_440_payload_accessed": false,
+    "DDK_accessed": false,
+    "cross_generation_assumptions": false,
+    "no_hardware_operations": true
+  },
+  "bounded_result": "The newly inspected patent supplies architecture and termination semantics but not executable instruction fields. This is a bounded research result, not a claim that no authorized format specification exists.",
+  "final_bounded_search": {
+    "created_utc": "2026-10-09T21:45:45.175303+00:00",
+    "query_limit": 3,
+    "queries": [
+      "\"SGX535\" \"instruction word\" -github -psb -Xpsb -DDK -ftp -fossies",
+      "\"SGX535\" \"opcode\" \"patent\" -github -psb -Xpsb -DDK",
+      "\"USSE\" \"64\" \"Imagination\" \"patent\" -github -psb -Xpsb -DDK -Rogue"
+    ],
+    "new_documents_opened": 0,
+    "result": "No new primary-source candidate establishing numeric SGX535/rev121 USSE or PDS fields. Irrelevant secondary/reference snippets were not opened.",
+    "actual_instruction_packing_justified": false,
+    "unknown_encoding_fields_remain_unknown": true,
+    "repeated_previous_documents": false
+  }
+}

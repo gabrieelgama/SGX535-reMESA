@@ -1,0 +1,219 @@
+{
+  "schema": "remesa-sgx535-public-launch-evidence-v1",
+  "created_utc": "2026-10-09T21:36:29.928475+00:00",
+  "scope": "Public upstream Linux v5.10 gma500 program-base/register metadata; original factual inventory, NOT a USSE/PDS instruction specification or launch program.",
+  "cleanroom": {
+    "proprietary_binaries_accessed": false,
+    "historical_440_byte_shader_accessed": false,
+    "proprietary_instruction_bytes_used": 0,
+    "new_instruction_bytes": 0,
+    "admitted_instruction_bitfields": 0,
+    "code_reuse": "No upstream code copied into implementation; only attributed register-field facts recorded here."
+  },
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/torvalds/linux/v5.10/drivers/gpu/drm/gma500/psb_reg.h",
+      "name": "psb_reg.h",
+      "sha256": "a340d4fb7bb9df2403eb196639d930b8c56463ddc7a3754d152e6ed7ab1daef7",
+      "bytes": 18355,
+      "license": "GPL-2.0-only",
+      "access": "copyright/SPDX header reviewed before technical body; selected facts reviewed; no instructions reused",
+      "commit": "2c85ebc57b3e1817b6ce1a6b703928e113a90442",
+      "immutable_url": "https://raw.githubusercontent.com/torvalds/linux/2c85ebc57b3e1817b6ce1a6b703928e113a90442/drivers/gpu/drm/gma500/psb_reg.h",
+      "tag": "v5.10"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/torvalds/linux/v5.10/drivers/gpu/drm/gma500/psb_drv.c",
+      "name": "psb_drv.c",
+      "sha256": "1a479acdd4e88819d9a0dc00e2f5df69c6e12ebf1e5779d5bac176dc43c7a80c",
+      "bytes": 15455,
+      "license": "GPL-2.0-only",
+      "access": "copyright/SPDX header reviewed before technical body; selected facts reviewed; no instructions reused",
+      "commit": "2c85ebc57b3e1817b6ce1a6b703928e113a90442",
+      "immutable_url": "https://raw.githubusercontent.com/torvalds/linux/2c85ebc57b3e1817b6ce1a6b703928e113a90442/drivers/gpu/drm/gma500/psb_drv.c",
+      "tag": "v5.10"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/torvalds/linux/v5.10/drivers/gpu/drm/gma500/psb_drv.h",
+      "name": "psb_drv.h",
+      "sha256": "6dce38176eccc8d7037783ec6c41d101c3c614068a3b7b11f40b06e1d1ca6261",
+      "bytes": 24752,
+      "license": "GPL-2.0-only",
+      "access": "copyright/SPDX header reviewed before technical body; selected facts reviewed; no instructions reused",
+      "commit": "2c85ebc57b3e1817b6ce1a6b703928e113a90442",
+      "immutable_url": "https://raw.githubusercontent.com/torvalds/linux/2c85ebc57b3e1817b6ce1a6b703928e113a90442/drivers/gpu/drm/gma500/psb_drv.h",
+      "tag": "v5.10"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/torvalds/linux/v5.10/drivers/gpu/drm/gma500/psb_device.c",
+      "name": "psb_device.c",
+      "sha256": "c02f8c825350ed89675d7618e158d503fbb92169a7f2f8aba4255b353de9a493",
+      "bytes": 8871,
+      "license": "GPL-2.0-only",
+      "access": "copyright/SPDX header reviewed before technical body; selected facts reviewed; no instructions reused",
+      "commit": "2c85ebc57b3e1817b6ce1a6b703928e113a90442",
+      "immutable_url": "https://raw.githubusercontent.com/torvalds/linux/2c85ebc57b3e1817b6ce1a6b703928e113a90442/drivers/gpu/drm/gma500/psb_device.c",
+      "tag": "v5.10"
+    }
+  ],
+  "platform_attribution": {
+    "classification": "CONFIRMED",
+    "fact": "Upstream v5.10 psb_drv.c PCI table maps Intel 0x8086 devices 0x8108 and 0x8109 to psb_chip_ops. psb_drv.h identifies these as Poulsbo, distinct from Moorestown/Medfield/Cedarview. psb_device.c selects PSB_SGX_OFFSET for those ops.",
+    "locators": {
+      "psb_drv.c": [
+        56,
+        57
+      ],
+      "psb_drv.h": [
+        40,
+        41,
+        46,
+        57
+      ],
+      "psb_device.c": [
+        319,
+        328
+      ]
+    },
+    "rev121_observation": "UNKNOWN: upstream source does not identify SGX535 core revision 121; direct hardware qualification of these field semantics remains required."
+  },
+  "facts": [
+    {
+      "id": "UPSTREAM-POULSBO-USE-CODE-BASE",
+      "classification": "CONFIRMED",
+      "meaning": "Header supplies sixteen USE code-base MMIO register slots starting at offset 0x0a0c with four-byte register stride. This is the MMIO register-address stride, not instruction width.",
+      "register_offset": 2572,
+      "register_stride_bytes": 4,
+      "register_count": 16,
+      "source": "psb_reg.h",
+      "lines": [
+        89,
+        105
+      ],
+      "instruction_encoding": false,
+      "final_register_offset": 2632
+    },
+    {
+      "id": "UPSTREAM-POULSBO-USE-BASE-FIELDS",
+      "classification": "CONFIRMED",
+      "meaning": "Header supplies a two-bit data-master field at bit25, a 25-bit base-address field, and address-alignment shift7. Header comment questions the 1024-bit-alignment description.",
+      "data_master_shift": 25,
+      "data_master_mask": 100663296,
+      "address_mask": 33554431,
+      "declared_alignment_shift": 7,
+      "source": "psb_reg.h",
+      "lines": [
+        106,
+        114
+      ],
+      "field_values": {
+        "vertex": 0,
+        "pixel": 1,
+        "reserved": 2,
+        "edm": 3
+      },
+      "rev121_execution_qualification": "UNKNOWN",
+      "interpretation": "Treat 128-byte base alignment as INFERRED hardware semantics pending direct verification. It does not establish instruction alignment or register index encoding.",
+      "instruction_encoding": false,
+      "declared_address_field_shift": 0,
+      "packing_interpretation": "ADDR_SHIFT is0 while ALIGNSHIFT is7. Pure candidate packing address>>7 into low25 bits is an INFERRED interpretation; no execution or upstream call-site corroboration found."
+    },
+    {
+      "id": "UPSTREAM-POULSBO-PDS-EXEC-BASE",
+      "classification": "CONFIRMED",
+      "meaning": "Header names PDS execution base MMIO register offset0x0ab8 and defines address/alignment shifts20 with explicit one-megabyte alignment comment.",
+      "register_offset": 2744,
+      "declared_address_shift": 20,
+      "declared_alignment_shift": 20,
+      "source": "psb_reg.h",
+      "lines": [
+        116,
+        118
+      ],
+      "interpretation": "Source-level PDS base-window alignment metadata only; PDS program instruction alignment/length/data-store layout remain UNKNOWN.",
+      "instruction_encoding": false,
+      "packing_interpretation": "ADDR_SHIFT and ALIGNSHIFT both20; psb_drv.c supplies literal0x20000000 directly to register. Preserve raw aligned VA as register word; do not right-shift by20 merely because macro is named SHIFT. Header does not supply explicit address mask."
+    },
+    {
+      "id": "UPSTREAM-POULSBO-PDS-INITIALIZATION",
+      "classification": "CONFIRMED",
+      "meaning": "Public kernel initialization writes 0x20000000 to PDS_EXEC_BASE and 0x30000000 to BIF_3D_REQ_BASE. The actual written register word is reported; no shift convention is guessed from macro names.",
+      "pds_register_value": 536870912,
+      "bif_3d_register_value": 805306368,
+      "source": "psb_drv.c",
+      "lines": [
+        339,
+        340
+      ],
+      "interpretation": "This source initialization does not prove launch descriptor layout, program contents, executable shaders, current MMIO state or rev121-specific correctness.",
+      "instruction_encoding": false
+    },
+    {
+      "id": "UPSTREAM-POULSBO-EVENT-KICKER",
+      "classification": "CONFIRMED",
+      "meaning": "Header names EVENT_KICKER MMIO register0x0ac4 and shift4 with 128-bit aligned address comment.",
+      "register_offset": 2756,
+      "declared_address_shift": 4,
+      "source": "psb_reg.h",
+      "lines": [
+        120,
+        121
+      ],
+      "interpretation": "Event-address metadata only. It is not a USSE/PDS instruction or authorized experiment.",
+      "instruction_encoding": false
+    }
+  ],
+  "unknowns": [
+    "USSE/PDS instruction bit lengths and instruction alignment",
+    "Opcode bits and operand bank/index encodings",
+    "Predicates, scheduling/execution controls and termination",
+    "Vertex/fragment export instructions",
+    "PDS instruction classes and data-store program layout",
+    "USE code-base address packing semantics on SGX535 rev121",
+    "PDS task descriptor layout and USSE launch fields",
+    "Current rev121 hardware state and exact register behavior"
+  ],
+  "minimum_discriminating_checks": [
+    {
+      "id": "READONLY-REV121-BASE-IDENTITY",
+      "preconditions": [
+        "Qualified independent observer and documented safe register snapshot interface",
+        "Current boot/device/module/observer identity authenticated",
+        "No submissions or writes"
+      ],
+      "observation": "Correlate SGX535 core/revision read-only identity and USE/PDS base register words with the exact operation/session owner. Compare to upstream initialization facts without changing any register.",
+      "resolves": "Whether current qualified SGX535 rev121 context matches source-level Poulsbo base setup",
+      "does_not_resolve": "Instruction formats, shader correctness or interpretation of address shift fields"
+    },
+    {
+      "id": "ENCODING-EVIDENCE-PREREQUISITE",
+      "preconditions": [
+        "Independently admissible instruction-format table or independently authored known-executable baseline"
+      ],
+      "observation": "Only after such a baseline exists, vary one documented instruction field at a time with bounded execution and attributed output.",
+      "resolves": "Specific field semantics compared with independent specification",
+      "blocked_now": "No independent known-executable shader; arbitrary opcode brute force is not qualified and must not be submitted."
+    }
+  ],
+  "intel_datasheet_search": [
+    {
+      "url": "https://download.intel.com/design/chipsets/embedded/datashts/319537.pdf",
+      "outcome": "web open inaccessible; no technical body admitted"
+    }
+  ],
+  "result": {
+    "USSE_INSTRUCTION_FORMAT": "UNKNOWN",
+    "PDS_INSTRUCTION_FORMAT": "UNKNOWN",
+    "PUBLIC_LAUNCH_REGISTER_METADATA": "CONFIRMED",
+    "REV121_FIELD_EXECUTION": "UNKNOWN",
+    "PHYSICAL_EXECUTIONS": 0
+  },
+  "access_inventory": "/home/gama/sgx535-offline/sgx535-launch-evidence-20261009/access.json",
+  "upstream_version": {
+    "tag": "v5.10",
+    "tag_object": "3f995f8e0b540342612d3f6b1fc299f5bf486987",
+    "peeled_commit": "2c85ebc57b3e1817b6ce1a6b703928e113a90442",
+    "resolution_source": "https://api.github.com/repos/torvalds/linux/git/ref/tags/v5.10",
+    "all_four_source_sha256_equal_at_tag_and_commit": true
+  }
+}
