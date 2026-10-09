@@ -4,6 +4,10 @@
  */
 #include "remesa_shader_program.h"
 #include "vertex_nir_fixture.h"
+/* Included test fixture has external allocation interception and an inherited
+ * entry point. Declare them for the real Mesa -Wmissing-prototypes contract. */
+void *__wrap_calloc(size_t, size_t);
+int inherited_nir_main(void);
 #define main inherited_nir_main
 #include "test_nir.c"
 #undef main

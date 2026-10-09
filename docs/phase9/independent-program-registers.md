@@ -8,6 +8,14 @@ The actual Gallium shader-program report exposes this evidence separately
 from its still unsupported machine-code compilation result. The isolated
 Mesa 25.2.0 build compiles the codec; OpenGL admission is unchanged.
 
+The shader qualifier also links its NIR/callback test against the actual
+Meson-built `libremesa_loader.a` and Mesa libraries, not recompiled substitute
+driver objects. It checks staged source identity, requires an up-to-date
+archive without rebuilding it, and rejects archive/input changes during the
+test. The offline fixture exercises immutable program reports, context/shader
+ownership, allocation failures and teardown. It generates no GPU instructions.
+`--archive-only` runs that test without repeating the native/UBSan variants.
+
 Numerical register facts come from the GPL-2.0-only upstream Linux v5.10
 gma500 sources, pinned to commit
 `2c85ebc57b3e1817b6ce1a6b703928e113a90442`. Source hashes, exact locators,
