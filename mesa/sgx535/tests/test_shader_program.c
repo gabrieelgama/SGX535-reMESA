@@ -22,6 +22,20 @@ int main(void)
  CHECK(!remesa_shader_program_prepare(&ir,&program));copy=program;
  CHECK(!remesa_shader_program_validate(&program));
  CHECK(!remesa_shader_program_prepare(&ir,&copy)&&!memcmp(&copy,&program,sizeof(copy)));
+ /* Compilation keeps the original immutable semantic IR, while pure copies
+  * do not consume extra scalar values in its independently authored plan. */
+ struct remesa_shader_ir copied=ir;
+ copied.instructions[2]=copied.instructions[1];
+ copied.instructions[2].src[0].reg=1;
+ copied.instructions[1]=(struct remesa_ir_instruction){
+  .op=REMESA_IR_COPY,.dst=1,.components=4,.type=REMESA_IR_FLOAT32};
+ for(unsigned c=0;c<4;c++)copied.instructions[1].src[c].channel=c;
+ copied.count=3;
+ CHECK(!remesa_shader_program_prepare(&copied,&copy));
+ CHECK(!memcmp(&copy.usse,&program.usse,sizeof(program.usse)));
+ CHECK(!memcmp(&copy.semantic,&copied,sizeof(copied)));
+ CHECK(!remesa_shader_program_validate(&copy));
+ copy=program;
  memset(&ir,0,sizeof(ir));CHECK(!remesa_shader_program_validate(&program));
  struct remesa_shader_program_report report={0};
  CHECK(!remesa_shader_program_report(&program,&report));

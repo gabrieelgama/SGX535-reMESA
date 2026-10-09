@@ -14,6 +14,12 @@ never used alone to compare shader plans or admit hardware work.
 
 Supported host semantics are identity float32 position, endpoint constant
 fragment color admitted by the existing NIR recognizer, and validated copies.
+Lowering propagates pure COPY/COMPOSE4 channel aliases after validating the
+complete semantic program. Identity chains and inverse channel compositions
+therefore produce the same eight-record scalar plan as the direct profile,
+without consuming extra virtual values. The immutable original semantic IR is
+retained for validation. This optimization neither allocates hardware registers
+nor establishes a GPU MOV instruction. Existing serialized host MOVs remain valid.
 No arithmetic, texture instructions, predicates, branches, varying linkage or
 hardware register allocation is claimed. Uniform color snapshot specialization
 remains CPU-side preparation and cannot be queried as a compiled GPU program.

@@ -26,6 +26,45 @@ static struct remesa_shader_ir profile(unsigned fragment,unsigned copies)
 }
 static void unchanged_bytes(const unsigned char *p,size_t n,unsigned char value)
 {for(size_t k=0;k<n;k++)CHECK(p[k]==value);}
+static void test_copy_propagation(void)
+{
+ /* A nonidentity compose followed by its inverse is an identity shader.
+  * Check channel provenance rather than assuming every copy is passthrough. */
+ const unsigned permutation[4]={2,0,3,1},inverse[4]={1,3,0,2};
+ for(unsigned stage=0;stage<2;stage++) {
+  struct remesa_shader_ir ir=profile(stage,2),direct=profile(stage,0);
+  for(unsigned c=0;c<4;c++) {
+   ir.instructions[1].src[c].channel=permutation[c];
+   ir.instructions[2].src[c].channel=inverse[c];
+  }
+  ir.instructions[1].op=ir.instructions[2].op=REMESA_IR_COMPOSE4;
+  struct remesa_shader_ir snapshot=ir;
+  struct remesa_usse_program optimized,minimal;
+  CHECK(!remesa_usse_lower(&ir,&optimized));
+  CHECK(!remesa_usse_lower(&direct,&minimal));
+  CHECK(!memcmp(&optimized,&minimal,sizeof(minimal)));
+  CHECK(!memcmp(&ir,&snapshot,sizeof(ir)));
+  if(!stage) {
+   /* Missing inverse would change POSITION and is still rejected. */
+   ir.instructions[2].src[0].channel=0;
+   struct remesa_usse_program before=optimized;
+   CHECK(remesa_usse_lower(&ir,&optimized)==ENOTSUP);
+   CHECK(!memcmp(&optimized,&before,sizeof(before)));
+  }
+ }
+ /* The transport schema still accepts explicitly authored semantic MOVs.
+  * Optimizing compilation must not invalidate existing host schema records. */
+ struct remesa_shader_ir direct=profile(0,0);
+ struct remesa_usse_program moved;
+ CHECK(!remesa_usse_lower(&direct,&moved));
+ for(unsigned c=0;c<4;c++) {
+  moved.instructions[8+c]=moved.instructions[4+c];
+  moved.instructions[8+c].src=4+c;
+  moved.instructions[4+c]=(struct remesa_usse_instruction){
+   .op=REMESA_USSE_MOVE,.dst=4+c,.src=c};
+ }
+ moved.count=12;CHECK(!remesa_usse_validate(&moved));
+}
 static void test_usse(void)
 {
  struct remesa_usse_encoding_status status;
@@ -35,15 +74,18 @@ static void test_usse(void)
  CHECK(status.execution_control==REMESA_ENCODING_UNKNOWN&&status.input_output==REMESA_ENCODING_UNKNOWN&&status.immediate==REMESA_ENCODING_UNKNOWN);
  for(unsigned stage=0;stage<2;stage++)for(unsigned copies=0;copies<16;copies++) {
   struct remesa_shader_ir ir=profile(stage,copies);
-  struct remesa_usse_program a,b;
+  struct remesa_usse_program a,b,minimal;
   CHECK(!remesa_usse_lower(&ir,&a));CHECK(!remesa_usse_lower(&ir,&b));
   CHECK(!memcmp(&a,&b,sizeof(a))&&!remesa_usse_validate(&a));
-  CHECK(a.stage==ir.stage&&a.count==4*(copies+2));
+  CHECK(a.stage==ir.stage&&a.count==8);
+  struct remesa_shader_ir direct=profile(stage,0),snapshot=ir;
+  CHECK(!remesa_usse_lower(&direct,&minimal)&&!memcmp(&a,&minimal,sizeof(a)));
+  CHECK(!memcmp(&ir,&snapshot,sizeof(ir)));
   for(unsigned c=0;c<4;c++) {
    CHECK(a.instructions[c].op==(stage?REMESA_USSE_CONSTANT:REMESA_USSE_INPUT));
    CHECK(a.instructions[c].dst==c&&a.instructions[c].src==REMESA_USSE_NO_VALUE);
    CHECK(a.instructions[a.count-4+c].op==(stage?REMESA_USSE_EXPORT_COLOR:REMESA_USSE_EXPORT_POSITION));
-   CHECK(a.instructions[a.count-4+c].channel==c&&a.instructions[a.count-4+c].src==copies*4+c);
+   CHECK(a.instructions[a.count-4+c].channel==c&&a.instructions[a.count-4+c].src==c);
   }
   unsigned char bytes[16+REMESA_USSE_INSTRUCTIONS*24],again[sizeof(bytes)];
   size_t n=999,m=999;
@@ -274,6 +316,7 @@ static void test_pds(void)
 }
 int main(void)
 {
+ test_copy_propagation();
  test_usse();
  test_pds();
  test_aliases();

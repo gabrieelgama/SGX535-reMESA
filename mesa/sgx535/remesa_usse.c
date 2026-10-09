@@ -67,6 +67,15 @@ int remesa_usse_lower(const struct remesa_shader_ir *ir,struct remesa_usse_progr
  p.stage=ir->stage;
  for(uint32_t n=0;n<ir->count;n++) {
   const struct remesa_ir_instruction *i=&ir->instructions[n];
+  /* COPY/COMPOSE4 are pure float32 channel aliases in the admitted IR.
+   * Propagate them before allocating scalar values. This is an original
+   * semantic optimization, not a claim about hardware registers or MOV bits.
+   * Validation above rejects side effects, cycles and forward references. */
+  if(i->op==REMESA_IR_COPY||i->op==REMESA_IR_COMPOSE4) {
+   for(uint32_t c=0;c<i->components;c++)
+    map[i->dst][c]=map[i->src[c].reg][i->src[c].channel];
+   continue;
+  }
   for(uint32_t c=0;c<i->components;c++) {
    if(p.count>=REMESA_USSE_INSTRUCTIONS)return EOVERFLOW;
    struct remesa_usse_instruction *u=&p.instructions[p.count++];
@@ -79,7 +88,7 @@ int remesa_usse_lower(const struct remesa_shader_ir *ir,struct remesa_usse_progr
     u->dst=defined;map[i->dst][c]=defined++;
     if(i->op==REMESA_IR_INPUT) {u->op=REMESA_USSE_INPUT;u->channel=c;}
     else if(i->op==REMESA_IR_CONSTANT) {u->op=REMESA_USSE_CONSTANT;u->bits=i->bits[c];}
-    else {u->op=REMESA_USSE_MOVE;u->src=map[i->src[c].reg][i->src[c].channel];}
+    else return ENOTSUP;
    }
   }
  }
