@@ -5,6 +5,9 @@
 #include <stdint.h>
 #include "pipe/p_state.h"
 #include "remesa/draw_packet.h"
+/* Supported host position fetch widths. Missing FLOAT2 z/w are 0/1;
+ * FLOAT3 w is 1. Unsupported formats return zero; no GPU ISA is generated. */
+unsigned remesa_position_format_bytes(enum pipe_format);
 /* Resolution-independent CPU primitive preparation, not an SGX packet.
  * Triangle vertices are duplicated in primitive order after clipping; only
  * constant fragment output is admitted (no varying interpolation). */

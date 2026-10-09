@@ -1,0 +1,100 @@
+{
+  "mesa": "25.2.0",
+  "scope": "Native diagnostic Gallium backend; a DRI load does not establish OpenGL",
+  "contracts": [
+    {
+      "contract": "screen/context create/destroy",
+      "status": "OFFLINE QUALIFIED",
+      "restriction": "diagnostic/resource-only screens; DRI constructor rejects admission to state tracker"
+    },
+    {
+      "contract": "resource create/destroy/map/unmap",
+      "status": "OFFLINE QUALIFIED",
+      "restriction": "Buffers and arbitrary bounded single-level RGBA8/BGRA8 transfer storage with backend stride/byte limits; only32x32 BGRA native render targets. Writer-fence gating, leases and deferred backend cleanup."
+    },
+    {
+      "contract": "framebuffer/surface",
+      "status": "OFFLINE QUALIFIED",
+      "restriction": "one 32x32 BGRA8 color attachment; no depth/stencil or multisampling"
+    },
+    {
+      "contract": "vertex buffers/elements and draw_vbo",
+      "status": "OFFLINE QUALIFIED",
+      "restriction": "Single FLOAT2/3/4 position layout with checked 8/12/16-byte fetches; missing z=0,w=1 expanded on host into unchanged packet format. Immutable context-owned handles and foreign/stale/deleted rejection. Legacy POS and generic0 identity NIR recognized; CPU coordinate preparation, not general GPU vertex shaders."
+    },
+    {
+      "contract": "flush/fence/readback",
+      "status": "CONFIRMED",
+      "restriction": "one physically qualified retained-GEM triangle; repeated execution remains unverified and kernel admission stays one-attempt"
+    },
+    {
+      "contract": "viewport/scissor",
+      "status": "PARTIAL",
+      "restriction": "Legacy window positions require identity viewport. Restricted VS uses explicit canonical32 viewport, finite xyz in[-1,1], w=1; host clip-to-window preparation, no CPU rasterization. Clipping and general perspective rejected. Full32x32 scissor only."
+    },
+    {
+      "contract": "blend/color mask/rasterizer/depth/stencil",
+      "status": "PARTIAL",
+      "restriction": "Context-owned immutable CSOs with tombstone lookup. Full RGBA/no-blend/no-logic/no-tests/solid/no-cull only. Invalid/deleted/foreign state remains draw-blocking across unrelated binds. Mesa half_pixel_center=1 and alternative edge rule unsupported. No new GPU state encoding. Rejected foreign/stale deletion reports EINVAL and preserves existing valid state; only deletion of the bound valid object invalidates that slot."
+    },
+    {
+      "contract": "GPU clear",
+      "status": "BLOCKED",
+      "restriction": "GPU encoding UNKNOWN. Actual clear/clear_render_target use checked dimension/stride-aware CPU color transfer preparation. clear_texture supports bounded RGBA/BGRA raw-texel CPU clears, resource_copy_region snapshots overlapping buffers/images after writer synchronization. CPU clears/copies are counted separately and never submit SGX."
+    },
+    {
+      "contract": "framebuffer load/store",
+      "status": "OFFLINE QUALIFIED",
+      "restriction": "Per-resource frontend cookies/serials, DISCARD/PRESERVE intent, pending-writer exclusion, authenticated backend wait plus publication/retirement and failure quarantine are integrated into draw_vbo and external writer import. Native PRESERVE remains ENOTSUP; hardware load/store UNKNOWN. Local tickets are not kernel operation IDs."
+    },
+    {
+      "contract": "shader states",
+      "status": "PARTIAL",
+      "restriction": "Restricted identity VS accepts matching legacy POS or generic0 semantic at input slot0. Constant FS scalar/vec4/identity recognition remains restricted to observed profiles. No general ALU, uniforms, varyings or texture compilation; live native profile still magenta-only."
+    },
+    {
+      "contract": "screen GL caps",
+      "status": "PARTIAL",
+      "restriction": "Narrow truthful Gallium screen only. Fragment max_inputs=0, max_varyings=0 and fragment-coordinate convention flags disabled; unsupported interpolation/coordinate behavior is not advertised. DRI OpenGL admission remains closed."
+    },
+    {
+      "contract": "texture/sampler/import/export",
+      "status": "PARTIAL",
+      "restriction": "Offline RGBA8/BGRA8 allocation, bounded upload/readback, writer-serial lifetime, clamp-nearest sampling and unsupported-state rejection are qualified in remesa_texture.c. This is a CPU reference/resource contract only; Gallium binding and SGX texture sampling remain unverified. No PRIME/shared scanout ownership."
+    },
+    {
+      "contract": "XCB publication",
+      "status": "OFFLINE QUALIFIED",
+      "restriction": "Fence-gated CPU snapshot and checked row-tiled requests for direct and scaled images. Mock tests cover all10sizes through1920x1080 plus loss/cleanup. Physical Xorg publication of a new32x32 SGX frame was independently confirmed in the sealed visible-proven campaign using the separate Xlib transaction; this XCB adapter remains offline-only."
+    },
+    {
+      "contract": "Mesa CSO cleanup/state callbacks",
+      "status": "OFFLINE QUALIFIED",
+      "restriction": "Actual Mesa CSO create/unbind/destroy tested. Disabled stencil/blend constants, empty constant-buffer unbinds per stage+slot, single-sample mask; nonempty uniforms rejected persistently; empty framebuffer unbind releases references."
+    },
+    {
+      "contract": "NIR compiler-options query",
+      "status": "OFFLINE QUALIFIED",
+      "restriction": "Immutable conservative no-lowering options for VS/FS only; other stages/closed screen return NULL. Actual Mesa builder uses this callback; no general opcode or GL capability advertisement."
+    },
+    {
+      "contract": "sampler lifecycle and view unbinding",
+      "status": "OFFLINE QUALIFIED",
+      "restriction": "Real Gallium callbacks for immutable nearest/clamp metadata, bounded tombstones, stale/foreign handle rejection, empty bindings, per-stage/per-slot rejection and cleanup. Every nonempty sampler/view binding blocks drawing. No GPU sampling resource or sampler view can be created; rejected views transfer no references."
+    }
+  ],
+  "minimum_shader_blocker": {
+    "established": "The admitted fixed diagnostic vertex/fragment and tile-output program/state combination physically renders; this is a whole-pipeline observation.",
+    "unknown": "General USSE opcode/operand/export semantics, PDS task generation and their translation from Mesa NIR.",
+    "method": "Use independently justified encoding specifications and separately authorized controlled observations; framebuffer equality alone cannot determine instruction semantics.",
+    "implementation": "Identity-position NIR is recognized independently and lowered by host geometry preparation; no new USSE opcodes. Existing exact diagnostic program remains unchanged. General NIR-to-USSE execution remains UNKNOWN."
+  },
+  "first_state_tracker_blocker": "DRI admission intentionally closed. Mesa defaults compatibility contexts to GL1.3 and baseline extensions, assuming contracts absent here: textures/fixed-function, general shader compiler, framebuffer preservation, truthful caps and qualified raster edge rules.",
+  "hardware_execution_this_increment": 0,
+  "restricted_nir_qualification": "sgx535-offline/phase9-nir-20261008/result.json",
+  "vertex_qualification": "/home/gama/sgx535-offline/phase9-vertex-nir-20261009T003124Z/result.json",
+  "context_contract_qualification": "/home/gama/sgx535-offline/phase9-context-contracts-20261009/result.json",
+  "screen_capability_qualification": "/home/gama/sgx535-offline/phase9-capabilities-regression-20261009/result.json",
+  "current_increment": "/home/gama/sgx535-offline/phase9-opengl-entry-20261009T061305Z/result.json",
+  "actual_context_trace": "OPENGL-CONTEXT-TRACE.md; real EGL init failure is an offline environment result, separate from ENOTSUP driver screen admission."
+}

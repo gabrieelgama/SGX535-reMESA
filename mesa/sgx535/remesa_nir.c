@@ -164,7 +164,14 @@ int remesa_nir_constant_fragment(const nir_shader *shader,uint32_t *out)
  if(shader->info.outputs_written && shader->info.outputs_written!=BITFIELD64_BIT(loc))return ENOTSUP;
  return remesa_constant_rgba32(bits,out);
 }
-/* Variable IO representation of exactly POSITION = GENERIC0. NIR itself is
+static bool position_attribute(unsigned location)
+{
+ return location==VERT_ATTRIB_GENERIC0||location==VERT_ATTRIB_POS;
+}
+/* Variable IO representation of exactly POSITION = one position attribute.
+ * Mesa compatibility gl_Vertex and programmable generic0 have the same
+ * independently recognized float4 passthrough semantics; both use input slot0.
+ * NIR itself is
  * inspected without mutation; this produces the same restricted descriptor as
  * lowered IO. It does not encode or claim a new SGX shader program. */
 static int position_vertex_deref(const nir_shader *shader,unsigned *input_slot)
@@ -188,7 +195,7 @@ static int position_vertex_deref(const nir_shader *shader,unsigned *input_slot)
      var->data.has_initializer || var->data.is_implicit_initializer ||
      (var->data.precision!=GLSL_PRECISION_NONE&&var->data.precision!=GLSL_PRECISION_HIGH))return ENOTSUP;
   if(var->data.mode==nir_var_shader_in) {
-   if(input_var||var->data.location!=VERT_ATTRIB_GENERIC0)return ENOTSUP;
+   if(input_var||!position_attribute(var->data.location))return ENOTSUP;
    input_var=var;
   } else if(var->data.mode==nir_var_shader_out) {
    if(output_var||var->data.location!=VARYING_SLOT_POS||var->data.read_only)return ENOTSUP;
@@ -196,6 +203,7 @@ static int position_vertex_deref(const nir_shader *shader,unsigned *input_slot)
   } else return ENOTSUP;
  }
  if(variables!=2||!input_var||!output_var)return ENOTSUP;
+ if(shader->info.inputs_read&&shader->info.inputs_read!=BITFIELD64_BIT(input_var->data.location))return ENOTSUP;
  nir_foreach_function(fn,shader) {
   if(++functions>1||!fn->is_entrypoint||fn->is_preamble||fn->is_exported||fn->shader!=shader||fn->num_params||!fn->impl)return ENOTSUP;
   entry=fn;
@@ -257,7 +265,8 @@ int remesa_nir_position_vertex(const nir_shader *shader,unsigned *input_slot)
     shader->info.per_primitive_inputs||shader->info.per_primitive_outputs||shader->info.clip_distance_array_size||
     shader->info.cull_distance_array_size||shader->info.vs.double_inputs||shader->info.vs.blit_sgprs_amd||
     shader->info.vs.tes_agx||shader->info.vs.window_space_position||shader->info.vs.needs_edge_flag)return ENOTSUP;
- if((shader->info.inputs_read&&shader->info.inputs_read!=BITFIELD64_BIT(VERT_ATTRIB_GENERIC0))||
+ if((shader->info.inputs_read&&shader->info.inputs_read!=BITFIELD64_BIT(VERT_ATTRIB_GENERIC0)&&
+     shader->info.inputs_read!=BITFIELD64_BIT(VERT_ATTRIB_POS))||
     (shader->info.outputs_written&&shader->info.outputs_written!=BITFIELD64_BIT(VARYING_SLOT_POS)))return ENOTSUP;
  for(unsigned i=0;i<ARRAY_SIZE(shader->info.system_values_read);i++)if(shader->info.system_values_read[i])return ENOTSUP;
  for(unsigned i=0;i<ARRAY_SIZE(shader->info.xfb_stride);i++)if(shader->info.xfb_stride[i])return ENOTSUP;
@@ -287,8 +296,10 @@ int remesa_nir_position_vertex(const nir_shader *shader,unsigned *input_slot)
    if(instr->type!=nir_instr_type_intrinsic)return ENOTSUP;
    nir_intrinsic_instr *io=nir_instr_as_intrinsic(instr);
    if(io->intrinsic==nir_intrinsic_load_input) {
-    nir_io_semantics sem=nir_intrinsic_io_semantics(io),expected={.location=VERT_ATTRIB_GENERIC0,.num_slots=1};
+    nir_io_semantics sem=nir_intrinsic_io_semantics(io),expected={.location=sem.location,.num_slots=1};
     if(input||!zero||stores||io->src[0].ssa!=&zero->def||io->num_components!=4||
+       !position_attribute(sem.location)||
+       (shader->info.inputs_read&&shader->info.inputs_read!=BITFIELD64_BIT(sem.location))||
        io->def.parent_instr!=instr||io->def.bit_size!=32||io->def.num_components!=4||
        nir_intrinsic_dest_type(io)!=nir_type_float32||nir_intrinsic_base(io)||nir_intrinsic_component(io)||
        nir_intrinsic_range(io)>1||memcmp(&sem,&expected,sizeof(sem)))return ENOTSUP;

@@ -6,6 +6,23 @@
 #include <stdlib.h>
 #include <math.h>
 
+unsigned remesa_position_format_bytes(enum pipe_format format)
+{
+    switch (format) {
+    case PIPE_FORMAT_R32G32_FLOAT: return 8;
+    case PIPE_FORMAT_R32G32B32_FLOAT: return 12;
+    case PIPE_FORMAT_R32G32B32A32_FLOAT: return 16;
+    default: return 0;
+    }
+}
+/* Gallium's absent components are (z=0,w=1). This is checked host attribute
+ * conversion only; it generates no hardware shader instructions. */
+static void fetch_position(float out[4], const void *source, unsigned bytes)
+{
+    out[0]=out[1]=out[2]=0.0f; out[3]=1.0f;
+    memcpy(out,source,bytes);
+}
+
 static uint32_t read_index(const unsigned char *p, unsigned width)
 {
     uint32_t value = 0;
@@ -29,13 +46,14 @@ enum remesa_draw_status remesa_prepare_constant_draw(
     struct remesa_prepared_triangles *result;
     enum remesa_draw_status status;
     uint64_t base;
+    unsigned fetch_bytes;
     if (!info || !draw || !vertices || !position || !viewport || !out || !width || !height)
         return REMESA_DRAW_INVALID;
     if (info->mode != MESA_PRIM_TRIANGLES || info->primitive_restart ||
         info->has_user_indices || info->take_index_buffer_ownership ||
         info->instance_count > 1 || info->start_instance || vertices->is_user_buffer ||
         position->instance_divisor || position->dual_slot || position->vertex_buffer_index ||
-        position->src_format != PIPE_FORMAT_R32G32B32A32_FLOAT || !position->src_stride ||
+        !remesa_position_format_bytes(position->src_format) || !position->src_stride ||
         draw->count % 3 || draw->count > REMESA_DRAW_MAX_INDICES)
         return REMESA_DRAW_UNSUPPORTED;
     if (!vertices->buffer.resource || vertices->buffer.resource->target != PIPE_BUFFER ||
@@ -48,6 +66,7 @@ enum remesa_draw_status remesa_prepare_constant_draw(
     } else if ((uint64_t)draw->start + draw->count > (uint64_t)UINT32_MAX + 1) {
         return REMESA_DRAW_INVALID;
     }
+    fetch_bytes = remesa_position_format_bytes(position->src_format);
     result = calloc(1, sizeof(*result));
     if (!result) return REMESA_DRAW_NOMEM;
     result->width = width; result->height = height; result->argb = argb;
@@ -65,12 +84,12 @@ enum remesa_draw_status remesa_prepare_constant_draw(
             uint64_t available = vertices->buffer.resource->width0;
             /* Subtraction validates the fetch without overflowing addition or
              * source*stride, even for malformed UINT32_MAX-sized strides. */
-            if (base > available || available-base < 16 ||
-                source > (available-base-16) / position->src_stride) {
+            if (base > available || available-base < fetch_bytes ||
+                source > (available-base-fetch_bytes) / position->src_stride) {
                 status = REMESA_DRAW_INVALID; goto done;
             }
-            memcpy(clip[vertex], (const unsigned char *)vertex_snapshot +
-                   (size_t)(base + (uint64_t)source * position->src_stride), 16);
+            fetch_position(clip[vertex], (const unsigned char *)vertex_snapshot +
+                   (size_t)(base + (uint64_t)source * position->src_stride), fetch_bytes);
         }
         int error = remesa_prepare_constant_triangle((const float (*)[4])clip,
                                                      viewport,width,height,&polygon);
@@ -116,7 +135,7 @@ enum remesa_draw_status remesa_validate_indexed_triangles(
         info->instance_count > 1 || info->start_instance ||
         position->instance_divisor || position->dual_slot ||
         position->vertex_buffer_index ||
-        position->src_format != PIPE_FORMAT_R32G32B32A32_FLOAT)
+        !remesa_position_format_bytes(position->src_format))
         return REMESA_DRAW_UNSUPPORTED;
     if (!draw->count || !info->instance_count) return REMESA_DRAW_EMPTY;
     /* Legal Gallium inputs outside this first experimental packet subset. */
@@ -143,13 +162,13 @@ enum remesa_draw_status remesa_validate_indexed_triangles(
         if ((uint32_t)biased < min) min = (uint32_t)biased;
         if ((uint32_t)biased > max) max = (uint32_t)biased;
     }
-    /* Four float components. This validates only a position fetch, not a
-     * complete vertex layout, shader input contract or command encoding. */
+    /* Format-width fetch only, not a complete vertex/shader/command layout. */
+    unsigned fetch_bytes=remesa_position_format_bytes(position->src_format);
     uint64_t base = (uint64_t)vertices->buffer_offset + position->src_offset;
-    if (base > vb->width0 || vb->width0-base < 16 ||
-        max > (vb->width0-base-16) / position->src_stride)
+    if (base > vb->width0 || vb->width0-base < fetch_bytes ||
+        max > (vb->width0-base-fetch_bytes) / position->src_stride)
         return REMESA_DRAW_INVALID;
-    vertex_end = base + (uint64_t)max * position->src_stride + 16;
+    vertex_end = base + (uint64_t)max * position->src_stride + fetch_bytes;
     p.primitive_count = draw->count / 3;
     p.min_vertex = min; p.max_vertex = max;
     p.index_first_byte = first; p.index_end_byte = end;
@@ -174,6 +193,7 @@ enum remesa_draw_status remesa_pack_triangle_draw_vertex(
     enum remesa_draw_status status;
     enum remesa_packet_status built;
     uint64_t end;
+    unsigned fetch_bytes;
     if (!info || !draw || !vertices || !position || !packet)
         return REMESA_DRAW_INVALID;
     if (viewport) {
@@ -185,9 +205,10 @@ enum remesa_draw_status remesa_pack_triangle_draw_vertex(
     if (info->mode != MESA_PRIM_TRIANGLES || info->primitive_restart ||
         info->instance_count > 1 || info->start_instance || vertices->is_user_buffer ||
         position->instance_divisor || position->dual_slot || position->vertex_buffer_index ||
-        position->src_format != PIPE_FORMAT_R32G32B32A32_FLOAT || !position->src_stride)
+        !remesa_position_format_bytes(position->src_format) || !position->src_stride)
         return REMESA_DRAW_UNSUPPORTED;
     if (!draw->count || !info->instance_count) return REMESA_DRAW_EMPTY;
+    fetch_bytes=remesa_position_format_bytes(position->src_format);
     if (draw->count % 3 || draw->count > REMESA_DRAW_MAX_INDICES)
         return REMESA_DRAW_UNSUPPORTED;
     if (!vertices->buffer.resource || vertices->buffer.resource->target != PIPE_BUFFER ||
@@ -203,8 +224,8 @@ enum remesa_draw_status remesa_pack_triangle_draw_vertex(
         if (end > (uint64_t)UINT32_MAX + 1) return REMESA_DRAW_INVALID;
         uint64_t base = (uint64_t)vertices->buffer_offset + position->src_offset;
         uint64_t available = vertices->buffer.resource->width0;
-        if (base > available || available-base < 16 ||
-            end-1 > (available-base-16) / position->src_stride)
+        if (base > available || available-base < fetch_bytes ||
+            end-1 > (available-base-fetch_bytes) / position->src_stride)
             return REMESA_DRAW_INVALID;
     }
     capacity = draw->count < REMESA_DRAW_MAX_VERTICES ? draw->count : REMESA_DRAW_MAX_VERTICES;
@@ -223,9 +244,9 @@ enum remesa_draw_status remesa_pack_triangle_draw_vertex(
         if (compact == unique) {
             if (unique == capacity) { status = REMESA_DRAW_UNSUPPORTED; goto done; }
             source_ids[unique] = source;
-            memcpy(positions[unique], (const unsigned char *)vertex_snapshot +
+            fetch_position(positions[unique], (const unsigned char *)vertex_snapshot +
                    (size_t)((uint64_t)vertices->buffer_offset + position->src_offset +
-                            (uint64_t)source * position->src_stride), 16);
+                            (uint64_t)source * position->src_stride), fetch_bytes);
             if (viewport) {
                 /* Identity VS semantics are host preparation, never CPU raster.
                  * All vertices lie inside canonical clip volume: no edges need

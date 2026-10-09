@@ -25,7 +25,7 @@ static struct inputs make(void)
 int main(void)
 {
  unsigned cases=0;
- for(unsigned mode=0;mode<30;mode++) {
+ for(unsigned mode=0;mode<35;mode++) {
   struct inputs f=make();unsigned slot=99;
   switch(mode) {
   case 1:f.in->data.binding=1;break;
@@ -57,9 +57,14 @@ int main(void)
   case 27:f.s->info.writes_memory=true;break;
   case 28:f.in->data.explicit_location=true;f.out->data.invariant=true;break;
   case 29:f.s->info.inputs_read=BITFIELD64_BIT(VERT_ATTRIB_GENERIC0);f.s->info.outputs_written=BITFIELD64_BIT(VARYING_SLOT_POS);break;
+  case 30:f.in->data.location=VERT_ATTRIB_POS;f.s->info.inputs_read=0;break;
+  case 31:f.in->data.location=VERT_ATTRIB_POS;f.s->info.inputs_read=BITFIELD64_BIT(VERT_ATTRIB_POS);break;
+  case 32:f.in->data.location=VERT_ATTRIB_POS;f.s->info.inputs_read=BITFIELD64_BIT(VERT_ATTRIB_GENERIC0);break;
+  case 33:f.s->info.inputs_read=BITFIELD64_BIT(VERT_ATTRIB_POS);break;
+  case 34:f.in->data.location=VERT_ATTRIB_POS;f.s->info.inputs_read=BITFIELD64_BIT(VERT_ATTRIB_POS)|BITFIELD64_BIT(VERT_ATTRIB_GENERIC0);break;
   }
   int ret=remesa_nir_position_vertex(f.s,&slot);
-  if(mode==0||mode==28||mode==29)assert(ret==0&&slot==0);
+  if(mode==0||mode==28||mode==29||mode==30||mode==31)assert(ret==0&&slot==0);
   else {if(ret==0)fprintf(stderr,"unexpected accepted mode %u\n",mode);assert(ret!=0&&slot==99);}
   ralloc_free(f.s);cases++;
  }

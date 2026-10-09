@@ -35,7 +35,7 @@ base = ['-DREMESA_WITH_MESA_HEADERS', '-std=c11', '-D_POSIX_C_SOURCE=200809L', '
         '-Wall', '-Wextra', '-Werror', '-I'+str(a.generated),
         '-I'+str(a.mesa/'src/gallium/include'), '-I'+str(a.mesa/'src'),
         '-I'+str(a.mesa/'include'), '-I'+str(here), '-I'+str(here.parents[1]/'include')]
-sources = [str(here/name) for name in ['remesa_fixed_state.c','remesa_render_pass.c','remesa_screen.c','remesa_draw.c']] + [str(here.parents[1]/'common/remesa/draw_packet.c')]
+sources = [str(here/name) for name in ['remesa_fixed_state.c','remesa_render_pass.c','remesa_sampler_state.c','remesa_screen.c','remesa_draw.c']] + [str(here.parents[1]/'common/remesa/draw_packet.c')]
 variants = [('native',['cc'],['-O2'],[]),
             ('ubsan',['cc'],['-O1','-fsanitize=undefined','-fno-sanitize-recover=all'],[])]
 if any([a.i386_cc,a.i386_sysroot,a.qemu_i386]):
@@ -70,5 +70,5 @@ for name, compiler, flags, prefix in variants:
         if run.returncode: raise SystemExit('Qualification failed: '+name+' '+target)
         results[name][target]={'PASS':True,'command':command,'output':run.stdout.strip()}
 (a.output/'result.json').write_text(json.dumps({'mesa_pin':pin['version'],
-    'scope':'Real Gallium callbacks, sealed historical pixels used ONLY as fixture data; mocked completion; no SGX execution','variants':results,'reference':str(reference),'reference_sha256':reference_hash,'source_sha256':{str(p.relative_to(here.parents[1])):hashlib.sha256(p.read_bytes()).hexdigest() for p in [here/'remesa_retained_readback.c',here/'remesa_retained_readback.h',here/'tests/test_retained_readback.c',here/'tests/test_driver.c',here/'remesa_fixed_state.c',here/'remesa_render_pass.c',here/'remesa_screen.c',here/'remesa_draw.c',here.parents[1]/'common/remesa/draw_packet.c',here.parents[1]/'common/remesa/retained_evidence.c',here.parents[1]/'include/remesa/retained_evidence.h',Path(__file__)]}},indent=2)+'\n')
+    'scope':'Real Gallium callbacks, sealed historical pixels used ONLY as fixture data; mocked completion; no SGX execution','variants':results,'reference':str(reference),'reference_sha256':reference_hash,'source_sha256':{str(p.relative_to(here.parents[1])):hashlib.sha256(p.read_bytes()).hexdigest() for p in [here/'remesa_retained_readback.c',here/'remesa_retained_readback.h',here/'tests/test_retained_readback.c',here/'tests/test_driver.c',here/'remesa_fixed_state.c',here/'remesa_render_pass.c',here/'remesa_sampler_state.c',here/'remesa_screen.c',here/'remesa_draw.c',here.parents[1]/'common/remesa/draw_packet.c',here.parents[1]/'common/remesa/retained_evidence.c',here.parents[1]/'include/remesa/retained_evidence.h',Path(__file__)]}},indent=2)+'\n')
 print(json.dumps({name: {target: test['output'] for target,test in result.items()} for name,result in results.items()},indent=2))

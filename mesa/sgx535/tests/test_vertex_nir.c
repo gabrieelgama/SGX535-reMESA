@@ -11,6 +11,19 @@ int main(void)
  unsigned cases=0,slot=99;
  assert(remesa_nir_position_vertex(NULL,&slot)==EINVAL&&slot==99);cases++;
  nir_shader *s=vertex_fixture();assert(!remesa_nir_position_vertex(s,&slot)&&slot==0);ralloc_free(s);cases++;
+ for(unsigned mode=0;mode<4;mode++) {
+  s=vertex_fixture();slot=99;
+  nir_function *fn=exec_node_data(nir_function,exec_list_get_head(&s->functions),node);
+  nir_block *b=exec_node_data(nir_block,exec_list_get_head(&fn->impl->body),cf_node.node);
+  nir_instr *first=exec_node_data(nir_instr,exec_list_get_head(&b->instr_list),node);
+  nir_intrinsic_instr *input=exec_node_data(nir_intrinsic_instr,first->node.next,instr.node);
+  nir_intrinsic_set_io_semantics(input,(nir_io_semantics){.location=VERT_ATTRIB_POS,.num_slots=1});
+  s->info.inputs_read=mode==0?0:mode==1?BITFIELD64_BIT(VERT_ATTRIB_POS):
+                       mode==2?BITFIELD64_BIT(VERT_ATTRIB_GENERIC0):
+                       BITFIELD64_BIT(VERT_ATTRIB_POS)|BITFIELD64_BIT(VERT_ATTRIB_GENERIC0);
+  int ret=remesa_nir_position_vertex(s,&slot);
+  assert(mode<2?(!ret&&slot==0):(ret&&slot==99));ralloc_free(s);cases++;
+ }
  for(unsigned mode=0;mode<21;mode++) {
   s=vertex_fixture();slot=99;
   nir_function *fn=exec_node_data(nir_function,exec_list_get_head(&s->functions),node);

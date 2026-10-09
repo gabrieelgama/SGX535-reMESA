@@ -57,7 +57,7 @@ def prepare(mesa,repo,output):
     for rel,text in texts.items():
         p=output/rel;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(text)
     dst=output/'src/gallium/drivers/sgx535';dst.mkdir(parents=True)
-    sources=['remesa_render_pass.c','remesa_render_pass.h','remesa_fixed_state.c','remesa_fixed_state.h','remesa_nir.c','remesa_nir.h','remesa_resource_ref.h','remesa_resource_layout.h','remesa_screen.c','remesa_screen.h','remesa_draw.c','remesa_draw.h','remesa_linux.c','remesa_linux.h','remesa_device.h','remesa_loader.c','remesa_loader.h','remesa_dri.c','remesa_dri.h']
+    sources=['remesa_render_pass.c','remesa_sampler_state.c','remesa_render_pass.h','remesa_sampler_state.h','remesa_fixed_state.c','remesa_fixed_state.h','remesa_nir.c','remesa_nir.h','remesa_resource_ref.h','remesa_resource_layout.h','remesa_screen.c','remesa_screen.h','remesa_draw.c','remesa_draw.h','remesa_linux.c','remesa_linux.h','remesa_device.h','remesa_loader.c','remesa_loader.h','remesa_dri.c','remesa_dri.h']
     for n in sources:shutil.copyfile(repo/'mesa/sgx535'/n,dst/n)
     shutil.copyfile(repo/'common/remesa/draw_packet.c',dst/'draw_packet.c')
     inc=dst/'include/remesa';inc.mkdir(parents=True)
@@ -66,7 +66,7 @@ def prepare(mesa,repo,output):
     (dst/'meson.build').write_text("""# SPDX-License-Identifier: MIT
 # Isolated experimental integration; DRI constructor currently rejects GL.
 libremesa_loader = static_library('remesa_loader',
-  files('remesa_render_pass.c','remesa_fixed_state.c','remesa_nir.c','remesa_screen.c', 'remesa_draw.c', 'remesa_linux.c',
+  files('remesa_render_pass.c','remesa_sampler_state.c','remesa_fixed_state.c','remesa_nir.c','remesa_screen.c', 'remesa_draw.c', 'remesa_linux.c',
         'remesa_loader.c', 'remesa_dri.c', 'draw_packet.c'),
   include_directories : [inc_include, inc_src, inc_gallium, inc_nir, inc_compiler,
                         include_directories('include')],

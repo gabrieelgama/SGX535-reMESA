@@ -77,6 +77,30 @@ int main(void)
  struct pipe_resource *target=s->resource_create(s,&rt);assert(target);
  struct pipe_framebuffer_state fb={0};fb.width=fb.height=32;fb.nr_cbufs=1;fb.cbufs[0].texture=target;fb.cbufs[0].format=target->format;
  c->set_framebuffer_state(c,&fb);assert(!remesa_bind_diagnostic_pipeline(c,0xffff00ff));
+ assert(c->create_sampler_state&&c->bind_sampler_states&&c->delete_sampler_state&&
+        c->create_sampler_view&&c->set_sampler_views&&c->sampler_view_destroy);
+ struct pipe_sampler_state sampler={0};
+ sampler.wrap_s=sampler.wrap_t=sampler.wrap_r=PIPE_TEX_WRAP_CLAMP_TO_EDGE;
+ sampler.min_mip_filter=PIPE_TEX_MIPFILTER_NONE;
+ void *sam=c->create_sampler_state(c,&sampler);assert(sam&&!remesa_context_error(c));
+ c->bind_sampler_states(c,PIPE_SHADER_FRAGMENT,0,1,&sam);
+ assert(!remesa_context_error(c));draw_check(c,&f,ENOTSUP,0);
+ c->set_sample_mask(c,1);draw_check(c,&f,ENOTSUP,0); /* Unrelated state cannot erase the rejection. */
+ c->delete_sampler_state(c,sam);draw_check(c,&f,ESTALE,0);
+ c->bind_sampler_states(c,PIPE_SHADER_FRAGMENT,0,1,NULL);assert(!remesa_context_error(c));
+ c->bind_sampler_states(c,PIPE_SHADER_FRAGMENT,0,1,&sam);draw_check(c,&f,ESTALE,0);
+ c->bind_sampler_states(c,PIPE_SHADER_FRAGMENT,0,1,NULL);
+ struct pipe_sampler_view foreign_view={0};foreign_view.texture=target;
+ int32_t sampler_refs=target->reference.count;
+ assert(!c->create_sampler_view(c,target,&foreign_view)&&remesa_context_error(c)==ENOTSUP);
+ assert(target->reference.count==sampler_refs);
+ struct pipe_sampler_view *view=&foreign_view;
+ c->set_sampler_views(c,PIPE_SHADER_FRAGMENT,0,1,0,&view);assert(remesa_context_error(c)==ENOTSUP);
+ c->set_sample_mask(c,1);draw_check(c,&f,ENOTSUP,0);
+ assert(target->reference.count==sampler_refs); /* Rejected view never transfers a reference. */
+ c->set_sampler_views(c,PIPE_SHADER_FRAGMENT,0,0,1,NULL);assert(!remesa_context_error(c));
+ c->sampler_view_destroy(c,&foreign_view);assert(remesa_context_error(c)==EINVAL);
+ assert(target->reference.count==sampler_refs);c->sampler_view_destroy(c,NULL);
  draw_check(c,&f,0,1);
  c->set_sample_mask(c,0);draw_check(c,&f,0,1);
  c->set_sample_mask(c,2);draw_check(c,&f,0,1); /* Other sample bits cannot enable sample zero. */

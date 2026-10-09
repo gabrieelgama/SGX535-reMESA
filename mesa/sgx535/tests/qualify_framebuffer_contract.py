@@ -27,7 +27,7 @@ hashes={str(f):hashlib.sha256(f.read_bytes()).hexdigest() for f in inputs}
 results=[]
 for name, cc, flags, run_prefix in variants:
     exe=a.output/name
-    command=cc+base+flags+[str(here/'remesa_fixed_state.c'),str(here/'remesa_render_pass.c'),str(here/'remesa_screen.c'),str(here/'remesa_draw.c'),str(here.parents[1]/'common/remesa/draw_packet.c'),str(here/'tests/test_framebuffer_contract.c'),'-o',str(exe)]
+    command=cc+base+flags+[str(here/'remesa_fixed_state.c'),str(here/'remesa_render_pass.c'),str(here/'remesa_sampler_state.c'),str(here/'remesa_screen.c'),str(here/'remesa_draw.c'),str(here.parents[1]/'common/remesa/draw_packet.c'),str(here/'tests/test_framebuffer_contract.c'),'-o',str(exe)]
     build=subprocess.run(command,capture_output=True,text=True,env=env)
     (a.output/(name+'-build.log')).write_text(build.stdout+build.stderr)
     if build.returncode: raise SystemExit(name+' build failed')

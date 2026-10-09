@@ -23,14 +23,14 @@ if any([a.i386_cc,a.i386_sysroot,a.qemu_i386]):
 a.output.mkdir(parents=True,exist_ok=True);env=dict(os.environ)
 if a.i386_sysroot:env['LD_LIBRARY_PATH']=str(a.i386_sysroot/'usr/lib/aarch64-linux-gnu')
 result={'scope':'semantic marshalling and interposed transport tested; applications compiled NOT executed; no SGX','variants':{}}
-inputs=[here/'remesa_fixed_state.c',here/'remesa_render_pass.c',here/'remesa_screen.c',here/'remesa_draw.c',here/'remesa_linux.c',root/'common/remesa/draw_packet.c',
+inputs=[here/'remesa_fixed_state.c',here/'remesa_render_pass.c',here/'remesa_sampler_state.c',here/'remesa_screen.c',here/'remesa_draw.c',here/'remesa_linux.c',root/'common/remesa/draw_packet.c',
  here/'tests/gallium_first_draw.c',here/'tests/test_linux_transport.c',here/'tests/test_gallium_linux_integration.c',root/'include/remesa/native_uapi.h',
  root/'include/remesa/draw_packet.h',here/'remesa_linux.h',here/'remesa_device.h',here/'remesa_screen.h',here/'remesa_draw.h',here/'mesa-api-pin.json']
 inputs += [here/'remesa_loader.c',here/'remesa_loader.h',here/'tests/test_loader.c']
 for name,cc,flags,emu in variants:
  result['variants'][name]={}
  for target in ['application','transport','integration','loader']:
-  sources=([here/'remesa_fixed_state.c',here/'remesa_render_pass.c',here/'remesa_screen.c',here/'remesa_draw.c'] if target in ('application','integration','loader') else [])+[here/'remesa_linux.c',root/'common/remesa/draw_packet.c',here/'tests'/('gallium_first_draw.c' if target=='application' else 'test_gallium_linux_integration.c' if target=='integration' else 'test_loader.c' if target=='loader' else 'test_linux_transport.c')]
+  sources=([here/'remesa_fixed_state.c',here/'remesa_render_pass.c',here/'remesa_sampler_state.c',here/'remesa_screen.c',here/'remesa_draw.c'] if target in ('application','integration','loader') else [])+[here/'remesa_linux.c',root/'common/remesa/draw_packet.c',here/'tests'/('gallium_first_draw.c' if target=='application' else 'test_gallium_linux_integration.c' if target=='integration' else 'test_loader.c' if target=='loader' else 'test_linux_transport.c')]
   if target=='loader':sources.append(here/'remesa_loader.c')
   exe=a.output/(name+'-'+target);command=cc+base+flags+(['-Wl,--wrap=open','-Wl,--wrap=close','-Wl,--wrap=ioctl'] if target=='integration' else ['-Wl,--wrap=ioctl'] if target=='loader' else [])+[str(x) for x in sources]+['-o',str(exe)]
   r=subprocess.run(command,capture_output=True,text=True,env=env);(a.output/(name+'-'+target+'-compile.log')).write_text(r.stdout+r.stderr)
