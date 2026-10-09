@@ -20,12 +20,59 @@ int remesa_constant_rgba32(const uint32_t rgba[4],uint32_t *out)
 static bool location(unsigned n) {return n==FRAG_RESULT_COLOR||n==FRAG_RESULT_DATA0;}
 static bool vector4(const struct glsl_type *t)
 {return t&&t->base_type==GLSL_TYPE_FLOAT&&t->vector_elements==4&&t->matrix_columns==1;}
-static bool identity_copy(nir_alu_instr *alu,nir_def *source)
+/* Track only bit-preserving SSA channel routing from the sole POSITION input.
+ * Scalarization and vector reconstruction do not require new SGX instructions:
+ * the accepted final value is provably the same float4 position profile. */
+#define REMESA_POSITION_VALUES 16
+struct position_value {
+ nir_def *def;
+ unsigned components,channel[4];
+ uint32_t dependencies;
+};
+static int position_index(const struct position_value values[],unsigned count,
+                          const nir_def *def)
 {
- return alu&&source&&alu->op==nir_op_mov&&alu->def.parent_instr==&alu->instr&&
-        alu->def.bit_size==32&&alu->def.num_components==4&&!alu->exact&&
-        alu->src[0].src.ssa==source&&alu->src[0].swizzle[0]==0&&
-        alu->src[0].swizzle[1]==1&&alu->src[0].swizzle[2]==2&&alu->src[0].swizzle[3]==3;
+ for(unsigned i=0;i<count;i++)if(values[i].def==def)return (int)i;
+ return -1;
+}
+static void position_input(struct position_value values[],unsigned *count,nir_def *def)
+{
+ values[0]=(struct position_value){.def=def,.components=4,.channel={0,1,2,3},.dependencies=1};
+ *count=1;
+}
+static int position_copy(struct position_value values[],unsigned *count,nir_alu_instr *alu)
+{
+ struct position_value value={0};
+ if(!*count||*count>=REMESA_POSITION_VALUES||alu->exact||
+    alu->def.parent_instr!=&alu->instr||alu->def.bit_size!=32||
+    !alu->def.num_components||alu->def.num_components>4)return ENOTSUP;
+ value.def=&alu->def;value.components=alu->def.num_components;
+ if(alu->op==nir_op_mov) {
+  int src=position_index(values,*count,alu->src[0].src.ssa);
+  if(src<0)return ENOTSUP;
+  for(unsigned i=0;i<value.components;i++) {
+   unsigned channel=alu->src[0].swizzle[i];
+   if(channel>=values[src].components)return ENOTSUP;
+   value.channel[i]=values[src].channel[channel];
+  }
+  value.dependencies=values[src].dependencies;
+ } else if(alu->op==nir_op_vec4&&value.components==4) {
+  for(unsigned i=0;i<4;i++) {
+   int src=position_index(values,*count,alu->src[i].src.ssa);
+   unsigned channel=alu->src[i].swizzle[0];
+   if(src<0||channel>=values[src].components)return ENOTSUP;
+   value.channel[i]=values[src].channel[channel];
+   value.dependencies|=values[src].dependencies;
+  }
+ } else return ENOTSUP;
+ value.dependencies|=1u<<*count;values[(*count)++]=value;return 0;
+}
+static bool position_identity(const struct position_value values[],unsigned count,nir_def *def)
+{
+ int index=position_index(values,count,def);
+ if(index<0||values[index].components!=4||values[index].dependencies!=((1u<<count)-1u))return false;
+ for(unsigned i=0;i<4;i++)if(values[index].channel[i]!=i)return false;
+ return true;
 }
 /* Compile-time construction of a constant does not imply native ALU support.
  * Every admitted value is defined earlier in this one block, and every value
@@ -177,7 +224,8 @@ static bool position_attribute(unsigned location)
 static int position_vertex_deref(const nir_shader *shader,unsigned *input_slot)
 {
  nir_variable *input_var=NULL,*output_var=NULL;nir_function *entry=NULL;
- nir_deref_instr *input_deref=NULL,*output_deref=NULL;nir_intrinsic_instr *load=NULL;nir_alu_instr *copy=NULL;
+ nir_deref_instr *input_deref=NULL,*output_deref=NULL;nir_intrinsic_instr *load=NULL;
+ struct position_value values[REMESA_POSITION_VALUES]={0};unsigned values_count=0;
  unsigned variables=0,functions=0,blocks=0,instructions=0,stores=0;
  nir_foreach_variable_in_shader(var,shader) {
   if(++variables>2 || !vector4(var->type) || var->num_members || var->members ||
@@ -215,7 +263,7 @@ static int position_vertex_deref(const nir_shader *shader,unsigned *input_slot)
   if(++blocks>1||node->type!=nir_cf_node_block||node->parent!=&impl->cf_node)return ENOTSUP;
   nir_block *block=nir_cf_node_as_block(node);
   nir_foreach_instr(instr,block) {
-   if(++instructions>5||instr->block!=block)return EINVAL;
+   if(++instructions>REMESA_POSITION_VALUES+3||instr->block!=block)return EINVAL;
    if(instr->type==nir_instr_type_deref) {
     nir_deref_instr *d=nir_instr_as_deref(instr);
     if(d->deref_type!=nir_deref_type_var||d->def.parent_instr!=instr||
@@ -230,8 +278,8 @@ static int position_vertex_deref(const nir_shader *shader,unsigned *input_slot)
     continue;
    }
    if(instr->type==nir_instr_type_alu) {
-    if(copy||stores||!load||!identity_copy(nir_instr_as_alu(instr),&load->def))return ENOTSUP;
-    copy=nir_instr_as_alu(instr);continue;
+    if(stores||!load||position_copy(values,&values_count,nir_instr_as_alu(instr)))return ENOTSUP;
+    continue;
    }
    if(instr->type!=nir_instr_type_intrinsic)return ENOTSUP;
    nir_intrinsic_instr *io=nir_instr_as_intrinsic(instr);
@@ -239,14 +287,14 @@ static int position_vertex_deref(const nir_shader *shader,unsigned *input_slot)
     if(load||stores||!input_deref||io->src[0].ssa!=&input_deref->def||
        io->num_components!=4||io->def.parent_instr!=instr||io->def.num_components!=4||
        io->def.bit_size!=32||nir_intrinsic_access(io))return ENOTSUP;
-    load=io;continue;
+    load=io;position_input(values,&values_count,&load->def);continue;
    }
    if(io->intrinsic!=nir_intrinsic_store_deref||++stores>1||!output_deref||!load||
-      io->src[0].ssa!=&output_deref->def||io->src[1].ssa!=(copy?&copy->def:&load->def)||
+      io->src[0].ssa!=&output_deref->def||!position_identity(values,values_count,io->src[1].ssa)||
       io->num_components!=4||nir_intrinsic_write_mask(io)!=15||nir_intrinsic_access(io))return ENOTSUP;
   }
  }
- if(blocks!=1||instructions!=(copy?5u:4u)||stores!=1||!load||!input_deref||!output_deref)return ENOTSUP;
+ if(blocks!=1||instructions!=values_count+3||stores!=1||!load||!input_deref||!output_deref)return ENOTSUP;
  *input_slot=0;return 0;
 }
 /* A description of an identity position shader, not a general NIR compiler.
@@ -254,7 +302,8 @@ static int position_vertex_deref(const nir_shader *shader,unsigned *input_slot)
  * Exact lowered or variable IO: no uniforms, transforms, texture/memory or sysvalues. */
 int remesa_nir_position_vertex(const nir_shader *shader,unsigned *input_slot)
 {
- nir_function *entry=NULL;nir_load_const_instr *zero=NULL;nir_intrinsic_instr *input=NULL;nir_alu_instr *copy=NULL;
+ nir_function *entry=NULL;nir_load_const_instr *zero=NULL;nir_intrinsic_instr *input=NULL;
+ struct position_value values[REMESA_POSITION_VALUES]={0};unsigned values_count=0;
  unsigned functions=0,blocks=0,instructions=0,stores=0;
  if(!shader||!input_slot)return EINVAL;
  if(shader->info.stage!=MESA_SHADER_VERTEX||
@@ -282,7 +331,7 @@ int remesa_nir_position_vertex(const nir_shader *shader,unsigned *input_slot)
   if(++blocks>1||node->type!=nir_cf_node_block||node->parent!=&impl->cf_node)return ENOTSUP;
   nir_block *block=nir_cf_node_as_block(node);
   nir_foreach_instr(instr,block) {
-   if(++instructions>4||instr->block!=block)return EINVAL;
+   if(++instructions>REMESA_POSITION_VALUES+2||instr->block!=block)return EINVAL;
    if(instr->type==nir_instr_type_load_const) {
     if(zero)return ENOTSUP;
     zero=nir_instr_as_load_const(instr);
@@ -290,8 +339,8 @@ int remesa_nir_position_vertex(const nir_shader *shader,unsigned *input_slot)
     continue;
    }
    if(instr->type==nir_instr_type_alu) {
-    if(copy||stores||!input||!identity_copy(nir_instr_as_alu(instr),&input->def))return ENOTSUP;
-    copy=nir_instr_as_alu(instr);continue;
+    if(stores||!input||position_copy(values,&values_count,nir_instr_as_alu(instr)))return ENOTSUP;
+    continue;
    }
    if(instr->type!=nir_instr_type_intrinsic)return ENOTSUP;
    nir_intrinsic_instr *io=nir_instr_as_intrinsic(instr);
@@ -303,17 +352,17 @@ int remesa_nir_position_vertex(const nir_shader *shader,unsigned *input_slot)
        io->def.parent_instr!=instr||io->def.bit_size!=32||io->def.num_components!=4||
        nir_intrinsic_dest_type(io)!=nir_type_float32||nir_intrinsic_base(io)||nir_intrinsic_component(io)||
        nir_intrinsic_range(io)>1||memcmp(&sem,&expected,sizeof(sem)))return ENOTSUP;
-    input=io;continue;
+    input=io;position_input(values,&values_count,&input->def);continue;
    }
    if(io->intrinsic!=nir_intrinsic_store_output)return ENOTSUP;
    nir_io_semantics sem=nir_intrinsic_io_semantics(io),expected={.location=VARYING_SLOT_POS,.num_slots=1};
    nir_io_xfb xfb=nir_intrinsic_io_xfb(io),xfb2=nir_intrinsic_io_xfb2(io),none={0};
-   if(++stores>1||!input||io->src[0].ssa!=(copy?&copy->def:&input->def)||io->src[1].ssa!=&zero->def||
+   if(++stores>1||!input||!position_identity(values,values_count,io->src[0].ssa)||io->src[1].ssa!=&zero->def||
       io->num_components!=4||nir_intrinsic_write_mask(io)!=15||nir_intrinsic_src_type(io)!=nir_type_float32||
       nir_intrinsic_base(io)||nir_intrinsic_component(io)||nir_intrinsic_range(io)>1||
       memcmp(&sem,&expected,sizeof(sem))||memcmp(&xfb,&none,sizeof(xfb))||memcmp(&xfb2,&none,sizeof(xfb2)))return ENOTSUP;
   }
  }
- if(blocks!=1||!zero||!input||stores!=1||instructions!=(copy?4u:3u))return ENOTSUP;
+ if(blocks!=1||!zero||!input||stores!=1||instructions!=values_count+2)return ENOTSUP;
  *input_slot=0;return 0;
 }

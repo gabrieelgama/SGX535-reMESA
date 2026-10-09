@@ -95,11 +95,11 @@ int main(void)
  assert(!c->create_sampler_view(c,target,&foreign_view)&&remesa_context_error(c)==ENOTSUP);
  assert(target->reference.count==sampler_refs);
  struct pipe_sampler_view *view=&foreign_view;
- c->set_sampler_views(c,PIPE_SHADER_FRAGMENT,0,1,0,&view);assert(remesa_context_error(c)==ENOTSUP);
- c->set_sample_mask(c,1);draw_check(c,&f,ENOTSUP,0);
+ c->set_sampler_views(c,PIPE_SHADER_FRAGMENT,0,1,0,&view);assert(remesa_context_error(c)==ESTALE);
+ c->set_sample_mask(c,1);draw_check(c,&f,ESTALE,0);
  assert(target->reference.count==sampler_refs); /* Rejected view never transfers a reference. */
  c->set_sampler_views(c,PIPE_SHADER_FRAGMENT,0,0,1,NULL);assert(!remesa_context_error(c));
- c->sampler_view_destroy(c,&foreign_view);assert(remesa_context_error(c)==EINVAL);
+ c->sampler_view_destroy(c,&foreign_view);assert(remesa_context_error(c)==ESTALE);
  assert(target->reference.count==sampler_refs);c->sampler_view_destroy(c,NULL);
  draw_check(c,&f,0,1);
  c->set_sample_mask(c,0);draw_check(c,&f,0,1);

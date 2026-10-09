@@ -10,6 +10,8 @@ struct nir_shader;
 int remesa_nir_constant_fragment(const struct nir_shader *,uint32_t *argb);
 int remesa_constant_rgba32(const uint32_t rgba_bits[4],uint32_t *argb);
 /* Restricted lowered or variable-deref POSITION = GENERIC0 float32 vec4 description.
- * This recognizes semantics only; no native VS ISA is generated. */
+ * Bounded bit-preserving channel copies and identity vec4 reconstruction are
+ * admitted in either IO representation. This recognizes semantics only; no
+ * native VS ISA is generated. */
 int remesa_nir_position_vertex(const struct nir_shader *,unsigned *input_slot);
 #endif

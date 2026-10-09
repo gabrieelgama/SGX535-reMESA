@@ -30,7 +30,7 @@
     {
       "contract": "viewport/scissor",
       "status": "PARTIAL",
-      "restriction": "Legacy window positions require identity viewport. Restricted VS uses explicit canonical32 viewport, finite xyz in[-1,1], w=1; host clip-to-window preparation, no CPU rasterization. Clipping and general perspective rejected. Full32x32 scissor only."
+      "restriction": "Canonical32 viewport; full32 scissor only. Actual recording-backend draw_vbo with identity VS and both depth-clip flags performs CPU homogeneous six-plane clipping, positive-w projection and bounded constant-color triangle compaction. No CPU rasterization. Production backend retains historical inside-volume w=1 validation; GPU edge/interpolation rules not qualified."
     },
     {
       "contract": "blend/color mask/rasterizer/depth/stencil",
@@ -45,12 +45,12 @@
     {
       "contract": "framebuffer load/store",
       "status": "OFFLINE QUALIFIED",
-      "restriction": "Per-resource frontend cookies/serials, DISCARD/PRESERVE intent, pending-writer exclusion, authenticated backend wait plus publication/retirement and failure quarantine are integrated into draw_vbo and external writer import. Native PRESERVE remains ENOTSUP; hardware load/store UNKNOWN. Local tickets are not kernel operation IDs."
+      "restriction": "Per-resource frontend cookies/serials, DISCARD/PRESERVE intent, pending-writer exclusion, authenticated backend wait plus publication/retirement and failure quarantine are integrated into draw_vbo and external writer import. Native PRESERVE remains ENOTSUP; hardware load/store UNKNOWN. Local tickets are not kernel operation IDs. Exact sealed FIRE3 coverage/seed/identity/readback comparison now distinguishes PRESERVE, DISCARD, UNCHANGED and contradiction; oracle bytes are independent captured output, not command meanings or visibility proof."
     },
     {
       "contract": "shader states",
       "status": "PARTIAL",
-      "restriction": "Restricted identity VS and constant FS remain. Single FS NIR UBO0 vec4 at constant aligned offset recognizes and resolves synchronized host bytes into existing magenta/green/yellow color profiles. Immutable shader descriptor, copied user snapshot or retained resource, mapping leases and writer synchronization. No GPU UBO instruction, ALU, varying or texture compiler; native exact profile remains magenta-only."
+      "restriction": "Restricted identity VS admits bounded float32 SSA channel copies and vec4 reconstruction only when final xyzw exactly matches the sole input; actual lowered/variable NIR and Gallium callbacks tested. FS constant/UBO0 snapshot specializes existing color profiles on CPU; no USSE ALU/register allocator, varying or texture compiler. Native profile unchanged magenta-only."
     },
     {
       "contract": "screen GL caps",
@@ -60,7 +60,7 @@
     {
       "contract": "texture/sampler/import/export",
       "status": "PARTIAL",
-      "restriction": "Offline RGBA8/BGRA8 allocation, bounded upload/readback, writer-serial lifetime, clamp-nearest sampling and unsupported-state rejection are qualified in remesa_texture.c. This is a CPU reference/resource contract only; Gallium binding and SGX texture sampling remain unverified. No PRIME/shared scanout ownership."
+      "restriction": "RGBA8/BGRA8 bounded transfer storage and actual Gallium 2D level0 same-format sampler-view metadata, swizzles, immutable backing/cookie validation, map/quarantine checks and retained references. Nonempty bindings reject before submission; PIPE_BIND_SAMPLER_VIEW remains unsupported. No GPU sampling descriptors/ISA, PRIME or shared scanout."
     },
     {
       "contract": "XCB publication",
@@ -80,7 +80,7 @@
     {
       "contract": "sampler lifecycle and view unbinding",
       "status": "OFFLINE QUALIFIED",
-      "restriction": "Real Gallium callbacks for immutable nearest/clamp metadata, bounded tombstones, stale/foreign handle rejection, empty bindings, per-stage/per-slot rejection and cleanup. Every nonempty sampler/view binding blocks drawing. No GPU sampling resource or sampler view can be created; rejected views transfer no references."
+      "restriction": "Real Gallium callbacks create immutable nearest/clamp sampler state and host texture views. Bounded registries reject stale/foreign handles. Views retain backing and survive context destruction through a destruction-only owner until final standard Mesa reference/release. Raw serialized pipe contexts only; wrappers rewriting view->context not supported. Every nonempty state/view binding blocks draw."
     }
   ],
   "minimum_shader_blocker": {
@@ -95,6 +95,38 @@
   "vertex_qualification": "/home/gama/sgx535-offline/phase9-vertex-nir-20261009T003124Z/result.json",
   "context_contract_qualification": "/home/gama/sgx535-offline/phase9-context-contracts-20261009/result.json",
   "screen_capability_qualification": "/home/gama/sgx535-offline/phase9-capabilities-regression-20261009/result.json",
-  "current_increment": "/home/gama/sgx535-offline/phase9-egl-unblock-20261009T064619Z/result.json",
-  "actual_context_trace": "OPENGL-CONTEXT-TRACE.md: actual live GBM reaches real DRI constructor; identity, transport and diagnostic screen allocation succeed, OpenGL admission fails ENOTSUP with missing mask0x1f."
+  "current_increment": "/home/gama/sgx535-offline/phase9-admission-20261009T075215Z/result.json",
+  "actual_context_trace": "OPENGL-CONTEXT-TRACE.md: actual live GBM reaches real DRI constructor; identity, transport and diagnostic screen allocation succeed, OpenGL admission fails ENOTSUP with missing mask0x1f.",
+  "admission_bits": [
+    {
+      "bit": "0x01",
+      "contract": "general shader execution",
+      "status": "BLOCKED",
+      "unknown": "USSE/PDS ISA, register/output/linkage and general NIR program generation"
+    },
+    {
+      "bit": "0x02",
+      "contract": "GPU texture sampling",
+      "status": "BLOCKED",
+      "unknown": "GPU descriptor address/layout/format/pitch, sampling ISA/task routing and filter/interpolation semantics"
+    },
+    {
+      "bit": "0x04",
+      "contract": "rasterization rules",
+      "status": "BLOCKED",
+      "unknown": "qualified pixel-center/edge rules, arbitrary primitive/interpolation/scissor hardware state"
+    },
+    {
+      "bit": "0x08",
+      "contract": "render states",
+      "status": "BLOCKED",
+      "unknown": "required blend/depth/stencil/mask hardware states and formats"
+    },
+    {
+      "bit": "0x10",
+      "contract": "COLOR preservation",
+      "status": "BLOCKED",
+      "unknown": "native seeded visibility and COLOR load/store state, sequential retained-target execution"
+    }
+  ]
 }

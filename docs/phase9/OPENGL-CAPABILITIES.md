@@ -22,7 +22,7 @@ Mesa 25.2.0 accepts four color attachments in its GL 3.0 gate with an explicit n
 
 | Functionality | Version | Native evidence | Mesa emulation | Current driver | Missing contract |
 |---|---|---|---|---|---|
-| Programmable vertex shader / GLSL 1.10 | 2.0+ | UNKNOWN general ISA; CONFIRMED diagnostic position program only | OFFLINE QUALIFIED lowered and variable-IO identity-position NIR with CPU coordinate preparation; no general CPU shader execution or CPU rasterizer | PARTIAL | General shader operations, uniforms/linkage and independently justified native ISA; restricted identity admission does not meet GLSL1.10 |
+| Programmable vertex shader / GLSL 1.10 | 2.0+ | UNKNOWN general ISA; CONFIRMED diagnostic position program only | OFFLINE QUALIFIED lowered and variable-IO identity-position NIR, bounded scalar channel reconstruction and CPU coordinate preparation; no general CPU shader execution or CPU rasterizer | PARTIAL | General shader operations, uniforms/linkage and independently justified native ISA; restricted identity admission does not meet GLSL1.10 |
 | Programmable fragment shader / GLSL 1.10 | 2.0+ | CONFIRMED fixed observed constant-color profiles | Restricted NIR constant and aligned FS UBO0 host specialization OFFLINE QUALIFIED; general shader execution not emulated | PARTIAL | ALU, varyings, uniforms, texture operations and general output semantics |
 | GLSL 1.20 nonsquare matrices | 2.1+ | UNKNOWN | Mesa can lower matrix algebra once scalar/vector shader operations exist; not qualified here | UNSUPPORTED | General shader operations and GLSL conformance |
 | GLSL 1.30 integer/unsigned operations and stage interfaces | 3.0 | UNKNOWN | No valid emulation established; float approximation is insufficient | UNSUPPORTED | Exact integer semantics, shader IO and independently justified ISA |
@@ -30,7 +30,7 @@ Mesa 25.2.0 accepts four color attachments in its GL 3.0 gate with an explicit n
 | Pixel buffer objects and pack/unpack | 2.1+ | UNKNOWN GPU transfer path | Host bookkeeping/copies can be valid without CPU rasterization; only restricted Gallium transfers qualified | PARTIAL | GL pixel-store/PBO bounds, synchronization, arbitrary formats |
 | Textures: 1D/2D/3D/cube, NPOT, samplers, mipmaps, shadow compare | 2.0+ | UNKNOWN | No qualified texture sampling emulation | UNSUPPORTED | Addressing, formats, filtering, sampling instructions and shadow semantics |
 | sRGB texture sampling | 2.1+ | UNKNOWN | Shader decode could be valid with filtering/precision validation; not implemented | UNSUPPORTED | Texture sampling and correct sRGB filtering |
-| Viewport, clipping, scissor and raster modes | 2.0+ | CONFIRMED restricted 32x32 triangle path; broader behavior UNKNOWN | OFFLINE QUALIFIED canonical32 viewport for identity VS with w=1 and fully inside clip coordinates; no clipping/general perspective | PARTIAL | General clipping/perspective, viewport/scissor, raster rules, points/lines/culling |
+| Viewport, clipping, scissor and raster modes | 2.0+ | CONFIRMED restricted 32x32 triangle path; broader behavior UNKNOWN | OFFLINE QUALIFIED canonical32 viewport plus six-plane homogeneous CPU clipping and projection through recording-backend Gallium callbacks; native profile remains inside-volume w=1 only | PARTIAL | General clipping/perspective, viewport/scissor, raster rules, points/lines/culling |
 | Blend equations/separate RGB-alpha, color masks and logic operations | 2.0+ | UNKNOWN | No qualified emulation; CPU framebuffer raster/composite is not SGX acceleration | PARTIAL | Disabled/fullmask CSO admission qualified; actual blending, masks and logic operations unsupported |
 | Depth/stencil including two-sided stencil | 2.0+ | UNKNOWN | No valid qualified emulation | PARTIAL | Disabled-tests CSO admission qualified; enabled depth/stencil formats and operations unsupported |
 | Multiple draw buffers | 2.0+ | UNKNOWN | Multipass may be valid only with ordering/side-effect validation; not implemented | UNSUPPORTED | Multiple color outputs and attachment limits |
@@ -87,3 +87,19 @@ interpolation and coordinate-convention capabilities are disabled. Direct XCB
 CPU publication is row-tiled and tested offline through1920x1080. No OpenGL
 version, context, GPU sampling or larger GPU surface is established by these
 changes. See the current driver-contract qualification receipt.
+
+Admission increment (2026-10-09): actual Gallium sampler views now retain checked
+RGBA/BGRA transfer backing with immutable level/layer/swizzle descriptors and
+allocation cookies. Standard Mesa view release remains safe after context
+destruction. Nonempty sampler/view bindings still reject before dispatch and GPU
+sampling caps remain disabled. Recording-backend identity draws with explicit
+near/far depth clipping use homogeneous CPU primitive preparation and semantic
+packet compaction; production dispatch is unchanged. Neither component supplies
+unknown GPU texture or raster encodings.
+
+The exact new i386 frontend was loaded on the Mini12 under the qualified
+VERSION-only syscall filter. PCI, DRM transport and diagnostic screen creation
+passed; OpenGL admission remained ENOTSUP with mask0x1f. No SGX/memory ioctl or
+GL call was issued. A complete baseline profile remains unavailable: restricted
+NIR profiles and texture object bookkeeping do not satisfy inherited OpenGL
+shader, sampling, raster, render-state and load/store requirements.

@@ -113,6 +113,40 @@ done:
     return status;
 }
 
+enum remesa_draw_status remesa_pack_prepared_triangles(
+    const struct remesa_prepared_triangles *in,struct remesa_draw_packet *out)
+{
+    if(!in || !out) return REMESA_DRAW_INVALID;
+    uintptr_t begin=(uintptr_t)in,end=(uintptr_t)out;
+    if(sizeof(*in)>UINTPTR_MAX-begin || sizeof(*out)>UINTPTR_MAX-end ||
+       (begin<end+sizeof(*out) && end<begin+sizeof(*in))) return REMESA_DRAW_INVALID;
+    if(in->width!=32 || in->height!=32 || in->vertex_count>REMESA_DRAW_MAX_INDICES)
+        return REMESA_DRAW_UNSUPPORTED;
+    if(in->vertex_count%3) return REMESA_DRAW_INVALID;
+    if(!in->vertex_count) return REMESA_DRAW_EMPTY;
+    struct remesa_draw_packet *packet=calloc(1,sizeof(*packet));
+    if(!packet) return REMESA_DRAW_NOMEM;
+    packet->width=packet->height=32;packet->argb=in->argb;
+    packet->index_count=in->vertex_count;
+    enum remesa_draw_status result=REMESA_DRAW_VALIDATED;
+    for(unsigned i=0;i<in->vertex_count;i++) {
+        unsigned vertex=0;
+        while(vertex<packet->vertex_count &&
+              memcmp(packet->positions[vertex],in->positions[i],sizeof(in->positions[i]))) ++vertex;
+        if(vertex==packet->vertex_count) {
+            if(vertex==REMESA_DRAW_MAX_VERTICES) {result=REMESA_DRAW_UNSUPPORTED;goto done;}
+            memcpy(packet->positions[vertex],in->positions[i],sizeof(in->positions[i]));
+            ++packet->vertex_count;
+        }
+        packet->indices[i]=(uint16_t)vertex;
+    }
+    enum remesa_packet_status status=remesa_draw_packet_validate(packet);
+    if(status==REMESA_PACKET_OK) *out=*packet;
+    else result=status==REMESA_PACKET_UNSUPPORTED?REMESA_DRAW_UNSUPPORTED:REMESA_DRAW_INVALID;
+done:
+    free(packet);return result;
+}
+
 enum remesa_draw_status remesa_validate_indexed_triangles(
     const struct pipe_draw_info *info,
     const struct pipe_draw_start_count_bias *draw,

@@ -9,6 +9,7 @@
 #include "remesa_fixed_state.h"
 #include "remesa_render_pass.h"
 #include "remesa_sampler_state.h"
+#include "remesa_texture_binding.h"
 #include "remesa_nir_uniform.h"
 #ifdef REMESA_WITH_NIR
 #include "remesa_nir.h"
@@ -45,7 +46,7 @@ struct resource {
  struct remesa_render_pass pass;struct remesa_pass_ticket ticket;
 };
 enum fixed_kind { FIXED_BLEND,FIXED_DSA,FIXED_RASTER,FIXED_COUNT };
-struct fixed { struct fixed *next; enum fixed_kind kind; bool deleted,scissor,depth_clip; };
+struct fixed { struct fixed *next; enum fixed_kind kind; bool deleted,scissor,depth_clip,full_clip; };
 struct elements { struct elements *next; struct pipe_vertex_element position; bool deleted; };
 struct vertex { struct vertex *next; unsigned input_slot; bool deleted; };
 struct fragment { struct fragment *next; uint32_t argb; bool deleted,uses_uniform;
@@ -61,6 +62,7 @@ struct context {
  struct pipe_viewport_state viewport;
  struct fixed *fixed_states,*bound_fixed[FIXED_COUNT];bool invalid_fixed[FIXED_COUNT],scissor_set;
  struct remesa_sampler_bank *samplers;
+ struct remesa_texture_binding_bank *textures;
  struct pipe_resource *fragment_constants;unsigned constant_offset,constant_size;
  void *constant_snapshot;
 };
@@ -531,7 +533,9 @@ static void *create_dsa(struct pipe_context *p,const struct pipe_depth_stencil_a
 static void bind_dsa(struct pipe_context *p,void *state){bind_fixed(p,state,FIXED_DSA);}
 static void delete_dsa(struct pipe_context *p,void *state){delete_fixed(p,state,FIXED_DSA);}
 static void *create_raster(struct pipe_context *p,const struct pipe_rasterizer_state *state)
-{ return create_fixed(p,FIXED_RASTER,remesa_validate_rasterizer(state),state&&state->scissor,state&&(state->depth_clip_near||state->depth_clip_far)); }
+{ struct fixed *out=create_fixed(p,FIXED_RASTER,remesa_validate_rasterizer(state),state&&state->scissor,state&&(state->depth_clip_near||state->depth_clip_far));
+ if(out)out->full_clip=state->depth_clip_near&&state->depth_clip_far;
+ return out; }
 static void bind_raster(struct pipe_context *p,void *state){bind_fixed(p,state,FIXED_RASTER);}
 static void delete_raster(struct pipe_context *p,void *state){delete_fixed(p,state,FIXED_RASTER);}
 static void viewport_state(struct pipe_context *p,unsigned start,unsigned count,const struct pipe_viewport_state *v)
@@ -568,21 +572,34 @@ static void bind_samplers(struct pipe_context *p,enum pipe_shader_type stage,
 { c(p)->error=remesa_sampler_bind(c(p)->samplers,stage,start,count,states); }
 static void delete_sampler(struct pipe_context *p,void *state)
 { c(p)->error=state?remesa_sampler_delete(c(p)->samplers,state):0; }
+/* Query only resources from this screen. Backing metadata is not a kernel
+ * generation or proof of GPU visibility; quarantined backing is inadmissible. */
+static int texture_storage(void *owner,struct pipe_resource *resource,
+ struct remesa_texture_storage *out)
+{
+ struct pipe_screen *screen=owner;
+ if(!resource || resource->screen!=screen || !out) return EINVAL;
+ if(s(screen)->closing) return ESHUTDOWN;
+ if(r(resource)->write_error) return r(resource)->write_error;
+ if(r(resource)->maps) return EBUSY;
+ if(!r(resource)->bo || !r(resource)->pass.resource_cookie) return ESTALE;
+ *out=(struct remesa_texture_storage){r(resource)->pass.resource_cookie,
+     r(resource)->bytes,r(resource)->stride};return 0;
+}
 static struct pipe_sampler_view *create_sampler_view(struct pipe_context *p,
  struct pipe_resource *resource,const struct pipe_sampler_view *view)
 {
- (void)resource;(void)view;
- /* No reference transfers on failed creation; no GPU sampling encoding. */
- c(p)->error=ENOTSUP;return NULL;
+ struct pipe_sampler_view *out=NULL;
+ c(p)->error=remesa_texture_view_create(c(p)->textures,resource,view,&out);
+ return out;
 }
 static void destroy_sampler_view(struct pipe_context *p,struct pipe_sampler_view *view)
 {
- /* This context creates no views. Never dereference an unowned foreign view. */
- c(p)->error=view?EINVAL:0;
+ c(p)->error=view?remesa_texture_view_destroy(c(p)->textures,view):0;
 }
 static void set_sampler_views(struct pipe_context *p,enum pipe_shader_type stage,
  unsigned start,unsigned count,unsigned trailing,struct pipe_sampler_view **views)
-{ c(p)->error=remesa_sampler_views(c(p)->samplers,stage,start,count,trailing,views); }
+{ c(p)->error=remesa_texture_views_bind(c(p)->textures,stage,start,count,trailing,views); }
 /* Mesa CSO cleanup invokes these even with zero shader/texture caps. */
 static void constant_buffer(struct pipe_context *p,enum pipe_shader_type shader,unsigned slot,
  bool take_ownership,const struct pipe_constant_buffer *buffer)
@@ -724,6 +741,7 @@ static void draw(struct pipe_context *p,const struct pipe_draw_info *info,unsign
  if(!draws || count!=1 || indirect || drawid) goto done;
  if(!draws->count || !info->instance_count || !ctx->sample_enabled) { err=0;goto done; }
  int sampling=remesa_sampler_draw_admit(ctx->samplers);if(sampling){err=sampling;goto done;}
+ sampling=remesa_texture_draw_admit(ctx->textures);if(sampling){err=sampling;goto done;}
  if(ctx->invalid_viewport || ctx->invalid_scissor || ctx->invalid_elements || ctx->invalid_constants || ctx->constant_rejections[0] || ctx->constant_rejections[1]) goto done;
  for(unsigned kind=0;kind<FIXED_COUNT;kind++)
   if(ctx->invalid_fixed[kind]||(ctx->vertex_required&&!ctx->bound_fixed[kind]))goto done;
@@ -763,8 +781,23 @@ static void draw(struct pipe_context *p,const struct pipe_draw_info *info,unsign
  err=sc->device.ops->map(sc->device.priv,r(ctx->vb.buffer.resource)->bo,false,&vp);if(err) goto done;
  v_mapped=true;if(!vp){err=EPROTO;goto done;}
  packet=malloc(sizeof(*packet));f=calloc(1,sizeof(*f));if(!packet || !f) { err=ENOMEM;goto done; }
+ /* CPU primitive clipping is connected to the real callback only for the
+  * recording backend and explicit depth-clip state. This does not qualify
+  * GPU edge rules or expand the live executor's historical profile. */
+ if(sc->device.offline_test_backend && !sc->device.qualified_hardware_backend &&
+    ctx->bound_vertex && raster && raster->full_clip) {
+  struct remesa_prepared_triangles *prepared=malloc(sizeof(*prepared));
+  if(!prepared){err=ENOMEM;goto done;}
+  packed=remesa_prepare_constant_draw(&validated_info,draws,&ctx->vb,&ctx->position,
+      vp,r(ctx->vb.buffer.resource)->bytes,ip,info->index_size?r(info->index.resource)->bytes:0,
+      draw_argb,&ctx->viewport,ctx->target->width0,ctx->target->height0,prepared);
+  if(packed==REMESA_DRAW_VALIDATED)packed=remesa_pack_prepared_triangles(prepared,packet);
+  free(prepared);
+  if(packed==REMESA_DRAW_EMPTY){err=0;goto done;}
+ } else {
  packed=remesa_pack_triangle_draw_vertex(&validated_info,draws,&ctx->vb,&ctx->position,
      vp,r(ctx->vb.buffer.resource)->bytes,ip,info->index_size ? r(info->index.resource)->bytes : 0,draw_argb,ctx->bound_vertex ? &ctx->viewport : NULL,packet);
+ }
  if(packed!=REMESA_DRAW_VALIDATED) { err=packed==REMESA_DRAW_NOMEM ? ENOMEM :
      packed==REMESA_DRAW_UNSUPPORTED ? ENOTSUP : EINVAL;goto done; }
  enum remesa_pass_load load=r(ctx->target)->has_contents&&!ctx->diagnostic_discard ? REMESA_PASS_PRESERVE : REMESA_PASS_DISCARD;
@@ -797,13 +830,15 @@ static void draw(struct pipe_context *p,const struct pipe_draw_info *info,unsign
 static void flush(struct pipe_context *p,struct pipe_fence_handle **f,unsigned flags)
 { (void)flags;if(f) fence_ref(p->screen,f,c(p)->error ? NULL : c(p)->last); }
 static void destroy_context(struct pipe_context *p)
-{ struct context *ctx=c(p);struct screen *sc=s(p->screen);remesa_resource_reference(&ctx->vb.buffer.resource,NULL);remesa_resource_reference(&ctx->target,NULL);remesa_resource_reference(&ctx->fragment_constants,NULL);free(ctx->constant_snapshot);fence_ref(p->screen,&ctx->last,NULL);while(ctx->fragments){struct fragment *f=ctx->fragments;ctx->fragments=f->next;free(f);}while(ctx->vertices){struct vertex *v=ctx->vertices;ctx->vertices=v->next;free(v);}while(ctx->fixed_states){struct fixed *state=ctx->fixed_states;ctx->fixed_states=state->next;free(state);}while(ctx->elements){struct elements *e=ctx->elements;ctx->elements=e->next;free(e);}remesa_sampler_bank_destroy(ctx->samplers);free(ctx);screen_drop(sc); }
+{ struct context *ctx=c(p);struct screen *sc=s(p->screen);remesa_resource_reference(&ctx->vb.buffer.resource,NULL);remesa_resource_reference(&ctx->target,NULL);remesa_resource_reference(&ctx->fragment_constants,NULL);free(ctx->constant_snapshot);fence_ref(p->screen,&ctx->last,NULL);while(ctx->fragments){struct fragment *f=ctx->fragments;ctx->fragments=f->next;free(f);}while(ctx->vertices){struct vertex *v=ctx->vertices;ctx->vertices=v->next;free(v);}while(ctx->fixed_states){struct fixed *state=ctx->fixed_states;ctx->fixed_states=state->next;free(state);}while(ctx->elements){struct elements *e=ctx->elements;ctx->elements=e->next;free(e);}remesa_sampler_bank_destroy(ctx->samplers);remesa_texture_binding_close(ctx->textures);free(ctx);screen_drop(sc); }
 static struct pipe_context *create_context(struct pipe_screen *p,void *priv,unsigned flags)
 {
  /* PREFER_THREADED is a hint; NO_LOD_BIAS adds no unsupported sampler state.
   * Other semantic/context-security flags remain unavailable. */
  struct context *ctx;if((flags & ~(PIPE_CONTEXT_PREFER_THREADED|PIPE_CONTEXT_NO_LOD_BIAS)) || s(p)->closing) return NULL;ctx=calloc(1,sizeof(*ctx));if(!ctx) return NULL;
  ctx->samplers=remesa_sampler_bank_create(NULL,NULL,NULL);if(!ctx->samplers){free(ctx);return NULL;}
+ ctx->textures=remesa_texture_binding_create(p,texture_storage,p,NULL,NULL,NULL);
+ if(!ctx->textures){remesa_sampler_bank_destroy(ctx->samplers);free(ctx);return NULL;}
  ctx->sample_enabled=true;ctx->base.screen=p;ctx->base.priv=priv;ctx->base.destroy=destroy_context;
  ctx->base.buffer_map=map;ctx->base.texture_map=map;ctx->base.buffer_unmap=unmap;ctx->base.texture_unmap=unmap;
  ctx->base.buffer_subdata=buffer_subdata;ctx->base.texture_subdata=texture_subdata;

@@ -31,7 +31,7 @@ base = ['-DREMESA_WITH_MESA_HEADERS', '-std=c11', '-D_POSIX_C_SOURCE=200809L', '
         '-Wall', '-Wextra', '-Werror', '-I'+str(a.generated),
         '-I'+str(a.mesa/'src/gallium/include'), '-I'+str(a.mesa/'src'),
         '-I'+str(a.mesa/'include'), '-I'+str(here), '-I'+str(here.parents[1]/'include')]
-sources = [str(here/name) for name in ['remesa_fixed_state.c','remesa_render_pass.c','remesa_sampler_state.c','remesa_screen.c','remesa_draw.c','remesa_present.c']] + [str(here.parents[1]/'common/remesa/draw_packet.c')]
+sources = [str(here/name) for name in ['remesa_fixed_state.c','remesa_render_pass.c','remesa_sampler_state.c','remesa_texture_binding.c','remesa_screen.c','remesa_draw.c','remesa_present.c']] + [str(here.parents[1]/'common/remesa/draw_packet.c')]
 variants = [('native',['cc'],['-O2'],[]),
             ('ubsan',['cc'],['-O1','-fsanitize=undefined','-fno-sanitize-recover=all'],[])]
 if any([a.i386_cc,a.i386_sysroot,a.qemu_i386]):

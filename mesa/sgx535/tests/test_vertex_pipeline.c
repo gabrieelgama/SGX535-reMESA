@@ -7,8 +7,32 @@
 #include "test_driver.c"
 #undef main
 #include <math.h>
+/* Exercise scalarized identity IO through the actual shader callbacks. The
+ * pipeline still records CPU-prepared positions and simulated completion. */
+static nir_shader *scalarized_vertex(void)
+{
+ nir_shader *shader=vertex_fixture();
+ nir_function *fn=exec_node_data(nir_function,exec_list_get_head(&shader->functions),node);
+ nir_block *block=exec_node_data(nir_block,exec_list_get_head(&fn->impl->body),cf_node.node);
+ nir_instr *zero=exec_node_data(nir_instr,exec_list_get_head(&block->instr_list),node);
+ nir_intrinsic_instr *input=exec_node_data(nir_intrinsic_instr,zero->node.next,instr.node);
+ nir_intrinsic_instr *store=exec_node_data(nir_intrinsic_instr,exec_list_get_tail(&block->instr_list),instr.node);
+ nir_alu_instr *vec=rzalloc_size(shader,sizeof(*vec)+4*sizeof(nir_alu_src));
+ vec->instr.type=nir_instr_type_alu;vec->instr.block=block;vec->op=nir_op_vec4;
+ vec->def.parent_instr=&vec->instr;vec->def.bit_size=32;vec->def.num_components=4;
+ for(unsigned i=0;i<4;i++) {
+  nir_alu_instr *scalar=rzalloc_size(shader,sizeof(*scalar)+sizeof(nir_alu_src));
+  scalar->instr.type=nir_instr_type_alu;scalar->instr.block=block;scalar->op=nir_op_mov;
+  scalar->def.parent_instr=&scalar->instr;scalar->def.bit_size=32;scalar->def.num_components=1;
+  scalar->src[0].src.ssa=&input->def;scalar->src[0].swizzle[0]=i;
+  vec->src[i].src.ssa=&scalar->def;
+  exec_node_insert_node_before(&store->instr.node,&scalar->instr.node);
+ }
+ exec_node_insert_node_before(&store->instr.node,&vec->instr.node);
+ store->src[0].ssa=&vec->def;return shader;
+}
 static void *vertex_shader(struct pipe_context *ctx)
-{ struct pipe_shader_state state={.type=PIPE_SHADER_IR_NIR};state.ir.nir=vertex_fixture();return ctx->create_vs_state(ctx,&state); }
+{ struct pipe_shader_state state={.type=PIPE_SHADER_IR_NIR};state.ir.nir=scalarized_vertex();return ctx->create_vs_state(ctx,&state); }
 static void *fragment_shader(struct pipe_context *ctx)
 { struct pipe_shader_state state={.type=PIPE_SHADER_IR_NIR};state.ir.nir=fixture(0xffff00ff);return ctx->create_fs_state(ctx,&state); }
 static void upload(struct pipe_context *ctx,struct pipe_resource *vb,const float positions[3][4])

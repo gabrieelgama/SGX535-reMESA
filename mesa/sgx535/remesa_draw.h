@@ -35,6 +35,11 @@ enum remesa_draw_status remesa_prepare_constant_draw(
     const void *, size_t, const void *, size_t, uint32_t,
     const struct pipe_viewport_state *, uint32_t, uint32_t,
     struct remesa_prepared_triangles *);
+/* Compact a CPU-clipped constant-color triangle list into the existing semantic
+ * 32x32 packet. No SGX stream is generated. Production backends must retain
+ * their own geometry/profile admission. Output unchanged on failure. */
+enum remesa_draw_status remesa_pack_prepared_triangles(
+    const struct remesa_prepared_triangles *, struct remesa_draw_packet *);
 struct remesa_draw_plan {
     uint32_t primitive_count, min_vertex, max_vertex;
     uint64_t index_first_byte, index_end_byte, vertex_end_byte;
