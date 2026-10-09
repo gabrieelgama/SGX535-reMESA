@@ -1,0 +1,135 @@
+{
+  "schema": "remesa-pds-independent-source-review-v1",
+  "created_utc": "2026-10-09T22:39:41.898339+00:00",
+  "scope": "PDS instruction/task/launch encodings for SGX535 rev121; program-base MMIO fields are deliberately outside the result.",
+  "sources": [
+    {
+      "id": "MESA-CSBGEN-GENERATION",
+      "url": "https://docs.mesa3d.org/drivers/powervr/csbgen.html",
+      "origin": "Official Mesa documentation",
+      "license_and_use": "Official public documentation; factual scope paraphrase only. No source code or numeric instruction fields copied. A documentation page is not by itself a software implementation license.",
+      "access": "Public body opened; generation statement at lines12-32 inspected. Tool returned additional Rogue API text; no bitfield imported.",
+      "gpu_scope": "PowerVR Rogue, explicitly named by document",
+      "actual_instruction_fields_disclosed": "Rogue PDS and task field descriptions exist; not inventoried or ported because target generation fails admission.",
+      "sgx535_rev121_compatibility": "UNKNOWN; no compatibility bridge supplied",
+      "usable_for_target_encoder": false,
+      "finding": "The official page expressly scopes generated PDS interfaces to Rogue; shared PDS terminology cannot establish SGX5 field equivalence."
+    },
+    {
+      "id": "IMGTEC-ISA-GENERATION",
+      "url": "https://docs.imgtec.com/reference-manuals/powervr-instruction-set-reference/html/index.html",
+      "origin": "Official Imagination developer documentation",
+      "license_and_use": "Publisher-authorized public viewing; factual generation screening only. No EULA accepted, binaries downloaded, source code or instruction sequences reused.",
+      "access": "Public table of contents opened",
+      "gpu_scope": "PowerVR USC Series6",
+      "actual_instruction_fields_disclosed": "Assembly documentation index; no SGX535 encoding specification established.",
+      "sgx535_rev121_compatibility": "UNKNOWN; USC Series6 is not SGX5 USSE",
+      "usable_for_target_encoder": false,
+      "finding": "Official ISA index identifies Series6 USC rather than Series5 USSE/PDS."
+    },
+    {
+      "id": "TI-SPRUGZ7E-METADATA",
+      "url": "https://www.ti.com/lit/ug/sprugz7e/sprugz7e.pdf",
+      "origin": "TI public technical reference manual, publisher copyright2011-2015",
+      "license_and_use": "Factual screening of publisher-hosted search excerpts; no document text/code/diagrams reproduced",
+      "access": "Search metadata/excerpt only; PDF not opened or downloaded",
+      "gpu_scope": "SGX530",
+      "actual_instruction_fields_disclosed": "Inspected excerpt only describes DMS/PDS scheduling and data loading, not instruction bits or task words.",
+      "sgx535_rev121_compatibility": "UNKNOWN; no hardware compatibility check established",
+      "usable_for_target_encoder": false
+    },
+    {
+      "id": "EP4610810A1-METADATA",
+      "url": "https://data.epo.org/publication-server/rest/v1.2/publication-dates/2025-09-03/patents/EP4610810NWA1/document.pdf",
+      "origin": "Public EPO patent publication: Register allocation for multi-phase task",
+      "license_and_use": "Public patent metadata factual screening only; no patent-practice or software-copy permission inferred",
+      "access": "Search excerpt only; publication body not opened",
+      "gpu_scope": "Recent fragment/phase allocation architecture, not identified as SGX535",
+      "actual_instruction_fields_disclosed": "Excerpt mentions PDS program data fields with register allocation counts; no numeric instruction/table fields admitted",
+      "sgx535_rev121_compatibility": "UNKNOWN; contemporaneity/product binding not established",
+      "usable_for_target_encoder": false
+    },
+    {
+      "id": "EP4648291A1-METADATA",
+      "url": "https://data.epo.org/publication-server/rest/v1.2/publication-dates/2025-11-12/patents/EP4648291NWA1/document.pdf",
+      "origin": "Public EPO patent publication: Compression of work item coordinate data for work items in a work group, priority2024",
+      "license_and_use": "Public patent metadata factual screening only; no code copied or patent-practice license inferred",
+      "access": "Search excerpt only; publication body not opened",
+      "gpu_scope": "Modern CDM/PDS/USC architecture",
+      "actual_instruction_fields_disclosed": "Work-item request/coordinate compression concepts; no SGX5 launch/opcode fields established",
+      "sgx535_rev121_compatibility": "UNKNOWN; later USC architecture cannot establish rev121 encoding",
+      "usable_for_target_encoder": false
+    }
+  ],
+  "excluded_candidates": [
+    {
+      "id": "IMGTEC-PDS-FORUM",
+      "url": "https://forums.imgtec.com/t/pds-programming/333",
+      "access": "Search excerpt surfaced; body not opened and document named therein not accessed",
+      "reason": "Quotation of an unadmitted SGX535 external manual and vendor response directs discussion off public forum. Existing research already found this insufficient; no quoted data-store/opcode constants reused."
+    },
+    {
+      "id": "TI-DDK-SHIM",
+      "url": "https://github.com/texasinstruments/processor-sdk-doc/blob/master/source/linux/Foundational_Components/Graphics/SGX/Build_Guide.rst",
+      "access": "Search excerpt only",
+      "reason": "SGX Mesa shim delegates GPU implementation to proprietary DDK userspace, not independent ISA evidence. No linked DDK repository accessed."
+    },
+    {
+      "id": "OPENPVRSGX",
+      "url": "https://github.com/openpvrsgx-devgroup/linux_openpvrsgx",
+      "access": "Search metadata only; no repository body/files accessed",
+      "reason": "Project explicitly concerns existing kernel drivers, not independent userspace reverse engineering; DDK-lineage admission not established. Do not use its instruction/header material."
+    },
+    {
+      "id": "UNAUTHORIZED-BOOK-MIRROR",
+      "url": "https://pub.deadnet.se/Books%20and%20Docs%20on%20Hacking/Electronics/Microprocessori/Mobile%203D%20Graphics%20SoC%20-%20From%20Algorithm%20to%20Chip%20%282010%29.pdf",
+      "access": "Search excerpt surfaced; PDF not opened or downloaded",
+      "reason": "Mirror distribution permission unestablished; high-level excerpt not encoding evidence."
+    },
+    {
+      "id": "MESA-THIRD-PARTY-SNIPPETS",
+      "url": "https://fossies.org/linux/mesa/src/imagination/vulkan/pds/pvr_pds.c",
+      "access": "Unsolicited search excerpts only; page not opened",
+      "reason": "Rogue source, no SGX5 compatibility. No macro values or snippets imported."
+    }
+  ],
+  "existing_evidence_read": [
+    "docs/phase9/sgx5-field-research-20261009.json",
+    "docs/phase9/sgx5-instruction-followup-20261009.json",
+    "docs/phase9/sgx535-launch-field-evidence-20261009.json"
+  ],
+  "prior_source_not_reopened": "2005 Imagination scalable multi-threaded architecture patent family. Existing review proves only conceptual PDS loading/task execution, not target numeric fields.",
+  "result": {
+    "PDS_INSTRUCTION_WIDTH": "UNKNOWN",
+    "PDS_OPCODE_FIELDS": "UNKNOWN",
+    "PDS_OPERAND_BANK_FIELDS": "UNKNOWN",
+    "PDS_TERMINATION": "UNKNOWN",
+    "PDS_TASK_WORDS": "UNKNOWN",
+    "PDS_USSE_LAUNCH": "UNKNOWN",
+    "SGX535_REV121_COMPATIBILITY": "UNKNOWN",
+    "admitted_instruction_fields": 0,
+    "new_instruction_bytes": 0,
+    "new_hardware_operations": 0
+  },
+  "minimum_bootstrap_dependency": {
+    "launch_ussee_minimum": [
+      "independently established PDS instruction width/endianness",
+      "opcode and source-store/bank/index fields for task output",
+      "complete USSE task-control word layout including code address, resource allocation and data master",
+      "PDS termination and DMA/task completion behavior",
+      "SGX535 rev121 compatibility evidence"
+    ],
+    "minimum_experiment": "After this bootstrap and a separately admitted terminating USSE constant-output program exist: one launch with distinguishable constant output, independently attributed task/consumer completion and exact readback. No speculative opcodes or proprietary instruction oracle.",
+    "current_status": "BLOCKED: neither an independent known-executable PDS task program nor an admitted SGX535 task word format exists.",
+    "next_evidence_acquisition": "An authorized public release of the SGX535 PDS instruction/task-format specification, or an independently authored documented format with reproducible provenance. Modern Rogue constants and forum manual quotes are not replacements."
+  },
+  "clean_room": {
+    "psb_dri_accessed": false,
+    "Xpsb_accessed": false,
+    "historical_440_byte_payload_accessed": false,
+    "DDK_accessed": false,
+    "proprietary_shader_bytes_used": false,
+    "cross_generation_fields_admitted": false
+  },
+  "boundary": "Bounded screened-source result, not proof that no public specification can exist. No encoder change is justified by this review."
+}
