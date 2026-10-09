@@ -31,7 +31,7 @@ for name,cc,flags,runner in variants:
  for target,source in [('kernel','test_gem_memory.c'),('dispatch','test_gem_dispatch.c'),('transport','test_linux_memory.c')]:
   if target not in selected:continue
   sources=['kernel/remesa/gma500/tests/'+source]
-  if target=='transport':sources+=['mesa/sgx535/remesa_linux_memory.c','mesa/sgx535/remesa_persistent.c','kernel/remesa/resource.c','kernel/remesa/registry.c','kernel/remesa/provider.c','common/remesa/draw_packet.c','mesa/sgx535/remesa_fixed_state.c','mesa/sgx535/remesa_render_pass.c','mesa/sgx535/remesa_sampler_state.c','mesa/sgx535/remesa_texture_binding.c','mesa/sgx535/remesa_screen.c','mesa/sgx535/remesa_draw.c','tools/remesa/memory_probe.c']
+  if target=='transport':sources+=['mesa/sgx535/remesa_linux_memory.c','mesa/sgx535/remesa_persistent.c','kernel/remesa/resource.c','kernel/remesa/registry.c','kernel/remesa/provider.c','common/remesa/draw_packet.c','mesa/sgx535/remesa_fixed_state.c','mesa/sgx535/remesa_render_pass.c','mesa/sgx535/remesa_sampler_state.c','mesa/sgx535/remesa_texture_binding.c','mesa/sgx535/remesa_texture_descriptor.c','mesa/sgx535/remesa_screen.c','mesa/sgx535/remesa_draw.c','tools/remesa/memory_probe.c']
   exe=a.output/(name+'-'+target)
   mesa_flags=['-DREMESA_WITH_MESA_HEADERS','-D_POSIX_C_SOURCE=200809L','-DHAVE_ENDIAN_H','-I'+str(a.generated),'-I'+str(a.mesa/'src/gallium/include'),'-I'+str(a.mesa/'src'),'-I'+str(a.mesa/'include')] if target=='transport' else []
   cmd=cc+mesa_flags+['-std=c11','-Wall','-Wextra','-Werror','-I'+str(root/'include'),'-I'+str(root/'mesa/sgx535'),'-I'+str(root/'tools/remesa'),'-I'+str(root/'kernel/remesa/gma500/tests')]+flags+[str(root/f) for f in sources]+['-o',str(exe)]

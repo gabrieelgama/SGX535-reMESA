@@ -12,7 +12,7 @@ for name,h in pin['interface_files'].items():
  if hashlib.sha256((a.mesa/name).read_bytes()).hexdigest()!=h:raise SystemExit('Pinned Mesa interface mismatch: '+name)
 if hashlib.sha256((a.generated/'util/format/u_format_gen.h').read_bytes()).hexdigest()!=pin['generated_formats_sha256']:raise SystemExit('Pinned Mesa generated formats mismatch')
 gallium_flags=['-DREMESA_WITH_MESA_HEADERS','-D_POSIX_C_SOURCE=200809L','-DHAVE_ENDIAN_H','-I'+str(a.generated),'-I'+str(a.mesa/'src/gallium/include'),'-I'+str(a.mesa/'src'),'-I'+str(a.mesa/'include')]
-shared=[here/'retained_probe_evidence.c',mesa/'remesa_fixed_state.c',mesa/'remesa_render_pass.c',mesa/'remesa_sampler_state.c','remesa_texture_binding.c',mesa/'remesa_screen.c',mesa/'remesa_draw.c',mesa/'remesa_retained_gallium.c',mesa/'remesa_retained_readback.c',root/'common/remesa/draw_packet.c',root/'common/remesa/retained_evidence.c']
+shared=[here/'retained_probe_evidence.c',mesa/'remesa_fixed_state.c',mesa/'remesa_render_pass.c',mesa/'remesa_sampler_state.c',mesa/'remesa_texture_binding.c',mesa/'remesa_texture_descriptor.c',mesa/'remesa_screen.c',mesa/'remesa_draw.c',mesa/'remesa_retained_gallium.c',mesa/'remesa_retained_readback.c',root/'common/remesa/draw_packet.c',root/'common/remesa/retained_evidence.c']
 inc=a.output/'headers/drm';inc.mkdir(parents=True,exist_ok=True)
 for h in ['drm.h','drm_mode.h']:shutil.copyfile('/usr/include/drm/'+h,inc/h)
 variants=[('native',['cc'],['-O2'],[]),('ubsan',['cc'],['-O1','-fsanitize=undefined','-fno-sanitize-recover=all'],[])]

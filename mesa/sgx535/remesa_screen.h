@@ -3,6 +3,7 @@
 #define REMESA_SCREEN_H
 #include <stdint.h>
 #include <stdbool.h>
+#include "remesa_texture_descriptor.h"
 /* Opaque factory ABI also used by the standalone ownership-model tests.
  * The Gallium adapter qualification compiles against pinned Mesa headers. */
 struct pipe_screen;
@@ -13,6 +14,15 @@ struct pipe_context; struct pipe_resource; struct pipe_fence_handle;
 int remesa_resource_wait_writer(struct pipe_context *,struct pipe_resource *,uint64_t timeout);
 /* Internal serialized import. Backend owns both BO and completion evidence. */
 int remesa_resource_attach_writer(struct pipe_context *,struct pipe_resource *,void *,struct pipe_fence_handle **);
+/* Validated metadata from a context-owned view; frontend cookie is not a GEM
+ * generation or visibility proof. Output unchanged on failure. */
+int remesa_context_texture_view_storage(struct pipe_context *,
+ const struct pipe_sampler_view *,struct remesa_texture_storage *);
+/* Poll the real frontend writer before a trusted retained-mapping query.
+ * No maps, submissions, hardware descriptor bytes or sampling admission. */
+int remesa_context_prepare_texture_descriptor(struct pipe_context *,
+ const struct pipe_sampler_view *,const struct pipe_sampler_state *,uint64_t,
+ remesa_texture_mapping_query,void *,struct remesa_texture_descriptor *);
 struct pipe_screen *remesa_screen_create(struct remesa_device *device);
 /* Consumes device only on success. Release runs after the final context,
  * resource and fence disappear. Without release, backend ownership is borrowed

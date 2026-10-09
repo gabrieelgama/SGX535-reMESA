@@ -103,3 +103,36 @@ passed; OpenGL admission remained ENOTSUP with mask0x1f. No SGX/memory ioctl or
 GL call was issued. A complete baseline profile remains unavailable: restricted
 NIR profiles and texture object bookkeeping do not satisfy inherited OpenGL
 shader, sampling, raster, render-state and load/store requirements.
+
+
+### Independent host IR and seeded evidence increment (2026-10-09)
+
+Actual Mesa shader callbacks now retain a typed, validated semantic IR for
+identity position and constant endpoint color profiles. Its register IDs,
+opcode names and serialization/dump are original **host** definitions; no
+USSE/PDS bit layout or hardware register encoding is implemented. Unknown
+hardware encoding fails with `ENOTSUP` and leaves output untouched.
+
+Texture metadata preparation is connected to context-owned Gallium views and
+polls the real frontend writer before querying retained mapping metadata.
+Canonical `RMTD` bytes describe host diagnostics only and cannot be submitted
+as an SGX texture descriptor. Provider claims still require independent
+mapping/completion authentication. No GPU sampling capability is advertised.
+
+A separate seeded-session validator requires complete ownership, completion,
+visibility, acknowledgement, ticket retirement, attributed captures and
+cleanup records. It validates transcript correspondence, not physical truth.
+The preparation card is non-executable: current STOCK has no experimental
+endpoint, the source-authentication/capture adapter is missing, and historical
+proprietary shader-derived profiles are not admitted under the current policy.
+The forbidden 440-byte original Poulsbo shader image was not accessed or used.
+No corresponding asset path is guessed from unrelated recorded file sizes.
+
+OpenGL admission remains `0x1f`. Mesa's version computation assumes a working
+baseline compatibility implementation; its fallback version is not a test of
+our conformance. Host IR and descriptor validation do not establish any OpenGL
+version, GPU COLOR preservation or general shader/texture execution.
+
+The user permits `psb_dri.so` as a non-extractive reference but prohibits code
+extraction from it. No `psb_dri.so` or `Xpsb.so` binary was accessed for this
+increment. New shader encodings must remain independently authored and verified.

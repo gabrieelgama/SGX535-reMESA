@@ -45,12 +45,12 @@
     {
       "contract": "framebuffer load/store",
       "status": "OFFLINE QUALIFIED",
-      "restriction": "Per-resource frontend cookies/serials, DISCARD/PRESERVE intent, pending-writer exclusion, authenticated backend wait plus publication/retirement and failure quarantine are integrated into draw_vbo and external writer import. Native PRESERVE remains ENOTSUP; hardware load/store UNKNOWN. Local tickets are not kernel operation IDs. Exact sealed FIRE3 coverage/seed/identity/readback comparison now distinguishes PRESERVE, DISCARD, UNCHANGED and contradiction; oracle bytes are independent captured output, not command meanings or visibility proof."
+      "restriction": "Per-resource frontend cookies/serials, DISCARD/PRESERVE intent, pending-writer exclusion, authenticated backend wait plus publication/retirement and failure quarantine are integrated into draw_vbo and external writer import. Native PRESERVE remains ENOTSUP; hardware load/store UNKNOWN. Local tickets are not kernel operation IDs. Exact sealed FIRE3 coverage/seed/identity/readback comparison now distinguishes PRESERVE, DISCARD, UNCHANGED and contradiction; oracle bytes are independent captured output, not command meanings or visibility proof. Seeded-session validator correlates fourteen ordered source records with stable identity and VA/PFN, GPU/ticket retirement separation, two capture providers and zero-leak baseline; source authentication and independent physical capture adapter are not implemented."
     },
     {
       "contract": "shader states",
       "status": "PARTIAL",
-      "restriction": "Restricted identity VS admits bounded float32 SSA channel copies and vec4 reconstruction only when final xyzw exactly matches the sole input; actual lowered/variable NIR and Gallium callbacks tested. FS constant/UBO0 snapshot specializes existing color profiles on CPU; no USSE ALU/register allocator, varying or texture compiler. Native profile unchanged magenta-only."
+      "restriction": "Restricted identity VS admits bounded float32 SSA channel copies and vec4 reconstruction only when final xyzw exactly matches the sole input; actual lowered/variable NIR and Gallium callbacks tested. FS constant/UBO0 snapshot specializes existing color profiles on CPU; no USSE ALU/register allocator, varying or texture compiler. Native profile unchanged magenta-only. Actual VS/constant-FS callbacks now normalize admitted NIR into original typed host semantic IR retained for shader lifetime. Uniform snapshots remain the existing CPU specialization path. Unknown native hardware encoder returns ENOTSUP without bytes."
     },
     {
       "contract": "screen GL caps",
@@ -60,7 +60,7 @@
     {
       "contract": "texture/sampler/import/export",
       "status": "PARTIAL",
-      "restriction": "RGBA8/BGRA8 bounded transfer storage and actual Gallium 2D level0 same-format sampler-view metadata, swizzles, immutable backing/cookie validation, map/quarantine checks and retained references. Nonempty bindings reject before submission; PIPE_BIND_SAMPLER_VIEW remains unsupported. No GPU sampling descriptors/ISA, PRIME or shared scanout."
+      "restriction": "RGBA8/BGRA8 bounded transfer storage and actual Gallium 2D level0 same-format sampler-view metadata, swizzles, immutable backing/cookie validation, map/quarantine checks and retained references. Nonempty bindings reject before submission; PIPE_BIND_SAMPLER_VIEW remains unsupported. No GPU sampling descriptors/ISA, PRIME or shared scanout. Context metadata preparation checks owned-view membership and polls the real frontend writer before a trusted provider query. Owner/generations/VA/ranges/pins/leases/PFN and epochs/completion are validated as host assertions; original RMTD metadata must never be submitted as SGX state."
     },
     {
       "contract": "XCB publication",
@@ -95,7 +95,7 @@
   "vertex_qualification": "/home/gama/sgx535-offline/phase9-vertex-nir-20261009T003124Z/result.json",
   "context_contract_qualification": "/home/gama/sgx535-offline/phase9-context-contracts-20261009/result.json",
   "screen_capability_qualification": "/home/gama/sgx535-offline/phase9-capabilities-regression-20261009/result.json",
-  "current_increment": "/home/gama/sgx535-offline/phase9-admission-20261009T075215Z/result.json",
+  "current_increment": "/home/gama/sgx535-offline/phase9-cleanroom-20261009T084958Z/result.json",
   "actual_context_trace": "OPENGL-CONTEXT-TRACE.md: actual live GBM reaches real DRI constructor; identity, transport and diagnostic screen allocation succeed, OpenGL admission fails ENOTSUP with missing mask0x1f.",
   "admission_bits": [
     {
@@ -128,5 +128,6 @@
       "status": "BLOCKED",
       "unknown": "native seeded visibility and COLOR load/store state, sequential retained-target execution"
     }
-  ]
+  ],
+  "cleanroom_shader_policy": "No code extraction from Xpsb.so or psb_dri.so; psb_dri.so permitted only as non-extractive reference. Original 440-byte shader image forbidden. No proprietary binary-derived USSE/PDS used in new encoder."
 }

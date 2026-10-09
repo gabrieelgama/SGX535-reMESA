@@ -19,7 +19,7 @@ base=['-std=c11','-D_POSIX_C_SOURCE=200809L','-DREMESA_WITH_MESA_HEADERS',
       '-I'+str(mesa/'src/gallium/include'),'-isystem',str(mesa/'src/gallium/auxiliary'),
       '-I'+str(mesa/'src'),'-I'+str(mesa/'include')]
 sources=[here/name for name in ['remesa_fixed_state.c','remesa_render_pass.c',
-    'remesa_sampler_state.c','remesa_texture_binding.c','remesa_screen.c',
+    'remesa_sampler_state.c','remesa_texture_binding.c','remesa_texture_descriptor.c','remesa_screen.c',
     'remesa_draw.c','remesa_present.c','tests/test_texture_view_pipeline.c']]
 sources.append(here.parents[1]/'common/remesa/draw_packet.c')
 root=Path('/home/gama/sgx535-offline/gcc14-i686-qualification-20260930/root')

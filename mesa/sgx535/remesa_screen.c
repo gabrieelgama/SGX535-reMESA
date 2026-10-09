@@ -10,9 +10,11 @@
 #include "remesa_render_pass.h"
 #include "remesa_sampler_state.h"
 #include "remesa_texture_binding.h"
+#include "remesa_texture_descriptor.h"
 #include "remesa_nir_uniform.h"
 #ifdef REMESA_WITH_NIR
 #include "remesa_nir.h"
+#include "remesa_shader_ir.h"
 #include "nir.h"
 #include "util/ralloc.h"
 #endif
@@ -48,8 +50,15 @@ struct resource {
 enum fixed_kind { FIXED_BLEND,FIXED_DSA,FIXED_RASTER,FIXED_COUNT };
 struct fixed { struct fixed *next; enum fixed_kind kind; bool deleted,scissor,depth_clip,full_clip; };
 struct elements { struct elements *next; struct pipe_vertex_element position; bool deleted; };
-struct vertex { struct vertex *next; unsigned input_slot; bool deleted; };
+struct vertex { struct vertex *next; unsigned input_slot; bool deleted;
+#ifdef REMESA_WITH_NIR
+ struct remesa_shader_ir semantic;
+#endif
+};
 struct fragment { struct fragment *next; uint32_t argb; bool deleted,uses_uniform;
+#ifdef REMESA_WITH_NIR
+ struct remesa_shader_ir semantic;
+#endif
  struct remesa_uniform_color uniform; };
 struct context {
  struct pipe_context base; struct pipe_vertex_buffer vb; struct pipe_vertex_element position;
@@ -421,11 +430,13 @@ static void *unsupported_shader(struct pipe_context *p,const struct pipe_shader_
 static void *create_vertex(struct pipe_context *p,const struct pipe_shader_state *state)
 {
  struct vertex *v=NULL;unsigned slot;int err=ENOTSUP;
+ struct remesa_shader_ir semantic={0};
  if(state&&state->type==PIPE_SHADER_IR_NIR) {
   /* Transform feedback is a separate, unsupported API contract. */
-  err=state->stream_output.num_outputs ? ENOTSUP : remesa_nir_position_vertex(state->ir.nir,&slot);
+  err=state->stream_output.num_outputs ? ENOTSUP : remesa_shader_ir_lower(state->ir.nir,&semantic);
+  if(!err)err=remesa_shader_ir_vertex_input(&semantic,&slot);
   ralloc_free(state->ir.nir);
-  if(!err) {v=calloc(1,sizeof(*v));if(!v)err=ENOMEM;else {v->input_slot=slot;v->next=c(p)->vertices;c(p)->vertices=v;}}
+  if(!err) {v=calloc(1,sizeof(*v));if(!v)err=ENOMEM;else {v->input_slot=slot;v->semantic=semantic;v->next=c(p)->vertices;c(p)->vertices=v;}}
  }
  c(p)->error=err;return v;
 }
@@ -452,8 +463,10 @@ static void *create_fragment(struct pipe_context *p,const struct pipe_shader_sta
 {
  struct fragment *f=NULL;uint32_t argb=0;int err=ENOTSUP;bool uniform=false;
  struct remesa_uniform_color descriptor={0};
+ struct remesa_shader_ir semantic={0};
  if(state && state->type==PIPE_SHADER_IR_NIR) {
-  err=state->stream_output.num_outputs ? ENOTSUP : remesa_nir_constant_fragment(state->ir.nir,&argb);
+  err=state->stream_output.num_outputs ? ENOTSUP : remesa_shader_ir_lower(state->ir.nir,&semantic);
+  if(!err)err=remesa_shader_ir_fragment_color(&semantic,&argb);
   if(err==ENOTSUP&&!state->stream_output.num_outputs) {
    err=remesa_nir_uniform_fragment(state->ir.nir,&descriptor);uniform=!err;
   }
@@ -462,7 +475,7 @@ static void *create_fragment(struct pipe_context *p,const struct pipe_shader_sta
   if(!err) {
    f=calloc(1,sizeof(*f));
    if(!f) err=ENOMEM;
-   else {f->argb=argb;f->uses_uniform=uniform;f->uniform=descriptor;f->next=c(p)->fragments;c(p)->fragments=f;}
+   else {f->argb=argb;f->semantic=semantic;f->uses_uniform=uniform;f->uniform=descriptor;f->next=c(p)->fragments;c(p)->fragments=f;}
   }
  }
  c(p)->error=err;return f;
@@ -585,6 +598,29 @@ static int texture_storage(void *owner,struct pipe_resource *resource,
  if(!r(resource)->bo || !r(resource)->pass.resource_cookie) return ESTALE;
  *out=(struct remesa_texture_storage){r(resource)->pass.resource_cookie,
      r(resource)->bytes,r(resource)->stride};return 0;
+}
+/* Frontend metadata bridge only. The provider must independently attest the
+ * retained mapping; this API never encodes a texture or admits sampling. */
+int remesa_context_texture_view_storage(struct pipe_context *p,
+ const struct pipe_sampler_view *view,struct remesa_texture_storage *out)
+{
+ if(!p||!out)return EINVAL;
+ if(s(p->screen)->closing)return ESHUTDOWN;
+ return remesa_texture_view_storage(c(p)->textures,view,out);
+}
+int remesa_context_prepare_texture_descriptor(struct pipe_context *p,
+ const struct pipe_sampler_view *view,const struct pipe_sampler_state *sampler,
+ uint64_t owner,remesa_texture_mapping_query query,void *user,
+ struct remesa_texture_descriptor *out)
+{
+ struct remesa_texture_storage storage;int error;
+ if(!p||!out||!query)return EINVAL;
+ error=remesa_context_texture_view_storage(p,view,&storage);if(error)return error;
+ /* Pointer membership was checked before view dereference. Do not let a
+  * provider's claimed completion override an unfinished frontend writer. */
+ error=resource_sync(p->screen,r(view->texture),0);if(error)return error;
+ return remesa_texture_descriptor_prepare(c(p)->textures,view,sampler,
+     owner,query,user,out);
 }
 static struct pipe_sampler_view *create_sampler_view(struct pipe_context *p,
  struct pipe_resource *resource,const struct pipe_sampler_view *view)

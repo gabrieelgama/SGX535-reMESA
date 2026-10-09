@@ -43,7 +43,7 @@ result={'scope':'Actual pinned Mesa descriptor selector with mocked identities; 
 for variant,cc,flags,runner in variants:
  result['variants'][variant]={}
  for target in ['dri','xcb','present_scale']:
-  sources=([here/n for n in ['remesa_fixed_state.c','remesa_render_pass.c','remesa_sampler_state.c','remesa_texture_binding.c','remesa_screen.c','remesa_draw.c','remesa_linux.c','remesa_loader.c','remesa_dri.c','tests/test_dri.c']]+[root/'common/remesa/draw_packet.c',selector] if target=='dri' else [here/n for n in ['remesa_present.c','remesa_present_scale.c','remesa_xcb.c','tests/test_'+target+'.c']])
+  sources=([here/n for n in ['remesa_fixed_state.c','remesa_render_pass.c','remesa_sampler_state.c','remesa_texture_binding.c','remesa_texture_descriptor.c','remesa_screen.c','remesa_draw.c','remesa_linux.c','remesa_loader.c','remesa_dri.c','tests/test_dri.c']]+[root/'common/remesa/draw_packet.c',selector] if target=='dri' else [here/n for n in ['remesa_present.c','remesa_present_scale.c','remesa_xcb.c','tests/test_'+target+'.c']])
   command=cc+base+flags+[str(s) for s in sources]+(['-Wl,--wrap=open','-Wl,--wrap=fstat','-Wl,--wrap=ioctl'] if target=='dri' else [])+['-o',str(a.output/(variant+'-'+target))]
   built=subprocess.run(command,capture_output=True,text=True,env=env);(a.output/(variant+'-'+target+'-compile.log')).write_text(built.stdout+built.stderr)
   if built.returncode:raise SystemExit('Compile failed: '+variant+' '+target)
