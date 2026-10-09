@@ -2,6 +2,14 @@
 
 No OpenGL version is currently advertised. OpenGL 3.0 feasibility remains **UNKNOWN**. The first real context remains the implementation priority. This is a capability inventory, not a conformance claim.
 
+The independent encoder increment adds scalar virtual-register lowering,
+canonical **host-only** USSE serialization/decoding, symbolic PDS relocations,
+and immutable plans owned by actual Gallium shader callbacks. The plans reject
+stale current bindings and return `ENOTSUP` for hardware emission. No SGX opcode,
+instruction width, register field or PDS launch encoding was admitted. These
+modules therefore do not change the OpenGL admission mask `0x1f` or establish
+GPU shader execution. See [the independent evidence inventory](independent-encoding-evidence-20261009.json).
+
 Latest context increment: the complete Mesa25.2.0 i386 EGL/GBM/DRI runtime
 now reaches the real reMESA constructor on the Mini12. Identity, transport and
 diagnostic screen allocation pass; OpenGL admission rejects with ENOTSUP and

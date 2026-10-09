@@ -3,12 +3,21 @@
 #define REMESA_SCREEN_H
 #include <stdint.h>
 #include <stdbool.h>
+#include <stddef.h>
 #include "remesa_texture_descriptor.h"
 /* Opaque factory ABI also used by the standalone ownership-model tests.
  * The Gallium adapter qualification compiles against pinned Mesa headers. */
 struct pipe_screen;
 struct remesa_device;
 struct pipe_context; struct pipe_resource; struct pipe_fence_handle;
+struct remesa_shader_program_report;
+/* Actual callback-created, context-owned shader handles only. No executable
+ * program is claimed; the encode call currently fails ENOTSUP transactionally.
+ * Available only in REMESA_WITH_NIR builds. Does not change context state. */
+int remesa_context_shader_program_report(struct pipe_context *,unsigned stage,
+ void *shader,struct remesa_shader_program_report *);
+int remesa_context_shader_program_encode(struct pipe_context *,unsigned stage,
+ void *shader,void *,size_t,size_t *);
 /* Poll/wait the existing resource writer; preserves exact backend errors.
  * Does not issue a draw or manufacture completion. */
 int remesa_resource_wait_writer(struct pipe_context *,struct pipe_resource *,uint64_t timeout);

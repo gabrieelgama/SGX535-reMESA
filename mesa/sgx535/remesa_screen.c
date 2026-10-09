@@ -15,6 +15,7 @@
 #ifdef REMESA_WITH_NIR
 #include "remesa_nir.h"
 #include "remesa_shader_ir.h"
+#include "remesa_shader_program.h"
 #include "nir.h"
 #include "util/ralloc.h"
 #endif
@@ -52,12 +53,12 @@ struct fixed { struct fixed *next; enum fixed_kind kind; bool deleted,scissor,de
 struct elements { struct elements *next; struct pipe_vertex_element position; bool deleted; };
 struct vertex { struct vertex *next; unsigned input_slot; bool deleted;
 #ifdef REMESA_WITH_NIR
- struct remesa_shader_ir semantic;
+ struct remesa_shader_program program;
 #endif
 };
 struct fragment { struct fragment *next; uint32_t argb; bool deleted,uses_uniform;
 #ifdef REMESA_WITH_NIR
- struct remesa_shader_ir semantic;
+ struct remesa_shader_program program;
 #endif
  struct remesa_uniform_color uniform; };
 struct context {
@@ -431,12 +432,14 @@ static void *create_vertex(struct pipe_context *p,const struct pipe_shader_state
 {
  struct vertex *v=NULL;unsigned slot;int err=ENOTSUP;
  struct remesa_shader_ir semantic={0};
+ struct remesa_shader_program program={0};
  if(state&&state->type==PIPE_SHADER_IR_NIR) {
   /* Transform feedback is a separate, unsupported API contract. */
   err=state->stream_output.num_outputs ? ENOTSUP : remesa_shader_ir_lower(state->ir.nir,&semantic);
   if(!err)err=remesa_shader_ir_vertex_input(&semantic,&slot);
+  if(!err)err=remesa_shader_program_prepare(&semantic,&program);
   ralloc_free(state->ir.nir);
-  if(!err) {v=calloc(1,sizeof(*v));if(!v)err=ENOMEM;else {v->input_slot=slot;v->semantic=semantic;v->next=c(p)->vertices;c(p)->vertices=v;}}
+  if(!err) {v=calloc(1,sizeof(*v));if(!v)err=ENOMEM;else {v->input_slot=slot;v->program=program;v->next=c(p)->vertices;c(p)->vertices=v;}}
  }
  c(p)->error=err;return v;
 }
@@ -457,6 +460,7 @@ static void delete_vertex(struct pipe_context *p,void *handle)
  struct context *ctx=c(p);struct vertex *v=find_vertex(ctx,handle);
  if(!v){ctx->error=EINVAL;return;}
  if(ctx->bound_vertex==v)ctx->bound_vertex=NULL;
+ remesa_shader_program_finish(&v->program);
  v->deleted=true;
 }
 static void *create_fragment(struct pipe_context *p,const struct pipe_shader_state *state)
@@ -464,9 +468,11 @@ static void *create_fragment(struct pipe_context *p,const struct pipe_shader_sta
  struct fragment *f=NULL;uint32_t argb=0;int err=ENOTSUP;bool uniform=false;
  struct remesa_uniform_color descriptor={0};
  struct remesa_shader_ir semantic={0};
+ struct remesa_shader_program program={0};
  if(state && state->type==PIPE_SHADER_IR_NIR) {
   err=state->stream_output.num_outputs ? ENOTSUP : remesa_shader_ir_lower(state->ir.nir,&semantic);
   if(!err)err=remesa_shader_ir_fragment_color(&semantic,&argb);
+  if(!err)err=remesa_shader_program_prepare(&semantic,&program);
   if(err==ENOTSUP&&!state->stream_output.num_outputs) {
    err=remesa_nir_uniform_fragment(state->ir.nir,&descriptor);uniform=!err;
   }
@@ -475,7 +481,7 @@ static void *create_fragment(struct pipe_context *p,const struct pipe_shader_sta
   if(!err) {
    f=calloc(1,sizeof(*f));
    if(!f) err=ENOMEM;
-   else {f->argb=argb;f->semantic=semantic;f->uses_uniform=uniform;f->uniform=descriptor;f->next=c(p)->fragments;c(p)->fragments=f;}
+   else {f->argb=argb;f->program=program;f->uses_uniform=uniform;f->uniform=descriptor;f->next=c(p)->fragments;c(p)->fragments=f;}
   }
  }
  c(p)->error=err;return f;
@@ -499,9 +505,43 @@ static void delete_fragment(struct pipe_context *p,void *handle)
  struct context *ctx=c(p);struct fragment *f=find_fragment(ctx,handle);
  if(!f){ctx->error=EINVAL;return;}
  if(ctx->bound_fragment==f){ctx->pipeline_bound=false;ctx->bound_fragment=NULL;}
+ remesa_shader_program_finish(&f->program);
  /* Keep a tombstone until context teardown so a stale handle cannot alias a
   * freshly allocated shader. No NIR/program allocation is retained. */
  f->deleted=true;
+}
+int remesa_context_shader_program_report(struct pipe_context *p,unsigned stage,
+                                        void *handle,struct remesa_shader_program_report *out)
+{
+ if(!p||!out||!handle)return EINVAL;
+ if(s(p->screen)->closing)return ESHUTDOWN;
+ if(stage==PIPE_SHADER_VERTEX) {
+  struct vertex *v=find_vertex(c(p),handle);
+  return v ? remesa_shader_program_report(&v->program,out) : EINVAL;
+ }
+ if(stage==PIPE_SHADER_FRAGMENT) {
+  struct fragment *f=find_fragment(c(p),handle);
+  if(!f)return EINVAL;
+  /* CPU uniform snapshot specialization is not a GPU uniform program. */
+  return f->uses_uniform ? ENOTSUP : remesa_shader_program_report(&f->program,out);
+ }
+ return ENOTSUP;
+}
+int remesa_context_shader_program_encode(struct pipe_context *p,unsigned stage,
+                                        void *handle,void *out,size_t capacity,size_t *written)
+{
+ if(!p||!handle||!written||(!out&&capacity))return EINVAL;
+ if(s(p->screen)->closing)return ESHUTDOWN;
+ if(stage==PIPE_SHADER_VERTEX) {
+  struct vertex *v=find_vertex(c(p),handle);
+  return v ? remesa_shader_program_encode(&v->program,out,capacity,written) : EINVAL;
+ }
+ if(stage==PIPE_SHADER_FRAGMENT) {
+  struct fragment *f=find_fragment(c(p),handle);
+  if(!f)return EINVAL;
+  return f->uses_uniform ? ENOTSUP : remesa_shader_program_encode(&f->program,out,capacity,written);
+ }
+ return ENOTSUP;
 }
 #endif
 /* Pure state admission does not generate new SGX state bytes. These immutable

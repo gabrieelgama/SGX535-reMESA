@@ -1,6 +1,7 @@
 /* SPDX-License-Identifier: MIT; original host IR, no hardware encodings. */
 #include "remesa_shader_ir.h"
 #include "remesa_nir.h"
+#include "remesa_usse.h"
 #include <errno.h>
 #include <stdio.h>
 #include <string.h>
@@ -144,5 +145,7 @@ int remesa_shader_ir_dump(const struct remesa_shader_ir *p,char *out,size_t size
 int remesa_shader_ir_encode_sgx535(const struct remesa_shader_ir *p,void *out,size_t size,size_t *written)
 {
  if(!written||(!out&&size))return EINVAL;
- int ret=remesa_shader_ir_validate(p);return ret?ret:ENOTSUP;
+ struct remesa_usse_program program;
+ int ret=remesa_usse_lower(p,&program);
+ return ret?ret:remesa_usse_encode(&program,out,size,written);
 }
