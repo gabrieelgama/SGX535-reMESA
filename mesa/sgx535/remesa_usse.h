@@ -37,8 +37,9 @@ struct remesa_usse_encoding_status {
 /* Validation admits only identical float4 POSITION or existing endpoint COLOR
  * semantic profiles. Dense SSA, forward refs, unused nodes/storage rejected. */
 int remesa_usse_validate(const struct remesa_usse_program *);
-/* Pure COPY/COMPOSE4 channel aliases are propagated after strict IR validation.
- * Equivalent copy chains produce identical scalar plans without new values.
+/* Pure COPY/COMPOSE4 aliases and exact-bit constants are shared after strict
+ * IR validation. Equivalent chains produce identical scalar plans without
+ * new values; repeated color channels share one virtual constant definition.
  * Existing host MOVE records remain valid; no hardware MOV is encoded. */
 int remesa_usse_lower(const struct remesa_shader_ir *,struct remesa_usse_program *);
 /* Original LE host format. Never submit these bytes as hardware program data.

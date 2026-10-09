@@ -40,7 +40,7 @@ int main(void)
  struct remesa_shader_program_report report={0};
  CHECK(!remesa_shader_program_report(&program,&report));
  CHECK(report.stage==REMESA_IR_FRAGMENT&&report.status==REMESA_PROGRAM_SEMANTIC_ONLY&&
-       report.virtual_instructions==8&&report.binary_error==ENOTSUP);
+       report.virtual_instructions==6&&report.binary_error==ENOTSUP);
  CHECK(report.register_evidence.use_banks==16&&
        report.register_evidence.use_address_bits==25&&
        report.register_evidence.declared_pds_alignment_shift==20&&

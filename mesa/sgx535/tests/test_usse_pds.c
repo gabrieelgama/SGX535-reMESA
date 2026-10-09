@@ -77,15 +77,17 @@ static void test_usse(void)
   struct remesa_usse_program a,b,minimal;
   CHECK(!remesa_usse_lower(&ir,&a));CHECK(!remesa_usse_lower(&ir,&b));
   CHECK(!memcmp(&a,&b,sizeof(a))&&!remesa_usse_validate(&a));
-  CHECK(a.stage==ir.stage&&a.count==8);
+  CHECK(a.stage==ir.stage&&a.count==(stage?6u:8u));
   struct remesa_shader_ir direct=profile(stage,0),snapshot=ir;
   CHECK(!remesa_usse_lower(&direct,&minimal)&&!memcmp(&a,&minimal,sizeof(a)));
   CHECK(!memcmp(&ir,&snapshot,sizeof(ir)));
-  for(unsigned c=0;c<4;c++) {
+  for(unsigned c=0;c<(stage?2u:4u);c++) {
    CHECK(a.instructions[c].op==(stage?REMESA_USSE_CONSTANT:REMESA_USSE_INPUT));
    CHECK(a.instructions[c].dst==c&&a.instructions[c].src==REMESA_USSE_NO_VALUE);
+  }
+  for(unsigned c=0;c<4;c++) {
    CHECK(a.instructions[a.count-4+c].op==(stage?REMESA_USSE_EXPORT_COLOR:REMESA_USSE_EXPORT_POSITION));
-   CHECK(a.instructions[a.count-4+c].channel==c&&a.instructions[a.count-4+c].src==c);
+   CHECK(a.instructions[a.count-4+c].channel==c&&a.instructions[a.count-4+c].src==(stage?(c==1?1u:0u):c));
   }
   unsigned char bytes[16+REMESA_USSE_INSTRUCTIONS*24],again[sizeof(bytes)];
   size_t n=999,m=999;
@@ -190,6 +192,61 @@ static void test_usse(void)
  CHECK(remesa_usse_deserialize_host(NULL,0,&bad)==EINVAL);
  CHECK(remesa_usse_deserialize_host(bytes,n,NULL)==EINVAL);
  CHECK(remesa_usse_identity(&p,NULL)==EINVAL);
+}
+static void test_constant_sharing(void)
+{
+ /* Three admitted opaque endpoint RGB colors retain exact channels. Other
+  * endpoint colors are still rejected by the existing profile admission.
+  * Values are defined in first-use order, independently of host float rules.
+  * The old unshared schema remains valid, not silently reinterpreted. */
+ for(unsigned rgb=0;rgb<8;rgb++) {
+  struct remesa_shader_ir ir=profile(1,0);
+  for(unsigned c=0;c<3;c++)ir.instructions[0].bits[c]=(rgb&(1u<<c))?UINT32_C(0x3f800000):0;
+  struct remesa_shader_ir snapshot=ir;
+  struct remesa_usse_program p,again,unshared={.schema=REMESA_USSE_SCHEMA,.stage=REMESA_IR_FRAGMENT,.count=8};
+  if(rgb!=2&&rgb!=3&&rgb!=5) {
+   memset(&p,0xa5,sizeof(p));again=p;
+   CHECK(remesa_usse_lower(&ir,&p)==ENOTSUP&&!memcmp(&p,&again,sizeof(p)));
+   continue;
+  }
+  CHECK(!remesa_usse_lower(&ir,&p)&&!remesa_usse_validate(&p));
+  CHECK(p.count==6);
+  CHECK(!memcmp(&ir,&snapshot,sizeof(ir)));
+  for(unsigned c=0;c<4;c++) {
+   const struct remesa_usse_instruction *export=&p.instructions[p.count-4+c];
+   CHECK(export->op==REMESA_USSE_EXPORT_COLOR&&export->channel==c&&export->src<p.count-4);
+   CHECK(p.instructions[export->src].op==REMESA_USSE_CONSTANT&&p.instructions[export->src].bits==ir.instructions[0].bits[c]);
+   unshared.instructions[c]=(struct remesa_usse_instruction){.op=REMESA_USSE_CONSTANT,.dst=c,.src=REMESA_USSE_NO_VALUE,.bits=ir.instructions[0].bits[c]};
+   unshared.instructions[4+c]=(struct remesa_usse_instruction){.op=REMESA_USSE_EXPORT_COLOR,.dst=REMESA_USSE_NO_VALUE,.src=c,.channel=c};
+  }
+  CHECK(!remesa_usse_validate(&unshared));
+  /* Four distinct semantic literal definitions composed into a color lower
+   * identically to one float4 literal. Semantic dependency validation still
+   * precedes sharing: duplicated definitions cannot hide unused IR nodes. */
+  struct remesa_shader_ir split={.schema=REMESA_SHADER_IR_SCHEMA,.stage=REMESA_IR_FRAGMENT,.count=6};
+  for(unsigned c=0;c<4;c++) {
+   split.instructions[c]=(struct remesa_ir_instruction){.op=REMESA_IR_CONSTANT,.dst=c,.type=REMESA_IR_FLOAT32,.components=1,.bits={snapshot.instructions[0].bits[c]}};
+   split.instructions[4].src[c].reg=c;
+  }
+  split.instructions[4].op=REMESA_IR_COMPOSE4;split.instructions[4].dst=4;
+  split.instructions[4].type=REMESA_IR_FLOAT32;split.instructions[4].components=4;
+  split.instructions[5]=(struct remesa_ir_instruction){.op=REMESA_IR_COLOR,.dst=REMESA_SHADER_IR_NO_REGISTER,.type=REMESA_IR_FLOAT32,.components=4,.src={{.reg=4}}};
+  CHECK(!remesa_usse_lower(&split,&again)&&!memcmp(&again,&p,sizeof(p)));
+  split.instructions[4].src[2].reg=split.instructions[4].src[0].reg;
+  again=p;CHECK(remesa_usse_lower(&split,&again)==ENOTSUP&&!memcmp(&again,&p,sizeof(p)));
+  unsigned char bytes[4096],before[4096];size_t length=0;
+  CHECK(!remesa_usse_serialize_host(&p,bytes,sizeof(bytes),&length));
+  CHECK(!remesa_usse_deserialize_host(bytes,length,&again)&&!memcmp(&p,&again,sizeof(p)));
+  memset(bytes,0xa5,sizeof(bytes));memcpy(before,bytes,sizeof(bytes));length=99;
+  CHECK(remesa_usse_encode(&p,bytes,sizeof(bytes),&length)==ENOTSUP&&length==99&&!memcmp(bytes,before,sizeof(bytes)));
+  /* Unsupported -0, non-endpoint, NaN and alpha cannot be optimized into a
+   * supported color. Rejection must precede any output modification. */
+  const uint32_t invalid[3]={UINT32_C(0x80000000),UINT32_C(0x3f000000),UINT32_C(0x7fc00000)};
+  for(unsigned k=0;k<4;k++) {
+   ir=snapshot;ir.instructions[0].bits[k<3?0:3]=k<3?invalid[k]:0;
+   again=p;CHECK(remesa_usse_lower(&ir,&again)==ENOTSUP&&!memcmp(&again,&p,sizeof(p)));
+  }
+ }
 }
 static void test_aliases(void)
 {
@@ -317,6 +374,7 @@ static void test_pds(void)
 int main(void)
 {
  test_copy_propagation();
+ test_constant_sharing();
  test_usse();
  test_pds();
  test_aliases();

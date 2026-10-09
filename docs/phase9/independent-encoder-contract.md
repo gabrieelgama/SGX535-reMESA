@@ -16,8 +16,13 @@ Supported host semantics are identity float32 position, endpoint constant
 fragment color admitted by the existing NIR recognizer, and validated copies.
 Lowering propagates pure COPY/COMPOSE4 channel aliases after validating the
 complete semantic program. Identity chains and inverse channel compositions
-therefore produce the same eight-record scalar plan as the direct profile,
-without consuming extra virtual values. The immutable original semantic IR is
+therefore produce the same scalar plan as the direct profile, without consuming
+extra virtual values. Identical literal float32 bit patterns share one virtual
+definition after semantic validation. Each of the three admitted endpoint-color
+profiles now needs two scalar constant definitions and four ordered exports,
+rather than four constants and four exports. Position channels remain distinct
+and retain their eight-record plan. Unshared host records remain valid.
+The immutable original semantic IR is
 retained for validation. This optimization neither allocates hardware registers
 nor establishes a GPU MOV instruction. Existing serialized host MOVs remain valid.
 No arithmetic, texture instructions, predicates, branches, varying linkage or
@@ -32,9 +37,12 @@ Queries and emission attempts do not change binding or submit work.
 
 The evidence inventory records independent primary-source architecture facts
 and 23 unknown USSE fields plus 16 unknown PDS fields. It admits zero instruction
-constants. No proprietary library or historical 440-byte image was accessed,
-decoded, extracted or used. Public Rogue/SGX530 information is not treated as a
-SGX535 rev121 encoding specification.
+constants. No proprietary instruction fields or historical 440-byte image are
+incorporated in this backend. Separate research inspected Xpsb.so artifact
+identity and ELF container metadata, but instruction analysis remains paused
+pending legal-basis review; no binary bytes were used in this optimization.
+Public Rogue/SGX530 information is not treated as a SGX535 rev121 encoding
+specification.
 
 Required before executable shader programs: independently admitted SGX535
 instruction widths/alignment, opcode locations/values, operand/register banks,

@@ -62,6 +62,8 @@ int remesa_usse_lower(const struct remesa_shader_ir *ir,struct remesa_usse_progr
 {
  struct remesa_usse_program p={.schema=REMESA_USSE_SCHEMA};
  uint32_t map[REMESA_SHADER_IR_VALUES][4]={{0}},defined=0;
+ uint32_t constants[REMESA_USSE_VALUES]={0},constant_values[REMESA_USSE_VALUES]={0};
+ uint32_t constant_count=0;
  if(!out||!ir||overlaps(out,sizeof(*out),ir,sizeof(*ir)))return EINVAL;
  int ret=remesa_shader_ir_validate(ir);if(ret)return ret;
  p.stage=ir->stage;
@@ -77,6 +79,14 @@ int remesa_usse_lower(const struct remesa_shader_ir *ir,struct remesa_usse_progr
    continue;
   }
   for(uint32_t c=0;c<i->components;c++) {
+   /* Value-number only literal float32 bit patterns after semantic admission.
+    * No arithmetic conversion or hardware immediate/register assumption.
+    * Reusing a constant must not merge position inputs or export channels. */
+   if(i->op==REMESA_IR_CONSTANT) {
+    uint32_t k=0;
+    for(;k<constant_count;k++)if(constants[k]==i->bits[c])break;
+    if(k<constant_count) {map[i->dst][c]=constant_values[k];continue;}
+   }
    if(p.count>=REMESA_USSE_INSTRUCTIONS)return EOVERFLOW;
    struct remesa_usse_instruction *u=&p.instructions[p.count++];
    u->dst=REMESA_USSE_NO_VALUE;u->src=REMESA_USSE_NO_VALUE;
@@ -87,7 +97,10 @@ int remesa_usse_lower(const struct remesa_shader_ir *ir,struct remesa_usse_progr
     if(defined>=REMESA_USSE_VALUES)return EOVERFLOW;
     u->dst=defined;map[i->dst][c]=defined++;
     if(i->op==REMESA_IR_INPUT) {u->op=REMESA_USSE_INPUT;u->channel=c;}
-    else if(i->op==REMESA_IR_CONSTANT) {u->op=REMESA_USSE_CONSTANT;u->bits=i->bits[c];}
+    else if(i->op==REMESA_IR_CONSTANT) {
+     u->op=REMESA_USSE_CONSTANT;u->bits=i->bits[c];
+     constants[constant_count]=i->bits[c];constant_values[constant_count++]=u->dst;
+    }
     else return ENOTSUP;
    }
   }
