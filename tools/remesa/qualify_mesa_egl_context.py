@@ -22,6 +22,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--mesa-cache", type=Path, required=True)
     parser.add_argument("--frontend", type=Path, required=True)
+    parser.add_argument("--libegl", type=Path, help="Exact isolated Mesa libEGL candidate; default pinned cache build")
     parser.add_argument("--dril", type=Path, required=True)
     parser.add_argument("--qemu-i386", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
@@ -88,6 +89,22 @@ int main(int argc,char **argv) {
         if "12 unsupported identities rejected" not in renderer_result.stdout:
             raise RuntimeError("Renderer rejection cases were not executed")
 
+    invalid_references = []
+    for name, content in (("short", b"\0" * 4095),
+                          ("extra", b"\0" * 4097),
+                          ("wrong-pixels", b"\0" * 4096)):
+        reference = out / ("invalid-reference-" + name)
+        reference.write_bytes(content)
+        rejected = execute([launcher, args.qemu_i386, "-L", cache / "runtime",
+                            out / "mesa-egl-context-probe-i386", out / "missing-libEGL.so",
+                            "--triangle-reference", reference],
+                           "reference-reject-" + name, expected=1)
+        if '\"stage\":\"triangle_reference\",\"success\":false' not in rejected.stdout:
+            raise RuntimeError("Malformed GL draw reference not rejected")
+        if "dlopen_libEGL" in rejected.stdout:
+            raise RuntimeError("Malformed draw reference reached EGL")
+        invalid_references.append({"case": name, "PASS": True})
+
     duplicate = out / "mesa-egl-context-probe-i386-build-2"
     execute([cache / "wrappers/cc", "-std=c11", "-Wall", "-Wextra", "-Werror",
              "-I" + str(cache / "mesa-25.2.0/include"), source, "-ldl",
@@ -98,8 +115,9 @@ int main(int argc,char **argv) {
     runtime = out / "runtime"
     runtime.mkdir()
     libraries = {
-        "libEGL.so.1.0.0": cache / "build-i386/src/egl/libEGL.so.1.0.0",
+        "libEGL.so.1.0.0": args.libegl or cache / "build-i386/src/egl/libEGL.so.1.0.0",
         "libgbm.so.1.0.0": cache / "build-i386/src/gbm/libgbm.so.1.0.0",
+        "dri_gbm.so": cache / "build-i386/src/gbm/backends/dri/dri_gbm.so",
         "libgallium-25.2.0.so": args.frontend,
         "gma500_dri.so": args.dril,
     }
@@ -112,10 +130,42 @@ int main(int argc,char **argv) {
     run_env = env.copy()
     run_env.update({"LD_LIBRARY_PATH": str(runtime) + ":" + str(cache / "runtime/lib"),
                     "LIBGL_DRIVERS_PATH": str(runtime),
-                    "GBM_BACKENDS_PATH": str(cache / "install-i386/lib/gbm"),
+                    "GBM_BACKENDS_PATH": str(runtime),
                     "EGL_LOG_LEVEL": "debug", "LIBGL_DEBUG": "verbose",
                     "LIBGL_ALWAYS_SOFTWARE": "false",
                     "MESA_LOADER_DRIVER_OVERRIDE": "gma500"})
+    # Mesa25.2 uses a separate GBM DRI backend. Loading libgbm alone does not
+    # qualify that dependency. Exercise the actual backend ABI, without calling
+    # create_device or opening a DRM descriptor.
+    backend_source = out / "gbm_backend_probe.c"
+    backend_source.write_text('''/* SPDX-License-Identifier: MIT */
+#include <gbm_backend_abi.h>
+#include <dlfcn.h>
+#include <stdio.h>
+#include <string.h>
+int main(int argc,char **argv) {
+ if(argc!=2)return 2;
+ void *library=dlopen(argv[1],RTLD_NOW|RTLD_LOCAL);
+ if(!library){fprintf(stderr,"%s\\n",dlerror());return 1;}
+ GBM_GET_BACKEND_PROC_PTR get=(GBM_GET_BACKEND_PROC_PTR)dlsym(library,"gbmint_get_backend");
+ const struct gbm_core core={.v0.core_version=GBM_BACKEND_ABI_VERSION};
+ const struct gbm_backend *backend=get?get(&core):NULL;
+ int ok=backend && backend->v0.backend_version==GBM_BACKEND_ABI_VERSION &&
+        backend->v0.backend_name && !strcmp(backend->v0.backend_name,"dri") &&
+        backend->v0.create_device;
+ if(ok)puts("PASS: actual GBM DRI backend ABI; create_device not called; no device or context");
+ dlclose(library);return ok?0:1;
+}
+''')
+    backend_probe = out / "gbm-backend-probe-i386"
+    execute([cache / "wrappers/cc", "-std=c11", "-Wall", "-Wextra", "-Werror",
+             "-I" + str(cache / "mesa-25.2.0/src/gbm/main"), backend_source,
+             "-ldl", "-o", backend_probe], "gbm-backend-build")
+    backend_result = execute([launcher, args.qemu_i386, "-L", cache / "runtime",
+                              backend_probe, runtime / "dri_gbm.so"],
+                             "actual-gbm-backend", run_env=run_env)
+    if "actual GBM DRI backend ABI" not in backend_result.stdout:
+        raise RuntimeError("GBM DRI dependency did not load")
     result = execute([launcher, args.qemu_i386, "-L", cache / "runtime",
                       out / "mesa-egl-context-probe-i386",
                       runtime / "libEGL.so.1.0.0"],
@@ -149,7 +199,10 @@ int main(int argc,char **argv) {
         "physical_submissions": 0, "simulated_contexts": 0,
         "mesa_software_retry_attempted": "Falling back to surfaceless swrast" in result.stderr,
         "software_context_accepted": False,
-        "executed_test_processes": 10,
+        "executed_test_processes": 14,
+        "gbm_backend": "Actual dri_gbm.so loaded and ABI inspected; create_device not called",
+        "GL_draw_reference_rejections": invalid_references,
+        "GL_triangle_mode": "Implemented actual GL calls, not reached without admitted context; no GPU proof from renderer name",
         "renderer_admission": "Exact reMESA SGX535 only; 12 unsupported identities rejected in native, UBSan and i386",
         "initialize_failure_cleanup": "Actual eglTerminate succeeded exactly once before unloading libEGL",
         "gbm_device_rejections": invalid_devices,

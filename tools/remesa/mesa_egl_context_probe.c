@@ -1,6 +1,7 @@
 /* SPDX-License-Identifier: MIT */
-/* Actual Mesa EGL admission probe. It never issues a draw or a clear. The
- * offline qualifier enforces a host ioctl-denial sandbox before exec/QEMU.
+/* Actual Mesa EGL client. Draws require explicit --triangle-reference; the
+ * default probe issues neither draw nor clear. The offline qualifier enforces
+ * a host ioctl-denial sandbox before exec/QEMU.
  * Successful software context creation is rejected, not SGX evidence. */
 #define _GNU_SOURCE
 #include <EGL/egl.h>
@@ -94,16 +95,93 @@ static int test_renderer(void)
  return 0;
 }
 
+static void record_gl(const char *stage,int success,unsigned error)
+{
+ printf("{\"stage\":\"%s\",\"success\":%s,\"gl_error\":%u}\n",
+        stage,success?"true":"false",error);fflush(stdout);
+}
+
+/* Actual GL entry points, never an alternate rasterizer. Matching bytes and a
+ * renderer name are insufficient hardware attribution: the execution controller
+ * must independently authenticate submission/completion/retirement records. */
+static int draw_triangle(PFNEGLGETPROCADDRESSPROC get_proc, const unsigned char *reference)
+{
+#define GL_LOAD(result, name, arguments) \
+ result (*name) arguments = (result (*) arguments)get_proc(#name); \
+ if(!name){record_gl("symbol_" #name,0,0);return 1;}
+ GL_LOAD(unsigned,glGetError,(void))
+ GL_LOAD(void,glClearColor,(float,float,float,float))
+ GL_LOAD(void,glClear,(unsigned))
+ GL_LOAD(void,glViewport,(int,int,int,int))
+ GL_LOAD(void,glColor4f,(float,float,float,float))
+ GL_LOAD(void,glDisable,(unsigned))
+ GL_LOAD(void,glEnableClientState,(unsigned))
+ GL_LOAD(void,glDisableClientState,(unsigned))
+ GL_LOAD(void,glVertexPointer,(int,unsigned,int,const void *))
+ GL_LOAD(void,glDrawArrays,(unsigned,int,int))
+ GL_LOAD(void,glFlush,(void))
+ GL_LOAD(void,glFinish,(void))
+ GL_LOAD(void,glReadPixels,(int,int,int,int,unsigned,unsigned,void *))
+#undef GL_LOAD
+ if(glGetError()){record_gl("GL_initial_error",0,0);return 1;}
+#define GL_CHECK(name) do { unsigned e=glGetError();record_gl(#name,!e,(EGLint)e);if(e)return 1; } while(0)
+ glViewport(0,0,32,32);GL_CHECK(glViewport);
+ glClearColor(0,0,0,0);GL_CHECK(glClearColor);
+ glClear(0x4000);GL_CHECK(glClear);
+ glDisable(0x0b71);glDisable(0x0be2);glDisable(0x0b44);glDisable(0x0bd0);GL_CHECK(GL_fixed_state);
+ glColor4f(1,0,1,1);GL_CHECK(glColor4f);
+ const float vertices[3][4]={{-.5f,-.5f,0,1},{.5f,-.5f,0,1},{-.5f,.5f,0,1}};
+ glVertexPointer(4,0x1406,0,vertices);GL_CHECK(glVertexPointer);
+ glEnableClientState(0x8074);GL_CHECK(glEnableClientState);
+ glDrawArrays(0x0004,0,3);unsigned draw_error=glGetError();
+ record_gl("glDrawArrays",!draw_error,(EGLint)draw_error);
+ glDisableClientState(0x8074);unsigned state_error=glGetError();
+ record_gl("glDisableClientState",!state_error,(EGLint)state_error);
+ if(draw_error||state_error)return 1;
+ glFlush();GL_CHECK(glFlush);glFinish();GL_CHECK(glFinish);
+ unsigned char pixels[4096];memset(pixels,0x5a,sizeof(pixels));
+ glReadPixels(0,0,32,32,0x80e1,0x1401,pixels);GL_CHECK(glReadPixels);
+ unsigned mismatches=0;for(unsigned i=0;i<sizeof(pixels);i++)mismatches+=pixels[i]!=reference[i];
+ printf("GL_READBACK_BYTES=4096; BYTE_MISMATCHES=%u; GL_DRAW_CALLS=1; GPU_EXECUTION=UNVERIFIED\n",mismatches);
+ record_gl("GL_reference_comparison",!mismatches,0);return mismatches!=0;
+#undef GL_CHECK
+}
+static int load_reference(const char *path,unsigned char pixels[4096])
+{
+ FILE *f=fopen(path,"rb");if(!f)return errno;
+ size_t n=fread(pixels,1,4096,f);int extra=fgetc(f),bad=ferror(f);fclose(f);
+ if(n!=4096||extra!=EOF||bad)return EPROTO;
+ unsigned magenta=0,zero=0;
+ for(unsigned i=0;i<4096;i+=4) {
+  const unsigned char *v=pixels+i;
+  if(v[0]==255&&v[1]==0&&v[2]==255&&v[3]==255)magenta++;
+  else if(!v[0]&&!v[1]&&!v[2]&&!v[3])zero++;
+  else return EPROTO;
+ }
+ /* The controller separately authenticates the sealed reference hash/layout. */
+ return magenta==120&&zero==904?0:EPROTO;
+}
+
 int main(int argc, char **argv)
 {
- if (argc == 2 && strcmp(argv[1], "--test-renderer-admission") == 0)
+ const char *reference_path=NULL;unsigned char reference[4096];
+ if(argc>=4&&!strcmp(argv[argc-2],"--triangle-reference")) {
+  reference_path=argv[argc-1];argc-=2;
+  if(reference_path[0]!='/')return 2;
+ }
+ if (argc == 2 && !reference_path && strcmp(argv[1], "--test-renderer-admission") == 0)
   return test_renderer();
  if ((argc != 2 && (argc != 6 || strcmp(argv[2], "--drm-device") ||
                                strcmp(argv[4], "--libgbm"))) ||
      (argc >= 2 && argv[1][0] != '/') ||
      (argc == 6 && (argv[3][0] != '/' || argv[5][0] != '/'))) {
-  fprintf(stderr, "usage: %s /absolute/path/to/libEGL.so [--drm-device /dev/dri/cardN --libgbm /absolute/path/libgbm.so]\n", argv[0]);
+  fprintf(stderr, "usage: %s /absolute/path/to/libEGL.so [--drm-device /dev/dri/cardN --libgbm /absolute/path/libgbm.so] [--triangle-reference /sealed/reference.bgra]\n", argv[0]);
   return 2;
+ }
+ if(reference_path) {
+  int error=load_reference(reference_path,reference);
+  record("triangle_reference",!error,0);
+  if(error){fprintf(stderr,"Reference error: %d\n",error);return 1;}
  }
  /* Pin the requested driver and suppress generic Zink selection. Mesa may
   * still attempt software initialization after hardware failure; it must not
@@ -209,8 +287,8 @@ int main(int argc, char **argv)
   goto cleanup;
  }
  record("renderer_identity", 1, 0);
- puts("CONTEXT_CREATED=YES; GPU_EXECUTION=UNTESTED; DRAW_SUBMISSIONS=0");
- result = 0;
+ puts("CONTEXT_CREATED=YES; GPU_EXECUTION=UNTESTED; hardware submission count requires observer records");
+ result = reference_path?draw_triangle(eglGetProcAddress,reference):0;
 cleanup:
  if (context != EGL_NO_CONTEXT) {
   EGLBoolean released = eglMakeCurrent(display, EGL_NO_SURFACE,

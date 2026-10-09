@@ -2,11 +2,13 @@
 
 No OpenGL version is currently advertised. OpenGL 3.0 feasibility remains **UNKNOWN**. The first real context remains the implementation priority. This is a capability inventory, not a conformance claim.
 
-Latest context increment: actual EGL entry points executed under i386/QEMU;
-`eglInitialize` rejected the device-less ioctl sandbox. The GBM primary-node
-client path, sampler lifecycle/unbinding, legacy position NIR and FLOAT2/3/4
-host attribute preparation are implemented. No OpenGL context or new hardware
-execution is established. See [the exact trace](OPENGL-CONTEXT-TRACE.md).
+Latest context increment: the complete Mesa25.2.0 i386 EGL/GBM/DRI runtime
+now reaches the real reMESA constructor on the Mini12. Identity, transport and
+diagnostic screen allocation pass; OpenGL admission rejects with ENOTSUP and
+missing mask0x1f. Only DRM version queries were permitted; zero SGX submissions.
+Restricted fragment UBO0 specialization is implemented as synchronized host
+selection of existing constant-color profiles, not GPU uniform execution.
+See [the exact trace](OPENGL-CONTEXT-TRACE.md).
 
 | Target | Driver status | New barriers beyond earlier versions |
 |---|---|---|
@@ -21,7 +23,7 @@ Mesa 25.2.0 accepts four color attachments in its GL 3.0 gate with an explicit n
 | Functionality | Version | Native evidence | Mesa emulation | Current driver | Missing contract |
 |---|---|---|---|---|---|
 | Programmable vertex shader / GLSL 1.10 | 2.0+ | UNKNOWN general ISA; CONFIRMED diagnostic position program only | OFFLINE QUALIFIED lowered and variable-IO identity-position NIR with CPU coordinate preparation; no general CPU shader execution or CPU rasterizer | PARTIAL | General shader operations, uniforms/linkage and independently justified native ISA; restricted identity admission does not meet GLSL1.10 |
-| Programmable fragment shader / GLSL 1.10 | 2.0+ | CONFIRMED fixed observed constant-color profiles | Restricted NIR constant translation OFFLINE QUALIFIED; general shader execution not emulated | PARTIAL | ALU, varyings, uniforms, texture operations and general output semantics |
+| Programmable fragment shader / GLSL 1.10 | 2.0+ | CONFIRMED fixed observed constant-color profiles | Restricted NIR constant and aligned FS UBO0 host specialization OFFLINE QUALIFIED; general shader execution not emulated | PARTIAL | ALU, varyings, uniforms, texture operations and general output semantics |
 | GLSL 1.20 nonsquare matrices | 2.1+ | UNKNOWN | Mesa can lower matrix algebra once scalar/vector shader operations exist; not qualified here | UNSUPPORTED | General shader operations and GLSL conformance |
 | GLSL 1.30 integer/unsigned operations and stage interfaces | 3.0 | UNKNOWN | No valid emulation established; float approximation is insufficient | UNSUPPORTED | Exact integer semantics, shader IO and independently justified ISA |
 | Vertex/index buffer objects, attributes and primitive modes | 2.0+ | CONFIRMED one indexed diagnostic triangle; wider geometry OFFLINE QUALIFIED | Host packing/conversion possible; full OpenGL semantics not implemented | PARTIAL | General attributes, formats, primitive modes and reusable hardware lifecycle |

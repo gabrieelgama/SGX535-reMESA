@@ -50,7 +50,7 @@
     {
       "contract": "shader states",
       "status": "PARTIAL",
-      "restriction": "Restricted identity VS accepts matching legacy POS or generic0 semantic at input slot0. Constant FS scalar/vec4/identity recognition remains restricted to observed profiles. No general ALU, uniforms, varyings or texture compilation; live native profile still magenta-only."
+      "restriction": "Restricted identity VS and constant FS remain. Single FS NIR UBO0 vec4 at constant aligned offset recognizes and resolves synchronized host bytes into existing magenta/green/yellow color profiles. Immutable shader descriptor, copied user snapshot or retained resource, mapping leases and writer synchronization. No GPU UBO instruction, ALU, varying or texture compiler; native exact profile remains magenta-only."
     },
     {
       "contract": "screen GL caps",
@@ -70,7 +70,7 @@
     {
       "contract": "Mesa CSO cleanup/state callbacks",
       "status": "OFFLINE QUALIFIED",
-      "restriction": "Actual Mesa CSO create/unbind/destroy tested. Disabled stencil/blend constants, empty constant-buffer unbinds per stage+slot, single-sample mask; nonempty uniforms rejected persistently; empty framebuffer unbind releases references."
+      "restriction": "Actual Mesa CSO lifecycle tested. Disabled stencil/blend constants, empty unbinds per stage+slot and single sample. With NIR: bounded FS constant-buffer slot0 supports immutable user snapshots or retained R8 buffer backing, 16-byte alignment and writer-gated reads. Borrowed sole-owner rebinding retains incoming resource before releasing the previous binding. Unsupported stages/slots/binds remain draw-blocking. Empty framebuffer releases references."
     },
     {
       "contract": "NIR compiler-options query",
@@ -95,6 +95,6 @@
   "vertex_qualification": "/home/gama/sgx535-offline/phase9-vertex-nir-20261009T003124Z/result.json",
   "context_contract_qualification": "/home/gama/sgx535-offline/phase9-context-contracts-20261009/result.json",
   "screen_capability_qualification": "/home/gama/sgx535-offline/phase9-capabilities-regression-20261009/result.json",
-  "current_increment": "/home/gama/sgx535-offline/phase9-opengl-entry-20261009T061305Z/result.json",
-  "actual_context_trace": "OPENGL-CONTEXT-TRACE.md; real EGL init failure is an offline environment result, separate from ENOTSUP driver screen admission."
+  "current_increment": "/home/gama/sgx535-offline/phase9-egl-unblock-20261009T064619Z/result.json",
+  "actual_context_trace": "OPENGL-CONTEXT-TRACE.md: actual live GBM reaches real DRI constructor; identity, transport and diagnostic screen allocation succeed, OpenGL admission fails ENOTSUP with missing mask0x1f."
 }

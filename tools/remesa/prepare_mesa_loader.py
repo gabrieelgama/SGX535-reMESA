@@ -7,7 +7,7 @@ Input may be a read-only Mesa source tree or the extracted contract subset.
 import argparse,hashlib,json,shutil
 from pathlib import Path
 
-def prepare(mesa,repo,output):
+def prepare(mesa,repo,output,egl_mesa=None):
     pin=json.loads((repo/'mesa/sgx535/mesa-loader-pin.json').read_text())
     originals={}
     for rel,h in pin['files'].items():
@@ -53,11 +53,17 @@ def prepare(mesa,repo,output):
     replace('src/gallium/targets/dril/meson.build',
             "[with_gallium_i915, 'i915_dri.so'],",
             "[with_gallium_i915, 'i915_dri.so'],\n             [with_gallium_sgx535, 'gma500_dri.so'],")
+    if egl_mesa is not None:
+        from prepare_egl_primary import PIN, render
+        primary_texts = render(egl_mesa)
+        if texts.keys() & primary_texts.keys():
+            raise ValueError('Conflicting Mesa loader/EGL overlay ownership')
+        texts.update(primary_texts)
     output.mkdir(parents=True)
     for rel,text in texts.items():
         p=output/rel;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(text)
     dst=output/'src/gallium/drivers/sgx535';dst.mkdir(parents=True)
-    sources=['remesa_render_pass.c','remesa_sampler_state.c','remesa_render_pass.h','remesa_sampler_state.h','remesa_fixed_state.c','remesa_fixed_state.h','remesa_nir.c','remesa_nir.h','remesa_resource_ref.h','remesa_resource_layout.h','remesa_screen.c','remesa_screen.h','remesa_draw.c','remesa_draw.h','remesa_linux.c','remesa_linux.h','remesa_device.h','remesa_loader.c','remesa_loader.h','remesa_dri.c','remesa_dri.h']
+    sources=['remesa_render_pass.c','remesa_sampler_state.c','remesa_render_pass.h','remesa_sampler_state.h','remesa_fixed_state.c','remesa_fixed_state.h','remesa_nir.c','remesa_nir_uniform.c','remesa_nir.h','remesa_nir_uniform.h','remesa_resource_ref.h','remesa_resource_layout.h','remesa_screen.c','remesa_screen.h','remesa_draw.c','remesa_draw.h','remesa_linux.c','remesa_linux.h','remesa_device.h','remesa_loader.c','remesa_loader.h','remesa_dri.c','remesa_dri.h']
     for n in sources:shutil.copyfile(repo/'mesa/sgx535'/n,dst/n)
     shutil.copyfile(repo/'common/remesa/draw_packet.c',dst/'draw_packet.c')
     inc=dst/'include/remesa';inc.mkdir(parents=True)
@@ -66,7 +72,7 @@ def prepare(mesa,repo,output):
     (dst/'meson.build').write_text("""# SPDX-License-Identifier: MIT
 # Isolated experimental integration; DRI constructor currently rejects GL.
 libremesa_loader = static_library('remesa_loader',
-  files('remesa_render_pass.c','remesa_sampler_state.c','remesa_fixed_state.c','remesa_nir.c','remesa_screen.c', 'remesa_draw.c', 'remesa_linux.c',
+  files('remesa_render_pass.c','remesa_sampler_state.c','remesa_fixed_state.c','remesa_nir.c','remesa_nir_uniform.c','remesa_screen.c', 'remesa_draw.c', 'remesa_linux.c',
         'remesa_loader.c', 'remesa_dri.c', 'draw_packet.c'),
   include_directories : [inc_include, inc_src, inc_gallium, inc_nir, inc_compiler,
                         include_directories('include')],
@@ -78,7 +84,15 @@ libremesa_loader = static_library('remesa_loader',
     manifest={'mesa_version':pin['version'],'scope':'Isolated source overlay only; no installation or hardware execution; OpenGL admission remains closed',
               'inputs':pin['files'],'files':{str(p.relative_to(output)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(output.rglob('*')) if p.is_file()}}
     (output/'integration.json').write_text(json.dumps(manifest,indent=2)+'\n')
+    if egl_mesa is not None:
+        # Keep the separately pinned EGL contract usable by the actual EGL
+        # builder, while the combined manifest continues to bind all sources.
+        egl_manifest={'mesa':'25.2.0','originals':PIN,
+                      'scope':'Pinned EGL component of combined Mesa overlay',
+                      'files':{rel:hashlib.sha256((output/rel).read_bytes()).hexdigest()
+                               for rel in primary_texts}}
+        (output/'egl-primary-integration.json').write_text(json.dumps(egl_manifest,indent=2)+'\n')
     return manifest
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--mesa',type=Path,required=True);p.add_argument('--repo',type=Path,default=Path(__file__).resolve().parents[2]);p.add_argument('--output',type=Path,required=True)
-    a=p.parse_args();m=prepare(a.mesa,a.repo,a.output);print('PASS: pinned isolated overlay, '+str(len(m['files']))+' files; OpenGL unavailable')
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--mesa',type=Path,required=True);p.add_argument('--repo',type=Path,default=Path(__file__).resolve().parents[2]);p.add_argument('--output',type=Path,required=True);p.add_argument('--egl-mesa',type=Path,help='Pinned full Mesa tree for strict primary-only EGL integration')
+    a=p.parse_args();m=prepare(a.mesa,a.repo,a.output,a.egl_mesa);print('PASS: pinned isolated overlay, '+str(len(m['files']))+' files; OpenGL unavailable')
