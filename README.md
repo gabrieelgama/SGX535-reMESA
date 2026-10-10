@@ -41,9 +41,9 @@ It wasn't supposed to become my main development machine but here we are.
 If you have old Poulsbo/SGX535 documentation, DDK files, drivers or hardware, feel free to open an issue.
 
 Information about other PowerVR Series5 GPUs is useful too.
-
 ## Thanks
 
 Thanks to Simon Fenney for pointing me towards Intel EMGD. That helped a lot.
 ## Special Thanks 
 Thanks, "0x07000345", aka Xpsb_emit_pixel_shader I hate you, 20 days of reverse engineering, countless solver runs, one mysterious hexadecimal. And after all that... ALWAYS. The real "0x07000345" was the friends we made along the way 🥀
+edit: A funny fact: I didn't discover error 0x07000345 using the Tab S7, but rather using my cell phone; the final boss couldn't get it😂💀
