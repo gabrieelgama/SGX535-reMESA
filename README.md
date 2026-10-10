@@ -47,5 +47,9 @@ Information about other PowerVR Series5 GPUs is useful too.
 Thanks to Simon Fenney for pointing me towards Intel EMGD. That helped a lot.
 ## Special Thanks 
 Thanks 0x07000345 aka Xpsb_emit_pixel_shader i hate you
-
+20 days of reverse engineering.
+Countless solver runs.
+One mysterious hexadecimal.
+And after all that...
+ALWAYS
 the real 0x07000345 is the friends we made along the way🥀
