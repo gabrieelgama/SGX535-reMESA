@@ -32,7 +32,10 @@ The raw results and hashes are in the repository as well.
 
 ## Driver OpenGL
 The driver under development will support OpenGL 2.1 Desktop and OpenGL 3.0 Experimental. 
-Based on my analysis, the SGX535 likely supports OpenGL 3.0. 
+Based on my analysis, the SGX535 likely supports OpenGL 3.0, The first games to be tested will be: Minecraft, which achieved an impressive average of 30 fps on the original Windows 7 driver, CS 1.6, Super Tux Kart, and browser games. 
+It will also have Wayland support (except for KDE Plasma; who uses that on an Atom that struggles to open 5 tabs?), In addition to extended driver support, REMESA will cover all operating systems that run on 32-bit and Intel processors, but don't expect to see me playing GTA SA on it because it was already a tortoise when it was born; even my cockatiel runs GTA SA faster. 
+
+And of course! Everything documented point by point (references)
 
 ## Development setup
 
