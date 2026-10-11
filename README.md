@@ -60,9 +60,21 @@ The interesting part is that investigating a single 32-bit word has gradually ex
 
 ## Contributing
 
-If you have old Poulsbo/SGX535 documentation, DDK files, drivers or hardware, feel free to open an issue.
+If you have old Poulsbo/SGX535 documentation, drivers, hardware, or information about historical DDK releases, feel free to open an issue.
 
-Information about other PowerVR Series5 GPUs is useful too.
+A note on previous SGX535 driver work
+
+I was recently contacted by email about another project that had reportedly achieved a working Mesa/Gallium driver for Poulsbo.
+
+While looking into the project, I came across references to some files whose origins I couldn't independently verify. One example was "sgxdefs.h", which appeared to contain over 8,000 lines, compared to the roughly 106-line version included in a historical distribution I had access to.
+
+That difference caught my attention, although it doesn't establish where the larger file came from or whether it was distributed with permission.
+
+For SGX535-reMESA, I'm taking a different approach: independently reconstructing the necessary hardware behavior and writing original driver code, without incorporating proprietary DDK implementations of uncertain provenance.
+
+I'm happy to learn about previous efforts and collaborate where possible, but I want to keep the project's code origins clear and verifiable.
+Information about other PowerVR Series5 GPUs is useful too, Our goal is to get to the mainline MESA and Mainline Kernel Patch. 
+
 ## Thanks
 
 Thanks to Simon Fenney for pointing me towards Intel EMGD. That helped a lot.
