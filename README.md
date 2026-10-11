@@ -36,6 +36,28 @@ Most development is done on a Galaxy Tab S7 running Linux through Termux/PRoot. 
 
 It wasn't supposed to become my main development machine but here we are.
 
+## Recent Findings — USSE Compiler Reverse Engineering
+
+I've been digging deeper into the original SGX535 userspace shader compiler, trying to understand how it builds and encodes USSE instructions.
+
+What started with investigating the mysterious "0x07000345" word ended up revealing quite a bit more about the compiler itself.
+
+I managed to trace parts of the instruction encoding process, including register field placement, MOV instruction handling, and parts of the compiler's finalization process. This was enough to start writing my own restricted USSE encoder and decoder, rather than relying on proprietary shader binaries.
+
+One of the more recent findings is that assembler flag bit 0 maps to bit 23 of the second encoded instruction word. The mapping is visible in the CPU-side compiler logic, although its exact meaning when executed by the GPU is still unknown.
+
+I also traced the compiler's cleanup callback, stored at offset "+0x630", through "_mesa_free" to the imported "free" function. The identity-MOV removal routine releases 11 referenced allocations and the instruction node itself. Two additional cleanup lists appear to manage recycled auxiliary records, but I haven't yet established whether their allocations are completely independent of instructions that remain alive.
+
+I'm currently tracing allocation ownership and instruction lifetimes to resolve that question.
+
+The independently written codec has passed 447 offline test cases in each of three environments: native Linux, UBSan, and i386/QEMU. Additional evidence checks and symbolic constraint tests have also passed.
+
+This doesn't mean the USSE instruction set is fully decoded. Several important details, including hardware register banks, instruction termination, PDS fetch behavior, and the full meaning of "0x07000345", still need verification.
+
+For now, the findings are being used to build and validate an original implementation offline. No new GPU shader submissions have been enabled.
+
+The interesting part is that investigating a single 32-bit word has gradually exposed much of the surrounding compiler machinery. There's still a lot to understand, but the picture is getting clearer.
+
 ## Contributing
 
 If you have old Poulsbo/SGX535 documentation, DDK files, drivers or hardware, feel free to open an issue.
