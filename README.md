@@ -30,6 +30,10 @@ Reproduction notes:
 
 The raw results and hashes are in the repository as well.
 
+## Driver OpenGL
+The driver under development will support OpenGL 2.1 Desktop and OpenGL 3.0 Experimental. 
+Based on my analysis, the SGX535 likely supports OpenGL 3.0. 
+
 ## Development setup
 
 Most development is done on a Galaxy Tab S7 running Linux through Termux/PRoot. Builds for the Mini 12 are cross-compiled for i686.
