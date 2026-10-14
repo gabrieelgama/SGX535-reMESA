@@ -27,6 +27,8 @@ Reproduction notes:
 - [Triangle](docs/reproduction/TRIANGLE.md)
 - [Square](docs/reproduction/SQUARE.md)
 - [Display](docs/reproduction/DISPLAY.md)
+- [Gama SGX-funcdoc](docs/reproduction/gamasgxfunc.doc) 
+
 
 The raw results and hashes are in the repository as well.
 
