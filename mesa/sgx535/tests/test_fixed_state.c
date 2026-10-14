@@ -1,6 +1,11 @@
 /* SPDX-License-Identifier: MIT */
+#ifdef NDEBUG
+#error This qualification requires assertions
+#endif
 #include <assert.h>
 #include <errno.h>
+#include <float.h>
+#include <math.h>
 #include <stdio.h>
 #include <string.h>
 #include "pipe/p_state.h"
@@ -37,13 +42,19 @@ int main(void)
    CHECK(remesa_validate_blend(&b)==0);
 #define BAD_D(field, value) do { struct pipe_depth_stencil_alpha_state t=d; t.field=value; CHECK(remesa_validate_dsa(&t)==ENOTSUP); } while (0)
    BAD_D(depth_enabled, 1);
-   BAD_D(depth_writemask, 1);
    BAD_D(stencil[0].enabled, 1);
    BAD_D(stencil[1].enabled, 1);
    BAD_D(alpha_enabled, 1);
    BAD_D(depth_bounds_test, 1);
-   d.depth_func=7; d.alpha_ref_value=0.7f; d.stencil[0].writemask=255;
+   d.depth_writemask=1; d.depth_func=7; d.alpha_ref_value=0.7f; d.stencil[0].writemask=255;
    CHECK(remesa_validate_dsa(&d)==0);
+   for (unsigned function = PIPE_FUNC_NEVER; function <= PIPE_FUNC_ALWAYS; ++function) {
+      d.depth_func=function;
+      CHECK(remesa_validate_dsa(&d)==0);
+      struct pipe_depth_stencil_alpha_state enabled=d;
+      enabled.depth_enabled=1;
+      CHECK(remesa_validate_dsa(&enabled)==ENOTSUP);
+   }
 #define BAD_R(field, value) do { struct pipe_rasterizer_state t=r; t.field=value; CHECK(remesa_validate_rasterizer(&t)==ENOTSUP); } while (0)
    BAD_R(cull_face, PIPE_FACE_BACK);
    BAD_R(fill_front, PIPE_POLYGON_MODE_LINE);
@@ -74,6 +85,82 @@ int main(void)
    r.point_size=19; r.line_width=3; r.line_stipple_enable=1;
    r.offset_units=99; r.offset_scale=99;
    CHECK(remesa_validate_rasterizer(&r)==0);
+   /* Gallium front_ccw refers to window-space orientation. These are host
+    * primitive decisions only; no SGX cull or edge rule is established. */
+   const float positive[3][4]={{1,2,.5f,1},{17,2,.5f,1},{1,10,.5f,1}};
+   float negative[3][4];
+   memcpy(negative,positive,sizeof(negative));
+   for (unsigned vertex=0; vertex<3; ++vertex) negative[vertex][1]=-negative[vertex][1];
+   bool discard=false;
+   for (unsigned winding=0; winding<2; ++winding) {
+      const float (*triangle)[4] = winding ? positive : (const float (*)[4])negative;
+      for (unsigned front_ccw=0; front_ccw<2; ++front_ccw) {
+         for (unsigned cull=PIPE_FACE_NONE; cull<=PIPE_FACE_FRONT_AND_BACK; ++cull) {
+            bool front=(winding!=0)==(front_ccw!=0);
+            bool expected=cull==PIPE_FACE_FRONT_AND_BACK ||
+                          (front ? cull==PIPE_FACE_FRONT : cull==PIPE_FACE_BACK);
+            CHECK(!remesa_cull_window_triangle(triangle,cull,front_ccw,&discard));
+            CHECK(discard==expected);
+         }
+      }
+   }
+   struct pipe_viewport_state viewport={0};
+   viewport.scale[0]=viewport.translate[0]=16;
+   viewport.scale[1]=viewport.translate[1]=16;
+   viewport.scale[2]=viewport.translate[2]=.5f;
+   const float clip[3][4]={{-2,0,0,1},{0,-1,0,1},{0,1,0,1}};
+   struct remesa_clipped_polygon polygon;
+   CHECK(!remesa_prepare_constant_triangle(clip,&viewport,32,32,&polygon));
+   CHECK(polygon.count==4);
+   for (unsigned i=2; i<polygon.count; ++i) {
+      float triangle[3][4];
+      memcpy(triangle[0],polygon.window[0],sizeof(triangle[0]));
+      memcpy(triangle[1],polygon.window[i-1],sizeof(triangle[0]));
+      memcpy(triangle[2],polygon.window[i],sizeof(triangle[0]));
+      CHECK(!remesa_cull_window_triangle((const float (*)[4])triangle,PIPE_FACE_BACK,true,&discard));
+      CHECK(!discard);
+   }
+   viewport.scale[1]=-16;
+   CHECK(!remesa_prepare_constant_triangle(clip,&viewport,32,32,&polygon));
+   for (unsigned i=2; i<polygon.count; ++i) {
+      float triangle[3][4];
+      memcpy(triangle[0],polygon.window[0],sizeof(triangle[0]));
+      memcpy(triangle[1],polygon.window[i-1],sizeof(triangle[0]));
+      memcpy(triangle[2],polygon.window[i],sizeof(triangle[0]));
+      CHECK(!remesa_cull_window_triangle((const float (*)[4])triangle,PIPE_FACE_BACK,true,&discard));
+      CHECK(discard);
+   }
+   const float line[3][4]={{1,2,0,1},{17,2,0,1},{25,2,0,1}};
+   CHECK(!remesa_cull_window_triangle(line,PIPE_FACE_BACK,true,&discard));
+   CHECK(discard);
+   const float diagonal[3][4]={{0,0,0,1},{1,1,0,1},{2,2,0,1}};
+   discard=true;
+   CHECK(remesa_cull_window_triangle(diagonal,PIPE_FACE_FRONT,true,&discard)==ERANGE);
+   CHECK(discard); /* uncertain orientation does not mutate output */
+   CHECK(!remesa_cull_window_triangle(diagonal,PIPE_FACE_NONE,true,&discard));
+   CHECK(!discard);
+   CHECK(!remesa_cull_window_triangle(diagonal,PIPE_FACE_FRONT_AND_BACK,true,&discard));
+   CHECK(discard);
+   float invalid[3][4];
+   memcpy(invalid,positive,sizeof(invalid)); invalid[2][0]=NAN;
+   discard=true;
+   CHECK(remesa_cull_window_triangle((const float (*)[4])invalid,PIPE_FACE_BACK,true,&discard)==EINVAL);
+   CHECK(discard);
+   memcpy(invalid,positive,sizeof(invalid)); invalid[0][3]=2;
+   CHECK(remesa_cull_window_triangle((const float (*)[4])invalid,PIPE_FACE_BACK,true,&discard)==ENOTSUP);
+   CHECK(discard);
+   CHECK(remesa_cull_window_triangle(positive,4,true,&discard)==EINVAL);
+   CHECK(discard);
+   CHECK(remesa_cull_window_triangle(NULL,PIPE_FACE_BACK,true,&discard)==EINVAL);
+   CHECK(remesa_cull_window_triangle(positive,PIPE_FACE_BACK,true,NULL)==EINVAL);
+   /* Binary32 extremes cannot overflow/underflow the binary64 determinant;
+    * this also checks the actual i386 host rather than a size_t-only model. */
+   const float large[3][4]={{0,0,0,1},{FLT_MAX,0,0,1},{0,FLT_MAX,0,1}};
+   const float tiny[3][4]={{0,0,0,1},{FLT_TRUE_MIN,0,0,1},{0,FLT_TRUE_MIN,0,1}};
+   CHECK(!remesa_cull_window_triangle(large,PIPE_FACE_BACK,true,&discard));
+   CHECK(!discard);
+   CHECK(!remesa_cull_window_triangle(tiny,PIPE_FACE_BACK,true,&discard));
+   CHECK(!discard);
    printf("fixed state: %u admission cases PASS; no GPU execution\n", cases);
    return 0;
 }

@@ -24,7 +24,7 @@ static struct pipe_resource *image(struct pipe_screen *s,unsigned w,unsigned h,e
 static void release(struct pipe_resource *r){if(!--r->reference.count)r->screen->resource_destroy(r->screen,r);}
 static void dimensions(void){
  const unsigned sizes[][2]={{32,32},{320,240},{640,480},{800,600},{1024,768},{1280,720},{1280,800},{1366,768},{1600,900},{1920,1080},{17,23}};
- struct fixture f={0};const struct remesa_device_ops ops={allocate,drop,map_bo,unmap_bo,submit,wait,destroy_fence};
+ struct fixture f={0};const struct remesa_device_ops ops={.allocate=allocate,.destroy_bo=drop,.map=map_bo,.unmap=unmap_bo,.submit=submit,.wait=wait,.destroy_fence=destroy_fence};
  struct remesa_device dev={.ops=&ops,.priv=&f,.resource_only_backend=true,.resource_limits={4096,4096,64,64*1024*1024}};
  struct pipe_screen *s=remesa_screen_create(&dev);assert(s);struct pipe_context *c=s->context_create(s,NULL,0);assert(c&&c->resource_copy_region&&c->clear_texture);
  const unsigned char red[4]={9,8,7,6},green[4]={1,2,3,4};
@@ -52,7 +52,7 @@ static void dimensions(void){
  puts("PASS 22 RGBA/BGRA CPU clear/copy sizes incl1280x800/1920x1080: exact pixels, bounds, padding; NO SGX");
 }
 int main(void){
- dimensions();struct fixture f={0};const struct remesa_device_ops ops={allocate,drop,map_bo,unmap_bo,submit,wait,destroy_fence};
+ dimensions();struct fixture f={0};const struct remesa_device_ops ops={.allocate=allocate,.destroy_bo=drop,.map=map_bo,.unmap=unmap_bo,.submit=submit,.wait=wait,.destroy_fence=destroy_fence};
  struct remesa_device dev={.ops=&ops,.priv=&f,.resource_only_backend=true,.resource_limits={0,0,64,0}};
  struct pipe_screen *s=remesa_screen_create(&dev);struct pipe_context *c=s->context_create(s,NULL,0),*other=s->context_create(s,NULL,0);assert(c&&other);
  struct pipe_resource *a=image(s,9,4,PIPE_FORMAT_B8G8R8A8_UNORM),*b=image(s,9,4,PIPE_FORMAT_B8G8R8A8_UNORM),*bad=image(s,9,4,PIPE_FORMAT_R8G8B8A8_UNORM);assert(a&&b&&bad);

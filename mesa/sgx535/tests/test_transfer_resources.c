@@ -29,7 +29,7 @@ static void dimensions(void)
 {
  const unsigned sizes[][2]={{32,32},{320,240},{640,480},{800,600},{1024,768},
   {1280,720},{1280,800},{1366,768},{1600,900},{1920,1080},{137,59},{1,1},{4096,1}};
- struct fixture f={0};const struct remesa_device_ops ops={allocate,drop,map,unmap,submit,wait,destroy_fence};
+ struct fixture f={0};const struct remesa_device_ops ops={.allocate=allocate,.destroy_bo=drop,.map=map,.unmap=unmap,.submit=submit,.wait=wait,.destroy_fence=destroy_fence};
  struct remesa_device dev={.ops=&ops,.priv=&f,.resource_only_backend=true,
   .resource_limits={.max_width=4096,.max_height=4096,.row_alignment=64,.max_resource_bytes=64*1024*1024}};
  struct pipe_screen *s=remesa_screen_create(&dev);assert(s);struct pipe_context *c=s->context_create(s,NULL,0);assert(c);
@@ -82,7 +82,7 @@ static void dimensions(void)
 int main(void)
 {
  dimensions();
- struct fixture f={0};const struct remesa_device_ops ops={allocate,drop,map,unmap,submit,wait,destroy_fence};
+ struct fixture f={0};const struct remesa_device_ops ops={.allocate=allocate,.destroy_bo=drop,.map=map,.unmap=unmap,.submit=submit,.wait=wait,.destroy_fence=destroy_fence};
  struct remesa_device dev={.ops=&ops,.priv=&f,.resource_only_backend=true};struct pipe_screen *s=remesa_screen_create(&dev);assert(s);struct pipe_context *c=s->context_create(s,NULL,0);assert(c);
  for(unsigned format=0;format<2;format++) {
   struct pipe_resource *r=create(s,320,240,format?PIPE_FORMAT_R8G8B8A8_UNORM:PIPE_FORMAT_B8G8R8A8_UNORM,0);assert(r);

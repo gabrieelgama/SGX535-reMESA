@@ -113,7 +113,7 @@ int main(void)
     assert(remesa_registry_init(&f.registry,f.slots,8)==REMESA_OK);
     struct remesa_backend backend={dispatch,release,&f};
     assert(remesa_provider_init(&f.provider,&f.registry,101,&backend)==REMESA_OK);
-    struct remesa_device_ops ops={allocate,destroy,map,unmap,submit,wait,destroy_fence};
+    struct remesa_device_ops ops={.allocate=allocate,.destroy_bo=destroy,.map=map,.unmap=unmap,.submit=submit,.wait=wait,.destroy_fence=destroy_fence};
     struct remesa_device device={.ops=&ops,.priv=&f,.offline_test_backend=true,.framebuffer_mode=REMESA_FRAMEBUFFER_REPLACE};
     struct pipe_screen *screen=remesa_screen_create(&device);assert(screen);
     struct pipe_context *ctx=screen->context_create(screen,NULL,0);assert(ctx);

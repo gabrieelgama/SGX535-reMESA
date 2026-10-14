@@ -27,6 +27,9 @@ struct remesa_texture_descriptor {
    uint64_t image_bytes;
    uint32_t width, height, stride, format;
    uint8_t swizzle[4];
+   uint64_t resource_bytes, level_offset;
+   uint32_t first_level, last_level;
+   uint64_t content_epoch;
 };
 /* Immutable preparation; every failure leaves *out unchanged. Uses the real
  * bank's pointer-membership, resource-cookie, layout and lifetime validation. */
@@ -40,11 +43,20 @@ int remesa_texture_descriptor_revalidate(const struct remesa_texture_descriptor 
    struct remesa_texture_binding_bank *, const struct pipe_sampler_view *,
    const struct pipe_sampler_state *, uint64_t expected_owner,
    remesa_texture_mapping_query, void *);
-#define REMESA_TEXTURE_HOST_METADATA_BYTES 128u
-/* Canonical little-endian diagnostic host format RMTD v1. It MUST NOT be
+#define REMESA_TEXTURE_HOST_METADATA_BYTES 160u
+/* Canonical little-endian diagnostic host format RMTD v3. The mapping offset
+ * selects the whole resource; level_offset additionally selects the base mip
+ * of the view. This is not an SGX address bitfield or sampling instruction.
+ * It MUST NOT be
  * submitted as a GPU descriptor. No native pointers, padding, or enum ABI. */
 int remesa_texture_descriptor_serialize(const struct remesa_texture_descriptor *,
                                        void *, size_t);
+/* Checked byte address for the selected base mip in the current 32-bit
+ * relocation address space. This is NOT a texture descriptor or proof of
+ * alignment/format applicability to a sampling unit. No wrapping relocation
+ * arithmetic is permitted; failure preserves *address. */
+int remesa_texture_descriptor_image_address(const struct remesa_texture_descriptor *,
+                                            uint32_t *address);
 /* There is no independently established SGX texture encoding. Always ENOTSUP;
  * destination and *written are preserved. Never substitutes host metadata. */
 int remesa_texture_descriptor_emit_sgx(const struct remesa_texture_descriptor *,

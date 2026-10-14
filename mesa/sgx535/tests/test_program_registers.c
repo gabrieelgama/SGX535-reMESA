@@ -146,6 +146,7 @@ int main(void)
  CHECK(e.use_banks == 16 && e.use_address_bits == 25 && e.use_data_master_shift == 25);
  CHECK(e.declared_use_alignment_shift == 7 && e.declared_pds_alignment_shift == 20);
  CHECK(!e.use_va_packing_verified && !e.rev121_verified && !e.instruction_fields_known);
+ CHECK(e.use_va_packing_observed == 1);
  remesa_program_register_evidence(NULL);
  printf("PASS %lu public register-field checks; zero hardware execution; no ISA qualification\n", checks);
  return 0;

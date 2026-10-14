@@ -3,6 +3,7 @@
 #include "nir_fixture.h"
 #include "vertex_nir_fixture.h"
 #include "remesa_draw.h"
+int inherited_recording_driver(void);
 #define main inherited_recording_driver
 #include "test_driver.c"
 #undef main
@@ -54,13 +55,16 @@ static void callback_case(unsigned mode)
  struct pipe_blend_state blend={0};blend.rt[0].colormask=PIPE_MASK_RGBA;struct pipe_depth_stencil_alpha_state depth={0};
  struct pipe_rasterizer_state raster={0};raster.fill_front=raster.fill_back=PIPE_POLYGON_MODE_FILL;raster.depth_clip_near=raster.depth_clip_far=true;
  if(mode==9)raster.depth_clip_far=false;
+ if(mode>=14&&mode<=18){raster.cull_face=mode==15?PIPE_FACE_FRONT:mode==16?PIPE_FACE_FRONT_AND_BACK:PIPE_FACE_BACK;raster.front_ccw=mode!=17;}
  void *bs=ctx->create_blend_state(ctx,&blend),*ds=ctx->create_depth_stencil_alpha_state(ctx,&depth),*rs=ctx->create_rasterizer_state(ctx,&raster);assert(bs&&ds&&rs);
  ctx->bind_blend_state(ctx,bs);ctx->bind_depth_stencil_alpha_state(ctx,ds);ctx->bind_rasterizer_state(ctx,rs);
- struct pipe_viewport_state viewport={.scale={16,16,.5},.translate={16,16,.5}};ctx->set_viewport_states(ctx,0,1,&viewport);assert(!remesa_context_error(ctx));
+ struct pipe_viewport_state viewport={.scale={16,16,.5},.translate={16,16,.5}};
+ if(mode==18)viewport.scale[1]=-16;
+ ctx->set_viewport_states(ctx,0,1,&viewport);assert(!remesa_context_error(ctx));
  float positions[6][4]={{-2,0,0,1},{0,-.5,0,1},{0,.5,0,1}};
  struct pipe_draw_info info={.mode=MESA_PRIM_TRIANGLES,.instance_count=1};struct pipe_draw_start_count_bias draw={.count=3};
  if(mode==1){const float p[3][4]={{-1,-1,0,2},{1,-1,0,2},{-1,1,0,2}};memcpy(positions,p,sizeof(p));}
- if(mode==2){const float p[6][4]={{-.5,-.5,0,1},{.5,-.5,0,1},{-.5,.5,0,1},{-.5,-.5,0,1},{-.5,.5,0,1},{.5,.5,0,1}};memcpy(positions,p,sizeof(p));draw.count=6;}
+ if(mode==2||(mode>=14&&mode<=18)){const float p[6][4]={{-.5,-.5,0,1},{.5,-.5,0,1},{-.5,.5,0,1},{-.5,-.5,0,1},{-.5,.5,0,1},{.5,.5,0,1}};memcpy(positions,p,sizeof(p));draw.count=6;}
  if(mode==3)for(unsigned i=0;i<3;i++)positions[i][0]=2;
  if(mode==4)positions[1][0]=NAN;
  if(mode==5){info.index_size=2;info.index.resource=ib;}
@@ -73,20 +77,49 @@ static void callback_case(unsigned mode)
  if(mode==12)draw.count=4;
  if(mode==13){shader.ir.nir=fixture(0xffff00ff);assert(!ctx->create_vs_state(ctx,&shader));ctx->bind_vs_state(ctx,NULL);}
  ctx->draw_vbo(ctx,&info,0,NULL,&draw,1);assert(rec.maps==rec.unmaps);
- bool success=mode<3;struct pipe_fence_handle *f=NULL;ctx->flush(ctx,&f,0);
+ bool success=mode<3||mode==12||mode==14||mode==15||mode==17||mode==18;struct pipe_fence_handle *f=NULL;ctx->flush(ctx,&f,0);
  if(success) {
   assert(!remesa_context_error(ctx)&&rec.draws==1&&f);
-  if(mode==0){const float expected[4][4]={{0,20,.5,1},{0,12,.5,1},{16,8,.5,1},{16,24,.5,1}};const uint16_t ix[6]={0,1,2,0,2,3};assert(rec.packet.vertex_count==4&&rec.packet.index_count==6&&!memcmp(rec.packet.positions,expected,sizeof(expected))&&!memcmp(rec.packet.indices,ix,sizeof(ix)));}
+  if(mode==0||mode==12){const float expected[4][4]={{0,20,.5,1},{0,12,.5,1},{16,8,.5,1},{16,24,.5,1}};const uint16_t ix[6]={0,1,2,0,2,3};assert(rec.packet.vertex_count==4&&rec.packet.index_count==6&&!memcmp(rec.packet.positions,expected,sizeof(expected))&&!memcmp(rec.packet.indices,ix,sizeof(ix)));}
   if(mode==1){const float expected[3][4]={{8,8,.5,1},{24,8,.5,1},{8,24,.5,1}};assert(rec.packet.index_count==3&&!memcmp(rec.packet.positions,expected,sizeof(expected)));}
   if(mode==2)assert(rec.packet.index_count==6&&rec.packet.vertex_count==4);
+  if(mode>=14) {
+   const float front[3][4]={{8,8,.5,1},{24,8,.5,1},{8,24,.5,1}};
+   const float back[3][4]={{8,8,.5,1},{8,24,.5,1},{24,24,.5,1}};
+   const float reflected[3][4]={{8,24,.5,1},{8,8,.5,1},{24,8,.5,1}};
+   assert(rec.packet.index_count==3&&rec.packet.vertex_count==3);
+   assert(!memcmp(rec.packet.positions,mode==14?front:mode==18?reflected:back,sizeof(front)));
+  }
   assert(!screen->fence_finish(screen,ctx,f,0));box=(struct pipe_box){.width=32,.height=32,.depth=1};transfer=NULL;assert(!ctx->texture_map(ctx,target,0,PIPE_MAP_READ,&box,&transfer)&&!transfer);
- } else {assert(!rec.draws&&!f);assert(mode==3?!remesa_context_error(ctx):remesa_context_error(ctx)!=0);}
+ } else {assert(!rec.draws&&!f);assert((mode==3||mode==16)?!remesa_context_error(ctx):remesa_context_error(ctx)!=0);}
  ctx->bind_vertex_elements_state(ctx,NULL);ctx->delete_vertex_elements_state(ctx,ve);ctx->delete_vs_state(ctx,vs);ctx->delete_fs_state(ctx,fs);ctx->delete_blend_state(ctx,bs);ctx->delete_depth_stencil_alpha_state(ctx,ds);ctx->delete_rasterizer_state(ctx,rs);ctx->destroy(ctx);
  if(success){assert(!screen->fence_finish(screen,NULL,f,0));rec.last->retired=true;assert(!screen->fence_finish(screen,NULL,f,0));rec.last->target->published=true;assert(screen->fence_finish(screen,NULL,f,0));screen->fence_reference(screen,&f,NULL);}
  resource_drop(vb);resource_drop(ib);resource_drop(target);assert(rec.allocs==rec.frees&&rec.maps==rec.unmaps);screen->destroy(screen);
 }
+static void hardware_gate_cases(void)
+{
+ /* Flags are simulated fixtures to test rejection, never a physical device. */
+ for(unsigned mode=0;mode<3;mode++) {
+  struct recorder rec={0};
+  struct remesa_device dev={.ops=&ops,.priv=&rec,.offline_test_backend=mode==0,
+   .qualified_hardware_backend=mode<2,.resource_only_backend=mode==2};
+  struct pipe_screen *screen=remesa_screen_create(&dev);assert(screen);
+  struct pipe_context *ctx=screen->context_create(screen,NULL,0);assert(ctx);
+  struct pipe_rasterizer_state raster={.fill_front=PIPE_POLYGON_MODE_FILL,.fill_back=PIPE_POLYGON_MODE_FILL,
+   .depth_clip_near=true,.depth_clip_far=true,.cull_face=PIPE_FACE_BACK,.front_ccw=true};
+  assert(!ctx->create_rasterizer_state(ctx,&raster)&&remesa_context_error(ctx)==ENOTSUP);
+  struct pipe_viewport_state viewport={.scale={16,-16,.5},.translate={16,16,.5}};
+  ctx->set_viewport_states(ctx,0,1,&viewport);assert(remesa_context_error(ctx)==ENOTSUP);
+  viewport.scale[1]=16;ctx->set_viewport_states(ctx,0,1,&viewport);assert(!remesa_context_error(ctx));
+  struct pipe_depth_stencil_alpha_state depth={.depth_writemask=true};
+  void *ds=ctx->create_depth_stencil_alpha_state(ctx,&depth);assert(ds);
+  ctx->bind_depth_stencil_alpha_state(ctx,ds);assert(!remesa_context_error(ctx));
+  ctx->delete_depth_stencil_alpha_state(ctx,ds);ctx->destroy(ctx);screen->destroy(screen);
+  assert(!rec.draws&&!rec.maps&&!rec.allocs);
+ }
+}
 int main(void)
 {
- direct_pack_cases();for(unsigned mode=0;mode<14;mode++)callback_case(mode);
- puts("PASS 14 actual Gallium clipping lifecycle scenarios and 11 direct packer cases; CPU preparation, simulated completion, zero SGX/pixels");return 0;
+ direct_pack_cases();for(unsigned mode=0;mode<19;mode++)callback_case(mode);hardware_gate_cases();
+ puts("PASS 19 actual Gallium clipping/culling lifecycle scenarios, 3 hardware-gate rejection fixtures and 11 direct packer cases; CPU preparation, simulated completion, zero SGX/pixels");return 0;
 }

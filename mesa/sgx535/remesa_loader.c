@@ -4,7 +4,7 @@
 #include "remesa_screen.h"
 #include <errno.h>
 static int close_device(struct remesa_device *device)
-{ remesa_linux_close(device);return 0; }
+{ return remesa_linux_close_checked(device); }
 struct pipe_screen *remesa_loader_diagnostic_screen(int fd,int *error)
 {
  struct remesa_device device={0};struct pipe_screen *screen;int e;

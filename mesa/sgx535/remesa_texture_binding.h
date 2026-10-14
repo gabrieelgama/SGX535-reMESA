@@ -3,6 +3,7 @@
 #define REMESA_TEXTURE_BINDING_H
 #include <stddef.h>
 #include <stdint.h>
+#define REMESA_TEXTURE_STORAGE_LEVELS 32u
 struct pipe_screen;
 struct pipe_resource;
 struct pipe_sampler_view;
@@ -16,8 +17,16 @@ struct remesa_texture_storage {
    uint64_t resource_cookie;
    size_t bytes;
    uint32_t stride;
+   size_t offset;
+   uint32_t width, height, levels;
+   /* Frontend content revision. It is independent of provider cache epochs,
+    * and must advance when a CPU write or authenticated writer completes.
+    * Zero represents an allocation with no completed frontend write. */
+   uint64_t content_epoch;
 };
-typedef int (*remesa_texture_storage_query)(void *, struct pipe_resource *,
+/* Query an absolute resource mip level. bytes covers the entire allocation;
+ * offset/stride/dimensions select one retained linear image in that backing. */
+typedef int (*remesa_texture_storage_query)(void *, struct pipe_resource *, unsigned,
                                            struct remesa_texture_storage *);
 typedef void *(*remesa_texture_binding_alloc)(void *, size_t);
 typedef void (*remesa_texture_binding_free)(void *, void *);
@@ -44,4 +53,7 @@ int remesa_texture_views_bind(struct remesa_texture_binding_bank *,
 int remesa_texture_draw_admit(struct remesa_texture_binding_bank *);
 int remesa_texture_view_storage(struct remesa_texture_binding_bank *,
    const struct pipe_sampler_view *, struct remesa_texture_storage *);
+int remesa_texture_view_level_storage(struct remesa_texture_binding_bank *,
+   const struct pipe_sampler_view *, unsigned absolute_level,
+   struct remesa_texture_storage *);
 #endif

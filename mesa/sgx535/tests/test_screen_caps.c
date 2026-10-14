@@ -19,7 +19,7 @@ int main(void)
    struct remesa_device device = {0};
    struct pipe_screen *screen;
 
-   static const struct remesa_device_ops ops = {alloc,drop,map_bo,unmap_bo,submit,wait_fence,destroy_fence};
+   static const struct remesa_device_ops ops = {.allocate=alloc,.destroy_bo=drop,.map=map_bo,.unmap=unmap_bo,.submit=submit,.wait=wait_fence,.destroy_fence=destroy_fence};
    device.ops = &ops;
    device.offline_test_backend = true;
    screen = remesa_screen_create(&device);

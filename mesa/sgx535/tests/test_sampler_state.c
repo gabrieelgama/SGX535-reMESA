@@ -98,6 +98,26 @@ int main(void)
    assert(remesa_sampler_views(b,PIPE_SHADER_FRAGMENT,127,1,1,NULL)==EINVAL);
    assert(remesa_sampler_draw_admit(b)==EINVAL);++cases;
    remesa_sampler_bank_destroy(b);
+   /* Actual Mesa 25.2 GL defaults leave max_lod=1000 and LEQUAL in the CSO
+    * when the application chooses GL_NEAREST and GL_CLAMP_TO_EDGE. These
+    * inactive fields must not prevent creation of the supported host state. */
+   b=remesa_sampler_bank_create(NULL,NULL,NULL);assert(b);
+   state=nearest();state.max_lod=1000.0f;state.compare_func=PIPE_FUNC_LEQUAL;
+   assert(!remesa_sampler_create(b,&state,&s)&&s);++cases;
+   binding[0]=s;
+   assert(!remesa_sampler_bind(b,PIPE_SHADER_FRAGMENT,0,1,binding));
+   assert(remesa_sampler_draw_admit(b)==ENOTSUP);++cases;
+   assert(!remesa_sampler_bind(b,PIPE_SHADER_FRAGMENT,0,1,NULL));
+   assert(!remesa_sampler_delete(b,s)&&!remesa_sampler_draw_admit(b));++cases;
+   state.max_lod=NAN;
+   assert(remesa_sampler_create(b,&state,&s)==ENOTSUP&&!s);++cases;
+   state.max_lod=INFINITY;
+   assert(remesa_sampler_create(b,&state,&s)==ENOTSUP&&!s);++cases;
+   state.max_lod=-1.0f;
+   assert(remesa_sampler_create(b,&state,&s)==ENOTSUP&&!s);++cases;
+   state.max_lod=1000.0f;state.compare_mode=PIPE_TEX_COMPARE_R_TO_TEXTURE;
+   assert(remesa_sampler_create(b,&state,&s)==ENOTSUP&&!s);++cases;
+   remesa_sampler_bank_destroy(b);
    b=remesa_sampler_bank_create(NULL,NULL,NULL);assert(b);
    assert(remesa_sampler_bind(b,PIPE_SHADER_TYPES,0,0,NULL)==EINVAL);
    assert(remesa_sampler_draw_admit(b)==EINVAL);++cases;

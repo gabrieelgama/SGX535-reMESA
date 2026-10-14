@@ -35,10 +35,27 @@ int main(void)
             assert(output.positions[n][1]>=0 && output.positions[n][1]<=h);
         }
     }
+    /* Ignored trailing indices need not exist in the BO or snapshot and
+     * cannot influence signed bias, bounds, fetch or clipping expansion. */
+    ib.width0=6;info.index_bounds_valid=true;info.min_index=1;info.max_index=3;
+    for(unsigned tail=1;tail<=2;++tail) {
+        draw.count=3+tail;
+        assert(remesa_prepare_constant_draw(&info,&draw,&vertices,&element,positions,sizeof(positions),
+                  indices,6,0xffff00ff,&viewport,51,39,&output)==REMESA_DRAW_VALIDATED);
+        assert(output.vertex_count==6);
+    }
+    ib.width0=sizeof(indices);info.index_bounds_valid=false;draw.count=3;
     info.index_size=0; draw.index_bias=INT32_MAX;
     assert(remesa_prepare_constant_draw(&info,&draw,&vertices,&element,positions,sizeof(positions),
               NULL,0,0xffff00ff,&viewport,51,39,&output)==REMESA_DRAW_VALIDATED);
     assert(output.vertex_count==6);
+    for(unsigned tail=1;tail<=2;++tail) {
+        draw.count=3+tail;
+        assert(remesa_prepare_constant_draw(&info,&draw,&vertices,&element,positions,sizeof(positions),
+                  NULL,0,0xffff00ff,&viewport,51,39,&output)==REMESA_DRAW_VALIDATED);
+        assert(output.vertex_count==6);
+    }
+    draw.count=3;
     memset(&unchanged,0x5a,sizeof(unchanged));output=unchanged;
     draw.start=1;
     assert(remesa_prepare_constant_draw(&info,&draw,&vertices,&element,positions,sizeof(positions),
@@ -76,6 +93,13 @@ int main(void)
     assert(remesa_prepare_constant_draw(&info,&draw,&vertices,&element,positions,sizeof(positions),
               indices,sizeof(indices),0,&viewport,51,39,&output)==REMESA_DRAW_EMPTY);
     assert(output.vertex_count==0);
+    for(unsigned empty=1;empty<=2;++empty) {
+        draw.count=empty;draw.start=UINT32_MAX;output=unchanged;
+        assert(remesa_prepare_constant_draw(&info,&draw,&vertices,&element,NULL,0,
+                  NULL,0,0xffff00ff,&viewport,51,39,&output)==REMESA_DRAW_EMPTY);
+        assert(output.vertex_count==0 && output.width==51 && output.height==39 &&
+               output.argb==0xffff00ff);
+    }
     puts("PASS: actual Gallium indexed/nonindexed clipping preparation, 11 resolutions, signed bias, overflow and unchanged-output rejection; CPU geometry only");
     return 0;
 }

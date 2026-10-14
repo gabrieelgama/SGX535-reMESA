@@ -31,8 +31,8 @@ selector=a.output/'registered-selector.c';selector.write_text(text)
 # Architecture-neutral licensed XCB declarations. No host library needed by mocks.
 headers=a.output/'headers/xcb';headers.mkdir(parents=True)
 for name in ['xcb.h','xproto.h']:shutil.copyfile('/usr/include/xcb/'+name,headers/name)
-base=['-std=c11','-DREMESA_WITH_MESA_HEADERS','-D_POSIX_C_SOURCE=200809L','-D_DEFAULT_SOURCE','-DHAVE_ENDIAN_H','-Wall','-Wextra','-Werror',
- '-I'+str(root/'include'),'-I'+str(here),'-I'+str(a.generated),'-I'+str(a.output/'headers'),'-I'+str(a.mesa/'src/gallium/include'),'-I'+str(a.mesa/'src'),'-I'+str(a.mesa/'include')]
+base=['-ffunction-sections','-fdata-sections','-Wl,--gc-sections','-DHAVE_STRUCT_TIMESPEC','-DHAVE_PTHREAD','-std=c11','-DREMESA_WITH_MESA_HEADERS','-D_POSIX_C_SOURCE=200809L','-D_DEFAULT_SOURCE','-DHAVE_ENDIAN_H','-Wall','-Wextra','-Werror',
+ '-I'+str(root/'include'),'-I'+str(here),'-isystem'+str(a.generated/'compiler'),'-isystem'+str(a.generated/'compiler/nir'),'-isystem'+str(a.generated),'-I'+str(a.output/'headers'),'-I'+str(a.mesa/'src/gallium/include'),'-isystem'+str(a.mesa/'src/compiler/nir'),'-isystem'+str(a.mesa/'src'),'-I'+str(a.mesa/'include')]
 variants=[('native',['cc'],['-O2'],[]),('ubsan',['cc'],['-O1','-fsanitize=undefined','-fno-sanitize-recover=all'],[])]
 if any([a.i386_cc,a.i386_sysroot,a.qemu_i386]):
  if not all([a.i386_cc,a.i386_sysroot,a.qemu_i386]):raise SystemExit('Incomplete i386 triplet')
@@ -43,7 +43,8 @@ result={'scope':'Actual pinned Mesa descriptor selector with mocked identities; 
 for variant,cc,flags,runner in variants:
  result['variants'][variant]={}
  for target in ['dri','xcb','present_scale']:
-  sources=([here/n for n in ['remesa_fixed_state.c','remesa_render_pass.c','remesa_sampler_state.c','remesa_texture_binding.c','remesa_texture_descriptor.c','remesa_screen.c','remesa_draw.c','remesa_linux.c','remesa_loader.c','remesa_dri.c','tests/test_dri.c']]+[root/'common/remesa/draw_packet.c',selector] if target=='dri' else [here/n for n in ['remesa_present.c','remesa_present_scale.c','remesa_xcb.c','tests/test_'+target+'.c']])
+  sources=([here/n for n in ['remesa_fixed_state.c','remesa_render_pass.c','remesa_sampler_state.c','remesa_texture_binding.c','remesa_texture_descriptor.c','remesa_screen.c','remesa_draw.c','remesa_retained_transport.c','remesa_linux.c','remesa_shader_ir.c','remesa_usse.c','remesa_pds.c','remesa_shader_program.c','remesa_program_registers.c','remesa_nir.c','remesa_fragment_body.c','remesa_shader_storage.c','remesa_loader.c','remesa_dri.c','tests/test_dri.c']]+[root/'common/remesa/draw_packet.c',root/'common/remesa/retained_evidence.c',root/'common/remesa/shader_request.c',selector] if target=='dri' else [here/n for n in ['remesa_present.c','remesa_present_scale.c','remesa_xcb.c','tests/test_'+target+'.c']])
+  if target=='dri':sources += [here/n for n in ['remesa_persistent.c','remesa_linux_memory.c']]+[root/'kernel/remesa'/n for n in ['registry.c','resource.c','provider.c']]
   command=cc+base+flags+[str(s) for s in sources]+(['-Wl,--wrap=open','-Wl,--wrap=fstat','-Wl,--wrap=ioctl'] if target=='dri' else [])+['-o',str(a.output/(variant+'-'+target))]
   built=subprocess.run(command,capture_output=True,text=True,env=env);(a.output/(variant+'-'+target+'-compile.log')).write_text(built.stdout+built.stderr)
   if built.returncode:raise SystemExit('Compile failed: '+variant+' '+target)

@@ -47,7 +47,7 @@ receipts. No GPU work occurs.
 
 The remaining first-draw bridge is actual clean SGX allocation/MMU, independently
 supported command encoding, device dispatch and visibility-qualified completion.
-See [the driver architecture](../../docs/architecture/REMESA-DRIVER.md).
+See [the driver architecture](../../docs/architecture.md).
 
 The actual driver-level test is `tests/gallium_first_draw.c`. It enters through
 Gallium resource/state/draw callbacks, performs at most one native submission,

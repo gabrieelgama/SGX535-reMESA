@@ -161,3 +161,101 @@ int remesa_usse_encode(const struct remesa_usse_program *p,void *out,size_t cap,
  if(!written||(!out&&cap))return EINVAL;
  int ret=remesa_usse_validate(p);return ret?ret:ENOTSUP;
 }
+static int cpu_register_valid(struct remesa_usse_cpu_register r)
+{return r.class_id<=2 && r.number<=127;}
+static int cpu_register_equal(struct remesa_usse_cpu_register a,
+                              struct remesa_usse_cpu_register b)
+{return a.class_id==b.class_id && a.number==b.number;}
+static int candidate_output_valid(const void *out,size_t cap,size_t bytes,
+                                 const size_t *written)
+{
+ if(!out||!written)return EINVAL;
+ if(cap<bytes)return ENOSPC;
+ if(cap>UINTPTR_MAX-(uintptr_t)out ||
+    sizeof(*written)>UINTPTR_MAX-(uintptr_t)written ||
+    overlaps(out,cap,written,sizeof(*written)))return EINVAL;
+ return 0;
+}
+int remesa_usse_cpu_move_encode(const struct remesa_usse_cpu_move *move,
+ void *out,size_t cap,size_t *written)
+{
+ unsigned char bytes[REMESA_USSE_CPU_MOVE_BYTES];
+ if(!move)return EINVAL;
+ int error=candidate_output_valid(out,cap,sizeof(bytes),written);if(error)return error;
+ if(overlaps(out,cap,move,sizeof(*move)) ||
+    overlaps(written,sizeof(*written),move,sizeof(*move)))return EINVAL;
+ if(!cpu_register_valid(move->source)||!cpu_register_valid(move->destination)||
+    move->control11>1||move->control18>1)return ENOTSUP;
+ /* Original disjoint CPU fields from the selected ordinary writer. No opaque
+  * shader template, physical bank name or hardware END interpretation. */
+ uint32_t first=(move->source.number<<7)|(move->destination.number<<21)|
+  (move->source.class_id<<30)|(UINT32_C(1)<<29);
+ uint32_t second=move->destination.class_id|(UINT32_C(5)<<27)|
+  (move->control11<<11)|(move->control18<<18)|(UINT32_C(1)<<16);
+ put32(bytes,first);put32(bytes+4,second);
+ memcpy(out,bytes,sizeof(bytes));*written=sizeof(bytes);return 0;
+}
+int remesa_usse_cpu_move_decode(const void *bytes,size_t length,
+ struct remesa_usse_cpu_move *out)
+{
+ if(!bytes||!out)return EINVAL;
+ if(length!=REMESA_USSE_CPU_MOVE_BYTES)return ENOTSUP;
+ if(length>UINTPTR_MAX-(uintptr_t)bytes ||
+    sizeof(*out)>UINTPTR_MAX-(uintptr_t)out ||
+    overlaps(bytes,length,out,sizeof(*out)))return EINVAL;
+ uint32_t first=get32(bytes),second=get32((const unsigned char *)bytes+4);
+ const uint32_t first_mask=(UINT32_C(127)<<7)|(UINT32_C(127)<<21)|
+  (UINT32_C(3)<<30)|(UINT32_C(1)<<29);
+ const uint32_t second_mask=3u|(UINT32_C(31)<<27)|(UINT32_C(1)<<11)|
+  (UINT32_C(1)<<16)|(UINT32_C(1)<<18);
+ if((first&~first_mask)||(second&~second_mask)||!(first&(UINT32_C(1)<<29))||
+    !(second&(UINT32_C(1)<<16))||(second>>27)!=5)return ENOTSUP;
+ struct remesa_usse_cpu_move move={
+  .source={first>>30,(first>>7)&127},.destination={second&3,(first>>21)&127},
+  .control11=(second>>11)&1,.control18=(second>>18)&1
+ };
+ if(!cpu_register_valid(move.source)||!cpu_register_valid(move.destination))return ENOTSUP;
+ *out=move;return 0;
+}
+int remesa_usse_vertex_mapping_validate(const struct remesa_usse_vertex_mapping *mapping)
+{
+ if(!mapping)return EINVAL;
+ for(unsigned c=0;c<4;c++) {
+  if(!cpu_register_valid(mapping->input[c])||!cpu_register_valid(mapping->output[c]))return ENOTSUP;
+  for(unsigned k=0;k<4;k++) {
+   if(cpu_register_equal(mapping->output[c],mapping->input[k]))return EINVAL;
+   if(k!=c && (cpu_register_equal(mapping->input[c],mapping->input[k])||
+               cpu_register_equal(mapping->output[c],mapping->output[k])))return EINVAL;
+  }
+ }
+ return 0;
+}
+int remesa_usse_vertex_candidate(const struct remesa_usse_program *program,
+ const struct remesa_usse_vertex_mapping *mapping,void *out,size_t cap,size_t *written)
+{
+ unsigned char bytes[REMESA_USSE_VERTEX_CANDIDATE_BYTES];
+ uint32_t input_channel[REMESA_USSE_VALUES]={0};
+ if(!program||!mapping)return EINVAL;
+ int error=candidate_output_valid(out,cap,sizeof(bytes),written);if(error)return error;
+ if(overlaps(out,cap,program,sizeof(*program))||overlaps(out,cap,mapping,sizeof(*mapping))||
+    overlaps(written,sizeof(*written),program,sizeof(*program))||
+    overlaps(written,sizeof(*written),mapping,sizeof(*mapping)))return EINVAL;
+ error=remesa_usse_validate(program);if(error)return error;
+ if(program->stage!=REMESA_IR_VERTEX)return ENOTSUP;
+ error=remesa_usse_vertex_mapping_validate(mapping);if(error)return error;
+ unsigned exports=0;
+ for(unsigned n=0;n<program->count;n++) {
+  const struct remesa_usse_instruction *i=&program->instructions[n];
+  if(i->op==REMESA_USSE_INPUT)input_channel[i->dst]=i->channel;
+  else if(i->op==REMESA_USSE_MOVE)input_channel[i->dst]=input_channel[i->src];
+  else if(i->op==REMESA_USSE_EXPORT_POSITION) {
+   struct remesa_usse_cpu_move move={.source=mapping->input[input_channel[i->src]],
+    .destination=mapping->output[i->channel],.control11=0};
+   size_t length;
+   error=remesa_usse_cpu_move_encode(&move,bytes+exports*8,8,&length);if(error)return error;
+   ++exports;
+  } else return ENOTSUP;
+ }
+ if(exports!=4)return EPROTO;
+ memcpy(out,bytes,sizeof(bytes));*written=sizeof(bytes);return 0;
+}

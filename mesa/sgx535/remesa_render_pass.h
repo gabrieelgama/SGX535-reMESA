@@ -17,6 +17,10 @@ enum remesa_pass_store { REMESA_PASS_STORE, REMESA_PASS_DONT_STORE };
 struct remesa_pass_ticket { uint64_t resource_cookie, serial; };
 struct remesa_render_pass {
  uint64_t resource_cookie, serial;
+ /* Frontend content identity, not a GPU counter or visibility assertion.
+  * Advance on published CPU writes and verified completion, including an
+  * intentional store discard. Reservation/cancellation never changes it. */
+ uint64_t content_epoch;
  enum remesa_pass_content content;
  enum remesa_pass_phase phase;
  enum remesa_pass_store store;
@@ -27,10 +31,25 @@ struct remesa_render_pass {
 struct remesa_pass_completion {
  bool authenticated, cpu_visible, retired;
 };
+struct remesa_pass_snapshot {
+ uint64_t resource_cookie, content_epoch;
+ enum remesa_pass_content content;
+};
 
 int remesa_render_pass_init(struct remesa_render_pass *, uint64_t cookie);
+/* Before acquiring a writable CPU lease or changing backing bytes. This is
+ * only the frontend gate; backend mapping/coherency admission still applies. */
+int remesa_render_pass_admit_cpu_write(const struct remesa_render_pass *);
 int remesa_render_pass_cpu_write(struct remesa_render_pass *);
-/* No mutation on rejection. Explicit PRESERVE is never changed to DISCARD.
+/* Obtain ready content identity without authenticating physical memory.
+ * Reserved/pending/quarantined resources cannot produce a ready snapshot.
+ * UNDEFINED remains explicit; callers must not treat it as initialized data.
+ * Output may not alias the pass. Errors leave the output unchanged. Access is
+ * externally serialized. */
+int remesa_render_pass_snapshot(const struct remesa_render_pass *,
+ struct remesa_pass_snapshot *);
+/* No mutation on rejection. The output ticket may not alias the pass.
+ * Explicit PRESERVE is never changed to DISCARD.
  * preserve_supported must reflect independently admitted backend behavior. */
 int remesa_render_pass_admit(const struct remesa_render_pass *,
  enum remesa_pass_load, bool preserve_supported);

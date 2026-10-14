@@ -17,7 +17,8 @@ struct memory { unsigned calls, live, fail;
                 int injected_count; };
 struct fixture { struct pipe_screen screen; unsigned resources, destroys,queries;
                  int query_error; };
-struct resource { struct pipe_resource base; struct remesa_texture_storage storage; };
+struct resource { struct pipe_resource base; struct remesa_texture_storage storage;
+                  struct remesa_texture_storage mips[REMESA_TEXTURE_STORAGE_LEVELS]; };
 static void *allocate(void *p,size_t bytes)
 {
    struct memory *m=p;
@@ -47,14 +48,15 @@ static struct pipe_resource *resource_create(struct fixture *f,unsigned w,unsign
    r->base.target=PIPE_TEXTURE_2D; r->base.format=format;
    r->base.width0=w; r->base.height0=h; r->base.depth0=1; r->base.array_size=1;
    r->storage=(struct remesa_texture_storage){.resource_cookie=123,
-       .stride=(w*4u+63u)&~63u};
+       .stride=(w*4u+63u)&~63u,.width=w,.height=h,.levels=1};
    r->storage.bytes=(size_t)r->storage.stride*h; ++f->resources; return &r->base;
 }
-static int query(void *p,struct pipe_resource *r,struct remesa_texture_storage *out)
+static int query(void *p,struct pipe_resource *r,unsigned level,struct remesa_texture_storage *out)
 {
    struct fixture *f=p; ++f->queries;
    if (f->query_error) return f->query_error;
-   *out=((struct resource *)r)->storage; return 0;
+   if(level>r->last_level)return EINVAL;
+   *out=level?((struct resource *)r)->mips[level]:((struct resource *)r)->storage; return 0;
 }
 static struct remesa_texture_binding_bank *bank(struct fixture *f,struct memory *m)
 { return remesa_texture_binding_create(&f->screen,query,f,allocate,release,m); }
@@ -125,7 +127,7 @@ int main(void)
    desc=descriptor(r->format); desc.u.tex.first_layer=1; v=(void *)(uintptr_t)1;
    assert(remesa_texture_view_create(b,r,&desc,&v)==ENOTSUP&&!v); ++cases;
    desc=descriptor(r->format); desc.u.tex.last_level=1;
-   assert(remesa_texture_view_create(b,r,&desc,&v)==ENOTSUP&&!v); ++cases;
+   assert(remesa_texture_view_create(b,r,&desc,&v)==EINVAL&&!v); ++cases;
    desc=descriptor(r->format); desc.swizzle_r=7;
    assert(remesa_texture_view_create(b,r,&desc,&v)==ENOTSUP&&!v); ++cases;
    desc=descriptor(PIPE_FORMAT_B8G8R8A8_UNORM);
@@ -200,6 +202,40 @@ int main(void)
       pipe_sampler_view_reference(&v,NULL); remesa_resource_reference(&r,NULL);
       assert(!f.resources); ++cases;
    }
+   /* Immutable mip layout, interval selection and backing identity are all
+    * revalidated. These descriptors remain draw-blocking host objects. */
+   r=resource_create(&f,37,13,PIPE_FORMAT_R8G8B8A8_UNORM);r->last_level=5;
+   raw=(struct resource *)r;size_t offset=0;
+   for(unsigned level=0;level<=5;level++) {
+      unsigned width=37u>>level,height=13u>>level;if(!width)width=1;if(!height)height=1;
+      struct remesa_texture_storage *row=level?&raw->mips[level]:&raw->storage;
+      *row=(struct remesa_texture_storage){.resource_cookie=123,.width=width,.height=height,
+       .levels=6,.stride=(width*4+63)&~63u,.offset=offset};
+      offset+=(size_t)row->stride*height;
+   }
+   raw->storage.bytes=offset;for(unsigned level=1;level<=5;level++)raw->mips[level].bytes=offset;
+   desc=descriptor(r->format);desc.u.tex.first_level=2;desc.u.tex.last_level=4;
+   assert(!remesa_texture_view_create(b,r,&desc,&v));++cases;
+   assert(!remesa_texture_view_storage(b,v,&storage)&&storage.width==9&&storage.height==3&&storage.offset==raw->mips[2].offset);++cases;
+   struct remesa_texture_storage unchanged=storage;
+   assert(remesa_texture_view_level_storage(b,v,1,&storage)==EINVAL&&!memcmp(&unchanged,&storage,sizeof(storage)));++cases;
+   views[0]=v;assert(!remesa_texture_views_bind(b,PIPE_SHADER_FRAGMENT,0,1,0,views));
+   assert(remesa_texture_draw_admit(b)==ENOTSUP);++cases;
+   raw->mips[5].offset++;
+   assert(remesa_texture_draw_admit(b)==EINVAL);--raw->mips[5].offset;++cases;
+   raw->mips[4].width++;
+   assert(remesa_texture_view_storage(b,v,&storage)==EINVAL&&!memcmp(&unchanged,&storage,sizeof(storage)));--raw->mips[4].width;++cases;
+   /* Even valid changed backing metadata cannot replace the retained snapshot. */
+   raw->storage.bytes+=64;for(unsigned level=1;level<=5;level++)raw->mips[level].bytes+=64;
+   assert(remesa_texture_draw_admit(b)==ESTALE);++cases;
+   raw->storage.bytes-=64;for(unsigned level=1;level<=5;level++)raw->mips[level].bytes-=64;
+   struct pipe_sampler_view bad=desc;bad.u.tex.first_level=5;bad.u.tex.last_level=4;
+   struct pipe_sampler_view *rejected=(void *)(uintptr_t)1;
+   assert(remesa_texture_view_create(b,r,&bad,&rejected)==EINVAL&&!rejected);++cases;
+   bad=desc;bad.u.tex.last_layer=1;
+   assert(remesa_texture_view_create(b,r,&bad,&rejected)==ENOTSUP&&!rejected);++cases;
+   assert(!remesa_texture_views_bind(b,PIPE_SHADER_FRAGMENT,0,0,1,NULL));
+   pipe_sampler_view_release_ptr(&v);remesa_resource_reference(&r,NULL);assert(!f.resources);++cases;
    remesa_texture_binding_close(b); assert(!m.live);
    m=(struct memory){.fail=1}; assert(!bank(&f,&m)&&!m.live); ++cases;
    assert(!remesa_texture_binding_create(&f.screen,query,&f,allocate,NULL,&m)); ++cases;

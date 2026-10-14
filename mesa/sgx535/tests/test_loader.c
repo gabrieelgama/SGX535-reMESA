@@ -71,11 +71,13 @@ int main(void)
  struct pipe_draw_info info={.mode=MESA_PRIM_TRIANGLES,.instance_count=1};struct pipe_draw_start_count_bias d={.count=3};
  c->draw_vbo(c,&info,0,NULL,&d,1);assert(!remesa_context_error(c)&&draws==1);
  struct pipe_fence_handle *f=NULL;c->flush(c,&f,0);assert(f);
- s->destroy(s);assert(!s->context_create(s,NULL,0)&&!make(s,true));
- c->draw_vbo(c,&info,0,NULL,&d,1);assert(remesa_context_error(c)==ESHUTDOWN&&draws==1);
- /* Existing children still permit fence/readback cleanup after screen release. */
  box.width=box.height=32;ptr=c->texture_map(c,t,0,PIPE_MAP_READ,&box,&tr);assert(ptr);
  assert(((unsigned char *)ptr)[0]==0x5a);c->texture_unmap(c,tr);
+ s->destroy(s);assert(!s->context_create(s,NULL,0)&&!make(s,true));
+ c->draw_vbo(c,&info,0,NULL,&d,1);assert(remesa_context_error(c)==ESHUTDOWN&&draws==1);
+ /* Existing children retain cleanup/fence ownership; closing rejects new map
+  * leases. Readback must occur before shutdown, as in the transfer contract. */
+ ptr=c->texture_map(c,t,0,PIPE_MAP_READ,&box,&tr);assert(!ptr&&!tr);
  c->bind_vertex_elements_state(c,NULL);c->delete_vertex_elements_state(c,state);
  c->destroy(c);drop(v);drop(t);assert(fcntl(owned,F_GETFD)>=0);
  assert(s->fence_finish(s,NULL,f,0));s->fence_reference(s,&f,NULL);

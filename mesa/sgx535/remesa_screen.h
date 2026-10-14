@@ -11,6 +11,26 @@ struct pipe_screen;
 struct remesa_device;
 struct pipe_context; struct pipe_resource; struct pipe_fence_handle;
 struct remesa_shader_program_report;
+struct remesa_shader_pipeline;
+struct remesa_shader_pipeline_launch;struct remesa_pds_request;
+/* Snapshot the currently bound, context-owned VS/constant-FS semantic pair.
+ * ENODATA for an unbound stage; uniform specialization remains unsupported.
+ * No context mutation, mapping, code generation or hardware admission. */
+int remesa_context_shader_pipeline_report(struct pipe_context *,struct remesa_shader_pipeline *);
+/* Prepare/revalidate symbolic storage for the currently bound owned pair.
+ * Caller retains allocations and authenticates mapping metadata; these APIs
+ * acquire no references and never upload or submit shader bytes. */
+int remesa_context_prepare_shader_launch(struct pipe_context *,
+ const struct remesa_pds_request *vertex,const struct remesa_pds_request *fragment,
+ struct remesa_shader_pipeline_launch *);
+int remesa_context_revalidate_shader_launch(struct pipe_context *,
+ const struct remesa_shader_pipeline_launch *,const struct remesa_pds_request *vertex,
+ const struct remesa_pds_request *fragment);
+struct remesa_pds_candidate_request;struct remesa_shader_pds_preview;
+/* Research preview for actual context-owned shader handles; no allocation,
+ * upload, command submission, capability change or context-state mutation. */
+int remesa_context_shader_pds_preview(struct pipe_context *,unsigned stage,
+ void *shader,const struct remesa_pds_candidate_request *,struct remesa_shader_pds_preview *);
 /* Actual callback-created, context-owned shader handles only. No executable
  * program is claimed; the encode call currently fails ENOTSUP transactionally.
  * Available only in REMESA_WITH_NIR builds. Does not change context state. */
@@ -27,11 +47,18 @@ int remesa_resource_attach_writer(struct pipe_context *,struct pipe_resource *,v
  * generation or visibility proof. Output unchanged on failure. */
 int remesa_context_texture_view_storage(struct pipe_context *,
  const struct pipe_sampler_view *,struct remesa_texture_storage *);
+int remesa_context_texture_view_level_storage(struct pipe_context *,
+ const struct pipe_sampler_view *,unsigned,struct remesa_texture_storage *);
 /* Poll the real frontend writer before a trusted retained-mapping query.
  * No maps, submissions, hardware descriptor bytes or sampling admission. */
 int remesa_context_prepare_texture_descriptor(struct pipe_context *,
  const struct pipe_sampler_view *,const struct pipe_sampler_state *,uint64_t,
  remesa_texture_mapping_query,void *,struct remesa_texture_descriptor *);
+/* Same writer/CPU-lease gate as preparation, followed by immutable mapping,
+ * layout and frontend content-epoch comparison. No submission or GPU proof. */
+int remesa_context_revalidate_texture_descriptor(struct pipe_context *,
+ const struct remesa_texture_descriptor *,const struct pipe_sampler_view *,
+ const struct pipe_sampler_state *,uint64_t,remesa_texture_mapping_query,void *);
 struct pipe_screen *remesa_screen_create(struct remesa_device *device);
 /* Consumes device only on success. Release runs after the final context,
  * resource and fence disappear. Without release, backend ownership is borrowed

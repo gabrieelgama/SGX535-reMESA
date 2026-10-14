@@ -2,6 +2,7 @@
  * Drive actual Gallium shader callbacks and draw_vbo into a packet recorder.
  * Completion transitions remain explicit simulations from test_driver.c. */
 #include "nir_fixture.h"
+#include "vertex_nir_fixture.h"
 #include "remesa_screen.h"
 #include "remesa_device.h"
 #include "pipe/p_context.h"
@@ -31,6 +32,18 @@ static nir_shader *constructed_fragment(uint32_t color)
 }
 static int bind_nir(struct pipe_context *ctx,uint32_t color)
 {
+ struct pipe_shader_state vertex={.type=PIPE_SHADER_IR_NIR,.ir.nir=vertex_fixture()};
+ void *vs=ctx->create_vs_state(ctx,&vertex);if(!vs)return remesa_context_error(ctx);
+ ctx->bind_vs_state(ctx,vs);
+ struct pipe_blend_state blend={0};blend.rt[0].colormask=PIPE_MASK_RGBA;
+ struct pipe_depth_stencil_alpha_state depth={0};
+ struct pipe_rasterizer_state raster={.fill_front=PIPE_POLYGON_MODE_FILL,.fill_back=PIPE_POLYGON_MODE_FILL};
+ void *bs=ctx->create_blend_state(ctx,&blend),*ds=ctx->create_depth_stencil_alpha_state(ctx,&depth),
+      *rs=ctx->create_rasterizer_state(ctx,&raster);
+ if(!bs||!ds||!rs)return remesa_context_error(ctx);
+ ctx->bind_blend_state(ctx,bs);ctx->bind_depth_stencil_alpha_state(ctx,ds);ctx->bind_rasterizer_state(ctx,rs);
+ struct pipe_viewport_state viewport={.scale={16,16,.5},.translate={16,16,.5}};
+ ctx->set_viewport_states(ctx,0,1,&viewport);
  struct pipe_shader_state state={.type=PIPE_SHADER_IR_NIR};state.ir.nir=constructed_fragment(color);
  void *fs=ctx->create_fs_state(ctx,&state);if(!fs)return remesa_context_error(ctx);
  ctx->bind_fs_state(ctx,fs);
@@ -42,4 +55,5 @@ static int bind_nir(struct pipe_context *ctx,uint32_t color)
  return remesa_context_set_framebuffer_load(ctx,false);
 }
 #define remesa_bind_diagnostic_pipeline bind_nir
+#define REMESA_TEST_CLIP_INPUT
 #include "test_driver.c"

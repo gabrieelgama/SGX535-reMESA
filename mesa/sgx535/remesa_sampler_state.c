@@ -3,6 +3,7 @@
 #include "pipe/p_state.h"
 #include "compiler/shader_enums.h"
 #include <errno.h>
+#include <math.h>
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
@@ -52,7 +53,7 @@ static struct sampler *lookup(struct remesa_sampler_bank *b, const void *v)
    for (struct sampler *s=b->states;s;s=s->next) if (s==v) return s;
    return NULL;
 }
-static int validate(const struct pipe_sampler_state *s)
+int remesa_sampler_state_validate(const struct pipe_sampler_state *s)
 {
    if (!s) return EINVAL;
    /* Strict nearest/clamp metadata subset; it is not admitted for GPU use. */
@@ -62,11 +63,17 @@ static int validate(const struct pipe_sampler_state *s)
        s->min_img_filter!=PIPE_TEX_FILTER_NEAREST ||
        s->mag_img_filter!=PIPE_TEX_FILTER_NEAREST ||
        s->min_mip_filter!=PIPE_TEX_MIPFILTER_NONE ||
-       s->compare_mode || s->compare_func || s->unnormalized_coords ||
+       s->compare_mode || s->unnormalized_coords ||
        s->max_anisotropy>1 || s->seamless_cube_map ||
        s->border_color_is_integer || s->reduction_mode!=PIPE_TEX_REDUCTION_WEIGHTED_AVERAGE ||
-       s->pad || s->lod_bias!=0.0f || s->min_lod!=0.0f || s->max_lod!=0.0f ||
+       s->pad || s->lod_bias!=0.0f || s->min_lod!=0.0f ||
+       !isfinite(s->max_lod) || s->max_lod<0.0f ||
        s->border_color_format!=PIPE_FORMAT_NONE) return ENOTSUP;
+   /* Mesa's GL sampler defaults retain LEQUAL even when comparison is off,
+    * and max_lod=1000 even after selecting non-mipmapped NEAREST. Neither
+    * affects this subset: comparison is disabled and both image filters
+    * select the view's first level. Preserve the supplied state without
+    * inventing hardware fields or admitting sampling. */
    for (unsigned i=0;i<4;i++) if (s->border_color.ui[i]) return ENOTSUP;
    return 0;
 }
@@ -75,7 +82,7 @@ int remesa_sampler_create(struct remesa_sampler_bank *b,
 {
    if (out) *out=NULL;
    if (!b || !out) return EINVAL;
-   int error=validate(state); if (error) return error;
+   int error=remesa_sampler_state_validate(state); if (error) return error;
    if (b->count==STATE_LIMIT) return ENOSPC;
    struct sampler *s=b->alloc(b->opaque,sizeof(*s)); if (!s) return ENOMEM;
    memset(s,0,sizeof(*s)); s->state=*state;

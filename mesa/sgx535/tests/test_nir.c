@@ -64,7 +64,7 @@ int main(void)
   if(i==5)st->intrinsic=nir_intrinsic_load_input;
   out=123;assert(remesa_nir_constant_fragment(s,&out)!=0&&out==123);ralloc_free(s);cases++;
  }
- static const struct remesa_device_ops ops={alloc,release,map,unmap,submit,wait,release};
+ static const struct remesa_device_ops ops={.allocate=alloc,.destroy_bo=release,.map=map,.unmap=unmap,.submit=submit,.wait=wait,.destroy_fence=release};
  struct remesa_device dev={.ops=&ops,.offline_test_backend=true};struct pipe_screen *screen=remesa_screen_create(&dev);assert(screen);
  struct pipe_context *ctx=screen->context_create(screen,NULL,0),*other=screen->context_create(screen,NULL,0);assert(ctx&&other);
  struct pipe_viewport_state viewport={.scale={1,1,1}};ctx->set_viewport_states(ctx,0,1,&viewport);assert(!remesa_context_error(ctx));cases++;

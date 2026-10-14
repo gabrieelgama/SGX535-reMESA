@@ -1,5 +1,8 @@
 /* SPDX-License-Identifier: MIT */
 /* Host geometry translation only; no device, ioctl or rasterizer. */
+#ifdef NDEBUG
+#error Assertions are required
+#endif
 #include "remesa_draw.h"
 #include <assert.h>
 #include <math.h>
@@ -26,6 +29,13 @@ int main(void)
  check(PACK(),REMESA_DRAW_VALIDATED);
  assert(p->vertex_count==3 && !memcmp(p->positions,triangle,sizeof(triangle)));
  assert(p->indices[0]==0&&p->indices[1]==1&&p->indices[2]==2);
+ /* An incomplete final primitive has no index storage requirement. The BO
+  * and snapshot end immediately after the three consumed indices. */
+ for(unsigned tail=1;tail<=2;++tail) {
+  d.count=3+tail;check(PACK(),REMESA_DRAW_VALIDATED);
+  assert(p->index_count==3&&p->vertex_count==3);
+ }
+ d.count=3;
  /* Large sparse indices do not allocate or validate unreferenced vertices. */
  indices[3]=8001;check(PACK(),REMESA_DRAW_VALIDATED);assert(p->vertex_count==2&&p->indices[2]==0);indices[3]=10001;
  info.index_bounds_valid=true;info.min_index=8001;info.max_index=10001;check(PACK(),REMESA_DRAW_VALIDATED);
@@ -45,10 +55,25 @@ int main(void)
   for(unsigned i=0;i<3;i++) { uint32_t v=i;memcpy(ix+1+i*width,&v,width);memcpy(vertices+8+i*32,triangle[i],16); }
   check(remesa_pack_triangle_draw(&info,&d,&vb,&ve,vertices,vr.width0,ix+1,3*width,0xffff00ff,p),REMESA_DRAW_VALIDATED);
   assert(!memcmp(p->positions,triangle,sizeof(triangle)));
+  for(unsigned tail=1;tail<=2;++tail) {
+   d.count=3+tail;
+   check(remesa_pack_triangle_draw(&info,&d,&vb,&ve,vertices,vr.width0,
+             ix+1,3*width,0xffff00ff,p),REMESA_DRAW_VALIDATED);
+   assert(p->index_count==3&&p->vertex_count==3);
+  }
+  d.count=3;
  }
  /* Nonindexed input deliberately poisons the index union and index bias. */
  info.index_size=0;info.index.user=(void *)1;info.has_user_indices=true;
  d.index_bias=INT32_MIN;d.start=0;check(PACK(),REMESA_DRAW_VALIDATED);assert(p->vertex_count==3);
+ /* The vertex BO need only contain the complete primitive, even when the
+  * API count includes one or two additional, unreferenced vertices. */
+ uint32_t available=vr.width0;vr.width0=8+2*32+16;
+ for(unsigned tail=1;tail<=2;++tail) {
+  d.count=3+tail;check(PACK(),REMESA_DRAW_VALIDATED);
+  assert(p->index_count==3&&p->vertex_count==3);
+ }
+ d.count=3;vr.width0=available;
  d.start=UINT32_MAX;check(PACK(),REMESA_DRAW_INVALID);d.start=0;
  vb.buffer_offset=UINT32_MAX;ve.src_offset=UINT16_MAX;check(PACK(),REMESA_DRAW_INVALID);vb.buffer_offset=3;ve.src_offset=5;
  memcpy(saved,p,sizeof(*p));float bad=NAN;memcpy(vertices+8,&bad,4);
@@ -58,6 +83,25 @@ int main(void)
  /* More than the compact-vertex capacity fails before packet construction. */
  for(unsigned i=0;i<1026;i++) memcpy(vertices+8+i*32,triangle[0],16);
  d.count=1026;check(PACK(),REMESA_DRAW_UNSUPPORTED);assert(!memcmp(saved,p,sizeof(*p)));
+ /* Empty primitives neither read a snapshot nor dereference resource storage.
+  * Packing keeps its existing unchanged-output EMPTY contract. */
+ for(unsigned empty=1;empty<=2;++empty) {
+  d.count=empty;d.start=UINT32_MAX;
+  check(remesa_pack_triangle_draw(&info,&d,&vb,&ve,NULL,0,NULL,0,0,p),REMESA_DRAW_EMPTY);
+  assert(!memcmp(saved,p,sizeof(*p)));
+ }
+ /* Capacity applies to complete primitives, not to ignored trailing indices. */
+ uint16_t repeated[REMESA_DRAW_MAX_INDICES];
+ for(unsigned i=0;i<REMESA_DRAW_MAX_INDICES;++i)repeated[i]=i%3;
+ info.index_size=2;info.has_user_indices=false;info.index.resource=&ir;
+ ir.width0=sizeof(repeated);d.start=0;d.index_bias=0;
+ for(unsigned i=0;i<3;++i)memcpy(vertices+8+i*32,triangle[i],16);
+ for(unsigned tail=0;tail<=2;++tail) {
+  d.count=REMESA_DRAW_MAX_INDICES+tail;
+  check(remesa_pack_triangle_draw(&info,&d,&vb,&ve,vertices,vr.width0,
+            repeated,sizeof(repeated),0xffff00ff,p),REMESA_DRAW_VALIDATED);
+  assert(p->index_count==REMESA_DRAW_MAX_INDICES&&p->vertex_count==3);
+ }
  free(vertices);free(p);free(saved);
  printf("PASS: %u geometry packing cases; no hardware\n",cases);return 0;
 }

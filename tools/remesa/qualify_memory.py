@@ -31,7 +31,7 @@ for name,cc,flags,runner in variants:
  for target,source in [('kernel','test_gem_memory.c'),('dispatch','test_gem_dispatch.c'),('transport','test_linux_memory.c')]:
   if target not in selected:continue
   sources=['kernel/remesa/gma500/tests/'+source]
-  if target=='transport':sources+=['mesa/sgx535/remesa_linux_memory.c','mesa/sgx535/remesa_persistent.c','kernel/remesa/resource.c','kernel/remesa/registry.c','kernel/remesa/provider.c','common/remesa/draw_packet.c','mesa/sgx535/remesa_fixed_state.c','mesa/sgx535/remesa_render_pass.c','mesa/sgx535/remesa_sampler_state.c','mesa/sgx535/remesa_texture_binding.c','mesa/sgx535/remesa_texture_descriptor.c','mesa/sgx535/remesa_screen.c','mesa/sgx535/remesa_draw.c','tools/remesa/memory_probe.c']
+  if target=='transport':sources+=['mesa/sgx535/remesa_retained_transport.c','mesa/sgx535/remesa_linux_memory.c','mesa/sgx535/remesa_persistent.c','kernel/remesa/resource.c','kernel/remesa/registry.c','kernel/remesa/provider.c','common/remesa/draw_packet.c','mesa/sgx535/remesa_fixed_state.c','mesa/sgx535/remesa_render_pass.c','mesa/sgx535/remesa_sampler_state.c','mesa/sgx535/remesa_texture_binding.c','mesa/sgx535/remesa_texture_descriptor.c','mesa/sgx535/remesa_screen.c','mesa/sgx535/remesa_draw.c','tools/remesa/memory_probe.c']
   exe=a.output/(name+'-'+target)
   mesa_flags=['-DREMESA_WITH_MESA_HEADERS','-D_POSIX_C_SOURCE=200809L','-DHAVE_ENDIAN_H','-I'+str(a.generated),'-I'+str(a.mesa/'src/gallium/include'),'-I'+str(a.mesa/'src'),'-I'+str(a.mesa/'include')] if target=='transport' else []
   cmd=cc+mesa_flags+['-std=c11','-Wall','-Wextra','-Werror','-I'+str(root/'include'),'-I'+str(root/'mesa/sgx535'),'-I'+str(root/'tools/remesa'),'-I'+str(root/'kernel/remesa/gma500/tests')]+flags+[str(root/f) for f in sources]+['-o',str(exe)]
@@ -44,11 +44,11 @@ for name,cc,flags,runner in variants:
   c=subprocess.CompletedProcess(commands, next((r.returncode for r in runs if r.returncode),0), ''.join(r.stdout for r in runs), ''.join(r.stderr for r in runs));(a.output/(name+'-'+target+'-run.log')).write_text(c.stdout+c.stderr)
   if c.returncode:raise SystemExit('Test failed: '+name+'/'+target)
   result['variants'][name][target]={'PASS':True,'command':cmd,'output':c.stdout.strip()}
-files=['tools/remesa/memory_probe.c','tools/remesa/memory_probe.h','tools/remesa/memory_probe_main.c','include/remesa/memory_uapi.h','kernel/remesa/gma500/remesa_gem_memory.c','kernel/remesa/gma500/remesa_gem_memory.h','kernel/remesa/gma500/tests/test_gem_shim.h','kernel/remesa/gma500/tests/test_gem_memory.c','kernel/remesa/gma500/tests/test_gem_dispatch.c','kernel/remesa/gma500/tests/test_linux_memory.c','mesa/sgx535/remesa_linux_memory.c','mesa/sgx535/remesa_linux_memory.h','mesa/sgx535/remesa_persistent.c','mesa/sgx535/remesa_persistent.h']
+files=['tools/remesa/memory_probe.c','tools/remesa/memory_probe.h','tools/remesa/memory_probe_main.c','include/remesa/memory_uapi.h','kernel/remesa/gma500/remesa_gem_memory.c','kernel/remesa/gma500/remesa_gem_memory.h','kernel/remesa/gma500/tests/test_gem_shim.h','kernel/remesa/gma500/tests/test_gem_memory.c','kernel/remesa/gma500/tests/test_gem_dispatch.c','kernel/remesa/gma500/tests/test_linux_memory.c','mesa/sgx535/remesa_retained_transport.c','mesa/sgx535/remesa_linux_memory.c','mesa/sgx535/remesa_linux_memory.h','mesa/sgx535/remesa_persistent.c','mesa/sgx535/remesa_persistent.h']
 for name,cc,flags,runner in variants:
  if a.skip_probe_build:continue
  exe=a.output/(name+'-memory-probe')
- cmd=cc+['-std=c11','-D_POSIX_C_SOURCE=200809L','-Wall','-Wextra','-Werror','-I'+str(root/'include'),'-I'+str(root/'mesa/sgx535'),'-I'+str(root/'tools/remesa')]+flags+[str(root/f) for f in ['tools/remesa/memory_probe.c','tools/remesa/memory_probe_main.c','mesa/sgx535/remesa_linux_memory.c']]+['-o',str(exe)]
+ cmd=cc+['-std=c11','-D_POSIX_C_SOURCE=200809L','-Wall','-Wextra','-Werror','-I'+str(root/'include'),'-I'+str(root/'mesa/sgx535'),'-I'+str(root/'tools/remesa')]+flags+[str(root/f) for f in ['tools/remesa/memory_probe.c','tools/remesa/memory_probe_main.c','mesa/sgx535/remesa_retained_transport.c','mesa/sgx535/remesa_linux_memory.c']]+['-o',str(exe)]
  c=subprocess.run(cmd,capture_output=True,text=True,env=env);(a.output/(name+'-probe-compile.log')).write_text(c.stdout+c.stderr)
  if c.returncode:raise SystemExit('Probe compile failed: '+name)
  result['variants'][name]['probe_binary']={'PASS':True,'executed':False,'command':cmd,'sha256':hashlib.sha256(exe.read_bytes()).hexdigest()}

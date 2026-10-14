@@ -117,10 +117,95 @@ static void sequence(unsigned count)
  assert(p.content==REMESA_PASS_UNDEFINED);
  ++cases;
 }
+static void content_identity(void)
+{
+ struct remesa_render_pass p, old;
+ struct remesa_pass_ticket t;
+ struct remesa_pass_snapshot snapshot, saved;
+ assert(!remesa_render_pass_init(&p,201));
+ assert(!remesa_render_pass_snapshot(&p,&snapshot));
+ assert(snapshot.resource_cookie==201 && !snapshot.content_epoch &&
+        snapshot.content==REMESA_PASS_UNDEFINED);
+ assert(!remesa_render_pass_cpu_write(&p));
+ assert(!remesa_render_pass_snapshot(&p,&snapshot));
+ assert(snapshot.content_epoch==1 && snapshot.content==REMESA_PASS_PRESENT);
+ saved=snapshot;
+ assert(!remesa_render_pass_begin(&p,REMESA_PASS_PRESERVE,REMESA_PASS_STORE,true,&t));
+ assert(remesa_render_pass_admit_cpu_write(&p)==EBUSY);
+ assert(remesa_render_pass_snapshot(&p,&snapshot)==EBUSY);
+ assert(!memcmp(&saved,&snapshot,sizeof(snapshot)) && p.content_epoch==1);
+ assert(!remesa_render_pass_cancel(&p,&t));
+ assert(!remesa_render_pass_admit_cpu_write(&p) && p.content_epoch==1);
+ assert(!remesa_render_pass_snapshot(&p,&snapshot));
+ assert(!memcmp(&saved,&snapshot,sizeof(snapshot)));
+ assert(!remesa_render_pass_import_writer(&p,&t));
+ assert(remesa_render_pass_admit_cpu_write(&p)==EBUSY);
+ assert(remesa_render_pass_snapshot(&p,&snapshot)==EBUSY);
+ assert(!memcmp(&saved,&snapshot,sizeof(snapshot)) && p.content_epoch==1);
+ old=p;
+ struct remesa_pass_completion incomplete={true,false,true};
+ assert(remesa_render_pass_finish(&p,&t,&incomplete)==EAGAIN);
+ assert(!memcmp(&old,&p,sizeof(p)));
+ assert(!remesa_render_pass_finish(&p,&t,&verified));
+ assert(!remesa_render_pass_snapshot(&p,&snapshot));
+ assert(snapshot.content_epoch==2 && snapshot.content==REMESA_PASS_PRESENT);
+ assert(remesa_render_pass_finish(&p,&t,&verified)==EALREADY && p.content_epoch==2);
+ assert(!remesa_render_pass_begin(&p,REMESA_PASS_DISCARD,REMESA_PASS_DONT_STORE,false,&t));
+ assert(!remesa_render_pass_submitted(&p,&t));
+ assert(!remesa_render_pass_finish(&p,&t,&verified));
+ assert(!remesa_render_pass_snapshot(&p,&snapshot));
+ assert(snapshot.content_epoch==3 && snapshot.content==REMESA_PASS_UNDEFINED);
+ assert(!remesa_render_pass_cpu_write(&p) && p.content_epoch==4);
+ assert(!remesa_render_pass_import_writer(&p,&t));
+ assert(!remesa_render_pass_fail(&p,&t,EPROTO) && p.content_epoch==4);
+ assert(remesa_render_pass_admit_cpu_write(&p)==EPROTO);
+ saved=snapshot;
+ assert(remesa_render_pass_snapshot(&p,&snapshot)==EPROTO);
+ assert(!memcmp(&saved,&snapshot,sizeof(snapshot)));
+ ++cases;
+}
+static void content_exhaustion_and_aliases(void)
+{
+ struct remesa_render_pass p, old;
+ struct remesa_pass_ticket ticket={123,456};
+ struct remesa_pass_snapshot snapshot={789,987,REMESA_PASS_PRESENT}, saved=snapshot;
+ assert(!remesa_render_pass_init(&p,202));
+ old=p;
+ assert(remesa_render_pass_begin(&p,REMESA_PASS_DISCARD,REMESA_PASS_STORE,false,
+                                 (void *)&p.resource_cookie)==EINVAL);
+ assert(!memcmp(&old,&p,sizeof(p)));
+ assert(remesa_render_pass_snapshot(&p,(void *)&p.resource_cookie)==EINVAL);
+ assert(!memcmp(&old,&p,sizeof(p)));
+ assert(remesa_render_pass_snapshot(&p,NULL)==EINVAL);
+ assert(remesa_render_pass_snapshot(NULL,&snapshot)==EINVAL);
+ assert(!memcmp(&saved,&snapshot,sizeof(snapshot)));
+ p.content=REMESA_PASS_UNCERTAIN; old=p;
+ assert(remesa_render_pass_admit_cpu_write(&p)==EIO);
+ assert(remesa_render_pass_cpu_write(&p)==EIO);
+ assert(remesa_render_pass_snapshot(&p,&snapshot)==EIO);
+ assert(!memcmp(&old,&p,sizeof(p)) && !memcmp(&saved,&snapshot,sizeof(snapshot)));
+ p.content=REMESA_PASS_UNDEFINED; p.content_epoch=UINT64_MAX; old=p;
+ assert(remesa_render_pass_admit_cpu_write(&p)==EOVERFLOW);
+ assert(remesa_render_pass_cpu_write(&p)==EOVERFLOW);
+ assert(!memcmp(&old,&p,sizeof(p)));
+ assert(remesa_render_pass_begin(&p,REMESA_PASS_DISCARD,REMESA_PASS_STORE,false,&ticket)==EOVERFLOW);
+ assert(!memcmp(&old,&p,sizeof(p)) && ticket.resource_cookie==123 && ticket.serial==456);
+ /* The final available epoch must be reserved before submission and remain
+  * available for one fully verified completion. */
+ p.content_epoch=UINT64_MAX-1;
+ assert(!remesa_render_pass_import_writer(&p,&ticket));
+ assert(!remesa_render_pass_finish(&p,&ticket,&verified));
+ assert(p.content_epoch==UINT64_MAX);
+ old=p;
+ assert(remesa_render_pass_begin(&p,REMESA_PASS_DISCARD,REMESA_PASS_DONT_STORE,false,&ticket)==EOVERFLOW);
+ assert(!memcmp(&old,&p,sizeof(p)));
+ ++cases;
+}
 int main(void)
 {
  rejection(); cancellation(); proof_and_identity(); quarantine();
  sequence(2); sequence(10); sequence(100);
+ content_identity(); content_exhaustion_and_aliases();
  printf("PASS %u render-pass cases; simulated completion, no SGX\n",cases);
  return 0;
 }

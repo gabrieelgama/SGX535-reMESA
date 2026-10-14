@@ -6,7 +6,7 @@
 static unsigned maps_seen,waits_seen;
 static int counted_map(void *p,void *b,bool w,void **o){++maps_seen;return map_bo(p,b,w,o);}
 static int counted_wait(void *p,void *f,uint64_t n,bool v){++waits_seen;return wait_fence(p,f,n,v);}
-static const struct remesa_device_ops counted_ops={alloc,drop,counted_map,unmap_bo,submit,counted_wait,destroy_fence};
+static const struct remesa_device_ops counted_ops={.allocate=alloc,.destroy_bo=drop,.map=counted_map,.unmap=unmap_bo,.submit=submit,.wait=counted_wait,.destroy_fence=destroy_fence};
 static void complete(struct recorder *rec)
 { assert(rec->last);rec->last->retired=true;rec->last->target->published=true;rec->last->target->pending=false; }
 static void setup(struct pipe_context *ctx,struct pipe_resource *vb,struct pipe_resource *target)
@@ -67,6 +67,21 @@ int main(void)
   box=(struct pipe_box){.width=32,.height=32,.depth=1};data=other->texture_map(other,target,0,PIPE_MAP_READ,&box,&t);assert(data&&t);
   for(unsigned i=0;i<1024;i++)assert(((uint32_t *)data)[i]==0xffff0000);
   other->texture_unmap(other,t);++cases;
+  /* A non-NULL pointer transfers the mapping lease even on backend failure.
+   * Failed CPU clears must release it once, leave pixels unchanged and never
+   * claim a completed clear. Zero with NULL also requires lease cleanup. */
+  for(unsigned map_mode=1;map_mode<=2;map_mode++) {
+   rec.map_mode=map_mode;unsigned before_maps=rec.maps,before_unmaps=rec.unmaps;
+   uint64_t clears=remesa_context_cpu_clear_count(ctx);
+   union pipe_color_union blue={.f={0,0,1,1}};
+   ctx->clear(ctx,PIPE_CLEAR_COLOR0,NULL,&blue,0,0);
+   assert(remesa_context_error(ctx)==(map_mode==1?EPROTO:EIO));
+   assert(rec.maps==before_maps+1&&rec.unmaps==before_unmaps+1);
+   assert(remesa_context_cpu_clear_count(ctx)==clears&&rec.draws==before);
+   rec.map_mode=0;data=other->texture_map(other,target,0,PIPE_MAP_READ,&box,&t);assert(data&&t);
+   for(unsigned i=0;i<1024;i++)assert(((uint32_t *)data)[i]==0xffff0000);
+   other->texture_unmap(other,t);++cases;
+  }
   if(!mode){maps=maps_seen;waits=waits_seen;issue(ctx);assert(remesa_context_error(ctx)==ENOTSUP&&rec.draws==before&&maps_seen==maps&&waits_seen==waits);++cases;}
   else{issue(ctx);assert(!remesa_context_error(ctx)&&rec.draws==before+1);complete(&rec);++cases;}
   /* A write made through another context is resource-wide LOAD content. */

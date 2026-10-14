@@ -46,8 +46,7 @@ int main(void)
 {
    unsigned cases=0;
    struct fixture f={0};
-   const struct remesa_device_ops ops={allocate,destroy_bo,map_bo,unmap_bo,
-                                      submit,wait,destroy_fence};
+   const struct remesa_device_ops ops={.allocate=allocate,.destroy_bo=destroy_bo,.map=map_bo,.unmap=unmap_bo,.submit=submit,.wait=wait,.destroy_fence=destroy_fence};
    struct remesa_device d={.ops=&ops,.priv=&f,.resource_only_backend=true,
       .resource_limits={.row_alignment=64,.max_width=4096,.max_height=4096,
                         .max_resource_bytes=64*1024*1024}};
@@ -90,7 +89,7 @@ int main(void)
    unsigned before=f.maps;
    desc.u.tex.last_level=1;
    assert(!c->create_sampler_view(c,r,&desc));
-   assert(remesa_context_error(c)==ENOTSUP&&r->reference.count==2&&f.maps==before); ++cases;
+   assert(remesa_context_error(c)==EINVAL&&r->reference.count==2&&f.maps==before); ++cases;
    desc=descriptor(r->format);
    c->set_sampler_views(c,PIPE_SHADER_FRAGMENT,0,0,1,NULL);
    assert(!remesa_context_error(c)&&view->reference.count==1); ++cases;

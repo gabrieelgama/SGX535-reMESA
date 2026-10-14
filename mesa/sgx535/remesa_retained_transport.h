@@ -11,6 +11,8 @@
  */
 typedef int (*remesa_retained_recorder)(void *,const struct remesa_retained_request *,
  const struct remesa_retained_request *,int,int);
+/* Pure validation, unchanged request. No authorization or device operation. */
+int remesa_retained_request_validate(const struct remesa_retained_request *);
 int remesa_retained_submit_once(int,struct remesa_retained_request *,bool *,
  remesa_retained_recorder,void *);
 #endif

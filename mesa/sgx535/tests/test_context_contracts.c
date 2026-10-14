@@ -16,7 +16,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-struct fixture { unsigned allocations, frees, submissions, fences, retired; };
+struct fixture { unsigned allocations, frees, submissions, fences, retired, prepares; };
 static int allocate(void *p, size_t n, void **out)
 { struct fixture *f=p; *out=calloc(1,n); if(!*out)return ENOMEM; ++f->allocations; return 0; }
 static void destroy_bo(void *p,void *bo)
@@ -34,6 +34,17 @@ static int wait_fence(void *p,void *fence,uint64_t ns,bool visible)
 { (void)p;(void)ns;(void)visible;assert(fence);return 0; /* Mock completion only. */ }
 static void destroy_fence(void *p,void *fence)
 { assert(fence);++((struct fixture *)p)->retired;free(fence); }
+#ifdef REMESA_TEST_REAL_CSO
+/* A distinctive preparation error proves valid state reached the original
+ * shader seam. It generates no program and never permits submission. */
+static int prepare_programs(void *p,const struct remesa_shader_draw_programs *programs,void **out)
+{ assert(programs&&out);*out=NULL;++((struct fixture *)p)->prepares;return EIO; }
+static int submit_programs(void *p,void *target,const struct remesa_draw_packet *packet,
+ const struct remesa_shader_draw_inputs *inputs,void *programs,void **out)
+{ (void)p;(void)target;(void)packet;(void)inputs;(void)programs;(void)out;assert(0);return ENOTSUP; }
+static void destroy_programs(void *p,void *programs)
+{ (void)p;(void)programs;assert(0); }
+#endif
 static void release(struct pipe_resource *r)
 { if(!--r->reference.count)r->screen->resource_destroy(r->screen,r); }
 static struct pipe_resource *buffer(struct pipe_screen *s,unsigned bytes)
@@ -51,7 +62,11 @@ static void draw_check(struct pipe_context *c,struct fixture *f,int error,unsign
 }
 int main(void)
 {
- struct fixture f={0};const struct remesa_device_ops ops={allocate,destroy_bo,map_bo,unmap_bo,submit,wait_fence,destroy_fence};
+ struct fixture f={0};const struct remesa_device_ops ops={.allocate=allocate,.destroy_bo=destroy_bo,.map=map_bo,.unmap=unmap_bo,.submit=submit,.wait=wait_fence,.destroy_fence=destroy_fence,
+#ifdef REMESA_TEST_REAL_CSO
+ .prepare_shader_programs=prepare_programs,.submit_shader_programs=submit_programs,.destroy_shader_programs=destroy_programs,
+#endif
+ };
  struct remesa_device device={.ops=&ops,.priv=&f,.offline_test_backend=true};
  struct pipe_screen *s=remesa_screen_create(&device);assert(s);
  struct pipe_context *c=s->context_create(s,NULL,0);assert(c);
@@ -77,6 +92,35 @@ int main(void)
  struct pipe_resource *target=s->resource_create(s,&rt);assert(target);
  struct pipe_framebuffer_state fb={0};fb.width=fb.height=32;fb.nr_cbufs=1;fb.cbufs[0].texture=target;fb.cbufs[0].format=target->format;
  c->set_framebuffer_state(c,&fb);assert(!remesa_bind_diagnostic_pipeline(c,0xffff00ff));
+ /* Mesa CSO cleanup uses NULL to unbind all three fixed objects. These
+  * callbacks must accept it individually, before another callback can mask
+  * a transient error. Invalid non-NULL handles still poison draw admission. */
+ struct pipe_blend_state blend={0};blend.rt[0].colormask=PIPE_MASK_RGBA;
+ struct pipe_depth_stencil_alpha_state depth={0};
+ struct pipe_rasterizer_state raster={0};
+ raster.fill_front=raster.fill_back=PIPE_POLYGON_MODE_FILL;
+ void *bs=c->create_blend_state(c,&blend);
+ void *ds=c->create_depth_stencil_alpha_state(c,&depth);
+ void *rs=c->create_rasterizer_state(c,&raster);assert(bs&&ds&&rs);
+ c->bind_blend_state(c,bs);assert(!remesa_context_error(c));
+ c->bind_depth_stencil_alpha_state(c,ds);assert(!remesa_context_error(c));
+ c->bind_rasterizer_state(c,rs);assert(!remesa_context_error(c));
+ c->bind_blend_state(c,NULL);assert(!remesa_context_error(c));
+ c->bind_depth_stencil_alpha_state(c,NULL);assert(!remesa_context_error(c));
+ c->bind_rasterizer_state(c,NULL);assert(!remesa_context_error(c));
+ struct pipe_context *foreign=s->context_create(s,NULL,0);assert(foreign);
+ void *foreign_blend=foreign->create_blend_state(foreign,&blend);assert(foreign_blend);
+ c->bind_blend_state(c,foreign_blend);assert(remesa_context_error(c)==EINVAL);
+ c->set_sample_mask(c,1);assert(!remesa_context_error(c));
+ draw_check(c,&f,ENOTSUP,0);
+ c->bind_blend_state(c,NULL);assert(!remesa_context_error(c));
+ c->delete_rasterizer_state(c,rs);
+ c->bind_rasterizer_state(c,rs);assert(remesa_context_error(c)==EINVAL);
+ c->set_sample_mask(c,1);assert(!remesa_context_error(c));
+ draw_check(c,&f,ENOTSUP,0);
+ c->bind_rasterizer_state(c,NULL);assert(!remesa_context_error(c));
+ c->delete_blend_state(c,bs);c->delete_depth_stencil_alpha_state(c,ds);
+ foreign->delete_blend_state(foreign,foreign_blend);foreign->destroy(foreign);
  assert(c->create_sampler_state&&c->bind_sampler_states&&c->delete_sampler_state&&
         c->create_sampler_view&&c->set_sampler_views&&c->sampler_view_destroy);
  struct pipe_sampler_state sampler={0};
@@ -161,11 +205,38 @@ int main(void)
  nir_store_deref(&builder,od,nir_load_deref(&builder,id),15);
  struct pipe_shader_state shader={.type=PIPE_SHADER_IR_NIR,.ir.nir=builder.shader};
  void *vs=c->create_vs_state(c,&shader);assert(vs);c->bind_vs_state(c,vs);assert(!remesa_context_error(c));
+ nir_builder fragment=nir_builder_init_simple_shader(MESA_SHADER_FRAGMENT,options,"context green");
+ nir_variable *color=nir_variable_create(fragment.shader,nir_var_shader_out,glsl_vec4_type(),"color");
+ color->data.location=FRAG_RESULT_DATA0;
+ nir_store_deref(&fragment,nir_build_deref_var(&fragment,color),nir_imm_vec4(&fragment,0,1,0,1),15);
+ shader.ir.nir=fragment.shader;void *fs=c->create_fs_state(c,&shader);assert(fs);c->bind_fs_state(c,fs);
+ vb=buffer(s,sizeof(positions));target=s->resource_create(s,&rt);assert(vb&&target);
+ bytes=c->buffer_map(c,vb,0,PIPE_MAP_WRITE,&box,&tr);assert(bytes&&tr);
+ const float clip[3][4]={{-.5f,-.5f,0,1},{.5f,-.5f,0,1},{-.5f,.5f,0,1}};
+ memcpy(bytes,clip,sizeof(clip));c->buffer_unmap(c,tr);
+ vertex.buffer.resource=vb;++vb->reference.count;c->set_vertex_buffers(c,1,&vertex);
+ elements=c->create_vertex_elements_state(c,1,&e);assert(elements);c->bind_vertex_elements_state(c,elements);
+ fb.cbufs[0].texture=target;c->set_framebuffer_state(c,&fb);
+ struct pipe_viewport_state viewport={.scale={16,16,.5f},.translate={16,16,.5f}};
+ c->set_viewport_states(c,0,1,&viewport);
+ bs=c->create_blend_state(c,&blend);ds=c->create_depth_stencil_alpha_state(c,&depth);
+ rs=c->create_rasterizer_state(c,&raster);assert(bs&&ds&&rs);
+ c->bind_blend_state(c,bs);c->bind_depth_stencil_alpha_state(c,ds);c->bind_rasterizer_state(c,rs);
+ unsigned submissions=f.submissions,prepares=f.prepares;
+ c->bind_blend_state(c,NULL);assert(!remesa_context_error(c));draw_check(c,&f,ENOTSUP,submissions);assert(f.prepares==prepares);
+ c->bind_blend_state(c,bs);
+ c->bind_depth_stencil_alpha_state(c,NULL);assert(!remesa_context_error(c));draw_check(c,&f,ENOTSUP,submissions);assert(f.prepares==prepares);
+ c->bind_depth_stencil_alpha_state(c,ds);
+ c->bind_rasterizer_state(c,NULL);assert(!remesa_context_error(c));draw_check(c,&f,ENOTSUP,submissions);assert(f.prepares==prepares);
+ c->bind_rasterizer_state(c,rs);
+ draw_check(c,&f,EIO,submissions);assert(f.prepares==prepares+1);
  struct cso_context *cso=cso_create_context(c,CSO_NO_VBUF);assert(cso);
  cso_unbind_context(cso);assert(!remesa_context_error(c));
  cso_destroy_context(cso);assert(!remesa_context_error(c));
- c->delete_vs_state(c,vs);assert(!remesa_context_error(c));c->destroy(c);glsl_type_singleton_decref();
- puts("PASS actual Mesa CSO create/unbind/destroy; no draws or hardware");
+ c->delete_vs_state(c,vs);c->delete_fs_state(c,fs);assert(!remesa_context_error(c));
+ c->delete_blend_state(c,bs);c->delete_depth_stencil_alpha_state(c,ds);c->delete_rasterizer_state(c,rs);
+ c->delete_vertex_elements_state(c,elements);c->destroy(c);release(vb);release(target);glsl_type_singleton_decref();
+ puts("PASS actual Mesa NIR missing-state rejection, original preparation seam and CSO cleanup; no shader submissions or hardware");
 #endif
  s->destroy(s);
  assert(f.allocations==f.frees&&f.fences==f.retired);

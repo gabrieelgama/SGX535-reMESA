@@ -12,6 +12,8 @@ from pathlib import Path
 p = argparse.ArgumentParser()
 p.add_argument('--cache', type=Path, required=True)
 p.add_argument('--output', type=Path, required=True)
+p.add_argument('--test', default='test_program_registers.c',
+               choices=['test_program_registers.c', 'test_program_entry.c'])
 a = p.parse_args()
 a.output.mkdir(parents=True, exist_ok=False)
 repo = Path(__file__).resolve().parents[3]
@@ -19,7 +21,7 @@ here = repo / 'mesa/sgx535'
 env = dict(os.environ)
 env.update(json.loads((a.cache / 'build-environment.json').read_text()))
 base = ['-std=c11', '-UNDEBUG', '-Wall', '-Wextra', '-Werror', '-I' + str(here)]
-sources = [here / 'remesa_program_registers.c', here / 'tests/test_program_registers.c']
+sources = [here / 'remesa_program_registers.c', here / 'tests' / a.test]
 qemu = Path('/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/tests/qemu-root/usr/bin/qemu-i386')
 results = []
 variants = [('native', ['cc'], ['-O2'], []),

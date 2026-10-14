@@ -14,8 +14,8 @@ struct texture_view {
    struct pipe_sampler_view descriptor;
    struct pipe_resource *backing;
    struct texture_view *next;
-   struct remesa_texture_storage storage;
-   unsigned width, height;
+   struct remesa_texture_storage storage[REMESA_TEXTURE_STORAGE_LEVELS];
+   unsigned width, height, levels;
    bool destroyed;
 };
 struct remesa_texture_binding_bank {
@@ -86,15 +86,32 @@ static int storage_valid(struct remesa_texture_binding_bank *b,
        __atomic_load_n(&r->reference.count,__ATOMIC_RELAXED)<=0)
       return EINVAL;
    if (r->target!=PIPE_TEXTURE_2D || !r->width0 || !r->height0 ||
-       r->depth0!=1 || r->array_size!=1 || r->last_level || r->nr_samples>1 ||
+       r->depth0!=1 || r->array_size!=1 || r->last_level>=REMESA_TEXTURE_STORAGE_LEVELS || r->nr_samples>1 ||
        r->nr_storage_samples>1 || r->flags ||
        (r->format!=PIPE_FORMAT_R8G8B8A8_UNORM &&
         r->format!=PIPE_FORMAT_B8G8R8A8_UNORM)) return ENOTSUP;
-   int error=b->query(b->query_user,r,out);
-   if (error) return error>0?error:EPROTO;
-   if (!out->resource_cookie || (out->stride&3u) ||
-       (uint64_t)r->width0*4u>out->stride ||
-       (uint64_t)out->stride*r->height0>out->bytes) return EINVAL;
+   unsigned largest=r->width0>r->height0?r->width0:r->height0, max_level=0;
+   while(largest>1){largest>>=1;++max_level;}
+   if(r->last_level>max_level)return EINVAL;
+   size_t end=0;
+   for(unsigned level=0;level<=r->last_level;level++) {
+      struct remesa_texture_storage storage={0};
+      int error=b->query(b->query_user,r,level,&storage);
+      if(error)return error>0?error:EPROTO;
+      unsigned width=r->width0>>level,height=r->height0>>level;
+      if(!width)width=1;
+      if(!height)height=1;
+      uint64_t span=(uint64_t)storage.stride*height;
+      if(!storage.resource_cookie || storage.levels!=r->last_level+1u ||
+         storage.width!=width || storage.height!=height || (storage.stride&3u) ||
+         (uint64_t)width*4u>storage.stride || storage.offset!=end ||
+         storage.bytes>UINT32_MAX || storage.offset>storage.bytes ||
+         span>storage.bytes-storage.offset ||
+         (level&&(storage.bytes!=out[0].bytes ||
+                  storage.resource_cookie!=out[0].resource_cookie ||
+                  storage.content_epoch!=out[0].content_epoch)))return EINVAL;
+      out[level]=storage;end=storage.offset+(size_t)span;
+   }
    return 0;
 }
 static bool swizzle_valid(unsigned swizzle) { return swizzle<=PIPE_SWIZZLE_1; }
@@ -114,16 +131,17 @@ int remesa_texture_view_create(struct remesa_texture_binding_bank *b,
 {
    if (out) *out=NULL;
    if (!b || !template || !out || b->closed) return EINVAL;
-   struct remesa_texture_storage storage;
-   int error=storage_valid(b,r,&storage); if (error) return error;
+   struct remesa_texture_storage storage[REMESA_TEXTURE_STORAGE_LEVELS]={0};
+   int error=storage_valid(b,r,storage); if (error) return error;
    if (template->target!=PIPE_TEXTURE_2D || template->format!=r->format ||
        template->astc_decode_format || template->is_tex2d_from_buf ||
-       template->u.tex.first_level || template->u.tex.last_level ||
        template->u.tex.first_layer || template->u.tex.last_layer ||
        !swizzle_valid(template->swizzle_r) ||
        !swizzle_valid(template->swizzle_g) ||
        !swizzle_valid(template->swizzle_b) ||
        !swizzle_valid(template->swizzle_a)) return ENOTSUP;
+   if(template->u.tex.first_level>template->u.tex.last_level ||
+      template->u.tex.last_level>r->last_level)return EINVAL;
    /* The existing atomic resource helper acquires exactly one reference.
     * Reject the signed-counter limit before allocation or acquisition. */
    if (__atomic_load_n(&r->reference.count,__ATOMIC_RELAXED)==INT_MAX)
@@ -140,7 +158,8 @@ int remesa_texture_view_create(struct remesa_texture_binding_bank *b,
    v->base.context=&b->view_owner;
    v->backing=r;
    v->base.texture=v->backing; v->descriptor=v->base;
-   v->storage=storage; v->width=r->width0; v->height=r->height0;
+   memcpy(v->storage,storage,sizeof(storage));
+   v->width=r->width0; v->height=r->height0;v->levels=r->last_level+1u;
    v->next=b->views; b->views=v; ++b->count; ++b->live;
    *out=&v->base; return 0;
 }
@@ -170,14 +189,27 @@ static int valid_view(struct remesa_texture_binding_bank *b,
        v->base.swizzle_b!=v->descriptor.swizzle_b ||
        v->base.swizzle_a!=v->descriptor.swizzle_a ||
        memcmp(&v->base.u,&v->descriptor.u,sizeof(v->base.u))) return ESTALE;
-   struct remesa_texture_storage storage;
-   int error=storage_valid(b,v->backing,&storage); if (error) return error;
-   if (storage.resource_cookie!=v->storage.resource_cookie ||
-       storage.bytes!=v->storage.bytes || storage.stride!=v->storage.stride ||
+   struct remesa_texture_storage storage[REMESA_TEXTURE_STORAGE_LEVELS]={0};
+   int error=storage_valid(b,v->backing,storage); if (error) return error;
+   if(v->base.texture->last_level+1u!=v->levels ||
        v->base.texture->width0!=v->width ||
        v->base.texture->height0!=v->height ||
        v->base.texture->format!=v->base.format ||
        v->base.context!=&b->view_owner) return ESTALE;
+   for(unsigned level=0;level<v->levels;level++) {
+      const struct remesa_texture_storage *a=&storage[level],*z=&v->storage[level];
+      /* Content changes do not invalidate a view of retained storage. They
+       * invalidate immutable prepared descriptors, which capture the epoch. */
+      if(a->resource_cookie!=z->resource_cookie || a->bytes!=z->bytes ||
+         a->stride!=z->stride || a->offset!=z->offset || a->width!=z->width ||
+         a->height!=z->height || a->levels!=z->levels ||
+         a->content_epoch<z->content_epoch)return ESTALE;
+   }
+   /* Refresh only content revisions after every immutable layout check has
+    * succeeded. A view remains usable after upload, while a prepared
+    * descriptor must observe the new revision at its next revalidation. */
+   for(unsigned level=0;level<v->levels;level++)
+      v->storage[level].content_epoch=storage[level].content_epoch;
    return 0;
 }
 static void drop_view(struct remesa_texture_binding_bank *b,struct texture_view *v)
@@ -232,7 +264,16 @@ int remesa_texture_view_storage(struct remesa_texture_binding_bank *b,
    if (!b || !view || !out || b->closed) return EINVAL;
    struct texture_view *v=find(b,view);
    int error=valid_view(b,v); if (error) return error;
-   *out=v->storage; return 0;
+   *out=v->storage[v->descriptor.u.tex.first_level]; return 0;
+}
+int remesa_texture_view_level_storage(struct remesa_texture_binding_bank *b,
+   const struct pipe_sampler_view *view,unsigned level,struct remesa_texture_storage *out)
+{
+   if(!b || !view || !out || b->closed)return EINVAL;
+   struct texture_view *v=find(b,view);
+   int error=valid_view(b,v);if(error)return error;
+   if(level<v->descriptor.u.tex.first_level || level>v->descriptor.u.tex.last_level)return EINVAL;
+   *out=v->storage[level];return 0;
 }
 void remesa_texture_binding_close(struct remesa_texture_binding_bank *b)
 {

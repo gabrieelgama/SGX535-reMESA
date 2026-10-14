@@ -44,6 +44,45 @@ static nir_alu_instr *vector(nir_shader *s)
  nir_foreach_instr(instr,b)if(instr->type==nir_instr_type_alu)return nir_instr_as_alu(instr);
  assert(!"missing vec4");return NULL;
 }
+static nir_shader *split_export(unsigned mode)
+{
+ nir_shader *s=fixture(0xff00ff00);
+ nir_function *fn=exec_node_data(nir_function,exec_list_get_head(&s->functions),node);
+ nir_block *b=exec_node_data(nir_block,exec_list_get_head(&fn->impl->body),cf_node.node);
+ nir_load_const_instr *old=exec_node_data(nir_load_const_instr,exec_list_get_head(&b->instr_list),instr.node);
+ nir_intrinsic_instr *last=exec_node_data(nir_intrinsic_instr,exec_list_get_tail(&b->instr_list),instr.node);
+ nir_def *offset=last->src[1].ssa;
+ const unsigned order[4]={2,0,3,1};
+ unsigned count=mode==1?3:4;
+ for(unsigned n=0;n<count;n++) {
+  unsigned c=mode==0?order[n]:n;
+  nir_load_const_instr *v=rzalloc_size(s,sizeof(*v)+sizeof(nir_const_value));
+  v->instr.type=nir_instr_type_load_const;v->instr.block=b;v->def.parent_instr=&v->instr;
+  v->def.bit_size=32;v->def.num_components=1;v->value[0].u32=old->value[c].u32;
+  exec_list_push_tail(&b->instr_list,&v->instr.node);
+  nir_intrinsic_instr *st=rzalloc_size(s,sizeof(*st)+2*sizeof(nir_src));
+  st->instr.type=nir_instr_type_intrinsic;st->instr.block=b;st->intrinsic=nir_intrinsic_store_output;
+  st->num_components=1;st->src[0].ssa=&v->def;st->src[1].ssa=offset;
+  nir_intrinsic_set_write_mask(st,1);nir_intrinsic_set_component(st,c);
+  nir_intrinsic_set_src_type(st,nir_type_float32);
+  nir_intrinsic_set_io_semantics(st,(nir_io_semantics){.location=FRAG_RESULT_DATA0,.num_slots=1});
+  if(n==3) {
+   if(mode==2)nir_intrinsic_set_component(st,2);
+   if(mode==3)nir_intrinsic_set_io_semantics(st,(nir_io_semantics){.location=FRAG_RESULT_COLOR,.num_slots=1});
+   if(mode==4)nir_intrinsic_set_component(st,4);
+   if(mode==5)nir_intrinsic_set_src_type(st,nir_type_int32);
+   if(mode==6)nir_intrinsic_set_write_mask(st,2);
+   if(mode==7)st->num_components=2;
+   if(mode==8)v->def.bit_size=16;
+   if(mode==9)v->value[0].u32=UINT32_C(0x3f000000);
+   if(mode==10)nir_intrinsic_set_write_mask(st,0);
+  }
+  exec_list_push_tail(&b->instr_list,&st->instr.node);
+ }
+ exec_node_remove(&old->instr.node);exec_node_remove(&last->instr.node);
+ if(mode==11)nir_instr_as_load_const(offset->parent_instr)->value[0].u32=1;
+ return s;
+}
 int main(void)
 {
  unsigned cases=0;
@@ -67,6 +106,13 @@ int main(void)
   if(mode==11)nir_instr_as_load_const(source->parent_instr)->value[0].u32=0x7fc00000;
   if(mode==12)source->parent_instr=&vec->instr;
   assert(remesa_nir_constant_fragment(s,&out)!=0&&out==0x12345678);cases++;ralloc_free(s);
+ }
+ for(unsigned mode=0;mode<12;mode++) {
+  nir_shader *s=split_export(mode);uint32_t out=0x12345678;
+  int error=remesa_nir_constant_fragment(s,&out);
+  if(!mode)assert(!error&&out==0xff00ff00);
+  else assert(error!=0&&out==0x12345678);
+  cases++;ralloc_free(s);
  }
  printf("PASS %u fragment construction/order/bounds cases (NO GPU)\n",cases);
  return 0;

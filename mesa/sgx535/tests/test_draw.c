@@ -1,4 +1,7 @@
 /* SPDX-License-Identifier: MIT */
+#ifdef NDEBUG
+#error Assertions are required
+#endif
 #include "remesa_draw.h"
 #include "remesa_screen.h"
 #include <assert.h>
@@ -49,8 +52,26 @@ int main(void)
     position.instance_divisor=1; CHECK(RUN==REMESA_DRAW_UNSUPPORTED); position.instance_divisor=0;
     info.instance_count=2; CHECK(RUN==REMESA_DRAW_UNSUPPORTED); info.instance_count=0;
     CHECK(RUN==REMESA_DRAW_EMPTY); info.instance_count=1;
-    draw.count=0; CHECK(RUN==REMESA_DRAW_EMPTY); draw.count=5;
-    CHECK(RUN==REMESA_DRAW_UNSUPPORTED); draw.count=6;
+    draw.count=0; CHECK(RUN==REMESA_DRAW_EMPTY);
+    /* Only complete TRIANGLES affect declared index bounds or vertex fetch.
+     * The ignored fifth index names vertex3, outside these active bounds. */
+    info.index_bounds_valid=true;info.max_index=2;
+    for(unsigned tail=1;tail<=2;++tail) {
+       draw.count=3+tail;
+       CHECK(RUN==REMESA_DRAW_VALIDATED);
+       CHECK(p.primitive_count==1 && p.max_vertex==2 &&
+             p.index_end_byte==6 && p.vertex_end_byte==80);
+       CHECK(remesa_validate_indexed_triangles(&info,&draw,&vertices,&position,
+             idx,6,&p)==REMESA_DRAW_VALIDATED);
+    }
+    info.index_bounds_valid=false;draw.count=6;
+    for(unsigned empty=1;empty<=2;++empty) {
+       draw.count=empty;draw.start=UINT_MAX;
+       CHECK(remesa_validate_indexed_triangles(&info,&draw,&vertices,&position,
+             NULL,0,&p)==REMESA_DRAW_EMPTY);
+       CHECK(p.primitive_count==0 && p.index_end_byte==0);
+    }
+    draw.start=0;draw.count=6;
     info.index_size=3; CHECK(RUN==REMESA_DRAW_INVALID); info.index_size=2;
     CHECK(remesa_validate_indexed_triangles(&info,&draw,&vertices,&position,idx,11,&p)==REMESA_DRAW_INVALID);
     draw.start=UINT_MAX; CHECK(RUN==REMESA_DRAW_INVALID); draw.start=0;

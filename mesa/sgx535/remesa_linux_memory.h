@@ -3,9 +3,12 @@
 #define REMESA_LINUX_MEMORY_H
 #include "remesa_persistent.h"
 #include "remesa/memory_uapi.h"
+#include "remesa_retained_transport.h"
 /* Borrow fd/context already bound by the future kernel per-file integration.
  * Never discovers/installs a driver or opens a live node. Current stock/native
- * modules do not expose the memory ioctl and must fail ENOTTY. No draw support.
+ * installations do not provide this resource service. Archived experimental
+ * modules register a default-disabled endpoint; its availability and exclusive
+ * ownership must be qualified separately. No draw support is provided here.
  * Externally serialized, close only after persistent resources are destroyed. */
 struct remesa_linux_memory;
 /* Begin a kernel-issued per-file resource session; no GPU submission. */
@@ -23,6 +26,10 @@ int remesa_linux_memory_info(struct remesa_linux_memory *,uint32_t,struct remesa
 int remesa_linux_memory_validate_backing(struct remesa_linux_memory *,uint32_t,
                                         uint64_t,size_t);
 uint64_t remesa_linux_memory_context(const struct remesa_linux_memory *);
+/* Reuse this endpoint's exact fd/drm_file, not a second native-draw path.
+ * Kernel admission/borrowed ownership and recorder remain mandatory. */
+int remesa_linux_memory_submit_retained(struct remesa_linux_memory *,
+ struct remesa_retained_request *,bool *,remesa_retained_recorder,void *);
 /* Drop ONLY host staging/metadata after all consumers stop. No kernel cleanup,
  * no ioctl, no claim of retirement; caller still owns and must close the fd. */
 void remesa_linux_memory_forget(struct remesa_linux_memory *);

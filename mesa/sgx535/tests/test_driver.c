@@ -4,14 +4,22 @@
 #include "pipe/p_screen.h"
 #include "pipe/p_context.h"
 #include "pipe/p_state.h"
+#ifdef REMESA_WITH_NIR
+#include "remesa_shader_program.h"
+#include "remesa_draw.h"
+#endif
 #include <assert.h>
 #include <errno.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
 struct bo { unsigned refs; bool pending,published; void *bytes; };
-struct fence { struct bo *target; bool retired; };
-struct recorder { struct remesa_draw_packet packet; unsigned draws,allocs,frees,maps,unmaps,map_mode; int submit_error; bool allocation_error,error_fence; unsigned fence_destroys; struct fence *last; };
+struct recorded_programs;
+struct fence { struct bo *target; bool retired; struct recorded_programs *programs; };
+struct recorder { struct remesa_draw_packet packet; unsigned draws,allocs,frees,maps,unmaps,map_mode; int submit_error; bool allocation_error,error_fence; unsigned fence_destroys; struct fence *last;
+ unsigned shader_prepares,shader_submits,shader_allocs,shader_frees;
+ int shader_prepare_error;bool shader_prepare_null;
+};
 static int alloc(void *priv,size_t n,void **out)
 { struct recorder *rec=priv;struct bo *b=calloc(1,sizeof(*b));assert(b);b->bytes=calloc(1,n);assert(b->bytes);b->refs=1;*out=b;++rec->allocs;return rec->allocation_error ? ENOMEM : 0; }
 static void drop(void *priv,void *object)
@@ -29,9 +37,69 @@ static int submit(void *priv,void *target,const struct remesa_draw_packet *packe
 }
 static int wait_fence(void *priv,void *object,uint64_t ns,bool published)
 { struct fence *f=object;(void)priv;(void)ns;return f->retired && (!published || f->target->published) ? 0 : ETIMEDOUT; }
+#ifdef REMESA_WITH_NIR
+/* Recording-only original-shader handoff. No instruction encoding, hardware
+ * allocation, pixel generation or claim of executable programs occurs here. */
+struct recorded_programs {
+ unsigned refs;struct remesa_shader_draw_programs snapshot;
+ struct remesa_shader_draw_inputs inputs;
+};
+static int prepare_shaders(void *priv,const struct remesa_shader_draw_programs *snapshot,void **out)
+{
+ struct recorder *rec=priv;++rec->shader_prepares;
+ assert(!remesa_shader_draw_programs_validate(snapshot));
+ if(rec->shader_prepare_null)return rec->shader_prepare_error;
+ struct recorded_programs *programs=calloc(1,sizeof(*programs));assert(programs);
+ programs->refs=1;programs->snapshot=*snapshot;++rec->shader_allocs;*out=programs;
+ return rec->shader_prepare_error;
+}
+static void destroy_shaders(void *priv,void *object)
+{
+ struct recorder *rec=priv;struct recorded_programs *programs=object;
+ assert(!remesa_shader_draw_programs_validate(&programs->snapshot));
+ if(!--programs->refs){free((void *)programs->inputs.vertex_data);
+  free((void *)programs->inputs.index_data);++rec->shader_frees;free(programs);}
+}
+static int submit_shaders(void *priv,void *target,const struct remesa_draw_packet *packet,
+                          const struct remesa_shader_draw_inputs *inputs,void *object,void **out)
+{
+ struct recorder *rec=priv;struct recorded_programs *programs=object;
+ assert(programs&&programs->refs&&!remesa_shader_draw_programs_validate(&programs->snapshot));
+ assert(programs->snapshot.pipeline.fragment_argb==packet->argb);
+ assert(inputs&&inputs->vertex_data&&inputs->vertex_bytes&&inputs->count&&inputs->count%3==0);
+ assert(inputs->position_input_slot==programs->snapshot.pipeline.position_input_slot);
+ assert(inputs->position_format==PIPE_FORMAT_R32G32_FLOAT||
+        inputs->position_format==PIPE_FORMAT_R32G32B32_FLOAT||
+        inputs->position_format==PIPE_FORMAT_R32G32B32A32_FLOAT);
+ assert(inputs->color_format==PIPE_FORMAT_B8G8R8A8_UNORM&&inputs->color_width==packet->width&&
+        inputs->color_height==packet->height&&inputs->color_stride==128&&inputs->color_bytes==4096);
+ assert(!programs->inputs.vertex_data&&!programs->inputs.index_data);
+ programs->inputs=*inputs;
+ void *vertices=malloc(inputs->vertex_bytes);assert(vertices);
+ memcpy(vertices,inputs->vertex_data,inputs->vertex_bytes);programs->inputs.vertex_data=vertices;
+ if(inputs->index_size) {
+  assert(inputs->index_data&&inputs->index_bytes);
+  void *indices=malloc(inputs->index_bytes);assert(indices);
+  memcpy(indices,inputs->index_data,inputs->index_bytes);programs->inputs.index_data=indices;
+ } else assert(!inputs->index_data&&!inputs->index_bytes&&!inputs->index_bias);
+ ++rec->shader_submits;
+ int error=submit(priv,target,packet,out);
+ if(*out){struct fence *f=*out;f->programs=programs;++programs->refs;}
+ return error;
+}
+#endif
 static void destroy_fence(void *priv,void *object)
-{ struct fence *f=object;struct recorder *rec=priv;assert(f->retired);if(f->target) { f->target->pending=false;drop(priv,f->target); } ++rec->fence_destroys;free(f); }
-static const struct remesa_device_ops ops={alloc,drop,map_bo,unmap_bo,submit,wait_fence,destroy_fence};
+{ struct fence *f=object;struct recorder *rec=priv;assert(f->retired);if(f->target) { f->target->pending=false;drop(priv,f->target); }
+#ifdef REMESA_WITH_NIR
+ if(f->programs)destroy_shaders(priv,f->programs);
+#endif
+ ++rec->fence_destroys;free(f); }
+static const struct remesa_device_ops ops={.allocate=alloc,.destroy_bo=drop,.map=map_bo,.unmap=unmap_bo,
+ .submit=submit,.wait=wait_fence,.destroy_fence=destroy_fence,
+#ifdef REMESA_WITH_NIR
+ .prepare_shader_programs=prepare_shaders,.submit_shader_programs=submit_shaders,.destroy_shader_programs=destroy_shaders,
+#endif
+};
 static void resource_drop(struct pipe_resource *p)
 { if(!--p->reference.count) p->screen->resource_destroy(p->screen,p); }
 static struct pipe_resource *buffer(struct pipe_screen *s,unsigned size,unsigned bind)
@@ -46,15 +114,21 @@ int main(void)
  struct pipe_resource rt={0};struct pipe_transfer *transfer=NULL;void *ptr;struct pipe_box box={0};
  struct pipe_vertex_buffer vertex={0};struct pipe_vertex_element element={0};void *ve;
  struct pipe_framebuffer_state fb={0};struct pipe_draw_info info={0};struct pipe_draw_start_count_bias d={0};
- struct pipe_fence_handle *f=NULL;struct pipe_surface *surface;struct pipe_surface st={0};const float positions[3][4]={{8,8,.5,1},{24,8,.5,1},{8,24,.5,1}};
+ struct pipe_fence_handle *f=NULL;struct pipe_surface *surface;struct pipe_surface st={0};
+ const float window_positions[3][4]={{8,8,.5,1},{24,8,.5,1},{8,24,.5,1}};
+#ifdef REMESA_TEST_CLIP_INPUT
+ const float positions[3][4]={{-.5,-.5,0,1},{.5,-.5,0,1},{-.5,.5,0,1}};
+#else
+ const float (*positions)[4]=window_positions;
+#endif
  const uint16_t indices[]={0,1,2};
  assert(!remesa_screen_create(NULL));device.offline_test_backend=false;assert(!remesa_screen_create(&device));device.offline_test_backend=true;
  screen=remesa_screen_create(&device);assert(screen);assert(strstr(screen->get_name(screen),"NO SGX"));
  ctx=screen->context_create(screen,NULL,0);assert(ctx);assert(!screen->context_create(screen,NULL,1));
  rec.allocation_error=true;assert(!buffer(screen,48,PIPE_BIND_VERTEX_BUFFER));assert(rec.allocs==rec.frees);rec.allocation_error=false;
- vb=buffer(screen,sizeof(positions),PIPE_BIND_VERTEX_BUFFER);ib=buffer(screen,sizeof(indices),PIPE_BIND_INDEX_BUFFER);assert(vb&&ib);
- box.width=sizeof(positions);box.height=box.depth=1;ptr=ctx->buffer_map(ctx,vb,0,PIPE_MAP_WRITE,&box,&transfer);assert(ptr&&transfer);
- memcpy(ptr,positions,sizeof(positions));ctx->buffer_unmap(ctx,transfer);
+ vb=buffer(screen,sizeof(window_positions),PIPE_BIND_VERTEX_BUFFER);ib=buffer(screen,sizeof(indices),PIPE_BIND_INDEX_BUFFER);assert(vb&&ib);
+ box.width=sizeof(window_positions);box.height=box.depth=1;ptr=ctx->buffer_map(ctx,vb,0,PIPE_MAP_WRITE,&box,&transfer);assert(ptr&&transfer);
+ memcpy(ptr,positions,sizeof(window_positions));ctx->buffer_unmap(ctx,transfer);
  box.width=sizeof(indices);ptr=ctx->buffer_map(ctx,ib,0,PIPE_MAP_WRITE,&box,&transfer);assert(ptr);memcpy(ptr,indices,sizeof(indices));ctx->buffer_unmap(ctx,transfer);
  box.x=5;box.width=2;assert(!ctx->buffer_map(ctx,ib,0,PIPE_MAP_READ,&box,&transfer));assert(!transfer);box.x=0;
  box.height=2;assert(!ctx->buffer_map(ctx,ib,0,PIPE_MAP_READ,&box,&transfer));assert(!transfer);box.height=1;
@@ -80,7 +154,7 @@ int main(void)
  ++target->reference.count;vertex.buffer.resource=target;ctx->set_vertex_buffers(ctx,1,&vertex);assert(remesa_context_error(ctx)==EINVAL);
  ++vb->reference.count;vertex.buffer.resource=vb;ctx->set_vertex_buffers(ctx,1,&vertex);
  info.index_size=0;info.index.user=(void *)1;ctx->draw_vbo(ctx,&info,0,NULL,&d,1);assert(!remesa_context_error(ctx)&&rec.draws==1);
- assert(rec.packet.argb==0xffff00ff && rec.packet.index_count==3 && !memcmp(rec.packet.positions,positions,sizeof(positions)));
+ assert(rec.packet.argb==0xffff00ff && rec.packet.index_count==3 && !memcmp(rec.packet.positions,window_positions,sizeof(window_positions)));
  ctx->flush(ctx,&f,0);assert(f);assert(!screen->fence_finish(screen,ctx,f,0));
  box.width=box.height=32;assert(!ctx->texture_map(ctx,target,0,PIPE_MAP_READ,&box,&transfer));
  /* Test-only completion/publication are explicit independent transitions. No

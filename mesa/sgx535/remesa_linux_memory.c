@@ -121,6 +121,20 @@ int remesa_linux_memory_detach(struct remesa_linux_memory *d)
 uint64_t remesa_linux_memory_context(const struct remesa_linux_memory *d)
 {return d?d->context:0;}
 
+int remesa_linux_memory_submit_retained(struct remesa_linux_memory *d,
+ struct remesa_retained_request *r,bool *attempted,remesa_retained_recorder record,void *priv)
+{
+ if(!d||!r||!attempted||!record||r->context!=d->context)return EINVAL;
+ if(*attempted)return EALREADY;
+ int validation=remesa_retained_request_validate(r);if(validation)return validation;
+ for(unsigned i=0;i<REMESA_RETAINED_ROLES;i++) {
+  int error=remesa_linux_memory_validate_backing(d,r->bindings[i].id,
+    r->bindings[i].va,(size_t)r->bindings[i].bytes);
+  if(error)return error;
+ }
+ return remesa_retained_submit_once(d->fd,r,attempted,record,priv);
+}
+
 int remesa_linux_memory_info(struct remesa_linux_memory *d,uint32_t id,struct remesa_memory_info *out)
 {
  struct remesa_memory_request r={0};int e;

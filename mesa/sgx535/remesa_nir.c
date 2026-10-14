@@ -56,8 +56,10 @@ static int position_copy(struct position_value values[],unsigned *count,nir_alu_
    value.channel[i]=values[src].channel[channel];
   }
   value.dependencies=values[src].dependencies;
- } else if(alu->op==nir_op_vec4&&value.components==4) {
-  for(unsigned i=0;i<4;i++) {
+ } else if((alu->op==nir_op_vec2&&value.components==2)||
+           (alu->op==nir_op_vec3&&value.components==3)||
+           (alu->op==nir_op_vec4&&value.components==4)) {
+  for(unsigned i=0;i<value.components;i++) {
    int src=position_index(values,*count,alu->src[i].src.ssa);
    unsigned channel=alu->src[i].swizzle[0];
    if(src<0||channel>=values[src].components)return ENOTSUP;
@@ -76,7 +78,7 @@ static bool position_identity(const struct position_value values[],unsigned coun
 }
 /* Compile-time construction of a constant does not imply native ALU support.
  * Every admitted value is defined earlier in this one block, and every value
- * must contribute to the sole export (or its zero offset).  The finite table
+ * must contribute to the complete export (or its zero offset). The finite table
  * rejects cycles, forward references, dead instructions and unbounded chains.
  * No floating-point arithmetic or conversion is performed here. */
 #define REMESA_CONSTANT_VALUES 16
@@ -100,26 +102,31 @@ static int append_constant(struct constant_value values[],unsigned *count,
  if(instr->type==nir_instr_type_load_const) {
   nir_load_const_instr *load=nir_instr_as_load_const(instr);
   if(load->def.parent_instr!=instr||load->def.bit_size!=32||
-     (load->def.num_components!=1&&load->def.num_components!=4))return ENOTSUP;
+     !load->def.num_components||load->def.num_components>4)return ENOTSUP;
   value.def=&load->def;value.components=load->def.num_components;
   for(unsigned i=0;i<value.components;i++)value.bits[i]=load->value[i].u32;
  } else {
   nir_alu_instr *alu=nir_instr_as_alu(instr);
-  if(alu->def.parent_instr!=instr||alu->def.bit_size!=32||alu->exact)return ENOTSUP;
+  if(alu->def.parent_instr!=instr||alu->def.bit_size!=32||alu->exact||
+     !alu->def.num_components||alu->def.num_components>4)return ENOTSUP;
   value.def=&alu->def;value.components=alu->def.num_components;
   if(alu->op==nir_op_mov) {
    int index=constant_index(values,*count,alu->src[0].src.ssa);
-   if(index<0||value.components!=values[index].components)return ENOTSUP;
+   if(index<0)return ENOTSUP;
    for(unsigned i=0;i<value.components;i++) {
-    if(alu->src[0].swizzle[i]!=i)return ENOTSUP;
-    value.bits[i]=values[index].bits[i];
+    unsigned channel=alu->src[0].swizzle[i];
+    if(channel>=values[index].components)return ENOTSUP;
+    value.bits[i]=values[index].bits[channel];
    }
    value.dependencies=values[index].dependencies;
-  } else if(alu->op==nir_op_vec4&&value.components==4) {
-   for(unsigned i=0;i<4;i++) {
+  } else if((alu->op==nir_op_vec2&&value.components==2)||
+            (alu->op==nir_op_vec3&&value.components==3)||
+            (alu->op==nir_op_vec4&&value.components==4)) {
+   for(unsigned i=0;i<value.components;i++) {
     int index=constant_index(values,*count,alu->src[i].src.ssa);
-    if(index<0||values[index].components!=1||alu->src[i].swizzle[0])return ENOTSUP;
-    value.bits[i]=values[index].bits[0];
+    unsigned channel=alu->src[i].swizzle[0];
+    if(index<0||channel>=values[index].components)return ENOTSUP;
+    value.bits[i]=values[index].bits[channel];
     value.dependencies|=values[index].dependencies;
    }
   } else return ENOTSUP;
@@ -131,7 +138,7 @@ int remesa_nir_constant_fragment(const nir_shader *shader,uint32_t *out)
 {
  nir_function *entry=NULL;nir_variable *output=NULL;unsigned functions=0,variables=0,blocks=0,instructions=0,stores=0,values_count=0,derefs=0,loc=0;
  struct constant_value values[REMESA_CONSTANT_VALUES]={0};
- nir_deref_instr *deref=NULL;uint32_t used=0,bits[4]={0};
+ nir_deref_instr *deref=NULL;uint32_t used=0,bits[4]={0},written=0;
  if(!shader||!out)return EINVAL;
  if(shader->info.stage!=MESA_SHADER_FRAGMENT)return ENOTSUP;
  if(shader->num_inputs||shader->num_outputs>1||shader->num_uniforms||shader->global_mem_size||shader->scratch_size||shader->constant_data_size||shader->xfb_info||
@@ -167,9 +174,8 @@ int remesa_nir_constant_fragment(const nir_shader *shader,uint32_t *out)
   if(++blocks>1||node->type!=nir_cf_node_block||node->parent!=&impl->cf_node)return ENOTSUP;
   nir_block *block=nir_cf_node_as_block(node);
   nir_foreach_instr(instr,block) {
-   if(++instructions>REMESA_CONSTANT_VALUES+2||instr->block!=block)return EINVAL;
+   if(++instructions>REMESA_CONSTANT_VALUES+5||instr->block!=block)return EINVAL;
    if(instr->type==nir_instr_type_load_const||instr->type==nir_instr_type_alu) {
-    if(stores)return ENOTSUP;
     int error=append_constant(values,&values_count,instr);
     if(error)return error;
     continue;
@@ -182,31 +188,42 @@ int remesa_nir_constant_fragment(const nir_shader *shader,uint32_t *out)
    }
    if(instr->type!=nir_instr_type_intrinsic)return ENOTSUP;
    nir_intrinsic_instr *store=nir_instr_as_intrinsic(instr);nir_def *value=NULL,*offset=NULL;
+   unsigned store_loc,component=0;
    if(store->intrinsic==nir_intrinsic_store_deref) {
     if(shader->info.io_lowered||!output||!deref||store->src[0].ssa!=&deref->def||nir_intrinsic_access(store))return ENOTSUP;
-    value=store->src[1].ssa;loc=output->data.location;
+    value=store->src[1].ssa;store_loc=output->data.location;
    } else if(store->intrinsic==nir_intrinsic_store_output) {
     nir_io_semantics sem=nir_intrinsic_io_semantics(store),canonical={.location=sem.location,.num_slots=1};
     nir_io_xfb xfb=nir_intrinsic_io_xfb(store),xfb2=nir_intrinsic_io_xfb2(store),none={0};
     if(!shader->info.io_lowered||variables||derefs||!location(sem.location)||sem.num_slots!=1||
        sem.dual_source_blend_index||sem.medium_precision||memcmp(&sem,&canonical,sizeof(sem))||memcmp(&xfb,&none,sizeof(xfb))||memcmp(&xfb2,&none,sizeof(xfb2))||
-       nir_intrinsic_range(store)>1||nir_intrinsic_base(store)||nir_intrinsic_component(store)||
+       nir_intrinsic_range(store)>1||nir_intrinsic_base(store)||
        nir_intrinsic_src_type(store)!=nir_type_float32)return ENOTSUP;
-    loc=sem.location;value=store->src[0].ssa;offset=store->src[1].ssa;
+    store_loc=sem.location;component=nir_intrinsic_component(store);
+    value=store->src[0].ssa;offset=store->src[1].ssa;
    } else return ENOTSUP;
-   if(++stores>1||store->num_components!=4||nir_intrinsic_write_mask(store)!=15||!value)return ENOTSUP;
+   /* Scalar/vector IO lowering may split one constant vec4 export into
+    * interleaved channel definitions and stores. Admit only a complete,
+    * single-location, non-overlapping color: no last-write-wins ambiguity. */
+   if(stores>=4||(stores&&loc!=store_loc)||!value||component>3||
+      !store->num_components||store->num_components>4-component)return ENOTSUP;
+   unsigned mask=nir_intrinsic_write_mask(store);
+   if(!mask||(mask&~((1u<<store->num_components)-1u))||
+      (written&(mask<<component)))return ENOTSUP;
    int color=constant_index(values,values_count,value);
-   if(color<0||values[color].components!=4)return ENOTSUP;
+   if(color<0||values[color].components!=store->num_components)return ENOTSUP;
    used|=values[color].dependencies;
    if(offset) {
     int zero=constant_index(values,values_count,offset);
     if(zero<0||values[zero].components!=1||values[zero].bits[0])return ENOTSUP;
     used|=values[zero].dependencies;
    }
-   for(unsigned i=0;i<4;i++)bits[i]=values[color].bits[i];
+   for(unsigned i=0;i<store->num_components;i++)
+    if(mask&(1u<<i))bits[component+i]=values[color].bits[i];
+   written|=mask<<component;loc=store_loc;stores++;
   }
  }
- if(blocks!=1||stores!=1||!values_count||used!=((1u<<values_count)-1u)||
+ if(blocks!=1||!stores||written!=15||!values_count||used!=((1u<<values_count)-1u)||
     derefs!=(shader->info.io_lowered?0u:1u))return ENOTSUP;
  if(shader->info.outputs_written && shader->info.outputs_written!=BITFIELD64_BIT(loc))return ENOTSUP;
  return remesa_constant_rgba32(bits,out);

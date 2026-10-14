@@ -64,7 +64,7 @@ const char *remesa_dri_stage_name(enum remesa_dri_stage stage)
  return "invalid-stage";
 }
 static int close_device(struct remesa_device *device)
-{ remesa_linux_close(device);return 0; }
+{ return remesa_linux_close_checked(device); }
 struct pipe_screen *remesa_dri_create_screen(int fd,
  const struct pipe_screen_config *config,struct remesa_dri_report *report)
 {

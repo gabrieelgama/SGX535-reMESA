@@ -68,7 +68,7 @@ static void draw(struct pipe_context *c,struct pipe_resource *i)
 { struct pipe_draw_info info={.mode=MESA_PRIM_TRIANGLES,.index_size=2,.instance_count=1,.index.resource=i};struct pipe_draw_start_count_bias d={.count=3};c->draw_vbo(c,&info,0,NULL,&d,1); }
 int main(void)
 {
- struct fixture f={0};const struct remesa_device_ops ops={allocate,drop,map_bo,unmap_bo,submit,wait_job,destroy_fence};
+ struct fixture f={0};const struct remesa_device_ops ops={.allocate=allocate,.destroy_bo=drop,.map=map_bo,.unmap=unmap_bo,.submit=submit,.wait=wait_job,.destroy_fence=destroy_fence};
  struct remesa_device dev={.ops=&ops,.priv=&f,.offline_test_backend=true};struct pipe_screen *s=remesa_screen_create_owned(&dev,release_owner);assert(s&&!dev.ops&&!dev.priv);
  struct pipe_context *a=s->context_create(s,NULL,0),*b=s->context_create(s,NULL,0);assert(a&&b);
  struct pipe_resource *v=buffer(s,48,PIPE_BIND_VERTEX_BUFFER),*i=buffer(s,6,PIPE_BIND_INDEX_BUFFER),*t=target(s);assert(v&&i&&t);

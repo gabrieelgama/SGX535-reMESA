@@ -3,6 +3,7 @@
  * CPU uniform specialization only; zero pixels, shader ISA or SGX execution. */
 #include "uniform_nir_fixture.h"
 #include "vertex_nir_fixture.h"
+int inherited_driver_main(void);
 #define main inherited_driver_main
 #include "test_driver.c"
 #undef main
@@ -11,6 +12,7 @@
 #endif
 static bool fail_next_malloc;
 void *__real_malloc(size_t);
+void *__wrap_malloc(size_t);
 void *__wrap_malloc(size_t bytes)
 { if(fail_next_malloc){fail_next_malloc=false;return NULL;}return __real_malloc(bytes); }
 static void simulate_finish(struct recorder *rec,struct pipe_screen *s,struct pipe_context *ctx)
@@ -93,7 +95,10 @@ int main(void)
  ctx->set_constant_buffer(ctx,PIPE_SHADER_FRAGMENT,0,false,NULL);assert(cb->reference.count==1);
  for(unsigned mode=0;mode<5;mode++) {
   struct pipe_constant_buffer bad={.user_buffer=bits,.buffer_size=32};unsigned stage=PIPE_SHADER_FRAGMENT,slot=0;
-  if(mode==0)bad.buffer_size=15;if(mode==1)bad.buffer_offset=16;if(mode==2)slot=1;if(mode==3)stage=PIPE_SHADER_VERTEX;
+  if(mode==0)bad.buffer_size=15;
+  if(mode==1)bad.buffer_offset=16;
+  if(mode==2)slot=1;
+  if(mode==3)stage=PIPE_SHADER_VERTEX;
   if(mode==4){bad.buffer=vb;bad.user_buffer=NULL;bad.buffer_offset=0;}
   ctx->set_constant_buffer(ctx,stage,slot,false,&bad);assert(remesa_context_error(ctx));
   ctx->bind_fs_state(ctx,fs);ctx->draw_vbo(ctx,&info,0,NULL,&draw,1);assert(rec.draws==3&&remesa_context_error(ctx));

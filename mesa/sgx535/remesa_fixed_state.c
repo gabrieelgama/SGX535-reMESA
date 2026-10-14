@@ -1,5 +1,6 @@
 /* SPDX-License-Identifier: MIT */
 #include <errno.h>
+#include <float.h>
 #include <math.h>
 #include <string.h>
 #include "pipe/p_state.h"
@@ -24,10 +25,11 @@ int
 remesa_validate_dsa(const struct pipe_depth_stencil_alpha_state *s)
 {
    if (!s) return EINVAL;
-   if (s->depth_enabled || s->depth_writemask || s->depth_bounds_test ||
+   if (s->depth_enabled || s->depth_bounds_test ||
        s->stencil[0].enabled || s->stencil[1].enabled || s->alpha_enabled)
       return ENOTSUP;
-   /* No depth/stencil resource is admitted by the caller. Functions, masks,
+   /* No depth/stencil resource is admitted by the caller. A depth write mask
+    * does not perform a write with the depth test disabled. Functions, masks,
     * references and bounds of disabled tests cannot change this profile. */
    return 0;
 }
@@ -156,6 +158,51 @@ int remesa_clip_scissor(const struct pipe_scissor_state *input,
    result.miny = input->miny < height ? input->miny : height;
    result.maxy = input->maxy < height ? input->maxy : height;
    *out = result;
+   return 0;
+}
+
+int remesa_cull_window_triangle(const float position[3][4], unsigned cull_face,
+                                bool front_ccw, bool *discard)
+{
+   double dx1, dy1, dx2, dy2, left, right, area, bound;
+   bool result;
+   if (!position || !discard) return EINVAL;
+   if (cull_face & ~PIPE_FACE_FRONT_AND_BACK) return EINVAL;
+   for (unsigned vertex = 0; vertex < 3; ++vertex) {
+      for (unsigned axis = 0; axis < 4; ++axis)
+         if (!isfinite(position[vertex][axis])) return EINVAL;
+      if (position[vertex][3] != 1) return ENOTSUP;
+   }
+   /* A disabled cull test cannot depend on a numerically uncertain facing.
+    * Likewise culling both faces needs no orientation classification. */
+   if (cull_face == PIPE_FACE_NONE || cull_face == PIPE_FACE_FRONT_AND_BACK) {
+      *discard = cull_face == PIPE_FACE_FRONT_AND_BACK;
+      return 0;
+   }
+   dx1 = (double)position[1][0] - position[0][0];
+   dy1 = (double)position[1][1] - position[0][1];
+   dx2 = (double)position[2][0] - position[0][0];
+   dy2 = (double)position[2][1] - position[0][1];
+   /* Exact repeated vertices or a single axis-aligned line have zero filled
+    * area. Binary32-to-binary64 conversion does not introduce underflow. */
+   if ((!dx1 && !dy1) || (!dx2 && !dy2) ||
+       (position[1][0] == position[2][0] && position[1][1] == position[2][1]) ||
+       (!dx1 && !dx2) || (!dy1 && !dy2)) {
+      *discard = true;
+      return 0;
+   }
+   left = dx1 * dy2;
+   right = dy1 * dx2;
+   area = left - right;
+   /* Conservatively bound roundoff from four differences, two products and
+    * their subtraction. Do not decide a face by an epsilon heuristic when
+    * cancellation could change its sign. This is a host error bound, not a
+    * hardware subpixel or edge-coverage tolerance. */
+   bound = (fabs(left) + fabs(right)) * (16 * DBL_EPSILON);
+   if (fabs(area) <= bound) return ERANGE;
+   result = ((area > 0) == front_ccw) ? cull_face == PIPE_FACE_FRONT :
+                                               cull_face == PIPE_FACE_BACK;
+   *discard = result;
    return 0;
 }
 

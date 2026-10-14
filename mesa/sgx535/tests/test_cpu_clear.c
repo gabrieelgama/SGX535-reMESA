@@ -22,7 +22,7 @@ static void destroy_fence(void *p,void *o){(void)p;(void)o;}
 static struct pipe_resource *target(struct pipe_screen *s){struct pipe_resource r={0};r.target=PIPE_TEXTURE_2D;r.format=PIPE_FORMAT_B8G8R8A8_UNORM;r.width0=r.height0=32;r.array_size=r.depth0=1;r.bind=PIPE_BIND_RENDER_TARGET;return s->resource_create(s,&r);}
 static void release(struct pipe_resource *r){if(!--r->reference.count)r->screen->resource_destroy(r->screen,r);}
 int main(void){
- const struct remesa_device_ops ops={alloc,drop,map_bo,unmap_bo,submit,wait,destroy_fence};
+ const struct remesa_device_ops ops={.allocate=alloc,.destroy_bo=drop,.map=map_bo,.unmap=unmap_bo,.submit=submit,.wait=wait,.destroy_fence=destroy_fence};
  struct remesa_device d={.ops=&ops,.resource_only_backend=true};struct pipe_screen *s=remesa_screen_create(&d);assert(s);
  struct pipe_context *c=s->context_create(s,NULL,0);struct pipe_resource *r=target(s);assert(c&&r);
  struct pipe_framebuffer_state fb={0};fb.width=fb.height=32;fb.nr_cbufs=1;fb.cbufs[0].texture=r;fb.cbufs[0].format=r->format;c->set_framebuffer_state(c,&fb);

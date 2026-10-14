@@ -27,8 +27,8 @@ for name, expected in pin['interface_files'].items():
 if hashlib.sha256((a.generated/'util/format/u_format_gen.h').read_bytes()).hexdigest() != pin['generated_formats_sha256']:
     raise SystemExit('Mesa generated format header mismatch')
 a.output.mkdir(parents=True, exist_ok=True)
-base = ['-DREMESA_WITH_MESA_HEADERS', '-std=c11', '-D_POSIX_C_SOURCE=200809L', '-DHAVE_ENDIAN_H',
-        '-Wall', '-Wextra', '-Werror', '-I'+str(a.generated),
+base = ['-ffunction-sections','-fdata-sections','-Wl,--gc-sections','-DHAVE_PTHREAD','-DHAVE_SECURE_GETENV','-DHAVE_STRUCT_TIMESPEC','-DREMESA_WITH_MESA_HEADERS', '-std=c11', '-D_POSIX_C_SOURCE=200809L', '-DHAVE_ENDIAN_H',
+        '-Wall', '-Wextra', '-Werror', '-I'+str(a.generated),'-isystem'+str(a.generated/'compiler'),'-isystem'+str(a.generated/'compiler/nir'),'-isystem'+str(a.mesa/'src/compiler/nir'),
         '-I'+str(a.mesa/'src/gallium/include'), '-I'+str(a.mesa/'src'),
         '-I'+str(a.mesa/'include'), '-I'+str(here), '-I'+str(here.parents[1]/'include')]
 sources = [str(here/name) for name in ['remesa_fixed_state.c','remesa_render_pass.c','remesa_sampler_state.c','remesa_texture_binding.c','remesa_texture_descriptor.c','remesa_screen.c','remesa_draw.c','remesa_present.c']] + [str(here.parents[1]/'common/remesa/draw_packet.c')]
@@ -54,7 +54,9 @@ for name, compiler, flags, prefix in variants:
     for target, source in targets:
         exe=a.output/(name+'-'+target)
         extra = [str(here.parents[1]/('kernel/remesa/'+name)) for name in ['registry.c','resource.c','provider.c']] if target in ('integration','persistent') else []
-        if target=='persistent': extra.append(str(here/'remesa_persistent.c'))
+        if target=='persistent':
+            extra += [str(here/n) for n in ['remesa_persistent.c','remesa_shader_program.c','remesa_shader_ir.c','remesa_usse.c','remesa_pds.c','remesa_program_registers.c','remesa_fragment_body.c','remesa_shader_storage.c','remesa_nir.c']]
+            extra.append(str(here.parents[1]/'common/remesa/shader_request.c'))
         command=compiler+base+flags+sources+extra+[str(here/'tests'/source),'-o',str(exe)]
         built=subprocess.run(command, capture_output=True, text=True, env=env)
         (a.output/(name+'-'+target+'-compile.log')).write_text(built.stdout+built.stderr)

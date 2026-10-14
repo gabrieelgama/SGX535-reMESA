@@ -13,6 +13,10 @@ struct remesa_sampler_bank *remesa_sampler_bank_create(remesa_sampler_alloc,
                                                       remesa_sampler_free,
                                                       void *);
 void remesa_sampler_bank_destroy(struct remesa_sampler_bank *);
+/* Shared semantic validation for state creation and host descriptors. The
+ * nearest/non-mipmapped subset accepts Mesa's inactive compare function and
+ * finite nonnegative max_lod; neither selects another filter or mip level. */
+int remesa_sampler_state_validate(const struct pipe_sampler_state *);
 int remesa_sampler_create(struct remesa_sampler_bank *,
                           const struct pipe_sampler_state *, void **);
 int remesa_sampler_delete(struct remesa_sampler_bank *, void *);

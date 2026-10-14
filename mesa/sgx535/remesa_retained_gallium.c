@@ -32,7 +32,10 @@ static int submit(void *p,void *bo,const struct remesa_draw_packet *packet,void 
 static int wait(void *p,void *f,uint64_t timeout,bool visible)
 {struct borrowed *b=p;(void)timeout;if(f!=b || !visible)return EINVAL;return verify(b);}
 static void destroy_fence(void *p,void *f){(void)p;(void)f;}
-static const struct remesa_device_ops ops={allocate,destroy,map,unmap,submit,wait,destroy_fence};
+static const struct remesa_device_ops ops={
+ .allocate=allocate,.destroy_bo=destroy,.map=map,.unmap=unmap,
+ .submit=submit,.wait=wait,.destroy_fence=destroy_fence,
+};
 int remesa_retained_gallium_read(struct remesa_linux_memory *m,const struct remesa_retained_request *request,uint32_t id,uint64_t va,
  const struct remesa_evidence_expected *ex,const struct remesa_evidence_response *rs,
  const struct remesa_evidence_observer *ob,const struct remesa_evidence_ownership *own,
