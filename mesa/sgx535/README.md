@@ -1,5 +1,9 @@
 # Native Gallium adapter
 
+See the [October 14 development update](../../docs/phase9/DEVELOPMENT-UPDATE.md)
+for the current original-fragment integration and its explicit laboratory gate.
+The older diagnostic interface described below remains a separate path.
+
 The Mesa 25.2.0 adapter now provides real `pipe_screen`/`pipe_context` callbacks
 for buffer/render-target resources, mapped transfers, vertex/index state,
 framebuffer state, indexed triangle translation, submission and fences.
@@ -11,7 +15,8 @@ only the kernel's captured SGX color output into the Gallium render resource.
 It does not invoke the historical client. The initial kernel provider supports
 one asset-matched triangle, using CPU upload/readback staging in userspace and
 owned SGX buffers in the kernel. This hardware path is implemented and compiled,
-but has **not yet been executed or established on SGX**.
+and the historical diagnostic Gallium draw has a retained hardware receipt.
+That result does not qualify execution of the current NIR-generated shader pair.
 
 The recording-backend tests remain separate: they exercise provider transitions
 while leaving pixels zero. Neither their success nor compiling the real hardware
