@@ -1,0 +1,35 @@
+{
+  "policy": "No code or shader instruction extraction from Xpsb.so or psb_dri.so. psb_dri.so is permitted for non-extractive reference only. No use of the original 440-byte Poulsbo shader image. All new shader instructions must be independently developed with evidence.",
+  "method": "Provenance and dependency metadata only; no source body or payload inspection.",
+  "historical_fragment_dependency": {
+    "exact_name": "experimental_fragment_constant.h",
+    "paths": {
+      "candidate_source": "/home/gama/sgx535-offline/native-first-draw-hardware-20261007/module/experimental_fragment_constant.h",
+      "qualified_predecessor_source": "/home/gama/sgx535-offline/phase8-single-color-hypothesis-20261006T034310Z/build/module/experimental_fragment_constant.h",
+      "repository_source_identifier": "/home/gama/sgx535-gfx/tools/psb-dri-re/experimental_fragment_constant.h"
+    },
+    "type": "generated/experimental fragment encoder header",
+    "recorded_bytes": 1245,
+    "recorded_sha256": "8b1c0316f351c1624f151e3a1dfe46e237081d1862d9d4c7fa98413a32f440a7",
+    "present_in_rejected_candidate": "CONFIRMED build input; contract object dependency metadata includes the three generated headers/tables",
+    "used_by": {
+      "object": "/home/gama/sgx535-offline/native-first-draw-hardware-20261007/module/frozen_kernel_contract.o",
+      "module": "/home/gama/sgx535-offline/native-first-draw-hardware-20261007/module/gma500_gfx.ko",
+      "role": "selected constant-fragment construction"
+    },
+    "provenance": "HISTORICAL_INPUT; blanket forbidden classification withdrawn. Per-field relationship to the three excluded DDK references UNKNOWN.",
+    "replacement_needed": "ONLY if specific dependency on excluded DDK references or another independently established permission defect is demonstrated; no blanket replacement because historical.",
+    "function_symbols": "individual emitter/array symbol names not recorded in audited build metadata; no body/binary inspection performed",
+    "previous_failure_reason": "Recorded historical psb_dri.so derivation and Xpsb.so corroboration; clean-use provenance unresolved.",
+    "recorded_origin": "psb_dri.so; Xpsb.so corroboration; these references are not the three user-excluded DDK sections."
+  },
+  "current_decision": "Historical fragment-construction dependency is recorded as psb_dri.so-derived with Xpsb corroboration. It is not reused as a new shader template or encoder. This does not prohibit other already-cleared Poulsbo public material.",
+  "exact_440_byte_asset_path": "UNKNOWN; do not equate 1245-byte header with 440-byte binary image.",
+  "new_host_candidate": "No frozen/Poulsbo program image inputs in actual Mesa driver overlay; unknown hardware encoders remain ENOTSUP.",
+  "quarantine_scope": "Logical exclusion from new shader implementation/admission of proprietary extracted instruction assets, including the forbidden 440-byte image. No old evidence files moved or rewritten.",
+  "files_accessed": [
+    "/home/gama/sgx535-gfx/docs/provenance/historical-derived-assets-inventory-20261007.json",
+    "/home/gama/sgx535-gfx/docs/provenance/native-triangle-profile-reuse-20261007.json"
+  ],
+  "psb_dri_clarification": "Permitted as reference; subsequent user instruction explicitly forbids code extraction."
+}

@@ -1,0 +1,16 @@
+{
+  "version": "25.2.0",
+  "origin": "Pinned official Mesa archive (mesa-api-pin.json)",
+  "files": {
+    "src/gallium/auxiliary/pipe-loader/pipe_loader_drm.c": "01d95ee94404e92bf82dae03300617ea37334e1be486652b98a654892fdb7095",
+    "src/gallium/auxiliary/target-helpers/drm_helper.h": "d27c6ea1bc87972bc9e43eb6cc05aafe4c6583494b4311d5b6ccd27ef13f90f5",
+    "src/gallium/auxiliary/target-helpers/drm_helper_public.h": "21499ae4d35c34e27b143e30b3cc1eb50ce6b4a8e1edea11589695a33356609b",
+    "src/gallium/targets/dri/meson.build": "f2c72bc8dc7ae1705d644d3de532e8ab1cac278b4762730279ab2b73b9d5fa1d",
+    "meson.build": "e7ab6a1e51bf4c654d0c2626a128ef203162aec3ce45edd585b58906b2972ba2",
+    "meson.options": "1f4ced4e99b28ff4630a827a6cee214a352d04884846d78b7aa5750d33f7ac9b",
+    "src/gallium/targets/dril/dril_target.c": "06144d69257063ad867e0f51772c3b08d2fce25ba26347b354bac939c36a965c",
+    "src/gallium/targets/dril/meson.build": "904a222fe09dec20e69578a88436194d8edb1a6de56ae373648679ece878a2a6",
+    "src/gallium/meson.build": "4aeb41972b9f13df98d1eb0d2cf09142cd3d9359c48a2267491901a1759525dc",
+    "src/meson.build": "c8efa81dff0d1d30488f997be628bb91e01d72495fd964ad71c4b1b89e415274"
+  }
+}

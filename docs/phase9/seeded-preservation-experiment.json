@@ -1,0 +1,128 @@
+{
+  "schema": "remesa-seeded-preservation-experiment-preparation-v1",
+  "classification": "OFFLINE QUALIFIED host validator; physical activation BLOCKED by shader provenance, bindings and admission",
+  "executable": false,
+  "maximum_submissions": 1,
+  "automatic_retries": 0,
+  "profile": {
+    "name": "existing retained V2 seeded input observation",
+    "width": 32,
+    "height": 32,
+    "pitch": 128,
+    "bytes": 4096,
+    "format": "little-endian ARGB8888/BGRA byte order",
+    "seed_argb": "0xff102030",
+    "geometry": "unchanged qualified FIRE3 triangle",
+    "covered_pixels": 120,
+    "uncovered_pixels": 904,
+    "reference_sha256": "52b2aeb7316820f955d1b9a46cb55a888efb8f74de916acd7ec7ddff6d99ebb5",
+    "new_gpu_encodings": []
+  },
+  "known_qualified_implementation": {
+    "receipt": "/home/gama/sgx535-offline/phase9-seeded-integration-20261009T045503Z/result.json",
+    "module_sha256": "14a2b4a5e5157e48fb4ec36366d0b287f2efbc802e8a310a65b3a597d2cc8e3d",
+    "use": "Historical offline V2 identity only; not admitted for reuse under current prohibition of proprietary shader images. No payload/program bytes were accessed in this increment."
+  },
+  "physical_binding_required": [
+    "No shader/code extraction or template reuse from Xpsb.so or psb_dri.so and no original 440-byte Poulsbo shader image. All shader-related candidate dependencies must independently satisfy the current user policy before physical admission.",
+    "Fresh boot, running module, kernel ABI and health",
+    "Exact client/module/image/profile/command identities from independently verified qualification receipts",
+    "Unconsumed independently qualified source/observer admission for exactly one operation",
+    "Safe DRM ownership and rollback; no forced unload or admission reset",
+    "Same-task operation/source attribution where observer requires it",
+    "Exact resource generation, mapping generation, GPU VA and GEM PFN immediately before dispatch",
+    "Verified existing CPU-to-device ordering, mapping publication and device maintenance",
+    "Operation-specific IRQ/TA/end-render/GPU retirement evidence",
+    "Device-to-CPU ordering and authenticated fence before Gallium map/readback",
+    "Independent observer and original source transcript correlation",
+    "Final resource/module/display accounting and health"
+  ],
+  "ordered_host_record_contract": [
+    "RETAINED",
+    "BEFORE",
+    "SYNCED",
+    "SUBMITTED",
+    "TA_COMPLETE",
+    "RENDER_COMPLETE",
+    "GPU_RETIRED",
+    "VISIBLE",
+    "ACKNOWLEDGED",
+    "TICKET_RETIRED",
+    "PRIMARY_CAPTURE",
+    "CORROBORATING_CAPTURE",
+    "RELEASED",
+    "BASELINE"
+  ],
+  "resource_policy": {
+    "scope": "one fixed COLOR page of a ten-resource retained diagnostic session",
+    "color_pins_while_retained": 1,
+    "mapped_pages": 1,
+    "verified_pages": 1,
+    "cpu_leases": "one only during BEFORE and post-ticket-retirement capture; zero otherwise",
+    "held_jobs": "one SUBMITTED through ACKNOWLEDGED; zero before and after ticket retirement",
+    "identity": "all seven observation identity fields exact throughout; explicit stable VA/PFN while retained",
+    "cleanup": "no release before visibility, acknowledgement and ticket retirement; resource baseline zero only after both captures"
+  },
+  "verifier_trust_boundary": {
+    "implementation": "remesa_seeded_session_validate",
+    "source_adapter": "NOT IMPLEMENTED; must authenticate normalized records plus each payload against original provider evidence",
+    "simulation": "test fixture verifier is explicitly simulated",
+    "limitations": [
+      "Return zero from verifier is a caller assertion, never physical proof",
+      "Distinct provider/capture IDs do not prove independent origins",
+      "Validator neither performs cache operations nor establishes GPU visibility",
+      "Record sequences/counts are bounded host policy, not undocumented hardware values",
+      "Validator cannot authorize dispatch, recover an uncertain operation or reset admission"
+    ]
+  },
+  "readback_plan": [
+    "Capture and seal exact CPU seed preimage before releasing CPU lease",
+    "Primary actual Gallium COLOR readback only after authenticated completion, visibility and ticket retirement",
+    "Separately attributed corroborating memory capture with different provider and capture identities; cannot copy primary readback",
+    "Source adapter must reject unavailable capture mechanism or shared/circular evidence presented as independent",
+    "Seal original observations before exact pixel interpretation"
+  ],
+  "oracles": {
+    "PRESERVE": "covered 120 pixels exactly FIRE3 magenta; all uncovered 904 pixels retain seed",
+    "DISCARD": "complete after exactly sealed FIRE3 zero-background reference",
+    "UNCHANGED": "complete after exactly seed: failed execution/visibility negative control, ENODATA",
+    "MISMATCH": "any other pixel or inconsistent independent capture: EILSEQ"
+  },
+  "negative_controls": [
+    "Unchanged seed",
+    "Exact discard reference",
+    "One uncovered pixel mutation",
+    "One covered pixel mutation",
+    "Corroborating byte disagreement",
+    "Stale operation/generation or resource",
+    "Alias of primary/before/reference/corroborating spans",
+    "Missing completion record",
+    "Early CPU lease or release",
+    "Duplicate/out-of-order events",
+    "Quarantine, resource leak or extra submission"
+  ],
+  "stop_policy": [
+    "Any unbound artifact or mandatory visibility/completion evidence missing: no submission",
+    "Unknown completion or ownership: retain/quarantine via authoritative service; no automatic cleanup or retry",
+    "Acknowledgement/cleanup failure never redispatches",
+    "GPU image agreement without attributable execution remains UNKNOWN"
+  ],
+  "unresolved_hardware_facts": [
+    "A physically executable shader/state profile with independently established provenance remains required before this experiment.",
+    "Whether unchanged fixed profile reads seeded COLOR",
+    "Whether untouched COLOR pixels persist or are zeroed",
+    "Whether additional load/store state is required",
+    "Whether backing remains coherent through sequential draws; one experiment cannot establish sequential behavior",
+    "No general surface dimensions, PBE pitch or shader encoding inferred from this experiment"
+  ],
+  "provenance": {
+    "origin": "Independent host policy based on project-authored GEM/sequence lifecycle and sealed output observation interface",
+    "shader_bytes_accessed": false,
+    "Xpsb_accessed": false,
+    "DDK_accessed": false,
+    "external_instruction_constants": [],
+    "historical_shader_reuse": "BLOCKED: new policy supersedes the earlier narrowed reuse allowance",
+    "prohibited_440_byte_shader_image": "Not accessed, copied or used; exact asset path not established from permitted metadata",
+    "psb_dri_policy": "Permitted non-extractive reference; code extraction forbidden. No psb_dri binary accessed this increment."
+  }
+}

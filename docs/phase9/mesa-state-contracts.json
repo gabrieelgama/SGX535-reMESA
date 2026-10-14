@@ -1,0 +1,133 @@
+{
+  "mesa": "25.2.0",
+  "scope": "Native diagnostic Gallium backend; a DRI load does not establish OpenGL",
+  "contracts": [
+    {
+      "contract": "screen/context create/destroy",
+      "status": "OFFLINE QUALIFIED",
+      "restriction": "diagnostic/resource-only screens; DRI constructor rejects admission to state tracker"
+    },
+    {
+      "contract": "resource create/destroy/map/unmap",
+      "status": "OFFLINE QUALIFIED",
+      "restriction": "Buffers and arbitrary bounded single-level RGBA8/BGRA8 transfer storage with backend stride/byte limits; only32x32 BGRA native render targets. Writer-fence gating, leases and deferred backend cleanup."
+    },
+    {
+      "contract": "framebuffer/surface",
+      "status": "OFFLINE QUALIFIED",
+      "restriction": "one 32x32 BGRA8 color attachment; no depth/stencil or multisampling"
+    },
+    {
+      "contract": "vertex buffers/elements and draw_vbo",
+      "status": "OFFLINE QUALIFIED",
+      "restriction": "Single FLOAT2/3/4 position layout with checked 8/12/16-byte fetches; missing z=0,w=1 expanded on host into unchanged packet format. Immutable context-owned handles and foreign/stale/deleted rejection. Legacy POS and generic0 identity NIR recognized; CPU coordinate preparation, not general GPU vertex shaders."
+    },
+    {
+      "contract": "flush/fence/readback",
+      "status": "CONFIRMED",
+      "restriction": "one physically qualified retained-GEM triangle; repeated execution remains unverified and kernel admission stays one-attempt"
+    },
+    {
+      "contract": "viewport/scissor",
+      "status": "PARTIAL",
+      "restriction": "Canonical32 viewport; full32 scissor only. Actual recording-backend draw_vbo with identity VS and both depth-clip flags performs CPU homogeneous six-plane clipping, positive-w projection and bounded constant-color triangle compaction. No CPU rasterization. Production backend retains historical inside-volume w=1 validation; GPU edge/interpolation rules not qualified."
+    },
+    {
+      "contract": "blend/color mask/rasterizer/depth/stencil",
+      "status": "PARTIAL",
+      "restriction": "Context-owned immutable CSOs with tombstone lookup. Full RGBA/no-blend/no-logic/no-tests/solid/no-cull only. Invalid/deleted/foreign state remains draw-blocking across unrelated binds. Mesa half_pixel_center=1 and alternative edge rule unsupported. No new GPU state encoding. Rejected foreign/stale deletion reports EINVAL and preserves existing valid state; only deletion of the bound valid object invalidates that slot."
+    },
+    {
+      "contract": "GPU clear",
+      "status": "BLOCKED",
+      "restriction": "GPU encoding UNKNOWN. Actual clear/clear_render_target use checked dimension/stride-aware CPU color transfer preparation. clear_texture supports bounded RGBA/BGRA raw-texel CPU clears, resource_copy_region snapshots overlapping buffers/images after writer synchronization. CPU clears/copies are counted separately and never submit SGX."
+    },
+    {
+      "contract": "framebuffer load/store",
+      "status": "OFFLINE QUALIFIED",
+      "restriction": "Per-resource frontend cookies/serials, DISCARD/PRESERVE intent, pending-writer exclusion, authenticated backend wait plus publication/retirement and failure quarantine are integrated into draw_vbo and external writer import. Native PRESERVE remains ENOTSUP; hardware load/store UNKNOWN. Local tickets are not kernel operation IDs. Exact sealed FIRE3 coverage/seed/identity/readback comparison now distinguishes PRESERVE, DISCARD, UNCHANGED and contradiction; oracle bytes are independent captured output, not command meanings or visibility proof. Seeded-session validator correlates fourteen ordered source records with stable identity and VA/PFN, GPU/ticket retirement separation, two capture providers and zero-leak baseline; source authentication and independent physical capture adapter are not implemented."
+    },
+    {
+      "contract": "shader states",
+      "status": "PARTIAL",
+      "restriction": "Restricted identity VS admits bounded float32 SSA channel copies and vec4 reconstruction only when final xyzw exactly matches the sole input; actual lowered/variable NIR and Gallium callbacks tested. FS constant/UBO0 snapshot specializes existing color profiles on CPU; no USSE ALU/register allocator, varying or texture compiler. Native profile unchanged magenta-only. Actual VS/constant-FS callbacks now normalize admitted NIR into original typed host semantic IR retained for shader lifetime. Uniform snapshots remain the existing CPU specialization path. Unknown native hardware encoder returns ENOTSUP without bytes."
+    },
+    {
+      "contract": "screen GL caps",
+      "status": "PARTIAL",
+      "restriction": "Narrow truthful Gallium screen only. Fragment max_inputs=0, max_varyings=0 and fragment-coordinate convention flags disabled; unsupported interpolation/coordinate behavior is not advertised. DRI OpenGL admission remains closed."
+    },
+    {
+      "contract": "texture/sampler/import/export",
+      "status": "PARTIAL",
+      "restriction": "RGBA8/BGRA8 bounded transfer storage and actual Gallium 2D level0 same-format sampler-view metadata, swizzles, immutable backing/cookie validation, map/quarantine checks and retained references. Nonempty bindings reject before submission; PIPE_BIND_SAMPLER_VIEW remains unsupported. No GPU sampling descriptors/ISA, PRIME or shared scanout. Context metadata preparation checks owned-view membership and polls the real frontend writer before a trusted provider query. Owner/generations/VA/ranges/pins/leases/PFN and epochs/completion are validated as host assertions; original RMTD metadata must never be submitted as SGX state."
+    },
+    {
+      "contract": "XCB publication",
+      "status": "OFFLINE QUALIFIED",
+      "restriction": "Fence-gated CPU snapshot and checked row-tiled requests for direct and scaled images. Mock tests cover all10sizes through1920x1080 plus loss/cleanup. Physical Xorg publication of a new32x32 SGX frame was independently confirmed in the sealed visible-proven campaign using the separate Xlib transaction; this XCB adapter remains offline-only."
+    },
+    {
+      "contract": "Mesa CSO cleanup/state callbacks",
+      "status": "OFFLINE QUALIFIED",
+      "restriction": "Actual Mesa CSO lifecycle tested. Disabled stencil/blend constants, empty unbinds per stage+slot and single sample. With NIR: bounded FS constant-buffer slot0 supports immutable user snapshots or retained R8 buffer backing, 16-byte alignment and writer-gated reads. Borrowed sole-owner rebinding retains incoming resource before releasing the previous binding. Unsupported stages/slots/binds remain draw-blocking. Empty framebuffer releases references."
+    },
+    {
+      "contract": "NIR compiler-options query",
+      "status": "OFFLINE QUALIFIED",
+      "restriction": "Immutable conservative no-lowering options for VS/FS only; other stages/closed screen return NULL. Actual Mesa builder uses this callback; no general opcode or GL capability advertisement."
+    },
+    {
+      "contract": "sampler lifecycle and view unbinding",
+      "status": "OFFLINE QUALIFIED",
+      "restriction": "Real Gallium callbacks create immutable nearest/clamp sampler state and host texture views. Bounded registries reject stale/foreign handles. Views retain backing and survive context destruction through a destruction-only owner until final standard Mesa reference/release. Raw serialized pipe contexts only; wrappers rewriting view->context not supported. Every nonempty state/view binding blocks draw."
+    }
+  ],
+  "minimum_shader_blocker": {
+    "established": "The admitted fixed diagnostic vertex/fragment and tile-output program/state combination physically renders; this is a whole-pipeline observation.",
+    "unknown": "General USSE opcode/operand/export semantics, PDS task generation and their translation from Mesa NIR.",
+    "method": "Use independently justified encoding specifications and separately authorized controlled observations; framebuffer equality alone cannot determine instruction semantics.",
+    "implementation": "Identity-position NIR is recognized independently and lowered by host geometry preparation; no new USSE opcodes. Existing exact diagnostic program remains unchanged. General NIR-to-USSE execution remains UNKNOWN."
+  },
+  "first_state_tracker_blocker": "DRI admission intentionally closed. Mesa defaults compatibility contexts to GL1.3 and baseline extensions, assuming contracts absent here: textures/fixed-function, general shader compiler, framebuffer preservation, truthful caps and qualified raster edge rules.",
+  "hardware_execution_this_increment": 0,
+  "restricted_nir_qualification": "sgx535-offline/phase9-nir-20261008/result.json",
+  "vertex_qualification": "/home/gama/sgx535-offline/phase9-vertex-nir-20261009T003124Z/result.json",
+  "context_contract_qualification": "/home/gama/sgx535-offline/phase9-context-contracts-20261009/result.json",
+  "screen_capability_qualification": "/home/gama/sgx535-offline/phase9-capabilities-regression-20261009/result.json",
+  "current_increment": "/home/gama/sgx535-offline/phase9-cleanroom-20261009T084958Z/result.json",
+  "actual_context_trace": "OPENGL-CONTEXT-TRACE.md: actual live GBM reaches real DRI constructor; identity, transport and diagnostic screen allocation succeed, OpenGL admission fails ENOTSUP with missing mask0x1f.",
+  "admission_bits": [
+    {
+      "bit": "0x01",
+      "contract": "general shader execution",
+      "status": "BLOCKED",
+      "unknown": "USSE/PDS ISA, register/output/linkage and general NIR program generation"
+    },
+    {
+      "bit": "0x02",
+      "contract": "GPU texture sampling",
+      "status": "BLOCKED",
+      "unknown": "GPU descriptor address/layout/format/pitch, sampling ISA/task routing and filter/interpolation semantics"
+    },
+    {
+      "bit": "0x04",
+      "contract": "rasterization rules",
+      "status": "BLOCKED",
+      "unknown": "qualified pixel-center/edge rules, arbitrary primitive/interpolation/scissor hardware state"
+    },
+    {
+      "bit": "0x08",
+      "contract": "render states",
+      "status": "BLOCKED",
+      "unknown": "required blend/depth/stencil/mask hardware states and formats"
+    },
+    {
+      "bit": "0x10",
+      "contract": "COLOR preservation",
+      "status": "BLOCKED",
+      "unknown": "native seeded visibility and COLOR load/store state, sequential retained-target execution"
+    }
+  ],
+  "cleanroom_shader_policy": "No code extraction from Xpsb.so or psb_dri.so; psb_dri.so permitted only as non-extractive reference. Original 440-byte shader image forbidden. No proprietary binary-derived USSE/PDS used in new encoder."
+}

@@ -1,0 +1,162 @@
+{
+  "schema": "remesa-independent-usse-source-review-v1",
+  "scope": "Instruction ISA research only; no proprietary binaries, payloads, opcode tables or hardware accessed",
+  "review_date_utc": "2026-10-09",
+  "target": "PowerVR SGX535 rev121",
+  "admitted_target_instruction_fields": [],
+  "target_executable_program": "BLOCKED",
+  "sources": [
+    {
+      "id": "US20090063824A1",
+      "reference": "https://patents.google.com/patent/US20090063824A1/en",
+      "pdf": "https://patentimages.storage.googleapis.com/85/e0/fa/15b48f6d6f3fc2/US20090063824A1.pdf",
+      "title": "Compound instructions in a multi-threaded processor",
+      "priority": "2007-08-14",
+      "publication": "2009-03-05",
+      "assignee": "Imagination Technologies Limited assignment recorded 2008-11-05",
+      "provenance": "Public patent application publication, not leaked code or extracted driver instructions",
+      "permitted_use": "Factual paraphrase and citation only; neither a software copying license nor patent-practice permission is inferred",
+      "access": "Published HTML, original eight-page PDF and visual inspection of Figures 4 and 5",
+      "pdf_bytes": 671368,
+      "pdf_sha256": "dc6a81b3944c5a1fc0b01e5d3d16c41fa563ae6af0b904d9571333edeeebe0da",
+      "classification": "CONFIRMED publication facts; UNKNOWN target applicability",
+      "architecture": "Generic multithreaded CPU example; no SGX, USSE, PDS or rev121 identification",
+      "example_fields": {
+        "locator": "Figure 4 and Figure 5; description paragraph 0037",
+        "depicted_bits": "22 through 0; full machine instruction framing unspecified",
+        "opcode": "22:21, RET=0, MUL=1, ADD=2, MLA=3",
+        "no_reschedule": "20",
+        "bank_selectors": "destination 19; source0 18; source1 17; source2 16",
+        "register_indices": "destination 15:12; source0 11:8; source1 7:4; source2 3:0",
+        "banks": "0 temporary, 1 internal",
+        "bounds": "temporary index 0..15, internal index 0..3",
+        "constraint": "Simultaneous internal sources must identify the same internal register"
+      },
+      "sgx535_rev121_compatibility": "UNKNOWN",
+      "usable_for_sgx535_encoder": false,
+      "reason": "An illustrative CPU format is not a product ISA specification. Its depicted 23 bits, RET and rescheduling flag must not be treated as SGX535 instruction width, shader termination or USSE fields. No encoding incorporated."
+    },
+    {
+      "id": "GNU-POWERVR-ORIGINAL-PROJECT",
+      "reference": "https://libreplanet.org/wiki/Group:PowerVR_drivers",
+      "author_lead": "Luke Kenneth Casson Leighton",
+      "corroborating_primary_reference": "https://lists.goldelico.com/pipermail/openpvrsgx-devgroup/2021-November/000476.html",
+      "original_references": [
+        "https://savannah.nongnu.org/projects/powervr/",
+        "http://lkcl.net/powervr/sgx/",
+        "https://web.archive.org/web/20130225101912/http://powervr.gnu.org.ve/doku.php?id=opcodes",
+        "https://web.archive.org/web/20151004182955/http://powervr.gnu.org.ve/doku.php?id=instructionencoding"
+      ],
+      "provenance": "Original project and original mailing-list metadata claim reverse-engineered USSE information; original methods and field licensing not established",
+      "license": "UNKNOWN for the instruction-format material; GNU/FSF association does not establish licensing of individual source facts or tables",
+      "access": "Metadata/search excerpts and original mailing-list message; no opcode or instruction-encoding body fetched",
+      "retrieval": {
+        "savannah": "HTTP 404",
+        "lkcl_https": "TLS certificate hostname mismatch; certificate validation preserved",
+        "gnu_mail_archive_index": "HTTP 200 with empty body",
+        "wayback": "Not fetched; no provenance or certificate workaround attempted"
+      },
+      "gpu_generation_revision": "UNKNOWN for original work; mirror labels SGX544MP",
+      "instruction_fields_admitted": [],
+      "sgx535_rev121_compatibility": "UNKNOWN",
+      "usable_for_sgx535_encoder": false,
+      "remaining_screen": "Original author methodology, source license and exact target, before consulting field tables"
+    },
+    {
+      "id": "GNU-LKCL-LINUX-SUNXI-MIRRORS",
+      "reference": "https://linux-sunxi.org/SGX544MP/USSE_ISA",
+      "related_reference": "https://linux-sunxi.org/SGX544MP/USP_OPCODE",
+      "provenance": "Search excerpts attribute text to lkcl.net and name analysis of HWInstSupportsNoSched, HWInstSetBranchOffset and psHWInst->uWord0",
+      "license": "Original instruction table licensing and method UNKNOWN; wiki hosting does not establish original authorization",
+      "access": "Search excerpts surfaced automatically; pages and linked tables not opened or downloaded",
+      "gpu_generation_revision": "SGX544MP label; rev121 compatibility not identified",
+      "classification": "QUARANTINED provenance and target uncertainty",
+      "instruction_fields_admitted": [],
+      "usable_for_sgx535_encoder": false,
+      "reason": "Function-analysis provenance may involve proprietary compiler analysis. USP_OPCODE naming is not independent evidence of numeric hardware opcode values. No numerical table imported."
+    },
+    {
+      "id": "PROJECT-CASCADIA",
+      "reference": "https://github.com/rzxvx/Project-Cascadia",
+      "license": "Top-level GPL-2.0 reported by repository metadata; individual shader encoder derivation not established",
+      "provenance": "README search excerpts describe iOS driver comparison and kext execution under emulation",
+      "gpu_generation_revision": "Apple A5 SGX543MP2; not SGX535",
+      "access": "Repository metadata and README search excerpts only; no assembler, shader, binary, PDS builder or instruction code opened",
+      "instruction_fields_admitted": [],
+      "classification": "QUARANTINED compiler/oracle lineage and target uncertainty",
+      "usable_for_sgx535_encoder": false,
+      "reason": "Top-level licensing alone does not establish independent origin of numeric shader fields or SGX535 compatibility"
+    },
+    {
+      "id": "OPEN-SHACCCG",
+      "reference": "https://github.com/frangarcj/open-shacccg",
+      "license": "README claims MIT; proprietary compiler oracle and public GXP fixture lineage described",
+      "gpu_generation_revision": "Vita SGX543+ USSE2",
+      "access": "Search excerpts surfaced automatically despite exclusions, including machine-word examples; repository, code and shader payloads not opened or fetched",
+      "instruction_fields_admitted": [],
+      "classification": "QUARANTINED",
+      "usable_for_sgx535_encoder": false,
+      "reason": "Oracle-derived instruction information and cross-generation compatibility do not meet this project's independent evidence boundary. No machine words transcribed or used."
+    },
+    {
+      "id": "REICHEL-UNIVERSITY-THESIS-BIBLIOGRAPHY",
+      "reference": "https://uol.de/f/2/dept/informatik/ag/svs/download/thesis/Reichel_Sebastian.pdf",
+      "provenance": "University-hosted thesis bibliography points to original GNU opcode material",
+      "license": "No implementation license established; bibliographic facts only",
+      "access": "Search bibliography excerpt only; PDF not opened or downloaded",
+      "gpu_generation_revision": "No target established from bibliography",
+      "instruction_fields_admitted": [],
+      "usable_for_sgx535_encoder": false,
+      "reason": "Citation corroborates a historical lead, not instruction provenance or compatibility"
+    },
+    {
+      "id": "FREEMANGORDON-MESA-PVR-TI",
+      "reference": "https://github.com/freemangordon/mesa/tree/mesa-pvr-ti",
+      "primary_pointer": "https://lists.goldelico.com/pipermail/openpvrsgx-devgroup/2021-November/000476.html",
+      "provenance": "Original mailing list identifies N900 user-space work; no independent hardware shader implementation established",
+      "license": "Not established for shader-related components; code not inspected",
+      "gpu_generation_revision": "N900-originated, exact target revision not established",
+      "access": "Mailing-list reference only; repository and code not opened",
+      "instruction_fields_admitted": [],
+      "usable_for_sgx535_encoder": false,
+      "reason": "No license/method/target evidence for an independently executable encoder"
+    }
+  ],
+  "bounded_result": {
+    "new_concrete_public_example_instruction_diagram": "US20090063824A1 Figures 4 and 5",
+    "new_sgx535_instruction_fields": 0,
+    "machine_programs_emitted": 0,
+    "physical_submissions": 0,
+    "compiler_change_justified": false,
+    "reason": "None of the newly screened sources establishes both independent provenance and applicable SGX535 rev121 instruction encoding"
+  },
+  "next_verifiable_steps": [
+    "Obtain the original GNU project author's documented methodology, permitted use and target revision before consulting opcode tables",
+    "Establish an authorized SGX535 instruction-format specification or independent target observation that binds the public patent example, without proprietary shader output or code",
+    "Only after an independently sourced terminating/exporting instruction and PDS launch exist, propose a bounded constant-output experiment with owned resources and operation-specific attribution"
+  ],
+  "files_accessed": [
+    "docs/phase9/sgx5-field-research-20261009.json",
+    "docs/phase9/sgx5-instruction-followup-20261009.json",
+    "/tmp/remesa-worker-a-US20090063824A1.pdf",
+    "/tmp/remesa-worker-a-patent-fig4.png",
+    "/tmp/remesa-worker-a-patent-fig5.png"
+  ],
+  "incidental_web_access": [
+    {
+      "reference": "https://patents.google.com/patent/US20100241823A1/en",
+      "reason": "Mistyped candidate patent identifier opened before correct compound-instruction patent was resolved",
+      "admitted_fields": [],
+      "implementation_use": false
+    }
+  ],
+  "clean_room": {
+    "psb_dri_so_accessed": false,
+    "Xpsb_so_accessed": false,
+    "historical_440_payload_accessed": false,
+    "unauthorized_DDK_accessed": false,
+    "proprietary_instruction_words_used": false,
+    "cross_generation_fields_used": false,
+    "no_hardware_contact": true
+  }
+}

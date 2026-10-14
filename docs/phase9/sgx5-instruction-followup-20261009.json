@@ -1,0 +1,72 @@
+{
+  "schema": "remesa-independent-instruction-research-v1",
+  "scope": "Instruction-format research, not MMIO program-base registers",
+  "sources": [
+    {
+      "id": "EP2140347A1",
+      "url": "https://patents.google.com/patent/EP2140347A1/en",
+      "origin": "Public Imagination Technologies patent publication, priority 2007-03-26",
+      "use": "Factual paraphrase only; no implementation code imported and no patent-practice license inferred",
+      "locators": ["Description, Figure 4", "Description, Figure 5", "Description, final-thread hazard condition"],
+      "confirmed_publication_facts": [
+        "An example memory-load instruction contains 24 payload bits, six operation bits and two hazard-counter bits in a 32-bit instruction.",
+        "An example wait instruction selects hazard counters; an alternative integrates waiting bits into ordinary instructions.",
+        "The disclosed thread cannot terminate while its hazard counters remain nonzero."
+      ],
+      "sgx535_rev121_binding": "UNKNOWN",
+      "admitted_instruction_fields": [],
+      "rejection_reason": "No SGX535 product binding, usable opcode values or operand field specification. An example format must not become the target ISA by assumption."
+    },
+    {
+      "id": "US20040030864A1",
+      "url": "https://patents.google.com/patent/US20040030864A1/en",
+      "origin": "Public Imagination Technologies patent publication, priority 2001-04-23",
+      "use": "Factual screening; no code, instruction constants or diagrams imported",
+      "confirmed_publication_facts": ["Fixed-width instruction templates for a multi-execution-unit media processor are described."],
+      "sgx535_rev121_binding": "UNKNOWN",
+      "admitted_instruction_fields": [],
+      "rejection_reason": "No identified SGX535 USSE or PDS target and no applicable opcode table."
+    }
+  ],
+  "other_search_results": [
+    {
+      "id": "US20220261248A1 / GB2556886A",
+      "access": "Search excerpts only",
+      "reason_not_admitted": "2016-priority variable-length instruction architecture; no Series5 target binding."
+    },
+    {
+      "id": "Mesa pvr/csbgen PDS documentation",
+      "access": "Search-result release metadata only; source not opened",
+      "reason_not_admitted": "No SGX535 target identified; public modern PVR source is not evidence of Series5 instruction compatibility."
+    },
+    {
+      "id": "PowerVR forum PDS programming / Vita graphics wiki",
+      "access": "Search snippets surfaced; bodies not opened",
+      "reason_not_admitted": "Previously insufficient forum quotations or another SGX generation with unestablished provenance. No instruction constants incorporated."
+    }
+  ],
+  "result": {
+    "new_sgx535_instruction_fields": 0,
+    "independently_supportable_executable_sequence": "NONE ESTABLISHED",
+    "physical_submissions": 0,
+    "open_gl_admission_mask": "0x1f"
+  },
+  "minimum_bootstrap": {
+    "program_semantics": "Position input/export or constant fragment output with documented thread termination and output-consumer completion",
+    "missing_usse": ["width and endianness", "opcode locations and values", "source/destination banks and indices", "control/predicate constraints", "termination", "export"],
+    "missing_pds": ["instruction layout and opcodes", "task and data-store layout", "USSE address and launch contract"],
+    "experiment": "Once an independently sourced terminating program and launch specification exist, run one bounded constant-output operation with exact readback and separate thread, output-consumer and operation-retirement attribution. No speculative opcode probing.",
+    "current_experiment_status": "BLOCKED: encoding bootstrap and physical admission are not independently qualified"
+  },
+  "implementation": {
+    "description": "Original validated COPY/COMPOSE4 scalar alias propagation integrated into the actual Mesa archive. This eliminates redundant host MOV records, not unknown hardware instructions.",
+    "evidence": "Existing independently authored semantic IR contracts and licensed Mesa NIR float32 channel semantics",
+    "hardware_claim": false
+  },
+  "clean_room": {
+    "psb_dri_so_accessed": false,
+    "Xpsb_so_accessed": false,
+    "historical_440_byte_payload_accessed": false,
+    "proprietary_instruction_bytes_used": false
+  }
+}

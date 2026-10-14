@@ -2,7 +2,7 @@
 
 Reverse engineering the PowerVR SGX535 used in Intel Poulsbo / GMA 500.
 
-I started working on this on September 16, 2026. The goal is to document enough of the GPU to eventually draft a Mesa driver for it.
+I started working on this on September 16, 2026. The goal is to independently reconstruct the GPU and build a Mesa/Gallium driver for it.
 
 There isn't much useful public documentation for the SGX535, so most of the work so far has involved old drivers, DDK files, register definitions and testing things on real hardware.
 
@@ -16,7 +16,17 @@ The next test used two indexed triangles and produced a 16x16 square.
 
 So far this is low-level experimental code, not a usable graphics driver.
 
-I'm working on 3D next, then I'll start moving this towards Mesa.
+I'm already working in Mesa/Gallium now. The restricted NIR path creates and retains original shader candidates, with checked program storage, relocations, resource lifetime and draw preparation. An explicit, default-disabled laboratory path connects my NIR-generated fragment shader to the retained diagnostic job while keeping its historical VS/PDS carrier unchanged.
+
+Those paths have passed offline qualification on native Linux, UBSan, i386/QEMU and the actual Mesa-built archive. That is real driver integration work, but it is not a new GPU execution result. My current original VS/PDS pipeline still needs hardware qualification, and I haven't demonstrated an accelerated OpenGL application through it.
+
+I think SGX535-reMESA is getting close to release. That's my development estimate, not a release date: I'm still working on the remaining issues, validation and optimizations. A more detailed update is coming soon.
+
+## The historic Git commit — 0x07000345
+
+After roughly 26 days arguing with that DWORD, I gave it a place in Git history too: [070003454e7f938661170abcc57a551ae68c931c](https://github.com/gabrieelgama/SGX535-reMESA/commit/070003454e7f938661170abcc57a551ae68c931c). Yes, the actual commit SHA starts with `07000345`. Apparently being a mysterious hexadecimal wasn't enough; now it has a branch too.
+
+The commit preserves the independently written Mesa implementation and its offline qualification work. The hash is a tribute, not evidence of shader execution. ALWAYS. 🗿
 
 ## Documentation
 
@@ -28,11 +38,11 @@ Reproduction notes:
 - [Square](docs/reproduction/SQUARE.md)
 - [Display](docs/reproduction/DISPLAY.md)
 
-The raw results and hashes are in the repository as well.
+The raw results and hashes are in the repository as well. The [current technical update](docs/phase9/DEVELOPMENT-UPDATE.md) separates implementation, offline tests and hardware results; the [full historical triangle README](docs/history/README-TRIANGLE-07000345.md) is preserved separately.
 
 ## Driver OpenGL
-The driver under development will support OpenGL 2.1 Desktop and OpenGL 3.0 Experimental. 
-Based on my analysis, the SGX535 likely supports OpenGL 3.0, The first games to be tested will be: Minecraft, which achieved an impressive average of 30 fps on the original Windows 7 driver, CS 1.6, Super Tux Kart, and browser games. 
+My compatibility target is desktop OpenGL 2.1, with OpenGL 3.0 as an experimental research goal. Neither is verified compatibility yet.
+Based on my analysis, OpenGL 3.0 may be possible, but I still need evidence for its requirements. The first games I want to test are: Minecraft, which achieved an impressive average of 30 fps on the original Windows 7 driver, CS 1.6, Super Tux Kart, and browser games.
 It will also have Wayland support (except for KDE Plasma; who uses that on an Atom that struggles to open 5 tabs?), In addition to extended driver support, REMESA will cover all operating systems that run on 32-bit and Intel processors, but don't expect to see me playing GTA SA on it because it was already a tortoise when it was born; even my cockatiel runs GTA SA faster. 
 
 And of course! Everything documented point by point (references, uff)
@@ -55,9 +65,9 @@ One of the more recent findings is that assembler flag bit 0 maps to bit 23 of t
 
 I also traced the compiler's cleanup callback, stored at offset "+0x630", through "_mesa_free" to the imported "free" function. The identity-MOV removal routine releases 11 referenced allocations and the instruction node itself. Two additional cleanup lists appear to manage recycled auxiliary records, but I haven't yet established whether their allocations are completely independent of instructions that remain alive.
 
-I'm currently tracing allocation ownership and instruction lifetimes to resolve that question.
+That historical compiler ownership question remains unresolved. It isn't a prerequisite for qualifying my independently written restricted shader path, which is where I'm focusing now.
 
-The independently written codec has passed 447 offline test cases in each of three environments: native Linux, UBSan, and i386/QEMU. Additional evidence checks and symbolic constraint tests have also passed.
+At that investigation checkpoint, the independently written codec passed 447 offline test cases in each of three environments: native Linux, UBSan, and i386/QEMU. Additional evidence checks and symbolic constraint tests have also passed.
 
 This doesn't mean the USSE instruction set is fully decoded. Several important details, including hardware register banks, instruction termination, PDS fetch behavior, and the full meaning of "0x07000345", still need verification.
 

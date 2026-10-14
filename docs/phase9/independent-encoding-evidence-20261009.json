@@ -1,0 +1,351 @@
+{
+  "schema": "remesa-independent-encoding-evidence-v1",
+  "created_utc": "2026-10-09T15:03:08.515385+00:00",
+  "scope": "SGX535 rev121; independent factual public-source research only. No hardware instruction implementation templates or bytes imported.",
+  "policy": "Never access/decode/extract/reuse psb_dri.so, Xpsb.so, proprietary driver code, disputed DDK, or the historical 440-byte shader image. No LLM recollection used as encoding evidence.",
+  "result": {
+    "USSE_ENCODING_SPECIFICATION": "UNKNOWN",
+    "PDS_ENCODING_SPECIFICATION": "UNKNOWN",
+    "admitted_hardware_bitfields": 0,
+    "admitted_hardware_opcode_values": 0,
+    "new_hardware_instruction_bytes": 0,
+    "physical_execution_count": 0
+  },
+  "confirmed_facts": [
+    {
+      "id": "NEC-SGX535-PROGRAMMABLE-STAGES",
+      "fact": "A public primary NEC journal article identifies SGX535 as programmable vertex/pixel hardware using USSE. This supports the architectural research scope only.",
+      "source": "NEC-2007-NAVIENGINE",
+      "locator": "printed pp.32–33, section 2.2, Fig.5",
+      "classification": "CONFIRMED",
+      "rev121_compatibility": "UNKNOWN",
+      "usable_for_encoding": false
+    },
+    {
+      "id": "IMG-ROGUE-DOCUMENTATION-SCOPE",
+      "fact": "The current official open-source deliverables page scopes its hardware register documentation to Rogue architecture GPUs. Its existence is not SGX535 encoding evidence.",
+      "source": "IMG-OPEN-SOURCE",
+      "locator": "Hardware documentation section",
+      "classification": "CONFIRMED",
+      "usable_for_encoding": false
+    },
+    {
+      "id": "IMG-PDS-FORUM-PUBLIC-BOUNDARY",
+      "fact": "The named Imagination forum response directs this PDS programming discussion away from the public forum. It provides no authorized instruction-format specification.",
+      "source": "IMG-PDS-FORUM",
+      "locator": "GordonMaclachlan post dated 2009-04-23",
+      "classification": "CONFIRMED",
+      "usable_for_encoding": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "NEC-2007-NAVIENGINE",
+      "url": "https://jpn.nec.com/techrep/journal/g07/n04/pdf/070406.pdf",
+      "publisher": "NEC",
+      "title": "SMP搭載カーナビゲーション用システムLSI「ナビエンジン1」",
+      "publication": "NEC Technical Journal Vol.60 No.4/2007, pp.31–35",
+      "provenance": "Primary public journal article on the publisher domain, authors identified. Bibliographic identity reviewed before technical text.",
+      "permitted_use": "Independent factual paraphrase/citation only. Public availability is not asserted to be a software or shader reuse license. No source code or encoding tables copied.",
+      "access": "official PDF textual publication viewed",
+      "target": "SGX535; no rev121 claim",
+      "encoding_fields_admitted": []
+    },
+    {
+      "id": "IMG-OPEN-SOURCE",
+      "url": "https://developer.imaginationtech.com/solutions/open-source-gpu-driver/",
+      "publisher": "Imagination Technologies",
+      "provenance": "Primary official public deliverables page",
+      "permitted_use": "Factual description of advertised architecture scope; no code downloaded or reused",
+      "access": "public HTML viewed",
+      "target": "Rogue; not SGX535 encoding evidence",
+      "encoding_fields_admitted": []
+    },
+    {
+      "id": "IMG-OPEN-SOURCE-2022",
+      "url": "https://blog.imaginationtech.com/imagination-and-our-commitment-to-open-source",
+      "publisher": "Imagination Technologies",
+      "date": "2022-04-25",
+      "provenance": "Official public blog",
+      "permitted_use": "Factual architecture-scope citation only; all-rights-reserved notice observed; no implementation reuse",
+      "access": "public HTML viewed",
+      "target": "GX6250/AXE/BXS; not a SGX535 specification",
+      "encoding_fields_admitted": []
+    },
+    {
+      "id": "IMG-TERMS",
+      "url": "https://developer.imaginationtech.com/terms/",
+      "publisher": "Imagination Technologies",
+      "provenance": "Official public terms index",
+      "permitted_use": "Licensing-reference metadata only; no toolkit EULA accepted and no proprietary tools downloaded",
+      "access": "public HTML viewed",
+      "encoding_fields_admitted": []
+    },
+    {
+      "id": "IMG-PDS-FORUM",
+      "url": "https://forums.imgtec.com/t/pds-programming/333",
+      "publisher": "Imagination Technologies forum; individual posts remain separately attributed",
+      "provenance": "Official forum hosting is established. User-quoted external document authorization and rev121 compatibility are NOT established.",
+      "permitted_use": "Only factual public-discussion boundary recorded; no user-quoted encoding assertion admitted",
+      "access": "public HTML viewed",
+      "unadmitted_claims": [
+        "user quotation describing a PDS instruction width",
+        "user descriptions of data store indexes and usage"
+      ],
+      "encoding_fields_admitted": []
+    },
+    {
+      "id": "TI-SGX530-PUBLIC-MANUAL",
+      "url": "https://www.ti.com/lit/ug/sprugz7e/sprugz7e.pdf",
+      "publisher": "Texas Instruments",
+      "publication": "SPRUGZ7E",
+      "provenance": "Primary public TI manual URL",
+      "permitted_use": "Architecture context only; no code extraction or adaptation",
+      "access": "search excerpt; direct web open failed because content exceeded tool size limit",
+      "target": "SGX530 explicitly; SGX535 compatibility UNKNOWN",
+      "encoding_fields_admitted": []
+    },
+    {
+      "id": "IMG-PATENT-METADATA",
+      "url": "https://patents.google.com/patent/EP3754484A3/en",
+      "publisher": "Public European patent publication via Google Patents",
+      "provenance": "Public published patent bibliographic metadata, Imagination assignee; not proprietary library material",
+      "permitted_use": "Bibliographic relevance screening only. No algorithms or implementation copied. Publication is not a permission assertion for patent practice.",
+      "access": "search metadata and publication page viewed",
+      "target": "No established SGX535 rev121 instruction-format applicability",
+      "encoding_fields_admitted": []
+    }
+  ],
+  "unknown_fields": {
+    "USSE": [
+      {
+        "field": "instruction_width_bits",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "instruction_alignment_bytes",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "instruction_endianness",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "opcode_field_locations",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "scalar_move_opcode",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "vector_move_opcode",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "arithmetic_opcode_values",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "register_bank_encoding",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "register_index_widths",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "register_counts_and_stage_limits",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "destination_mask_encoding",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "source_swizzle_encoding",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "source_negate_absolute_encoding",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "immediate_constant_encoding",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "predicate_encoding",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "execution_control_encoding",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "program_termination_encoding",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "vertex_position_export_encoding",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "fragment_color_export_encoding",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "texture_sample_encoding",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "program_size_units",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "program_address_relocations",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "program_launch_state",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      }
+    ],
+    "PDS": [
+      {
+        "field": "instruction_width_bits",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "instruction_alignment_bytes",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "instruction_endianness",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "opcode_field_locations",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "data_store_bank_encoding",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "data_store_capacity",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "temporary_register_encoding",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "constant_segment_layout",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "instruction_segment_layout",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "DMA_address_and_count_encoding",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "USSE_task_launch_encoding",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "program_termination_encoding",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "program_size_units",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "program_address_relocations",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "vertex_input_loading_convention",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      },
+      {
+        "field": "fragment_input_loading_convention",
+        "classification": "UNKNOWN",
+        "reason": "No admitted independent SGX535 rev121 specification or qualified observation establishes this field."
+      }
+    ]
+  },
+  "inferred_facts": [],
+  "unadmitted_discoveries": [
+    {
+      "url": "https://forums.imgtec.com/t/powervr-sgx-535-intel-gma-500-poulsbo-any-documentation-still-available/4266",
+      "access": "Search-result snippets appeared. Thread not opened; no linked code, binaries or repository followed.",
+      "reason": "Discussion includes proprietary/static-analysis history; not admitted as encoding source."
+    },
+    {
+      "url": "https://imgtec.eetrend.com/sites/imgtec.eetrend.com/files/download/201403/1600-2648-00.pdf",
+      "access": "Search-result snippet only; document not opened/downloaded.",
+      "reason": "Search title flags confidential/NDA. Quarantined from evidence use."
+    },
+    {
+      "url": "https://ftp.radix-linux.su/3pp/Imagination/doc/SGX544/PowerVR/PowerVR_SGX_Series5XT_IP_Core_Family_%5B3.3%5D.pdf",
+      "access": "Search-result snippet only; not opened/downloaded.",
+      "reason": "Third-party mirror permission not established; Series5XT is not sufficient SGX535 evidence."
+    },
+    {
+      "url": "https://fossies.org/linux/mesa/src/imagination/vulkan/pds/pvr_pds.h",
+      "access": "Search-result snippet only; not opened/downloaded.",
+      "reason": "Mirror not used. Official Imagination scope excludes any assumption of SGX535 encoding compatibility."
+    }
+  ],
+  "bounded_search_statement": "No usable SGX535 rev121 encoding specification was established by the documented queries and sources. This is a bounded research result, not a claim that no authorized specification exists anywhere.",
+  "next_evidence_required": "An authorized SGX535/rev121 instruction-format specification or independently attributable controlled observations establishing exact fields, legal/provenance admission, and dispatch safety. A self-consistent encoder/decoder or another-generation ISA is insufficient.",
+  "local_reads": [
+    "docs/phase9/cleanroom-shader-boundary-20261009.json"
+  ],
+  "no_hardware": true,
+  "no_proprietary_bytes_accessed": true,
+  "no_historical_payload_opened": true
+}
