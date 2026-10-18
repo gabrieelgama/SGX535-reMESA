@@ -182,21 +182,3 @@ Our path will be glorious, always adding humor to documentation that should be a
 And of course, without using files with 8,000 lines!
 
 <br clear="all">
-
----
-
-<p align="center">
-  <img src="assets/pipocahello.gif" width="85" alt="Pipoca waving">
-</p>
-
-<p align="center">
-  <strong>SGX535-reMESA</strong>
-</p>
-
-<p align="center">
-  One GPU. One mysterious DWORD. One cockatiel.
-</p>
-
-<p align="center">
-  <em>ALWAYS. 🐦</em>
-</p>
