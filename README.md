@@ -9,7 +9,7 @@
 
 **Reverse engineering the PowerVR SGX535 used in Intel Poulsbo / GMA 500.**
 
-Hello! I'm Pipoca, the unofficial mascot of SGX535-reMESA. 🐦
+Hello! I'm Pipoca, the official mascot of SGX535-reMESA!
 
 Welcome to a project where a mysterious GPU, a 32-bit Atom processor, and an unreasonable amount of assembly somehow became a full reverse-engineering adventure.
 
