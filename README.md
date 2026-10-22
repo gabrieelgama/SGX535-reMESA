@@ -5,7 +5,7 @@
 <td width="115" valign="middle"><img src="assets/pipocahello.gif" width="100" alt="Pipoca saying hello"></td>
 <td valign="middle">
 
-**Reverse engineering the PowerVR SGX535 found in Intel Poulsbo / GMA 500 hardware.**
+**An independent, open-source Mesa/Gallium driver for the PowerVR SGX535 in Intel Poulsbo / GMA 500 hardware.**
 
 Hey! I'm Pipoca, the official SGX535-reMESA mascot.
 
@@ -21,6 +21,16 @@ The SGX535 isn't exactly well documented. Most of what I've learned has come fro
 
 Some things worked on the first try. Most didn't.
 
+## What works so far
+
+The GPU is rendering again. I have verified triangles and an indexed square on the SGX535 itself, and on October 21 I got an OpenGL `glDrawArrays` call through Gallium and onto the hardware. That test produced 136 green pixels in a 32×32 target, exactly where they were supposed to be.
+
+I've also displayed the GPU readback in an X11 window and got `glxgears` to run at 1280×800. Those are different milestones: the X11 test published pixels from an earlier GPU submission, and `glxgears` starting up does **not** mean I've verified continuous hardware-accelerated GLX yet.
+
+The driver still needs larger render targets on the GPU, repeated submissions, synchronization, and proper presentation. OpenGL 2.1 is the target, not something I'm claiming to support already.
+
+If you're looking for the actual evidence rather than my word for it, start with the [development update](docs/phase9/DEVELOPMENT-UPDATE.md) and the [reproduction notes](docs/reproduction/TRIANGLE.md).
+
 ## Current status
 
 <img src="assets/pipocajumping.gif" align="right" width="105" alt="Pipoca jumping">
@@ -35,7 +45,7 @@ One of the biggest milestones came on October 21: an OpenGL-originated `glDrawAr
 
 That was a pretty big moment for me. I was no longer just submitting a diagnostic job by hand: I'd demonstrated a connection between an OpenGL operation, my driver code, and the GPU.
 
-I've also been working on X11 presentation, front/back buffers, framebuffer binding, memory allocation, and the rather unpleasant details involved in moving from tiny test images to a real desktop resolution.
+I've also been working on X11 presentation, front/back buffers, framebuffer binding, memory allocation, and the rather unpleasant details involved in moving from tiny test images to a real desktop resolution. I got a verified readback onto an X11 window too. That part worked, although it reused pixels from an earlier GPU run rather than submitting a new job.
 
 And yes, **I finally got `glxgears` running at 1280×800!**
 
@@ -43,11 +53,11 @@ Getting the application running is an integration milestone, although I'm keepin
 
 There's more to do before I can call this a usable everyday graphics driver. Still, considering where this project was a month ago, I'm pretty happy with the progress.
 
-A more detailed technical update is coming.
+The next headache is making that work repeatedly at useful resolutions instead of celebrating another 32×32 image. A more detailed technical update is coming.
 
 <br clear="all">
 
-## The historic Git commit — 0x07000345
+## The historic Git commit — `0x07000345`
 
 <img src="assets/pipocaohno.gif" align="right" width="110" alt="Pipoca reacting to 0x07000345">
 
@@ -61,7 +71,7 @@ Yes, the actual Git commit hash starts with `07000345`.
 
 The commit preserves my independently written Mesa implementation and the offline qualification work around it. The hash itself is just a tribute to the hexadecimal number that has consumed an unreasonable amount of my time.
 
-**ALWAYS**
+**ALWAYS.**
 
 <br clear="all">
 
@@ -81,7 +91,7 @@ If you want to reproduce some of the earlier hardware experiments, start here:
 
 The repository also contains raw results, hashes, and supporting evidence. For a more technical breakdown, see the [development update](docs/phase9/DEVELOPMENT-UPDATE.md). I've also kept the [original triangle-era README](docs/history/README-TRIANGLE-07000345.md) for anyone interested in how this started.
 
-I make an effort to distinguish CPU tests, offline validation, and actual GPU execution. Passing a thousand tests on the CPU is useful, but it doesn't mean the SGX535 has executed anything.
+I make an effort to distinguish CPU tests, offline validation, application integration, X11 publication, and actual GPU execution. Passing a thousand tests on the CPU is useful, but it doesn't mean the SGX535 has executed anything.
 
 <br clear="all">
 
@@ -93,7 +103,7 @@ My main compatibility target is **desktop OpenGL 2.1**.
 
 I'm also researching OpenGL 3.0, although I don't want to promise support for something I haven't properly verified yet.
 
-The first applications and games I want to test include Minecraft Java, Counter-Strike 1.6, SuperTuxKart, and some older browser games.
+The first applications and games I want to test include **Minecraft Java**, Counter-Strike 1.6, SuperTuxKart, and some older browser games.
 
 Minecraft is particularly interesting because I previously saw it average around 30 FPS with the original Windows 7 driver. I'd love to see what an independently written Linux driver can eventually do.
 
