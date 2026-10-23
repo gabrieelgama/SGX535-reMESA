@@ -1,4 +1,5 @@
 # SGX535-reMESA
+ˋSGX535-reMESAˋ an Open-source Mesa/Gallium 3D graphics driver for Intel Poulsbo (GMA 500 / PowerVR SGX535) on Linux
 
 <table>
 <tr>
@@ -14,8 +15,6 @@ Welcome to a project involving an old Atom processor, a rather mysterious GPU, f
 </td>
 </tr>
 </table>
-
-Open-source Mesa/Gallium 3D graphics driver for Intel Poulsbo (GMA 500 / PowerVR SGX535) on Linux
 
 I started SGX535-reMESA on September 16, 2026, with one goal: understand the SGX535 well enough to write an independent, open-source Mesa/Gallium driver for it.
 
