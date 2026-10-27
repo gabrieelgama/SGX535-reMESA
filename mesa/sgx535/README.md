@@ -1,5 +1,7 @@
 # Native Gallium adapter
 
+> **Historical adapter notes.** Later restricted original GLXGears hardware results are documented in the [October 27 physical status](../../docs/phase9/PHYSICAL-GLX-STATUS-20261027.md). Statements below about unsupported execution describe this earlier path/checkpoint; they are not a current project-wide hardware status or general OpenGL conformance claim.
+
 See the [October 14 development update](../../docs/phase9/DEVELOPMENT-UPDATE.md)
 for the current original-fragment integration and its explicit laboratory gate.
 The older diagnostic interface described below remains a separate path.

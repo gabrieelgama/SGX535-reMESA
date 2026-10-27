@@ -26,11 +26,11 @@ Some things worked on the first try. Most didn't.
 
 The GPU is rendering again. I have verified triangles and an indexed square on the SGX535 itself, and on October 21 I got an OpenGL `glDrawArrays` call through Gallium and onto the hardware. That test produced 136 green pixels in a 32×32 target, exactly where they were supposed to be.
 
-I've also displayed the GPU readback in an X11 window and got `glxgears` to run at 1280×800. Those are different milestones: the X11 test published pixels from an earlier GPU submission, and `glxgears` starting up does **not** mean I've verified continuous hardware-accelerated GLX yet.
+I've also displayed a GPU readback in an X11 window. That earlier test published pixels from a previous submission. Since then, the original `glxgears` has completed a qualified, bounded **600-frame / 600-GPU-submission** run at **1280×800** on the real SGX535. A separate six-operation physical test checked the new production transport and X11 presentation against the retained images.
 
-The driver still needs larger render targets on the GPU, repeated submissions, synchronization, and proper presentation. OpenGL 2.1 is the target, not something I'm claiming to support already.
+Repeated submissions, synchronization and direct read-only GEM FD/X11 shared-memory presentation are now qualified for this restricted 1280×800 path. Unbounded continuity and general application compatibility still need qualification. OpenGL 2.1 is the target, not something I'm claiming to support already.
 
-If you're looking for the actual evidence rather than my word for it, start with the [development update](docs/phase9/DEVELOPMENT-UPDATE.md) and the [reproduction notes](docs/reproduction/TRIANGLE.md).
+If you're looking for the actual evidence rather than my word for it, start with the [October 27 physical results](docs/phase9/PHYSICAL-GLX-STATUS-20261027.md), the [earlier development update](docs/phase9/DEVELOPMENT-UPDATE.md) and the [reproduction notes](docs/reproduction/TRIANGLE.md).
 
 ## Current status
 
@@ -50,13 +50,21 @@ I've also been working on X11 presentation, front/back buffers, framebuffer bind
 
 And yes, **I finally got `glxgears` running at 1280×800!**
 
-Getting the application running is an integration milestone, although I'm keeping that separate from claiming fully verified hardware-accelerated GLX. Repeated physical GPU submissions, synchronization, and presentation still need to be qualified together.
+The latest completed qualification went further: **600 frames and 600 GPU submissions**, with **16.1345 FPS** averaged over six steady five-second windows (15.915–16.376 FPS, about 61.979 ms/frame). The run ended with no queued work, engine or presentation errors, legacy submissions or offline fallback, and its diagnostic capture stayed empty.
+
+That's an observed **11.29% FPS improvement** over the earlier 14.4983 FPS snapshot run. The comparison combines the cached-Z/fault64 kernel, direct read-only GEM FD/XSHM presentation and paired GC work. CPU DVFS and workload were uncontrolled, so I can't attribute that gain to any one change.
+
+A separate six-operation physical smoke test checked full COLOR, defined Z24 bits, all five input images and every X11 RGB pixel. It also checked completion before lease release and detach before FD/GEM close. Those readbacks belong to the separate LAB harness; the normal FAST run doesn't add per-frame hashes, pixel checks or dumps. This remains restricted qualification, not full GL conformance or LAB approval.
 
 There's more to do before I can call this a usable everyday graphics driver. Still, considering where this project was a month ago, I'm pretty happy with the progress.
 
-The next headache is making that work repeatedly at useful resolutions instead of celebrating another 32×32 image. A more detailed technical update is coming.
+The next headache is reaching the **30–60 FPS goal**, qualifying longer continuous operation and expanding beyond this restricted path. The [current technical report](docs/phase9/PHYSICAL-GLX-STATUS-20261027.md) records the measurements, evidence and remaining limits.
 
 <br clear="all">
+
+## Reproducing GLXGears
+
+The [GLXGears reproduction guide](docs/reproduction/GLXGEARS.md) separates public checkout/build checks from the qualified kernel, private bundle and actual GPU command used for the 1280×800 run. The current direct-FD build and boot artifacts are not yet published as a complete reproducible package; cloning this repository alone does not reproduce the measured 16.1345 FPS. The guide records the exact requirements and remaining publication gaps.
 
 ## The historic Git commit — `0x07000345`
 
@@ -90,7 +98,7 @@ If you want to reproduce some of the earlier hardware experiments, start here:
 - [Square](docs/reproduction/SQUARE.md)
 - [Display](docs/reproduction/DISPLAY.md)
 
-The repository also contains raw results, hashes, and supporting evidence. For a more technical breakdown, see the [development update](docs/phase9/DEVELOPMENT-UPDATE.md). I've also kept the [original triangle-era README](docs/history/README-TRIANGLE-07000345.md) for anyone interested in how this started.
+The repository also contains historical raw results, hashes, and supporting evidence. For the latest technical breakdown and the retained local evidence paths, see the [October 27 physical results](docs/phase9/PHYSICAL-GLX-STATUS-20261027.md). The [October 14 development update](docs/phase9/DEVELOPMENT-UPDATE.md) records an earlier implementation checkpoint. I've also kept the [original triangle-era README](docs/history/README-TRIANGLE-07000345.md) for anyone interested in how this started.
 
 I make an effort to distinguish CPU tests, offline validation, application integration, X11 publication, and actual GPU execution. Passing a thousand tests on the CPU is useful, but it doesn't mean the SGX535 has executed anything.
 
