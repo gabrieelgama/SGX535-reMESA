@@ -182,6 +182,8 @@ Thanks to **Simon Fenney** for pointing me toward Intel EMGD. That turned out to
 
 Thanks also to everyone who has read the documentation, shared information, tested something, or simply followed along while I tried to convince a nearly two-decade-old GPU to draw triangles again.
 
+Thanks to e1zo and Alex (Poulsback) for the help with parts of the driver! 
+
 ## Special thanks
 
 <img src="assets/pipocajumping.gif" align="right" width="110" alt="Pipoca celebrating">
