@@ -174,22 +174,6 @@ And somehow, after all this work, `0x07000345` is still finding ways to annoy me
 
 If you have old Poulsbo hardware, SGX535 documentation, historical Intel drivers, DDK information, or anything else that might help, feel free to open an issue. Testing on other compatible hardware would also be valuable.
 
-### A note on earlier SGX535 driver projects
-
-I was contacted by email about another project that reportedly had a working Mesa/Gallium driver for Poulsbo.
-
-While looking into it, I found references to files whose origins I couldn't independently establish.
-
-One example was an `sgxdefs.h` file reportedly containing more than 8,000 lines, whereas a historical distribution available to me contained a version of roughly 106 lines.
-
-That difference raised questions for me, but it doesn't prove anything about the larger file's origin, licensing, or redistribution rights.
-
-For SGX535-reMESA, I want to keep the approach straightforward: study the hardware and historical software behavior, document the evidence, and write original implementations without incorporating proprietary DDK code of uncertain provenance.
-
-I'm open to collaboration and learning from earlier work. I just want the code's origins to remain clear, especially if this project eventually reaches upstream Mesa.
-
-Information about other PowerVR Series5 GPUs is welcome too. The long-term goal is to contribute a maintainable Mesa driver and suitable mainline Linux kernel patches.
-
 <br clear="all">
 
 ## Thanks
