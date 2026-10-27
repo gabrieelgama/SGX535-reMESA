@@ -174,8 +174,6 @@ And somehow, after all this work, `0x07000345` is still finding ways to annoy me
 
 If you have old Poulsbo hardware, SGX535 documentation, historical Intel drivers, DDK information, or anything else that might help, feel free to open an issue. Testing on other compatible hardware would also be valuable.
 
-<br clear="all">
-
 ## Thanks
 
 Thanks to **Simon Fenney** for pointing me toward Intel EMGD. That turned out to be extremely useful.
