@@ -184,11 +184,11 @@ Thank you **Garnet (SGX540reversing)** for USSE disassembler! This helped a lot�
 
 Thanks to **monocasa (Reddit)** and **nicman24 (Reddit)** for the optimization tips! 
 
-Thanks you **intelminer (Reddit)** for liking the photos and GIFs of my cockatiel! 
+Thank you **intelminer (Reddit)** for liking the photos and GIFs of my cockatiel! :D
 
-Thank you my Cockatiel too😂
+Thank you to my Cockatiel too😂
 
-And thanks to everyone who has read the documentation, shared a reference, tested something or watched me try to convince a nearly two-decade-old GPU to draw triangles again.
+And thanks to everyone who has read the documentation, shared a reference, tested something or watched me try to convince a nearly two-decade-old GPU to draw triangles again :D
 
 ## Special thanks
 
