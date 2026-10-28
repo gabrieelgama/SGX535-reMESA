@@ -182,7 +182,11 @@ Thanks to **e1zo** and **Alex (Poulsback)** for helping with parts of the driver
 
 Thank you **Garnet (SGX540reversing)** for USSE disassembler! This helped a lot😀
 
-Thanks to: my cockatiel😂
+Thanks to **monocasa (Reddit)** and **nicman24 (Reddit)** for the optimization tips! 
+
+Thanks you **intelminer (Reddit)** for liking the photos and GIFs of my cockatiel! 
+
+Thank you my Cockatiel too😂
 
 And thanks to everyone who has read the documentation, shared a reference, tested something or watched me try to convince a nearly two-decade-old GPU to draw triangles again.
 
