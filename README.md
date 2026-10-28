@@ -180,6 +180,10 @@ Thanks to **Simon Fenney** for pointing me toward Intel EMGD. That turned out to
 
 Thanks to **e1zo** and **Alex (Poulsback)** for helping with parts of the driver!
 
+Thank you **Garnet (SGX540reversing)** for USSE disassembler! This helped a lot😀
+
+Thanks to: my cockatiel😂
+
 And thanks to everyone who has read the documentation, shared a reference, tested something or watched me try to convince a nearly two-decade-old GPU to draw triangles again.
 
 ## Special thanks
